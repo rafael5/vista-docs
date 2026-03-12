@@ -2,14 +2,25 @@
   "meta": {
     "description": "Guides corpus \u2014 packages selected for CPRS Reports and PCE synthesis guides",
     "packages": [
+      "ACR",
       "CPRS",
-      "GMTS",
+      "ECX",
       "GMPL",
       "GMRA",
+      "GMRC",
       "GMRV",
+      "GMTS",
+      "LR",
+      "LRAP",
+      "LRBB",
+      "PSJ",
+      "PSO",
       "PX",
       "PXRM",
-      "ACR"
+      "RA",
+      "SD",
+      "SR",
+      "TIU"
     ],
     "categories_included": [
       "release-notes",
@@ -31,7 +42,12 @@
       "or_3_0_626_dibr.docx",
       "or_3_0_626_rn.docx"
     ],
-    "total_documents": 110
+    "total_documents": 142,
+    "tier_notes": {
+      "1": "Core CPRS-integrated packages \u2014 fills direct guide synthesis gaps",
+      "2": "Reports-tab data sources and workload consumers \u2014 rounds out corpus",
+      "3": "Infrastructure / foundational \u2014 not added; reference as needed"
+    }
   },
   "documents": [
     {
@@ -88,7 +104,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/prt_tm_r.docx",
       "fetch_size": 111553,
-      "fetch_time": "2026-03-11T20:07:34.893441+00:00"
+      "fetch_time": "2026-03-12T18:00:27.383612+00:00"
     },
     {
       "filename": "OR_3_0_377_setup.docx",
@@ -102,7 +118,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/OR_3_0_377_setup.docx",
       "fetch_size": 1120314,
-      "fetch_time": "2026-03-11T20:08:24.895601+00:00"
+      "fetch_time": "2026-03-12T18:00:31.566862+00:00"
     },
     {
       "filename": "or_30_218_ig.docx",
@@ -116,7 +132,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_218_ig.docx",
       "fetch_size": 469416,
-      "fetch_time": "2026-03-11T20:08:27.556031+00:00"
+      "fetch_time": "2026-03-12T18:00:35.275351+00:00"
     },
     {
       "filename": "or_3_0_405_setup_r.docx",
@@ -130,7 +146,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_405_setup_r.docx",
       "fetch_size": 378932,
-      "fetch_time": "2026-03-11T20:08:30.115279+00:00"
+      "fetch_time": "2026-03-12T18:00:38.193854+00:00"
     },
     {
       "filename": "or_3_0_498_setup_r.docx",
@@ -144,7 +160,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_498_setup_r.docx",
       "fetch_size": 432210,
-      "fetch_time": "2026-03-11T20:08:32.652798+00:00"
+      "fetch_time": "2026-03-12T18:00:41.442334+00:00"
     },
     {
       "filename": "OR_3_0_377_RN.docx",
@@ -158,7 +174,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/OR_3_0_377_RN.docx",
       "fetch_size": 444760,
-      "fetch_time": "2026-03-11T20:09:05.296835+00:00"
+      "fetch_time": "2026-03-12T18:00:44.087704+00:00"
     },
     {
       "filename": "or_30_280rn.docx",
@@ -172,7 +188,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_280rn.docx",
       "fetch_size": 235281,
-      "fetch_time": "2026-03-11T20:09:08.275842+00:00"
+      "fetch_time": "2026-03-12T18:00:47.469193+00:00"
     },
     {
       "filename": "or_30_296rn.docx",
@@ -186,7 +202,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_296rn.docx",
       "fetch_size": 258607,
-      "fetch_time": "2026-03-11T20:09:11.549755+00:00"
+      "fetch_time": "2026-03-12T18:00:50.497687+00:00"
     },
     {
       "filename": "or_30_304rn.docx",
@@ -200,7 +216,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_304rn.docx",
       "fetch_size": 95396,
-      "fetch_time": "2026-03-11T20:09:13.791102+00:00"
+      "fetch_time": "2026-03-12T18:00:52.878145+00:00"
     },
     {
       "filename": "or_30_306_rn.docx",
@@ -214,7 +230,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_306_rn.docx",
       "fetch_size": 254139,
-      "fetch_time": "2026-03-11T20:09:16.707625+00:00"
+      "fetch_time": "2026-03-12T18:00:56.383501+00:00"
     },
     {
       "filename": "or_30_312_rn.docx",
@@ -228,7 +244,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_312_rn.docx",
       "fetch_size": 413806,
-      "fetch_time": "2026-03-11T20:09:20.096235+00:00"
+      "fetch_time": "2026-03-12T18:00:59.475506+00:00"
     },
     {
       "filename": "or_30_350_rn.docx",
@@ -242,7 +258,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_350_rn.docx",
       "fetch_size": 766623,
-      "fetch_time": "2026-03-11T20:09:23.210553+00:00"
+      "fetch_time": "2026-03-12T18:01:03.103096+00:00"
     },
     {
       "filename": "or_30_385_rn.docx",
@@ -256,7 +272,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_385_rn.docx",
       "fetch_size": 243825,
-      "fetch_time": "2026-03-11T20:09:25.878817+00:00"
+      "fetch_time": "2026-03-12T18:01:05.448133+00:00"
     },
     {
       "filename": "or_30_387_rn.docx",
@@ -270,7 +286,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_387_rn.docx",
       "fetch_size": 381436,
-      "fetch_time": "2026-03-11T20:09:28.314248+00:00"
+      "fetch_time": "2026-03-12T18:01:11.041767+00:00"
     },
     {
       "filename": "or_30_420rn.docx",
@@ -284,7 +300,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_30_420rn.docx",
       "fetch_size": 66637,
-      "fetch_time": "2026-03-11T20:09:30.584380+00:00"
+      "fetch_time": "2026-03-12T18:01:13.267184+00:00"
     },
     {
       "filename": "or_3_0_405_rn.docx",
@@ -298,7 +314,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_405_rn.docx",
       "fetch_size": 128080,
-      "fetch_time": "2026-03-11T20:09:32.877720+00:00"
+      "fetch_time": "2026-03-12T18:01:15.623827+00:00"
     },
     {
       "filename": "or_3_0_406_rn.docx",
@@ -312,7 +328,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_406_rn.docx",
       "fetch_size": 335079,
-      "fetch_time": "2026-03-11T20:09:35.470088+00:00"
+      "fetch_time": "2026-03-12T18:01:19.563250+00:00"
     },
     {
       "filename": "or_3_0_588_rn.docx",
@@ -326,7 +342,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_588_rn.docx",
       "fetch_size": 118392,
-      "fetch_time": "2026-03-11T20:09:37.841743+00:00"
+      "fetch_time": "2026-03-12T18:01:22.097232+00:00"
     },
     {
       "filename": "or_3_0_608_rn.docx",
@@ -340,7 +356,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_608_rn.docx",
       "fetch_size": 478105,
-      "fetch_time": "2026-03-11T20:09:41.026291+00:00"
+      "fetch_time": "2026-03-12T18:01:27.227101+00:00"
     },
     {
       "filename": "or_3_0_617_rn.docx",
@@ -354,7 +370,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_617_rn.docx",
       "fetch_size": 64673,
-      "fetch_time": "2026-03-11T20:09:43.354056+00:00"
+      "fetch_time": "2026-03-12T18:01:29.718768+00:00"
     },
     {
       "filename": "or_3_0_629_rn.docx",
@@ -368,7 +384,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_0_629_rn.docx",
       "fetch_size": 3219377,
-      "fetch_time": "2026-03-11T20:09:49.324020+00:00"
+      "fetch_time": "2026-03-12T18:01:35.736681+00:00"
     },
     {
       "filename": "or_3_309rn.docx",
@@ -382,7 +398,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_309rn.docx",
       "fetch_size": 86291,
-      "fetch_time": "2026-03-11T20:09:51.600719+00:00"
+      "fetch_time": "2026-03-12T18:01:37.943026+00:00"
     },
     {
       "filename": "or_3_332rn.docx",
@@ -396,7 +412,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_332rn.docx",
       "fetch_size": 800282,
-      "fetch_time": "2026-03-11T20:09:55.339439+00:00"
+      "fetch_time": "2026-03-12T18:01:41.606534+00:00"
     },
     {
       "filename": "or_3_340rn.docx",
@@ -410,7 +426,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/or_3_340rn.docx",
       "fetch_size": 91471,
-      "fetch_time": "2026-03-11T20:09:57.539411+00:00"
+      "fetch_time": "2026-03-12T18:01:43.949962+00:00"
     },
     {
       "filename": "gmts_2_7_p133_um.docx",
@@ -452,7 +468,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Health_Summary/gmts_2_7_p133_tm.docx",
       "fetch_size": 1461182,
-      "fetch_time": "2026-03-11T20:07:39.531398+00:00"
+      "fetch_time": "2026-03-12T18:01:47.906453+00:00"
     },
     {
       "filename": "hsum_2_7_tm.docx",
@@ -466,7 +482,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Health_Summary/hsum_2_7_tm.docx",
       "fetch_size": 2547006,
-      "fetch_time": "2026-03-11T20:07:46.672777+00:00"
+      "fetch_time": "2026-03-12T18:01:52.534743+00:00"
     },
     {
       "filename": "gmplum.docx",
@@ -494,7 +510,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Problem_List/gmpl_2_0_49_tm.docx",
       "fetch_size": 885240,
-      "fetch_time": "2026-03-11T20:07:50.435877+00:00"
+      "fetch_time": "2026-03-12T18:01:56.058699+00:00"
     },
     {
       "filename": "gmpl_2_0_49_rn.docx",
@@ -508,7 +524,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Problem_List/gmpl_2_0_49_rn.docx",
       "fetch_size": 326940,
-      "fetch_time": "2026-03-11T20:10:00.028234+00:00"
+      "fetch_time": "2026-03-12T18:01:58.792581+00:00"
     },
     {
       "filename": "gmra_4_0_um.docx",
@@ -536,7 +552,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Advrs_Reaction_Trk_(ART)/gmra_4_0_tm.docx",
       "fetch_size": 579594,
-      "fetch_time": "2026-03-11T20:07:54.006842+00:00"
+      "fetch_time": "2026-03-12T18:02:01.618330+00:00"
     },
     {
       "filename": "gmra_4_20_rn.docx",
@@ -550,7 +566,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Advrs_Reaction_Trk_(ART)/gmra_4_20_rn.docx",
       "fetch_size": 93236,
-      "fetch_time": "2026-03-11T20:10:02.517462+00:00"
+      "fetch_time": "2026-03-12T18:02:03.789353+00:00"
     },
     {
       "filename": "gmra_4_23_rn.docx",
@@ -564,7 +580,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Advrs_Reaction_Trk_(ART)/gmra_4_23_rn.docx",
       "fetch_size": 410374,
-      "fetch_time": "2026-03-11T20:10:05.812823+00:00"
+      "fetch_time": "2026-03-12T18:02:06.891634+00:00"
     },
     {
       "filename": "gmra_4_26_rn.docx",
@@ -578,7 +594,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Advrs_Reaction_Trk_(ART)/gmra_4_26_rn.docx",
       "fetch_size": 130966,
-      "fetch_time": "2026-03-11T20:10:08.374046+00:00"
+      "fetch_time": "2026-03-12T18:02:09.112842+00:00"
     },
     {
       "filename": "gmra_4_50_rn.docx",
@@ -592,7 +608,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Advrs_Reaction_Trk_(ART)/gmra_4_50_rn.docx",
       "fetch_size": 72262,
-      "fetch_time": "2026-03-11T20:10:10.930297+00:00"
+      "fetch_time": "2026-03-12T18:02:11.293659+00:00"
     },
     {
       "filename": "vitl5_um.docx",
@@ -648,7 +664,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Vitals_Measurements/vitl5_tm.docx",
       "fetch_size": 264741,
-      "fetch_time": "2026-03-11T20:07:56.966451+00:00"
+      "fetch_time": "2026-03-12T18:02:14.432095+00:00"
     },
     {
       "filename": "vitl_5_p22_tm.docx",
@@ -662,7 +678,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Vitals_Measurements/vitl_5_p22_tm.docx",
       "fetch_size": 284486,
-      "fetch_time": "2026-03-11T20:07:59.864584+00:00"
+      "fetch_time": "2026-03-12T18:02:17.362688+00:00"
     },
     {
       "filename": "vitl_5_p23_tm_change_pages.docx",
@@ -676,7 +692,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Vitals_Measurements/vitl_5_p23_tm_change_pages.docx",
       "fetch_size": 671549,
-      "fetch_time": "2026-03-11T20:08:03.283599+00:00"
+      "fetch_time": "2026-03-12T18:02:20.239607+00:00"
     },
     {
       "filename": "vitl5_p22_rn.docx",
@@ -690,7 +706,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Vitals_Measurements/vitl5_p22_rn.docx",
       "fetch_size": 71905,
-      "fetch_time": "2026-03-11T20:10:13.928882+00:00"
+      "fetch_time": "2026-03-12T18:02:22.476207+00:00"
     },
     {
       "filename": "vitl5_p23_rn.docx",
@@ -704,7 +720,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Vitals_Measurements/vitl5_p23_rn.docx",
       "fetch_size": 72685,
-      "fetch_time": "2026-03-11T20:10:16.278186+00:00"
+      "fetch_time": "2026-03-12T18:02:25.183731+00:00"
     },
     {
       "filename": "vitl5_p3_rn.docx",
@@ -718,7 +734,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Vitals_Measurements/vitl5_p3_rn.docx",
       "fetch_size": 77235,
-      "fetch_time": "2026-03-11T20:10:18.824325+00:00"
+      "fetch_time": "2026-03-12T18:02:27.662723+00:00"
     },
     {
       "filename": "vitl5_rn.docx",
@@ -732,7 +748,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Vitals_Measurements/vitl5_rn.docx",
       "fetch_size": 21731,
-      "fetch_time": "2026-03-11T20:10:21.221575+00:00"
+      "fetch_time": "2026-03-12T18:02:29.793628+00:00"
     },
     {
       "filename": "px_um.docx",
@@ -788,7 +804,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Patient_Care_Encounter_(PCE)/px_tm.docx",
       "fetch_size": 261338,
-      "fetch_time": "2026-03-11T20:08:06.900965+00:00"
+      "fetch_time": "2026-03-12T18:02:32.482929+00:00"
     },
     {
       "filename": "icd-10_rn_px_1_199.docx",
@@ -802,7 +818,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Patient_Care_Encounter_(PCE)/icd-10_rn_px_1_199.docx",
       "fetch_size": 174188,
-      "fetch_time": "2026-03-11T20:10:24.027885+00:00"
+      "fetch_time": "2026-03-12T18:02:35.084263+00:00"
     },
     {
       "filename": "px_1_0_211_rn.docx",
@@ -816,7 +832,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Patient_Care_Encounter_(PCE)/px_1_0_211_rn.docx",
       "fetch_size": 97915,
-      "fetch_time": "2026-03-11T20:10:26.869291+00:00"
+      "fetch_time": "2026-03-12T18:02:38.415633+00:00"
     },
     {
       "filename": "px_1_0_234_rn.docx",
@@ -830,7 +846,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Patient_Care_Encounter_(PCE)/px_1_0_234_rn.docx",
       "fetch_size": 79725,
-      "fetch_time": "2026-03-11T20:10:29.391271+00:00"
+      "fetch_time": "2026-03-12T18:02:40.769856+00:00"
     },
     {
       "filename": "px_1_p124_rn.docx",
@@ -844,7 +860,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Patient_Care_Encounter_(PCE)/px_1_p124_rn.docx",
       "fetch_size": 51166,
-      "fetch_time": "2026-03-11T20:10:31.765654+00:00"
+      "fetch_time": "2026-03-12T18:02:42.986607+00:00"
     },
     {
       "filename": "px_1_p164_rn.docx",
@@ -858,7 +874,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Patient_Care_Encounter_(PCE)/px_1_p164_rn.docx",
       "fetch_size": 54359,
-      "fetch_time": "2026-03-11T20:10:34.199916+00:00"
+      "fetch_time": "2026-03-12T18:02:45.658087+00:00"
     },
     {
       "filename": "pxrnp16.docx",
@@ -872,7 +888,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Patient_Care_Encounter_(PCE)/pxrnp16.docx",
       "fetch_size": 45145,
-      "fetch_time": "2026-03-11T20:10:36.557748+00:00"
+      "fetch_time": "2026-03-12T18:02:47.776174+00:00"
     },
     {
       "filename": "ahobpr_registrantportal_usermanual_v3.docx",
@@ -1166,7 +1182,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_1_5_12_tm.docx",
       "fetch_size": 68808,
-      "fetch_time": "2026-03-11T20:08:09.739502+00:00"
+      "fetch_time": "2026-03-12T18:02:49.989232+00:00"
     },
     {
       "filename": "pxrm_2_4_tm.docx",
@@ -1180,7 +1196,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_4_tm.docx",
       "fetch_size": 265974,
-      "fetch_time": "2026-03-11T20:08:12.020911+00:00"
+      "fetch_time": "2026-03-12T18:02:52.522991+00:00"
     },
     {
       "filename": "pxrm_index_tm.docx",
@@ -1194,7 +1210,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_index_tm.docx",
       "fetch_size": 415090,
-      "fetch_time": "2026-03-11T20:08:16.218982+00:00"
+      "fetch_time": "2026-03-12T18:02:55.231486+00:00"
     },
     {
       "filename": "pxrm_1_5_21_setup.docx",
@@ -1208,7 +1224,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_1_5_21_setup.docx",
       "fetch_size": 177884,
-      "fetch_time": "2026-03-11T20:08:35.324697+00:00"
+      "fetch_time": "2026-03-12T18:02:57.983711+00:00"
     },
     {
       "filename": "pxrm_2_11_ig.docx",
@@ -1222,7 +1238,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_11_ig.docx",
       "fetch_size": 349883,
-      "fetch_time": "2026-03-11T20:08:37.809456+00:00"
+      "fetch_time": "2026-03-12T18:03:00.448025+00:00"
     },
     {
       "filename": "pxrm_2_15_ig.docx",
@@ -1236,7 +1252,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_15_ig.docx",
       "fetch_size": 285488,
-      "fetch_time": "2026-03-11T20:08:40.796782+00:00"
+      "fetch_time": "2026-03-12T18:03:03.355821+00:00"
     },
     {
       "filename": "pxrm_2_17_ig.docx",
@@ -1250,7 +1266,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_17_ig.docx",
       "fetch_size": 335671,
-      "fetch_time": "2026-03-11T20:08:43.429997+00:00"
+      "fetch_time": "2026-03-12T18:03:06.621174+00:00"
     },
     {
       "filename": "pxrm_2_18_ig.docx",
@@ -1264,7 +1280,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_18_ig.docx",
       "fetch_size": 411911,
-      "fetch_time": "2026-03-11T20:08:47.120571+00:00"
+      "fetch_time": "2026-03-12T18:03:09.692324+00:00"
     },
     {
       "filename": "pxrm_2_19_ig.docx",
@@ -1278,7 +1294,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_19_ig.docx",
       "fetch_size": 849797,
-      "fetch_time": "2026-03-11T20:08:50.075883+00:00"
+      "fetch_time": "2026-03-12T18:03:13.153902+00:00"
     },
     {
       "filename": "pxrm_2_1_ig.docx",
@@ -1292,7 +1308,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_1_ig.docx",
       "fetch_size": 723974,
-      "fetch_time": "2026-03-11T20:08:53.074907+00:00"
+      "fetch_time": "2026-03-12T18:03:16.540644+00:00"
     },
     {
       "filename": "pxrm_2_5_sg.docx",
@@ -1306,7 +1322,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_5_sg.docx",
       "fetch_size": 403457,
-      "fetch_time": "2026-03-11T20:08:55.545953+00:00"
+      "fetch_time": "2026-03-12T18:03:19.087576+00:00"
     },
     {
       "filename": "pxrm_2_6_ig.docx",
@@ -1320,7 +1336,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_6_ig.docx",
       "fetch_size": 352658,
-      "fetch_time": "2026-03-11T20:08:58.648866+00:00"
+      "fetch_time": "2026-03-12T18:03:22.179088+00:00"
     },
     {
       "filename": "pxrm_2_8_ig.docx",
@@ -1334,7 +1350,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_8_ig.docx",
       "fetch_size": 210219,
-      "fetch_time": "2026-03-11T20:09:01.061960+00:00"
+      "fetch_time": "2026-03-12T18:03:25.032199+00:00"
     },
     {
       "filename": "pxrm_2_sg.docx",
@@ -1348,7 +1364,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_sg.docx",
       "fetch_size": 472350,
-      "fetch_time": "2026-03-11T20:09:04.047471+00:00"
+      "fetch_time": "2026-03-12T18:03:27.604266+00:00"
     },
     {
       "filename": "pxrm_2_0_26_rn.docx",
@@ -1362,7 +1378,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_0_26_rn.docx",
       "fetch_size": 455031,
-      "fetch_time": "2026-03-11T20:10:39.989294+00:00"
+      "fetch_time": "2026-03-12T18:03:30.138020+00:00"
     },
     {
       "filename": "pxrm_2_0_27_rn.docx",
@@ -1376,7 +1392,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_0_27_rn.docx",
       "fetch_size": 309625,
-      "fetch_time": "2026-03-11T20:10:42.920798+00:00"
+      "fetch_time": "2026-03-12T18:03:33.008561+00:00"
     },
     {
       "filename": "pxrm_2_0_53_rn.docx",
@@ -1390,7 +1406,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_0_53_rn.docx",
       "fetch_size": 362310,
-      "fetch_time": "2026-03-11T20:10:46.988449+00:00"
+      "fetch_time": "2026-03-12T18:03:35.631159+00:00"
     },
     {
       "filename": "pxrm_2_0_61_rn.docx",
@@ -1404,7 +1420,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_0_61_rn.docx",
       "fetch_size": 222641,
-      "fetch_time": "2026-03-11T20:10:50.343988+00:00"
+      "fetch_time": "2026-03-12T18:03:39.488204+00:00"
     },
     {
       "filename": "pxrm_2_12_rn.docx",
@@ -1418,7 +1434,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_12_rn.docx",
       "fetch_size": 95453,
-      "fetch_time": "2026-03-11T20:10:53.117300+00:00"
+      "fetch_time": "2026-03-12T18:03:41.827835+00:00"
     },
     {
       "filename": "pxrm_2_18_rn.docx",
@@ -1432,7 +1448,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_18_rn.docx",
       "fetch_size": 336924,
-      "fetch_time": "2026-03-11T20:10:56.084992+00:00"
+      "fetch_time": "2026-03-12T18:03:44.385084+00:00"
     },
     {
       "filename": "pxrm_2_22_rn.docx",
@@ -1446,7 +1462,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_22_rn.docx",
       "fetch_size": 471118,
-      "fetch_time": "2026-03-11T20:10:59.607402+00:00"
+      "fetch_time": "2026-03-12T18:03:47.983910+00:00"
     },
     {
       "filename": "pxrm_2_24_rn.docx",
@@ -1460,7 +1476,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_24_rn.docx",
       "fetch_size": 743412,
-      "fetch_time": "2026-03-11T20:11:02.929018+00:00"
+      "fetch_time": "2026-03-12T18:03:51.509026+00:00"
     },
     {
       "filename": "pxrm_2_24_rn2.docx",
@@ -1474,7 +1490,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_24_rn2.docx",
       "fetch_size": 743382,
-      "fetch_time": "2026-03-11T20:11:05.784710+00:00"
+      "fetch_time": "2026-03-12T18:03:54.550338+00:00"
     },
     {
       "filename": "pxrm_2_4_rn.docx",
@@ -1488,7 +1504,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_4_rn.docx",
       "fetch_size": 393220,
-      "fetch_time": "2026-03-11T20:11:08.747453+00:00"
+      "fetch_time": "2026-03-12T18:03:57.920750+00:00"
     },
     {
       "filename": "pxrm_2_6_rn.docx",
@@ -1502,7 +1518,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Clinical_Reminders/pxrm_2_6_rn.docx",
       "fetch_size": 308932,
-      "fetch_time": "2026-03-11T20:11:11.874101+00:00"
+      "fetch_time": "2026-03-12T18:04:01.095083+00:00"
     },
     {
       "filename": "acr_p_um_appx.docx",
@@ -1544,7 +1560,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Ambulatory_Care_Reporting/acr_p_pimstm.docx",
       "fetch_size": 653322,
-      "fetch_time": "2026-03-11T20:08:19.892594+00:00"
+      "fetch_time": "2026-03-12T18:04:04.336993+00:00"
     },
     {
       "filename": "acr_icd-10_rn_sd_5_3_593.docx",
@@ -1558,7 +1574,7 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Ambulatory_Care_Reporting/acr_icd-10_rn_sd_5_3_593.docx",
       "fetch_size": 262777,
-      "fetch_time": "2026-03-11T20:11:14.535652+00:00"
+      "fetch_time": "2026-03-12T18:04:06.687784+00:00"
     },
     {
       "filename": "acr_p_rn.docx",
@@ -1572,7 +1588,487 @@
       "fetched_ext": "docx",
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Ambulatory_Care_Reporting/acr_p_rn.docx",
       "fetch_size": 24317,
-      "fetch_time": "2026-03-11T20:11:16.634969+00:00"
+      "fetch_time": "2026-03-12T18:04:08.792395+00:00"
+    },
+    {
+      "filename": "cprsguium.docx",
+      "app_code": "CPRS",
+      "app_name": "Computerized Patient Record System (CPRS)",
+      "doc_type": "CPRS User Manual: GUI Version (Updated OR*3.0*499)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)_Archive/cprsguium.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)_Archive/cprsguium.docx",
+      "fetch_size": 24834962,
+      "fetch_time": "2026-03-12T18:04:33.618063+00:00"
+    },
+    {
+      "filename": "cprsguitm.docx",
+      "app_code": "CPRS",
+      "app_name": "Computerized Patient Record System (CPRS)",
+      "doc_type": "CPRS Technical Manual: GUI Version (Updated OR*3.0*499)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)_Archive/cprsguitm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)_Archive/cprsguitm.docx",
+      "fetch_size": 3266971,
+      "fetch_time": "2026-03-12T18:04:39.001265+00:00"
+    },
+    {
+      "filename": "cprsguium_ro.docx",
+      "app_code": "CPRS",
+      "app_name": "Computerized Patient Record System (CPRS)",
+      "doc_type": "CPRS User Manual: GUI Read Only Version",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/cprsguium_ro.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/cprsguium_ro.docx",
+      "fetch_size": 893179,
+      "fetch_time": "2026-03-12T18:04:42.213357+00:00"
+    },
+    {
+      "filename": "cprssetup.docx",
+      "app_code": "CPRS",
+      "app_name": "Computerized Patient Record System (CPRS)",
+      "doc_type": "CPRS Setup Guide",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/cprssetup.docx",
+      "category": "setup-config",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/cprssetup.docx",
+      "fetch_size": 935921,
+      "fetch_time": "2026-03-12T18:04:45.232837+00:00"
+    },
+    {
+      "filename": "cprsig.docx",
+      "app_code": "CPRS",
+      "app_name": "Computerized Patient Record System (CPRS)",
+      "doc_type": "CPRS Installation Guide",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/cprsig.docx",
+      "category": "setup-config",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/cprsig.docx",
+      "fetch_size": 204918,
+      "fetch_time": "2026-03-12T18:04:47.669852+00:00"
+    },
+    {
+      "filename": "cprslmtm.docx",
+      "app_code": "CPRS",
+      "app_name": "Computerized Patient Record System (CPRS)",
+      "doc_type": "CPRS Technical Manual: List Manager Version (Updated OR*3.0*499)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)_Archive/cprslmtm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Comp_Patient_Recrd_Sys_(CPRS)_Archive/cprslmtm.docx",
+      "fetch_size": 1874582,
+      "fetch_time": "2026-03-12T18:04:53.964464+00:00"
+    },
+    {
+      "filename": "tiutm.docx",
+      "app_code": "TIU",
+      "app_name": "CPRS: Text Integration Utility (TIU)",
+      "doc_type": "TIU Technical Manual (TIU*1.0*372)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Text_Integration_Utility_(TIU)/tiutm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Text_Integration_Utility_(TIU)/tiutm.docx",
+      "fetch_size": 1826263,
+      "fetch_time": "2026-03-12T18:04:57.655891+00:00"
+    },
+    {
+      "filename": "tiuum.docx",
+      "app_code": "TIU",
+      "app_name": "CPRS: Text Integration Utility (TIU)",
+      "doc_type": "TIU Clinical Coordinator and User Manual (TIU*1.0*364)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Text_Integration_Utility_(TIU)/tiuum.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Text_Integration_Utility_(TIU)/tiuum.docx",
+      "fetch_size": 1550867,
+      "fetch_time": "2026-03-12T18:05:01.914728+00:00"
+    },
+    {
+      "filename": "tiuim.docx",
+      "app_code": "TIU",
+      "app_name": "CPRS: Text Integration Utility (TIU)",
+      "doc_type": "TIU/ASU Implementation Guide",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Text_Integration_Utility_(TIU)/tiuim.docx",
+      "category": "setup-config",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Text_Integration_Utility_(TIU)/tiuim.docx",
+      "fetch_size": 673664,
+      "fetch_time": "2026-03-12T18:05:04.955139+00:00"
+    },
+    {
+      "filename": "constm.docx",
+      "app_code": "GMRC",
+      "app_name": "CPRS: Consult/Request Tracking (GMRC)",
+      "doc_type": "Consult/Request Tracking Technical Manual (GMRC*3.0*189)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Consult_Request_Tracking/constm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Consult_Request_Tracking/constm.docx",
+      "fetch_size": 6145433,
+      "fetch_time": "2026-03-12T18:05:40.366048+00:00"
+    },
+    {
+      "filename": "consum.docx",
+      "app_code": "GMRC",
+      "app_name": "CPRS: Consult/Request Tracking (GMRC)",
+      "doc_type": "Consult/Request Tracking User Manual (GMRC*3.0*206)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Consult_Request_Tracking/consum.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Consult_Request_Tracking/consum.docx",
+      "fetch_size": 3884194,
+      "fetch_time": "2026-03-12T18:05:45.988708+00:00"
+    },
+    {
+      "filename": "consifc.docx",
+      "app_code": "GMRC",
+      "app_name": "CPRS: Consult/Request Tracking (GMRC)",
+      "doc_type": "Inter-Facility Consults Implementation Guide",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Consult_Request_Tracking/consifc.docx",
+      "category": "setup-config",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/CPRS-Consult_Request_Tracking/consifc.docx",
+      "fetch_size": 176477,
+      "fetch_time": "2026-03-12T18:05:49.545463+00:00"
+    },
+    {
+      "filename": "sd_pims_tm.docx",
+      "app_code": "SD",
+      "app_name": "Scheduling (SD)",
+      "doc_type": "SD PIMS Version 5.3 Technical Manual",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Scheduling/sd_pims_tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Scheduling/sd_pims_tm.docx",
+      "fetch_size": 901388,
+      "fetch_time": "2026-03-12T18:05:53.140861+00:00"
+    },
+    {
+      "filename": "pso_7_tm.docx",
+      "app_code": "PSO",
+      "app_name": "Pharmacy: Outpatient Pharmacy (PSO)",
+      "doc_type": "Outpatient Pharmacy Version 7 Technical Manual Security Guide (PSO*7*766)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Outpatient_Pharmacy/pso_7_tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Outpatient_Pharmacy/pso_7_tm.docx",
+      "fetch_size": 1376375,
+      "fetch_time": "2026-03-12T18:05:56.711387+00:00"
+    },
+    {
+      "filename": "pso_7_pharm_um.docx",
+      "app_code": "PSO",
+      "app_name": "Pharmacy: Outpatient Pharmacy (PSO)",
+      "doc_type": "Outpatient Pharmacy Version 7 Pharmacist's User Manual (updated *7.0*685)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Outpatient_Pharmacy_Archive/pso_7_pharm_um.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Outpatient_Pharmacy_Archive/pso_7_pharm_um.docx",
+      "fetch_size": 2495245,
+      "fetch_time": "2026-03-12T18:06:01.344322+00:00"
+    },
+    {
+      "filename": "pso_7_man_um.docx",
+      "app_code": "PSO",
+      "app_name": "Pharmacy: Outpatient Pharmacy (PSO)",
+      "doc_type": "Outpatient Pharmacy Version 7 Manager's User Manual (Updated PSO*7.0*647)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Outpatient_Pharmacy_Archive/pso_7_man_um.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Outpatient_Pharmacy_Archive/pso_7_man_um.docx",
+      "fetch_size": 1823515,
+      "fetch_time": "2026-03-12T18:06:06.728652+00:00"
+    },
+    {
+      "filename": "psj_5_0_p447_tm.docx",
+      "app_code": "PSJ",
+      "app_name": "Pharmacy: Inpatient Medications (PSJ)",
+      "doc_type": "Inpatient Medications Technical Manual/Security Guide (PSJ*5.0*447)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Inpatient_Med/psj_5_0_p447_tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Inpatient_Med/psj_5_0_p447_tm.docx",
+      "fetch_size": 445172,
+      "fetch_time": "2026-03-12T18:06:09.861394+00:00"
+    },
+    {
+      "filename": "PSJ_5_0_p447_PHAR_UM.docx",
+      "app_code": "PSJ",
+      "app_name": "Pharmacy: Inpatient Medications (PSJ)",
+      "doc_type": "Inpatient Medications Pharmacist's User Manual (PSJ*5*447)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Inpatient_Med/PSJ_5_0_p447_PHAR_UM.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Inpatient_Med/PSJ_5_0_p447_PHAR_UM.docx",
+      "fetch_size": 2134896,
+      "fetch_time": "2026-03-12T18:06:13.771396+00:00"
+    },
+    {
+      "filename": "PSJ_5_0_NURSE_UM.docx",
+      "app_code": "PSJ",
+      "app_name": "Pharmacy: Inpatient Medications (PSJ)",
+      "doc_type": "Inpatient Medications Nurse's User Manual (PSJ*5*423)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Inpatient_Med/PSJ_5_0_NURSE_UM.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Pharm-Inpatient_Med/PSJ_5_0_NURSE_UM.docx",
+      "fetch_size": 693024,
+      "fetch_time": "2026-03-12T18:06:16.675905+00:00"
+    },
+    {
+      "filename": "lab5_2um.docx",
+      "app_code": "LR",
+      "app_name": "Laboratory (LA and LR)",
+      "doc_type": "Laboratory Version 5.2 User Manual",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Laboratory/lab5_2um.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Laboratory/lab5_2um.docx",
+      "fetch_size": 818427,
+      "fetch_time": "2026-03-12T18:06:19.761195+00:00"
+    },
+    {
+      "filename": "lab5_2tm.docx",
+      "app_code": "LR",
+      "app_name": "Laboratory (LA and LR)",
+      "doc_type": "Laboratory Version 5.2 Technical Manual (Current LR*5.2*570)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Laboratory/lab5_2tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Laboratory/lab5_2tm.docx",
+      "fetch_size": 956167,
+      "fetch_time": "2026-03-12T18:06:23.203675+00:00"
+    },
+    {
+      "filename": "lab5_2sg.docx",
+      "app_code": "LR",
+      "app_name": "Laboratory (LA and LR)",
+      "doc_type": "Laboratory Version 5.2 Package Security Guide",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Laboratory/lab5_2sg.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 1,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Laboratory/lab5_2sg.docx",
+      "fetch_size": 41666,
+      "fetch_time": "2026-03-12T18:06:25.408765+00:00"
+    },
+    {
+      "filename": "ra5_0tm.docx",
+      "app_code": "RA",
+      "app_name": "Radiology/Nuclear Medicine (RA)",
+      "doc_type": "Radiology Version 5 Technical Manual",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Radiology_Nuclear_Med/ra5_0tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Radiology_Nuclear_Med/ra5_0tm.docx",
+      "fetch_size": 618731,
+      "fetch_time": "2026-03-12T18:06:28.303233+00:00"
+    },
+    {
+      "filename": "ra5_0um.docx",
+      "app_code": "RA",
+      "app_name": "Radiology/Nuclear Medicine (RA)",
+      "doc_type": "Radiology Version 5 User Manual (Updated RA*5*216)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Radiology_Nuclear_Med/ra5_0um.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Radiology_Nuclear_Med/ra5_0um.docx",
+      "fetch_size": 963131,
+      "fetch_time": "2026-03-12T18:06:31.620121+00:00"
+    },
+    {
+      "filename": "ra5_0ag.docx",
+      "app_code": "RA",
+      "app_name": "Radiology/Nuclear Medicine (RA)",
+      "doc_type": "Radiology Version 5 ADPAC Guide",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Radiology_Nuclear_Med/ra5_0ag.docx",
+      "category": "setup-config",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Radiology_Nuclear_Med/ra5_0ag.docx",
+      "fetch_size": 622277,
+      "fetch_time": "2026-03-12T18:06:34.690982+00:00"
+    },
+    {
+      "filename": "sr_3_um.docx",
+      "app_code": "SR",
+      "app_name": "Surgery (SR)",
+      "doc_type": "Surgery User Manual (SR*3.0*205)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Surgery/sr_3_um.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Surgery/sr_3_um.docx",
+      "fetch_size": 5106142,
+      "fetch_time": "2026-03-12T18:06:41.752490+00:00"
+    },
+    {
+      "filename": "sr_3_tm_r1115.docx",
+      "app_code": "SR",
+      "app_name": "Surgery (SR)",
+      "doc_type": "SR*3*184 Surgery Technical Manual/Security Guide Change Pages",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Surgery/sr_3_tm_r1115.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Surgery/sr_3_tm_r1115.docx",
+      "fetch_size": 275503,
+      "fetch_time": "2026-03-12T18:06:44.530745+00:00"
+    },
+    {
+      "filename": "ecx_3_ug.docx",
+      "app_code": "ECX",
+      "app_name": "Decision Support System (DSS) Extracts",
+      "doc_type": "Decision Support System Version 3.0 User Guide (Updated ECX*3*196)",
+      "doc_url": "https://www.va.gov/vdl/documents/Financial_Admin/Decision_Supp_Sys_(DSS)/ecx_3_ug.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Financial_Admin/Decision_Supp_Sys_(DSS)/ecx_3_ug.docx",
+      "fetch_size": 12575037,
+      "fetch_time": "2026-03-12T18:06:57.740117+00:00"
+    },
+    {
+      "filename": "ecx_3_tm.docx",
+      "app_code": "ECX",
+      "app_name": "Decision Support System (DSS) Extracts",
+      "doc_type": "Decision Support System Version 3.0 Technical Manual (Updated ECX*3*196)",
+      "doc_url": "https://www.va.gov/vdl/documents/Financial_Admin/Decision_Supp_Sys_(DSS)/ecx_3_tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Financial_Admin/Decision_Supp_Sys_(DSS)/ecx_3_tm.docx",
+      "fetch_size": 151785,
+      "fetch_time": "2026-03-12T18:07:00.070893+00:00"
+    },
+    {
+      "filename": "apump422.docx",
+      "app_code": "LRAP",
+      "app_name": "Laboratory: Anatomic Pathology",
+      "doc_type": "Laboratory Anatomic Pathology User Manual (Updated LR*5.2*422)",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Lab-Anatomic_Pathology/apump422.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Lab-Anatomic_Pathology/apump422.docx",
+      "fetch_size": 591368,
+      "fetch_time": "2026-03-12T18:07:03.651675+00:00"
+    },
+    {
+      "filename": "lab_ap_lr_5_2_ug.docx",
+      "app_code": "LRAP",
+      "app_name": "Laboratory: Anatomic Pathology",
+      "doc_type": "Laboratory Anatomic Pathology Version 5.2  User Manual",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Lab-Anatomic_Pathology/lab_ap_lr_5_2_ug.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Lab-Anatomic_Pathology/lab_ap_lr_5_2_ug.docx",
+      "fetch_size": 756546,
+      "fetch_time": "2026-03-12T18:07:07.482170+00:00"
+    },
+    {
+      "filename": "lr_52_p267_ug.docx",
+      "app_code": "LRBB",
+      "app_name": "Laboratory: Blood Bank",
+      "doc_type": "LR*5.2*267 Laboratory: Blood Bank International Society of Blood Transfusions (ISBT) User Guide",
+      "doc_url": "https://www.va.gov/vdl/documents/Clinical/Lab-Blood_Bank/lr_52_p267_ug.docx",
+      "category": "user-manual",
+      "fetch_status": "ok",
+      "ingest_status": "pending",
+      "tier": 2,
+      "fetched_ext": "docx",
+      "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Lab-Blood_Bank/lr_52_p267_ug.docx",
+      "fetch_size": 648110,
+      "fetch_time": "2026-03-12T18:07:10.433853+00:00"
     }
   ]
 }

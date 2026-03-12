@@ -1,0 +1,159 @@
+Found 142 .docx file(s) to analyse.
+  [ 1/142] or_3_p427_qr.docx
+  [ 2/142] or_3_p529_qr.docx
+  [ 3/142] prt_ug_r.docx
+  [ 4/142] prt_tm_r.docx
+  [ 5/142] OR_3_0_377_setup.docx
+  [ 6/142] or_30_218_ig.docx
+  [ 7/142] or_3_0_405_setup_r.docx
+  [ 8/142] or_3_0_498_setup_r.docx
+  [ 9/142] OR_3_0_377_RN.docx
+  [10/142] or_30_280rn.docx
+  [11/142] or_30_296rn.docx
+  [12/142] or_30_304rn.docx
+  [13/142] or_30_306_rn.docx
+  [14/142] or_30_312_rn.docx
+  [15/142] or_30_350_rn.docx
+  [16/142] or_30_385_rn.docx
+  [17/142] or_30_387_rn.docx
+  [18/142] or_30_420rn.docx
+  [19/142] or_3_0_405_rn.docx
+  [20/142] or_3_0_406_rn.docx
+  [21/142] or_3_0_588_rn.docx
+  [22/142] or_3_0_608_rn.docx
+  [23/142] or_3_0_617_rn.docx
+  [24/142] or_3_0_629_rn.docx
+  [25/142] or_3_309rn.docx
+  [26/142] or_3_332rn.docx
+  [27/142] or_3_340rn.docx
+  [28/142] cprsguium.docx
+  [29/142] cprsguitm.docx
+  [30/142] cprsguium_ro.docx
+  [31/142] cprssetup.docx
+  [32/142] cprsig.docx
+  [33/142] cprslmtm.docx
+  [34/142] gmts_2_7_p133_um.docx
+  [35/142] hsum_2_7_um.docx
+  [36/142] gmts_2_7_p133_tm.docx
+  [37/142] hsum_2_7_tm.docx
+  [38/142] gmplum.docx
+  [39/142] gmpl_2_0_49_tm.docx
+  [40/142] gmpl_2_0_49_rn.docx
+  [41/142] gmra_4_0_um.docx
+  [42/142] gmra_4_0_tm.docx
+  [43/142] gmra_4_20_rn.docx
+  [44/142] gmra_4_23_rn.docx
+  [45/142] gmra_4_26_rn.docx
+  [46/142] gmra_4_50_rn.docx
+  [47/142] vitl5_um.docx
+  [48/142] vitl_5_p22_um.docx
+  [49/142] vitl_5_p23_um_change_pages.docx
+  [50/142] vitl5_tm.docx
+  [51/142] vitl_5_p22_tm.docx
+  [52/142] vitl_5_p23_tm_change_pages.docx
+  [53/142] vitl5_p22_rn.docx
+  [54/142] vitl5_p23_rn.docx
+  [55/142] vitl5_p3_rn.docx
+  [56/142] vitl5_rn.docx
+  [57/142] px_um.docx
+  [58/142] pxqr.docx
+  [59/142] pxumappx.docx
+  [60/142] px_tm.docx
+  [61/142] icd-10_rn_px_1_199.docx
+  [62/142] px_1_0_211_rn.docx
+  [63/142] px_1_0_234_rn.docx
+  [64/142] px_1_p124_rn.docx
+  [65/142] px_1_p164_rn.docx
+  [66/142] pxrnp16.docx
+  [67/142] ahobpr_registrantportal_usermanual_v3.docx
+  [68/142] pxrm_1_5_8_ihd_reminders_brochure.docx
+  [69/142] pxrm_2_0_26_um.docx
+  [70/142] pxrm_2_0_29_um.docx
+  [71/142] pxrm_2_0_32_ug.docx
+  [72/142] pxrm_2_0_38_um_lung.docx
+  [73/142] pxrm_2_0_38_um_prostate.docx
+  [74/142] pxrm_2_0_38_um_vsas.docx
+  [75/142] pxrm_2_0_39_cac_cklist.docx
+  [76/142] pxrm_2_0_54_cds.docx
+  [77/142] pxrm_2_19_um.docx
+  [78/142] pxrm_2_21_mm.docx
+  [79/142] pxrm_2_22_mm.docx
+  [80/142] pxrm_2_2_um_appd.docx
+  [81/142] pxrm_2_4_um.docx
+  [82/142] pxrm_2_6_um.docx
+  [83/142] pxrm_2_mm.docx
+  [84/142] pxrm_2_um.docx
+  [85/142] pxrm_cr-rept-qrc.docx
+  [86/142] pxrm_qrc-cr2-user.docx
+  [87/142] pxrm_1_5_12_tm.docx
+  [88/142] pxrm_2_4_tm.docx
+  [89/142] pxrm_index_tm.docx
+  [90/142] pxrm_1_5_21_setup.docx
+  [91/142] pxrm_2_11_ig.docx
+  [92/142] pxrm_2_15_ig.docx
+  [93/142] pxrm_2_17_ig.docx
+  [94/142] pxrm_2_18_ig.docx
+  [95/142] pxrm_2_19_ig.docx
+  [96/142] pxrm_2_1_ig.docx
+  [97/142] pxrm_2_5_sg.docx
+  [98/142] pxrm_2_6_ig.docx
+  [99/142] pxrm_2_8_ig.docx
+  [100/142] pxrm_2_sg.docx
+  [101/142] pxrm_2_0_26_rn.docx
+  [102/142] pxrm_2_0_27_rn.docx
+  [103/142] pxrm_2_0_53_rn.docx
+  [104/142] pxrm_2_0_61_rn.docx
+  [105/142] pxrm_2_12_rn.docx
+  [106/142] pxrm_2_18_rn.docx
+  [107/142] pxrm_2_22_rn.docx
+  [108/142] pxrm_2_24_rn.docx
+  [109/142] pxrm_2_24_rn2.docx
+  [110/142] pxrm_2_4_rn.docx
+  [111/142] pxrm_2_6_rn.docx
+  [112/142] acr_p_um_appx.docx
+  [113/142] acr_puse.docx
+  [114/142] acr_p_pimstm.docx
+  [115/142] acr_icd-10_rn_sd_5_3_593.docx
+  [116/142] acr_p_rn.docx
+  [117/142] tiutm.docx
+  [118/142] tiuum.docx
+  [119/142] tiuim.docx
+  [120/142] constm.docx
+  [121/142] consum.docx
+  [122/142] consifc.docx
+  [123/142] sd_pims_tm.docx
+  [124/142] pso_7_tm.docx
+  [125/142] pso_7_pharm_um.docx
+  [126/142] pso_7_man_um.docx
+  [127/142] psj_5_0_p447_tm.docx
+  [128/142] PSJ_5_0_p447_PHAR_UM.docx
+  [129/142] PSJ_5_0_NURSE_UM.docx
+  [130/142] lab5_2um.docx
+  [131/142] lab5_2tm.docx
+  [132/142] lab5_2sg.docx
+  [133/142] ra5_0tm.docx
+  [134/142] ra5_0um.docx
+  [135/142] ra5_0ag.docx
+  [136/142] sr_3_um.docx
+  [137/142] sr_3_tm_r1115.docx
+  [138/142] ecx_3_ug.docx
+  [139/142] ecx_3_tm.docx
+  [140/142] apump422.docx
+  [141/142] lab_ap_lr_5_2_ug.docx
+  [142/142] lr_52_p267_ug.docx
+
+Done.
+  Report : /Users/rafael/vista-docs/scripts/survey-report.txt
+  Data   : /Users/rafael/vista-docs/scripts/survey-data.json
+
+── Quick summary ──────────────────────────────────────────────
+  Docs analysed          : 142
+  Standard styles        : 1
+  One-off styles         : 213
+  Total tables           : 2466
+  Pseudo-headings        : 6938
+  Docs with TOC field    : 91
+  Docs with rev. table   : 73
+  Internal page refs     : 104
+  External doc refs      : 103
+

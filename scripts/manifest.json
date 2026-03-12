@@ -36,9 +36,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/cprssetup.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/setup-guide-canonical.json"
+          "archive_json": "docs/clinical/cprs/archive/setup-guide-canonical.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/cprssetup.docx"
         },
         {
           "title": "CPRS User Manual: GUI Read Only Version",
@@ -56,9 +57,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/cprsguium_ro.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/user-manual-gui-read-only-version.json"
+          "archive_json": "docs/clinical/cprs/archive/user-manual-gui-read-only-version.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/cprsguium_ro.docx"
         },
         {
           "title": "OR*3*153 CPRS Query Hepatitis C Reports User Manual",
@@ -76,9 +78,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_153um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/user-manual-p153.json"
+          "archive_json": "docs/clinical/cprs/archive/user-manual-p153.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_153um.docx"
         },
         {
           "title": "OR*3*377 Set Up and Configuration Guide CPRS GUI 31B",
@@ -96,9 +99,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/OR_3_0_377_setup.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/setup-guide-p377.json"
+          "archive_json": "docs/clinical/cprs/archive/setup-guide-p377.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/OR_3_0_377_setup.docx"
         },
         {
           "title": "OR*3.0*405 (CPRS v32b) Setup and Configuration Guide",
@@ -116,9 +120,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_405_setup_r.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/setup-guide-p405.json"
+          "archive_json": "docs/clinical/cprs/archive/setup-guide-p405.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_405_setup_r.docx"
         },
         {
           "title": "OR*3.0*453 Provider Role Tool Technical Manual",
@@ -136,9 +141,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/prt_tm_r.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/technical-manual-p453.json"
+          "archive_json": "docs/clinical/cprs/archive/technical-manual-p453.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/prt_tm_r.docx"
         },
         {
           "title": "OR*3.0*453 Provider Role Tool User Guide",
@@ -156,9 +162,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/prt_ug_r.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/user-manual-p453.json"
+          "archive_json": "docs/clinical/cprs/archive/user-manual-p453.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/prt_ug_r.docx"
         },
         {
           "title": "OR*3.0*498 (v31b followup)  Setup and Configuration Guide",
@@ -176,9 +183,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_498_setup_r.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/setup-guide-p498.json"
+          "archive_json": "docs/clinical/cprs/archive/setup-guide-p498.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_498_setup_r.docx"
         },
         {
           "title": "CPRS OR*3*569 AP Order Dialog Setup and Configuration Guide",
@@ -196,9 +204,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_569_setup.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/setup-guide-p569.json"
+          "archive_json": "docs/clinical/cprs/archive/setup-guide-p569.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_569_setup.docx"
         },
         {
           "title": "CPRS Technical Manual: List Manager Version (Updated OR*3.0*626)",
@@ -216,9 +225,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/cprslmtm.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/technical-manual-p626.json"
+          "archive_json": "docs/clinical/cprs/archive/technical-manual-p626.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/cprslmtm.docx"
         },
         {
           "title": "CPRS User Manual: GUI Version (Updated OR*3.0*626)",
@@ -236,9 +246,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/cprsguium.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/user-manual-p626.json"
+          "archive_json": "docs/clinical/cprs/archive/user-manual-p626.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/cprsguium.docx"
         },
         {
           "title": "CPRS Technical Manual: GUI Version (Updated OR*3.0*636)",
@@ -256,9 +267,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/cprsguitm.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/cprs/archive/technical-manual-p636.json"
+          "archive_json": "docs/clinical/cprs/archive/technical-manual-p636.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/cprsguitm.docx"
         },
         {
           "title": "CPRS Installation Guide",
@@ -276,8 +288,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/cprsig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/cprsig.docx"
         },
         {
           "title": "OR*3*0*626 (MOCHA 3.0 Combined Build Enhancement) Release Notes",
@@ -295,8 +308,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_626_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_626_rn.docx"
         },
         {
           "title": "OR*3*0*626 MOCHA Version 3.0 Combined Build Deployment, Installation, Back-Out, Rollback Guide",
@@ -314,8 +328,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_626_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_626_dibr.docx"
         },
         {
           "title": "OR*3*153 CPRS Query Hepatitis C Reports Installation/Implementation Guide",
@@ -333,8 +348,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_153ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_153ig.docx"
         },
         {
           "title": "OR*3*218 DEA e-Prescribing Setup Installation and Configuration Guide CPRS GUI",
@@ -352,8 +368,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_218_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_218_ig.docx"
         },
         {
           "title": "OR*3*280 and Associated Patches Installation Guide CPRS GUI 28",
@@ -371,8 +388,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_280ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_280ig.docx"
         },
         {
           "title": "OR*3*280 Release Notes CPRS GUI 28",
@@ -390,8 +408,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_280rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_280rn.docx"
         },
         {
           "title": "OR*3*294 Remote Data Interoperability (RDI) Installation Guide",
@@ -409,8 +428,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_294ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_294ig.docx"
         },
         {
           "title": "OR*3*296  and Associated Patches Installation Guide CPRS GUI 27.9",
@@ -428,8 +448,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_296ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_296ig.docx"
         },
         {
           "title": "OR*3*296 Release Notes CPRS GUI 27.9",
@@ -447,8 +468,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_296rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_296rn.docx"
         },
         {
           "title": "OR*3*304 Release Notes CPRS GUI 27",
@@ -466,8 +488,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_304rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_304rn.docx"
         },
         {
           "title": "OR*3*306 Installation Guide CPRS GUI 29",
@@ -485,8 +508,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_306_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_306_ig.docx"
         },
         {
           "title": "OR*3*306 Release Notes CPRS GUI 29",
@@ -504,8 +528,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_306_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_306_rn.docx"
         },
         {
           "title": "OR*3*309 Release Notes VBECS Interface Follow-Up Fixes",
@@ -523,8 +548,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_309rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_309rn.docx"
         },
         {
           "title": "OR*3*312 Release Notes CPRS GUI",
@@ -542,8 +568,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_312_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_312_rn.docx"
         },
         {
           "title": "OR*3*332 VBECS Fixes Release Notes",
@@ -561,8 +588,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_332rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_332rn.docx"
         },
         {
           "title": "OR*3*340 Release Notes CPRS GUI Version",
@@ -580,8 +608,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_340rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_340rn.docx"
         },
         {
           "title": "OR*3*350 Installation Guide CPRS GUI 30B",
@@ -599,8 +628,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_350_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_350_ig.docx"
         },
         {
           "title": "OR*3*350 Release Notes CPRS GUI 30B",
@@ -618,8 +648,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_350_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_350_rn.docx"
         },
         {
           "title": "OR*3*377 Deployment, Installation, Back Out and Rollback Guide CPRS GUI 31B",
@@ -637,8 +668,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_377_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_377_dibr.docx"
         },
         {
           "title": "OR*3*377 Release Notes CPRS GUI 31B",
@@ -656,8 +688,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/OR_3_0_377_RN.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/OR_3_0_377_RN.docx"
         },
         {
           "title": "OR*3*385 Release Notes CPRS GUI 30A",
@@ -675,8 +708,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_385_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_385_rn.docx"
         },
         {
           "title": "OR*3*387 Release Notes - Patient Centered Management Module (PCMM) CPRS",
@@ -694,8 +728,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_387_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_387_rn.docx"
         },
         {
           "title": "OR*3*404  and OR*3*385 Installation Guide CPRS GUI 30A",
@@ -713,8 +748,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_404_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_404_ig.docx"
         },
         {
           "title": "OR*3*405 Release Notes CPRS GUI 32b",
@@ -732,8 +768,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_405_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_405_rn.docx"
         },
         {
           "title": "OR*3.0*405 (CPRS v32b) Deployment, Installation, Back-Out, and Rollback Guide",
@@ -751,8 +788,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_405_dibr_r.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_405_dibr_r.docx"
         },
         {
           "title": "OR*3*406 ICD-10 PTF Modifications Installation Guide",
@@ -770,8 +808,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/icd_10_ptf_modifications_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/icd_10_ptf_modifications_ig.docx"
         },
         {
           "title": "OR*3*406 ICD-10 PTF Modifications Release Notes",
@@ -789,8 +828,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_406_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_406_rn.docx"
         },
         {
           "title": "OR*3*418 Installation Guide CPRS GUI 30A",
@@ -808,8 +848,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_418_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_418_ig.docx"
         },
         {
           "title": "OR*3*420 Release Notes - Lab Monitoring CPRS GUI Version",
@@ -827,8 +868,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_30_420rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_30_420rn.docx"
         },
         {
           "title": "OR*3*427 CPRS Quick Reference Guide",
@@ -846,8 +888,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_p427_qr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_p427_qr.docx"
         },
         {
           "title": "OR*3*529 EHRM Cutover Note Quick Reference Guide",
@@ -865,8 +908,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_p529_qr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_p529_qr.docx"
         },
         {
           "title": "OR*3.0*588 (CPRS v32c) Deployment, Installation, Back-Out and Rollback Guide",
@@ -884,8 +928,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_588_dibr_r.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_588_dibr_r.docx"
         },
         {
           "title": "OR*3.0*588 Release Notes CPRS v32c",
@@ -903,8 +948,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_588_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_588_rn.docx"
         },
         {
           "title": "CPRS v32.221.1 EMERGENCY GUI (OR*3.0*598) Deployment, Installation, Back-Out, and Rollback Guide (DIBOR)",
@@ -922,8 +968,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_598_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_598_dibr.docx"
         },
         {
           "title": "OR*3.0*607 Deployment, Installation, Back-Out and Rollback Guide",
@@ -960,8 +1007,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_608_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_608_dibr.docx"
         },
         {
           "title": "OR*3.0*608 (CPRS v33SWD) Release Notes",
@@ -979,8 +1027,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_608_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_608_rn.docx"
         },
         {
           "title": "OR*3.0*617 Release Notes CPRS",
@@ -998,8 +1047,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_617_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_617_rn.docx"
         },
         {
           "title": "OR*3.0*629 (CPRS v33R) Deployment, Installation, Back-Out, and Rollback Guide",
@@ -1017,8 +1067,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_629_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_629_dibr.docx"
         },
         {
           "title": "OR*3.0*629 (CPRS v33R) Release Notes",
@@ -1036,8 +1087,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/cprs/or_3_0_629_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/cprs/or_3_0_629_rn.docx"
         }
       ]
     },
@@ -1076,9 +1128,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiuhl7.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/tiu/archive/hl7-interface.json"
+          "archive_json": "docs/clinical/tiu/archive/hl7-interface.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiuhl7.docx"
         },
         {
           "title": "TIU/ASU Implementation Guide",
@@ -1096,9 +1149,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiuim.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/tiu/archive/implementation-guide.json"
+          "archive_json": "docs/clinical/tiu/archive/implementation-guide.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiuim.docx"
         },
         {
           "title": "Additional Signer Utility Guide (TIU*1.0*357)",
@@ -1116,9 +1170,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiu_util.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/tiu/archive/additional-signer-utility-guide-tiu10357.json"
+          "archive_json": "docs/clinical/tiu/archive/additional-signer-utility-guide-tiu10357.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiu_util.docx"
         },
         {
           "title": "TIU Clinical Coordinator and User Manual (TIU*1.0*364)",
@@ -1136,9 +1191,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiuum.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/tiu/archive/user-manual.json"
+          "archive_json": "docs/clinical/tiu/archive/user-manual.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiuum.docx"
         },
         {
           "title": "TIU Technical Manual (TIU*1.0*372)",
@@ -1156,9 +1212,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiutm.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/tiu/archive/technical-manual.json"
+          "archive_json": "docs/clinical/tiu/archive/technical-manual.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiutm.docx"
         },
         {
           "title": "TIU Quick Reference Card",
@@ -1176,8 +1233,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiuqr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiuqr.docx"
         },
         {
           "title": "TIU/ASU Installation Guide",
@@ -1195,8 +1253,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiuig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiuig.docx"
         },
         {
           "title": "TIU*1*250 TIU Line Count Release Notes",
@@ -1214,8 +1273,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiu_1_250rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiu_1_250rn.docx"
         },
         {
           "title": "TIU*1*297 Deployment, Installation, Back-Out, Rollback Guide",
@@ -1233,8 +1293,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiu_1_0_297_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiu_1_0_297_ig.docx"
         },
         {
           "title": "TIU*1*309 Deployment Installation BackOut Rollback Guide_r",
@@ -1252,8 +1313,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiu_1_0_309_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiu_1_0_309_ig.docx"
         },
         {
           "title": "TIU*1*374 Deployment, Installation, Back-Out, Rollback Guide",
@@ -1271,8 +1333,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/tiu/tiu_1_374_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/tiu/tiu_1_374_dibr.docx"
         }
       ]
     },
@@ -1311,9 +1374,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hlo_system_manager_manual.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/hlo-system-manager-manual.json"
+          "archive_json": "docs/infrastructure/hl7/archive/hlo-system-manager-manual.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hlo_system_manager_manual.docx"
         },
         {
           "title": "HL7 HL*1.6 HLO VMS Developer Manual",
@@ -1331,9 +1395,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/vms_hlo_developer_manual.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/hlo-vms-developer-manual.json"
+          "archive_json": "docs/infrastructure/hl7/archive/hlo-vms-developer-manual.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/vms_hlo_developer_manual.docx"
         },
         {
           "title": "HL7 V. 1.6 Package Security Guide",
@@ -1351,9 +1416,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6sg.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/security-guide.json"
+          "archive_json": "docs/infrastructure/hl7/archive/security-guide.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6sg.docx"
         },
         {
           "title": "HL7 V. 1.6 Technical Manual",
@@ -1371,9 +1437,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6tm.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/technical-manual-legacy.json"
+          "archive_json": "docs/infrastructure/hl7/archive/technical-manual-legacy.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6tm.docx"
         },
         {
           "title": "HL7 V. 1.6*161 Site Manager Developer Manual",
@@ -1391,9 +1458,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6smdm_p161.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/developer-manual-p161.json"
+          "archive_json": "docs/infrastructure/hl7/archive/developer-manual-p161.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6smdm_p161.docx"
         },
         {
           "title": "HL7 V. 1.6*56 Site Manager Developer Manual",
@@ -1411,9 +1479,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6p56_p66.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/developer-manual-p56.json"
+          "archive_json": "docs/infrastructure/hl7/archive/developer-manual-p56.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6p56_p66.docx"
         },
         {
           "title": "HL7 HL*1.6*84 Multi-Listeners Using TCP/IP Svcs for OpenVMS",
@@ -1431,9 +1500,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6p84sp.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/hl7-hl1684-multi-listeners-using-tcpip-svcs-for-openvms-p84.json"
+          "archive_json": "docs/infrastructure/hl7/archive/hl7-hl1684-multi-listeners-using-tcpip-svcs-for-openvms-p84.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6p84sp.docx"
         },
         {
           "title": "HL7 HL*1.6*93 MSH Segment Control (Dynamic Routing)",
@@ -1451,9 +1521,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6p93sp.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/hl7-hl1693-msh-segment-control-dynamic-routing-p93.json"
+          "archive_json": "docs/infrastructure/hl7/archive/hl7-hl1693-msh-segment-control-dynamic-routing-p93.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6p93sp.docx"
         },
         {
           "title": "HL7 HL*1.6*126 Technical Manual",
@@ -1471,9 +1542,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl_1_6_126_tm.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/infrastructure/hl7/archive/technical-manual-p126.json"
+          "archive_json": "docs/infrastructure/hl7/archive/technical-manual-p126.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl_1_6_126_tm.docx"
         },
         {
           "title": "HL7 V. 1.6 Installation Guide",
@@ -1491,8 +1563,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6ig.docx"
         },
         {
           "title": "HL7 V. 1.6 Release Notes",
@@ -1510,8 +1583,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6rn.docx"
         },
         {
           "title": "HL7 V. 1.6*14 Developer Manual: Dynamic Addressing Supplement",
@@ -1529,8 +1603,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6p14.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6p14.docx"
         },
         {
           "title": "HL7 V. 1.6*19 User Manual: TCP/IP Supplement",
@@ -1548,8 +1623,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6p19.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6p19.docx"
         },
         {
           "title": "HL7 HL*1.6*109 Event Monitoring Supplement",
@@ -1567,8 +1643,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6p109sp.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6p109sp.docx"
         },
         {
           "title": "HL7 HL*1.6*118 Message Parsing Utilities Supplement",
@@ -1586,8 +1663,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl71_6p118_sp2.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl71_6p118_sp2.docx"
         },
         {
           "title": "HL7 HL*1.6*126 Installation Manual/Release Notes",
@@ -1605,8 +1683,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/hl7/hl_1_6_126_ig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/hl7/hl_1_6_126_ig.docx"
         }
       ]
     },
@@ -1645,9 +1724,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_pims_tm.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/technical-manual.json"
+          "archive_json": "docs/clinical/adt/archive/technical-manual.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_pims_tm.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - ADT Module",
@@ -1665,9 +1745,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adtbe_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-adt-module.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-adt-module.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adtbe_um.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - ADT Outputs Menu",
@@ -1685,9 +1766,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adto_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-adt-outputs-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-adt-outputs-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adto_um.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Bed Control Menu",
@@ -1705,9 +1787,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_reg_bc_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-bed-control-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-bed-control-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_reg_bc_um.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Contract Nursing Home RUG Menu",
@@ -1725,9 +1808,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_cnhr_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-contract-nursing-home-rug-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-contract-nursing-home-rug-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_cnhr_um.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - MAS Code Sheet Manager Menu",
@@ -1745,9 +1829,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_mcsm.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-mas-code-sheet-manager-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-mas-code-sheet-manager-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_mcsm.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Means Test Supervisor Menu",
@@ -1765,9 +1850,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_mts_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-means-test-supervisor-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-means-test-supervisor-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_mts_um.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Menus, Intro & Orientation, etc.",
@@ -1785,9 +1871,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/PIMS_User_Manual-Menus_Intros_Orientation.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-menus-intro-orientation-etc.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-menus-intro-orientation-etc.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/PIMS_User_Manual-Menus_Intros_Orientation.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Outputs Menu",
@@ -1805,9 +1892,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_pimsschoutput.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-outputs-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-outputs-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_pimsschoutput.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - PTF Menu",
@@ -1825,9 +1913,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_ptf.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-ptf-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-ptf-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_ptf.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Registration Menu",
@@ -1845,9 +1934,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/pims_reg_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-registration-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-registration-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/pims_reg_um.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - RUG-II Menu",
@@ -1865,9 +1955,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_rug.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-rug-ii-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-rug-ii-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_rug.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Security Officer Menu",
@@ -1885,9 +1976,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_so.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/security-guide.json"
+          "archive_json": "docs/clinical/adt/archive/security-guide.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_so.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Supervisor ADT Menu",
@@ -1905,9 +1997,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/sadt_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-supervisor-adt-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-supervisor-adt-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/sadt_um.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Veteran ID Card Menu",
@@ -1925,9 +2018,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_vic.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-veteran-id-card-menu.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-veteran-id-card-menu.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_vic.docx"
         },
         {
           "title": "PIMS Version 5.3 User Manual - Copay Exemption Test Supervisor Menu (Updated DG*5.3*891)",
@@ -1945,9 +2039,10 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_891_cets_um.docx",
-          "convert_status": "done",
+          "convert_status": "skipped-no-file",
           "fetch_error": null,
-          "archive_json": "docs/clinical/adt/archive/user-manual-p891.json"
+          "archive_json": "docs/clinical/adt/archive/user-manual-p891.json",
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_891_cets_um.docx"
         },
         {
           "title": "PIMS Version 5.3 Installation Guide",
@@ -1965,8 +2060,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_pimsig.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_pimsig.docx"
         },
         {
           "title": "PIMS Version 5.3 Release Notes",
@@ -1984,8 +2080,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/adt_pimsrn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/adt_pimsrn.docx"
         },
         {
           "title": "DG*5.3*964 Deployment, Installation, Back-out, Rollback Guide",
@@ -2003,8 +2100,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p964_dibrg.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p964_dibrg.docx"
         },
         {
           "title": "DG*5.3*964 Release Notes",
@@ -2022,8 +2120,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p964_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p964_rn.docx"
         },
         {
           "title": "DG*5.3*1057 Deployment, Installation, Back-Out, and Rollback Guide",
@@ -2041,8 +2140,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1057_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1057_dibr.docx"
         },
         {
           "title": "DG*5.3*1064 Release Notes",
@@ -2060,8 +2160,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1064_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1064_rn.docx"
         },
         {
           "title": "DG*5.3*1067 Release Notes",
@@ -2079,8 +2180,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1067_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1067_rn.docx"
         },
         {
           "title": "DG*5.3*1075 Release Notes",
@@ -2098,8 +2200,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1075_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1075_rn.docx"
         },
         {
           "title": "DG*5.3*1080 Deployment, Installation, Back-Out, and Rollback Guide",
@@ -2117,8 +2220,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1080_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1080_dibr.docx"
         },
         {
           "title": "DG*5.3*1081 Release Notes",
@@ -2136,8 +2240,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1081_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1081_rn.docx"
         },
         {
           "title": "DG*5.3*1082 Release Notes",
@@ -2155,8 +2260,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1082_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1082_rn.docx"
         },
         {
           "title": "DG*5.3*1085 Release Notes",
@@ -2174,8 +2280,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1085_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1085_rn.docx"
         },
         {
           "title": "DG*5.3*1090 Release Notes",
@@ -2193,8 +2300,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1090_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1090_rn.docx"
         },
         {
           "title": "DG*5.3*1093 Release Notes",
@@ -2212,8 +2320,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1093_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1093_rn.docx"
         },
         {
           "title": "DG*5.3*1097 Deployment, Installation, Back-out, Rollback Guide",
@@ -2231,8 +2340,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1097_dibrg.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1097_dibrg.docx"
         },
         {
           "title": "DG*5.3*1098 Release Notes",
@@ -2250,8 +2360,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1098_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1098_rn.docx"
         },
         {
           "title": "DG*5.3*1102 Deployment, Installation, Back-out, and Rollback Guide",
@@ -2269,8 +2380,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1102_dibr.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1102_dibr.docx"
         },
         {
           "title": "DG*5.3*1103 Release Notes",
@@ -2288,8 +2400,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1103_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1103_rn.docx"
         },
         {
           "title": "DG*5.3*1104 Release Notes",
@@ -2307,8 +2420,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1104_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1104_rn.docx"
         },
         {
           "title": "DG*5.3*1106 Release Notes",
@@ -2326,8 +2440,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1106_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1106_rn.docx"
         },
         {
           "title": "DG*5.3*1108 Deployment, Installation, Back-out, Rollback Guide",
@@ -2345,8 +2460,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1108_dibrg.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1108_dibrg.docx"
         },
         {
           "title": "DG*5.3*1108 Release Notes",
@@ -2364,8 +2480,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1108_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1108_rn.docx"
         },
         {
           "title": "DG*5.3*1109 Release Notes",
@@ -2383,8 +2500,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1109_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1109_rn.docx"
         },
         {
           "title": "DG*5.3*1111 Release Notes",
@@ -2402,8 +2520,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1111_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1111_rn.docx"
         },
         {
           "title": "DG*5.3*1118 Release Notes",
@@ -2421,8 +2540,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1118_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1118_rn.docx"
         },
         {
           "title": "DG*5.3*1120 Deployment, Installation, Back-out, Rollback Guide",
@@ -2440,8 +2560,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1120_dibrg.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1120_dibrg.docx"
         },
         {
           "title": "DG*5.3*1120 Release Notes",
@@ -2459,8 +2580,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1120_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1120_rn.docx"
         },
         {
           "title": "DG*5.3*1121 Release Notes",
@@ -2478,8 +2600,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1121_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1121_rn.docx"
         },
         {
           "title": "DG*5.3*1127 Release Notes",
@@ -2497,8 +2620,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_1127_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_1127_rn.docx"
         },
         {
           "title": "DG*5.3*1140 Release Notes",
@@ -2516,8 +2640,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1140_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1140_rn.docx"
         },
         {
           "title": "DG*5.3*1149 Release Notes",
@@ -2535,8 +2660,9 @@
           "fetch_status": "ok-docx",
           "fetch_format": "docx",
           "local_path": "raw/adt/dg_5_3_p1149_rn.docx",
-          "convert_status": null,
-          "fetch_error": null
+          "convert_status": "skipped-no-file",
+          "fetch_error": null,
+          "convert_error": "not found: /Users/rafael/vista-docs/raw/adt/dg_5_3_p1149_rn.docx"
         }
       ]
     }
