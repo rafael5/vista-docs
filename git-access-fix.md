@@ -1,3 +1,4 @@
+```text
 # Fix GitHub 403 by switching repository to SSH authentication
 
 # 1. Check if an SSH key already exists
@@ -29,3 +30,4 @@ ssh -T git@github.com
 
 # 10. Push again
 git push -u origin main
+```
