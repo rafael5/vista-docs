@@ -1,0 +1,3136 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "pxrm_1_5_8_ihd_reminders_brochure",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 7094037054676079952,
+    "filename": "pxrm_1_5_8_ihd_reminders_brochure.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/texts/0"
+      },
+      {
+        "cref": "#/tables/0"
+      },
+      {
+        "cref": "#/groups/0"
+      },
+      {
+        "cref": "#/groups/1"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/1"
+        },
+        {
+          "cref": "#/texts/2"
+        },
+        {
+          "cref": "#/texts/3"
+        },
+        {
+          "cref": "#/texts/4"
+        },
+        {
+          "cref": "#/texts/5"
+        },
+        {
+          "cref": "#/texts/6"
+        },
+        {
+          "cref": "#/texts/7"
+        },
+        {
+          "cref": "#/texts/8"
+        },
+        {
+          "cref": "#/texts/9"
+        },
+        {
+          "cref": "#/texts/10"
+        },
+        {
+          "cref": "#/texts/11"
+        },
+        {
+          "cref": "#/texts/12"
+        },
+        {
+          "cref": "#/texts/13"
+        },
+        {
+          "cref": "#/texts/14"
+        },
+        {
+          "cref": "#/texts/15"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [
+        {
+          "cref": "#/texts/20"
+        },
+        {
+          "cref": "#/texts/21"
+        },
+        {
+          "cref": "#/texts/22"
+        },
+        {
+          "cref": "#/texts/23"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [
+        {
+          "cref": "#/texts/25"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [
+        {
+          "cref": "#/texts/31"
+        },
+        {
+          "cref": "#/texts/32"
+        },
+        {
+          "cref": "#/texts/33"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [
+        {
+          "cref": "#/texts/35"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/16"
+        },
+        {
+          "cref": "#/texts/17"
+        },
+        {
+          "cref": "#/texts/18"
+        },
+        {
+          "cref": "#/texts/19"
+        },
+        {
+          "cref": "#/groups/3"
+        },
+        {
+          "cref": "#/texts/24"
+        },
+        {
+          "cref": "#/groups/4"
+        },
+        {
+          "cref": "#/texts/26"
+        },
+        {
+          "cref": "#/texts/27"
+        },
+        {
+          "cref": "#/texts/28"
+        },
+        {
+          "cref": "#/texts/29"
+        },
+        {
+          "cref": "#/texts/30"
+        },
+        {
+          "cref": "#/groups/5"
+        },
+        {
+          "cref": "#/texts/34"
+        },
+        {
+          "cref": "#/groups/6"
+        },
+        {
+          "cref": "#/texts/36"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-1",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-2",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-3",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/12",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-4",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/13",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-5",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/14",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-6",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/15",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/37"
+        },
+        {
+          "cref": "#/groups/8"
+        },
+        {
+          "cref": "#/groups/9"
+        },
+        {
+          "cref": "#/groups/10"
+        },
+        {
+          "cref": "#/groups/11"
+        },
+        {
+          "cref": "#/groups/12"
+        },
+        {
+          "cref": "#/groups/13"
+        },
+        {
+          "cref": "#/groups/14"
+        },
+        {
+          "cref": "#/texts/38"
+        },
+        {
+          "cref": "#/texts/39"
+        },
+        {
+          "cref": "#/texts/40"
+        },
+        {
+          "cref": "#/texts/41"
+        },
+        {
+          "cref": "#/texts/42"
+        },
+        {
+          "cref": "#/texts/43"
+        },
+        {
+          "cref": "#/texts/44"
+        },
+        {
+          "cref": "#/texts/45"
+        },
+        {
+          "cref": "#/texts/46"
+        },
+        {
+          "cref": "#/texts/47"
+        },
+        {
+          "cref": "#/texts/48"
+        },
+        {
+          "cref": "#/texts/49"
+        },
+        {
+          "cref": "#/texts/50"
+        },
+        {
+          "cref": "#/texts/51"
+        },
+        {
+          "cref": "#/texts/52"
+        },
+        {
+          "cref": "#/texts/53"
+        },
+        {
+          "cref": "#/texts/54"
+        },
+        {
+          "cref": "#/texts/55"
+        },
+        {
+          "cref": "#/texts/56"
+        },
+        {
+          "cref": "#/texts/57"
+        },
+        {
+          "cref": "#/texts/58"
+        },
+        {
+          "cref": "#/texts/59"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/16",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [
+        {
+          "cref": "#/texts/66"
+        },
+        {
+          "cref": "#/texts/67"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/17",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [
+        {
+          "cref": "#/texts/68"
+        },
+        {
+          "cref": "#/texts/69"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/18",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/61"
+        },
+        {
+          "cref": "#/texts/62"
+        },
+        {
+          "cref": "#/texts/63"
+        },
+        {
+          "cref": "#/texts/64"
+        },
+        {
+          "cref": "#/texts/65"
+        },
+        {
+          "cref": "#/groups/16"
+        },
+        {
+          "cref": "#/groups/17"
+        },
+        {
+          "cref": "#/texts/70"
+        },
+        {
+          "cref": "#/texts/71"
+        },
+        {
+          "cref": "#/texts/72"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/19",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [
+        {
+          "cref": "#/texts/77"
+        },
+        {
+          "cref": "#/texts/78"
+        },
+        {
+          "cref": "#/texts/79"
+        },
+        {
+          "cref": "#/groups/22"
+        },
+        {
+          "cref": "#/groups/23"
+        },
+        {
+          "cref": "#/groups/24"
+        },
+        {
+          "cref": "#/groups/25"
+        },
+        {
+          "cref": "#/groups/26"
+        },
+        {
+          "cref": "#/groups/27"
+        },
+        {
+          "cref": "#/groups/28"
+        },
+        {
+          "cref": "#/groups/29"
+        },
+        {
+          "cref": "#/texts/110"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/20",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [
+        {
+          "cref": "#/texts/80"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/21",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/73"
+        },
+        {
+          "cref": "#/texts/74"
+        },
+        {
+          "cref": "#/texts/75"
+        },
+        {
+          "cref": "#/texts/76"
+        },
+        {
+          "cref": "#/groups/19"
+        },
+        {
+          "cref": "#/groups/20"
+        },
+        {
+          "cref": "#/texts/81"
+        },
+        {
+          "cref": "#/texts/82"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/22",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/23",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/24",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/25",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/26",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/27",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/28",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/29",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/30",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/83"
+        },
+        {
+          "cref": "#/texts/84"
+        },
+        {
+          "cref": "#/texts/85"
+        },
+        {
+          "cref": "#/texts/86"
+        },
+        {
+          "cref": "#/texts/87"
+        },
+        {
+          "cref": "#/texts/88"
+        },
+        {
+          "cref": "#/texts/89"
+        },
+        {
+          "cref": "#/texts/90"
+        },
+        {
+          "cref": "#/texts/91"
+        },
+        {
+          "cref": "#/texts/92"
+        },
+        {
+          "cref": "#/texts/93"
+        },
+        {
+          "cref": "#/texts/94"
+        },
+        {
+          "cref": "#/texts/95"
+        },
+        {
+          "cref": "#/texts/96"
+        },
+        {
+          "cref": "#/texts/97"
+        },
+        {
+          "cref": "#/texts/98"
+        },
+        {
+          "cref": "#/texts/99"
+        },
+        {
+          "cref": "#/texts/100"
+        },
+        {
+          "cref": "#/texts/101"
+        },
+        {
+          "cref": "#/texts/102"
+        },
+        {
+          "cref": "#/texts/103"
+        },
+        {
+          "cref": "#/texts/104"
+        },
+        {
+          "cref": "#/texts/105"
+        },
+        {
+          "cref": "#/texts/106"
+        },
+        {
+          "cref": "#/texts/107"
+        },
+        {
+          "cref": "#/texts/108"
+        },
+        {
+          "cref": "#/texts/109"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_2_0",
+      "label": "unspecified"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "What is the IHD QUERI Project?",
+      "text": "What is the IHD QUERI Project?",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Quality Enhancement Research Initiative (QUERI) is a program within the VA Health Services Research and Development Service (HSR&D). QUERI’s mission is to translate research innovations into improved quality of health care for veterans. The goal of the VA IHD-QUERI (Ischemic Heart Disease) group is to lessen the gap between clinical guideline recommended therapies and actual VA practice and to improve the process of evaluating health care delivery for patients with IHD receiving treatment in VA medical centers and outpatient clinics.",
+      "text": "The Quality Enhancement Research Initiative (QUERI) is a program within the VA Health Services Research and Development Service (HSR&D). QUERI’s mission is to translate research innovations into improved quality of health care for veterans. The goal of the VA IHD-QUERI (Ischemic Heart Disease) group is to lessen the gap between clinical guideline recommended therapies and actual VA practice and to improve the process of evaluating health care delivery for patients with IHD receiving treatment in VA medical centers and outpatient clinics.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The IHD clinical reminders were developed by the IHD QUERI Clinical Reminders Project and the Office of Information (OI) System Design & Development (SDD) Health Data Systems Group. These reminders contain provider interventions for lipid management of patients with known Ischemic Heart Disease (IHD).",
+      "text": "The IHD clinical reminders were developed by the IHD QUERI Clinical Reminders Project and the Office of Information (OI) System Design & Development (SDD) Health Data Systems Group. These reminders contain provider interventions for lipid management of patients with known Ischemic Heart Disease (IHD).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The IHD Clinical Reminders and dialogs add another powerful decision support tool for clinician",
+      "text": "The IHD Clinical Reminders and dialogs add another powerful decision support tool for clinician",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "s",
+      "text": "s",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": true,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ". Reminders’ status can be displayed in CPRS or Health Summaries. Clinicians can interactively “resolve” these reminders through the Notes tab in CPRS.",
+      "text": ". Reminders’ status can be displayed in CPRS or Health Summaries. Clinicians can interactively “resolve” these reminders through the Notes tab in CPRS.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Detailed and summary IHD clinical reminders reports can be created",
+      "text": "Detailed and summary IHD clinical reminders reports can be created",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "f",
+      "text": "f",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": true,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "or use at local VA sites to assist in patient management, process analysis or for provider feedback.",
+      "text": "or use at local VA sites to assist in patient management, process analysis or for provider feedback.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Purpose of the National IHD Clinical Reminders Project",
+      "text": "Purpose of the National IHD Clinical Reminders Project",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Scope of Ischemic Heart Disease",
+      "text": "Scope of Ischemic Heart Disease",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Leading cause of death in the U.S. for both men and women",
+      "text": "Leading cause of death in the U.S. for both men and women",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "One of the most frequent indications for hospitalization in VHA",
+      "text": "One of the most frequent indications for hospitalization in VHA",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Primary diagnosis in approximately 1 out of 17 admissions within VA facilities in FY99",
+      "text": "Primary diagnosis in approximately 1 out of 17 admissions within VA facilities in FY99",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Many patients remain untreated with recommended IHD therapies and do not receive guideline concordant care for prevention of recurrent cardiac events",
+      "text": "Many patients remain untreated with recommended IHD therapies and do not receive guideline concordant care for prevention of recurrent cardiac events",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Appropriate lipid management can substantially decrease morbidity and mortality in IHD patients (ACC AHA Task Force Guidelines Class 1 Recommendation)",
+      "text": "Appropriate lipid management can substantially decrease morbidity and mortality in IHD patients (ACC AHA Task Force Guidelines Class 1 Recommendation)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Goals of the project",
+      "text": "Goals of the project",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Phase I",
+      "text": "Phase I",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Develop new clinical reminders that can be used by providers to facilitate lipid management of patients with Ischemic Heart Disease (IHD).",
+      "text": "Develop new clinical reminders that can be used by providers to facilitate lipid management of patients with Ischemic Heart Disease (IHD).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Distribute IHD reminders nationally.",
+      "text": "Distribute IHD reminders nationally.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Increase adherence to national clinical practice guidelines.",
+      "text": "Increase adherence to national clinical practice guidelines.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Phase II",
+      "text": "Phase II",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Develop a central data repository at the Austin Automation Center to house guideline compliance data linked to the IHD clinical reminders. This database will provide facility-level quarterly summary reports for selected IHD performance measures.",
+      "text": "Develop a central data repository at the Austin Automation Center to house guideline compliance data linked to the IHD clinical reminders. This database will provide facility-level quarterly summary reports for selected IHD performance measures.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Ischemic Heart Disease (IHD)",
+      "text": "Ischemic Heart Disease (IHD)",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 7
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Clinical Reminders and Dialogs",
+      "text": "Clinical Reminders and Dialogs",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 7
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Clinician Reference Guide",
+      "text": "Clinician Reference Guide",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [
+        {
+          "cref": "#/texts/60"
+        },
+        {
+          "cref": "#/tables/1"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 8
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "May 2002",
+      "text": "May 2002",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "REDACTED",
+      "text": "REDACTED",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://vista.med.va.gov/reminders"
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Veterans Health Administration",
+      "text": "Veterans Health Administration",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Department of Veterans Affairs",
+      "text": "Department of Veterans Affairs",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/texts/43"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA-IHD LIPID PROFILE",
+      "text": "VA-IHD LIPID PROFILE",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends that patients with a diagnosis of IHD have a lipid profile every one to two years and that those taking a lipid-lowering medication have a lipid profile at least every year.",
+      "text": "The DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends that patients with a diagnosis of IHD have a lipid profile every one to two years and that those taking a lipid-lowering medication have a lipid profile at least every year.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have not had a serum lipid panel within the last year. If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.",
+      "text": "This national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have not had a serum lipid panel within the last year. If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "A completed LDL lab test (calculated LDL or direct LDL) or documented outside LDL satisfies the reminder for 12 months from the lab test date.",
+      "text": "A completed LDL lab test (calculated LDL or direct LDL) or documented outside LDL satisfies the reminder for 12 months from the lab test date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "A documented order lipid profile health factor satisfies the reminder for 1 month.",
+      "text": "A documented order lipid profile health factor satisfies the reminder for 1 month.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "A patient's refusal to have an LDL level drawn satisfies the reminder for 6 months.",
+      "text": "A patient's refusal to have an LDL level drawn satisfies the reminder for 6 months.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Deferring the lipid profile for other reasons satisfies the reminder for 6 months.",
+      "text": "Deferring the lipid profile for other reasons satisfies the reminder for 6 months.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA-IHD ELEVATED LDL",
+      "text": "VA-IHD ELEVATED LDL",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends an LDL goal of <120 mg/dl for patients with IHD; the NCEP Adult Treatment Panel II recommends a more stringent goal of <100 mg/dl. This national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have had a serum lipid panel within the last year, where the most recent LDL lab test (or documented outside LDL) is greater than or equal to 120 mg/dl.  If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.",
+      "text": "The DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends an LDL goal of <120 mg/dl for patients with IHD; the NCEP Adult Treatment Panel II recommends a more stringent goal of <100 mg/dl. This national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have had a serum lipid panel within the last year, where the most recent LDL lab test (or documented outside LDL) is greater than or equal to 120 mg/dl.  If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Documenting an outside LDL <120 mg/dl. satisfies the reminder for 12 months from the lab test date.",
+      "text": "Documenting an outside LDL <120 mg/dl. satisfies the reminder for 12 months from the lab test date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Ordering initial lipid lowering medications or adjusting current lipid lowering medications satisfies the reminder for 2 months.",
+      "text": "Ordering initial lipid lowering medications or adjusting current lipid lowering medications satisfies the reminder for 2 months.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "A patient's refusal of lipid lowering therapy satisfies the reminder for 6 months.",
+      "text": "A patient's refusal of lipid lowering therapy satisfies the reminder for 6 months.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Documenting that no lipid treatment change is needed based on patient's current status, that lipid management is provided by another VA or non-VA facility, or deferring lipid treatment for other reasons satisfies the reminder for 6 months.",
+      "text": "Documenting that no lipid treatment change is needed based on patient's current status, that lipid management is provided by another VA or non-VA facility, or deferring lipid treatment for other reasons satisfies the reminder for 6 months.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Documenting that lipid-lowering medications are contraindicated satisfies the reminder for 12 months.",
+      "text": "Documenting that lipid-lowering medications are contraindicated satisfies the reminder for 12 months.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Q & A",
+      "text": "Q & A",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Q:",
+      "text": "Q:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "What diagnoses are used to define “IHD” for these reminders?",
+      "text": "What diagnoses are used to define “IHD” for these reminders?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A.",
+      "text": "A.",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "ICD-9 codes 410.0-412 and 414.0-414.9, which include the following diagnoses: acute myocardial infarction, old myocardial infarction, post MI syndrome, and coronary atherosclerosis.",
+      "text": "ICD-9 codes 410.0-412 and 414.0-414.9, which include the following diagnoses: acute myocardial infarction, old myocardial infarction, post MI syndrome, and coronary atherosclerosis.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Q:",
+      "text": "Q:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Why are health factors for outside LDL levels included in these reminders?",
+      "text": "Why are health factors for outside LDL levels included in these reminders?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A.",
+      "text": "A.",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Capture of outside (historical) lab results is important in the management of veterans with IHD. Some veteran patients choose to receive health care from both VA and private health care providers (co-managed care). Other veterans seek seasonal care at VA sites other than their “home” VA.",
+      "text": "Capture of outside (historical) lab results is important in the management of veterans with IHD. Some veteran patients choose to receive health care from both VA and private health care providers (co-managed care). Other veterans seek seasonal care at VA sites other than their “home” VA.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Q:",
+      "text": "Q:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Are there restrictions on the drugs we can order?",
+      "text": "Are there restrictions on the drugs we can order?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A:",
+      "text": "A:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Check with your local VA site regarding the formulary medication choices available for lipid management.",
+      "text": "Check with your local VA site regarding the formulary medication choices available for lipid management.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Q:",
+      "text": "Q:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "What is a “national” reminder?",
+      "text": "What is a “national” reminder?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A:",
+      "text": "A:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "National reminders are clinical reminders and reminder dialogs that have gone through an approval process for national distribution. Some national reminders are related to statutory, regulatory, or Central Office mandates such as Hepatitis C, MST, or Pain. Other national reminders are being developed under the guidance of the VA Clinical Practice Guideline Council. Guideline-related reminders are being developed for two reasons:",
+      "text": "National reminders are clinical reminders and reminder dialogs that have gone through an approval process for national distribution. Some national reminders are related to statutory, regulatory, or Central Office mandates such as Hepatitis C, MST, or Pain. Other national reminders are being developed under the guidance of the VA Clinical Practice Guideline Council. Guideline-related reminders are being developed for two reasons:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1.  To provide reminders for sites that don’t have reminders in place for a specific guideline.",
+      "text": "1.  To provide reminders for sites that don’t have reminders in place for a specific guideline.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "2.  To provide a basic set of reminders to all sites to improve clinical care, and also allow roll-up data for measurement of guideline implementation and adherence.",
+      "text": "2.  To provide a basic set of reminders to all sites to improve clinical care, and also allow roll-up data for measurement of guideline implementation and adherence.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/groups/2"
+        },
+        {
+          "cref": "#/groups/7"
+        },
+        {
+          "cref": "#/groups/15"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "What is the IHD QUERI Project?\n\n\nThe Quality Enhancement Research Initiative (QUERI) is a program within the VA Health Services Research and Development Service (HSR&D). QUERI’s mission is to translate research innovations into improved quality of health care for veterans. The goal of the VA IHD-QUERI (Ischemic Heart Disease) group is to lessen the gap between clinical guideline recommended therapies and actual VA practice and to improve the process of evaluating health care delivery for patients with IHD receiving treatment in VA medical centers and outpatient clinics.\n\nThe IHD clinical reminders were developed by the IHD QUERI Clinical Reminders Project and the Office of Information (OI) System Design & Development (SDD) Health Data Systems Group. These reminders contain provider interventions for lipid management of patients with known Ischemic Heart Disease (IHD).  \n\nThe IHD Clinical Reminders and dialogs add another powerful decision support tool for clinicians. Reminders’ status can be displayed in CPRS or Health Summaries. Clinicians can interactively “resolve” these reminders through the Notes tab in CPRS. \n\nDetailed and summary IHD clinical reminders reports can be created for use at local VA sites to assist in patient management, process analysis or for provider feedback.\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/2"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Purpose of the National IHD Clinical Reminders Project\n\n  Scope of Ischemic Heart Disease \n\nLeading cause of death in the U.S. for both men and women\nOne of the most frequent indications for hospitalization in VHA\nPrimary diagnosis in approximately 1 out of 17 admissions within VA facilities in FY99\nMany patients remain untreated with recommended IHD therapies and do not receive guideline concordant care for prevention of recurrent cardiac events\n\nAppropriate lipid management can substantially decrease morbidity and mortality in IHD patients (ACC AHA Task Force Guidelines Class 1 Recommendation)\n\n\n\n  Goals of the project\n\n   Phase I\nDevelop new clinical reminders that can be used by providers to facilitate lipid management of patients with Ischemic Heart Disease (IHD). \nDistribute IHD reminders nationally.\nIncrease adherence to national clinical practice guidelines.\n   Phase II\nDevelop a central data repository at the Austin Automation Center to house guideline compliance data linked to the IHD clinical reminders. This database will provide facility-level quarterly summary reports for selected IHD performance measures.\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/7"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "\nIschemic Heart Disease (IHD)\nClinical Reminders and Dialogs\n\nClinician Reference Guide \n\n\n\n\n\n\nMay 2002\n\nREDACTED\n\n\n\n\n\n\n\nVeterans Health Administration\nDepartment of Veterans Affairs",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/15"
+            }
+          }
+        ],
+        "num_rows": 1,
+        "num_cols": 3,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "What is the IHD QUERI Project?\n\n\nThe Quality Enhancement Research Initiative (QUERI) is a program within the VA Health Services Research and Development Service (HSR&D). QUERI’s mission is to translate research innovations into improved quality of health care for veterans. The goal of the VA IHD-QUERI (Ischemic Heart Disease) group is to lessen the gap between clinical guideline recommended therapies and actual VA practice and to improve the process of evaluating health care delivery for patients with IHD receiving treatment in VA medical centers and outpatient clinics.\n\nThe IHD clinical reminders were developed by the IHD QUERI Clinical Reminders Project and the Office of Information (OI) System Design & Development (SDD) Health Data Systems Group. These reminders contain provider interventions for lipid management of patients with known Ischemic Heart Disease (IHD).  \n\nThe IHD Clinical Reminders and dialogs add another powerful decision support tool for clinicians. Reminders’ status can be displayed in CPRS or Health Summaries. Clinicians can interactively “resolve” these reminders through the Notes tab in CPRS. \n\nDetailed and summary IHD clinical reminders reports can be created for use at local VA sites to assist in patient management, process analysis or for provider feedback.\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Purpose of the National IHD Clinical Reminders Project\n\n  Scope of Ischemic Heart Disease \n\nLeading cause of death in the U.S. for both men and women\nOne of the most frequent indications for hospitalization in VHA\nPrimary diagnosis in approximately 1 out of 17 admissions within VA facilities in FY99\nMany patients remain untreated with recommended IHD therapies and do not receive guideline concordant care for prevention of recurrent cardiac events\n\nAppropriate lipid management can substantially decrease morbidity and mortality in IHD patients (ACC AHA Task Force Guidelines Class 1 Recommendation)\n\n\n\n  Goals of the project\n\n   Phase I\nDevelop new clinical reminders that can be used by providers to facilitate lipid management of patients with Ischemic Heart Disease (IHD). \nDistribute IHD reminders nationally.\nIncrease adherence to national clinical practice guidelines.\n   Phase II\nDevelop a central data repository at the Austin Automation Center to house guideline compliance data linked to the IHD clinical reminders. This database will provide facility-level quarterly summary reports for selected IHD performance measures.\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "\nIschemic Heart Disease (IHD)\nClinical Reminders and Dialogs\n\nClinician Reference Guide \n\n\n\n\n\n\nMay 2002\n\nREDACTED\n\n\n\n\n\n\n\nVeterans Health Administration\nDepartment of Veterans Affairs",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/1",
+      "parent": {
+        "cref": "#/texts/43"
+      },
+      "children": [
+        {
+          "cref": "#/groups/18"
+        },
+        {
+          "cref": "#/groups/21"
+        },
+        {
+          "cref": "#/groups/30"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "VA-IHD LIPID PROFILE\n\nThe DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends that patients with a diagnosis of IHD have a lipid profile every one to two years and that those taking a lipid-lowering medication have a lipid profile at least every year.  \n\nThis national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have not had a serum lipid panel within the last year. If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.\nA completed LDL lab test (calculated LDL or direct LDL) or documented outside LDL satisfies the reminder for 12 months from the lab test date.\nA documented order lipid profile health factor satisfies the reminder for 1 month.\nA patient's refusal to have an LDL level drawn satisfies the reminder for 6 months. \nDeferring the lipid profile for other reasons satisfies the reminder for 6 months.\n\n\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/18"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "VA-IHD ELEVATED LDL\n\nThe DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends an LDL goal of <120 mg/dl for patients with IHD; the NCEP Adult Treatment Panel II recommends a more stringent goal of <100 mg/dl. This national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have had a serum lipid panel within the last year, where the most recent LDL lab test (or documented outside LDL) is greater than or equal to 120 mg/dl.  If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.  \n Documenting an outside LDL <120 mg/dl. satisfies the reminder for 12 months from the lab test date.\nOrdering initial lipid lowering medications or adjusting current lipid lowering medications satisfies the reminder for 2 months.   \nA patient's refusal of lipid lowering therapy satisfies the reminder for 6 months.    \nDocumenting that no lipid treatment change is needed based on patient's current status, that lipid management is provided by another VA or non-VA facility, or deferring lipid treatment for other reasons satisfies the reminder for 6 months. \nDocumenting that lipid-lowering medications are contraindicated satisfies the reminder for 12 months.\n\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/21"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Q & A\n\nQ:  What diagnoses are used to define “IHD” for these reminders?\n\nA.   ICD-9 codes 410.0-412 and 414.0-414.9, which include the following diagnoses: acute myocardial infarction, old myocardial infarction, post MI syndrome, and coronary atherosclerosis.\n\nQ:  Why are health factors for outside LDL levels included in these reminders?\n\nA.   Capture of outside (historical) lab results is important in the management of veterans with IHD. Some veteran patients choose to receive health care from both VA and private health care providers (co-managed care). Other veterans seek seasonal care at VA sites other than their “home” VA. \n\nQ:   Are there restrictions on the drugs we can order?\n\nA:   Check with your local VA site regarding the formulary medication choices available for lipid management.\n\nQ:   What is a “national” reminder?\n\n   A:   National reminders are clinical reminders and reminder dialogs that have gone through an approval process for national distribution. Some national reminders are related to statutory, regulatory, or Central Office mandates such as Hepatitis C, MST, or Pain. Other national reminders are being developed under the guidance of the VA Clinical Practice Guideline Council. Guideline-related reminders are being developed for two reasons:\n      1.  To provide reminders for sites that don’t have reminders in place for a specific guideline.  \n       2.  To provide a basic set of reminders to all sites to improve clinical care, and also allow roll-up data for measurement of guideline implementation and adherence.",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/30"
+            }
+          }
+        ],
+        "num_rows": 1,
+        "num_cols": 3,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "VA-IHD LIPID PROFILE\n\nThe DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends that patients with a diagnosis of IHD have a lipid profile every one to two years and that those taking a lipid-lowering medication have a lipid profile at least every year.  \n\nThis national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have not had a serum lipid panel within the last year. If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.\nA completed LDL lab test (calculated LDL or direct LDL) or documented outside LDL satisfies the reminder for 12 months from the lab test date.\nA documented order lipid profile health factor satisfies the reminder for 1 month.\nA patient's refusal to have an LDL level drawn satisfies the reminder for 6 months. \nDeferring the lipid profile for other reasons satisfies the reminder for 6 months.\n\n\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "VA-IHD ELEVATED LDL\n\nThe DOD/VHA Clinical Practice Guideline for the Management of Dyslipidemia in Primary Care recommends an LDL goal of <120 mg/dl for patients with IHD; the NCEP Adult Treatment Panel II recommends a more stringent goal of <100 mg/dl. This national reminder identifies patients with known IHD (i.e., a documented ICD-9 code for IHD on or after 10/01/99) who have had a serum lipid panel within the last year, where the most recent LDL lab test (or documented outside LDL) is greater than or equal to 120 mg/dl.  If a more recent record of an UNCONFIRMED IHD DIAGNOSIS is found, the reminder will not be applicable to the patient.  \n Documenting an outside LDL <120 mg/dl. satisfies the reminder for 12 months from the lab test date.\nOrdering initial lipid lowering medications or adjusting current lipid lowering medications satisfies the reminder for 2 months.   \nA patient's refusal of lipid lowering therapy satisfies the reminder for 6 months.    \nDocumenting that no lipid treatment change is needed based on patient's current status, that lipid management is provided by another VA or non-VA facility, or deferring lipid treatment for other reasons satisfies the reminder for 6 months. \nDocumenting that lipid-lowering medications are contraindicated satisfies the reminder for 12 months.\n\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Q & A\n\nQ:  What diagnoses are used to define “IHD” for these reminders?\n\nA.   ICD-9 codes 410.0-412 and 414.0-414.9, which include the following diagnoses: acute myocardial infarction, old myocardial infarction, post MI syndrome, and coronary atherosclerosis.\n\nQ:  Why are health factors for outside LDL levels included in these reminders?\n\nA.   Capture of outside (historical) lab results is important in the management of veterans with IHD. Some veteran patients choose to receive health care from both VA and private health care providers (co-managed care). Other veterans seek seasonal care at VA sites other than their “home” VA. \n\nQ:   Are there restrictions on the drugs we can order?\n\nA:   Check with your local VA site regarding the formulary medication choices available for lipid management.\n\nQ:   What is a “national” reminder?\n\n   A:   National reminders are clinical reminders and reminder dialogs that have gone through an approval process for national distribution. Some national reminders are related to statutory, regulatory, or Central Office mandates such as Hepatitis C, MST, or Pain. Other national reminders are being developed under the guidance of the VA Clinical Practice Guideline Council. Guideline-related reminders are being developed for two reasons:\n      1.  To provide reminders for sites that don’t have reminders in place for a specific guideline.  \n       2.  To provide a basic set of reminders to all sites to improve clinical care, and also allow roll-up data for measurement of guideline implementation and adherence.",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

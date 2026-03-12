@@ -1,0 +1,2506 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "or_3_309rn",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 3320244314641662971,
+    "filename": "or_3_309rn.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/texts/0"
+      },
+      {
+        "cref": "#/texts/1"
+      },
+      {
+        "cref": "#/texts/2"
+      },
+      {
+        "cref": "#/texts/3"
+      },
+      {
+        "cref": "#/texts/4"
+      },
+      {
+        "cref": "#/texts/5"
+      },
+      {
+        "cref": "#/texts/6"
+      },
+      {
+        "cref": "#/texts/7"
+      },
+      {
+        "cref": "#/texts/8"
+      },
+      {
+        "cref": "#/texts/9"
+      },
+      {
+        "cref": "#/texts/10"
+      },
+      {
+        "cref": "#/texts/11"
+      },
+      {
+        "cref": "#/texts/12"
+      },
+      {
+        "cref": "#/texts/13"
+      },
+      {
+        "cref": "#/texts/14"
+      },
+      {
+        "cref": "#/texts/15"
+      },
+      {
+        "cref": "#/texts/16"
+      },
+      {
+        "cref": "#/texts/17"
+      },
+      {
+        "cref": "#/texts/18"
+      },
+      {
+        "cref": "#/texts/19"
+      },
+      {
+        "cref": "#/texts/20"
+      },
+      {
+        "cref": "#/texts/21"
+      },
+      {
+        "cref": "#/tables/0"
+      },
+      {
+        "cref": "#/texts/27"
+      },
+      {
+        "cref": "#/texts/28"
+      },
+      {
+        "cref": "#/texts/29"
+      },
+      {
+        "cref": "#/texts/30"
+      },
+      {
+        "cref": "#/texts/31"
+      },
+      {
+        "cref": "#/texts/32"
+      },
+      {
+        "cref": "#/texts/33"
+      },
+      {
+        "cref": "#/texts/34"
+      },
+      {
+        "cref": "#/texts/35"
+      },
+      {
+        "cref": "#/texts/36"
+      },
+      {
+        "cref": "#/texts/37"
+      },
+      {
+        "cref": "#/texts/38"
+      },
+      {
+        "cref": "#/texts/39"
+      },
+      {
+        "cref": "#/texts/40"
+      },
+      {
+        "cref": "#/texts/41"
+      },
+      {
+        "cref": "#/texts/42"
+      },
+      {
+        "cref": "#/texts/43"
+      },
+      {
+        "cref": "#/texts/44"
+      },
+      {
+        "cref": "#/texts/45"
+      },
+      {
+        "cref": "#/texts/46"
+      },
+      {
+        "cref": "#/texts/47"
+      },
+      {
+        "cref": "#/texts/48"
+      },
+      {
+        "cref": "#/texts/49"
+      },
+      {
+        "cref": "#/texts/50"
+      },
+      {
+        "cref": "#/texts/51"
+      },
+      {
+        "cref": "#/texts/52"
+      },
+      {
+        "cref": "#/texts/53"
+      },
+      {
+        "cref": "#/texts/54"
+      },
+      {
+        "cref": "#/texts/55"
+      },
+      {
+        "cref": "#/texts/56"
+      },
+      {
+        "cref": "#/texts/57"
+      },
+      {
+        "cref": "#/texts/58"
+      },
+      {
+        "cref": "#/texts/59"
+      },
+      {
+        "cref": "#/texts/60"
+      },
+      {
+        "cref": "#/texts/61"
+      },
+      {
+        "cref": "#/texts/62"
+      },
+      {
+        "cref": "#/texts/63"
+      },
+      {
+        "cref": "#/texts/64"
+      },
+      {
+        "cref": "#/texts/65"
+      },
+      {
+        "cref": "#/texts/66"
+      },
+      {
+        "cref": "#/texts/67"
+      },
+      {
+        "cref": "#/texts/68"
+      },
+      {
+        "cref": "#/texts/69"
+      },
+      {
+        "cref": "#/texts/70"
+      },
+      {
+        "cref": "#/texts/71"
+      },
+      {
+        "cref": "#/texts/72"
+      },
+      {
+        "cref": "#/texts/73"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/22"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/23"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/24"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/25"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_3_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/26"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_4_0",
+      "label": "unspecified"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "CPRS-VBECS Interface Follow-Up Fixes (OR*3.0*309) Release Notes",
+      "text": "CPRS-VBECS Interface Follow-Up Fixes (OR*3.0*309) Release Notes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "March 2010",
+      "text": "March 2010",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Department of Veterans Affairs",
+      "text": "Department of Veterans Affairs",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Office of  Development",
+      "text": "Office of  Development",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Computerized Patient Record System Product Line",
+      "text": "Computerized Patient Record System Product Line",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Revision History",
+      "text": "Revision History",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The most recent entries in this list are linked to the location in the manual they describe. Click on a link or page number to go to that section.",
+      "text": "The most recent entries in this list are linked to the location in the manual they describe. Click on a link or page number to go to that section.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Date",
+      "text": "Date",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Page",
+      "text": "Page",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Change",
+      "text": "Change",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Project Manager",
+      "text": "Project Manager",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Technical Writer",
+      "text": "Technical Writer",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Table of Contents",
+      "text": "Table of Contents",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Revision History\t2",
+      "text": "Revision History\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Table of Contents\t3",
+      "text": "Table of Contents\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction\t4",
+      "text": "Introduction\t4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Functionality\t4",
+      "text": "Functionality\t4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Pre-Conditions to Installation\t4",
+      "text": "Pre-Conditions to Installation\t4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Blood Bank Report\t4",
+      "text": "Changes and Fixes to the Blood Bank Report\t4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Blood Order Dialog\t5",
+      "text": "Changes and Fixes to the Blood Order Dialog\t5",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Remedy Tickets\t5",
+      "text": "Remedy Tickets\t5",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction",
+      "text": "Introduction",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VistA Blood Establishment Computer System (VBECS) was released with many known problems and open issues. VistA patch OR*3.0*212 provides the interface between the (Computerized Patient Record System) CPRS and VBECS. OR*3.0*309 was conceived to help resolve some of the known problems and increase the value of VBECS to the customer base.",
+      "text": "VistA Blood Establishment Computer System (VBECS) was released with many known problems and open issues. VistA patch OR*3.0*212 provides the interface between the (Computerized Patient Record System) CPRS and VBECS. OR*3.0*309 was conceived to help resolve some of the known problems and increase the value of VBECS to the customer base.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Functionality",
+      "text": "Functionality",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch enhances the Blood Bank report to display Blood Bank orders with the newest date on the top and going subsequent down to the oldest date at the bottom of the report.  The results display horizontally with “Canned” comments marked by with an asterisk next to the test and displayed at the bottom of the testing results.  The components are being returned to total components/day.  Test sites also requested the Unit section on the Patient Information Tab be move closer to the top allowing provider to see the units without scrolling down.  Multidivisons, have no way to know what site performed the tests, thus CPRS is adding the division code next to the test results.  Added a default parameter, OR VBECS Legacy to turn the on the Legacy Blood Bank report.  CPRS added code to remove the duplicate blood bank data.",
+      "text": "This patch enhances the Blood Bank report to display Blood Bank orders with the newest date on the top and going subsequent down to the oldest date at the bottom of the report.  The results display horizontally with “Canned” comments marked by with an asterisk next to the test and displayed at the bottom of the testing results.  The components are being returned to total components/day.  Test sites also requested the Unit section on the Patient Information Tab be move closer to the top allowing provider to see the units without scrolling down.  Multidivisons, have no way to know what site performed the tests, thus CPRS is adding the division code next to the test results.  Added a default parameter, OR VBECS Legacy to turn the on the Legacy Blood Bank report.  CPRS added code to remove the duplicate blood bank data.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The functionality allows Reason for Request and Surgery prompts for any kind of order.  The collection type was moved next to the diagnostic test or component on the Active Orders on the Orders Tab.  CPRS/VBECS contains Discontinue information in the Activity Section from backdoor discontinued orders.  Unsigned orders were removed from the duplicate Type and Screen order check.  It is now possible to add VBECS to auto-dc rule in the CPRS rule editor option.",
+      "text": "The functionality allows Reason for Request and Surgery prompts for any kind of order.  The collection type was moved next to the diagnostic test or component on the Active Orders on the Orders Tab.  CPRS/VBECS contains Discontinue information in the Activity Section from backdoor discontinued orders.  Unsigned orders were removed from the duplicate Type and Screen order check.  It is now possible to add VBECS to auto-dc rule in the CPRS rule editor option.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Pre-Conditions to Installation",
+      "text": "Pre-Conditions to Installation",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "OR*3*309 requires VBECS and OR*3*212 and CPRS 27 or CPRS 27.N.",
+      "text": "OR*3*309 requires VBECS and OR*3*212 and CPRS 27 or CPRS 27.N.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Blood Bank Report",
+      "text": "Changes and Fixes to the Blood Bank Report",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Blood Bank report found on the Labs and Reports tabs was showing data coming from VBECS twice (the entire report was being duplicated) when the parameter OR VBECS LEGACY REPORT was set to yes. (ORWRP2)",
+      "text": "The Blood Bank report found on the Labs and Reports tabs was showing data coming from VBECS twice (the entire report was being duplicated) when the parameter OR VBECS LEGACY REPORT was set to yes. (ORWRP2)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changed sort order of results displayed on reports to reverse chronologic order. (CQ 17823)",
+      "text": "Changed sort order of results displayed on reports to reverse chronologic order. (CQ 17823)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changed results to display horizontally rather than vertically (CQ 17824)",
+      "text": "Changed results to display horizontally rather than vertically (CQ 17824)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changed the VBECS canned comments display to once (CQ 17825)",
+      "text": "Changed the VBECS canned comments display to once (CQ 17825)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VBECS component transfusions were totaled per day in CPRS V26, changed functionality to match. (CQ 17976)",
+      "text": "VBECS component transfusions were totaled per day in CPRS V26, changed functionality to match. (CQ 17976)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Moved the UNITS section of the report on the Patient Info tab of the Blood order dialog up higher in the report so that it can be seen without having to scroll down. (CQ 17731)",
+      "text": "Moved the UNITS section of the report on the Patient Info tab of the Blood order dialog up higher in the report so that it can be seen without having to scroll down. (CQ 17731)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Multi Division Potential Problem - Unable to differentiate where testing is performed. (CQ 18484)",
+      "text": "Multi Division Potential Problem - Unable to differentiate where testing is performed. (CQ 18484)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changed OR VBECS LEGACY parameter default to Yes, but allow sites that have it set to remain the way it is set. (CQ 18101)",
+      "text": "Changed OR VBECS LEGACY parameter default to Yes, but allow sites that have it set to remain the way it is set. (CQ 18101)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VBECS changes to ^LROSBR by VBECS team (VBECS Legacy report) Resolution – Added code to stop the duplicate Blood Bank Report displaying. (CQ 18044)",
+      "text": "VBECS changes to ^LROSBR by VBECS team (VBECS Legacy report) Resolution – Added code to stop the duplicate Blood Bank Report displaying. (CQ 18044)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Blood Order Dialog",
+      "text": "Changes and Fixes to the Blood Order Dialog",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Removed the Ask on Condition value for the Reason for Request and Surgery prompts, allowing them to be answered for any blood order. (CQ 18033)",
+      "text": "Removed the Ask on Condition value for the Reason for Request and Surgery prompts, allowing them to be answered for any blood order. (CQ 18033)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Moved the collection type earlier in the order text. (CQ 17687)",
+      "text": "Moved the collection type earlier in the order text. (CQ 17687)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Added DC information to the Activity Section of the parent order when child orders are dc’d from VBECS. (CQ 18196)",
+      "text": "Added DC information to the Activity Section of the parent order when child orders are dc’d from VBECS. (CQ 18196)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Prior to this patch the check for a current Type & Screen during the ordering process was including unreleased/unsigned orders; with this patch, unreleased/unsigned orders will no longer be included in the check for Type & Screen. (CQ 18227)",
+      "text": "Prior to this patch the check for a current Type & Screen during the ordering process was including unreleased/unsigned orders; with this patch, unreleased/unsigned orders will no longer be included in the check for Type & Screen. (CQ 18227)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Displayed Lab results were not saving correctly with the order, when the first item returned by Lab was a comment rather than a result value; this caused a System Exception error in VBECS when the “PR” lab result message was sent from CPRS.  The lab results are now being saved correctly with the order, eliminating the exception error. (CQ 18448)",
+      "text": "Displayed Lab results were not saving correctly with the order, when the first item returned by Lab was a comment rather than a result value; this caused a System Exception error in VBECS when the “PR” lab result message was sent from CPRS.  The lab results are now being saved correctly with the order, eliminating the exception error. (CQ 18448)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Prior to this patch, CPRS did not allow auto-DC of VBECS orders; this patch updates the package screen in the OE/RR Auto-DC Rules file to accept VBECS. (CQ 18494)",
+      "text": "Prior to this patch, CPRS did not allow auto-DC of VBECS orders; this patch updates the package screen in the OE/RR Auto-DC Rules file to accept VBECS. (CQ 18494)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VBECS date/time is changing request date when a second, third units are order, when testing completes. (CQ 18644)",
+      "text": "VBECS date/time is changing request date when a second, third units are order, when testing completes. (CQ 18644)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VBECS Remedy HD 340648 Unit Request Date changes the previous order when  adding a component (CQ 18655)",
+      "text": "VBECS Remedy HD 340648 Unit Request Date changes the previous order when  adding a component (CQ 18655)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VBECS Manually expired specimens not recognized by CPRS, allows ordering RBC w/o T&S. (CQ 18690)",
+      "text": "VBECS Manually expired specimens not recognized by CPRS, allows ordering RBC w/o T&S. (CQ 18690)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Remedy Tickets",
+      "text": "Remedy Tickets",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "OR*3*309 Remedy ticket #286113, the VBECS patient information tab has the number of units available at the bottom of screen. The preferred placement is on the top.",
+      "text": "OR*3*309 Remedy ticket #286113, the VBECS patient information tab has the number of units available at the bottom of screen. The preferred placement is on the top.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "OR*3*309 Remedy ticket #325289, the CPRS HL7 Parser caught a System Exception Error.",
+      "text": "OR*3*309 Remedy ticket #325289, the CPRS HL7 Parser caught a System Exception Error.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/groups/0"
+        },
+        {
+          "cref": "#/groups/1"
+        },
+        {
+          "cref": "#/groups/2"
+        },
+        {
+          "cref": "#/groups/3"
+        },
+        {
+          "cref": "#/groups/4"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Date",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/0"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Page",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/1"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Change",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/2"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Project Manager",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/3"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Technical Writer",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/4"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "March 2010",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "All",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Initial Release",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "REDACTED",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "REDACTED",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 5,
+        "num_cols": 5,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Date",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Page",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Change",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Project Manager",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Technical Writer",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "March 2010",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "All",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Initial Release",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "REDACTED",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "REDACTED",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

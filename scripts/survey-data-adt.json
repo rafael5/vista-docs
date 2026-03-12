@@ -1,0 +1,3320 @@
+{
+  "documents_ok": 16,
+  "documents_error": 0,
+  "errors": [],
+  "corpus_style_counts": {
+    "Normal": 8365,
+    "Body Text": 1183,
+    "List Bullet": 918,
+    "code": 867,
+    "Body Text Bullet 1": 736,
+    "Heading 2": 405,
+    "Dialogue": 386,
+    "No Spacing": 361,
+    "Heading 3": 360,
+    "toc 3": 350,
+    "toc 2": 332,
+    "Caption": 180,
+    "table of figures": 164,
+    "Body Text Lettered 2": 155,
+    "List Bullet 2": 141,
+    "List Paragraph": 125,
+    "Space": 122,
+    "capture": 91,
+    "Header": 66,
+    "Note": 65,
+    "Heading 4": 65,
+    "Alt Heading 5": 63,
+    "List Number": 58,
+    "10pt cent schoolbook": 57,
+    "toc 1": 53,
+    "Heading 1": 53,
+    "Body Text Bullet 3": 46,
+    "Style Century Schoolbook Before:  3 pt After:  3 pt": 43,
+    "Body Text 6": 41,
+    "Body Text 3": 32,
+    "toc 4": 30,
+    "List Number 2": 30,
+    "Title 2": 29,
+    "Screen": 29,
+    "Body Text Numbered 1": 23,
+    "List Bullet Indent 2": 15,
+    "footnote text": 15,
+    "Dialogue Indent 2": 13,
+    "Heading 5": 13,
+    "Table Header": 13,
+    "Normal Indent": 12,
+    "Normal 1": 12,
+    "Body Text Lettered 1": 12,
+    "Title": 10,
+    "major heading": 10,
+    "Normal (Web)": 9,
+    "pc text": 8,
+    "index 1": 7,
+    "10 poinr courier": 7,
+    "Glossary": 6,
+    "Heading Front-Back_Matter": 4,
+    "toc 9": 4,
+    "Body Text 2": 4,
+    "Revision History": 4,
+    "title page": 4,
+    "Style major heading + Left": 4,
+    "Body Text Lettered 3": 4,
+    "Alt Heading 2": 3,
+    "API Format": 3,
+    "screen title p": 3,
+    "inscover": 3,
+    "Note Indent 2": 2,
+    "index 2": 2,
+    "List Number 1": 2,
+    "Appendix 1": 2,
+    "VA Seal": 1,
+    "Graphic Insert": 1,
+    "Body Text 4": 1,
+    "Instructional Text Title 2": 1,
+    "TOC Heading": 1,
+    "Body Text Indent": 1,
+    "Default": 1,
+    "Style major heading + Century Schoolbook 14 pt Bold Centered": 1,
+    "Style major heading + Not Bold": 1
+  },
+  "standard_styles": [
+    "Normal"
+  ],
+  "common_styles": [
+    "Body Text",
+    "Body Text 2",
+    "Body Text 3",
+    "Body Text Bullet 1",
+    "Caption",
+    "Glossary",
+    "Heading 1",
+    "Heading 2",
+    "Heading 3",
+    "Heading 4",
+    "Heading 5",
+    "List Number",
+    "List Number 2",
+    "List Paragraph",
+    "No Spacing",
+    "Normal (Web)",
+    "Normal 1",
+    "Normal Indent",
+    "Note",
+    "Revision History",
+    "Space",
+    "Title",
+    "Title 2",
+    "footnote text",
+    "index 1",
+    "index 2",
+    "inscover",
+    "major heading",
+    "screen title p",
+    "table of figures",
+    "toc 1",
+    "toc 2",
+    "toc 3",
+    "toc 4"
+  ],
+  "one_off_styles": [
+    "10 poinr courier",
+    "10pt cent schoolbook",
+    "API Format",
+    "Alt Heading 2",
+    "Alt Heading 5",
+    "Appendix 1",
+    "Body Text 4",
+    "Body Text 6",
+    "Body Text Bullet 3",
+    "Body Text Indent",
+    "Body Text Lettered 1",
+    "Body Text Lettered 2",
+    "Body Text Lettered 3",
+    "Body Text Numbered 1",
+    "Default",
+    "Dialogue",
+    "Dialogue Indent 2",
+    "Graphic Insert",
+    "Header",
+    "Heading Front-Back_Matter",
+    "Instructional Text Title 2",
+    "List Bullet",
+    "List Bullet 2",
+    "List Bullet Indent 2",
+    "List Number 1",
+    "Note Indent 2",
+    "Screen",
+    "Style Century Schoolbook Before:  3 pt After:  3 pt",
+    "Style major heading + Century Schoolbook 14 pt Bold Centered",
+    "Style major heading + Left",
+    "Style major heading + Not Bold",
+    "TOC Heading",
+    "Table Header",
+    "VA Seal",
+    "capture",
+    "code",
+    "pc text",
+    "title page",
+    "toc 9"
+  ],
+  "table_type_counts": {
+    "reference-table": 180,
+    "revision": 16,
+    "fileman-file-registry": 3,
+    "api-function": 3,
+    "menu-option": 2,
+    "rpc": 1,
+    "fileman-access": 1,
+    "fileman": 1,
+    "m-variable": 1,
+    "acronym-glossary": 1
+  },
+  "callout_counts": {
+    "NOTE": 74,
+    "IMPORTANT": 1
+  },
+  "pseudo_heading_count": 458,
+  "pseudo_heading_top": {
+    "Inpatient/Lodger Report Menu": 14,
+    "Returns:": 14,
+    "Overview": 12,
+    "AMIS Reports Menu": 11,
+    "Copay Exemption Test User Menu": 11,
+    "AMIS 401-420 Reports": 9,
+    "Means Test Outputs": 9,
+    "Outputs Menu": 9,
+    "IF\tTHEN": 8,
+    "Enrollment Reports": 7,
+    "PIMS V. 5.3 ADT Module User Manual": 6,
+    "Gains and Losses (G&L) Sheet": 6,
+    "Complete a Required Means Test": 6,
+    "FIELD NAME": 6,
+    "SCREEN\tOR PROMPT\tDESCRIPTION": 6,
+    "FIELD NAME/": 6,
+    "SCREEN\tTITLE OF PROMPT\tDESCRIPTION": 6,
+    "DataCard\u2019s HL7 Interface Technical Reference": 6,
+    "Revision History": 5,
+    "HOW BLOCK PLACEMENT OF DATA IS DETERMINED": 4,
+    "Add a Copay Exemption Test": 4,
+    "Edit an Existing Copay Exemption Test": 4,
+    "Office of Information and Technology (OIT)": 3,
+    "ADT Third Party Output Menu": 3,
+    "Disposition Outputs Menu": 3,
+    "Transmission via VADATS": 3,
+    "Department of Veterans Affairs (VA)": 2,
+    "REGISTRATION ONLY REASON": 2,
+    "REGISTRATION ONLY DATE": 2,
+    "SOURCE OF REGISTRATION": 2
+  },
+  "total_internal_page_refs": 2,
+  "total_terminal_lines": 854,
+  "external_doc_refs": {
+    "Refer to the Order Entry/Results Reporting document": 3,
+    "refer to the Order Entry/Results Reporting document": 2,
+    "refer to the supporting document": 2,
+    "refer to the GMT Installation Guide": 2,
+    "see the ABC Installation Guide": 2,
+    "see the Patient Record Flags HL7 Interface Specification document": 1,
+    "refer to the VA FileMan user manual": 1,
+    "refer to the appropriate option document": 1,
+    "refer to the Generic Code Sheet User Manual": 1,
+    "Refer to the appropriate option document": 1,
+    "refer to the\nuser document": 1,
+    "refer to the user document": 1,
+    "see the Kernel document": 1
+  },
+  "docs_with_toc": 9,
+  "docs_with_revision_table": 4,
+  "docs_with_index": 0,
+  "docs_with_pseudo_headings": 16,
+  "per_doc": [
+    {
+      "filename": "adt_pims_tm.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_pims_tm.docx",
+      "para_count": 3818,
+      "heading_count": 319,
+      "toc_entry_count": 323,
+      "table_count": 121,
+      "table_types": {
+        "revision": 2,
+        "reference-table": 107,
+        "fileman-file-registry": 3,
+        "rpc": 1,
+        "menu-option": 2,
+        "api-function": 2,
+        "fileman-access": 1,
+        "fileman": 1,
+        "m-variable": 1,
+        "acronym-glossary": 1
+      },
+      "pseudo_headings": 69,
+      "callouts": {
+        "NOTE": 5
+      },
+      "terminal_lines": 34,
+      "page_refs": 1,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 36,
+      "tables_detail": [
+        {
+          "rows": 88,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "revision"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 11,
+          "cols": 3,
+          "header_tokens": [
+            "documentation",
+            "file",
+            "location",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 18,
+          "cols": 4,
+          "header_tokens": [
+            "device",
+            "frequency",
+            "name",
+            "option",
+            "remarks",
+            "required",
+            "run",
+            "suggested"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "data",
+            "entry",
+            "file",
+            "name",
+            "new",
+            "number"
+          ],
+          "type": "fileman-file-registry"
+        },
+        {
+          "rows": 34,
+          "cols": 2,
+          "header_tokens": [
+            "callable",
+            "description",
+            "routine"
+          ],
+          "type": "rpc"
+        },
+        {
+          "rows": 33,
+          "cols": 3,
+          "header_tokens": [
+            "#",
+            "file",
+            "name",
+            "routines",
+            "template"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "#",
+            "file",
+            "name",
+            "routines",
+            "template"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "#",
+            "file",
+            "name",
+            "routines",
+            "template"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 21,
+          "cols": 2,
+          "header_tokens": [
+            "dg",
+            "modified",
+            "new",
+            "routines"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "dg",
+            "modified",
+            "new",
+            "routines"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "dg",
+            "modified",
+            "new",
+            "routines"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "dg",
+            "modified",
+            "new",
+            "routines"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "dg",
+            "modified",
+            "new",
+            "routines"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "dg",
+            "modified",
+            "new",
+            "routines"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "dg",
+            "modified",
+            "new",
+            "routines"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 167,
+          "cols": 3,
+          "header_tokens": [
+            "file",
+            "global",
+            "name",
+            "number"
+          ],
+          "type": "fileman-file-registry"
+        },
+        {
+          "rows": 65,
+          "cols": 2,
+          "header_tokens": [
+            "acronym",
+            "data",
+            "element"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "assignment",
+            "dg",
+            "menu",
+            "new",
+            "option"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 13,
+          "cols": 2,
+          "header_tokens": [
+            "menu",
+            "name",
+            "option"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 17,
+          "cols": 2,
+          "header_tokens": [
+            "minimum",
+            "package",
+            "version"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 12,
+          "cols": 3,
+          "header_tokens": [
+            "check",
+            "checked",
+            "element",
+            "for",
+            "install",
+            "performed",
+            "required"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "api",
+            "description"
+          ],
+          "type": "api-function"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "api",
+            "description"
+          ],
+          "type": "api-function"
+        },
+        {
+          "rows": 155,
+          "cols": 7,
+          "header_tokens": [
+            "access",
+            "dd",
+            "del",
+            "file",
+            "laygo",
+            "name",
+            "number",
+            "rd",
+            "wr"
+          ],
+          "type": "fileman-access"
+        },
+        {
+          "rows": 38,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "access",
+            "field",
+            "global",
+            "location",
+            "name",
+            "of",
+            "type"
+          ],
+          "type": "fileman"
+        },
+        {
+          "rows": 18,
+          "cols": 11,
+          "header_tokens": [
+            "address",
+            "appointment",
+            "demographic",
+            "eligibility",
+            "enrollment",
+            "inpatient",
+            "monetary",
+            "output:",
+            "registration",
+            "service"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 168,
+          "cols": 3,
+          "header_tokens": [
+            "alpha",
+            "call",
+            "translation",
+            "variable"
+          ],
+          "type": "m-variable"
+        },
+        {
+          "rows": 13,
+          "cols": 6,
+          "header_tokens": [
+            "data",
+            "description",
+            "examples",
+            "field",
+            "format",
+            "id",
+            "name",
+            "of",
+            "or",
+            "returned",
+            "type",
+            "valid"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "code",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 18,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 10,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 51,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 49,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 17,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 17,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 7,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 42,
+          "cols": 7,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 7,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 7,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 7,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 7,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 7,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 21,
+          "cols": 2,
+          "header_tokens": [
+            "code",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 11,
+          "cols": 2,
+          "header_tokens": [
+            "code",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 4,
+          "header_tokens": [
+            "occupation",
+            "specialty",
+            "subspecialty",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 41,
+          "cols": 3,
+          "header_tokens": [
+            "appointment",
+            "of",
+            "purpose",
+            "type",
+            "value",
+            "visit"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 28,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 91,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 37,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 91,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "2.3.1",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 28,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 11,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 28,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 53,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 8,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 28,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "c",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "o",
+            "r",
+            "rp",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 39,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 53,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 15,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "data",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 9,
+          "header_tokens": [
+            "#",
+            "description",
+            "dt",
+            "element",
+            "item#",
+            "len",
+            "name",
+            "opt",
+            "rp",
+            "seq",
+            "tbl#",
+            "vista"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name",
+            "parameter"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name",
+            "parameter"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 4,
+          "header_tokens": [
+            "dd",
+            "description",
+            "global",
+            "name",
+            "number"
+          ],
+          "type": "fileman-file-registry"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "alert",
+            "description",
+            "subject"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 62,
+          "cols": 2,
+          "header_tokens": [
+            "definition",
+            "term"
+          ],
+          "type": "acronym-glossary"
+        },
+        {
+          "rows": 25,
+          "cols": 2,
+          "header_tokens": [
+            "military",
+            "standard"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "version"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "adtbe_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adtbe_um.docx",
+      "para_count": 1370,
+      "heading_count": 43,
+      "toc_entry_count": 0,
+      "table_count": 8,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 7
+      },
+      "pseudo_headings": 14,
+      "callouts": {
+        "NOTE": 2
+      },
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 16,
+      "tables_detail": [
+        {
+          "rows": 35,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 2,
+          "cols": 8,
+          "header_tokens": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "position"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 3,
+          "header_tokens": [
+            "enrollment",
+            "group",
+            "how",
+            "included",
+            "priority",
+            "qualify",
+            "they",
+            "veterans"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 1,
+          "header_tokens": [
+            "**>",
+            "<cpm>",
+            "<shrpecc>",
+            "are",
+            "at",
+            "available",
+            "by",
+            "demographic",
+            "det",
+            "detailed",
+            "his",
+            "history"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "action",
+            "description",
+            "name",
+            "synonym"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "inpatient",
+            "outpatient"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "status",
+            "synonym"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 2,
+          "header_tokens": [
+            "column",
+            "description",
+            "header"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "adto_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adto_um.docx",
+      "para_count": 1153,
+      "heading_count": 1,
+      "toc_entry_count": 0,
+      "table_count": 1,
+      "table_types": {
+        "revision": 1
+      },
+      "pseudo_headings": 125,
+      "callouts": {
+        "NOTE": 1
+      },
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 5,
+      "tables_detail": [
+        {
+          "rows": 8,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "dg_reg_bc_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/dg_reg_bc_um.docx",
+      "para_count": 306,
+      "heading_count": 63,
+      "toc_entry_count": 54,
+      "table_count": 1,
+      "table_types": {
+        "revision": 1
+      },
+      "pseudo_headings": 16,
+      "callouts": {
+        "NOTE": 4,
+        "IMPORTANT": 1
+      },
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 19,
+      "tables_detail": [
+        {
+          "rows": 5,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applicable)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "adt_cnhr_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_cnhr_um.docx",
+      "para_count": 183,
+      "heading_count": 26,
+      "toc_entry_count": 26,
+      "table_count": 1,
+      "table_types": {
+        "revision": 1
+      },
+      "pseudo_headings": 16,
+      "callouts": {},
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 9,
+      "tables_detail": [
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "adt_mcsm.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_mcsm.docx",
+      "para_count": 57,
+      "heading_count": 5,
+      "toc_entry_count": 0,
+      "table_count": 0,
+      "table_types": {},
+      "pseudo_headings": 3,
+      "callouts": {},
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 6,
+      "tables_detail": []
+    },
+    {
+      "filename": "adt_mts_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_mts_um.docx",
+      "para_count": 506,
+      "heading_count": 30,
+      "toc_entry_count": 1,
+      "table_count": 10,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 9
+      },
+      "pseudo_headings": 22,
+      "callouts": {
+        "NOTE": 9
+      },
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 16,
+      "tables_detail": [
+        {
+          "rows": 19,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "heading",
+            "report"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "heading",
+            "report"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "by",
+            "images",
+            "means",
+            "signed",
+            "test",
+            "veteran",
+            "yes"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "PIMS_User_Manual-Menus_Intros_Orientation.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/PIMS_User_Manual-Menus_Intros_Orientation.docx",
+      "para_count": 1013,
+      "heading_count": 38,
+      "toc_entry_count": 36,
+      "table_count": 19,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 17,
+        "api-function": 1
+      },
+      "pseudo_headings": 10,
+      "callouts": {
+        "NOTE": 1
+      },
+      "terminal_lines": 27,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 10,
+      "tables_detail": [
+        {
+          "rows": 13,
+          "cols": 5,
+          "header_tokens": [
+            "#",
+            "dates",
+            "description",
+            "manager",
+            "page",
+            "project",
+            "revision",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "audiences",
+            "readers",
+            "users"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "(va)",
+            "affairs",
+            "and",
+            "any",
+            "appearance",
+            "are",
+            "at",
+            "by",
+            "can",
+            "consistent",
+            "constitute"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "symbol"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "a",
+            "areas",
+            "box",
+            "boxes",
+            "callout",
+            "descriptions",
+            "displayed",
+            "enclosed",
+            "image.",
+            "labels",
+            "note:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 18,
+          "cols": 3,
+          "header_tokens": [
+            "documentation",
+            "file",
+            "location",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "site",
+            "url"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "&",
+            "are",
+            "introduction",
+            "menu",
+            "menus",
+            "module",
+            "not",
+            "note:",
+            "of",
+            "options.",
+            "orientation"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "and",
+            "appear",
+            "in",
+            "menu",
+            "note:",
+            "options.",
+            "primary",
+            "reports",
+            "scheduling",
+            "secondary",
+            "the"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "acronym",
+            "administration",
+            "an",
+            "and",
+            "as",
+            "avoid",
+            "be",
+            "confusion",
+            "contain",
+            "continuity.",
+            "ensure"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 1,
+          "header_tokens": [
+            "(date",
+            "(sch",
+            "(single",
+            "-",
+            "...",
+            "30-60",
+            "a",
+            "accept",
+            "add",
+            "agreement",
+            "an",
+            "and"
+          ],
+          "type": "api-function"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "and",
+            "are",
+            "assign",
+            "coordinator",
+            "health",
+            "mental",
+            "menu",
+            "menus.",
+            "mh",
+            "need",
+            "no"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "&",
+            "description",
+            "features",
+            "mh",
+            "no",
+            "options",
+            "show"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "parameter"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 12,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "parameter"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "parameter"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 25,
+          "cols": 2,
+          "header_tokens": [
+            "military",
+            "standard"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 60,
+          "cols": 2,
+          "header_tokens": [
+            "definition",
+            "terms"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "adt_pimsschoutput.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_pimsschoutput.docx",
+      "para_count": 929,
+      "heading_count": 55,
+      "toc_entry_count": 46,
+      "table_count": 16,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 15
+      },
+      "pseudo_headings": 7,
+      "callouts": {
+        "NOTE": 2
+      },
+      "terminal_lines": 27,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 11,
+      "tables_detail": [
+        {
+          "rows": 10,
+          "cols": 5,
+          "header_tokens": [
+            "#",
+            "dates",
+            "description",
+            "manager",
+            "page",
+            "project",
+            "revision",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "audience",
+            "readers",
+            "users"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "(va)",
+            "affairs",
+            "and",
+            "any",
+            "appearance",
+            "are",
+            "at",
+            "by",
+            "can",
+            "consistent",
+            "constitute"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "symbol"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "a",
+            "areas",
+            "box",
+            "boxes",
+            "callout",
+            "descriptions",
+            "displayed",
+            "enclosed",
+            "image.",
+            "labels",
+            "note:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "site",
+            "url"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 3,
+          "header_tokens": [
+            "documentation",
+            "file",
+            "location",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "explanation",
+            "monitoring",
+            "report",
+            "topic"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "clinic",
+            "explanation",
+            "profile",
+            "report",
+            "topic"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "explanation",
+            "patient",
+            "profile",
+            "report",
+            "topic"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "explanation",
+            "report",
+            "topic",
+            "visit"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "and",
+            "are",
+            "assign",
+            "coordinator",
+            "health",
+            "irm",
+            "mental",
+            "menu",
+            "menus.",
+            "mh",
+            "need"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "&",
+            "description",
+            "features",
+            "mh",
+            "no",
+            "options",
+            "show"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "(",
+            "(as",
+            ").",
+            "188",
+            "500",
+            "599",
+            "amis",
+            "an",
+            "at",
+            "be",
+            "below)"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 62,
+          "cols": 2,
+          "header_tokens": [
+            "definitio",
+            "terms"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "adt_ptf.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_ptf.docx",
+      "para_count": 1890,
+      "heading_count": 113,
+      "toc_entry_count": 112,
+      "table_count": 11,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 10
+      },
+      "pseudo_headings": 32,
+      "callouts": {
+        "NOTE": 4
+      },
+      "terminal_lines": 5,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 19,
+      "tables_detail": [
+        {
+          "rows": 16,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 34,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "or",
+            "prompt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "or",
+            "prompt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "or",
+            "prompt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "or",
+            "prompt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "or",
+            "prompt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "or",
+            "prompt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "or",
+            "prompt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "definition",
+            "field"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "(does",
+            "admission",
+            "and",
+            "discharges)",
+            "events",
+            "individual",
+            "inpatient",
+            "not",
+            "store",
+            "transfers"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "data",
+            "segment"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "pims_reg_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/pims_reg_um.docx",
+      "para_count": 2879,
+      "heading_count": 140,
+      "toc_entry_count": 122,
+      "table_count": 14,
+      "table_types": {
+        "revision": 2,
+        "reference-table": 12
+      },
+      "pseudo_headings": 40,
+      "callouts": {
+        "NOTE": 40
+      },
+      "terminal_lines": 749,
+      "page_refs": 1,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 25,
+      "tables_detail": [
+        {
+          "rows": 99,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applicable)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "full",
+            "name",
+            "short"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "action",
+            "description",
+            "mnemonic"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 3,
+          "header_tokens": [
+            "action",
+            "description",
+            "mnemonic"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "error",
+            "name",
+            "resolution"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "of",
+            "report",
+            "type"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "actions",
+            "at",
+            "rs",
+            "scenario",
+            "taken"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 23,
+          "cols": 3,
+          "header_tokens": [
+            "as",
+            "displays",
+            "field",
+            "name",
+            "number",
+            "on",
+            "report",
+            "the"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "appears",
+            "as",
+            "field",
+            "name",
+            "number",
+            "on",
+            "report",
+            "the"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "address",
+            "domestic",
+            "fields",
+            "for",
+            "foreign",
+            "required",
+            "residential"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "address",
+            "domestic",
+            "fields",
+            "for",
+            "foreign",
+            "required",
+            "temporary"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "address",
+            "confidential",
+            "domestic",
+            "fields",
+            "for",
+            "foreign",
+            "required"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 11,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "version"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "adt_rug.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_rug.docx",
+      "para_count": 386,
+      "heading_count": 0,
+      "toc_entry_count": 0,
+      "table_count": 1,
+      "table_types": {
+        "revision": 1
+      },
+      "pseudo_headings": 32,
+      "callouts": {
+        "NOTE": 2
+      },
+      "terminal_lines": 2,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 2,
+      "tables_detail": [
+        {
+          "rows": 5,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "adt_so.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_so.docx",
+      "para_count": 91,
+      "heading_count": 0,
+      "toc_entry_count": 0,
+      "table_count": 1,
+      "table_types": {
+        "revision": 1
+      },
+      "pseudo_headings": 9,
+      "callouts": {},
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 2,
+      "tables_detail": [
+        {
+          "rows": 4,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "sadt_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/sadt_um.docx",
+      "para_count": 1235,
+      "heading_count": 63,
+      "toc_entry_count": 49,
+      "table_count": 4,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 3
+      },
+      "pseudo_headings": 9,
+      "callouts": {},
+      "terminal_lines": 10,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 12,
+      "tables_detail": [
+        {
+          "rows": 19,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 14,
+          "cols": 2,
+          "header_tokens": [
+            "abbreviation",
+            "category"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "abbreviation",
+            "inconsistency"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "are",
+            "branch",
+            "but",
+            "dates",
+            "episode",
+            "for",
+            "ii",
+            "invalid",
+            "is",
+            "merc",
+            "merchant",
+            "military"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "adt_vic.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/adt_vic.docx",
+      "para_count": 214,
+      "heading_count": 0,
+      "toc_entry_count": 0,
+      "table_count": 0,
+      "table_types": {},
+      "pseudo_headings": 27,
+      "callouts": {
+        "NOTE": 1
+      },
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 2,
+      "tables_detail": []
+    },
+    {
+      "filename": "dg_5_3_891_cets_um.docx",
+      "path": "/Users/rafael/vista-docs/raw/adt/dg_5_3_891_cets_um.docx",
+      "para_count": 213,
+      "heading_count": 0,
+      "toc_entry_count": 0,
+      "table_count": 1,
+      "table_types": {
+        "revision": 1
+      },
+      "pseudo_headings": 27,
+      "callouts": {
+        "NOTE": 3
+      },
+      "terminal_lines": 0,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 6,
+      "tables_detail": [
+        {
+          "rows": 6,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "(patch",
+            "applic.)",
+            "date",
+            "description",
+            "if",
+            "manager",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        }
+      ]
+    }
+  ]
+}

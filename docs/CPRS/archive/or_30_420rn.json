@@ -1,0 +1,1621 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "or_30_420rn",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 4538334078035872010,
+    "filename": "or_30_420rn.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/texts/0"
+      },
+      {
+        "cref": "#/texts/1"
+      },
+      {
+        "cref": "#/texts/2"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/texts/17"
+      },
+      "children": [
+        {
+          "cref": "#/texts/21"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [
+        {
+          "cref": "#/texts/34"
+        },
+        {
+          "cref": "#/texts/35"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [
+        {
+          "cref": "#/texts/39"
+        },
+        {
+          "cref": "#/texts/40"
+        },
+        {
+          "cref": "#/texts/41"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [
+        {
+          "cref": "#/texts/43"
+        },
+        {
+          "cref": "#/texts/44"
+        },
+        {
+          "cref": "#/texts/45"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [
+        {
+          "cref": "#/texts/49"
+        },
+        {
+          "cref": "#/texts/50"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [
+        {
+          "cref": "#/texts/52"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "cref": "#/texts/55"
+      },
+      "children": [
+        {
+          "cref": "#/texts/57"
+        },
+        {
+          "cref": "#/texts/58"
+        },
+        {
+          "cref": "#/texts/59"
+        },
+        {
+          "cref": "#/texts/60"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "CPRS Lab Monitoring",
+      "text": "CPRS Lab Monitoring",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patch OR*3.0*420",
+      "text": "Patch OR*3.0*420",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/pictures/0"
+        },
+        {
+          "cref": "#/texts/3"
+        },
+        {
+          "cref": "#/texts/4"
+        },
+        {
+          "cref": "#/texts/5"
+        },
+        {
+          "cref": "#/texts/6"
+        },
+        {
+          "cref": "#/texts/7"
+        },
+        {
+          "cref": "#/texts/8"
+        },
+        {
+          "cref": "#/texts/9"
+        },
+        {
+          "cref": "#/texts/10"
+        },
+        {
+          "cref": "#/texts/11"
+        },
+        {
+          "cref": "#/texts/12"
+        },
+        {
+          "cref": "#/texts/13"
+        },
+        {
+          "cref": "#/texts/14"
+        },
+        {
+          "cref": "#/texts/15"
+        },
+        {
+          "cref": "#/texts/16"
+        },
+        {
+          "cref": "#/texts/17"
+        },
+        {
+          "cref": "#/texts/22"
+        },
+        {
+          "cref": "#/texts/24"
+        },
+        {
+          "cref": "#/texts/26"
+        },
+        {
+          "cref": "#/texts/55"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "title",
+      "prov": [],
+      "orig": "Release Notes",
+      "text": "Release Notes",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "March 2017",
+      "text": "March 2017",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Department of Veterans Affairs",
+      "text": "Department of Veterans Affairs",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Office of Information and Technology (OI&T)",
+      "text": "Office of Information and Technology (OI&T)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".",
+      "text": ".",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Table of Contents",
+      "text": "Table of Contents",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1.\tIntroduction\t1",
+      "text": "1.\tIntroduction\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "2.\tPurpose\t1",
+      "text": "2.\tPurpose\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "3.\tAudience\t1",
+      "text": "3.\tAudience\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4.\tThis Release\t1",
+      "text": "4.\tThis Release\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4.1.\tNew Features and Functions Added\t1",
+      "text": "4.1.\tNew Features and Functions Added\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4.2.\tEnhancements and Modifications to Existing\t1",
+      "text": "4.2.\tEnhancements and Modifications to Existing\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4.3.\tKnown Issues\t3",
+      "text": "4.3.\tKnown Issues\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "5.\tProduct Documentation\t3",
+      "text": "5.\tProduct Documentation\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [
+        {
+          "cref": "#/texts/18"
+        },
+        {
+          "cref": "#/texts/19"
+        },
+        {
+          "cref": "#/texts/20"
+        },
+        {
+          "cref": "#/groups/0"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "1 Introduction",
+      "text": "1 Introduction",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/texts/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch modifies the existing Pharmacy package in VistA to display the most recent associated lab results when a clinician is ordering medication using the Computerized Patient Record System (CPRS) Inpatient or Outpatient Medication Order dialogs.",
+      "text": "This patch modifies the existing Pharmacy package in VistA to display the most recent associated lab results when a clinician is ordering medication using the Computerized Patient Record System (CPRS) Inpatient or Outpatient Medication Order dialogs.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/texts/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This modification to VistA originated as a field-developed enhancement for local use at a VA facility. It was determined that the modification would be of benefit to the wider VistA user community, and so it is now being deployed nationally.",
+      "text": "This modification to VistA originated as a field-developed enhancement for local use at a VA facility. It was determined that the modification would be of benefit to the wider VistA user community, and so it is now being deployed nationally.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/texts/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The following New Service Request (NSR) is resolved with this patch:",
+      "text": "The following New Service Request (NSR) is resolved with this patch:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "NSR20100311 – CPRS Lab Monitoring",
+      "text": "NSR20100311 – CPRS Lab Monitoring",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [
+        {
+          "cref": "#/texts/23"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "2 Purpose",
+      "text": "2 Purpose",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/texts/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The purpose of this document is to communicate changes to the VistA system resulting from implementation of OR*3.0*420.",
+      "text": "The purpose of this document is to communicate changes to the VistA system resulting from implementation of OR*3.0*420.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [
+        {
+          "cref": "#/texts/25"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "3 Audience",
+      "text": "3 Audience",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/texts/24"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This document targets users of the Pharmacy package in VistA and CPRS.",
+      "text": "This document targets users of the Pharmacy package in VistA and CPRS.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [
+        {
+          "cref": "#/texts/27"
+        },
+        {
+          "cref": "#/texts/28"
+        },
+        {
+          "cref": "#/texts/30"
+        },
+        {
+          "cref": "#/texts/53"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "4 This Release",
+      "text": "4 This Release",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/texts/26"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The following sections provide a summary of the new features and enhancements introduced by this patch, as well as any known issues.",
+      "text": "The following sections provide a summary of the new features and enhancements introduced by this patch, as well as any known issues.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/texts/26"
+      },
+      "children": [
+        {
+          "cref": "#/texts/29"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "4.1 New Features and Functions Added",
+      "text": "4.1 New Features and Functions Added",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/texts/28"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch adds no new VistA or CPRS features.",
+      "text": "This patch adds no new VistA or CPRS features.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/texts/26"
+      },
+      "children": [
+        {
+          "cref": "#/texts/31"
+        },
+        {
+          "cref": "#/texts/32"
+        },
+        {
+          "cref": "#/texts/33"
+        },
+        {
+          "cref": "#/groups/1"
+        },
+        {
+          "cref": "#/texts/36"
+        },
+        {
+          "cref": "#/texts/37"
+        },
+        {
+          "cref": "#/texts/38"
+        },
+        {
+          "cref": "#/groups/2"
+        },
+        {
+          "cref": "#/texts/42"
+        },
+        {
+          "cref": "#/groups/3"
+        },
+        {
+          "cref": "#/texts/46"
+        },
+        {
+          "cref": "#/texts/47"
+        },
+        {
+          "cref": "#/texts/48"
+        },
+        {
+          "cref": "#/groups/4"
+        },
+        {
+          "cref": "#/texts/51"
+        },
+        {
+          "cref": "#/groups/5"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "4.2 Enhancements and Modifications to Existing",
+      "text": "4.2 Enhancements and Modifications to Existing",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "*****************************************************************************",
+      "text": "*****************************************************************************",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "ATTENTION (ESPECIALLY MULTI-DIVISIONAL FACILITIES):",
+      "text": "ATTENTION (ESPECIALLY MULTI-DIVISIONAL FACILITIES):",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This enhancement will not work properly for multi-divisional facilities or any sites that use different lab test names at different sites, as only one lab test name can be associated with each drug. To successfully implement this solution, all facilities/divisions that share a VistA system must use the same name for each monitored lab test. If this is not feasible or desired, then do not populate lab tests in the LAB TEST MONITOR field after installing this patch.",
+      "text": "This enhancement will not work properly for multi-divisional facilities or any sites that use different lab test names at different sites, as only one lab test name can be associated with each drug. To successfully implement this solution, all facilities/divisions that share a VistA system must use the same name for each monitored lab test. If this is not feasible or desired, then do not populate lab tests in the LAB TEST MONITOR field after installing this patch.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Example:",
+      "text": "Example:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If all divisions of your facility use a single laboratory test named CREATININE, then the software will work as intended. If individual divisions use specifically named lab tests such as KAN-CREATININE and WIC-CREATININE, then do not use those lab tests with this software enhancement.",
+      "text": "If all divisions of your facility use a single laboratory test named CREATININE, then the software will work as intended. If individual divisions use specifically named lab tests such as KAN-CREATININE and WIC-CREATININE, then do not use those lab tests with this software enhancement.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "******************************************************************************",
+      "text": "******************************************************************************",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patch OR*3.0*420 modifies the existing Pharmacy package in VistA to display the most recent associated lab results when a clinician is ordering medication using the CPRS Inpatient or Outpatient Medication Order dialogs. Without this modification, the clinician must look in numerous locations for this information. The information is important for safe and effective medication management.",
+      "text": "Patch OR*3.0*420 modifies the existing Pharmacy package in VistA to display the most recent associated lab results when a clinician is ordering medication using the CPRS Inpatient or Outpatient Medication Order dialogs. Without this modification, the clinician must look in numerous locations for this information. The information is important for safe and effective medication management.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The lab results for the most recent lab test associated with an Orderable Item will be displayed in the Information field in the Medication Order dialog after an Orderable Item is selected. When a dispense drug is chosen (by selecting a dosage in the order dialog), the lab test information will be replaced by the National Standard Drug Information found in the MESSAGE (#101) field of the DRUG (#50) file. This message currently shows in CPRS when ordering a dispense drug and is not changed by this modification.",
+      "text": "The lab results for the most recent lab test associated with an Orderable Item will be displayed in the Information field in the Medication Order dialog after an Orderable Item is selected. When a dispense drug is chosen (by selecting a dosage in the order dialog), the lab test information will be replaced by the National Standard Drug Information found in the MESSAGE (#101) field of the DRUG (#50) file. This message currently shows in CPRS when ordering a dispense drug and is not changed by this modification.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note:",
+      "text": "Note:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Follow-on work to allow persistence of the lab test information in the Medication Order dialog is expected to be addressed in CPRS v32.",
+      "text": "Follow-on work to allow persistence of the lab test information in the Medication Order dialog is expected to be addressed in CPRS v32.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "In order to monitor lab results, lab tests are associated with an Orderable Item using the PSS DRUG ENTER/EDIT option in VistA by entering a lab test in the LAB TEST MONITOR (#17.2) field of the DRUG (#50) file.",
+      "text": "In order to monitor lab results, lab tests are associated with an Orderable Item using the PSS DRUG ENTER/EDIT option in VistA by entering a lab test in the LAB TEST MONITOR (#17.2) field of the DRUG (#50) file.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "To apply this functionality to Quick Orders, routine ORWDPLM2 can be used as a TIU OBJECT that can be added to a Quick Order. A site may use this optionally to add to a Quick Order to allow the functionality to be added to the comment section of the order. This is done by creating the OBJECT using the TIU Document Definitions option and inserting it into the comments field of the Quick Order. Upon selection of the Quick Order in CPRS, the monitored LAB results will appear on the Ordering screen. If assistance is needed for setting up TIU Objects inside Quick Orders, contact your Clinical Application Coordinator (CAC) or refer to the TIU User Manual for instructions.",
+      "text": "To apply this functionality to Quick Orders, routine ORWDPLM2 can be used as a TIU OBJECT that can be added to a Quick Order. A site may use this optionally to add to a Quick Order to allow the functionality to be added to the comment section of the order. This is done by creating the OBJECT using the TIU Document Definitions option and inserting it into the comments field of the Quick Order. Upon selection of the Quick Order in CPRS, the monitored LAB results will appear on the Ordering screen. If assistance is needed for setting up TIU Objects inside Quick Orders, contact your Clinical Application Coordinator (CAC) or refer to the TIU User Manual for instructions.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note:",
+      "text": "Note:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The TIU OBJECT method will work for generalized Quick Orders only (orders assigned to Order Menus). It is not currently implemented for personal Quick Orders.",
+      "text": "The TIU OBJECT method will work for generalized Quick Orders only (orders assigned to Order Menus). It is not currently implemented for personal Quick Orders.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A new KERNEL system parameter (OR CPRS LAB DISPLAY ENABLED) is added by this patch to turn the functionality On/Off. Initially, this parameter is set to OFF (NO). A Clinical Application Coordinator (CAC) or Pharmacy Automated Data Processing Application Coordinator (ADPAC) at each site will need to set this parameter to the ON value (YES) to activate this functionality at the site.",
+      "text": "A new KERNEL system parameter (OR CPRS LAB DISPLAY ENABLED) is added by this patch to turn the functionality On/Off. Initially, this parameter is set to OFF (NO). A Clinical Application Coordinator (CAC) or Pharmacy Automated Data Processing Application Coordinator (ADPAC) at each site will need to set this parameter to the ON value (YES) to activate this functionality at the site.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The following new routines were added to implement this enhancement:",
+      "text": "The following new routines were added to implement this enhancement:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "ORWDPLM1 – displays LAB TEST MONITOR results for Lab tests.",
+      "text": "ORWDPLM1 – displays LAB TEST MONITOR results for Lab tests.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "ORWDPLM2 – TIU Object calculations and displays.",
+      "text": "ORWDPLM2 – TIU Object calculations and displays.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/texts/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The following routine was modified to implement this enhancement:",
+      "text": "The following routine was modified to implement this enhancement:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "ORWDPS2 – modified to call LAB TEST MONITOR results display modules in new routines ORWDPLM1 and ORWDPLM2",
+      "text": "ORWDPS2 – modified to call LAB TEST MONITOR results display modules in new routines ORWDPLM1 and ORWDPLM2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/texts/26"
+      },
+      "children": [
+        {
+          "cref": "#/texts/54"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "4.3 Known Issues",
+      "text": "4.3 Known Issues",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/texts/53"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "None.",
+      "text": "None.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [
+        {
+          "cref": "#/texts/56"
+        },
+        {
+          "cref": "#/groups/6"
+        },
+        {
+          "cref": "#/texts/61"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "5 Product Documentation",
+      "text": "5 Product Documentation",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/texts/55"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Additional end-user documentation available for this patch includes:",
+      "text": "Additional end-user documentation available for this patch includes:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "CPRS Technical Manual: GUI Version – cprsguitm.pdf",
+      "text": "CPRS Technical Manual: GUI Version – cprsguitm.pdf",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "CPRS User Guide: GUI Version – cprsguium.pdf",
+      "text": "CPRS User Guide: GUI Version – cprsguium.pdf",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Pharmacy Data Management User Manual – pss_1_um_r0317.pdf",
+      "text": "Pharmacy Data Management User Manual – pss_1_um_r0317.pdf",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Text Integration Utility (TIU) Clinical Coordinator & User Manual – tiuum.pdf",
+      "text": "Text Integration Utility (TIU) Clinical Coordinator & User Manual – tiuum.pdf",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/texts/55"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "These documents can be found in the VA Software Document Library (VDL).",
+      "text": "These documents can be found in the VA Software Document Library (VDL).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    }
+  ],
+  "pictures": [
+    {
+      "self_ref": "#/pictures/0",
+      "parent": {
+        "cref": "#/texts/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 216.0,
+          "height": 216.0
+        },
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADYCAMAAAC+/t3fAAABgFBMVEVzrceQudRiW1YCATD8/IuYnaobJVhrpcbTayOWbVT//nj8//9qjajUsCiJze7PsGF1yOlUbI5nTCvw0SluMxTR9v39/qnPkSmVVCmqyN3cyyyy1+/dzEx6u9vq1UVSKBCuaDTVyGb68Ulvtuzn22rRmZyuBAaOhVAJAgu0VCUoDgiJRRrtsyiHNRHVuBm1rFK3r2unjSj82BNvBgi2IiOvt8j96y3IFxmTAwTKzNW57fvQ3urMjRW8h2f57XTq/P6TyN46SW+jmFUvJzZNBgdJMy2Lh3bPzIz+7AzpkCP//GX57GdDO0fKYmL2twVuLC66SBjxz9Tt6X2OMCqCcDqGvOuRfJNmqNsmFTStFh7p5+r+/sTt52a+bRZoudxWpdOQFB7o3ZFWpetPkMfYxhzqlQk6HQ9lmsFztdN8rdDe863n7/Wxv5CN6P6pQE3gt7xLFiyxNRPY2LTy2+P86u3R6sxQmeZ0ERy75c/x+HmPchT8/Oxrtc5tpsQUDjn///8pY5EEAAAAgHRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ADgFS2cAAFC0SURBVHic3X2NXxrXtjawAWGGQZARRgQHDIFhRtAIGj9RBE2TcKo1xkAi1jR2lNik5vTccnveMv3X39+z9vBlbE/bc849932nqVGjMM+stdd61sde2/HL/6eX43/mbW5eD671/w+A3bw+9TQbXuvzq+E9PV3Z/H8R2PrpOB7GGOOfjAN0eTb/nwH2+rQ2hoeuZqNRs8ENvjf4KdfK/35gp7ag+ve+9OTt2ycnf43SlV7if+dc3719u3Qwhu9fDc7xL3ytddcQU+3gyfF85JE7Go0en81dJt4fZzLHc8VE9P1xYi4SOY4eu6PuxZrX5aoNRef53whsvdoXlWvpuyc5d9SdScTjRSl9lrgsSrFYZu5Sil/GYpmfEpeSJKWjmXgiEgHwtzn+LP612Bz/kld5PSKrqPssPjdXLCYy8UtJim1tSfFiLJb6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"
+      },
+      "annotations": []
+    }
+  ],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

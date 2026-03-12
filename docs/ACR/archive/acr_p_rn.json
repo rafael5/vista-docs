@@ -1,0 +1,7365 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "acr_p_rn",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 13393113489795074428,
+    "filename": "acr_p_rn.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/texts/0"
+      },
+      {
+        "cref": "#/texts/1"
+      },
+      {
+        "cref": "#/texts/2"
+      },
+      {
+        "cref": "#/texts/3"
+      },
+      {
+        "cref": "#/texts/4"
+      },
+      {
+        "cref": "#/texts/5"
+      },
+      {
+        "cref": "#/texts/6"
+      },
+      {
+        "cref": "#/texts/7"
+      },
+      {
+        "cref": "#/texts/8"
+      },
+      {
+        "cref": "#/texts/9"
+      },
+      {
+        "cref": "#/texts/10"
+      },
+      {
+        "cref": "#/texts/11"
+      },
+      {
+        "cref": "#/texts/12"
+      },
+      {
+        "cref": "#/texts/13"
+      },
+      {
+        "cref": "#/texts/14"
+      },
+      {
+        "cref": "#/texts/15"
+      },
+      {
+        "cref": "#/texts/16"
+      },
+      {
+        "cref": "#/texts/17"
+      },
+      {
+        "cref": "#/texts/18"
+      },
+      {
+        "cref": "#/texts/19"
+      },
+      {
+        "cref": "#/texts/20"
+      },
+      {
+        "cref": "#/texts/21"
+      },
+      {
+        "cref": "#/texts/22"
+      },
+      {
+        "cref": "#/texts/23"
+      },
+      {
+        "cref": "#/texts/24"
+      },
+      {
+        "cref": "#/texts/25"
+      },
+      {
+        "cref": "#/texts/26"
+      },
+      {
+        "cref": "#/texts/27"
+      },
+      {
+        "cref": "#/texts/28"
+      },
+      {
+        "cref": "#/texts/29"
+      },
+      {
+        "cref": "#/texts/30"
+      },
+      {
+        "cref": "#/texts/31"
+      },
+      {
+        "cref": "#/texts/32"
+      },
+      {
+        "cref": "#/texts/33"
+      },
+      {
+        "cref": "#/texts/34"
+      },
+      {
+        "cref": "#/texts/35"
+      },
+      {
+        "cref": "#/texts/36"
+      },
+      {
+        "cref": "#/texts/37"
+      },
+      {
+        "cref": "#/texts/38"
+      },
+      {
+        "cref": "#/texts/39"
+      },
+      {
+        "cref": "#/texts/40"
+      },
+      {
+        "cref": "#/texts/41"
+      },
+      {
+        "cref": "#/texts/42"
+      },
+      {
+        "cref": "#/texts/43"
+      },
+      {
+        "cref": "#/texts/44"
+      },
+      {
+        "cref": "#/texts/45"
+      },
+      {
+        "cref": "#/texts/46"
+      },
+      {
+        "cref": "#/texts/47"
+      },
+      {
+        "cref": "#/texts/48"
+      },
+      {
+        "cref": "#/texts/49"
+      },
+      {
+        "cref": "#/texts/50"
+      },
+      {
+        "cref": "#/texts/51"
+      },
+      {
+        "cref": "#/texts/52"
+      },
+      {
+        "cref": "#/texts/53"
+      },
+      {
+        "cref": "#/texts/54"
+      },
+      {
+        "cref": "#/texts/55"
+      },
+      {
+        "cref": "#/texts/56"
+      },
+      {
+        "cref": "#/texts/57"
+      },
+      {
+        "cref": "#/texts/58"
+      },
+      {
+        "cref": "#/texts/59"
+      },
+      {
+        "cref": "#/texts/60"
+      },
+      {
+        "cref": "#/texts/61"
+      },
+      {
+        "cref": "#/texts/62"
+      },
+      {
+        "cref": "#/texts/63"
+      },
+      {
+        "cref": "#/texts/64"
+      },
+      {
+        "cref": "#/texts/65"
+      },
+      {
+        "cref": "#/texts/66"
+      },
+      {
+        "cref": "#/texts/67"
+      },
+      {
+        "cref": "#/texts/68"
+      },
+      {
+        "cref": "#/texts/69"
+      },
+      {
+        "cref": "#/texts/70"
+      },
+      {
+        "cref": "#/texts/71"
+      },
+      {
+        "cref": "#/texts/72"
+      },
+      {
+        "cref": "#/texts/73"
+      },
+      {
+        "cref": "#/texts/74"
+      },
+      {
+        "cref": "#/texts/75"
+      },
+      {
+        "cref": "#/texts/76"
+      },
+      {
+        "cref": "#/texts/77"
+      },
+      {
+        "cref": "#/texts/78"
+      },
+      {
+        "cref": "#/texts/79"
+      },
+      {
+        "cref": "#/texts/80"
+      },
+      {
+        "cref": "#/texts/81"
+      },
+      {
+        "cref": "#/texts/82"
+      },
+      {
+        "cref": "#/texts/83"
+      },
+      {
+        "cref": "#/texts/84"
+      },
+      {
+        "cref": "#/texts/85"
+      },
+      {
+        "cref": "#/texts/86"
+      },
+      {
+        "cref": "#/texts/87"
+      },
+      {
+        "cref": "#/texts/88"
+      },
+      {
+        "cref": "#/texts/89"
+      },
+      {
+        "cref": "#/texts/90"
+      },
+      {
+        "cref": "#/texts/91"
+      },
+      {
+        "cref": "#/texts/92"
+      },
+      {
+        "cref": "#/texts/93"
+      },
+      {
+        "cref": "#/texts/94"
+      },
+      {
+        "cref": "#/texts/95"
+      },
+      {
+        "cref": "#/texts/96"
+      },
+      {
+        "cref": "#/texts/97"
+      },
+      {
+        "cref": "#/texts/98"
+      },
+      {
+        "cref": "#/texts/99"
+      },
+      {
+        "cref": "#/texts/100"
+      },
+      {
+        "cref": "#/texts/101"
+      },
+      {
+        "cref": "#/texts/102"
+      },
+      {
+        "cref": "#/texts/103"
+      },
+      {
+        "cref": "#/texts/104"
+      },
+      {
+        "cref": "#/texts/105"
+      },
+      {
+        "cref": "#/texts/106"
+      },
+      {
+        "cref": "#/texts/107"
+      },
+      {
+        "cref": "#/texts/108"
+      },
+      {
+        "cref": "#/texts/109"
+      },
+      {
+        "cref": "#/texts/110"
+      },
+      {
+        "cref": "#/texts/111"
+      },
+      {
+        "cref": "#/texts/112"
+      },
+      {
+        "cref": "#/texts/113"
+      },
+      {
+        "cref": "#/texts/114"
+      },
+      {
+        "cref": "#/texts/115"
+      },
+      {
+        "cref": "#/texts/116"
+      },
+      {
+        "cref": "#/texts/117"
+      },
+      {
+        "cref": "#/texts/118"
+      },
+      {
+        "cref": "#/texts/119"
+      },
+      {
+        "cref": "#/texts/120"
+      },
+      {
+        "cref": "#/texts/121"
+      },
+      {
+        "cref": "#/texts/122"
+      },
+      {
+        "cref": "#/texts/123"
+      },
+      {
+        "cref": "#/texts/124"
+      },
+      {
+        "cref": "#/texts/125"
+      },
+      {
+        "cref": "#/texts/126"
+      },
+      {
+        "cref": "#/texts/127"
+      },
+      {
+        "cref": "#/texts/128"
+      },
+      {
+        "cref": "#/texts/129"
+      },
+      {
+        "cref": "#/texts/130"
+      },
+      {
+        "cref": "#/texts/131"
+      },
+      {
+        "cref": "#/texts/132"
+      },
+      {
+        "cref": "#/texts/133"
+      },
+      {
+        "cref": "#/texts/134"
+      },
+      {
+        "cref": "#/texts/135"
+      },
+      {
+        "cref": "#/texts/136"
+      },
+      {
+        "cref": "#/texts/137"
+      },
+      {
+        "cref": "#/texts/138"
+      },
+      {
+        "cref": "#/texts/139"
+      },
+      {
+        "cref": "#/texts/140"
+      },
+      {
+        "cref": "#/texts/141"
+      },
+      {
+        "cref": "#/texts/142"
+      },
+      {
+        "cref": "#/texts/143"
+      },
+      {
+        "cref": "#/texts/144"
+      },
+      {
+        "cref": "#/texts/145"
+      },
+      {
+        "cref": "#/texts/146"
+      },
+      {
+        "cref": "#/groups/0"
+      },
+      {
+        "cref": "#/texts/148"
+      },
+      {
+        "cref": "#/texts/149"
+      },
+      {
+        "cref": "#/texts/150"
+      },
+      {
+        "cref": "#/texts/151"
+      },
+      {
+        "cref": "#/texts/152"
+      },
+      {
+        "cref": "#/texts/153"
+      },
+      {
+        "cref": "#/groups/1"
+      },
+      {
+        "cref": "#/texts/155"
+      },
+      {
+        "cref": "#/texts/156"
+      },
+      {
+        "cref": "#/texts/157"
+      },
+      {
+        "cref": "#/texts/158"
+      },
+      {
+        "cref": "#/texts/159"
+      },
+      {
+        "cref": "#/texts/160"
+      },
+      {
+        "cref": "#/texts/161"
+      },
+      {
+        "cref": "#/texts/162"
+      },
+      {
+        "cref": "#/texts/163"
+      },
+      {
+        "cref": "#/texts/164"
+      },
+      {
+        "cref": "#/texts/165"
+      },
+      {
+        "cref": "#/texts/166"
+      },
+      {
+        "cref": "#/groups/2"
+      },
+      {
+        "cref": "#/texts/168"
+      },
+      {
+        "cref": "#/texts/169"
+      },
+      {
+        "cref": "#/texts/170"
+      },
+      {
+        "cref": "#/texts/171"
+      },
+      {
+        "cref": "#/texts/172"
+      },
+      {
+        "cref": "#/texts/173"
+      },
+      {
+        "cref": "#/texts/174"
+      },
+      {
+        "cref": "#/texts/175"
+      },
+      {
+        "cref": "#/texts/176"
+      },
+      {
+        "cref": "#/texts/177"
+      },
+      {
+        "cref": "#/texts/178"
+      },
+      {
+        "cref": "#/texts/179"
+      },
+      {
+        "cref": "#/texts/180"
+      },
+      {
+        "cref": "#/texts/181"
+      },
+      {
+        "cref": "#/texts/182"
+      },
+      {
+        "cref": "#/texts/183"
+      },
+      {
+        "cref": "#/texts/184"
+      },
+      {
+        "cref": "#/texts/185"
+      },
+      {
+        "cref": "#/texts/186"
+      },
+      {
+        "cref": "#/texts/187"
+      },
+      {
+        "cref": "#/texts/188"
+      },
+      {
+        "cref": "#/texts/189"
+      },
+      {
+        "cref": "#/texts/190"
+      },
+      {
+        "cref": "#/texts/191"
+      },
+      {
+        "cref": "#/texts/192"
+      },
+      {
+        "cref": "#/texts/193"
+      },
+      {
+        "cref": "#/texts/194"
+      },
+      {
+        "cref": "#/texts/195"
+      },
+      {
+        "cref": "#/texts/196"
+      },
+      {
+        "cref": "#/texts/197"
+      },
+      {
+        "cref": "#/texts/198"
+      },
+      {
+        "cref": "#/texts/199"
+      },
+      {
+        "cref": "#/texts/200"
+      },
+      {
+        "cref": "#/texts/201"
+      },
+      {
+        "cref": "#/texts/202"
+      },
+      {
+        "cref": "#/texts/203"
+      },
+      {
+        "cref": "#/texts/204"
+      },
+      {
+        "cref": "#/texts/205"
+      },
+      {
+        "cref": "#/texts/206"
+      },
+      {
+        "cref": "#/texts/207"
+      },
+      {
+        "cref": "#/texts/208"
+      },
+      {
+        "cref": "#/texts/209"
+      },
+      {
+        "cref": "#/texts/210"
+      },
+      {
+        "cref": "#/texts/211"
+      },
+      {
+        "cref": "#/texts/212"
+      },
+      {
+        "cref": "#/texts/213"
+      },
+      {
+        "cref": "#/texts/214"
+      },
+      {
+        "cref": "#/texts/215"
+      },
+      {
+        "cref": "#/texts/216"
+      },
+      {
+        "cref": "#/texts/217"
+      },
+      {
+        "cref": "#/texts/218"
+      },
+      {
+        "cref": "#/texts/219"
+      },
+      {
+        "cref": "#/texts/220"
+      },
+      {
+        "cref": "#/texts/221"
+      },
+      {
+        "cref": "#/texts/222"
+      },
+      {
+        "cref": "#/texts/223"
+      },
+      {
+        "cref": "#/texts/224"
+      },
+      {
+        "cref": "#/texts/225"
+      },
+      {
+        "cref": "#/texts/226"
+      },
+      {
+        "cref": "#/texts/227"
+      },
+      {
+        "cref": "#/texts/228"
+      },
+      {
+        "cref": "#/texts/229"
+      },
+      {
+        "cref": "#/texts/230"
+      },
+      {
+        "cref": "#/texts/231"
+      },
+      {
+        "cref": "#/texts/232"
+      },
+      {
+        "cref": "#/texts/233"
+      },
+      {
+        "cref": "#/texts/234"
+      },
+      {
+        "cref": "#/texts/235"
+      },
+      {
+        "cref": "#/texts/236"
+      },
+      {
+        "cref": "#/texts/237"
+      },
+      {
+        "cref": "#/texts/238"
+      },
+      {
+        "cref": "#/texts/239"
+      },
+      {
+        "cref": "#/texts/240"
+      },
+      {
+        "cref": "#/texts/241"
+      },
+      {
+        "cref": "#/texts/242"
+      },
+      {
+        "cref": "#/texts/243"
+      },
+      {
+        "cref": "#/texts/244"
+      },
+      {
+        "cref": "#/texts/245"
+      },
+      {
+        "cref": "#/texts/246"
+      },
+      {
+        "cref": "#/texts/247"
+      },
+      {
+        "cref": "#/texts/248"
+      },
+      {
+        "cref": "#/texts/249"
+      },
+      {
+        "cref": "#/texts/250"
+      },
+      {
+        "cref": "#/texts/251"
+      },
+      {
+        "cref": "#/texts/252"
+      },
+      {
+        "cref": "#/texts/253"
+      },
+      {
+        "cref": "#/texts/254"
+      },
+      {
+        "cref": "#/texts/255"
+      },
+      {
+        "cref": "#/texts/256"
+      },
+      {
+        "cref": "#/texts/257"
+      },
+      {
+        "cref": "#/texts/258"
+      },
+      {
+        "cref": "#/texts/259"
+      },
+      {
+        "cref": "#/texts/260"
+      },
+      {
+        "cref": "#/texts/261"
+      },
+      {
+        "cref": "#/texts/262"
+      },
+      {
+        "cref": "#/texts/263"
+      },
+      {
+        "cref": "#/texts/264"
+      },
+      {
+        "cref": "#/texts/265"
+      },
+      {
+        "cref": "#/texts/266"
+      },
+      {
+        "cref": "#/texts/267"
+      },
+      {
+        "cref": "#/texts/268"
+      },
+      {
+        "cref": "#/groups/3"
+      },
+      {
+        "cref": "#/texts/272"
+      },
+      {
+        "cref": "#/texts/273"
+      },
+      {
+        "cref": "#/texts/274"
+      },
+      {
+        "cref": "#/texts/275"
+      },
+      {
+        "cref": "#/texts/276"
+      },
+      {
+        "cref": "#/texts/277"
+      },
+      {
+        "cref": "#/texts/278"
+      },
+      {
+        "cref": "#/texts/279"
+      },
+      {
+        "cref": "#/texts/280"
+      },
+      {
+        "cref": "#/texts/281"
+      },
+      {
+        "cref": "#/texts/282"
+      },
+      {
+        "cref": "#/texts/283"
+      },
+      {
+        "cref": "#/texts/284"
+      },
+      {
+        "cref": "#/texts/285"
+      },
+      {
+        "cref": "#/texts/286"
+      },
+      {
+        "cref": "#/texts/287"
+      },
+      {
+        "cref": "#/texts/288"
+      },
+      {
+        "cref": "#/texts/289"
+      },
+      {
+        "cref": "#/texts/290"
+      },
+      {
+        "cref": "#/texts/291"
+      },
+      {
+        "cref": "#/texts/292"
+      },
+      {
+        "cref": "#/texts/293"
+      },
+      {
+        "cref": "#/texts/294"
+      },
+      {
+        "cref": "#/texts/295"
+      },
+      {
+        "cref": "#/texts/296"
+      },
+      {
+        "cref": "#/texts/297"
+      },
+      {
+        "cref": "#/texts/298"
+      },
+      {
+        "cref": "#/texts/299"
+      },
+      {
+        "cref": "#/texts/300"
+      },
+      {
+        "cref": "#/texts/301"
+      },
+      {
+        "cref": "#/texts/302"
+      },
+      {
+        "cref": "#/texts/303"
+      },
+      {
+        "cref": "#/texts/304"
+      },
+      {
+        "cref": "#/texts/305"
+      },
+      {
+        "cref": "#/texts/306"
+      },
+      {
+        "cref": "#/texts/307"
+      },
+      {
+        "cref": "#/texts/308"
+      },
+      {
+        "cref": "#/texts/309"
+      },
+      {
+        "cref": "#/texts/310"
+      },
+      {
+        "cref": "#/texts/311"
+      },
+      {
+        "cref": "#/texts/312"
+      },
+      {
+        "cref": "#/texts/313"
+      },
+      {
+        "cref": "#/texts/314"
+      },
+      {
+        "cref": "#/texts/315"
+      },
+      {
+        "cref": "#/texts/316"
+      },
+      {
+        "cref": "#/texts/317"
+      },
+      {
+        "cref": "#/texts/318"
+      },
+      {
+        "cref": "#/texts/319"
+      },
+      {
+        "cref": "#/texts/320"
+      },
+      {
+        "cref": "#/texts/321"
+      },
+      {
+        "cref": "#/texts/322"
+      },
+      {
+        "cref": "#/texts/323"
+      },
+      {
+        "cref": "#/texts/324"
+      },
+      {
+        "cref": "#/texts/325"
+      },
+      {
+        "cref": "#/texts/326"
+      },
+      {
+        "cref": "#/texts/327"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/147"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/154"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/167"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/269"
+        },
+        {
+          "cref": "#/texts/270"
+        },
+        {
+          "cref": "#/texts/271"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Scheduling V. 5.3",
+      "text": "Scheduling V. 5.3",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Ambulatory Care Reporting Project (ACRP)",
+      "text": "Ambulatory Care Reporting Project (ACRP)",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Incomplete Encounter Management Module (IEMM) Release Notes",
+      "text": "Incomplete Encounter Management Module (IEMM) Release Notes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patches SD*5.3*66, DG*5.3*139, PX*1.0*41",
+      "text": "Patches SD*5.3*66, DG*5.3*139, PX*1.0*41",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "January 1998",
+      "text": "January 1998",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Technical Release Notes",
+      "text": "Technical Release Notes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Options",
+      "text": "New Options",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Bulletin",
+      "text": "New Bulletin",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Protocols",
+      "text": "New Protocols",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Background Job",
+      "text": "New Background Job",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Print Templates",
+      "text": "New Print Templates",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Sort Templates",
+      "text": "New Sort Templates",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Modified Input Template",
+      "text": "Modified Input Template",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Modified Print Template",
+      "text": "Modified Print Template",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Security Keys",
+      "text": "New Security Keys",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Event Handler Changes",
+      "text": "Event Handler Changes",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Data Dictionary Changes",
+      "text": "Data Dictionary Changes",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Database Integration",
+      "text": "Database Integration",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Routine Mapping",
+      "text": "Routine Mapping",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Routine Summary",
+      "text": "Routine Summary",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Scheduling Routines",
+      "text": "Scheduling Routines",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Registration Routines",
+      "text": "Registration Routines",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PCE Routines",
+      "text": "PCE Routines",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "User Release Notes",
+      "text": "User Release Notes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction",
+      "text": "Introduction",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Validator",
+      "text": "Validator",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Error Correction Tools",
+      "text": "Error Correction Tools",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Menu Options",
+      "text": "New Menu Options",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Bulletin",
+      "text": "New Bulletin",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Security Keys",
+      "text": "New Security Keys",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Registration (DG) Changes",
+      "text": "Registration (DG) Changes",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Technical Release Notes",
+      "text": "Technical Release Notes",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Options",
+      "text": "New Options",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM ERROR CORRECTION   [Correct Incomplete Encounters]",
+      "text": "SCENI IEMM ERROR CORRECTION   [Correct Incomplete Encounters]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This option allows a user to correct the errors to an encounter or patient demographic.  The correction protocols of this option are locked by the SCENI IEMM EDIT and SCENI ENCOUNTER EDIT security keys.  Please review the New Security Key section for further details.",
+      "text": "This option allows a user to correct the errors to an encounter or patient demographic.  The correction protocols of this option are locked by the SCENI IEMM EDIT and SCENI ENCOUNTER EDIT security keys.  Please review the New Security Key section for further details.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM ERROR REPORT   [Incomplete Encounter Error Report]",
+      "text": "SCENI IEMM ERROR REPORT   [Incomplete Encounter Error Report]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This option allows the user to obtain a list of incomplete encounters.",
+      "text": "This option allows the user to obtain a list of incomplete encounters.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM ERROR SORT   [Incomplete Encounters by Error Code]",
+      "text": "SCENI IEMM ERROR SORT   [Incomplete Encounters by Error Code]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This option provides the user with a list of the errors which are in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file (#409.76).",
+      "text": "This option provides the user with a list of the errors which are in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file (#409.76).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM MAIN MENU   [Incomplete Encounter Management]",
+      "text": "SCENI IEMM MAIN MENU   [Incomplete Encounter Management]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This menu holds the SCENI IEMM REPORTS MENU submenu and the SCENI IEMM ERROR CORRECTION option.",
+      "text": "This menu holds the SCENI IEMM REPORTS MENU submenu and the SCENI IEMM ERROR CORRECTION option.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI  IEMM REPORTS MENU   [Incomplete Encounter Reports]",
+      "text": "SCENI  IEMM REPORTS MENU   [Incomplete Encounter Reports]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This menu contains the following options.",
+      "text": "This menu contains the following options.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM ERROR REPORT [Incomplete Encounter Error Report]",
+      "text": "SCENI IEMM ERROR REPORT [Incomplete Encounter Error Report]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM ERROR SORT [Incomplete Encounters by Error Code]",
+      "text": "SCENI IEMM ERROR SORT [Incomplete Encounters by Error Code]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM SUMMARY REPORT [Summary Report - IEMM]",
+      "text": "SCENI IEMM SUMMARY REPORT [Summary Report - IEMM]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI PT ALPHA LIST [Alpha List of Incomplete Encounters]",
+      "text": "SCENI PT ALPHA LIST [Alpha List of Incomplete Encounters]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI  IEMM SUMMARY BULLETIN   [IEMM Summary Bulletin]",
+      "text": "SCENI  IEMM SUMMARY BULLETIN   [IEMM Summary Bulletin]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This option can be scheduled to run nightly to produce the summary report.  It will generate a bulletin; thus no output device is needed.  The bulletin produced is SCDX INCOMPLETE ENCOUNTER MGMT.",
+      "text": "This option can be scheduled to run nightly to produce the summary report.  It will generate a bulletin; thus no output device is needed.  The bulletin produced is SCDX INCOMPLETE ENCOUNTER MGMT.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI  IEMM SUMMARY REPORT   [Summary Report - IEMM]",
+      "text": "SCENI  IEMM SUMMARY REPORT   [Summary Report - IEMM]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This option allows a user to gather summary information about the number of encounters sent and accepted.",
+      "text": "This option allows a user to gather summary information about the number of encounters sent and accepted.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI OP ENCOUNTER EDIT   [Edit Outpatient Encounter]",
+      "text": "SCENI OP ENCOUNTER EDIT   [Edit Outpatient Encounter]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This option allows a user to edit actual encounter-specific data.  It is locked by the SCENI ENCOUNTER EDIT security key.  It is located on the [SCENI OP ENCOUNTER EDIT] Supervisor Ambulatory Care menu.",
+      "text": "This option allows a user to edit actual encounter-specific data.  It is locked by the SCENI ENCOUNTER EDIT security key.  It is located on the [SCENI OP ENCOUNTER EDIT] Supervisor Ambulatory Care menu.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI PT ALPHA LIST   [Alpha List of Incomplete Encounters]",
+      "text": "SCENI PT ALPHA LIST   [Alpha List of Incomplete Encounters]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This option allows the user to print a list of all errors found in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75) at the time the report is generated.",
+      "text": "This option allows the user to print a list of all errors found in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75) at the time the report is generated.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Bulletin",
+      "text": "New Bulletin",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDX INCOMPLETE ENCOUNTER MGMT",
+      "text": "SCDX INCOMPLETE ENCOUNTER MGMT",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This bulletin is used when the Incomplete Encounter report is scheduled as a nightly job.  A mail group must be assigned to this bulletin.",
+      "text": "This bulletin is used when the Incomplete Encounter report is scheduled as a nightly job.  A mail group must be assigned to this bulletin.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Protocols",
+      "text": "New Protocols",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CALL LOAD EDIT\tLoad/Edit Patient Data",
+      "text": "SCENI CALL LOAD EDIT\tLoad/Edit Patient Data",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CHANGE CLINIC\tClinic Change",
+      "text": "SCENI CHANGE CLINIC\tClinic Change",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CHANGE DATE RANGE\tDate Range Change",
+      "text": "SCENI CHANGE DATE RANGE\tDate Range Change",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CHANGE DIVISION\tChange Division",
+      "text": "SCENI CHANGE DIVISION\tChange Division",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CHANGE ERROR CODE\tError Code Change",
+      "text": "SCENI CHANGE ERROR CODE\tError Code Change",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CHANGE PATIENT\tSelect Patient",
+      "text": "SCENI CHANGE PATIENT\tSelect Patient",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CHECKOUT INTERVIEW\tCheck Out",
+      "text": "SCENI CHECKOUT INTERVIEW\tCheck Out",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI CORRECT ERROR\tCorrect Error(s)",
+      "text": "SCENI CORRECT ERROR\tCorrect Error(s)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI DISPLAY ERRORS\tDisplay Error(s)",
+      "text": "SCENI DISPLAY ERRORS\tDisplay Error(s)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI DISPLAY ERRORS MENU\tDisplay Errors",
+      "text": "SCENI DISPLAY ERRORS MENU\tDisplay Errors",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI ENCOUNTER INFORMATION\tEncounter Information",
+      "text": "SCENI ENCOUNTER INFORMATION\tEncounter Information",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI EXPAND ENCOUNTER\tExpand Encounter",
+      "text": "SCENI EXPAND ENCOUNTER\tExpand Encounter",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI INCOMPLETE ENC MGMT MENU\tIncomplete Encounter Management Menu",
+      "text": "SCENI INCOMPLETE ENC MGMT MENU\tIncomplete Encounter Management Menu",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI PATIENT DEMOGRAPHICS\tPatient Demographics",
+      "text": "SCENI PATIENT DEMOGRAPHICS\tPatient Demographics",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI REFLAG ERROR\tRetransmit Error",
+      "text": "SCENI REFLAG ERROR\tRetransmit Error",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI VIEW EXPANDED\tView Expanded",
+      "text": "SCENI VIEW EXPANDED\tView Expanded",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Background Job",
+      "text": "New Background Job",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM SUMMARY BULLETIN",
+      "text": "SCENI IEMM SUMMARY BULLETIN",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This is a new background job that may be scheduled.  It will report the same information as the SCENI IEMM SUMMARY REPORT menu option.",
+      "text": "This is a new background job that may be scheduled.  It will report the same information as the SCENI IEMM SUMMARY REPORT menu option.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Print Templates",
+      "text": "New Print Templates",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Template SCENI ERROR LIST has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to print errors sorted by error code.",
+      "text": "Template SCENI ERROR LIST has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to print errors sorted by error code.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Template SCENI PAT ALPHA PRINT has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to print errors sorted by patient.",
+      "text": "Template SCENI PAT ALPHA PRINT has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to print errors sorted by patient.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Template SCENI ERROR TABLE has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file (#409.76).  This template is used to print the error codes and their descriptions.  At this time, it may only be accessed through FileMan.",
+      "text": "Template SCENI ERROR TABLE has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file (#409.76).  This template is used to print the error codes and their descriptions.  At this time, it may only be accessed through FileMan.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Sort Templates",
+      "text": "New Sort Templates",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/111",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Template SCENI ERROR SORT has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to sort errors by error code.",
+      "text": "Template SCENI ERROR SORT has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to sort errors by error code.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/112",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/113",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Template SCENI PT ALPHA SORT has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to sort errors by patient.",
+      "text": "Template SCENI PT ALPHA SORT has been added to the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75).  This template is used to sort errors by patient.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/114",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/115",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/116",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Modified Input Template",
+      "text": "Modified Input Template",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/117",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/118",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Input template SDB, which is used in the clinic setup, has been modified to ask the new clinic parameter - WORKLOAD VALIDATION AT CHK OUT.",
+      "text": "Input template SDB, which is used in the clinic setup, has been modified to ask the new clinic parameter - WORKLOAD VALIDATION AT CHK OUT.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/119",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/120",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/121",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Modified Print Template",
+      "text": "Modified Print Template",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/122",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/123",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Print template SCDX Transmitted Error List, which is used to display the errors in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75), has been modified to print the source of the error.",
+      "text": "Print template SCDX Transmitted Error List, which is used to display the errors in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75), has been modified to print the source of the error.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/124",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Security Keys",
+      "text": "New Security Keys",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/125",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/126",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New security keys, SCENI IEMM EDIT, SCENI ENCOUNTER EDIT, and SCENI MEANS TEST EDIT lock the following protocols and options.  Because of the nature of the data which can be edited through the Edit Outpatient Encounter option, it is highly recommended that the SCENI ENCOUNTER EDIT security key not be given to all users.",
+      "text": "New security keys, SCENI IEMM EDIT, SCENI ENCOUNTER EDIT, and SCENI MEANS TEST EDIT lock the following protocols and options.  Because of the nature of the data which can be edited through the Edit Outpatient Encounter option, it is highly recommended that the SCENI ENCOUNTER EDIT security key not be given to all users.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/127",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/128",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM EDIT",
+      "text": "SCENI IEMM EDIT",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/129",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patient Demographics\t[SCENI PATIENT DEMOGRAPHICS]",
+      "text": "Patient Demographics\t[SCENI PATIENT DEMOGRAPHICS]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/130",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Retransmit Error\t[SCENI REFLAG ERROR]",
+      "text": "Retransmit Error\t[SCENI REFLAG ERROR]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/131",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Check Out\t[SCENI CHECKOUT INTERVIEW]",
+      "text": "Check Out\t[SCENI CHECKOUT INTERVIEW]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/132",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Load/Edit Patient Data\t[SCENI CALL LOAD EDIT]",
+      "text": "Load/Edit Patient Data\t[SCENI CALL LOAD EDIT]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/133",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/134",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI ENCOUNTER EDIT",
+      "text": "SCENI ENCOUNTER EDIT",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/135",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Edit Outpatient Encounter\t[SCENI OP ENCOUNER EDIT]",
+      "text": "Edit Outpatient Encounter\t[SCENI OP ENCOUNER EDIT]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/136",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Encounter Information\t[SCENI ENCOUNTER INFORMATION]",
+      "text": "Encounter Information\t[SCENI ENCOUNTER INFORMATION]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/137",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/138",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI MEANS TEST EDIT",
+      "text": "SCENI MEANS TEST EDIT",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/139",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This key is used to limit the users who can complete a Means Test through Load/Edit when using the IEMM correction tool.",
+      "text": "This key is used to limit the users who can complete a Means Test through Load/Edit when using the IEMM correction tool.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/140",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/141",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/142",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Event Handler Changes",
+      "text": "Event Handler Changes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/143",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/144",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Ambulatory Care event handler, SCDX AMBCARE EVENT, currently exists as an item on the PIMS event driver, SDAM APPOINTMENT EVENTS.  The post init routine will remove it from the item list and add it to the exit action of that same protocol.  This is to ensure that the capturing and validation of workload data is the last event to be processed.",
+      "text": "The Ambulatory Care event handler, SCDX AMBCARE EVENT, currently exists as an item on the PIMS event driver, SDAM APPOINTMENT EVENTS.  The post init routine will remove it from the item list and add it to the exit action of that same protocol.  This is to ensure that the capturing and validation of workload data is the last event to be processed.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/145",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Data Dictionary Changes",
+      "text": "Data Dictionary Changes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/146",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/147",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "TRANSMITTED OUTPATIENT ENCOUNTER ERROR file  [^SD(409.75)]",
+      "text": "TRANSMITTED OUTPATIENT ENCOUNTER ERROR file  [^SD(409.75)]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/148",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Four new cross references have been added.",
+      "text": "Four new cross references have been added.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/149",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/150",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "On the Transmitted Encounter field (#.01):  AEDT  AECL  AER  ACOD",
+      "text": "On the Transmitted Encounter field (#.01):  AEDT  AECL  AER  ACOD",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/151",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "On the Error Code field (#.02):  AER2  ACOD2",
+      "text": "On the Error Code field (#.02):  AER2  ACOD2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/152",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/153",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/154",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file  [^SD(409.76)]",
+      "text": "TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file  [^SD(409.76)]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/155",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Four new fields and one cross reference have been added.",
+      "text": "Four new fields and one cross reference have been added.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/156",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/157",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SOURCE OF ERROR (#.02)",
+      "text": "SOURCE OF ERROR (#.02)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/158",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "CORRECTIVE ACTION DESCRIPTION (#21)",
+      "text": "CORRECTIVE ACTION DESCRIPTION (#21)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/159",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VALIDATION LOGIC (#31)",
+      "text": "VALIDATION LOGIC (#31)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/160",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "CORRECTION LOGIC (#41)",
+      "text": "CORRECTION LOGIC (#41)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/161",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/162",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The D cross reference has been added.  It is a standard cross reference used to aid in the look up process.",
+      "text": "The D cross reference has been added.  It is a standard cross reference used to aid in the look up process.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/163",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/164",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The ERROR CODE DESCRIPTION field is also now an identifier for lookups on this file.",
+      "text": "The ERROR CODE DESCRIPTION field is also now an identifier for lookups on this file.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/165",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/166",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/167",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "HOSPITAL LOCATION file  [^SC(44)]",
+      "text": "HOSPITAL LOCATION file  [^SC(44)]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/168",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A new field has been added - WORKLOAD VALIDATION AT CHK OUT (#30).",
+      "text": "A new field has been added - WORKLOAD VALIDATION AT CHK OUT (#30).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/169",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This field is used to determine if the validation software is to be executed at the completion of a successfully checked-out encounter.",
+      "text": "This field is used to determine if the validation software is to be executed at the completion of a successfully checked-out encounter.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/170",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/171",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/172",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Database Integration",
+      "text": "Database Integration",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/173",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/174",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Integration Agreement #872 covers the request to manipulate the entries in the item list and exit action of the PROTOCOL file (#101).",
+      "text": "Integration Agreement #872 covers the request to manipulate the entries in the item list and exit action of the PROTOCOL file (#101).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/175",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/176",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/177",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Routine Mapping",
+      "text": "Routine Mapping",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/178",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/179",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Unless you are currently mapping the routines, there are no routines to map.",
+      "text": "Unless you are currently mapping the routines, there are no routines to map.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/180",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Routine Summary",
+      "text": "Routine Summary",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/181",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/182",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The following is a list of the routine(s) included in this patch.  The  second line of each of these routine(s) will look like:",
+      "text": "The following is a list of the routine(s) included in this patch.  The  second line of each of these routine(s) will look like:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/183",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/184",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "<tab>;;5.3;Registration;**[patch list]**;Aug 13, 1993",
+      "text": "<tab>;;5.3;Registration;**[patch list]**;Aug 13, 1993",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/185",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/186",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "CHECK^XTSUMBLD results",
+      "text": "CHECK^XTSUMBLD results",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/187",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/188",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Scheduling Routines",
+      "text": "Scheduling Routines",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/189",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/190",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Routine Name\tBefore Patch\tAfter Patch\tPatch List",
+      "text": "Routine Name\tBefore Patch\tAfter Patch\tPatch List",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/191",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/192",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDDI1\tN/A\t1745670\t66",
+      "text": "SCDDI1\tN/A\t1745670\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/193",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXFU02\t3122563\t3741860\t44,110,128,66",
+      "text": "SCDXFU02\t3122563\t3741860\t44,110,128,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/194",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXHLDR\t6080400\t10017200\t44,99,126,66",
+      "text": "SCDXHLDR\t6080400\t10017200\t44,99,126,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/195",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXMSG\t9634867\t10056881\t44,56,70,77,85,96,121,128,66",
+      "text": "SCDXMSG\t9634867\t10056881\t44,56,70,77,85,96,121,128,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/196",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXMSG0\t5570217\t5622096\t44,59,66",
+      "text": "SCDXMSG0\t5570217\t5622096\t44,59,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/197",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXMSG1\t6668616\t7196075\t44,55,70,77,85,66",
+      "text": "SCDXMSG1\t6668616\t7196075\t44,55,70,77,85,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/198",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXMSG2\t10585313\t7971963\t44,121,128,66",
+      "text": "SCDXMSG2\t10585313\t7971963\t44,121,128,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/199",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXUTL0\t8295487\t8316543\t44,55,69,77,85,110,122,94,66",
+      "text": "SCDXUTL0\t8295487\t8316543\t44,55,69,77,85,110,122,94,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/200",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCDXUTL2\t896233\t1124319\t44,66",
+      "text": "SCDXUTL2\t896233\t1124319\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/201",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI0\tN/A\t9483994\t66",
+      "text": "SCENI0\tN/A\t9483994\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/202",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI01\tN/A\t3843218\t66",
+      "text": "SCENI01\tN/A\t3843218\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/203",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENIA0\tN/A\t4111816\t66",
+      "text": "SCENIA0\tN/A\t4111816\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/204",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENIA1\tN/A\t5640756\t66",
+      "text": "SCENIA1\tN/A\t5640756\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/205",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENIA2\tN/A\t9548930\t66",
+      "text": "SCENIA2\tN/A\t9548930\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/206",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENIB0\tN/A\t1081801\t66",
+      "text": "SCENIB0\tN/A\t1081801\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/207",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSP66\tN/A\t8192827\t44",
+      "text": "SCMSP66\tN/A\t8192827\t44",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/208",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVDG1\t1982971\t2186034\t44,57,66,68,77,85,95",
+      "text": "SCMSVDG1\t1982971\t2186034\t44,57,66,68,77,85,95",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/209",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVEVN\t957290\t1032621\t44,66",
+      "text": "SCMSVEVN\t957290\t1032621\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/210",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVPID\t3689679\t4228445\t44,66",
+      "text": "SCMSVPID\t3689679\t4228445\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/211",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVPR1\t3326948\t2939469\t44,66",
+      "text": "SCMSVPR1\t3326948\t2939469\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/212",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVPV1\t2010769\t1967926\t44,55,66,91",
+      "text": "SCMSVPV1\t2010769\t1967926\t44,55,66,91",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/213",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVUT0\t5348371\t6909193\t44,55,66",
+      "text": "SCMSVUT0\t5348371\t6909193\t44,55,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/214",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVUT1\tN/A\t3244871\t66",
+      "text": "SCMSVUT1\tN/A\t3244871\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/215",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVUT2\tN/A\t2887929\t66",
+      "text": "SCMSVUT2\tN/A\t2887929\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/216",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVZCL\t1411790\t2176494\t44,66",
+      "text": "SCMSVZCL\t1411790\t2176494\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/217",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVZEL\t1260997\t1554752\t44,66",
+      "text": "SCMSVZEL\t1260997\t1554752\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/218",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVZIR\t1192416\t1406995\t44,55,66",
+      "text": "SCMSVZIR\t1192416\t1406995\t44,55,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/219",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVZPD\t1035893\t1467475\t44,66",
+      "text": "SCMSVZPD\t1035893\t1467475\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/220",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVZSC\t1517977\t1327159\t44,66",
+      "text": "SCMSVZSC\t1517977\t1327159\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/221",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCMSVZSP\t1333076\t1327622\t44,66",
+      "text": "SCMSVZSP\t1333076\t1327622\t44,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/222",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCRPI01\tN/A\t8982029\t66",
+      "text": "SCRPI01\tN/A\t8982029\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/223",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCRPI01A\tN/A\t8791303\t66",
+      "text": "SCRPI01A\tN/A\t8791303\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/224",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCRPI02\tN/A\t6382407\t66",
+      "text": "SCRPI02\tN/A\t6382407\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/225",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCRPI02A\tN/A\t9189721\t66",
+      "text": "SCRPI02A\tN/A\t9189721\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/226",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCRPIUT1\tN/A\t1394343\t66",
+      "text": "SCRPIUT1\tN/A\t1394343\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/227",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCUTIE1\tN/A\t1851598\t66",
+      "text": "SCUTIE1\tN/A\t1851598\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/228",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCUTIE2\tN/A\t3269018\t66",
+      "text": "SCUTIE2\tN/A\t3269018\t66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/229",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SDCO6\t3447088\t3488991\t27,66",
+      "text": "SDCO6\t3447088\t3488991\t27,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/230",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SDCOAM\t9105467\t9352374\t1,20,27,66",
+      "text": "SDCOAM\t9105467\t9352374\t1,20,27,66",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/231",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Registration Routines",
+      "text": "Registration Routines",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/232",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/233",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Routine Name\tBefore Patch\tAfter Patch\tPatch List",
+      "text": "Routine Name\tBefore Patch\tAfter Patch\tPatch List",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/234",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/235",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "DG10\t3605485\t6200881\t32,109,139",
+      "text": "DG10\t3605485\t6200881\t32,109,139",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/236",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "DGRPE\t17405601\t17674346\t32,114,139",
+      "text": "DGRPE\t17405601\t17674346\t32,114,139",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/237",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "DGRPU1\t1362026\t1392644\t139",
+      "text": "DGRPU1\t1362026\t1392644\t139",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/238",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/239",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/240",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PCE Routines",
+      "text": "PCE Routines",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/241",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/242",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Routine Name\tBefore Patch\tAfter Patch\tPatch List",
+      "text": "Routine Name\tBefore Patch\tAfter Patch\tPatch List",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/243",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/244",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PXKMASC\t4861775\t4911140\t22,41",
+      "text": "PXKMASC\t4861775\t4911140\t22,41",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/245",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PXKCO\t973622\t3403563\t28,41",
+      "text": "PXKCO\t973622\t3403563\t28,41",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/246",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "User Release Notes",
+      "text": "User Release Notes",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/247",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/248",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/249",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction",
+      "text": "Introduction",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/250",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/251",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch installs the Incomplete Encounter Management Module (IEMM), part of the Ambulatory Care Reporting Project (ACRP) Phase II.  The patch will provide the data validation tools necessary for sites to maintain the correctness of outpatient data being transmitted to the Austin Automation Center.",
+      "text": "This patch installs the Incomplete Encounter Management Module (IEMM), part of the Ambulatory Care Reporting Project (ACRP) Phase II.  The patch will provide the data validation tools necessary for sites to maintain the correctness of outpatient data being transmitted to the Austin Automation Center.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/252",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/253",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Validator",
+      "text": "Validator",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/254",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/255",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The validation logic is a new piece of functionality installed with this patch.  The previous Ambulatory Care software only checked to ensure that a value was present in each data field sent to Austin.  It did not check the validity of that data.  This new software will perform the same validation checks as the Austin database to identify errors before they are transmitted.  The validator (or edit checker) will review the entire encounter rather than stopping after the first error is found.  All errors are stored for later reporting and correction.",
+      "text": "The validation logic is a new piece of functionality installed with this patch.  The previous Ambulatory Care software only checked to ensure that a value was present in each data field sent to Austin.  It did not check the validity of that data.  This new software will perform the same validation checks as the Austin database to identify errors before they are transmitted.  The validator (or edit checker) will review the entire encounter rather than stopping after the first error is found.  All errors are stored for later reporting and correction.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/256",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/257",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This validation will continue to be performed during the nightly background job.  It can also be performed when there is a complete check out for an appointment.  This is provided if the parameter WORKLOAD VALIDATION AT CHK OUT for the respective clinic is set to YES, and an entry exists in the TRANSMITTED OUTPATIENT ENCOUNTER file.  The validation software will also be executed as part of the Correct Incomplete Encounters menu option.",
+      "text": "This validation will continue to be performed during the nightly background job.  It can also be performed when there is a complete check out for an appointment.  This is provided if the parameter WORKLOAD VALIDATION AT CHK OUT for the respective clinic is set to YES, and an entry exists in the TRANSMITTED OUTPATIENT ENCOUNTER file.  The validation software will also be executed as part of the Correct Incomplete Encounters menu option.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/258",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/259",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Error Correction Tools",
+      "text": "Error Correction Tools",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/260",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/261",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Tools have been developed to help users correct the errors that are found in encounters.  The Correct Incomplete Encounters option allows a user to select, display, and correct errors using a List Manager display format.  After an attempt is made to correct the error, the validator will be run for that encounter to check for any additional errors.  If an error is found it will be presented to the user.  The correction actions of this option are locked with the SCENI IEMM EDIT security key except for the Encounter Information action which is locked with the SCENI ENCOUNTER EDIT security key.",
+      "text": "Tools have been developed to help users correct the errors that are found in encounters.  The Correct Incomplete Encounters option allows a user to select, display, and correct errors using a List Manager display format.  After an attempt is made to correct the error, the validator will be run for that encounter to check for any additional errors.  If an error is found it will be presented to the user.  The correction actions of this option are locked with the SCENI IEMM EDIT security key except for the Encounter Information action which is locked with the SCENI ENCOUNTER EDIT security key.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/262",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/263",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Edit Outpatient Encounter option allows a user with the SCENI ENCOUNTER EDIT security key to correct specific data for an encounter.  Four data items for the encounter are available for correction:  appointment type, division, clinic stop code, and eligibility.",
+      "text": "The Edit Outpatient Encounter option allows a user with the SCENI ENCOUNTER EDIT security key to correct specific data for an encounter.  Four data items for the encounter are available for correction:  appointment type, division, clinic stop code, and eligibility.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/264",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Menu Options",
+      "text": "New Menu Options",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/265",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/266",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Incomplete Encounter Management menu has been added to the Ambulatory Care Reporting menu.  This new menu contains the Incomplete Encounter Reports submenu and the Correct Incomplete Encounters option.",
+      "text": "The Incomplete Encounter Management menu has been added to the Ambulatory Care Reporting menu.  This new menu contains the Incomplete Encounter Reports submenu and the Correct Incomplete Encounters option.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/267",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/268",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Incomplete Encounter Reports",
+      "text": "Incomplete Encounter Reports",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/269",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "These reports will only display those errors remaining in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file since the",
+      "text": "These reports will only display those errors remaining in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file since the",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/270",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "last",
+      "text": "last",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/271",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "running of the encounter validation software.  This file is dynamic and is updated each time the validator runs.",
+      "text": "running of the encounter validation software.  This file is dynamic and is updated each time the validator runs.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/272",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/273",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Alpha List of Incomplete Encounters - This report provides a list of all errors found in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75) at the time the report is generated.",
+      "text": "Alpha List of Incomplete Encounters - This report provides a list of all errors found in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR file (#409.75) at the time the report is generated.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/274",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/275",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Incomplete Encounter Error Report - This report provides a detailed report of errors by patient with a wide range of selection criteria and encounter identifying information.",
+      "text": "Incomplete Encounter Error Report - This report provides a detailed report of errors by patient with a wide range of selection criteria and encounter identifying information.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/276",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/277",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Incomplete Encounters by Error Code - This report provides a list of the errors which are in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file (#409.76).",
+      "text": "Incomplete Encounters by Error Code - This report provides a list of the errors which are in the TRANSMITTED OUTPATIENT ENCOUNTER ERROR CODE file (#409.76).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/278",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/279",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Summary Report – IEMM - This report prints a summary showing total encounters for a date range and the number and percentage of incomplete encounters.  The report may be printed as summary only or summary with detail.",
+      "text": "Summary Report – IEMM - This report prints a summary showing total encounters for a date range and the number and percentage of incomplete encounters.  The report may be printed as summary only or summary with detail.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/280",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/281",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Correct Incomplete Encounters - This option allows a user to select, display, and correct errors using a List Manager display format.",
+      "text": "Correct Incomplete Encounters - This option allows a user to select, display, and correct errors using a List Manager display format.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/282",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/283",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Edit Outpatient Encounter option has been added to the Supervisor Ambulatory Care menu.  It allows you to change four fields which are set by the software and are normally uneditable.",
+      "text": "The Edit Outpatient Encounter option has been added to the Supervisor Ambulatory Care menu.  It allows you to change four fields which are set by the software and are normally uneditable.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/284",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Bulletin",
+      "text": "New Bulletin",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/285",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/286",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch installs a new bulletin, SCDX INCOMPLETE ENCOUNTER MGMT.  This bulletin provides the same information as the Summary Report - IEMM option, but in a bulletin format.  The bulletin is sent to a user-defined mail group.",
+      "text": "This patch installs a new bulletin, SCDX INCOMPLETE ENCOUNTER MGMT.  This bulletin provides the same information as the Summary Report - IEMM option, but in a bulletin format.  The bulletin is sent to a user-defined mail group.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/287",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/288",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The nightly bulletin from the processing of the encounters to Austin currently contains all of the encounters with errors.  This has been changed so that the bulletin only contains a summary report.  The individual errors can be viewed through the new report options.",
+      "text": "The nightly bulletin from the processing of the encounters to Austin currently contains all of the encounters with errors.  This has been changed so that the bulletin only contains a summary report.  The individual errors can be viewed through the new report options.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/289",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/290",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Bulletin Example",
+      "text": "Bulletin Example",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/291",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/292",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Subj: Transmission of data to NPCDB completed  [#4287] 20 Jan 98 13:17  7",
+      "text": "Subj: Transmission of data to NPCDB completed  [#4287] 20 Jan 98 13:17  7",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/293",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Lines",
+      "text": "Lines",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/294",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "From: POSTMASTER (Sender: Smith,James)  in 'IN' basket.   Page 1  **NEW**",
+      "text": "From: POSTMASTER (Sender: Smith,James)  in 'IN' basket.   Page 1  **NEW**",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/295",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "---------------------------------------------------------------------------",
+      "text": "---------------------------------------------------------------------------",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/296",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/297",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Transmission of data to the National Patient Care Database has completed.",
+      "text": "Transmission of data to the National Patient Care Database has completed.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/298",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/299",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A total of 55 Outpatient Encounters were sent.",
+      "text": "A total of 55 Outpatient Encounters were sent.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/300",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A total of 41 Outpatient Encounters were not sent.",
+      "text": "A total of 41 Outpatient Encounters were not sent.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/301",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/302",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Please review the IEMM Error listing for further detail.",
+      "text": "Please review the IEMM Error listing for further detail.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/303",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/304",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Select MESSAGE Action: IGNORE (in IN basket)//",
+      "text": "Select MESSAGE Action: IGNORE (in IN basket)//",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/305",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/306",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/307",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Security Keys",
+      "text": "New Security Keys",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/308",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/309",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New security keys, SCENI IEMM EDIT, SCENI ENCOUNTER EDIT, and SCENI MEANS TEST EDIT lock the following protocols and options.",
+      "text": "New security keys, SCENI IEMM EDIT, SCENI ENCOUNTER EDIT, and SCENI MEANS TEST EDIT lock the following protocols and options.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/310",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/311",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI IEMM EDIT",
+      "text": "SCENI IEMM EDIT",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/312",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patient Demographics\t[SCENI PATIENT DEMOGRAPHICS]",
+      "text": "Patient Demographics\t[SCENI PATIENT DEMOGRAPHICS]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/313",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Retransmit Error\t[SCENI REFLAG ERROR]",
+      "text": "Retransmit Error\t[SCENI REFLAG ERROR]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/314",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Check Out\t[SCENI CHECKOUT INTERVIEW]",
+      "text": "Check Out\t[SCENI CHECKOUT INTERVIEW]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/315",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Load/Edit Patient Data\t[SCENI CALL LOAD EDIT]",
+      "text": "Load/Edit Patient Data\t[SCENI CALL LOAD EDIT]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/316",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/317",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI ENCOUNTER EDIT",
+      "text": "SCENI ENCOUNTER EDIT",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/318",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Edit Outpatient Encounter\t[SCENI OP ENCOUNER EDIT]",
+      "text": "Edit Outpatient Encounter\t[SCENI OP ENCOUNER EDIT]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/319",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Encounter Information\t[SCENI ENCOUNTER INFORMATION]",
+      "text": "Encounter Information\t[SCENI ENCOUNTER INFORMATION]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/320",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/321",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SCENI MEANS TEST EDIT",
+      "text": "SCENI MEANS TEST EDIT",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/322",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This key is used to limit the users who can complete a Means Test through Load/Edit when using the IEMM correction tool.",
+      "text": "This key is used to limit the users who can complete a Means Test through Load/Edit when using the IEMM correction tool.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/323",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Registration (DG) Changes",
+      "text": "Registration (DG) Changes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/324",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/325",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Load/Edit Patient Data option [DG LOAD PATIENT DATA] has been changed.  The system determines a patient’s need for Means Testing and Copay Testing and, if necessary, now allows you to complete the required test through this option.  For the Copay Test, the veteran has to request the test be completed.",
+      "text": "The Load/Edit Patient Data option [DG LOAD PATIENT DATA] has been changed.  The system determines a patient’s need for Means Testing and Copay Testing and, if necessary, now allows you to complete the required test through this option.  For the Copay Test, the veteran has to request the test be completed.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/326",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/327",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If the user is accessing Load/Edit through the IEMM correction tool, the SCENI MEANS TEST EDIT key will be used to restrict users from completing the Means Test.",
+      "text": "If the user is accessing Load/Edit through the IEMM correction tool, the SCENI MEANS TEST EDIT key will be used to restrict users from completing the Means Test.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

@@ -1,0 +1,5854 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "pxrm_2_0_27_rn",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 9661106368096371339,
+    "filename": "pxrm_2_0_27_rn.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/texts/0"
+      },
+      {
+        "cref": "#/texts/1"
+      },
+      {
+        "cref": "#/texts/2"
+      },
+      {
+        "cref": "#/texts/3"
+      },
+      {
+        "cref": "#/texts/4"
+      },
+      {
+        "cref": "#/texts/5"
+      },
+      {
+        "cref": "#/texts/6"
+      },
+      {
+        "cref": "#/texts/7"
+      },
+      {
+        "cref": "#/texts/8"
+      },
+      {
+        "cref": "#/texts/9"
+      },
+      {
+        "cref": "#/texts/10"
+      },
+      {
+        "cref": "#/texts/14"
+      },
+      {
+        "cref": "#/texts/15"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/44"
+        },
+        {
+          "cref": "#/texts/45"
+        },
+        {
+          "cref": "#/texts/46"
+        },
+        {
+          "cref": "#/texts/47"
+        },
+        {
+          "cref": "#/texts/48"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/57"
+        },
+        {
+          "cref": "#/texts/58"
+        },
+        {
+          "cref": "#/texts/59"
+        },
+        {
+          "cref": "#/texts/60"
+        },
+        {
+          "cref": "#/texts/61"
+        },
+        {
+          "cref": "#/texts/62"
+        },
+        {
+          "cref": "#/texts/63"
+        },
+        {
+          "cref": "#/texts/64"
+        },
+        {
+          "cref": "#/texts/65"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/67"
+        },
+        {
+          "cref": "#/texts/68"
+        },
+        {
+          "cref": "#/texts/69"
+        },
+        {
+          "cref": "#/texts/70"
+        },
+        {
+          "cref": "#/texts/71"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/73"
+        },
+        {
+          "cref": "#/texts/74"
+        },
+        {
+          "cref": "#/texts/75"
+        },
+        {
+          "cref": "#/texts/76"
+        },
+        {
+          "cref": "#/texts/77"
+        },
+        {
+          "cref": "#/texts/78"
+        },
+        {
+          "cref": "#/texts/79"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/94"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/96"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/104"
+        },
+        {
+          "cref": "#/texts/105"
+        },
+        {
+          "cref": "#/texts/106"
+        },
+        {
+          "cref": "#/texts/107"
+        },
+        {
+          "cref": "#/texts/108"
+        },
+        {
+          "cref": "#/texts/109"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/texts/114"
+        },
+        {
+          "cref": "#/texts/115"
+        },
+        {
+          "cref": "#/texts/116"
+        },
+        {
+          "cref": "#/texts/117"
+        },
+        {
+          "cref": "#/texts/118"
+        },
+        {
+          "cref": "#/texts/119"
+        },
+        {
+          "cref": "#/texts/120"
+        },
+        {
+          "cref": "#/texts/121"
+        },
+        {
+          "cref": "#/texts/122"
+        },
+        {
+          "cref": "#/texts/123"
+        },
+        {
+          "cref": "#/texts/124"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/137"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/138"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/143"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/144"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/12",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/145"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/13",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/146"
+        },
+        {
+          "cref": "#/texts/147"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_1_2",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/14",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/148"
+        },
+        {
+          "cref": "#/texts/149"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_1_3",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/15",
+      "parent": {
+        "cref": "#/texts/151"
+      },
+      "children": [
+        {
+          "cref": "#/texts/152"
+        },
+        {
+          "cref": "#/texts/153"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/16",
+      "parent": {
+        "cref": "#/texts/151"
+      },
+      "children": [
+        {
+          "cref": "#/texts/154"
+        },
+        {
+          "cref": "#/texts/155"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-2",
+      "label": "section"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PXRM*2.0*27",
+      "text": "PXRM*2.0*27",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Clinical Reminders",
+      "text": "Clinical Reminders",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/11"
+        },
+        {
+          "cref": "#/texts/12"
+        },
+        {
+          "cref": "#/texts/13"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "An expedited CR Patch release that contains:",
+      "text": "An expedited CR Patch release that contains:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/texts/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/texts/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA-HOMELESSNESS SCREENING and",
+      "text": "VA-HOMELESSNESS SCREENING and",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/texts/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA-LIPID STATIN RX CVD/DM Clinical Reminders",
+      "text": "VA-LIPID STATIN RX CVD/DM Clinical Reminders",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/16"
+        },
+        {
+          "cref": "#/texts/17"
+        },
+        {
+          "cref": "#/texts/18"
+        },
+        {
+          "cref": "#/texts/19"
+        },
+        {
+          "cref": "#/texts/20"
+        },
+        {
+          "cref": "#/texts/21"
+        },
+        {
+          "cref": "#/texts/22"
+        },
+        {
+          "cref": "#/texts/23"
+        },
+        {
+          "cref": "#/texts/24"
+        },
+        {
+          "cref": "#/texts/25"
+        },
+        {
+          "cref": "#/texts/26"
+        },
+        {
+          "cref": "#/texts/27"
+        },
+        {
+          "cref": "#/texts/28"
+        },
+        {
+          "cref": "#/texts/29"
+        },
+        {
+          "cref": "#/texts/30"
+        },
+        {
+          "cref": "#/texts/31"
+        },
+        {
+          "cref": "#/texts/32"
+        },
+        {
+          "cref": "#/texts/42"
+        },
+        {
+          "cref": "#/texts/151"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Release Notes",
+      "text": "Release Notes",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "October 2012",
+      "text": "October 2012",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Product Development",
+      "text": "Product Development",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Office of Information Technology &",
+      "text": "Office of Information Technology &",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Office of Health Informatics and Analytics",
+      "text": "Office of Health Informatics and Analytics",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Department of Veterans Affairs",
+      "text": "Department of Veterans Affairs",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [
+        {
+          "cref": "#/texts/33"
+        },
+        {
+          "cref": "#/texts/34"
+        },
+        {
+          "cref": "#/texts/35"
+        },
+        {
+          "cref": "#/texts/36"
+        },
+        {
+          "cref": "#/texts/37"
+        },
+        {
+          "cref": "#/texts/38"
+        },
+        {
+          "cref": "#/texts/39"
+        },
+        {
+          "cref": "#/texts/40"
+        },
+        {
+          "cref": "#/texts/41"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Contents",
+      "text": "Contents",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction\t1",
+      "text": "Introduction\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Clinical Reminders PXRM*2*27 Documentation\t4",
+      "text": "Clinical Reminders PXRM*2*27 Documentation\t4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Web Sites\t4",
+      "text": "Web Sites\t4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Acronyms\t5",
+      "text": "Acronyms\t5",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "National Acronym Directory:\t5",
+      "text": "National Acronym Directory:\t5",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/texts/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [
+        {
+          "cref": "#/texts/43"
+        },
+        {
+          "cref": "#/groups/0"
+        },
+        {
+          "cref": "#/texts/49"
+        },
+        {
+          "cref": "#/texts/50"
+        },
+        {
+          "cref": "#/texts/51"
+        },
+        {
+          "cref": "#/texts/52"
+        },
+        {
+          "cref": "#/texts/53"
+        },
+        {
+          "cref": "#/texts/54"
+        },
+        {
+          "cref": "#/texts/55"
+        },
+        {
+          "cref": "#/texts/56"
+        },
+        {
+          "cref": "#/groups/1"
+        },
+        {
+          "cref": "#/texts/66"
+        },
+        {
+          "cref": "#/groups/2"
+        },
+        {
+          "cref": "#/texts/72"
+        },
+        {
+          "cref": "#/groups/3"
+        },
+        {
+          "cref": "#/texts/80"
+        },
+        {
+          "cref": "#/texts/81"
+        },
+        {
+          "cref": "#/texts/82"
+        },
+        {
+          "cref": "#/texts/83"
+        },
+        {
+          "cref": "#/texts/84"
+        },
+        {
+          "cref": "#/texts/85"
+        },
+        {
+          "cref": "#/texts/86"
+        },
+        {
+          "cref": "#/texts/87"
+        },
+        {
+          "cref": "#/texts/88"
+        },
+        {
+          "cref": "#/texts/89"
+        },
+        {
+          "cref": "#/texts/90"
+        },
+        {
+          "cref": "#/texts/91"
+        },
+        {
+          "cref": "#/texts/92"
+        },
+        {
+          "cref": "#/texts/93"
+        },
+        {
+          "cref": "#/groups/4"
+        },
+        {
+          "cref": "#/texts/95"
+        },
+        {
+          "cref": "#/groups/5"
+        },
+        {
+          "cref": "#/texts/97"
+        },
+        {
+          "cref": "#/texts/98"
+        },
+        {
+          "cref": "#/texts/99"
+        },
+        {
+          "cref": "#/texts/100"
+        },
+        {
+          "cref": "#/texts/101"
+        },
+        {
+          "cref": "#/texts/102"
+        },
+        {
+          "cref": "#/texts/103"
+        },
+        {
+          "cref": "#/groups/6"
+        },
+        {
+          "cref": "#/texts/110"
+        },
+        {
+          "cref": "#/texts/111"
+        },
+        {
+          "cref": "#/texts/112"
+        },
+        {
+          "cref": "#/texts/113"
+        },
+        {
+          "cref": "#/groups/7"
+        },
+        {
+          "cref": "#/texts/125"
+        },
+        {
+          "cref": "#/texts/126"
+        },
+        {
+          "cref": "#/texts/127"
+        },
+        {
+          "cref": "#/texts/128"
+        },
+        {
+          "cref": "#/texts/129"
+        },
+        {
+          "cref": "#/texts/130"
+        },
+        {
+          "cref": "#/texts/131"
+        },
+        {
+          "cref": "#/texts/132"
+        },
+        {
+          "cref": "#/texts/133"
+        },
+        {
+          "cref": "#/texts/134"
+        },
+        {
+          "cref": "#/texts/135"
+        },
+        {
+          "cref": "#/texts/136"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Introduction",
+      "text": "Introduction",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patch PXRM*2.0*27 is a patch to the Clinical Reminder package that used the recently-approved expedited patch process. The patch releases two (2) new National reminders to the field, without any changes to routines, data dictionaries, or other package functions – “content” only. The two (2) reminders are the",
+      "text": "Patch PXRM*2.0*27 is a patch to the Clinical Reminder package that used the recently-approved expedited patch process. The patch releases two (2) new National reminders to the field, without any changes to routines, data dictionaries, or other package functions – “content” only. The two (2) reminders are the",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA-HOMELESSNESS SCREENING",
+      "text": "VA-HOMELESSNESS SCREENING",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "and",
+      "text": "and",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA-LIPID STATIN RX CVD/DM",
+      "text": "VA-LIPID STATIN RX CVD/DM",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "reminders.",
+      "text": "reminders.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA- HOMELESSNESS SCREENING reminder:",
+      "text": "VA- HOMELESSNESS SCREENING reminder:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The President of The United States and The Secretary of the Department of Veterans Affairs have made it a priority (T-21 initiative) to eliminate homelessness in our Veteran population. None of our Nation’s Heroes should be homeless or at risk of becoming homeless, but sadly, studies show that more than 6% of our Veterans and/or families of Veterans nation-wide, are in this situation.",
+      "text": "The President of The United States and The Secretary of the Department of Veterans Affairs have made it a priority (T-21 initiative) to eliminate homelessness in our Veteran population. None of our Nation’s Heroes should be homeless or at risk of becoming homeless, but sadly, studies show that more than 6% of our Veterans and/or families of Veterans nation-wide, are in this situation.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The objective of the VA-Homelessness Screening Clinical Reminder is to:  (a) identify Veterans and their families who are at imminent risk of  homelessness or who have very recently become homeless; (b) ensure that those who are at-risk or who are currently homeless are referred for the",
+      "text": "The objective of the VA-Homelessness Screening Clinical Reminder is to:  (a) identify Veterans and their families who are at imminent risk of  homelessness or who have very recently become homeless; (b) ensure that those who are at-risk or who are currently homeless are referred for the",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "appropriate assistance; and (c) update the current living situation for Veterans. Information collected by the VA-Homelessness Screening reminder will guide staff to refer Veterans for further assessment and the appropriate intervention to prevent or quickly end homelessness.",
+      "text": "appropriate assistance; and (c) update the current living situation for Veterans. Information collected by the VA-Homelessness Screening reminder will guide staff to refer Veterans for further assessment and the appropriate intervention to prevent or quickly end homelessness.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Efforts should be made to ensure that Veterans who screen positive are not just",
+      "text": "Efforts should be made to ensure that Veterans who screen positive are not just",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "offered",
+      "text": "offered",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "assistance, but are",
+      "text": "assistance, but are",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "referred",
+      "text": "referred",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "to the local Homelessness Clinic for assistance with their living situation. This VA-HOMELESSNESS SCREENING reminder is a NATIONALLY-MANDATED reminder – like the VA-TBI SCREENING and VA-IRAQ&AFGHAN POST DEPLOY SCREEN reminders. It",
+      "text": "to the local Homelessness Clinic for assistance with their living situation. This VA-HOMELESSNESS SCREENING reminder is a NATIONALLY-MANDATED reminder – like the VA-TBI SCREENING and VA-IRAQ&AFGHAN POST DEPLOY SCREEN reminders. It",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "MUST",
+      "text": "MUST",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "be placed on the Cover Sheet",
+      "text": "be placed on the Cover Sheet",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "for all staff",
+      "text": "for all staff",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "at every VAMC. Any staff member may perform the screen by asking the Veteran and recording his/her answers to the few questions. If support staff are screening Veterans, the VAMC may wish to have a Hospital Policy created/altered to allow such staff the ability to order the Consult to Homelessness Services. By screening Veterans, and referring those screening positive for current homelessness or imminent risk of homelessness, we will collectively make strides to end homelessness among our Nation’s Heroes!",
+      "text": "at every VAMC. Any staff member may perform the screen by asking the Veteran and recording his/her answers to the few questions. If support staff are screening Veterans, the VAMC may wish to have a Hospital Policy created/altered to allow such staff the ability to order the Consult to Homelessness Services. By screening Veterans, and referring those screening positive for current homelessness or imminent risk of homelessness, we will collectively make strides to end homelessness among our Nation’s Heroes!",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Cohort logic of the reminder excludes Veterans from Homelessness Screening if a visit is found",
+      "text": "The Cohort logic of the reminder excludes Veterans from Homelessness Screening if a visit is found",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "in the last 6 months",
+      "text": "in the last 6 months",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "in a clinic associated with any of the Stop Codes indicative of homelessness services -",
+      "text": "in a clinic associated with any of the Stop Codes indicative of homelessness services -",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "504, 507, 508, 511, 522, 528, 529, 530, 590, 591, or 592.",
+      "text": "504, 507, 508, 511, 522, 528, 529, 530, 590, 591, or 592.",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Selecting the option in the dialog to indicate the patient is currently a resident of a long term care facility will set the frequency to every 2 years.",
+      "text": "Selecting the option in the dialog to indicate the patient is currently a resident of a long term care facility will set the frequency to every 2 years.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If the VA Medical Center does not provide Homelessness Services in any clinic with any of the Stop codes mentioned, but the facility does provide Homelessness Services in a clinic using other stop codes (Primary Care, Social Work, etc), the facility MUST have the local CAC or CR Manager",
+      "text": "If the VA Medical Center does not provide Homelessness Services in any clinic with any of the Stop codes mentioned, but the facility does provide Homelessness Services in a clinic using other stop codes (Primary Care, Social Work, etc), the facility MUST have the local CAC or CR Manager",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "map NEW TIU Document Titles",
+      "text": "map NEW TIU Document Titles",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "created for this purpose (homelessness services), to the Reminder Term, “VA-HOMELESSNESS - ALREADY RECEIVING SERVICES”. That is done by editing one of the Computed Findings, “VA-PROGRESS NOTE”, and entering the title",
+      "text": "created for this purpose (homelessness services), to the Reminder Term, “VA-HOMELESSNESS - ALREADY RECEIVING SERVICES”. That is done by editing one of the Computed Findings, “VA-PROGRESS NOTE”, and entering the title",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "exclusively",
+      "text": "exclusively",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "used for Homelessness Services, into the “COMPUTED FINDING PARAMETER” field for one of those findings. Three (3) of the VA-Progress Note computed findings were entered (blank – no title) into the Reminder Term for this purpose – in case more than one title would be used for this",
+      "text": "used for Homelessness Services, into the “COMPUTED FINDING PARAMETER” field for one of those findings. Three (3) of the VA-Progress Note computed findings were entered (blank – no title) into the Reminder Term for this purpose – in case more than one title would be used for this",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "EXCUSIVE",
+      "text": "EXCUSIVE",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "purpose. See post install instructions for specific details.",
+      "text": "purpose. See post install instructions for specific details.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The VA-Homelessness Screening reminder logic is set so that Screening is due annually. Veterans that screen positive (currently homeless or being in imminent danger of homelessness)  are then screened every 6 months. Veterans answering that they currently reside in Long Term Care facilities need only be screened every 2 years.  Once a Veteran has screened negative for homelessness three (3) consecutive times, the frequency changes to every 2 years.",
+      "text": "The VA-Homelessness Screening reminder logic is set so that Screening is due annually. Veterans that screen positive (currently homeless or being in imminent danger of homelessness)  are then screened every 6 months. Veterans answering that they currently reside in Long Term Care facilities need only be screened every 2 years.  Once a Veteran has screened negative for homelessness three (3) consecutive times, the frequency changes to every 2 years.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The reminder dialog contains a url to the National Homelessness Program Office site. That can be left as is, or preferably, sites may wish to either: a. Change the url to a local or VISN site that contains patient hand-outs pertaining to",
+      "text": "The reminder dialog contains a url to the National Homelessness Program Office site. That can be left as is, or preferably, sites may wish to either: a. Change the url to a local or VISN site that contains patient hand-outs pertaining to",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA-Assess Statin Use – Lipids (CVD/DM) reminder",
+      "text": "VA-Assess Statin Use – Lipids (CVD/DM) reminder",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Recent analyses of cardiovascular prevention studies, as well as the growing appreciation of the downsides of aggressive lipid treatment with high dose statins or non-statin cholesterol-lowering medications, have raised concerns about performance measures for lipid management based solely on achieving a target value of Low Density Lipoprotein Cholesterol (LDL-C) (Hayward and Krumholz, 2012).",
+      "text": "Recent analyses of cardiovascular prevention studies, as well as the growing appreciation of the downsides of aggressive lipid treatment with high dose statins or non-statin cholesterol-lowering medications, have raised concerns about performance measures for lipid management based solely on achieving a target value of Low Density Lipoprotein Cholesterol (LDL-C) (Hayward and Krumholz, 2012).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The use of statin drugs can provide significant patient benefit even if LDL-C values remain above 100.   Professional societies now recommend that the adequacy of lipid management be judged by the appropriateness of the therapy and not solely by LDL value (ACCF/AHA/AMA-PCPI, 2011).  Performance measures that recognize appropriate clinical prescribing provide a better balance of patient benefit and risk and may reduce complications of overzealous drug therapy (e.g., muscle breakdown).",
+      "text": "The use of statin drugs can provide significant patient benefit even if LDL-C values remain above 100.   Professional societies now recommend that the adequacy of lipid management be judged by the appropriateness of the therapy and not solely by LDL value (ACCF/AHA/AMA-PCPI, 2011).  Performance measures that recognize appropriate clinical prescribing provide a better balance of patient benefit and risk and may reduce complications of overzealous drug therapy (e.g., muscle breakdown).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This national clinical reminder has been created to address the concerns outlined above and to support updated VHA Performance Measures for FY 12 and FY 13 (ihd18hns and dmg25hs) that assess LDL-C values in patients with cardiovascular disease or with diabetes mellitus or whether the patient is on at least a moderate dose of a statin medication.  The reminder replaces previous national lipid reminders that were based on threshold LDL-C values.  It was created by the VHA National Clinical Reminders Committee with input from multiple national VA experts on lipid management, diabetes mellitus, ischemic heart disease and quality measurement.  The reminder is intended to be used by providers with prescribing privileges.",
+      "text": "This national clinical reminder has been created to address the concerns outlined above and to support updated VHA Performance Measures for FY 12 and FY 13 (ihd18hns and dmg25hs) that assess LDL-C values in patients with cardiovascular disease or with diabetes mellitus or whether the patient is on at least a moderate dose of a statin medication.  The reminder replaces previous national lipid reminders that were based on threshold LDL-C values.  It was created by the VHA National Clinical Reminders Committee with input from multiple national VA experts on lipid management, diabetes mellitus, ischemic heart disease and quality measurement.  The reminder is intended to be used by providers with prescribing privileges.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The eligible cohort for the reminder includes patients ages 18-75 with ICD-9 codes indicating any type of cardiovascular disease or diabetes (based on EPRP diagnostic criteria), as well as patients on specific medications utilized in the management of diabetes.  More specifically, the reminder includes patients who meet the following criteria:",
+      "text": "The eligible cohort for the reminder includes patients ages 18-75 with ICD-9 codes indicating any type of cardiovascular disease or diabetes (based on EPRP diagnostic criteria), as well as patients on specific medications utilized in the management of diabetes.  More specifically, the reminder includes patients who meet the following criteria:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "CVD: any diagnosis of CVD in the past 2 years that is more recent than",
+      "text": "CVD: any diagnosis of CVD in the past 2 years that is more recent than",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "any entry of incorrect diagnosis of CVD and age 18-75.",
+      "text": "any entry of incorrect diagnosis of CVD and age 18-75.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Diabetes: 2 diagnoses in the past 2 years, or a problem list entry, or",
+      "text": "Diabetes: 2 diagnoses in the past 2 years, or a problem list entry, or",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "a prescription of medication for diabetes that was active in the previous 9",
+      "text": "a prescription of medication for diabetes that was active in the previous 9",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "months and the diagnosis or prescription is more recent than any entry of",
+      "text": "months and the diagnosis or prescription is more recent than any entry of",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "an incorrect diagnosis.",
+      "text": "an incorrect diagnosis.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "At this time, the reminder triggers for patients ages 18-75 based on current EPRP criteria.  However, it is anticipated that these age ranges may be modified, particularly for patients with diabetes mellitus.",
+      "text": "At this time, the reminder triggers for patients ages 18-75 based on current EPRP criteria.  However, it is anticipated that these age ranges may be modified, particularly for patients with diabetes mellitus.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The reminder evaluates whether there is an LDL-C value in the past two years and whether that value is below 100.  If not, the reminder evaluates whether the patient has an active prescription for at least a moderate dose statin as defined below:",
+      "text": "The reminder evaluates whether there is an LDL-C value in the past two years and whether that value is below 100.  If not, the reminder evaluates whether the patient has an active prescription for at least a moderate dose statin as defined below:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "atorvastatin  10 mg/day or higher",
+      "text": "atorvastatin  10 mg/day or higher",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "fluvastatin 80 mg/day or higher",
+      "text": "fluvastatin 80 mg/day or higher",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "lovastatin 40 mg/day or higher",
+      "text": "lovastatin 40 mg/day or higher",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "pravastatin 40 mg/day or higher",
+      "text": "pravastatin 40 mg/day or higher",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "rosuvastatin 5 mg/day or higher",
+      "text": "rosuvastatin 5 mg/day or higher",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "simvastatin 20 mg/day or higher",
+      "text": "simvastatin 20 mg/day or higher",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/111",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patients are excluded from the reminder cohort if they have documentation of limited life expectancy or of specific types of terminal cancers.",
+      "text": "Patients are excluded from the reminder cohort if they have documentation of limited life expectancy or of specific types of terminal cancers.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/112",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/113",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The reminder can also be resolved for varying times if any of the following are documented:",
+      "text": "The reminder can also be resolved for varying times if any of the following are documented:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/114",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Contraindication to statin use (either temporary – off for one year; or permanent – resolves permanently)",
+      "text": "Contraindication to statin use (either temporary – off for one year; or permanent – resolves permanently)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/115",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Documentation of moderate dose statin use (e.g. non-VA medication) – resolves for one year",
+      "text": "Documentation of moderate dose statin use (e.g. non-VA medication) – resolves for one year",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/116",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Documentation that the patient is on the highest tolerated dose of a statin – resolves for one year",
+      "text": "Documentation that the patient is on the highest tolerated dose of a statin – resolves for one year",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/117",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Documentation that the patient has had an adverse drug reaction to all available statins – resolves for one year)",
+      "text": "Documentation that the patient has had an adverse drug reaction to all available statins – resolves for one year)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/118",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Documentation that the patient has had an adverse drug reaction to all available statins and there is an allergy/ADR documented in the allergy package of CPRS – resolves permanently",
+      "text": "Documentation that the patient has had an adverse drug reaction to all available statins and there is an allergy/ADR documented in the allergy package of CPRS – resolves permanently",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/119",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Non-adherence to statin therapy – resolves for 2 months",
+      "text": "Non-adherence to statin therapy – resolves for 2 months",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/120",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Outside LDL-C value < 100 – resolves for one year from date of LDL-C",
+      "text": "Outside LDL-C value < 100 – resolves for one year from date of LDL-C",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "7."
+    },
+    {
+      "self_ref": "#/texts/121",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Dosage adjustment – resolves for 2 months",
+      "text": "Dosage adjustment – resolves for 2 months",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "8."
+    },
+    {
+      "self_ref": "#/texts/122",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Patient declination – resolves for 2 months",
+      "text": "Patient declination – resolves for 2 months",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "9."
+    },
+    {
+      "self_ref": "#/texts/123",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Order for LDL-C – resolves for  t-14 days to t+2 months",
+      "text": "Order for LDL-C – resolves for  t-14 days to t+2 months",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "10."
+    },
+    {
+      "self_ref": "#/texts/124",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Incorrect diagnosis of CVD or DM – resolves for 6 months",
+      "text": "Incorrect diagnosis of CVD or DM – resolves for 6 months",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "11."
+    },
+    {
+      "self_ref": "#/texts/125",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/126",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Sites that have created risk calculators for CVD may choose to include patients with a CHD risk >20% in the eligible cohort by mapping their local health factors to the CHD RISK>20% reminder term.",
+      "text": "Sites that have created risk calculators for CVD may choose to include patients with a CHD risk >20% in the eligible cohort by mapping their local health factors to the CHD RISK>20% reminder term.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/127",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/128",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The reminder provides a list of moderate dose statins for provider reference, allows the provider to view the most recent lipid panel results, and includes information regarding current guidance on lipid management.  It is recommended that sites continue to utilize local or national reminders for annual LDL-C assessment as long as this continues to be a performance measure.  The reminder evaluates for an LDL-C within the last two years in order to focus attention on statin therapy since this is the most important intervention and treating to goal is now felt to be less critical.",
+      "text": "The reminder provides a list of moderate dose statins for provider reference, allows the provider to view the most recent lipid panel results, and includes information regarding current guidance on lipid management.  It is recommended that sites continue to utilize local or national reminders for annual LDL-C assessment as long as this continues to be a performance measure.  The reminder evaluates for an LDL-C within the last two years in order to focus attention on statin therapy since this is the most important intervention and treating to goal is now felt to be less critical.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/129",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/130",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/131",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Remedy Tickets fixed – NONE.",
+      "text": "Remedy Tickets fixed – NONE.",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/132",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/133",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patient Safety Issues Addressed - NONE",
+      "text": "Patient Safety Issues Addressed - NONE",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/134",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/135",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/136",
+      "parent": {
+        "cref": "#/texts/42"
+      },
+      "children": [
+        {
+          "cref": "#/tables/0"
+        },
+        {
+          "cref": "#/texts/139"
+        },
+        {
+          "cref": "#/texts/140"
+        },
+        {
+          "cref": "#/texts/141"
+        },
+        {
+          "cref": "#/texts/142"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Clinical Reminders PXRM*2*27 Documentation",
+      "text": "Clinical Reminders PXRM*2*27 Documentation",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/137",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Documentation",
+      "text": "Documentation",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/138",
+      "parent": {
+        "cref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Documentation File name",
+      "text": "Documentation File name",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/139",
+      "parent": {
+        "cref": "#/texts/136"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/140",
+      "parent": {
+        "cref": "#/texts/136"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/141",
+      "parent": {
+        "cref": "#/texts/136"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/142",
+      "parent": {
+        "cref": "#/texts/136"
+      },
+      "children": [
+        {
+          "cref": "#/tables/1"
+        },
+        {
+          "cref": "#/texts/150"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Web Sites",
+      "text": "Web Sites",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/143",
+      "parent": {
+        "cref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Site",
+      "text": "Site",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/144",
+      "parent": {
+        "cref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "URL",
+      "text": "URL",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/145",
+      "parent": {
+        "cref": "#/groups/12"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Description",
+      "text": "Description",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/146",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "http://vaww.portal.va.gov/sites/ncrcpublic/default.aspx",
+      "text": "http://vaww.portal.va.gov/sites/ncrcpublic/default.aspx",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://vaww.portal.va.gov/sites/ncrcpublic/default.aspx"
+    },
+    {
+      "self_ref": "#/texts/147",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/148",
+      "parent": {
+        "cref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "http://www.va.gov/vdl/",
+      "text": "http://www.va.gov/vdl/",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://www.va.gov/vdl/"
+    },
+    {
+      "self_ref": "#/texts/149",
+      "parent": {
+        "cref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/150",
+      "parent": {
+        "cref": "#/texts/142"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/151",
+      "parent": {
+        "cref": "#/texts/15"
+      },
+      "children": [
+        {
+          "cref": "#/groups/15"
+        },
+        {
+          "cref": "#/groups/16"
+        },
+        {
+          "cref": "#/texts/159"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Acronyms",
+      "text": "Acronyms",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/152",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The OIT Master Glossary is available at:",
+      "text": "The OIT Master Glossary is available at:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/153",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "http://vaww.oed.wss.va.gov/process/Library/master_glossary/masterglossary.htm",
+      "text": "http://vaww.oed.wss.va.gov/process/Library/master_glossary/masterglossary.htm",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://vaww.oed.wss.va.gov/process/Library/master_glossary/masterglossary.htm"
+    },
+    {
+      "self_ref": "#/texts/154",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/155",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [
+        {
+          "cref": "#/texts/156"
+        },
+        {
+          "cref": "#/texts/157"
+        },
+        {
+          "cref": "#/tables/2"
+        },
+        {
+          "cref": "#/texts/158"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "National Acronym Directory:",
+      "text": "National Acronym Directory:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/156",
+      "parent": {
+        "cref": "#/texts/155"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "http://vaww1.va.gov/Acronyms/",
+      "text": "http://vaww1.va.gov/Acronyms/",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://vaww1.va.gov/Acronyms/"
+    },
+    {
+      "self_ref": "#/texts/157",
+      "parent": {
+        "cref": "#/texts/155"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/158",
+      "parent": {
+        "cref": "#/texts/155"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/159",
+      "parent": {
+        "cref": "#/texts/151"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "cref": "#/texts/136"
+      },
+      "children": [
+        {
+          "cref": "#/groups/8"
+        },
+        {
+          "cref": "#/groups/9"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Documentation",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/8"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Documentation File name",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/9"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Installation Guide",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PXRM_2_0_27_IG.PDF",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Release Notes",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PXRM_2_0_27_RN.PDF",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 3,
+        "num_cols": 2,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Documentation",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Documentation File name",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Installation Guide",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PXRM_2_0_27_IG.PDF",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Release Notes",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PXRM_2_0_27_RN.PDF",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/1",
+      "parent": {
+        "cref": "#/texts/142"
+      },
+      "children": [
+        {
+          "cref": "#/groups/10"
+        },
+        {
+          "cref": "#/groups/11"
+        },
+        {
+          "cref": "#/groups/12"
+        },
+        {
+          "cref": "#/groups/13"
+        },
+        {
+          "cref": "#/groups/14"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Site",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/10"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "URL",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/11"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Description",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/12"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "National Clinical Reminders site",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "http://vista.med.va.gov/reminders",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Contains manuals, PowerPoint presentations, and other information about Clinical Reminders",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "National Clinical Reminders Committee",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "http://vaww.portal.va.gov/sites/ncrcpublic/default.aspx\n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/13"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "This committee directs the development of new and revised national reminders",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "VistA Document Library",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "http://www.va.gov/vdl/\n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/14"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Contains manuals for Clinical Reminders and CPRS (OR).",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 4,
+        "num_cols": 3,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Site",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "URL",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Description",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "National Clinical Reminders site",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "http://vista.med.va.gov/reminders",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Contains manuals, PowerPoint presentations, and other information about Clinical Reminders",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "National Clinical Reminders Committee",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "http://vaww.portal.va.gov/sites/ncrcpublic/default.aspx\n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "This committee directs the development of new and revised national reminders",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "VistA Document Library",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "http://www.va.gov/vdl/\n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Contains manuals for Clinical Reminders and CPRS (OR).",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/2",
+      "parent": {
+        "cref": "#/texts/155"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Term",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Definition",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "ASU",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Authorization/Subscription Utility",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "CPRS",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Computerized Patient Record System",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "ESM",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Enterprise Systems Management (ESM)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "FIM",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Functional Independence Measure",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "GUI",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Graphical User Interface",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "IAB",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Initial Assessment & Briefing",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "MH",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Mental Health",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "MHA3",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Mental Health Assistant Version 3",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "MHV",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "My Healthy Vet",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "MST",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Military Sexual Trauma",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "OIT",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Office of Information and Technology",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "OIF/OEF",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Operation Iraqi Freedom/Operation Enduring Freedom",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "OR",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Order Entry namespace",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "PCS",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Patient Care Services",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "PD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Product Development",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "PTSD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Post Traumatic Stress Syndrome",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "PXRM",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Clinical Reminder Package namespace",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "RSD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Requirements Specification Document",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 19,
+            "end_row_offset_idx": 20,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "TIU",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 19,
+            "end_row_offset_idx": 20,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Text Integration Utility",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 20,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "VA",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 20,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Department of Veteran Affairs",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 22,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "VHA",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 22,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Veterans Health Administration",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 22,
+            "end_row_offset_idx": 23,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "VistA",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 22,
+            "end_row_offset_idx": 23,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Veterans Health Information System and Technology Architecture",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 23,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "WV",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 23,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Women’s Health package namespace",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 24,
+            "end_row_offset_idx": 25,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "YS",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 24,
+            "end_row_offset_idx": 25,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Mental Health package namespace",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 25,
+        "num_cols": 2,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Term",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Definition",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "ASU",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Authorization/Subscription Utility",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "CPRS",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Computerized Patient Record System",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "ESM",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Enterprise Systems Management (ESM)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "FIM",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Functional Independence Measure",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "GUI",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Graphical User Interface",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "IAB",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Initial Assessment & Briefing",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "MH",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Mental Health",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "MHA3",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Mental Health Assistant Version 3",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "MHV",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "My Healthy Vet",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "MST",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Military Sexual Trauma",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "OIT",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Office of Information and Technology",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "OIF/OEF",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Operation Iraqi Freedom/Operation Enduring Freedom",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "OR",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Order Entry namespace",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "PCS",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Patient Care Services",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "PD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Product Development",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "PTSD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Post Traumatic Stress Syndrome",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "PXRM",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Clinical Reminder Package namespace",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "RSD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Requirements Specification Document",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 19,
+              "end_row_offset_idx": 20,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "TIU",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 19,
+              "end_row_offset_idx": 20,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Text Integration Utility",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 20,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "VA",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 20,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Department of Veteran Affairs",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 22,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "VHA",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 22,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Veterans Health Administration",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 22,
+              "end_row_offset_idx": 23,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "VistA",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 22,
+              "end_row_offset_idx": 23,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Veterans Health Information System and Technology Architecture",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 23,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "WV",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 23,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Women’s Health package namespace",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 24,
+              "end_row_offset_idx": 25,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "YS",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 24,
+              "end_row_offset_idx": 25,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Mental Health package namespace",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

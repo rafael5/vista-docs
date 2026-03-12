@@ -1,0 +1,2007 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "or_3_340rn",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 13905660650837426480,
+    "filename": "or_3_340rn.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/groups/0"
+      },
+      {
+        "cref": "#/texts/5"
+      },
+      {
+        "cref": "#/texts/6"
+      },
+      {
+        "cref": "#/texts/7"
+      },
+      {
+        "cref": "#/texts/8"
+      },
+      {
+        "cref": "#/texts/9"
+      },
+      {
+        "cref": "#/texts/10"
+      },
+      {
+        "cref": "#/texts/11"
+      },
+      {
+        "cref": "#/texts/12"
+      },
+      {
+        "cref": "#/texts/13"
+      },
+      {
+        "cref": "#/texts/14"
+      },
+      {
+        "cref": "#/texts/15"
+      },
+      {
+        "cref": "#/texts/16"
+      },
+      {
+        "cref": "#/texts/17"
+      },
+      {
+        "cref": "#/texts/18"
+      },
+      {
+        "cref": "#/texts/19"
+      },
+      {
+        "cref": "#/texts/20"
+      },
+      {
+        "cref": "#/texts/21"
+      },
+      {
+        "cref": "#/texts/22"
+      },
+      {
+        "cref": "#/texts/23"
+      },
+      {
+        "cref": "#/texts/24"
+      },
+      {
+        "cref": "#/texts/25"
+      },
+      {
+        "cref": "#/texts/26"
+      },
+      {
+        "cref": "#/texts/27"
+      },
+      {
+        "cref": "#/texts/28"
+      },
+      {
+        "cref": "#/texts/29"
+      },
+      {
+        "cref": "#/texts/30"
+      },
+      {
+        "cref": "#/texts/31"
+      },
+      {
+        "cref": "#/texts/32"
+      },
+      {
+        "cref": "#/texts/33"
+      },
+      {
+        "cref": "#/texts/34"
+      },
+      {
+        "cref": "#/texts/35"
+      },
+      {
+        "cref": "#/texts/36"
+      },
+      {
+        "cref": "#/texts/37"
+      },
+      {
+        "cref": "#/texts/38"
+      },
+      {
+        "cref": "#/texts/39"
+      },
+      {
+        "cref": "#/texts/40"
+      },
+      {
+        "cref": "#/texts/41"
+      },
+      {
+        "cref": "#/texts/42"
+      },
+      {
+        "cref": "#/texts/43"
+      },
+      {
+        "cref": "#/texts/44"
+      },
+      {
+        "cref": "#/texts/45"
+      },
+      {
+        "cref": "#/texts/46"
+      },
+      {
+        "cref": "#/texts/47"
+      },
+      {
+        "cref": "#/texts/48"
+      },
+      {
+        "cref": "#/texts/49"
+      },
+      {
+        "cref": "#/texts/50"
+      },
+      {
+        "cref": "#/texts/51"
+      },
+      {
+        "cref": "#/texts/52"
+      },
+      {
+        "cref": "#/texts/53"
+      },
+      {
+        "cref": "#/texts/54"
+      },
+      {
+        "cref": "#/texts/55"
+      },
+      {
+        "cref": "#/texts/56"
+      },
+      {
+        "cref": "#/texts/57"
+      },
+      {
+        "cref": "#/texts/58"
+      },
+      {
+        "cref": "#/texts/59"
+      },
+      {
+        "cref": "#/texts/60"
+      },
+      {
+        "cref": "#/texts/61"
+      },
+      {
+        "cref": "#/groups/1"
+      },
+      {
+        "cref": "#/texts/63"
+      },
+      {
+        "cref": "#/texts/64"
+      },
+      {
+        "cref": "#/texts/65"
+      },
+      {
+        "cref": "#/texts/66"
+      },
+      {
+        "cref": "#/texts/67"
+      },
+      {
+        "cref": "#/texts/68"
+      },
+      {
+        "cref": "#/texts/69"
+      },
+      {
+        "cref": "#/texts/70"
+      },
+      {
+        "cref": "#/groups/2"
+      },
+      {
+        "cref": "#/groups/3"
+      },
+      {
+        "cref": "#/groups/4"
+      },
+      {
+        "cref": "#/texts/78"
+      },
+      {
+        "cref": "#/texts/79"
+      },
+      {
+        "cref": "#/texts/80"
+      },
+      {
+        "cref": "#/texts/81"
+      },
+      {
+        "cref": "#/texts/82"
+      },
+      {
+        "cref": "#/groups/5"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/0"
+        },
+        {
+          "cref": "#/texts/1"
+        },
+        {
+          "cref": "#/texts/2"
+        },
+        {
+          "cref": "#/texts/3"
+        },
+        {
+          "cref": "#/texts/4"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "textbox",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/62"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/71"
+        },
+        {
+          "cref": "#/texts/72"
+        },
+        {
+          "cref": "#/texts/73"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/74"
+        },
+        {
+          "cref": "#/texts/75"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/76"
+        },
+        {
+          "cref": "#/texts/77"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/83"
+        },
+        {
+          "cref": "#/texts/84"
+        },
+        {
+          "cref": "#/texts/85"
+        }
+      ],
+      "content_layer": "furniture",
+      "meta": null,
+      "name": "page footer",
+      "label": "section"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "CPRS Patch (OR*3.0*340) Release Notes",
+      "text": "CPRS Patch (OR*3.0*340) Release Notes",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "February 2012",
+      "text": "February 2012",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Table of Contents",
+      "text": "Table of Contents",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Table of Contents\tii",
+      "text": "Table of Contents\tii",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction\t1",
+      "text": "Introduction\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Functionality\t1",
+      "text": "New Functionality\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Patient Inquiry Display\t1",
+      "text": "Changes and Fixes to the Patient Inquiry Display\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Primary Care Display\t2",
+      "text": "Changes and Fixes to the Primary Care Display\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Pre-Conditions to Installation\t2",
+      "text": "Pre-Conditions to Installation\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Remedy Tickets\t2",
+      "text": "Remedy Tickets\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "References\t3",
+      "text": "References\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction",
+      "text": "Introduction",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VistA patch OR*3.0*340 provides resolution to a critical need to rapidly identify a patient’s Mental Health (MH) Treatment Coordinator so that veterans with conditions such as depression, suicidal ideation and Post Traumatic Stress Disorder (PSTD) can be treated more quickly and effectively.  This project affects nurses, physicians, ward clerks, Primary Care Management Module (PCMM) coordinators and all other mental health professionals.  The patch addresses additional needs outlined in the functionality section.  Changes will interface over to PCMM, where clinicians will have access to this new functionality.  This will make it easier for clinicians to coordinate care between mental health and primary care providers.",
+      "text": "VistA patch OR*3.0*340 provides resolution to a critical need to rapidly identify a patient’s Mental Health (MH) Treatment Coordinator so that veterans with conditions such as depression, suicidal ideation and Post Traumatic Stress Disorder (PSTD) can be treated more quickly and effectively.  This project affects nurses, physicians, ward clerks, Primary Care Management Module (PCMM) coordinators and all other mental health professionals.  The patch addresses additional needs outlined in the functionality section.  Changes will interface over to PCMM, where clinicians will have access to this new functionality.  This will make it easier for clinicians to coordinate care between mental health and primary care providers.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch is scheduled to be released with SD*5.3*575.  The purpose of SD*5.3*575 is to implement the functionality for displaying the Mental Health Treatment Coordinator (MHTC) in two locations within CPRS, one being the Patient Inquiry display and the other being the Primary Care button detail display.",
+      "text": "This patch is scheduled to be released with SD*5.3*575.  The purpose of SD*5.3*575 is to implement the functionality for displaying the Mental Health Treatment Coordinator (MHTC) in two locations within CPRS, one being the Patient Inquiry display and the other being the Primary Care button detail display.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Functionality",
+      "text": "New Functionality",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch provides enhancements to CPRS.  The sections below outline the changes and fixes that will be applied to the Patient Inquiry Display and the Primary Care Detailed Display.",
+      "text": "This patch provides enhancements to CPRS.  The sections below outline the changes and fixes that will be applied to the Patient Inquiry Display and the Primary Care Detailed Display.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Patient Inquiry Display",
+      "text": "Changes and Fixes to the Patient Inquiry Display",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Mental Health Treatment Coordinator (MHTC) will be displayed within CPRS GUI as part of the Patient Inquiry display.   The MHTC and the MHTC’s position will be shown just after the Primary Practitioner and Primary Care Team as part of the Primary Care Information section of the Patient Inquiry display.  The MHTC information will include the MH Treatment Team, MHTC provider’s name and the PCMM position which they were assigned.  If a MHTC was not assigned to the patient, no information will be displayed concerning the MHTC.  Below is how the Primary Care Information section currently displays:",
+      "text": "The Mental Health Treatment Coordinator (MHTC) will be displayed within CPRS GUI as part of the Patient Inquiry display.   The MHTC and the MHTC’s position will be shown just after the Primary Practitioner and Primary Care Team as part of the Primary Care Information section of the Patient Inquiry display.  The MHTC information will include the MH Treatment Team, MHTC provider’s name and the PCMM position which they were assigned.  If a MHTC was not assigned to the patient, no information will be displayed concerning the MHTC.  Below is how the Primary Care Information section currently displays:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Primary Care Information:",
+      "text": "Primary Care Information:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Primary Practitioner:",
+      "text": "Primary Practitioner:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Primary Care Team:",
+      "text": "Primary Care Team:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Any user who has permission to view the CPRS GUI will be able to see a patient’s MH treatment coordinator information, if it exists, in the Patient Inquiry display.",
+      "text": "Any user who has permission to view the CPRS GUI will be able to see a patient’s MH treatment coordinator information, if it exists, in the Patient Inquiry display.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If the patient has a Primary Care Provider, information about his/her MH treatment coordinator will be printed between the first Primary Care section and the Status section and it will be printed between the Second Primary Care section and the Health Insurance section.",
+      "text": "If the patient has a Primary Care Provider, information about his/her MH treatment coordinator will be printed between the first Primary Care section and the Status section and it will be printed between the Second Primary Care section and the Health Insurance section.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If a MHTC is assigned to the patient, the  MH Treatment Team name, the MHTC’s name and position followed by analog pager, phone number, and digital pager will be displayed as below:",
+      "text": "If a MHTC is assigned to the patient, the  MH Treatment Team name, the MHTC’s name and position followed by analog pager, phone number, and digital pager will be displayed as below:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "MH Treatment Team:",
+      "text": "MH Treatment Team:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "MH Treatment Coord:  \t\t\t\tPosition:",
+      "text": "MH Treatment Coord:  \t\t\t\tPosition:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Analog Pager:  \t\t\t\t\tPhone:",
+      "text": "Analog Pager:  \t\t\t\t\tPhone:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Digital Pager:",
+      "text": "Digital Pager:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If a MHTC is not assigned to the patient, then the MHTC information will not be displayed within the Patient Inquiry Display.",
+      "text": "If a MHTC is not assigned to the patient, then the MHTC information will not be displayed within the Patient Inquiry Display.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changes and Fixes to the Primary Care Display",
+      "text": "Changes and Fixes to the Primary Care Display",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The MHTC will be displayed within CPRS GUI as part of the Primary Care detailed display.  This is accessed by depressing the Primary Care button in the header of CPRS GUI which launches the detailed display.  This display will include the MHTC information.",
+      "text": "The MHTC will be displayed within CPRS GUI as part of the Primary Care detailed display.  This is accessed by depressing the Primary Care button in the header of CPRS GUI which launches the detailed display.  This display will include the MHTC information.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A user who has permission to view the CPRS GUI will be able to see a patient’s MH treatment coordinator information, if it exists, in the Primary Care display.",
+      "text": "A user who has permission to view the CPRS GUI will be able to see a patient’s MH treatment coordinator information, if it exists, in the Primary Care display.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Mental Health Treatment Team name, the MHTC’s name, analog pager number, digital pager number, and the office phone number will be included on the Primary Care Detailed Display.  Below displays the format:",
+      "text": "The Mental Health Treatment Team name, the MHTC’s name, analog pager number, digital pager number, and the office phone number will be included on the Primary Care Detailed Display.  Below displays the format:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "MH Treatment Team:",
+      "text": "MH Treatment Team:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "MH Treatment Coordinator:",
+      "text": "MH Treatment Coordinator:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Analog Pager:",
+      "text": "Analog Pager:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Digital Pager:",
+      "text": "Digital Pager:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Office Phone:",
+      "text": "Office Phone:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "In the event no MHTC has been assigned to the patient, no MHTC information will be displayed on the Primary Care screen.",
+      "text": "In the event no MHTC has been assigned to the patient, no MHTC information will be displayed on the Primary Care screen.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Pre-Conditions to Installation",
+      "text": "Pre-Conditions to Installation",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "OR*3.0*340 is to be released with SD*5.3*575, with SD*5.3*575 being installed first.",
+      "text": "OR*3.0*340 is to be released with SD*5.3*575, with SD*5.3*575 being installed first.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Specific information pertaining to the installation of this patch can be found in the patch description and section referred to as ‘INSTALLATION INSTRUCTIONS’ in patch OR*3.0*340 Installation Guide.",
+      "text": "Specific information pertaining to the installation of this patch can be found in the patch description and section referred to as ‘INSTALLATION INSTRUCTIONS’ in patch OR*3.0*340 Installation Guide.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Remedy Tickets",
+      "text": "Remedy Tickets",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "No Remedy tickets are associated with this release.",
+      "text": "No Remedy tickets are associated with this release.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "References",
+      "text": "References",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Information in this document is derived from the following documentation on the project’s Technical Services Project Repository (TSPR) site at",
+      "text": "Information in this document is derived from the following documentation on the project’s Technical Services Project Repository (TSPR) site at",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "http://tspr.vista.med.va.gov/warboard/anotebk.asp?proj=1378&Type=Active",
+      "text": "http://tspr.vista.med.va.gov/warboard/anotebk.asp?proj=1378&Type=Active",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://tspr.vista.med.va.gov/warboard/anotebk.asp?proj=1378&Type=Active"
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":",
+      "text": ":",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Identification of Principal Mental Health Provider (IPMHP) Requirements Specification Document (RSD), file name:  IPMHP Deliverable 1 and 3 RSD v 1.11",
+      "text": "Identification of Principal Mental Health Provider (IPMHP) Requirements Specification Document (RSD), file name:  IPMHP Deliverable 1 and 3 RSD v 1.11",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Identification of Principal Mental Health Provider (IPMHP) Computerized Patient Record System (CPRS) Software Design Document (SDD), file name:  IPMHP CPRS SDD 340.doc",
+      "text": "Identification of Principal Mental Health Provider (IPMHP) Computerized Patient Record System (CPRS) Software Design Document (SDD), file name:  IPMHP CPRS SDD 340.doc",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Additional information can be found in the CPRS GUI User Manual.  All documentation can be found on VDL in the CPRS library:",
+      "text": "Additional information can be found in the CPRS GUI User Manual.  All documentation can be found on VDL in the CPRS library:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "http://www.va.gov/vdl/application.asp?appid=61",
+      "text": "http://www.va.gov/vdl/application.asp?appid=61",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://www.va.gov/vdl/application.asp?appid=61"
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Feb 2012\t CPRS Patch\tPage i",
+      "text": "Feb 2012\t CPRS Patch\tPage i",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "(OR*3.0*340) Release Notes",
+      "text": "(OR*3.0*340) Release Notes",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

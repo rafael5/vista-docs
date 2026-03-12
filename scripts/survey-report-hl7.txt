@@ -1,0 +1,175 @@
+========================================================================
+VDL CORPUS SURVEY REPORT — package=hl7
+Generated: 2026-03-11 06:42
+========================================================================
+
+Documents analysed : 9
+Errors             : 0
+
+────────────────────────────────────────────────────────────────────────
+STRUCTURAL FEATURES (count of documents)
+────────────────────────────────────────────────────────────────────────
+  Has TOC field                :   7 / 9
+  Has revision history table   :   5 / 9
+  Has back-matter index        :   0 / 9
+  Has pseudo-headings          :   9 / 9
+
+────────────────────────────────────────────────────────────────────────
+TABLE TYPES DETECTED
+────────────────────────────────────────────────────────────────────────
+  reference-table            333
+  api-function               249
+  hl7-segment                 35
+  rpc                          8
+  revision                     5
+  fileman-file-registry        4
+  pre-post-install             1
+  fileman                      1
+  parameter-list               1
+
+────────────────────────────────────────────────────────────────────────
+CALLOUT TYPES (NOTE / WARNING / CAUTION etc.)
+────────────────────────────────────────────────────────────────────────
+  NOTE                  102
+  WARNING                37
+  REMINDER                1
+
+────────────────────────────────────────────────────────────────────────
+CROSS-REFERENCES
+────────────────────────────────────────────────────────────────────────
+  Internal page refs           : 34
+  Terminal/VistA session lines : 704
+  External doc refs (top 10):
+      4×  see the Kernel Systems Manual
+      2×  see the KIDS manual
+      2×  refer to the following document
+      2×  refer to the following manual
+      2×  refer to the Kernel Systems Manual
+      2×  See the HL7 Implementation Guide
+      1×  refer to the API Reference
+      1×  refer to the Callable Routines in the Routines Section of this manual
+      1×  refer to the Exported Options section of this manual
+      1×  refer to the Files section of this manual
+
+────────────────────────────────────────────────────────────────────────
+PSEUDO-HEADINGS — total 467 across 9 docs
+Top 20 recurring pseudo-heading texts:
+────────────────────────────────────────────────────────────────────────
+   56×  Example
+    9×  Cross-reference Descriptions, cont.
+    8×  $!-------------------------------------------------------------
+    8×  $!
+    8×  Solution:
+    6×  Link Problems (continued)
+    6×  Examples
+    5×  Basic Variables, cont.
+    4×  Patch Revisions
+    4×  (Save and Exit from the Edit Option Schedule screen)
+    4×  Sample DCL Command Procedure file:
+    4×  (HL7)
+    4×  Event Driver Protocol
+    4×  Subscriber Protocol
+    4×  Sample DCL Login Command Procedure file follows next:
+    3×  $ CREATE/DIR [HLSEVEN]/OWNER=HLSEVEN
+    3×  REDACTED
+    2×  Example Install of patch HL*1.6*126
+    2×  $! for Cache
+    2×  $! The first parameter after csession is the name of Cache configuration that
+
+────────────────────────────────────────────────────────────────────────
+PARAGRAPH STYLES — corpus frequency
+────────────────────────────────────────────────────────────────────────
+   17301  Normal
+    4237  Plain Text
+     812  Screen Capture 9 B
+     568  index 2
+     521  Heading 3
+     515  Screen Capture
+     490  index 1
+     389  10 pt cent schlbk
+     353  Heading 2
+     351  toc 2
+     229  10pt new courier
+     198  toc 3
+     188  List Bullet
+     177  Body Text
+     171  Dialogue
+     132  Heading 1
+     118  10 pt new courier
+     102  Bullet
+      97  toc 1
+      96  Heading 4
+      84  List Number
+      73  List Bullet 1 Continue
+      68  toc 4
+      62  10pt cent schoolbook
+      50  Faux Heading 2
+      50  index heading
+      48  Number List 1
+      43  Normal (Web)
+      41  Note
+      37  Caption
+      36  index 3
+      35  Normal no indent
+      35  table of figures
+      16  Body Text Indent 3
+      15  major heading
+      15  Faux Heading 3
+      12  List Bullet 2 Continue
+      11  Department Information
+      11  Bullet 1
+      11  index 4
+
+────────────────────────────────────────────────────────────────────────
+STANDARD STYLES (appear in ALL 9 documents) — these form the base schema
+────────────────────────────────────────────────────────────────────────
+  Heading 1
+  Normal
+
+────────────────────────────────────────────────────────────────────────
+ONE-OFF STYLES (appear in exactly 1 document) — candidates for schema 'other'
+────────────────────────────────────────────────────────────────────────
+  10 pt cent schlbk
+  10 pt new courier
+  10pt cent schoolbook
+  10pt new courier
+  Body Text 3
+  Bullet2
+  Heading 5
+  Heading 6
+  List
+  List Bullet 2 Continue
+  Normal (Web)
+  Normal Indent
+  Number List 1
+  Orientation
+  Style Faux Heading 2 + Arial 14 pt
+  TOF
+  Table Text
+  Tnormal
+  Version
+  index 3
+  index 4
+  major heading
+  title page
+  toa heading
+
+────────────────────────────────────────────────────────────────────────
+PER-DOCUMENT SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Document                                         §  Tbl   Ph  PgRef Flags
+  --------------------------------------------- ──── ──── ──── ────── ────────────
+  hlo_system_manager_manual.docx                 113    7   44     18   TR
+  vms_hlo_developer_manual.docx                  161  110    4      4   TR
+  hl71_6sg.docx                                    3    0    5      0   
+  hl71_6tm.docx                                   45   15   50      0   
+  hl71_6smdm_p161.docx                           259  102  103      0   T
+  hl71_6p56_p66.docx                             259  102  104      0   T
+  hl71_6p84sp.docx                                46   21   10      0   TR
+  hl71_6p93sp.docx                                66   42   29      0   TR
+  hl_1_6_126_tm.docx                             159  238  118     12   TR
+  Flags: T=has TOC field  R=has revision table  I=has back-matter index
+
+========================================================================
+END OF REPORT
+========================================================================

@@ -1,0 +1,4244 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "pxrm_cr-rept-qrc",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 14285582126425932896,
+    "filename": "pxrm_cr-rept-qrc.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/tables/0"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-1",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-2",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-3",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-4",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-5",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [
+        {
+          "cref": "#/texts/4"
+        },
+        {
+          "cref": "#/texts/5"
+        },
+        {
+          "cref": "#/texts/6"
+        },
+        {
+          "cref": "#/texts/7"
+        },
+        {
+          "cref": "#/texts/8"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/groups/0"
+        },
+        {
+          "cref": "#/groups/1"
+        },
+        {
+          "cref": "#/groups/2"
+        },
+        {
+          "cref": "#/groups/3"
+        },
+        {
+          "cref": "#/groups/4"
+        },
+        {
+          "cref": "#/groups/5"
+        },
+        {
+          "cref": "#/texts/0"
+        },
+        {
+          "cref": "#/texts/1"
+        },
+        {
+          "cref": "#/texts/2"
+        },
+        {
+          "cref": "#/texts/3"
+        },
+        {
+          "cref": "#/groups/6"
+        },
+        {
+          "cref": "#/texts/9"
+        },
+        {
+          "cref": "#/texts/10"
+        },
+        {
+          "cref": "#/texts/11"
+        },
+        {
+          "cref": "#/texts/12"
+        },
+        {
+          "cref": "#/texts/13"
+        },
+        {
+          "cref": "#/texts/14"
+        },
+        {
+          "cref": "#/texts/15"
+        },
+        {
+          "cref": "#/texts/16"
+        },
+        {
+          "cref": "#/texts/17"
+        },
+        {
+          "cref": "#/texts/18"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/19"
+        },
+        {
+          "cref": "#/texts/20"
+        },
+        {
+          "cref": "#/texts/21"
+        },
+        {
+          "cref": "#/texts/22"
+        },
+        {
+          "cref": "#/texts/23"
+        },
+        {
+          "cref": "#/texts/24"
+        },
+        {
+          "cref": "#/texts/25"
+        },
+        {
+          "cref": "#/texts/26"
+        },
+        {
+          "cref": "#/texts/27"
+        },
+        {
+          "cref": "#/texts/28"
+        },
+        {
+          "cref": "#/texts/29"
+        },
+        {
+          "cref": "#/texts/30"
+        },
+        {
+          "cref": "#/texts/31"
+        },
+        {
+          "cref": "#/texts/32"
+        },
+        {
+          "cref": "#/texts/33"
+        },
+        {
+          "cref": "#/texts/34"
+        },
+        {
+          "cref": "#/texts/35"
+        },
+        {
+          "cref": "#/texts/36"
+        },
+        {
+          "cref": "#/texts/37"
+        },
+        {
+          "cref": "#/texts/38"
+        },
+        {
+          "cref": "#/texts/39"
+        },
+        {
+          "cref": "#/texts/40"
+        },
+        {
+          "cref": "#/texts/41"
+        },
+        {
+          "cref": "#/texts/42"
+        },
+        {
+          "cref": "#/texts/43"
+        },
+        {
+          "cref": "#/texts/44"
+        },
+        {
+          "cref": "#/texts/45"
+        },
+        {
+          "cref": "#/texts/46"
+        },
+        {
+          "cref": "#/texts/47"
+        },
+        {
+          "cref": "#/texts/48"
+        },
+        {
+          "cref": "#/texts/49"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-6",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [
+        {
+          "cref": "#/texts/63"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [
+        {
+          "cref": "#/texts/65"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/12",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [
+        {
+          "cref": "#/texts/67"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/13",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/50"
+        },
+        {
+          "cref": "#/texts/51"
+        },
+        {
+          "cref": "#/groups/9"
+        },
+        {
+          "cref": "#/texts/52"
+        },
+        {
+          "cref": "#/texts/53"
+        },
+        {
+          "cref": "#/texts/54"
+        },
+        {
+          "cref": "#/texts/55"
+        },
+        {
+          "cref": "#/texts/56"
+        },
+        {
+          "cref": "#/texts/57"
+        },
+        {
+          "cref": "#/texts/58"
+        },
+        {
+          "cref": "#/texts/59"
+        },
+        {
+          "cref": "#/texts/60"
+        },
+        {
+          "cref": "#/texts/61"
+        },
+        {
+          "cref": "#/texts/62"
+        },
+        {
+          "cref": "#/groups/10"
+        },
+        {
+          "cref": "#/texts/64"
+        },
+        {
+          "cref": "#/groups/11"
+        },
+        {
+          "cref": "#/texts/66"
+        },
+        {
+          "cref": "#/groups/12"
+        },
+        {
+          "cref": "#/texts/68"
+        },
+        {
+          "cref": "#/texts/69"
+        },
+        {
+          "cref": "#/texts/70"
+        },
+        {
+          "cref": "#/texts/71"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/14",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [
+        {
+          "cref": "#/texts/77"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/15",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [
+        {
+          "cref": "#/texts/78"
+        },
+        {
+          "cref": "#/texts/79"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/16",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [
+        {
+          "cref": "#/texts/80"
+        },
+        {
+          "cref": "#/texts/81"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/17",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/73"
+        },
+        {
+          "cref": "#/texts/74"
+        },
+        {
+          "cref": "#/texts/75"
+        },
+        {
+          "cref": "#/texts/76"
+        },
+        {
+          "cref": "#/groups/14"
+        },
+        {
+          "cref": "#/groups/15"
+        },
+        {
+          "cref": "#/groups/16"
+        },
+        {
+          "cref": "#/texts/82"
+        },
+        {
+          "cref": "#/texts/83"
+        },
+        {
+          "cref": "#/texts/84"
+        },
+        {
+          "cref": "#/texts/85"
+        },
+        {
+          "cref": "#/texts/86"
+        },
+        {
+          "cref": "#/texts/87"
+        },
+        {
+          "cref": "#/texts/88"
+        },
+        {
+          "cref": "#/texts/89"
+        },
+        {
+          "cref": "#/texts/90"
+        },
+        {
+          "cref": "#/texts/91"
+        },
+        {
+          "cref": "#/texts/92"
+        },
+        {
+          "cref": "#/texts/93"
+        },
+        {
+          "cref": "#/texts/94"
+        },
+        {
+          "cref": "#/texts/95"
+        },
+        {
+          "cref": "#/texts/96"
+        },
+        {
+          "cref": "#/texts/97"
+        },
+        {
+          "cref": "#/texts/98"
+        },
+        {
+          "cref": "#/texts/99"
+        },
+        {
+          "cref": "#/texts/100"
+        },
+        {
+          "cref": "#/texts/101"
+        },
+        {
+          "cref": "#/texts/102"
+        },
+        {
+          "cref": "#/texts/103"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/18",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [
+        {
+          "cref": "#/texts/108"
+        },
+        {
+          "cref": "#/texts/109"
+        },
+        {
+          "cref": "#/texts/110"
+        },
+        {
+          "cref": "#/texts/111"
+        },
+        {
+          "cref": "#/texts/112"
+        },
+        {
+          "cref": "#/texts/113"
+        },
+        {
+          "cref": "#/texts/114"
+        },
+        {
+          "cref": "#/texts/115"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/19",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/104"
+        },
+        {
+          "cref": "#/texts/105"
+        },
+        {
+          "cref": "#/texts/106"
+        },
+        {
+          "cref": "#/texts/107"
+        },
+        {
+          "cref": "#/groups/18"
+        },
+        {
+          "cref": "#/texts/116"
+        },
+        {
+          "cref": "#/texts/117"
+        },
+        {
+          "cref": "#/texts/118"
+        },
+        {
+          "cref": "#/texts/119"
+        },
+        {
+          "cref": "#/texts/120"
+        },
+        {
+          "cref": "#/texts/121"
+        },
+        {
+          "cref": "#/texts/122"
+        },
+        {
+          "cref": "#/texts/123"
+        },
+        {
+          "cref": "#/texts/124"
+        },
+        {
+          "cref": "#/texts/125"
+        },
+        {
+          "cref": "#/texts/126"
+        },
+        {
+          "cref": "#/texts/127"
+        },
+        {
+          "cref": "#/texts/128"
+        },
+        {
+          "cref": "#/texts/129"
+        },
+        {
+          "cref": "#/texts/130"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/20",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [
+        {
+          "cref": "#/texts/135"
+        },
+        {
+          "cref": "#/texts/139"
+        },
+        {
+          "cref": "#/texts/140"
+        },
+        {
+          "cref": "#/texts/141"
+        },
+        {
+          "cref": "#/texts/142"
+        },
+        {
+          "cref": "#/texts/143"
+        },
+        {
+          "cref": "#/texts/144"
+        },
+        {
+          "cref": "#/texts/145"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/21",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [
+        {
+          "cref": "#/texts/136"
+        },
+        {
+          "cref": "#/texts/137"
+        },
+        {
+          "cref": "#/texts/138"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/22",
+      "parent": {
+        "cref": "#/tables/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/131"
+        },
+        {
+          "cref": "#/texts/132"
+        },
+        {
+          "cref": "#/texts/133"
+        },
+        {
+          "cref": "#/texts/134"
+        },
+        {
+          "cref": "#/groups/20"
+        },
+        {
+          "cref": "#/groups/21"
+        },
+        {
+          "cref": "#/texts/146"
+        },
+        {
+          "cref": "#/texts/147"
+        },
+        {
+          "cref": "#/texts/148"
+        },
+        {
+          "cref": "#/texts/149"
+        },
+        {
+          "cref": "#/texts/150"
+        },
+        {
+          "cref": "#/texts/151"
+        },
+        {
+          "cref": "#/texts/152"
+        },
+        {
+          "cref": "#/texts/153"
+        },
+        {
+          "cref": "#/texts/154"
+        },
+        {
+          "cref": "#/texts/155"
+        },
+        {
+          "cref": "#/texts/156"
+        },
+        {
+          "cref": "#/texts/157"
+        },
+        {
+          "cref": "#/texts/158"
+        },
+        {
+          "cref": "#/texts/159"
+        },
+        {
+          "cref": "#/texts/160"
+        },
+        {
+          "cref": "#/texts/161"
+        },
+        {
+          "cref": "#/texts/162"
+        },
+        {
+          "cref": "#/texts/163"
+        },
+        {
+          "cref": "#/texts/164"
+        },
+        {
+          "cref": "#/texts/165"
+        },
+        {
+          "cref": "#/texts/166"
+        },
+        {
+          "cref": "#/texts/167"
+        },
+        {
+          "cref": "#/texts/168"
+        },
+        {
+          "cref": "#/texts/169"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_2_2_0",
+      "label": "unspecified"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Clinical Reminders Reports",
+      "text": "Clinical Reminders Reports",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 6
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reports can be created by the following criteria:",
+      "text": "Reports can be created by the following criteria:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Individual Patient",
+      "text": "Individual Patient",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Hospital Location:  Future appointment/ past encounter by clinic or stop code: inpatients by current inpatients or by admission date",
+      "text": "Hospital Location:  Future appointment/ past encounter by clinic or stop code: inpatients by current inpatients or by admission date",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "OE/RR Team (all patients in team)",
+      "text": "OE/RR Team (all patients in team)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "PCMM Provider (all practitioner patients, either all patients or those with PC assignment only)",
+      "text": "PCMM Provider (all practitioner patients, either all patients or those with PC assignment only)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "PCMM Team (all patients in team)",
+      "text": "PCMM Team (all patients in team)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A SUMMARY report displays totals of how many patients of those selected have reminders due or applicable.",
+      "text": "A SUMMARY report displays totals of how many patients of those selected have reminders due or applicable.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The SUMMARY report may include several reminders.",
+      "text": "The SUMMARY report may include several reminders.",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A detailed report displays patients with reminders due in alphabetical order. The report displays for each patient the date the reminder is due, the date the reminder was last done, and the next appointment date. The detailed report can also list all future appointments. Detailed reports for Location or Provider may also be sorted by next appointment date.",
+      "text": "A detailed report displays patients with reminders due in alphabetical order. The report displays for each patient the date the reminder is due, the date the reminder was last done, and the next appointment date. The detailed report can also list all future appointments. Detailed reports for Location or Provider may also be sorted by next appointment date.",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The DETAILED report is for one reminder only.",
+      "text": "The DETAILED report is for one reminder only.",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Clinical Reminders Reports",
+      "text": "Clinical Reminders Reports",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Clinician Desktop Service",
+      "text": "Clinician Desktop Service",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Office of Information",
+      "text": "Office of Information",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Department of Veterans Affairs",
+      "text": "Department of Veterans Affairs",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "REDACTED",
+      "text": "REDACTED",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": "http://vista.med.va.gov/reminders"
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [
+        {
+          "cref": "#/texts/72"
+        },
+        {
+          "cref": "#/tables/1"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Clinical Reminders",
+      "text": "Clinical Reminders",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 7
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reports",
+      "text": "Reports",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Striving for Higher Quality in Patient Care",
+      "text": "Striving for Higher Quality in Patient Care",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Quality Assurance measures for clinicians and management",
+      "text": "Quality Assurance measures for clinicians and management",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Profiling of Guideline Compliance",
+      "text": "Profiling of Guideline Compliance",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/groups/12"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Decision support tools",
+      "text": "Decision support tools",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/texts/52"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminders Reports for Clinicians",
+      "text": "Reminders Reports for Clinicians",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Clinical Reminder reports can be defined and used for patient care in many ways, including the following:",
+      "text": "Clinical Reminder reports can be defined and used for patient care in many ways, including the following:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Patients in a panel or a clinic who have a reminder due",
+      "text": "Patients in a panel or a clinic who have a reminder due",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Identify patients who will be in a clinic in the next month who need an intervention",
+      "text": "Identify patients who will be in a clinic in the next month who need an intervention",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Identify patients who left the clinic in the past week who missed having an intervention",
+      "text": "Identify patients who left the clinic in the past week who missed having an intervention",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Inpatients with a reminder due, to define interventions needed prior to discharge",
+      "text": "Inpatients with a reminder due, to define interventions needed prior to discharge",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Inpatient education, exams, immunizations",
+      "text": "Inpatient education, exams, immunizations",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminders Due Report: Detailed",
+      "text": "Reminders Due Report: Detailed",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminders Due for P/C CLUTIER for 6/20 to 7/4/2000",
+      "text": "Reminders Due for P/C CLUTIER for 6/20 to 7/4/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Pneumococcal vaccine: 7 patients have reminder Due",
+      "text": "Pneumococcal vaccine: 7 patients have reminder Due",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Date Due Last Done Next Appt",
+      "text": "Date Due Last Done Next Appt",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1  XXXXXS,XXXXN   6/20/2000  N/A     6/21/2000",
+      "text": "1  XXXXXS,XXXXN   6/20/2000  N/A     6/21/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "2  XXXXR,X E      6/20/2000  N/A     6/21/2000",
+      "text": "2  XXXXR,X E      6/20/2000  N/A     6/21/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "3  XX,XXXXXXD A   6/20/2000  N/A     6/23/2000",
+      "text": "3  XX,XXXXXXD A   6/20/2000  N/A     6/23/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4  XXX,XXXXXX     6/20/2000  N/A     6/25/2000",
+      "text": "4  XXX,XXXXXX     6/20/2000  N/A     6/25/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "5  XXXXXX,XS      6/20/2000  N/A     6/25/2000",
+      "text": "5  XXXXXX,XS      6/20/2000  N/A     6/25/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "6  XXXXXX,XR S    6/20/2000  N/A     6/28/2000",
+      "text": "6  XXXXXX,XR S    6/20/2000  N/A     6/28/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "7  XXXXXX,XXXX    6/20/2000  N/A     7/2/2000",
+      "text": "7  XXXXXX,XXXX    6/20/2000  N/A     7/2/2000",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Report run on 123 patients.",
+      "text": "Report run on 123 patients.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Applicable to 102 patients.",
+      "text": "Applicable to 102 patients.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminders Reports for Managers",
+      "text": "Reminders Reports for Managers",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Clinical Reminder reports can be defined and used for management and quality assurance purposes.",
+      "text": "Clinical Reminder reports can be defined and used for management and quality assurance purposes.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Aggregate reporting",
+      "text": "Aggregate reporting",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Employee Health Tracking",
+      "text": "Employee Health Tracking",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Inpatient education, exams, immunizations",
+      "text": "Inpatient education, exams, immunizations",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/111",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Reports on patients eligible for a study",
+      "text": "Reports on patients eligible for a study",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/112",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Identifying high risk patients",
+      "text": "Identifying high risk patients",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/113",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Disease-specific reminders: HCV, HIV, Melanoma, AAA, Diabetes",
+      "text": "Disease-specific reminders: HCV, HIV, Melanoma, AAA, Diabetes",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/114",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Comparisons of disease distribution or severity of illness between panels or clinics",
+      "text": "Comparisons of disease distribution or severity of illness between panels or clinics",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/115",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Identifying missed opportunities for intervention",
+      "text": "Identifying missed opportunities for intervention",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/116",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/117",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminders Due Report:  Summary",
+      "text": "Reminders Due Report:  Summary",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/118",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/119",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "# Patients with Reminder",
+      "text": "# Patients with Reminder",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/120",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Applicable  Due",
+      "text": "Applicable  Due",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/121",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "---------- ------",
+      "text": "---------- ------",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/122",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1  Pneumovax              33       4",
+      "text": "1  Pneumovax              33       4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/123",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "2  TD-Adult               35      11",
+      "text": "2  TD-Adult               35      11",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/124",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "3  Diabetes-Lipid         12       3",
+      "text": "3  Diabetes-Lipid         12       3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/125",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4  Chr Hepatitis-AFP       2       1",
+      "text": "4  Chr Hepatitis-AFP       2       1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/126",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "5  Prev Health Ed         35      10",
+      "text": "5  Prev Health Ed         35      10",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/127",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/128",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Report Run on 35 patients",
+      "text": "Report Run on 35 patients",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/129",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/130",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/131",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Implementing a Guideline using Reminders Reports",
+      "text": "Implementing a Guideline using Reminders Reports",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/132",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/133",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Hepatitis C Reminder",
+      "text": "Hepatitis C Reminder",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/134",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/135",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Evaluate the steps",
+      "text": "Evaluate the steps",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/136",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Who does what?",
+      "text": "Who does what?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/137",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Where does it get done?",
+      "text": "Where does it get done?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/138",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "What reminder(s) would help?",
+      "text": "What reminder(s) would help?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/139",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Create and implement a reminder for each step",
+      "text": "Create and implement a reminder for each step",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/140",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Screen all patients for risk factors/behaviors",
+      "text": "Screen all patients for risk factors/behaviors",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/141",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Test and educate patients with risk factors",
+      "text": "Test and educate patients with risk factors",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/142",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Educate patients with Hep C on the disease and transmission",
+      "text": "Educate patients with Hep C on the disease and transmission",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/143",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Evaluate Hep C patients for therapy",
+      "text": "Evaluate Hep C patients for therapy",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/144",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Evaluate Hep A status",
+      "text": "Evaluate Hep A status",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "7."
+    },
+    {
+      "self_ref": "#/texts/145",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Order interventions: AFP and ultrasound for Hep C and cirrhosis",
+      "text": "Order interventions: AFP and ultrasound for Hep C and cirrhosis",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "8."
+    },
+    {
+      "self_ref": "#/texts/146",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/147",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/148",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Monthly Report on all patients with this reminder due",
+      "text": "Monthly Report on all patients with this reminder due",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/149",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/150",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "# Patients with Reminder",
+      "text": "# Patients with Reminder",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/151",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Applicable   Due",
+      "text": "Applicable   Due",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/152",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "----------   ---",
+      "text": "----------   ---",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/153",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Hep C Risk Factor Screen     172        16",
+      "text": "Hep C Risk Factor Screen     172        16",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/154",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Hep C Test for Risk           30         7",
+      "text": "Hep C Test for Risk           30         7",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/155",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Hep C Diagnosis Missed         0         0",
+      "text": "Hep C Diagnosis Missed         0         0",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/156",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Hep C Diagnosis               36        36",
+      "text": "Hep C Diagnosis               36        36",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/157",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Hep C- Dz & Trans Ed          36        27",
+      "text": "Hep C- Dz & Trans Ed          36        27",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/158",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Hep C - Eval for Rx           36        15",
+      "text": "Hep C - Eval for Rx           36        15",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/159",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Chr Hep - Hep A Titer         45         3",
+      "text": "Chr Hep - Hep A Titer         45         3",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/160",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Hepatitis A Vaccine           19         4",
+      "text": "Hepatitis A Vaccine           19         4",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/161",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Chr Hepatitis - AFP           12         4",
+      "text": "Chr Hepatitis - AFP           12         4",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/162",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [
+        {
+          "cref": "#/texts/170"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Chr Hepatitis - U/S           13         6",
+      "text": "Chr Hepatitis - U/S           13         6",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/163",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/164",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Report run on 175 patients.",
+      "text": "Report run on 175 patients.",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/165",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/166",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/167",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/168",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/169",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/170",
+      "parent": {
+        "cref": "#/texts/162"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/groups/7"
+        },
+        {
+          "cref": "#/groups/8"
+        },
+        {
+          "cref": "#/groups/13"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Clinical Reminders Reports\n\nReports can be created by the following criteria: \n\nIndividual Patient \nHospital Location:  Future appointment/ past encounter by clinic or stop code: inpatients by current inpatients or by admission date\nOE/RR Team (all patients in team)\nPCMM Provider (all practitioner patients, either all patients or those with PC assignment only)\nPCMM Team (all patients in team)\n\nA SUMMARY report displays totals of how many patients of those selected have reminders due or applicable. \n\nThe SUMMARY report may include several reminders.\n\nA detailed report displays patients with reminders due in alphabetical order. The report displays for each patient the date the reminder is due, the date the reminder was last done, and the next appointment date. The detailed report can also list all future appointments. Detailed reports for Location or Provider may also be sorted by next appointment date.     \n\n The DETAILED report is for one reminder only.\n\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/7"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Clinical Reminders Reports\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClinician Desktop Service\n  Office of Information\n  Department of Veterans Affairs\n\n\nREDACTED",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/8"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "\n\nClinical Reminders\nReports\n\n\n\n\nStriving for Higher Quality in Patient Care\n\n\n\n\nQuality Assurance measures for clinicians and management \n\nProfiling of Guideline Compliance\n\nDecision support tools\n\n\n\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/13"
+            }
+          }
+        ],
+        "num_rows": 1,
+        "num_cols": 3,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Clinical Reminders Reports\n\nReports can be created by the following criteria: \n\nIndividual Patient \nHospital Location:  Future appointment/ past encounter by clinic or stop code: inpatients by current inpatients or by admission date\nOE/RR Team (all patients in team)\nPCMM Provider (all practitioner patients, either all patients or those with PC assignment only)\nPCMM Team (all patients in team)\n\nA SUMMARY report displays totals of how many patients of those selected have reminders due or applicable. \n\nThe SUMMARY report may include several reminders.\n\nA detailed report displays patients with reminders due in alphabetical order. The report displays for each patient the date the reminder is due, the date the reminder was last done, and the next appointment date. The detailed report can also list all future appointments. Detailed reports for Location or Provider may also be sorted by next appointment date.     \n\n The DETAILED report is for one reminder only.\n\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Clinical Reminders Reports\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClinician Desktop Service\n  Office of Information\n  Department of Veterans Affairs\n\n\nREDACTED",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "\n\nClinical Reminders\nReports\n\n\n\n\nStriving for Higher Quality in Patient Care\n\n\n\n\nQuality Assurance measures for clinicians and management \n\nProfiling of Guideline Compliance\n\nDecision support tools\n\n\n\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/1",
+      "parent": {
+        "cref": "#/texts/52"
+      },
+      "children": [
+        {
+          "cref": "#/groups/17"
+        },
+        {
+          "cref": "#/groups/19"
+        },
+        {
+          "cref": "#/groups/22"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Reminders Reports for Clinicians \n\nClinical Reminder reports can be defined and used for patient care in many ways, including the following:\n\nPatients in a panel or a clinic who have a reminder due\nIdentify patients who will be in a clinic in the next month who need an intervention\nIdentify patients who left the clinic in the past week who missed having an intervention\nInpatients with a reminder due, to define interventions needed prior to discharge\nInpatient education, exams, immunizations\n\n\nReminders Due Report: Detailed\n\nReminders Due for P/C CLUTIER for 6/20 to 7/4/2000\n\nPneumococcal vaccine: 7 patients have reminder Due\n\n                  Date Due Last Done Next Appt\n\n1  XXXXXS,XXXXN   6/20/2000  N/A     6/21/2000\n2  XXXXR,X E      6/20/2000  N/A     6/21/2000\n3  XX,XXXXXXD A   6/20/2000  N/A     6/23/2000\n4  XXX,XXXXXX     6/20/2000  N/A     6/25/2000\n5  XXXXXX,XS      6/20/2000  N/A     6/25/2000\n6  XXXXXX,XR S    6/20/2000  N/A     6/28/2000\n7  XXXXXX,XXXX    6/20/2000  N/A     7/2/2000\n\nReport run on 123 patients.\nApplicable to 102 patients.\n\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/17"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Reminders Reports for Managers\n\nClinical Reminder reports can be defined and used for management and quality assurance purposes.\n\nAggregate reporting\nEmployee Health Tracking\nInpatient education, exams, immunizations\nReports on patients eligible for a study\nIdentifying high risk patients\nDisease-specific reminders: HCV, HIV, Melanoma, AAA, Diabetes\nComparisons of disease distribution or severity of illness between panels or clinics\nIdentifying missed opportunities for intervention\n\nReminders Due Report:  Summary\n\n                # Patients with Reminder\n                     Applicable  Due \n                    ---------- ------\n1  Pneumovax              33       4\n2  TD-Adult               35      11\n3  Diabetes-Lipid         12       3\n4  Chr Hepatitis-AFP       2       1\n5  Prev Health Ed         35      10\n\nReport Run on 35 patients\n\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/19"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Implementing a Guideline using Reminders Reports\n\nHepatitis C Reminder\n\nEvaluate the steps \nWho does what?\nWhere does it get done?\nWhat reminder(s) would help?\nCreate and implement a reminder for each step\nScreen all patients for risk factors/behaviors\nTest and educate patients with risk factors\nEducate patients with Hep C on the disease and transmission\nEvaluate Hep C patients for therapy\nEvaluate Hep A status\nOrder interventions: AFP and ultrasound for Hep C and cirrhosis\n\n\nMonthly Report on all patients with this reminder due\n\n                     # Patients with Reminder  \n                           Applicable   Due\n                           ----------   ---\nHep C Risk Factor Screen     172        16\nHep C Test for Risk           30         7\nHep C Diagnosis Missed         0         0\nHep C Diagnosis               36        36\nHep C- Dz & Trans Ed          36        27\nHep C - Eval for Rx           36        15\nChr Hep - Hep A Titer         45         3\nHepatitis A Vaccine           19         4\nChr Hepatitis - AFP           12         4\nChr Hepatitis - U/S           13         6\n\nReport run on 175 patients.\n\n\n\n\n",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/22"
+            }
+          }
+        ],
+        "num_rows": 1,
+        "num_cols": 3,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Reminders Reports for Clinicians \n\nClinical Reminder reports can be defined and used for patient care in many ways, including the following:\n\nPatients in a panel or a clinic who have a reminder due\nIdentify patients who will be in a clinic in the next month who need an intervention\nIdentify patients who left the clinic in the past week who missed having an intervention\nInpatients with a reminder due, to define interventions needed prior to discharge\nInpatient education, exams, immunizations\n\n\nReminders Due Report: Detailed\n\nReminders Due for P/C CLUTIER for 6/20 to 7/4/2000\n\nPneumococcal vaccine: 7 patients have reminder Due\n\n                  Date Due Last Done Next Appt\n\n1  XXXXXS,XXXXN   6/20/2000  N/A     6/21/2000\n2  XXXXR,X E      6/20/2000  N/A     6/21/2000\n3  XX,XXXXXXD A   6/20/2000  N/A     6/23/2000\n4  XXX,XXXXXX     6/20/2000  N/A     6/25/2000\n5  XXXXXX,XS      6/20/2000  N/A     6/25/2000\n6  XXXXXX,XR S    6/20/2000  N/A     6/28/2000\n7  XXXXXX,XXXX    6/20/2000  N/A     7/2/2000\n\nReport run on 123 patients.\nApplicable to 102 patients.\n\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Reminders Reports for Managers\n\nClinical Reminder reports can be defined and used for management and quality assurance purposes.\n\nAggregate reporting\nEmployee Health Tracking\nInpatient education, exams, immunizations\nReports on patients eligible for a study\nIdentifying high risk patients\nDisease-specific reminders: HCV, HIV, Melanoma, AAA, Diabetes\nComparisons of disease distribution or severity of illness between panels or clinics\nIdentifying missed opportunities for intervention\n\nReminders Due Report:  Summary\n\n                # Patients with Reminder\n                     Applicable  Due \n                    ---------- ------\n1  Pneumovax              33       4\n2  TD-Adult               35      11\n3  Diabetes-Lipid         12       3\n4  Chr Hepatitis-AFP       2       1\n5  Prev Health Ed         35      10\n\nReport Run on 35 patients\n\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Implementing a Guideline using Reminders Reports\n\nHepatitis C Reminder\n\nEvaluate the steps \nWho does what?\nWhere does it get done?\nWhat reminder(s) would help?\nCreate and implement a reminder for each step\nScreen all patients for risk factors/behaviors\nTest and educate patients with risk factors\nEducate patients with Hep C on the disease and transmission\nEvaluate Hep C patients for therapy\nEvaluate Hep A status\nOrder interventions: AFP and ultrasound for Hep C and cirrhosis\n\n\nMonthly Report on all patients with this reminder due\n\n                     # Patients with Reminder  \n                           Applicable   Due\n                           ----------   ---\nHep C Risk Factor Screen     172        16\nHep C Test for Risk           30         7\nHep C Diagnosis Missed         0         0\nHep C Diagnosis               36        36\nHep C- Dz & Trans Ed          36        27\nHep C - Eval for Rx           36        15\nChr Hep - Hep A Titer         45         3\nHepatitis A Vaccine           19         4\nChr Hepatitis - AFP           12         4\nChr Hepatitis - U/S           13         6\n\nReport run on 175 patients.\n\n\n\n\n",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

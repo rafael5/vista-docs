@@ -1,0 +1,2573 @@
+{
+  "documents_ok": 5,
+  "documents_error": 0,
+  "errors": [],
+  "corpus_style_counts": {
+    "capture": 8656,
+    "Normal": 8034,
+    "Computer Screen": 2155,
+    "index 1": 1015,
+    "List Member": 291,
+    "Heading 4": 253,
+    "toc 3": 250,
+    "Heading 3": 247,
+    "CPRS capture": 203,
+    "Bullet list": 197,
+    "Body Text": 141,
+    "Heading 2": 112,
+    "Glossary": 112,
+    "Plain Text": 108,
+    "toc 2": 107,
+    "Note": 105,
+    "Helvetica": 94,
+    "List Paragraph": 93,
+    "Blank Line": 90,
+    "Heading 5": 89,
+    "Bullet Level 1": 88,
+    "Normal Page Title": 81,
+    "Style Top: (Single solid line Blue  0.75 pt Line width) Bottom: ...1": 75,
+    "screen": 55,
+    "Normal Indent1": 54,
+    "Bullet Level 2": 48,
+    "Q & A": 46,
+    "capture reverse": 43,
+    "C Screen Reversed": 34,
+    "listmember": 34,
+    "index 2": 33,
+    "Heading 1": 31,
+    "display": 31,
+    "toc 1": 30,
+    "Style Top: (Single solid line Blue  0.5 pt Line width) Bottom: (...": 25,
+    "Heading 6": 23,
+    "table of figures": 22,
+    "Caption table": 21,
+    "Title 2": 19,
+    "Body Text Indent": 16,
+    "List Continue 2": 13,
+    "Body Text Keep": 12,
+    "Table Entry": 11,
+    "Body Text Indent 2": 11,
+    "List Hanging": 11,
+    "First Page 2": 10,
+    "Technical": 10,
+    "Paragraph5": 9,
+    "screen display": 9,
+    "List Member 1": 8,
+    "CPRS Bullets": 8,
+    "Body Text Indent 3": 8,
+    "Default": 7,
+    "Date": 7,
+    "Style Arial 18 pt Bold Centered": 7,
+    "List Bullet 4": 7,
+    "First Page 3": 6,
+    "Header": 6,
+    "List": 6,
+    "Normal (Web)": 5,
+    "Caption": 5,
+    "Normal Indent": 5,
+    "Title": 4,
+    "Paragraph3": 4,
+    "Style Body Text + (Latin) Calibri Right:  0.15\" Before:  6 pt Co...1": 4,
+    "Style (Latin) Courier New 9 pt Right:  0.31\" After:  0 pt Top: ...": 4,
+    "Style (Latin) Courier New 9 pt Right:  0.19\" After:  0 pt Top: ...": 4,
+    "First Page 1": 3,
+    "Block Text": 3,
+    "CPRS H2 Body": 3,
+    "Cover Title Instructions": 3,
+    "Table Paragraph": 3,
+    "Style (Latin) Arial 10 pt After:  0 pt": 3,
+    "Normal Italics": 2,
+    "Body Text 2": 2,
+    "Instructional Text 1": 2,
+    "Continue Line": 2,
+    "CPRS H2 Body Char": 2,
+    "List 2": 2,
+    "List Number 3": 2,
+    "Tech Init": 2,
+    "Style Body Text + (Latin) Calibri Left:  0.13\" Right:  0.15\" Bef...": 2,
+    "Style Body Text + (Latin) Calibri Left:  0.25\" Right:  0.15\" Bef...": 2,
+    "Style Body Text + (Latin) Calibri Condensed by  0.05 pt": 2,
+    "TOC Heading": 1,
+    "header 2": 1,
+    "Style Body Text + Centered Before:  48 pt After:  48 pt": 1,
+    "Style Top: (Single solid line Blue  0.75 pt Line width) Bottom: ...": 1,
+    "Style Body Text + Black": 1,
+    "Dot Topic": 1,
+    "Style (Latin) Arial 18 pt Bold Centered": 1,
+    "List Bullet 2": 1,
+    "Style Body Text + (Latin) Arial 10 pt Left:  0.75\"": 1,
+    "Style Body Text + (Latin) Arial 10 pt Italic": 1,
+    "Style Body Text + (Latin) Arial 10 pt Condensed by  0.05 pt": 1,
+    "Style Body Text + (Latin) Calibri After:  0 pt Condensed by  0.05...1": 1,
+    "Style Body Text + (Latin) Calibri Left:  0.13\" Right:  0.15\" Aft...1": 1,
+    "Table Heading": 1,
+    "Bullet List-Normal 1": 1,
+    "Example": 1,
+    "HEADING": 1,
+    "Style (Latin) Courier New 10 pt Black Left:  0.14\"": 1,
+    "Continuation Title": 1
+  },
+  "standard_styles": [
+    "Heading 1",
+    "Heading 2",
+    "Heading 3",
+    "Normal",
+    "toc 1",
+    "toc 2",
+    "toc 3"
+  ],
+  "common_styles": [
+    "Blank Line",
+    "Block Text",
+    "Body Text",
+    "Body Text 2",
+    "Body Text Indent",
+    "Body Text Indent 2",
+    "C Screen Reversed",
+    "CPRS H2 Body",
+    "Caption",
+    "Computer Screen",
+    "Date",
+    "Default",
+    "First Page 3",
+    "Glossary",
+    "Header",
+    "Heading 4",
+    "Heading 5",
+    "Heading 6",
+    "Helvetica",
+    "List Member",
+    "List Paragraph",
+    "Normal (Web)",
+    "Normal Indent1",
+    "Note",
+    "Table Entry",
+    "Title",
+    "Title 2",
+    "capture",
+    "capture reverse",
+    "index 1",
+    "index 2",
+    "listmember"
+  ],
+  "one_off_styles": [
+    "Body Text Indent 3",
+    "Body Text Keep",
+    "Bullet Level 1",
+    "Bullet Level 2",
+    "Bullet List-Normal 1",
+    "Bullet list",
+    "CPRS Bullets",
+    "CPRS H2 Body Char",
+    "CPRS capture",
+    "Caption table",
+    "Continuation Title",
+    "Continue Line",
+    "Cover Title Instructions",
+    "Dot Topic",
+    "Example",
+    "First Page 1",
+    "First Page 2",
+    "HEADING",
+    "Instructional Text 1",
+    "List",
+    "List 2",
+    "List Bullet 2",
+    "List Bullet 4",
+    "List Continue 2",
+    "List Hanging",
+    "List Member 1",
+    "List Number 3",
+    "Normal Indent",
+    "Normal Italics",
+    "Normal Page Title",
+    "Paragraph3",
+    "Paragraph5",
+    "Plain Text",
+    "Q & A",
+    "Style (Latin) Arial 10 pt After:  0 pt",
+    "Style (Latin) Arial 18 pt Bold Centered",
+    "Style (Latin) Courier New 10 pt Black Left:  0.14\"",
+    "Style (Latin) Courier New 9 pt Right:  0.19\" After:  0 pt Top: ...",
+    "Style (Latin) Courier New 9 pt Right:  0.31\" After:  0 pt Top: ...",
+    "Style Arial 18 pt Bold Centered",
+    "Style Body Text + (Latin) Arial 10 pt Condensed by  0.05 pt",
+    "Style Body Text + (Latin) Arial 10 pt Italic",
+    "Style Body Text + (Latin) Arial 10 pt Left:  0.75\"",
+    "Style Body Text + (Latin) Calibri After:  0 pt Condensed by  0.05...1",
+    "Style Body Text + (Latin) Calibri Condensed by  0.05 pt",
+    "Style Body Text + (Latin) Calibri Left:  0.13\" Right:  0.15\" Aft...1",
+    "Style Body Text + (Latin) Calibri Left:  0.13\" Right:  0.15\" Bef...",
+    "Style Body Text + (Latin) Calibri Left:  0.25\" Right:  0.15\" Bef...",
+    "Style Body Text + (Latin) Calibri Right:  0.15\" Before:  6 pt Co...1",
+    "Style Body Text + Black",
+    "Style Body Text + Centered Before:  48 pt After:  48 pt",
+    "Style Top: (Single solid line Blue  0.5 pt Line width) Bottom: (...",
+    "Style Top: (Single solid line Blue  0.75 pt Line width) Bottom: ...",
+    "Style Top: (Single solid line Blue  0.75 pt Line width) Bottom: ...1",
+    "TOC Heading",
+    "Table Heading",
+    "Table Paragraph",
+    "Tech Init",
+    "Technical",
+    "display",
+    "header 2",
+    "screen",
+    "screen display",
+    "table of figures"
+  ],
+  "table_type_counts": {
+    "reference-table": 145,
+    "hl7-segment": 9,
+    "revision": 4,
+    "menu-option": 4,
+    "acronym-glossary": 1,
+    "comparison": 1
+  },
+  "callout_counts": {
+    "NOTE": 121,
+    "WARNING": 1,
+    "IMPORTANT": 2,
+    "CAUTION": 1
+  },
+  "pseudo_heading_count": 783,
+  "pseudo_heading_top": {
+    "----------------------------------------------------------------------------------": 15,
+    "ENTRY ACTION:": 10,
+    "EXIT ACTION:": 10,
+    "--------------------------------------------------------------------------------": 9,
+    "_______________________________________________________________________________": 7,
+    "\u00a6                                                                         \u00a6": 7,
+    "? Help     > Scroll Right     PS/PL Print Screen/List     >>>": 7,
+    "FAQs cont\u2019d": 7,
+    "+         ?Help   >ScrollRight   PS/PL PrintScrn/List   +/-             >>>": 6,
+    "TYPE: event driver": 5,
+    "TRANSACTION MESSAGE TYPE: MDM                        EVENT TYPE: T02": 5,
+    "MESSAGE STRUCTURE:": 5,
+    "ACCEPT ACK CODE: AL               APPLICATION ACK TYPE: NE": 5,
+    "RESPONSE PROCESSING RTN:": 5,
+    "SUBSCRIBERS": 5,
+    "TYPE: subscriber": 5,
+    "RESPONSE MESSAGE TYPE: ACK                            EVENT TYPE: T02": 5,
+    "SENDING FACILITY REQUIRED?: YES          RECEIVING FACILITY REQUIRED?: YES": 5,
+    "ROUTING LOGIC:": 5,
+    "Std Title: NONVA NOTE": 5,
+    "POST-SIGNATURE CODE: D EN^TIUCCRHL()": 5,
+    "Basics": 5,
+    "Exported User Classes cont\u2019d": 5,
+    "DESCRIPTION (wp):   [Empty.]": 4,
+    "PROCESSING ID:                            VERSION ID: 2.4": 4,
+    "DESCRIPTION (wp):   [Empty]": 4,
+    "SECURITY REQUIRED?: NO": 4,
+    "PROCESSING RTN:\t D PROCMSG^TIUHL7P1": 4,
+    "HL7 INTERFACE SETUP         \t\t\t\tPAGE 1 OF 2": 4,
+    "==================================================================================": 4
+  },
+  "total_internal_page_refs": 13,
+  "total_terminal_lines": 846,
+  "external_doc_refs": {
+    "See the VHA HANDBOOK": 3,
+    "See the section Applying the Upload Utility to New Document": 2,
+    "refer to the HL7 document": 1,
+    "see the details of your new Document": 1,
+    "See the section  in this manual": 1,
+    "See the TIU Implementation Guide": 1,
+    "See the User and Technical Manual": 1,
+    "see the TIU/ASU Implementation Guide": 1,
+    "See the ASU Clinical Coordinator Manual": 1,
+    "See the TIU Technical Manual": 1,
+    "refer to the install guide": 1,
+    "See the Text Integration Utilities Implementation Guide": 1,
+    "see the field descriptions for the Document": 1,
+    "See the DBA menu/Integration Reference": 1,
+    "See the Implementation and Management section in this manual": 1,
+    "See the Health Summary User Manual": 1
+  },
+  "docs_with_toc": 5,
+  "docs_with_revision_table": 4,
+  "docs_with_index": 0,
+  "docs_with_pseudo_headings": 5,
+  "per_doc": [
+    {
+      "filename": "tiuhl7.docx",
+      "path": "/Users/rafael/vista-docs/raw/tiu/tiuhl7.docx",
+      "para_count": 2477,
+      "heading_count": 160,
+      "toc_entry_count": 82,
+      "table_count": 61,
+      "table_types": {
+        "reference-table": 52,
+        "hl7-segment": 9
+      },
+      "pseudo_headings": 284,
+      "callouts": {
+        "NOTE": 4
+      },
+      "terminal_lines": 35,
+      "page_refs": 3,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 34,
+      "tables_detail": [
+        {
+          "rows": 5,
+          "cols": 4,
+          "header_tokens": [
+            "date",
+            "event",
+            "manager",
+            "pages",
+            "project",
+            "tech",
+            "writer"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 6,
+          "header_tokens": [
+            "assigning",
+            "authority",
+            "code",
+            "hl7",
+            "identifier",
+            "position",
+            "segment",
+            "type"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 4,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 4,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 2,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 2,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 6,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 2,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 6,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 2,
+          "cols": 5,
+          "header_tokens": [
+            "comment",
+            "content",
+            "field",
+            "hl7",
+            "position",
+            "segment",
+            "use"
+          ],
+          "type": "hl7-segment"
+        },
+        {
+          "rows": 7,
+          "cols": 5,
+          "header_tokens": [
+            "character",
+            "delimiter",
+            "encoding",
+            "escape",
+            "position",
+            "sequence",
+            "suggested",
+            "usage",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 35,
+          "cols": 2,
+          "header_tokens": [
+            "acronym",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 3,
+          "header_tokens": [
+            "",
+            "data"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 3,
+          "header_tokens": [
+            "all",
+            "and",
+            "application",
+            "home",
+            "identification",
+            "identify",
+            "in",
+            "msh",
+            "obx",
+            "placed",
+            "segments",
+            "server"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 3,
+          "header_tokens": [
+            "all",
+            "and",
+            "application",
+            "home",
+            "identification",
+            "identify",
+            "in",
+            "msh",
+            "obx",
+            "placed",
+            "segments",
+            "server"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 3,
+          "header_tokens": [
+            "all",
+            "and",
+            "application",
+            "home",
+            "identification",
+            "identify",
+            "in",
+            "msh",
+            "obx",
+            "placed",
+            "segments",
+            "server"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 1,
+          "header_tokens": [
+            "implementation",
+            "note:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 18,
+          "cols": 2,
+          "header_tokens": [
+            "-",
+            "generic",
+            "hl7",
+            "id",
+            "interface",
+            "rev",
+            "tiu",
+            "with"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "-",
+            "abbreviations:",
+            "c",
+            "ce",
+            "codes:",
+            "conditional",
+            "datatype",
+            "dt",
+            "empty",
+            "len",
+            "length",
+            "max"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 1,
+          "header_tokens": [
+            "msh",
+            "segment:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 28,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 25,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 25,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 25,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 1,
+          "header_tokens": [
+            "evn",
+            "segment:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 14,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 1,
+          "header_tokens": [
+            "pid",
+            "segment:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 26,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 21,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 21,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 21,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 1,
+          "header_tokens": [
+            "pv1",
+            "segment:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 15,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 15,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 24,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 1,
+          "header_tokens": [
+            "segment:",
+            "txa"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 15,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 22,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 22,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 18,
+          "cols": 24,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 15,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 21,
+          "cols": 24,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 1,
+          "header_tokens": [
+            "obx",
+            "segment:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 20,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 13,
+          "header_tokens": [
+            "dt",
+            "ex",
+            "fixed",
+            "len",
+            "max",
+            "min",
+            "name",
+            "opt",
+            "predicate",
+            "reference",
+            "rep",
+            "seq"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "tiuim.docx",
+      "path": "/Users/rafael/vista-docs/raw/tiu/tiuim.docx",
+      "para_count": 6303,
+      "heading_count": 172,
+      "toc_entry_count": 111,
+      "table_count": 12,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 11
+      },
+      "pseudo_headings": 202,
+      "callouts": {
+        "NOTE": 46,
+        "WARNING": 1
+      },
+      "terminal_lines": 293,
+      "page_refs": 1,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 45,
+      "tables_detail": [
+        {
+          "rows": 19,
+          "cols": 3,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "manager",
+            "project"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 15,
+          "cols": 2,
+          "header_tokens": [
+            "action",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 15,
+          "cols": 5,
+          "header_tokens": [
+            "actions",
+            "limitations",
+            "status",
+            "type",
+            "user"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "mis",
+            "provider"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 11,
+          "cols": 4,
+          "header_tokens": [
+            "description",
+            "sequence",
+            "status",
+            "symbol"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 23,
+          "cols": 1,
+          "header_tokens": [
+            "[tiu",
+            "access",
+            "document",
+            "edit",
+            "edit]",
+            "following",
+            "irm",
+            "maintenance",
+            "menu",
+            "menu:",
+            "menu]",
+            "parameter"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 23,
+          "cols": 1,
+          "header_tokens": [
+            "[tiu",
+            "access",
+            "document",
+            "edit",
+            "edit]",
+            "following",
+            "irm",
+            "maintenance",
+            "menu",
+            "menu:",
+            "menu]",
+            "parameter"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 26,
+          "cols": 2,
+          "header_tokens": [
+            "(class)",
+            "1",
+            "a",
+            "be",
+            "by",
+            "clinical",
+            "completed",
+            "may",
+            "procedure",
+            "user",
+            "viewed"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "tiu_util.docx",
+      "path": "/Users/rafael/vista-docs/raw/tiu/tiu_util.docx",
+      "para_count": 332,
+      "heading_count": 11,
+      "toc_entry_count": 12,
+      "table_count": 5,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 4
+      },
+      "pseudo_headings": 2,
+      "callouts": {
+        "NOTE": 7,
+        "IMPORTANT": 1
+      },
+      "terminal_lines": 2,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 15,
+      "tables_detail": [
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "version"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "1",
+            "additional",
+            "at",
+            "date",
+            "default",
+            "ending",
+            "is",
+            "least",
+            "oldest",
+            "outstanding",
+            "range",
+            "signature."
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 2,
+          "header_tokens": [
+            "column",
+            "definition",
+            "field"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            ""
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            ""
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "tiuum.docx",
+      "path": "/Users/rafael/vista-docs/raw/tiu/tiuum.docx",
+      "para_count": 8489,
+      "heading_count": 152,
+      "toc_entry_count": 88,
+      "table_count": 35,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 31,
+        "menu-option": 3
+      },
+      "pseudo_headings": 250,
+      "callouts": {
+        "NOTE": 15,
+        "CAUTION": 1
+      },
+      "terminal_lines": 331,
+      "page_refs": 3,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 39,
+      "tables_detail": [
+        {
+          "rows": 54,
+          "cols": 3,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "patch"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "purpose",
+            "section"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 17,
+          "cols": 2,
+          "header_tokens": [
+            "action",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "action",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 11,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "status"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 17,
+          "cols": 2,
+          "header_tokens": [
+            "action",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "icon",
+            "meaning"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "meaning",
+            "symbol"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 11,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "status"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 2,
+          "header_tokens": [
+            "actions",
+            "description"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 3,
+          "header_tokens": [
+            "caption",
+            "document",
+            "of",
+            "type",
+            "use"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 16,
+          "cols": 3,
+          "header_tokens": [
+            "caption",
+            "document",
+            "of",
+            "type",
+            "use"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 14,
+          "cols": 3,
+          "header_tokens": [
+            "caption",
+            "document",
+            "of",
+            "type",
+            "use"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 11,
+          "cols": 4,
+          "header_tokens": [
+            "assign",
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text",
+            "to:"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "tiutm.docx",
+      "path": "/Users/rafael/vista-docs/raw/tiu/tiutm.docx",
+      "para_count": 5820,
+      "heading_count": 260,
+      "toc_entry_count": 94,
+      "table_count": 51,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 47,
+        "acronym-glossary": 1,
+        "comparison": 1,
+        "menu-option": 1
+      },
+      "pseudo_headings": 45,
+      "callouts": {
+        "NOTE": 49,
+        "IMPORTANT": 1
+      },
+      "terminal_lines": 185,
+      "page_refs": 6,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 56,
+      "tables_detail": [
+        {
+          "rows": 58,
+          "cols": 3,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "manager",
+            "project"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "definition",
+            "term"
+          ],
+          "type": "acronym-glossary"
+        },
+        {
+          "rows": 15,
+          "cols": 5,
+          "header_tokens": [
+            "actions",
+            "limitations",
+            "status",
+            "type",
+            "user"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 4,
+          "header_tokens": [
+            "assign",
+            "description",
+            "name",
+            "option",
+            "to:"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 51,
+          "cols": 5,
+          "header_tokens": [
+            "action",
+            "cprs",
+            "function",
+            "gui",
+            "lmgr",
+            "oe",
+            "rr",
+            "tiu",
+            "v15.10"
+          ],
+          "type": "comparison"
+        },
+        {
+          "rows": 34,
+          "cols": 3,
+          "header_tokens": [
+            "#",
+            "description",
+            "file",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 37,
+          "cols": 6,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 27,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "description",
+            "field",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 15,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name",
+            "x-ref"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 2,
+          "header_tokens": [
+            "minimum",
+            "package",
+            "version"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "package",
+            "patch"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "package",
+            "patch"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 104,
+          "cols": 3,
+          "header_tokens": [
+            "availability",
+            "description",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 4,
+          "header_tokens": [
+            "assign",
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text",
+            "to:"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "parameter",
+            "values"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "1",
+            "additional",
+            "at",
+            "date",
+            "default",
+            "ending",
+            "is",
+            "least",
+            "oldest",
+            "outstanding",
+            "range",
+            "signature."
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 2,
+          "header_tokens": [
+            "column",
+            "definition",
+            "field"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    }
+  ]
+}

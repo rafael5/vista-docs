@@ -1,0 +1,5192 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "px_1_p164_rn",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 221326715226124052,
+    "filename": "px_1_p164_rn.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/texts/0"
+      },
+      {
+        "cref": "#/texts/1"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/33"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/34"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/35"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/tables/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/36"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "rich_cell_group_1_3_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/texts/125"
+      },
+      "children": [
+        {
+          "cref": "#/texts/128"
+        },
+        {
+          "cref": "#/texts/134"
+        },
+        {
+          "cref": "#/texts/135"
+        },
+        {
+          "cref": "#/texts/136"
+        },
+        {
+          "cref": "#/texts/137"
+        },
+        {
+          "cref": "#/texts/138"
+        },
+        {
+          "cref": "#/texts/139"
+        },
+        {
+          "cref": "#/texts/142"
+        },
+        {
+          "cref": "#/texts/143"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/texts/128"
+      },
+      "children": [
+        {
+          "cref": "#/texts/129"
+        },
+        {
+          "cref": "#/texts/130"
+        },
+        {
+          "cref": "#/texts/131"
+        },
+        {
+          "cref": "#/texts/132"
+        },
+        {
+          "cref": "#/texts/133"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "cref": "#/texts/139"
+      },
+      "children": [
+        {
+          "cref": "#/texts/140"
+        },
+        {
+          "cref": "#/texts/141"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/2"
+        },
+        {
+          "cref": "#/texts/3"
+        },
+        {
+          "cref": "#/texts/4"
+        },
+        {
+          "cref": "#/texts/5"
+        },
+        {
+          "cref": "#/texts/6"
+        },
+        {
+          "cref": "#/texts/7"
+        },
+        {
+          "cref": "#/texts/8"
+        },
+        {
+          "cref": "#/texts/9"
+        },
+        {
+          "cref": "#/texts/10"
+        },
+        {
+          "cref": "#/texts/11"
+        },
+        {
+          "cref": "#/texts/12"
+        },
+        {
+          "cref": "#/texts/13"
+        },
+        {
+          "cref": "#/texts/14"
+        },
+        {
+          "cref": "#/texts/15"
+        },
+        {
+          "cref": "#/texts/16"
+        },
+        {
+          "cref": "#/texts/17"
+        },
+        {
+          "cref": "#/texts/18"
+        },
+        {
+          "cref": "#/texts/19"
+        },
+        {
+          "cref": "#/texts/20"
+        },
+        {
+          "cref": "#/texts/21"
+        },
+        {
+          "cref": "#/texts/22"
+        },
+        {
+          "cref": "#/texts/23"
+        },
+        {
+          "cref": "#/texts/24"
+        },
+        {
+          "cref": "#/texts/25"
+        },
+        {
+          "cref": "#/texts/26"
+        },
+        {
+          "cref": "#/texts/27"
+        },
+        {
+          "cref": "#/texts/28"
+        },
+        {
+          "cref": "#/texts/29"
+        },
+        {
+          "cref": "#/texts/30"
+        },
+        {
+          "cref": "#/texts/31"
+        },
+        {
+          "cref": "#/texts/32"
+        },
+        {
+          "cref": "#/tables/0"
+        },
+        {
+          "cref": "#/texts/37"
+        },
+        {
+          "cref": "#/texts/38"
+        },
+        {
+          "cref": "#/texts/39"
+        },
+        {
+          "cref": "#/texts/40"
+        },
+        {
+          "cref": "#/texts/41"
+        },
+        {
+          "cref": "#/texts/42"
+        },
+        {
+          "cref": "#/texts/43"
+        },
+        {
+          "cref": "#/texts/44"
+        },
+        {
+          "cref": "#/texts/45"
+        },
+        {
+          "cref": "#/texts/46"
+        },
+        {
+          "cref": "#/texts/47"
+        },
+        {
+          "cref": "#/texts/48"
+        },
+        {
+          "cref": "#/texts/49"
+        },
+        {
+          "cref": "#/texts/50"
+        },
+        {
+          "cref": "#/texts/51"
+        },
+        {
+          "cref": "#/texts/52"
+        },
+        {
+          "cref": "#/texts/53"
+        },
+        {
+          "cref": "#/texts/54"
+        },
+        {
+          "cref": "#/texts/55"
+        },
+        {
+          "cref": "#/texts/56"
+        },
+        {
+          "cref": "#/texts/57"
+        },
+        {
+          "cref": "#/texts/58"
+        },
+        {
+          "cref": "#/texts/59"
+        },
+        {
+          "cref": "#/texts/60"
+        },
+        {
+          "cref": "#/texts/61"
+        },
+        {
+          "cref": "#/texts/62"
+        },
+        {
+          "cref": "#/texts/63"
+        },
+        {
+          "cref": "#/texts/64"
+        },
+        {
+          "cref": "#/texts/65"
+        },
+        {
+          "cref": "#/texts/66"
+        },
+        {
+          "cref": "#/texts/67"
+        },
+        {
+          "cref": "#/texts/68"
+        },
+        {
+          "cref": "#/texts/69"
+        },
+        {
+          "cref": "#/texts/70"
+        },
+        {
+          "cref": "#/texts/71"
+        },
+        {
+          "cref": "#/texts/72"
+        },
+        {
+          "cref": "#/texts/73"
+        },
+        {
+          "cref": "#/texts/74"
+        },
+        {
+          "cref": "#/texts/75"
+        },
+        {
+          "cref": "#/texts/76"
+        },
+        {
+          "cref": "#/texts/77"
+        },
+        {
+          "cref": "#/texts/78"
+        },
+        {
+          "cref": "#/texts/79"
+        },
+        {
+          "cref": "#/texts/80"
+        },
+        {
+          "cref": "#/texts/81"
+        },
+        {
+          "cref": "#/texts/82"
+        },
+        {
+          "cref": "#/texts/83"
+        },
+        {
+          "cref": "#/texts/84"
+        },
+        {
+          "cref": "#/texts/85"
+        },
+        {
+          "cref": "#/texts/86"
+        },
+        {
+          "cref": "#/texts/87"
+        },
+        {
+          "cref": "#/texts/88"
+        },
+        {
+          "cref": "#/texts/89"
+        },
+        {
+          "cref": "#/texts/90"
+        },
+        {
+          "cref": "#/texts/91"
+        },
+        {
+          "cref": "#/texts/92"
+        },
+        {
+          "cref": "#/texts/93"
+        },
+        {
+          "cref": "#/texts/94"
+        },
+        {
+          "cref": "#/texts/95"
+        },
+        {
+          "cref": "#/texts/96"
+        },
+        {
+          "cref": "#/texts/97"
+        },
+        {
+          "cref": "#/texts/98"
+        },
+        {
+          "cref": "#/texts/99"
+        },
+        {
+          "cref": "#/texts/100"
+        },
+        {
+          "cref": "#/texts/101"
+        },
+        {
+          "cref": "#/texts/102"
+        },
+        {
+          "cref": "#/texts/103"
+        },
+        {
+          "cref": "#/texts/144"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "title",
+      "prov": [],
+      "orig": "PATIENT CARE ENCOUNTER\n(PCE)\n\nRelease Notes\nPX*1.0*164",
+      "text": "PATIENT CARE ENCOUNTER\n(PCE)\n\nRelease Notes\nPX*1.0*164",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "February 2006",
+      "text": "February 2006",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Department of Veterans Affairs\n Health System Design & Development",
+      "text": "Department of Veterans Affairs\n Health System Design & Development",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Revision History",
+      "text": "Revision History",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Date",
+      "text": "Date",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Revision",
+      "text": "Revision",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Description",
+      "text": "Description",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Author",
+      "text": "Author",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Table of Contents",
+      "text": "Table of Contents",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Introduction\t1",
+      "text": "Introduction\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Patient Financial Services System\t1",
+      "text": "Patient Financial Services System\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Software Interfaces\t1",
+      "text": "Software Interfaces\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Overview of New Functionality\t1",
+      "text": "Overview of New Functionality\t1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Package Name Enhancements\t2",
+      "text": "Package Name Enhancements\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Options and Actions\t2",
+      "text": "Options and Actions\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reports and Profiles\t2",
+      "text": "Reports and Profiles\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Files and Fields\t2",
+      "text": "Files and Fields\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "New Files\t2",
+      "text": "New Files\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Changed Files\t2",
+      "text": "Changed Files\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VISIT file (#9000010)\t2",
+      "text": "VISIT file (#9000010)\t2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VCPT file (#9000010.18)\t3",
+      "text": "VCPT file (#9000010.18)\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Other Functionality\t3",
+      "text": "Other Functionality\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Charge Message SC/EI Classifications\t3",
+      "text": "Charge Message SC/EI Classifications\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "API Changes\t3",
+      "text": "API Changes\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1889 NAME: DBIA 1889-A (DATA2PCE)\t3",
+      "text": "1889 NAME: DBIA 1889-A (DATA2PCE)\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "ACCOUNT\t3",
+      "text": "ACCOUNT\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PROCEDURE\t3",
+      "text": "PROCEDURE\t3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1900 NAME: DBIA 1900-A\t4",
+      "text": "1900 NAME: DBIA 1900-A\t4",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "^VSIT\t5",
+      "text": "^VSIT\t5",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/104"
+        },
+        {
+          "cref": "#/texts/108"
+        },
+        {
+          "cref": "#/texts/125"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Introduction",
+      "text": "Introduction",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "cref": "#/texts/103"
+      },
+      "children": [
+        {
+          "cref": "#/texts/105"
+        },
+        {
+          "cref": "#/texts/106"
+        },
+        {
+          "cref": "#/texts/107"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Patient Financial Services System",
+      "text": "Patient Financial Services System",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "cref": "#/texts/104"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Patient Care Encounter (PCE) patch is part of the Patient Financial Services System (PFSS) project. PFSS patches are being released on various schedules. Some patch functionality will not be active until a new PFSS switch is activated during final implementation. PFSS will initially be implemented at select pilot sites ONLY.",
+      "text": "The Patient Care Encounter (PCE) patch is part of the Patient Financial Services System (PFSS) project. PFSS patches are being released on various schedules. Some patch functionality will not be active until a new PFSS switch is activated during final implementation. PFSS will initially be implemented at select pilot sites ONLY.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "cref": "#/texts/104"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The purpose of the PFSS project is to prepare the Veterans Health Information Systems and Technology Architecture () environment for the implementation of a commercial off-the-shelf (COTS) billing replacement system. The project consists of the implementation of the billing replacement system, business process improvements, and enhancements to  to support integration with the COTS billing replacement system. Significant changes to  legacy systems and ancillary packages are necessary.",
+      "text": "The purpose of the PFSS project is to prepare the Veterans Health Information Systems and Technology Architecture () environment for the implementation of a commercial off-the-shelf (COTS) billing replacement system. The project consists of the implementation of the billing replacement system, business process improvements, and enhancements to  to support integration with the COTS billing replacement system. Significant changes to  legacy systems and ancillary packages are necessary.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "cref": "#/texts/104"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "These PFSS software components are not operational until the PFSS On/Off Switch, distributed with patch IB*2*260, is set to \"ON\". The ability for the local site to set the switch to \"ON\" will be provided at the appropriate time with the release of a subsequent Integrated Billing (IB) patch. For more information about the PFSS project, review the documentation accompanying this patch and refer to the following website: REDACTED/.",
+      "text": "These PFSS software components are not operational until the PFSS On/Off Switch, distributed with patch IB*2*260, is set to \"ON\". The ability for the local site to set the switch to \"ON\" will be provided at the appropriate time with the release of a subsequent Integrated Billing (IB) patch. For more information about the PFSS project, review the documentation accompanying this patch and refer to the following website: REDACTED/.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "cref": "#/texts/103"
+      },
+      "children": [
+        {
+          "cref": "#/texts/109"
+        },
+        {
+          "cref": "#/texts/110"
+        },
+        {
+          "cref": "#/texts/111"
+        },
+        {
+          "cref": "#/texts/112"
+        },
+        {
+          "cref": "#/texts/113"
+        },
+        {
+          "cref": "#/texts/114"
+        },
+        {
+          "cref": "#/texts/115"
+        },
+        {
+          "cref": "#/texts/116"
+        },
+        {
+          "cref": "#/texts/117"
+        },
+        {
+          "cref": "#/texts/118"
+        },
+        {
+          "cref": "#/texts/119"
+        },
+        {
+          "cref": "#/texts/120"
+        },
+        {
+          "cref": "#/texts/121"
+        },
+        {
+          "cref": "#/texts/122"
+        },
+        {
+          "cref": "#/texts/123"
+        },
+        {
+          "cref": "#/texts/124"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Software Interfaces",
+      "text": "Software Interfaces",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PCE processing assumes the following  packages are installed and fully patched:",
+      "text": "PCE processing assumes the following  packages are installed and fully patched:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/111",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Kernel\t\t\t\tV.8.0",
+      "text": "Kernel\t\t\t\tV.8.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/112",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VA FileMan\t\t\tV.22.0",
+      "text": "VA FileMan\t\t\tV.22.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/113",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "MailMan \t\t\t\tV.8.0",
+      "text": "MailMan \t\t\t\tV.8.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/114",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "CPT/HCPCS Codes \t\tV.6.0",
+      "text": "CPT/HCPCS Codes \t\tV.6.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/115",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "DSS \t\t\t\tV.3.0",
+      "text": "DSS \t\t\t\tV.3.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/116",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PCE\t\t\t\tV.1.0",
+      "text": "PCE\t\t\t\tV.1.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/117",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "ICD\t\t\t\tV.18",
+      "text": "ICD\t\t\t\tV.18",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/118",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "LEX\t\t\t\tV.2.0",
+      "text": "LEX\t\t\t\tV.2.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/119",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "IB\t\t\t\tV.2.0",
+      "text": "IB\t\t\t\tV.2.0",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/120",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/121",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PX*1.0*164 requires the prior installation of the following patches:",
+      "text": "PX*1.0*164 requires the prior installation of the following patches:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/122",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "IB*2*286",
+      "text": "IB*2*286",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/123",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "SD*5.3*430",
+      "text": "SD*5.3*430",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/124",
+      "parent": {
+        "cref": "#/texts/108"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/125",
+      "parent": {
+        "cref": "#/texts/103"
+      },
+      "children": [
+        {
+          "cref": "#/texts/126"
+        },
+        {
+          "cref": "#/texts/127"
+        },
+        {
+          "cref": "#/groups/4"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Overview of New Functionality",
+      "text": "Overview of New Functionality",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/126",
+      "parent": {
+        "cref": "#/texts/125"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/127",
+      "parent": {
+        "cref": "#/texts/125"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The PCE PFSS 1B project will add the following new functionality to the PCE Application:",
+      "text": "The PCE PFSS 1B project will add the following new functionality to the PCE Application:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/128",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [
+        {
+          "cref": "#/groups/5"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/129",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A new field, PFSS Account Reference, which is used by the external billing system to attach charges for 1",
+      "text": "A new field, PFSS Account Reference, which is used by the external billing system to attach charges for 1",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/130",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "st",
+      "text": "st",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "super"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/131",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "and 3",
+      "text": "and 3",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/132",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "rd",
+      "text": "rd",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "super"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/133",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "party billing.",
+      "text": "party billing.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/134",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "PCE now determines if there is a PFSS Account Reference available either by being passed-in with a DATA2PCE API call, or by association with a scheduled appointment, or through association with an order.",
+      "text": "PCE now determines if there is a PFSS Account Reference available either by being passed-in with a DATA2PCE API call, or by association with a scheduled appointment, or through association with an order.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/135",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "If no PFSS Account Reference is available, PCE will call the Integrated Billing subsystem (IBB) Get Account API to create a new PFSS Account Reference.",
+      "text": "If no PFSS Account Reference is available, PCE will call the Integrated Billing subsystem (IBB) Get Account API to create a new PFSS Account Reference.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/136",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "A new field, Department Code, which defines the service area for a charge.",
+      "text": "A new field, Department Code, which defines the service area for a charge.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/137",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "A new field, PFSS Charge ID, which uniquely identifies each charge item in the external billing system.",
+      "text": "A new field, PFSS Charge ID, which uniquely identifies each charge item in the external billing system.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/138",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Changes to the DATA2PCE API and Visit Tracking to accommodate the new fields.",
+      "text": "Changes to the DATA2PCE API and Visit Tracking to accommodate the new fields.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/139",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [
+        {
+          "cref": "#/groups/6"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/140",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A new filer routine used to file charges into the Integrated Billing subsystem (IBB) cache buffer",
+      "text": "A new filer routine used to file charges into the Integrated Billing subsystem (IBB) cache buffer",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/141",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".",
+      "text": ".",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/142",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "New dynamically created Charge Message SC/EI classifications for procedures that are auto-populated based on the procedure clinical indicators and are filed with the charge message into the IBB cache buffer.",
+      "text": "New dynamically created Charge Message SC/EI classifications for procedures that are auto-populated based on the procedure clinical indicators and are filed with the charge message into the IBB cache buffer.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/143",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "A new post-installation routine to activate the Order/Entry Result Reporting package in the Visit Tracking Parameters (#150.9) file.",
+      "text": "A new post-installation routine to activate the Order/Entry Result Reporting package in the Visit Tracking Parameters (#150.9) file.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/144",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/145"
+        },
+        {
+          "cref": "#/texts/146"
+        },
+        {
+          "cref": "#/texts/148"
+        },
+        {
+          "cref": "#/texts/150"
+        },
+        {
+          "cref": "#/texts/164"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Package Name Enhancements",
+      "text": "Package Name Enhancements",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/145",
+      "parent": {
+        "cref": "#/texts/144"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The new features, functions, and enhancements of the PCE package are grouped and discussed in detail in the following sections.",
+      "text": "The new features, functions, and enhancements of the PCE package are grouped and discussed in detail in the following sections.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/146",
+      "parent": {
+        "cref": "#/texts/144"
+      },
+      "children": [
+        {
+          "cref": "#/texts/147"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Options and Actions",
+      "text": "Options and Actions",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/147",
+      "parent": {
+        "cref": "#/texts/146"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "There are no new additions or changes to any of the menu options in the PCE package.",
+      "text": "There are no new additions or changes to any of the menu options in the PCE package.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/148",
+      "parent": {
+        "cref": "#/texts/144"
+      },
+      "children": [
+        {
+          "cref": "#/texts/149"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Reports and Profiles",
+      "text": "Reports and Profiles",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/149",
+      "parent": {
+        "cref": "#/texts/148"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "There are no new reports or changes to the reports in the PCE package.",
+      "text": "There are no new reports or changes to the reports in the PCE package.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/150",
+      "parent": {
+        "cref": "#/texts/144"
+      },
+      "children": [
+        {
+          "cref": "#/texts/151"
+        },
+        {
+          "cref": "#/texts/152"
+        },
+        {
+          "cref": "#/texts/154"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Files and Fields",
+      "text": "Files and Fields",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/151",
+      "parent": {
+        "cref": "#/texts/150"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This section contains new or changed files and fields in the PCE package.",
+      "text": "This section contains new or changed files and fields in the PCE package.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/152",
+      "parent": {
+        "cref": "#/texts/150"
+      },
+      "children": [
+        {
+          "cref": "#/texts/153"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "New Files",
+      "text": "New Files",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/153",
+      "parent": {
+        "cref": "#/texts/152"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "There are no new files added to the PCE package.",
+      "text": "There are no new files added to the PCE package.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/154",
+      "parent": {
+        "cref": "#/texts/150"
+      },
+      "children": [
+        {
+          "cref": "#/texts/155"
+        },
+        {
+          "cref": "#/texts/159"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Changed Files",
+      "text": "Changed Files",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/155",
+      "parent": {
+        "cref": "#/texts/154"
+      },
+      "children": [
+        {
+          "cref": "#/texts/156"
+        },
+        {
+          "cref": "#/texts/157"
+        },
+        {
+          "cref": "#/texts/158"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "VISIT file (#9000010)",
+      "text": "VISIT file (#9000010)",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 4
+    },
+    {
+      "self_ref": "#/texts/156",
+      "parent": {
+        "cref": "#/texts/155"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Field Number\t\tField Name",
+      "text": "Field Number\t\tField Name",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/157",
+      "parent": {
+        "cref": "#/texts/155"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".26\t\t\tPFSS ACCOUNT REFERENCE",
+      "text": ".26\t\t\tPFSS ACCOUNT REFERENCE",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/158",
+      "parent": {
+        "cref": "#/texts/155"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/159",
+      "parent": {
+        "cref": "#/texts/154"
+      },
+      "children": [
+        {
+          "cref": "#/texts/160"
+        },
+        {
+          "cref": "#/texts/161"
+        },
+        {
+          "cref": "#/texts/162"
+        },
+        {
+          "cref": "#/texts/163"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "VCPT file (#9000010.18)",
+      "text": "VCPT file (#9000010.18)",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 4
+    },
+    {
+      "self_ref": "#/texts/160",
+      "parent": {
+        "cref": "#/texts/159"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Field Number\t\tField Name",
+      "text": "Field Number\t\tField Name",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/161",
+      "parent": {
+        "cref": "#/texts/159"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".19\t\t\tDEPARTMENT CODE",
+      "text": ".19\t\t\tDEPARTMENT CODE",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/162",
+      "parent": {
+        "cref": "#/texts/159"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".2\t\t\tPFSS CHARGE ID",
+      "text": ".2\t\t\tPFSS CHARGE ID",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/163",
+      "parent": {
+        "cref": "#/texts/159"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/164",
+      "parent": {
+        "cref": "#/texts/144"
+      },
+      "children": [
+        {
+          "cref": "#/texts/165"
+        },
+        {
+          "cref": "#/texts/170"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Other Functionality",
+      "text": "Other Functionality",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/165",
+      "parent": {
+        "cref": "#/texts/164"
+      },
+      "children": [
+        {
+          "cref": "#/texts/166"
+        },
+        {
+          "cref": "#/texts/167"
+        },
+        {
+          "cref": "#/texts/168"
+        },
+        {
+          "cref": "#/texts/169"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Charge Message SC/EI Classifications",
+      "text": "Charge Message SC/EI Classifications",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/166",
+      "parent": {
+        "cref": "#/texts/165"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Based on the associated clinical indicators, the Charge Message SC/EI classifications will be auto-populated according to the following rules:",
+      "text": "Based on the associated clinical indicators, the Charge Message SC/EI classifications will be auto-populated according to the following rules:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/167",
+      "parent": {
+        "cref": "#/texts/165"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If the SC/EI for at least one ICD-9 is \"Yes\", then the Charge Message SC/EI will automatically be set to \"Yes\".",
+      "text": "If the SC/EI for at least one ICD-9 is \"Yes\", then the Charge Message SC/EI will automatically be set to \"Yes\".",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/168",
+      "parent": {
+        "cref": "#/texts/165"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If the SC/EI for all ICD-9's is \"No\", then the Charge Message SC/EI will automatically be set to \"No\".",
+      "text": "If the SC/EI for all ICD-9's is \"No\", then the Charge Message SC/EI will automatically be set to \"No\".",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/169",
+      "parent": {
+        "cref": "#/texts/165"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If at least one ICD-9 is missing an SC/EI and none of the other ICD-9's SC/EI is \"Yes\", use the Encounter Level SC/EI.",
+      "text": "If at least one ICD-9 is missing an SC/EI and none of the other ICD-9's SC/EI is \"Yes\", use the Encounter Level SC/EI.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/170",
+      "parent": {
+        "cref": "#/texts/164"
+      },
+      "children": [
+        {
+          "cref": "#/texts/171"
+        },
+        {
+          "cref": "#/texts/211"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "API Changes",
+      "text": "API Changes",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/171",
+      "parent": {
+        "cref": "#/texts/170"
+      },
+      "children": [
+        {
+          "cref": "#/texts/172"
+        },
+        {
+          "cref": "#/texts/177"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "1889\tNAME: DBIA 1889-A (DATA2PCE)",
+      "text": "1889\tNAME: DBIA 1889-A (DATA2PCE)",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 4
+    },
+    {
+      "self_ref": "#/texts/172",
+      "parent": {
+        "cref": "#/texts/171"
+      },
+      "children": [
+        {
+          "cref": "#/texts/173"
+        },
+        {
+          "cref": "#/texts/174"
+        },
+        {
+          "cref": "#/texts/175"
+        },
+        {
+          "cref": "#/texts/176"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "ACCOUNT",
+      "text": "ACCOUNT",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/173",
+      "parent": {
+        "cref": "#/texts/172"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Add a dotted variable to the calling parameters which represents the PFSS Account Reference.",
+      "text": "Add a dotted variable to the calling parameters which represents the PFSS Account Reference.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/174",
+      "parent": {
+        "cref": "#/texts/172"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "$$DATA2PCE^PXAPI(INPUTROOT,PKG,SOURCE,.VISIT,USER,ERRDISP,.ERRARRAY,PPEDIT,.ERRPROB, .ACCOUNT)   This is a function which will  return a value identifying the status of the call. Data that is processed by PCE will be posted on the PXK VISIT DATA EVENT protocol.",
+      "text": "$$DATA2PCE^PXAPI(INPUTROOT,PKG,SOURCE,.VISIT,USER,ERRDISP,.ERRARRAY,PPEDIT,.ERRPROB, .ACCOUNT)   This is a function which will  return a value identifying the status of the call. Data that is processed by PCE will be posted on the PXK VISIT DATA EVENT protocol.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/175",
+      "parent": {
+        "cref": "#/texts/172"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Modified Parameter Description:",
+      "text": "Modified Parameter Description:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/176",
+      "parent": {
+        "cref": "#/texts/172"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "(Optional) A dotted variable name, where ACCOUNT is the PFSS Account Reference associated with the data being passed by the calling application. Each PFSS Account Reference represents an internal entry number in the PFSS ACCOUNT file (# 375).",
+      "text": "(Optional) A dotted variable name, where ACCOUNT is the PFSS Account Reference associated with the data being passed by the calling application. Each PFSS Account Reference represents an internal entry number in the PFSS ACCOUNT file (# 375).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/177",
+      "parent": {
+        "cref": "#/texts/171"
+      },
+      "children": [
+        {
+          "cref": "#/texts/178"
+        },
+        {
+          "cref": "#/texts/179"
+        },
+        {
+          "cref": "#/texts/180"
+        },
+        {
+          "cref": "#/texts/181"
+        },
+        {
+          "cref": "#/texts/182"
+        },
+        {
+          "cref": "#/texts/183"
+        },
+        {
+          "cref": "#/texts/184"
+        },
+        {
+          "cref": "#/texts/185"
+        },
+        {
+          "cref": "#/texts/186"
+        },
+        {
+          "cref": "#/texts/187"
+        },
+        {
+          "cref": "#/texts/188"
+        },
+        {
+          "cref": "#/texts/189"
+        },
+        {
+          "cref": "#/texts/190"
+        },
+        {
+          "cref": "#/texts/191"
+        },
+        {
+          "cref": "#/texts/192"
+        },
+        {
+          "cref": "#/texts/193"
+        },
+        {
+          "cref": "#/texts/194"
+        },
+        {
+          "cref": "#/texts/195"
+        },
+        {
+          "cref": "#/texts/196"
+        },
+        {
+          "cref": "#/texts/197"
+        },
+        {
+          "cref": "#/texts/198"
+        },
+        {
+          "cref": "#/texts/199"
+        },
+        {
+          "cref": "#/texts/200"
+        },
+        {
+          "cref": "#/texts/201"
+        },
+        {
+          "cref": "#/texts/202"
+        },
+        {
+          "cref": "#/texts/203"
+        },
+        {
+          "cref": "#/texts/204"
+        },
+        {
+          "cref": "#/texts/205"
+        },
+        {
+          "cref": "#/texts/206"
+        },
+        {
+          "cref": "#/texts/207"
+        },
+        {
+          "cref": "#/texts/208"
+        },
+        {
+          "cref": "#/texts/209"
+        },
+        {
+          "cref": "#/texts/210"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "PROCEDURE",
+      "text": "PROCEDURE",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/178",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Add a new DEPARTMENT subscript to the procedure level for the DATA2PCE API.",
+      "text": "Add a new DEPARTMENT subscript to the procedure level for the DATA2PCE API.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/179",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The \"PROCEDURE\" node may have multiple entries (i). Only active CPT/HCPCS codes will be accepted. The \"PROCEDURE\" node documents the procedure(s), the number of times the procedure was performed, the diagnosis the procedure is associated with and the narrative that describes the procedure. It also enables documentation of the provider who performed the procedure, the date/time the procedure was performed and any comments that are associated with the procedure. To delete the entire \"PROCEDURE\" entry, set the \"DELETE\" node to 1.",
+      "text": "The \"PROCEDURE\" node may have multiple entries (i). Only active CPT/HCPCS codes will be accepted. The \"PROCEDURE\" node documents the procedure(s), the number of times the procedure was performed, the diagnosis the procedure is associated with and the narrative that describes the procedure. It also enables documentation of the provider who performed the procedure, the date/time the procedure was performed and any comments that are associated with the procedure. To delete the entire \"PROCEDURE\" entry, set the \"DELETE\" node to 1.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/180",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "\"PROCEDURE\",i,\"DEPARTMENT\")\tA 3-digit code that defines the service area. Missing Department Codes will be assigned a Department Code. The Department Code will be the Stop Code associated (in the HOSPITAL LOCATION file, #44) with the Hospital Location of the patient visit.",
+      "text": "\"PROCEDURE\",i,\"DEPARTMENT\")\tA 3-digit code that defines the service area. Missing Department Codes will be assigned a Department Code. The Department Code will be the Stop Code associated (in the HOSPITAL LOCATION file, #44) with the Hospital Location of the patient visit.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/181",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "108::=Laboratory",
+      "text": "108::=Laboratory",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/182",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "160::=Pharmacy",
+      "text": "160::=Pharmacy",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/183",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "419::=Anesthesiology",
+      "text": "419::=Anesthesiology",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/184",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "423::=Prosthetics",
+      "text": "423::=Prosthetics",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/185",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "180::=Oral Surgery",
+      "text": "180::=Oral Surgery",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/186",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "401::=General Surgery",
+      "text": "401::=General Surgery",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/187",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "402::=Cardiac Surgery",
+      "text": "402::=Cardiac Surgery",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/188",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "401::=General Surgery",
+      "text": "401::=General Surgery",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/189",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "402::=Cardiac Surgery",
+      "text": "402::=Cardiac Surgery",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/190",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "403::=Otorhinolaryngology (ENT)",
+      "text": "403::=Otorhinolaryngology (ENT)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/191",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "404::=Gynecology",
+      "text": "404::=Gynecology",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/192",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "406::=Neurosurgery",
+      "text": "406::=Neurosurgery",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/193",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "407::=Ophthalmology",
+      "text": "407::=Ophthalmology",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/194",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "409::=Orthopedics",
+      "text": "409::=Orthopedics",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/195",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "410::=Plastic Surgery (inc. H&N)",
+      "text": "410::=Plastic Surgery (inc. H&N)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/196",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "411::=Podiatry",
+      "text": "411::=Podiatry",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/197",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "412::=Proctology",
+      "text": "412::=Proctology",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/198",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "413::=Thoracic Surgery",
+      "text": "413::=Thoracic Surgery",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/199",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "415::=Peripheral Vascular",
+      "text": "415::=Peripheral Vascular",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/200",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "457::=Transplantation",
+      "text": "457::=Transplantation",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/201",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "105::=General Radiology",
+      "text": "105::=General Radiology",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/202",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "109::=Nuclear Medicine",
+      "text": "109::=Nuclear Medicine",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/203",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "109::=Cardiology Studies (Nuclear Med)",
+      "text": "109::=Cardiology Studies (Nuclear Med)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/204",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "115::=Ultrasound",
+      "text": "115::=Ultrasound",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/205",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "703::=Mammography",
+      "text": "703::=Mammography",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/206",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "150::=CT Scan",
+      "text": "150::=CT Scan",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/207",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "151::=Magnetic Resonance Imaging",
+      "text": "151::=Magnetic Resonance Imaging",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/208",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "152::=Angio-Neuro-Interventional",
+      "text": "152::=Angio-Neuro-Interventional",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/209",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "421::=Vascular Lab",
+      "text": "421::=Vascular Lab",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/210",
+      "parent": {
+        "cref": "#/texts/177"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/211",
+      "parent": {
+        "cref": "#/texts/170"
+      },
+      "children": [
+        {
+          "cref": "#/texts/212"
+        },
+        {
+          "cref": "#/texts/213"
+        },
+        {
+          "cref": "#/texts/214"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "1900\tNAME: DBIA 1900-A",
+      "text": "1900\tNAME: DBIA 1900-A",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 4
+    },
+    {
+      "self_ref": "#/texts/212",
+      "parent": {
+        "cref": "#/texts/211"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/213",
+      "parent": {
+        "cref": "#/texts/211"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Visit Tracking is a utility that can be used by a variety of  modules (usually via PCE), with potential benefits for clinical, administrative, and fiscal applications. Visit Tracking will allow  packages to link an event to a patient visit entry, thereby linking that event to any number of events occurring throughout the hospital during the patient's outpatient and/or inpatient episode.",
+      "text": "Visit Tracking is a utility that can be used by a variety of  modules (usually via PCE), with potential benefits for clinical, administrative, and fiscal applications. Visit Tracking will allow  packages to link an event to a patient visit entry, thereby linking that event to any number of events occurring throughout the hospital during the patient's outpatient and/or inpatient episode.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/214",
+      "parent": {
+        "cref": "#/texts/211"
+      },
+      "children": [
+        {
+          "cref": "#/texts/215"
+        },
+        {
+          "cref": "#/texts/216"
+        },
+        {
+          "cref": "#/texts/217"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "^VSIT",
+      "text": "^VSIT",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 5
+    },
+    {
+      "self_ref": "#/texts/215",
+      "parent": {
+        "cref": "#/texts/214"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Field Number\t\tVariable\t\tDescription",
+      "text": "Field Number\t\tVariable\t\tDescription",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/216",
+      "parent": {
+        "cref": "#/texts/214"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".26\t\t\tVSIT(\"ACT\")\t\tPFSS ACCOUNT REFERENCE (pointer",
+      "text": ".26\t\t\tVSIT(\"ACT\")\t\tPFSS ACCOUNT REFERENCE (pointer",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/217",
+      "parent": {
+        "cref": "#/texts/214"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "PFSS ACCOUNT file #375)",
+      "text": "PFSS ACCOUNT file #375)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "cref": "#/texts/1"
+      },
+      "children": [
+        {
+          "cref": "#/groups/0"
+        },
+        {
+          "cref": "#/groups/1"
+        },
+        {
+          "cref": "#/groups/2"
+        },
+        {
+          "cref": "#/groups/3"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": null,
+      "data": {
+        "table_cells": [
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Date",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/0"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Revision",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/1"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Description",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/2"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Author",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "cref": "#/groups/3"
+            }
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "10/20/05",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "0.1",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Added two modifications patch includes, removed PXCEPRV routine, and updated checksum values to reflect correct numbers.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "REDACTED",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "01/06/06",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "1.0",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Added new functionality, enhancements to the software",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": null,
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "REDACTED",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 3,
+        "num_cols": 4,
+        "grid": [
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Date",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Revision",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Description",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Author",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "10/20/05",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.1",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Added two modifications patch includes, removed PXCEPRV routine, and updated checksum values to reflect correct numbers.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "REDACTED",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "01/06/06",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "1.0",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Added new functionality, enhancements to the software",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": null,
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "REDACTED",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

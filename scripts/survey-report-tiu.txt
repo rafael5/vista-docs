@@ -1,0 +1,181 @@
+========================================================================
+VDL CORPUS SURVEY REPORT — package=tiu
+Generated: 2026-03-11 06:42
+========================================================================
+
+Documents analysed : 5
+Errors             : 0
+
+────────────────────────────────────────────────────────────────────────
+STRUCTURAL FEATURES (count of documents)
+────────────────────────────────────────────────────────────────────────
+  Has TOC field                :   5 / 5
+  Has revision history table   :   4 / 5
+  Has back-matter index        :   0 / 5
+  Has pseudo-headings          :   5 / 5
+
+────────────────────────────────────────────────────────────────────────
+TABLE TYPES DETECTED
+────────────────────────────────────────────────────────────────────────
+  reference-table            145
+  hl7-segment                  9
+  revision                     4
+  menu-option                  4
+  acronym-glossary             1
+  comparison                   1
+
+────────────────────────────────────────────────────────────────────────
+CALLOUT TYPES (NOTE / WARNING / CAUTION etc.)
+────────────────────────────────────────────────────────────────────────
+  NOTE                  121
+  IMPORTANT               2
+  WARNING                 1
+  CAUTION                 1
+
+────────────────────────────────────────────────────────────────────────
+CROSS-REFERENCES
+────────────────────────────────────────────────────────────────────────
+  Internal page refs           : 13
+  Terminal/VistA session lines : 846
+  External doc refs (top 10):
+      3×  See the VHA HANDBOOK
+      2×  See the section Applying the Upload Utility to New Document
+      1×  refer to the HL7 document
+      1×  see the details of your new Document
+      1×  See the section  in this manual
+      1×  See the TIU Implementation Guide
+      1×  See the User and Technical Manual
+      1×  see the TIU/ASU Implementation Guide
+      1×  See the ASU Clinical Coordinator Manual
+      1×  See the TIU Technical Manual
+
+────────────────────────────────────────────────────────────────────────
+PSEUDO-HEADINGS — total 783 across 5 docs
+Top 20 recurring pseudo-heading texts:
+────────────────────────────────────────────────────────────────────────
+   15×  ----------------------------------------------------------------------------------
+   10×  ENTRY ACTION:
+   10×  EXIT ACTION:
+    9×  --------------------------------------------------------------------------------
+    7×  _______________________________________________________________________________
+    7×  ¦                                                                         ¦
+    7×  ? Help     > Scroll Right     PS/PL Print Screen/List     >>>
+    7×  FAQs cont’d
+    6×  +         ?Help   >ScrollRight   PS/PL PrintScrn/List   +/-             >>>
+    5×  TYPE: event driver
+    5×  TRANSACTION MESSAGE TYPE: MDM                        EVENT TYPE: T02
+    5×  MESSAGE STRUCTURE:
+    5×  ACCEPT ACK CODE: AL               APPLICATION ACK TYPE: NE
+    5×  RESPONSE PROCESSING RTN:
+    5×  SUBSCRIBERS
+    5×  TYPE: subscriber
+    5×  RESPONSE MESSAGE TYPE: ACK                            EVENT TYPE: T02
+    5×  SENDING FACILITY REQUIRED?: YES          RECEIVING FACILITY REQUIRED?: YES
+    5×  ROUTING LOGIC:
+    5×  Std Title: NONVA NOTE
+
+────────────────────────────────────────────────────────────────────────
+PARAGRAPH STYLES — corpus frequency
+────────────────────────────────────────────────────────────────────────
+    8656  capture
+    8034  Normal
+    2155  Computer Screen
+    1015  index 1
+     291  List Member
+     253  Heading 4
+     250  toc 3
+     247  Heading 3
+     203  CPRS capture
+     197  Bullet list
+     141  Body Text
+     112  Heading 2
+     112  Glossary
+     108  Plain Text
+     107  toc 2
+     105  Note
+      94  Helvetica
+      93  List Paragraph
+      90  Blank Line
+      89  Heading 5
+      88  Bullet Level 1
+      81  Normal Page Title
+      75  Style Top: (Single solid line Blue  0.75 pt Line width) Bottom: ...1
+      55  screen
+      54  Normal Indent1
+      48  Bullet Level 2
+      46  Q & A
+      43  capture reverse
+      34  C Screen Reversed
+      34  listmember
+      33  index 2
+      31  Heading 1
+      31  display
+      30  toc 1
+      25  Style Top: (Single solid line Blue  0.5 pt Line width) Bottom: (...
+      23  Heading 6
+      22  table of figures
+      21  Caption table
+      19  Title 2
+      16  Body Text Indent
+
+────────────────────────────────────────────────────────────────────────
+STANDARD STYLES (appear in ALL 5 documents) — these form the base schema
+────────────────────────────────────────────────────────────────────────
+  Heading 1
+  Heading 2
+  Heading 3
+  Normal
+  toc 1
+  toc 2
+  toc 3
+
+────────────────────────────────────────────────────────────────────────
+ONE-OFF STYLES (appear in exactly 1 document) — candidates for schema 'other'
+────────────────────────────────────────────────────────────────────────
+  Body Text Indent 3
+  Body Text Keep
+  Bullet Level 1
+  Bullet Level 2
+  Bullet List-Normal 1
+  Bullet list
+  CPRS Bullets
+  CPRS H2 Body Char
+  CPRS capture
+  Caption table
+  Continuation Title
+  Continue Line
+  Cover Title Instructions
+  Dot Topic
+  Example
+  First Page 1
+  First Page 2
+  HEADING
+  Instructional Text 1
+  List
+  List 2
+  List Bullet 2
+  List Bullet 4
+  List Continue 2
+  List Hanging
+  List Member 1
+  List Number 3
+  Normal Indent
+  Normal Italics
+  Normal Page Title
+  ... and 34 more
+
+────────────────────────────────────────────────────────────────────────
+PER-DOCUMENT SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Document                                         §  Tbl   Ph  PgRef Flags
+  --------------------------------------------- ──── ──── ──── ────── ────────────
+  tiuhl7.docx                                    160   61  284      3   T
+  tiuim.docx                                     172   12  202      1   TR
+  tiu_util.docx                                   11    5    2      0   TR
+  tiuum.docx                                     152   35  250      3   TR
+  tiutm.docx                                     260   51   45      6   TR
+  Flags: T=has TOC field  R=has revision table  I=has back-matter index
+
+========================================================================
+END OF REPORT
+========================================================================

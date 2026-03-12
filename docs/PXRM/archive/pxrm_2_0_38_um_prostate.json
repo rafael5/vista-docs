@@ -1,0 +1,5330 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "pxrm_2_0_38_um_prostate",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 12828043348415025589,
+    "filename": "pxrm_2_0_38_um_prostate.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/groups/0"
+      },
+      {
+        "cref": "#/texts/7"
+      },
+      {
+        "cref": "#/texts/8"
+      },
+      {
+        "cref": "#/groups/2"
+      },
+      {
+        "cref": "#/texts/13"
+      },
+      {
+        "cref": "#/texts/14"
+      },
+      {
+        "cref": "#/texts/15"
+      },
+      {
+        "cref": "#/texts/16"
+      },
+      {
+        "cref": "#/groups/3"
+      },
+      {
+        "cref": "#/groups/4"
+      },
+      {
+        "cref": "#/texts/23"
+      },
+      {
+        "cref": "#/texts/24"
+      },
+      {
+        "cref": "#/texts/25"
+      },
+      {
+        "cref": "#/groups/5"
+      },
+      {
+        "cref": "#/texts/27"
+      },
+      {
+        "cref": "#/groups/6"
+      },
+      {
+        "cref": "#/groups/7"
+      },
+      {
+        "cref": "#/texts/31"
+      },
+      {
+        "cref": "#/texts/32"
+      },
+      {
+        "cref": "#/texts/33"
+      },
+      {
+        "cref": "#/texts/34"
+      },
+      {
+        "cref": "#/texts/35"
+      },
+      {
+        "cref": "#/texts/36"
+      },
+      {
+        "cref": "#/texts/37"
+      },
+      {
+        "cref": "#/texts/38"
+      },
+      {
+        "cref": "#/groups/8"
+      },
+      {
+        "cref": "#/texts/40"
+      },
+      {
+        "cref": "#/texts/41"
+      },
+      {
+        "cref": "#/texts/42"
+      },
+      {
+        "cref": "#/groups/9"
+      },
+      {
+        "cref": "#/texts/48"
+      },
+      {
+        "cref": "#/texts/49"
+      },
+      {
+        "cref": "#/groups/11"
+      },
+      {
+        "cref": "#/groups/13"
+      },
+      {
+        "cref": "#/groups/14"
+      },
+      {
+        "cref": "#/texts/58"
+      },
+      {
+        "cref": "#/groups/15"
+      },
+      {
+        "cref": "#/texts/60"
+      },
+      {
+        "cref": "#/texts/61"
+      },
+      {
+        "cref": "#/groups/16"
+      },
+      {
+        "cref": "#/texts/63"
+      },
+      {
+        "cref": "#/texts/64"
+      },
+      {
+        "cref": "#/texts/65"
+      },
+      {
+        "cref": "#/texts/66"
+      },
+      {
+        "cref": "#/texts/67"
+      },
+      {
+        "cref": "#/texts/68"
+      },
+      {
+        "cref": "#/texts/69"
+      },
+      {
+        "cref": "#/texts/70"
+      },
+      {
+        "cref": "#/texts/71"
+      },
+      {
+        "cref": "#/texts/72"
+      },
+      {
+        "cref": "#/texts/73"
+      },
+      {
+        "cref": "#/texts/74"
+      },
+      {
+        "cref": "#/texts/75"
+      },
+      {
+        "cref": "#/texts/76"
+      },
+      {
+        "cref": "#/groups/17"
+      },
+      {
+        "cref": "#/texts/92"
+      },
+      {
+        "cref": "#/texts/93"
+      },
+      {
+        "cref": "#/groups/19"
+      },
+      {
+        "cref": "#/texts/95"
+      },
+      {
+        "cref": "#/texts/96"
+      },
+      {
+        "cref": "#/groups/20"
+      },
+      {
+        "cref": "#/texts/98"
+      },
+      {
+        "cref": "#/texts/99"
+      },
+      {
+        "cref": "#/groups/21"
+      },
+      {
+        "cref": "#/texts/101"
+      },
+      {
+        "cref": "#/texts/102"
+      },
+      {
+        "cref": "#/groups/22"
+      },
+      {
+        "cref": "#/texts/104"
+      },
+      {
+        "cref": "#/texts/105"
+      },
+      {
+        "cref": "#/groups/23"
+      },
+      {
+        "cref": "#/texts/107"
+      },
+      {
+        "cref": "#/texts/108"
+      },
+      {
+        "cref": "#/groups/24"
+      },
+      {
+        "cref": "#/texts/110"
+      },
+      {
+        "cref": "#/texts/111"
+      },
+      {
+        "cref": "#/groups/25"
+      },
+      {
+        "cref": "#/texts/113"
+      },
+      {
+        "cref": "#/texts/114"
+      },
+      {
+        "cref": "#/groups/26"
+      },
+      {
+        "cref": "#/texts/116"
+      },
+      {
+        "cref": "#/texts/117"
+      },
+      {
+        "cref": "#/groups/27"
+      },
+      {
+        "cref": "#/texts/119"
+      },
+      {
+        "cref": "#/texts/120"
+      },
+      {
+        "cref": "#/groups/28"
+      },
+      {
+        "cref": "#/texts/122"
+      },
+      {
+        "cref": "#/texts/123"
+      },
+      {
+        "cref": "#/groups/29"
+      },
+      {
+        "cref": "#/texts/129"
+      },
+      {
+        "cref": "#/texts/130"
+      },
+      {
+        "cref": "#/texts/131"
+      },
+      {
+        "cref": "#/groups/31"
+      },
+      {
+        "cref": "#/groups/32"
+      },
+      {
+        "cref": "#/groups/33"
+      },
+      {
+        "cref": "#/texts/139"
+      },
+      {
+        "cref": "#/texts/140"
+      },
+      {
+        "cref": "#/texts/141"
+      },
+      {
+        "cref": "#/texts/142"
+      },
+      {
+        "cref": "#/texts/143"
+      },
+      {
+        "cref": "#/texts/144"
+      },
+      {
+        "cref": "#/texts/145"
+      },
+      {
+        "cref": "#/texts/146"
+      },
+      {
+        "cref": "#/texts/147"
+      },
+      {
+        "cref": "#/texts/148"
+      },
+      {
+        "cref": "#/texts/149"
+      },
+      {
+        "cref": "#/texts/150"
+      },
+      {
+        "cref": "#/texts/151"
+      },
+      {
+        "cref": "#/texts/152"
+      },
+      {
+        "cref": "#/texts/153"
+      },
+      {
+        "cref": "#/texts/154"
+      },
+      {
+        "cref": "#/texts/155"
+      },
+      {
+        "cref": "#/texts/156"
+      },
+      {
+        "cref": "#/texts/157"
+      },
+      {
+        "cref": "#/texts/158"
+      },
+      {
+        "cref": "#/texts/159"
+      },
+      {
+        "cref": "#/texts/160"
+      },
+      {
+        "cref": "#/texts/161"
+      },
+      {
+        "cref": "#/texts/162"
+      },
+      {
+        "cref": "#/texts/163"
+      },
+      {
+        "cref": "#/texts/164"
+      },
+      {
+        "cref": "#/texts/165"
+      },
+      {
+        "cref": "#/texts/166"
+      },
+      {
+        "cref": "#/texts/167"
+      },
+      {
+        "cref": "#/groups/34"
+      },
+      {
+        "cref": "#/texts/173"
+      },
+      {
+        "cref": "#/texts/174"
+      },
+      {
+        "cref": "#/pictures/0"
+      },
+      {
+        "cref": "#/texts/175"
+      },
+      {
+        "cref": "#/texts/176"
+      },
+      {
+        "cref": "#/pictures/1"
+      },
+      {
+        "cref": "#/texts/177"
+      },
+      {
+        "cref": "#/groups/35"
+      },
+      {
+        "cref": "#/texts/179"
+      },
+      {
+        "cref": "#/texts/180"
+      },
+      {
+        "cref": "#/texts/181"
+      },
+      {
+        "cref": "#/groups/36"
+      },
+      {
+        "cref": "#/groups/37"
+      },
+      {
+        "cref": "#/groups/38"
+      },
+      {
+        "cref": "#/groups/39"
+      },
+      {
+        "cref": "#/texts/194"
+      },
+      {
+        "cref": "#/texts/195"
+      },
+      {
+        "cref": "#/texts/196"
+      },
+      {
+        "cref": "#/texts/197"
+      },
+      {
+        "cref": "#/groups/40"
+      },
+      {
+        "cref": "#/texts/200"
+      },
+      {
+        "cref": "#/texts/201"
+      },
+      {
+        "cref": "#/texts/202"
+      },
+      {
+        "cref": "#/texts/203"
+      },
+      {
+        "cref": "#/texts/204"
+      },
+      {
+        "cref": "#/texts/205"
+      },
+      {
+        "cref": "#/groups/41"
+      },
+      {
+        "cref": "#/texts/208"
+      },
+      {
+        "cref": "#/texts/209"
+      },
+      {
+        "cref": "#/texts/210"
+      },
+      {
+        "cref": "#/texts/211"
+      },
+      {
+        "cref": "#/texts/212"
+      },
+      {
+        "cref": "#/texts/213"
+      },
+      {
+        "cref": "#/groups/42"
+      },
+      {
+        "cref": "#/texts/215"
+      },
+      {
+        "cref": "#/texts/216"
+      },
+      {
+        "cref": "#/pictures/2"
+      },
+      {
+        "cref": "#/texts/217"
+      },
+      {
+        "cref": "#/groups/43"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/0"
+        },
+        {
+          "cref": "#/texts/6"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/texts/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/3"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/9"
+        },
+        {
+          "cref": "#/texts/12"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/17"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/18"
+        },
+        {
+          "cref": "#/texts/19"
+        },
+        {
+          "cref": "#/texts/20"
+        },
+        {
+          "cref": "#/texts/21"
+        },
+        {
+          "cref": "#/texts/22"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/26"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/28"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/29"
+        },
+        {
+          "cref": "#/texts/30"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/39"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/43"
+        },
+        {
+          "cref": "#/texts/47"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "cref": "#/texts/43"
+      },
+      "children": [
+        {
+          "cref": "#/texts/44"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/50"
+        },
+        {
+          "cref": "#/texts/53"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/12",
+      "parent": {
+        "cref": "#/texts/50"
+      },
+      "children": [
+        {
+          "cref": "#/texts/51"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/13",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/54"
+        },
+        {
+          "cref": "#/texts/55"
+        },
+        {
+          "cref": "#/texts/56"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/14",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/57"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/15",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/59"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/16",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/62"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/17",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/77"
+        },
+        {
+          "cref": "#/texts/87"
+        },
+        {
+          "cref": "#/texts/91"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/18",
+      "parent": {
+        "cref": "#/texts/87"
+      },
+      "children": [
+        {
+          "cref": "#/texts/88"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/19",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/94"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/20",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/97"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/21",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/100"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/22",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/103"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/23",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/106"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/24",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/109"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/25",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/112"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/26",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/115"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/27",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/118"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/28",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/121"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/29",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/124"
+        },
+        {
+          "cref": "#/texts/128"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/30",
+      "parent": {
+        "cref": "#/texts/124"
+      },
+      "children": [
+        {
+          "cref": "#/texts/125"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/31",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/132"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/32",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/133"
+        },
+        {
+          "cref": "#/texts/134"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/33",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/135"
+        },
+        {
+          "cref": "#/texts/136"
+        },
+        {
+          "cref": "#/texts/137"
+        },
+        {
+          "cref": "#/texts/138"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/34",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/168"
+        },
+        {
+          "cref": "#/texts/172"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/35",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/178"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/36",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/182"
+        },
+        {
+          "cref": "#/texts/183"
+        },
+        {
+          "cref": "#/texts/184"
+        },
+        {
+          "cref": "#/texts/185"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/37",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/186"
+        },
+        {
+          "cref": "#/texts/187"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/38",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/188"
+        },
+        {
+          "cref": "#/texts/189"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/39",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/190"
+        },
+        {
+          "cref": "#/texts/191"
+        },
+        {
+          "cref": "#/texts/192"
+        },
+        {
+          "cref": "#/texts/193"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/40",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/198"
+        },
+        {
+          "cref": "#/texts/199"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/41",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/206"
+        },
+        {
+          "cref": "#/texts/207"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/42",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/214"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/43",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/218"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [
+        {
+          "cref": "#/texts/1"
+        },
+        {
+          "cref": "#/texts/2"
+        },
+        {
+          "cref": "#/groups/1"
+        },
+        {
+          "cref": "#/texts/4"
+        },
+        {
+          "cref": "#/texts/5"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "VA-Oncology Prostate Cancer Template User Guide",
+      "text": "VA-Oncology Prostate Cancer Template User Guide",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/texts/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/texts/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Background Information",
+      "text": "Background Information",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/texts/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Prostate cancer is a commonly diagnosed malignancy in VHA. Recent approval of several new treatment options has increased complexity of cancer care. A more efficient mechanism for capturing data to monitor cancer care quality in the VHA is essential. Currently, the large amount of free text information in the medical record makes it difficult to retrieve necessary data to assess the quality of cancer care in a prospective and continuous manner. Reminder dialogs allow data to be entered and extracted in a standardized manner that will enable us to more efficiently monitor quality of cancer care.",
+      "text": "Prostate cancer is a commonly diagnosed malignancy in VHA. Recent approval of several new treatment options has increased complexity of cancer care. A more efficient mechanism for capturing data to monitor cancer care quality in the VHA is essential. Currently, the large amount of free text information in the medical record makes it difficult to retrieve necessary data to assess the quality of cancer care in a prospective and continuous manner. Reminder dialogs allow data to be entered and extracted in a standardized manner that will enable us to more efficiently monitor quality of cancer care.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/texts/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "1 General Information",
+      "text": "1 General Information",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The purpose of this guide is to provide the end-user with directions on how to perform medical documentation using the VA-Oncology Prostate Template. The VA-Oncology Prostate Template was developed and is supported by the National Oncology Program Office in Specialty Care Services (part of Patient Care Services). REDACTED",
+      "text": "The purpose of this guide is to provide the end-user with directions on how to perform medical documentation using the VA-Oncology Prostate Template. The VA-Oncology Prostate Template was developed and is supported by the National Oncology Program Office in Specialty Care Services (part of Patient Care Services). REDACTED",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [
+        {
+          "cref": "#/texts/10"
+        },
+        {
+          "cref": "#/texts/11"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Recommended Users",
+      "text": "Recommended Users",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/texts/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The primary users of the Prostate Cancer Template are oncology providers. Secondary uses are advance practice oncology providers, urologists, and cancer registrars.",
+      "text": "The primary users of the Prostate Cancer Template are oncology providers. Secondary uses are advance practice oncology providers, urologists, and cancer registrars.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/texts/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "2 Installation",
+      "text": "2 Installation",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The facility Clinical Applications Coordinator (CAC)/Health Information Specialist (HIS) at each site has received instructions on how to load and implement the VA-Oncology Prostate Template. These instructions are part of the PXRM_2_0_38_IG which accompanies this patch. The primary intended use of the VA-Oncology Prostate Template is as a template that is pulled into an open progress note rather than as a standalone note. The VA-Oncology Prostate Template should be available in a shared folder in the template drawer in CPRS. The location and naming convention for this shared folder will vary by site. Users should contact their local help desk or local CAC/HIS if the VA-Oncology Prostate Template cannot be located in CPRS.",
+      "text": "The facility Clinical Applications Coordinator (CAC)/Health Information Specialist (HIS) at each site has received instructions on how to load and implement the VA-Oncology Prostate Template. These instructions are part of the PXRM_2_0_38_IG which accompanies this patch. The primary intended use of the VA-Oncology Prostate Template is as a template that is pulled into an open progress note rather than as a standalone note. The VA-Oncology Prostate Template should be available in a shared folder in the template drawer in CPRS. The location and naming convention for this shared folder will vary by site. Users should contact their local help desk or local CAC/HIS if the VA-Oncology Prostate Template cannot be located in CPRS.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Facilities might choose to link the template to a specific standalone note title rather than use it as a template that is inserted into an open progress note. However, doing so might limit the availability of the template to the range of providers who could make use of the template. The title of the standalone progress note is VA-ONCOLOGY PROSTATE.",
+      "text": "Facilities might choose to link the template to a specific standalone note title rather than use it as a template that is inserted into an open progress note. However, doing so might limit the availability of the template to the range of providers who could make use of the template. The title of the standalone progress note is VA-ONCOLOGY PROSTATE.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "3 Usage",
+      "text": "3 Usage",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "It is recommended that the VA-Oncology Prostate Template be initiated and used for newly- diagnosed Prostate cancer cases and that information is updated periodically throughout the course of care (see documentation section",
+      "text": "It is recommended that the VA-Oncology Prostate Template be initiated and used for newly- diagnosed Prostate cancer cases and that information is updated periodically throughout the course of care (see documentation section",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "E",
+      "text": "E",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "pages 2-4 for time points during the course of care where the use of the Prostate Template is suggested to be used). The template is not intended to be a chart abstraction tool that is only filled in at the end of care, but rather to be used concurrently with delivery of care throughout the patient’s course. When the template is opened on subsequent visits, previously documented information is viewable as header (see documentation section",
+      "text": "pages 2-4 for time points during the course of care where the use of the Prostate Template is suggested to be used). The template is not intended to be a chart abstraction tool that is only filled in at the end of care, but rather to be used concurrently with delivery of care throughout the patient’s course. When the template is opened on subsequent visits, previously documented information is viewable as header (see documentation section",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "E 3",
+      "text": "E 3",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "for Header examples pages on 6-7). This information can be updated by entering data in the corresponding areas. No section of the template is required. Thus, the",
+      "text": "for Header examples pages on 6-7). This information can be updated by entering data in the corresponding areas. No section of the template is required. Thus, the",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "provider can complete those sections of the template that are relevant to a particular patient, or that have been selected by a facility (for example based on the quality indicators of interest to a facility). However, once a section is begun, all subsections must either be completed or the check removed from the top level of that section. If a standard of care is knowingly not being followed please document the reason in the template.",
+      "text": "provider can complete those sections of the template that are relevant to a particular patient, or that have been selected by a facility (for example based on the quality indicators of interest to a facility). However, once a section is begun, all subsections must either be completed or the check removed from the top level of that section. If a standard of care is knowingly not being followed please document the reason in the template.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "4 Documentation:",
+      "text": "4 Documentation:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The VA-Oncology Prostate Template is separated into three sections diagnosis/work-up, treatment and post-treatment.",
+      "text": "The VA-Oncology Prostate Template is separated into three sections diagnosis/work-up, treatment and post-treatment.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "5 Definitions for Each Section Diagnosis Section",
+      "text": "5 Definitions for Each Section Diagnosis Section",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "□ Laboratory Tests",
+      "text": "□ Laboratory Tests",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":",
+      "text": ":",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Prostate Specific-Antigen (PSA) - the last 10 (if available) PSA lab results performed at the local VA site will display in the template. User has option of pulling these lab results into progress note by clicking on appropriate box. Additional/outside lab results can be entered by clicking on corresponding box. Indicate level of test results and date of test.",
+      "text": "Prostate Specific-Antigen (PSA) - the last 10 (if available) PSA lab results performed at the local VA site will display in the template. User has option of pulling these lab results into progress note by clicking on appropriate box. Additional/outside lab results can be entered by clicking on corresponding box. Indicate level of test results and date of test.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Testosterone – the last 10 (if available) Testosterone lab results performed at the local VA site will display in the template. User has option of pulling these lab results into progress note by clicking on appropriate box. Additional/outside lab results can be entered by clicking on corresponding box. Indicate level of test results and date of test.",
+      "text": "Testosterone – the last 10 (if available) Testosterone lab results performed at the local VA site will display in the template. User has option of pulling these lab results into progress note by clicking on appropriate box. Additional/outside lab results can be entered by clicking on corresponding box. Indicate level of test results and date of test.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "No Previous PSA/Testosterone Lab Results – No PSA/No TESTOSTERONE data available message will appear if no results are available.",
+      "text": "No Previous PSA/Testosterone Lab Results – No PSA/No TESTOSTERONE data available message will appear if no results are available.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "6 Date of Diagnosis",
+      "text": "6 Date of Diagnosis",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Date first procedure performed that confirmed the initial pathologic diagnosis of",
+      "text": "Date first procedure performed that confirmed the initial pathologic diagnosis of",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "prostate cancer (e.g. date of biopsy). If no biopsy was done, provide date that provider made decision to treat as prostate cancer.",
+      "text": "prostate cancer (e.g. date of biopsy). If no biopsy was done, provide date that provider made decision to treat as prostate cancer.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/groups/9"
+      },
+      "children": [
+        {
+          "cref": "#/groups/10"
+        },
+        {
+          "cref": "#/texts/45"
+        },
+        {
+          "cref": "#/texts/46"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "7 AJCC Staging",
+      "text": "7 AJCC Staging",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Clinical AJCC TNM group/Clinical AJCC Summary group",
+      "text": "Clinical AJCC TNM group/Clinical AJCC Summary group",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/texts/43"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Stage based on physical examination, imaging tests, and biopsies done prior to surgery. Include the date the stage was determined.",
+      "text": "Stage based on physical examination, imaging tests, and biopsies done prior to surgery. Include the date the stage was determined.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/texts/43"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "8 Pathological AJCC TNM group/Pathological AJCC Summary group",
+      "text": "8 Pathological AJCC TNM group/Pathological AJCC Summary group",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Staging done after surgery. Include the date the stage was determined.",
+      "text": "Staging done after surgery. Include the date the stage was determined.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/groups/11"
+      },
+      "children": [
+        {
+          "cref": "#/groups/12"
+        },
+        {
+          "cref": "#/texts/52"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "9 Pathology",
+      "text": "9 Pathology",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/groups/12"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Histology",
+      "text": "Histology",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/texts/50"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate histology of tumor: Adenocarcinoma, small cell, other.",
+      "text": "Indicate histology of tumor: Adenocarcinoma, small cell, other.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "10 Gleason Score",
+      "text": "10 Gleason Score",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate individual Gleason Scores 1 & 2",
+      "text": "Indicate individual Gleason Scores 1 & 2",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "OR",
+      "text": "OR",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "combined Gleason Score.",
+      "text": "combined Gleason Score.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "11 Surgery Margins",
+      "text": "11 Surgery Margins",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate if surgery margins are positive, negative, results pending or other.",
+      "text": "Indicate if surgery margins are positive, negative, results pending or other.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "12 Prostate Needle Biopsy:",
+      "text": "12 Prostate Needle Biopsy:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate prostate needle biopsy type: transrectal or transperineal, number of core samples, number of positive samples.",
+      "text": "Indicate prostate needle biopsy type: transrectal or transperineal, number of core samples, number of positive samples.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "13 Risk Status",
+      "text": "13 Risk Status",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate high, low, or intermediate risk status.",
+      "text": "Indicate high, low, or intermediate risk status.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "High = (Stage >=T2c) AND (Gleason >=8) AND (PSA >20)",
+      "text": "High = (Stage >=T2c) AND (Gleason >=8) AND (PSA >20)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Intermediate = (Stage T2b) OR (Gleason =7) OR (PSA >10 AND PSA <20) Low = (Stage T1c/T2a) AND (Gleason <=6) AND (PSA<= 10ng/ml)",
+      "text": "Intermediate = (Stage T2b) OR (Gleason =7) OR (PSA >10 AND PSA <20) Low = (Stage T1c/T2a) AND (Gleason <=6) AND (PSA<= 10ng/ml)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "hours",
+      "text": "hours",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [
+        {
+          "cref": "#/texts/78"
+        },
+        {
+          "cref": "#/texts/79"
+        },
+        {
+          "cref": "#/texts/80"
+        },
+        {
+          "cref": "#/texts/81"
+        },
+        {
+          "cref": "#/texts/82"
+        },
+        {
+          "cref": "#/texts/83"
+        },
+        {
+          "cref": "#/texts/84"
+        },
+        {
+          "cref": "#/texts/85"
+        },
+        {
+          "cref": "#/texts/86"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "□ ECOG Performance Status",
+      "text": "□ ECOG Performance Status",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "ECOG Scale definitions:",
+      "text": "ECOG Scale definitions:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "0 = Fully active, able to carry on all pre-disease performance without restriction",
+      "text": "0 = Fully active, able to carry on all pre-disease performance without restriction",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1 = Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work",
+      "text": "1 = Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "2 = Ambulatory and capable of all self-care but unable to carry out any work activities. Up and about more than 50% of waking hours",
+      "text": "2 = Ambulatory and capable of all self-care but unable to carry out any work activities. Up and about more than 50% of waking hours",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "3 = Capable of only limited self-care, confined to bed or chair more than 50% of waking",
+      "text": "3 = Capable of only limited self-care, confined to bed or chair more than 50% of waking",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4 = Completely disabled. Cannot carry on any self-care. Totally confined to bed or chair 5 = Dead",
+      "text": "4 = Completely disabled. Cannot carry on any self-care. Totally confined to bed or chair 5 = Dead",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [
+        {
+          "cref": "#/groups/18"
+        },
+        {
+          "cref": "#/texts/89"
+        },
+        {
+          "cref": "#/texts/90"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Treatment Section",
+      "text": "Treatment Section",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Case Presented To Tumor Board",
+      "text": "Case Presented To Tumor Board",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "cref": "#/texts/87"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate if case was presented to tumor board. If presented provide date.",
+      "text": "Indicate if case was presented to tumor board. If presented provide date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "cref": "#/texts/87"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "14 Intent of Treatment",
+      "text": "14 Intent of Treatment",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate if intent of treatment is curative or palliative. Indicate if intent of treatment was discussed with veteran.",
+      "text": "Indicate if intent of treatment is curative or palliative. Indicate if intent of treatment was discussed with veteran.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "15 Active Surveillance = monitoring prostate cancer with blood tests, rectal exams and ultrasounds",
+      "text": "15 Active Surveillance = monitoring prostate cancer with blood tests, rectal exams and ultrasounds",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate type of active surveillance: Regular visits, digital rectal exams, PSA testing, transrectal ultrasounds, transrectal needle biopsies, and other.",
+      "text": "Indicate type of active surveillance: Regular visits, digital rectal exams, PSA testing, transrectal ultrasounds, transrectal needle biopsies, and other.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "16 Watchful Waiting= monitoring prostate cancer based upon veteran’s symptoms",
+      "text": "16 Watchful Waiting= monitoring prostate cancer based upon veteran’s symptoms",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate if watchful waiting is in treatment plan.",
+      "text": "Indicate if watchful waiting is in treatment plan.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "17 Watchful Waiting",
+      "text": "17 Watchful Waiting",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate type of surgery: Prostatectomy, pelvic lymphadenectomy, TURP, or other. Indicate date of surgery and if lymph node sampling was performed.",
+      "text": "Indicate type of surgery: Prostatectomy, pelvic lymphadenectomy, TURP, or other. Indicate date of surgery and if lymph node sampling was performed.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "18 Radiation Therapy",
+      "text": "18 Radiation Therapy",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate type of radiation therapy: External beam, brachytherapy/interstitial implantation of isotopes, or other. Indicate start date of therapy.",
+      "text": "Indicate type of radiation therapy: External beam, brachytherapy/interstitial implantation of isotopes, or other. Indicate start date of therapy.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "cref": "#/groups/23"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "19 Hormonal Therapy",
+      "text": "19 Hormonal Therapy",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate type of hormonal therapy: Bilateral orchiectomy, GnRh agonists/antagonists, anti- androgren, androgen synthesis inhibitors, estrogen therapy, or other. Indicate start date of therapy.",
+      "text": "Indicate type of hormonal therapy: Bilateral orchiectomy, GnRh agonists/antagonists, anti- androgren, androgen synthesis inhibitors, estrogen therapy, or other. Indicate start date of therapy.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "cref": "#/groups/24"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "20 Steroids/glucocorticoids",
+      "text": "20 Steroids/glucocorticoids",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate type of steroids/glucocorticoids: Prednisone, dexamethasone, other. Indicate start date.",
+      "text": "Indicate type of steroids/glucocorticoids: Prednisone, dexamethasone, other. Indicate start date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/111",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/112",
+      "parent": {
+        "cref": "#/groups/25"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "21 Biphosphonate/RANK ligand inhibitors:",
+      "text": "21 Biphosphonate/RANK ligand inhibitors:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/113",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate type of biphosphonate/RANK ligand inhibitors: Zoledronic acid, pamidronate, denosumab, and other. Indicate start date.",
+      "text": "Indicate type of biphosphonate/RANK ligand inhibitors: Zoledronic acid, pamidronate, denosumab, and other. Indicate start date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/114",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/115",
+      "parent": {
+        "cref": "#/groups/26"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "22 Radiopharmaceuticals:",
+      "text": "22 Radiopharmaceuticals:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/116",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate type of radiopharmaceutical: Sipuleucel-T and other. Indicate start date.",
+      "text": "Indicate type of radiopharmaceutical: Sipuleucel-T and other. Indicate start date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/117",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/118",
+      "parent": {
+        "cref": "#/groups/27"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "23 Cryotherapy:",
+      "text": "23 Cryotherapy:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/119",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate if cryotherapy is part of treatment plan. Indicate start date.",
+      "text": "Indicate if cryotherapy is part of treatment plan. Indicate start date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/120",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/121",
+      "parent": {
+        "cref": "#/groups/28"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "24 Clinical Trial:",
+      "text": "24 Clinical Trial:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/122",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Explain type of clinical trial in treatment plan. Indicate start date.",
+      "text": "Explain type of clinical trial in treatment plan. Indicate start date.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/123",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/124",
+      "parent": {
+        "cref": "#/groups/29"
+      },
+      "children": [
+        {
+          "cref": "#/groups/30"
+        },
+        {
+          "cref": "#/texts/126"
+        },
+        {
+          "cref": "#/texts/127"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "Treatment Section",
+      "text": "Treatment Section",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/125",
+      "parent": {
+        "cref": "#/groups/30"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Result of most recent follow-up:",
+      "text": "Result of most recent follow-up:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/126",
+      "parent": {
+        "cref": "#/texts/124"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate response to initial treatment. Indicate date of this treatment.",
+      "text": "Indicate response to initial treatment. Indicate date of this treatment.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/127",
+      "parent": {
+        "cref": "#/texts/124"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/128",
+      "parent": {
+        "cref": "#/groups/29"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "25 Did patient receive referral for hospice or palliative care:",
+      "text": "25 Did patient receive referral for hospice or palliative care:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/129",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/130",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Indicate yes or no response to palliative/hospice referral.",
+      "text": "Indicate yes or no response to palliative/hospice referral.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/131",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/132",
+      "parent": {
+        "cref": "#/groups/31"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "26 Initial Entries",
+      "text": "26 Initial Entries",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/133",
+      "parent": {
+        "cref": "#/groups/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Users should document only in sections that are pertinent to their patient. There are no required fields at this point. However, once a section is opened, users are required to answer all questions within that section, or uncheck the box for that section (in which case no information from that section will be included).",
+      "text": "Users should document only in sections that are pertinent to their patient. There are no required fields at this point. However, once a section is opened, users are required to answer all questions within that section, or uncheck the box for that section (in which case no information from that section will be included).",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/134",
+      "parent": {
+        "cref": "#/groups/32"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "(continued on next page)",
+      "text": "(continued on next page)",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/135",
+      "parent": {
+        "cref": "#/groups/33"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "NOTE:",
+      "text": "NOTE:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/136",
+      "parent": {
+        "cref": "#/groups/33"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "No fields are required, but it is important for users to document in the template why a standard of care was",
+      "text": "No fields are required, but it is important for users to document in the template why a standard of care was",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/137",
+      "parent": {
+        "cref": "#/groups/33"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "not",
+      "text": "not",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": true,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/138",
+      "parent": {
+        "cref": "#/groups/33"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "followed.",
+      "text": "followed.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/139",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/140",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/141",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/142",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/143",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/144",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/145",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/146",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/147",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/148",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/149",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/150",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/151",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/152",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/153",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/154",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/155",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/156",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/157",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/158",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/159",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/160",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/161",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/162",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/163",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/164",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/165",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/166",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/167",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/168",
+      "parent": {
+        "cref": "#/groups/34"
+      },
+      "children": [
+        {
+          "cref": "#/texts/169"
+        },
+        {
+          "cref": "#/texts/170"
+        },
+        {
+          "cref": "#/texts/171"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "a. Missing Required Fields:",
+      "text": "a. Missing Required Fields:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/169",
+      "parent": {
+        "cref": "#/texts/168"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Whenever a section is opened the user is required to answer all questions in that section. If the user clicks on finish without answering all questions in a section a pop-up box will appear directing the user back to the specific unanswered question. For example, the ECOG section is not a required entry unless the user clicks on the checkbox for that section. Once that section is opened the user is required to select a score from the list. If the user clicks on finish without selecting an ECOG score the user will get the following error message:",
+      "text": "Whenever a section is opened the user is required to answer all questions in that section. If the user clicks on finish without answering all questions in a section a pop-up box will appear directing the user back to the specific unanswered question. For example, the ECOG section is not a required entry unless the user clicks on the checkbox for that section. Once that section is opened the user is required to select a score from the list. If the user clicks on finish without selecting an ECOG score the user will get the following error message:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/170",
+      "parent": {
+        "cref": "#/texts/168"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/171",
+      "parent": {
+        "cref": "#/texts/168"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/172",
+      "parent": {
+        "cref": "#/groups/34"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "27 Entries:",
+      "text": "27 Entries:",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/173",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "After initial use of VA-Oncology Prostate Template the template text changes to Re- Assessment.",
+      "text": "After initial use of VA-Oncology Prostate Template the template text changes to Re- Assessment.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/174",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Initial Entry",
+      "text": "Initial Entry",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/175",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/176",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Subsequent Entry",
+      "text": "Subsequent Entry",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/177",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/178",
+      "parent": {
+        "cref": "#/groups/35"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "28 Header",
+      "text": "28 Header",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/179",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Previously entered information in the VA-Oncology Prostate Template will display in a header. The Header information will be included in the progress note text and is similar to information that is often included manually at the top of oncology provider notes.",
+      "text": "Previously entered information in the VA-Oncology Prostate Template will display in a header. The Header information will be included in the progress note text and is similar to information that is often included manually at the top of oncology provider notes.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/180",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The Header is broken into three sections mimicking the template: diagnosis, treatment, and post-treatment. Each Header item will display up to 10 entries in descending order.",
+      "text": "The Header is broken into three sections mimicking the template: diagnosis, treatment, and post-treatment. Each Header item will display up to 10 entries in descending order.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/181",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/182",
+      "parent": {
+        "cref": "#/groups/36"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "NOTE:",
+      "text": "NOTE:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/183",
+      "parent": {
+        "cref": "#/groups/36"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The following elements are",
+      "text": "The following elements are",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/184",
+      "parent": {
+        "cref": "#/groups/36"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "not",
+      "text": "not",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/185",
+      "parent": {
+        "cref": "#/groups/36"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "included in the header:",
+      "text": "included in the header:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/186",
+      "parent": {
+        "cref": "#/groups/37"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Diagnosis section",
+      "text": "Diagnosis section",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/187",
+      "parent": {
+        "cref": "#/groups/37"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ": laboratory tests, surgical margins, prostate needle biopsy, and ECOG.",
+      "text": ": laboratory tests, surgical margins, prostate needle biopsy, and ECOG.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/188",
+      "parent": {
+        "cref": "#/groups/38"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Treatment section",
+      "text": "Treatment section",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/189",
+      "parent": {
+        "cref": "#/groups/38"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ": tumor board presentations and intent of treatment.",
+      "text": ": tumor board presentations and intent of treatment.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/190",
+      "parent": {
+        "cref": "#/groups/39"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Post",
+      "text": "Post",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/191",
+      "parent": {
+        "cref": "#/groups/39"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "-",
+      "text": "-",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/192",
+      "parent": {
+        "cref": "#/groups/39"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Treatment:",
+      "text": "Treatment:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/193",
+      "parent": {
+        "cref": "#/groups/39"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "hospice/referrals (only yes or no responses display not the individual no responses)",
+      "text": "hospice/referrals (only yes or no responses display not the individual no responses)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/194",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/195",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If only these sections are documented in, No Prostate Cancer DIAGNOSIS and/or No Prostate Cancer TREATMENT Data Available and/or No Prostate Cancer Post Treatment Data available message(s) will display in the header. See example A below.",
+      "text": "If only these sections are documented in, No Prostate Cancer DIAGNOSIS and/or No Prostate Cancer TREATMENT Data Available and/or No Prostate Cancer Post Treatment Data available message(s) will display in the header. See example A below.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/196",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/197",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Example A:",
+      "text": "Example A:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/198",
+      "parent": {
+        "cref": "#/groups/40"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note",
+      "text": "Note",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/199",
+      "parent": {
+        "cref": "#/groups/40"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ": Re-Assessment appears telling user that this is a subsequent entry.",
+      "text": ": Re-Assessment appears telling user that this is a subsequent entry.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/200",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/201",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/202",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/203",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/204",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Example B:",
+      "text": "Example B:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/205",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The header below represents data that was entered in the fields: Date of diagnosis, clinical summary stage, histology, Gleason combined score.",
+      "text": "The header below represents data that was entered in the fields: Date of diagnosis, clinical summary stage, histology, Gleason combined score.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/206",
+      "parent": {
+        "cref": "#/groups/41"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "NOTE",
+      "text": "NOTE",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/207",
+      "parent": {
+        "cref": "#/groups/41"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ": No Prostate Cancer TREATMENT data available indicates that the user did not enter any information the Treatment section.",
+      "text": ": No Prostate Cancer TREATMENT data available indicates that the user did not enter any information the Treatment section.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/208",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/209",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/210",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Example C:",
+      "text": "Example C:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/211",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The header below represents data that was entered in the fields: Pathological staging, pathology, surgery, RT, chemotherapy, and steroids.",
+      "text": "The header below represents data that was entered in the fields: Pathological staging, pathology, surgery, RT, chemotherapy, and steroids.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/212",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/213",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/214",
+      "parent": {
+        "cref": "#/groups/42"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "29 Date Fields",
+      "text": "29 Date Fields",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/215",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "All date fields are required and are blank to decrease chances of entering erroneous dates. To enter a date click on the … symbol. This will open up the calendar in CPRS.",
+      "text": "All date fields are required and are blank to decrease chances of entering erroneous dates. To enter a date click on the … symbol. This will open up the calendar in CPRS.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/216",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/217",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/218",
+      "parent": {
+        "cref": "#/groups/43"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Instruction box for using the VA-Oncology Prostate Template is included in template",
+      "text": "Instruction box for using the VA-Oncology Prostate Template is included in template",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    }
+  ],
+  "pictures": [
+    {
+      "self_ref": "#/pictures/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 587.0,
+          "height": 34.0
+        },
+        "uri": "data:image/png;base64,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"
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 760.0,
+          "height": 42.0
+        },
+        "uri": "data:image/png;base64,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"
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/2",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 325.0,
+          "height": 273.0
+        },
+        "uri": "data:image/png;base64,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"
+      },
+      "annotations": []
+    }
+  ],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

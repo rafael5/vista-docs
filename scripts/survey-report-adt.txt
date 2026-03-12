@@ -1,0 +1,188 @@
+========================================================================
+VDL CORPUS SURVEY REPORT — package=adt
+Generated: 2026-03-11 06:42
+========================================================================
+
+Documents analysed : 16
+Errors             : 0
+
+────────────────────────────────────────────────────────────────────────
+STRUCTURAL FEATURES (count of documents)
+────────────────────────────────────────────────────────────────────────
+  Has TOC field                :   9 / 16
+  Has revision history table   :   4 / 16
+  Has back-matter index        :   0 / 16
+  Has pseudo-headings          :  16 / 16
+
+────────────────────────────────────────────────────────────────────────
+TABLE TYPES DETECTED
+────────────────────────────────────────────────────────────────────────
+  reference-table            180
+  revision                    16
+  fileman-file-registry        3
+  api-function                 3
+  menu-option                  2
+  rpc                          1
+  fileman-access               1
+  fileman                      1
+  m-variable                   1
+  acronym-glossary             1
+
+────────────────────────────────────────────────────────────────────────
+CALLOUT TYPES (NOTE / WARNING / CAUTION etc.)
+────────────────────────────────────────────────────────────────────────
+  NOTE                   74
+  IMPORTANT               1
+
+────────────────────────────────────────────────────────────────────────
+CROSS-REFERENCES
+────────────────────────────────────────────────────────────────────────
+  Internal page refs           : 2
+  Terminal/VistA session lines : 854
+  External doc refs (top 10):
+      3×  Refer to the Order Entry/Results Reporting document
+      2×  refer to the Order Entry/Results Reporting document
+      2×  refer to the supporting document
+      2×  refer to the GMT Installation Guide
+      2×  see the ABC Installation Guide
+      1×  see the Patient Record Flags HL7 Interface Specification document
+      1×  refer to the VA FileMan user manual
+      1×  refer to the appropriate option document
+      1×  refer to the Generic Code Sheet User Manual
+      1×  Refer to the appropriate option document
+
+────────────────────────────────────────────────────────────────────────
+PSEUDO-HEADINGS — total 458 across 16 docs
+Top 20 recurring pseudo-heading texts:
+────────────────────────────────────────────────────────────────────────
+   14×  Inpatient/Lodger Report Menu
+   14×  Returns:
+   12×  Overview
+   11×  AMIS Reports Menu
+   11×  Copay Exemption Test User Menu
+    9×  AMIS 401-420 Reports
+    9×  Means Test Outputs
+    9×  Outputs Menu
+    8×  IF	THEN
+    7×  Enrollment Reports
+    6×  PIMS V. 5.3 ADT Module User Manual
+    6×  Gains and Losses (G&L) Sheet
+    6×  Complete a Required Means Test
+    6×  FIELD NAME
+    6×  SCREEN	OR PROMPT	DESCRIPTION
+    6×  FIELD NAME/
+    6×  SCREEN	TITLE OF PROMPT	DESCRIPTION
+    6×  DataCard’s HL7 Interface Technical Reference
+    5×  Revision History
+    4×  HOW BLOCK PLACEMENT OF DATA IS DETERMINED
+
+────────────────────────────────────────────────────────────────────────
+PARAGRAPH STYLES — corpus frequency
+────────────────────────────────────────────────────────────────────────
+    8365  Normal
+    1183  Body Text
+     918  List Bullet
+     867  code
+     736  Body Text Bullet 1
+     405  Heading 2
+     386  Dialogue
+     361  No Spacing
+     360  Heading 3
+     350  toc 3
+     332  toc 2
+     180  Caption
+     164  table of figures
+     155  Body Text Lettered 2
+     141  List Bullet 2
+     125  List Paragraph
+     122  Space
+      91  capture
+      66  Header
+      65  Note
+      65  Heading 4
+      63  Alt Heading 5
+      58  List Number
+      57  10pt cent schoolbook
+      53  toc 1
+      53  Heading 1
+      46  Body Text Bullet 3
+      43  Style Century Schoolbook Before:  3 pt After:  3 pt
+      41  Body Text 6
+      32  Body Text 3
+      30  toc 4
+      30  List Number 2
+      29  Title 2
+      29  Screen
+      23  Body Text Numbered 1
+      15  List Bullet Indent 2
+      15  footnote text
+      13  Dialogue Indent 2
+      13  Heading 5
+      13  Table Header
+
+────────────────────────────────────────────────────────────────────────
+STANDARD STYLES (appear in ALL 16 documents) — these form the base schema
+────────────────────────────────────────────────────────────────────────
+  Normal
+
+────────────────────────────────────────────────────────────────────────
+ONE-OFF STYLES (appear in exactly 1 document) — candidates for schema 'other'
+────────────────────────────────────────────────────────────────────────
+  10 poinr courier
+  10pt cent schoolbook
+  API Format
+  Alt Heading 2
+  Alt Heading 5
+  Appendix 1
+  Body Text 4
+  Body Text 6
+  Body Text Bullet 3
+  Body Text Indent
+  Body Text Lettered 1
+  Body Text Lettered 2
+  Body Text Lettered 3
+  Body Text Numbered 1
+  Default
+  Dialogue
+  Dialogue Indent 2
+  Graphic Insert
+  Header
+  Heading Front-Back_Matter
+  Instructional Text Title 2
+  List Bullet
+  List Bullet 2
+  List Bullet Indent 2
+  List Number 1
+  Note Indent 2
+  Screen
+  Style Century Schoolbook Before:  3 pt After:  3 pt
+  Style major heading + Century Schoolbook 14 pt Bold Centered
+  Style major heading + Left
+  ... and 9 more
+
+────────────────────────────────────────────────────────────────────────
+PER-DOCUMENT SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Document                                         §  Tbl   Ph  PgRef Flags
+  --------------------------------------------- ──── ──── ──── ────── ────────────
+  adt_pims_tm.docx                               319  121   69      1   TR
+  adtbe_um.docx                                   43    8   14      0   
+  adto_um.docx                                     1    1  125      0   
+  dg_reg_bc_um.docx                               63    1   16      0   T
+  adt_cnhr_um.docx                                26    1   16      0   T
+  adt_mcsm.docx                                    5    0    3      0   
+  adt_mts_um.docx                                 30   10   22      0   T
+  PIMS_User_Manual-Menus_Intros_Orientation.docx   38   19   10      0   TR
+  adt_pimsschoutput.docx                          55   16    7      0   TR
+  adt_ptf.docx                                   113   11   32      0   T
+  pims_reg_um.docx                               140   14   40      1   TR
+  adt_rug.docx                                     0    1   32      0   
+  adt_so.docx                                      0    1    9      0   
+  sadt_um.docx                                    63    4    9      0   T
+  adt_vic.docx                                     0    0   27      0   
+  dg_5_3_891_cets_um.docx                          0    1   27      0   
+  Flags: T=has TOC field  R=has revision table  I=has back-matter index
+
+========================================================================
+END OF REPORT
+========================================================================

@@ -1,0 +1,295 @@
+========================================================================
+VDL CORPUS SURVEY REPORT — all packages
+Generated: 2026-03-11 22:19
+========================================================================
+
+Documents analysed : 110
+Errors             : 0
+
+────────────────────────────────────────────────────────────────────────
+STRUCTURAL FEATURES (count of documents)
+────────────────────────────────────────────────────────────────────────
+  Has TOC field                :  66 / 110
+  Has revision history table   :  47 / 110
+  Has back-matter index        :   1 / 110
+  Has pseudo-headings          :  98 / 110
+
+────────────────────────────────────────────────────────────────────────
+TABLE TYPES DETECTED
+────────────────────────────────────────────────────────────────────────
+  reference-table            680
+  revision                    64
+  single-column               50
+  hl7-segment                 37
+  reminder-definition         35
+  api-function                34
+  menu-option                 27
+  acronym-glossary            24
+  rpc                         18
+  fileman-file-registry       15
+  m-variable                   8
+  field-mapping                8
+  keyboard-shortcuts           6
+  comparison                   6
+  checklist                    5
+  fileman-access               4
+  error-code                   3
+  fileman                      1
+  security-key                 1
+  pre-post-install             1
+
+────────────────────────────────────────────────────────────────────────
+CALLOUT TYPES (NOTE / WARNING / CAUTION etc.)
+────────────────────────────────────────────────────────────────────────
+  NOTE                  617
+  REMINDER               27
+  WARNING                17
+  CAUTION                 4
+  IMPORTANT               3
+
+────────────────────────────────────────────────────────────────────────
+CROSS-REFERENCES
+────────────────────────────────────────────────────────────────────────
+  Internal page refs           : 36
+  Terminal/VistA session lines : 3784
+  External doc refs (top 10):
+      6×  See the IB Encounter Form Utilities User Manual
+      5×  see the Clinical Reminders Index Technical Manual
+      5×  see the Clinical Reminders Index Technical Guide
+      5×  See the FileMan Getting Started Manual
+      5×  See the chapter in this manual
+      4×  see the  section of this document
+      4×  refer to the VA FileMan Getting Started manual
+      3×  See the DESCRIPTION field below for information on how to document
+      3×  See the Clinical Reminder Index Technical Manual
+      3×  see the CPRS Technical Manual
+
+────────────────────────────────────────────────────────────────────────
+PSEUDO-HEADINGS — total 3470 across 98 docs
+Top 20 recurring pseudo-heading texts:
+────────────────────────────────────────────────────────────────────────
+   42×  ACRP Reports Menu
+   37×  -----------------------------------
+   29×  Resolution:
+   25×  Problem:
+   24×  Example
+   22×  Steps to use option:
+   22×  Enter ?? for more actions
+   18×  Release Notes
+   18×  Example:
+   18×  +     + Next Screen  - Prev Screen  ?? More actions
+   14×  Clinical Reminders
+   13×  Revision History
+   12×  Data Validation Menu
+   10×  Overview
+   10×  Table of Contents
+   10×  +         Select one or more entries
+   10×  Description
+   10×  Chapter 3:
+   10×  Chapter 3: Processing Mental Health Reminders, cont’d
+    9×  Select one or more entries
+
+────────────────────────────────────────────────────────────────────────
+PARAGRAPH STYLES — corpus frequency
+────────────────────────────────────────────────────────────────────────
+   71495  Normal
+   16978  Body Text
+   11245  Screen capture Char
+    6968  screen
+    5275  capture
+    4831  List Paragraph
+    2856  Helvetica
+    1578  Default
+    1311  Heading 2
+    1214  Heading 3
+     975  SCREEN CAPTURE
+     972  toc 2
+     952  CPRS Bullets
+     951  CPRS Bullets Body
+     861  toc 3
+     783  Heading 1
+     740  index 1
+     614  List Bullet
+     557  CPRS capture
+     545  Body Text 3
+     507  Heading 4
+     493  No Spacing
+     478  courier
+     473  toc 1
+     442  Body Text First Indent 2
+     319  Style1
+     307  Plain Text
+     287  Body Text Bullet 1
+     280  Normal (Web)
+     269  ScreenCapture
+     246  Heading 5
+     227  CPRS H3 Body
+     218  Body Text Numbered 1
+     204  Caption
+     202  Title 2
+     196  Block Text
+     163  CPRS Num List
+     146  Style 10 pt Bold Before:  12 pt
+     145  List Number
+     145  Style2
+
+────────────────────────────────────────────────────────────────────────
+STANDARD STYLES (appear in ALL 110 documents) — these form the base schema
+────────────────────────────────────────────────────────────────────────
+  Normal
+
+────────────────────────────────────────────────────────────────────────
+ONE-OFF STYLES (appear in exactly 1 document) — candidates for schema 'other'
+────────────────────────────────────────────────────────────────────────
+  1 numbered list
+  2 numbered list
+  Alt Heading 2
+  Appendix 2
+  Balloon Text
+  Body Text First Indent
+  Body Text Indent double
+  Body Text Lettered 2
+  Body Text Note 1
+  Body_Text
+  Bullet1
+  CM45
+  CM46
+  CM5
+  CM74
+  CM75
+  CM85
+  CPRS - Note
+  CPRS H3 Note
+  CPRS H5
+  CPRS Num list Capture
+  CPRS caption Char
+  CPRS sub note bullet
+  Capture
+  CrossReference
+  FIELDS
+  HTML Top of Form
+  Heading 32
+  Heading 8
+  Heading Front-Back_Matter
+  ... and 42 more
+
+────────────────────────────────────────────────────────────────────────
+PER-DOCUMENT SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Document                                         §  Tbl   Ph  PgRef Flags
+  --------------------------------------------- ──── ──── ──── ────── ────────────
+  acr_icd-10_rn_sd_5_3_593.docx                   25    3    0      0   T
+  acr_p_pimstm.docx                              277  121   34      0   TR
+  acr_p_rn.docx                                    0    0   26      0   
+  acr_p_um_appx.docx                               0   13    0      0   
+  acr_puse.docx                                    0    1  161      0   
+  OR_3_0_377_RN.docx                              36    0    3      0   T
+  OR_3_0_377_setup.docx                           69   13   51      1   TR
+  or_30_218_ig.docx                               30    4    6      2   T
+  or_30_280rn.docx                                 0    0   41      0   T
+  or_30_296rn.docx                                 0    0    8      0   T
+  or_30_304rn.docx                                 0    0    3      0   T
+  or_30_306_rn.docx                                0    0   12      0   T
+  or_30_312_rn.docx                                0    0    6      0   T
+  or_30_350_rn.docx                                0    0   18      0   T
+  or_30_385_rn.docx                                0    0    4      0   T
+  or_30_387_rn.docx                                6    3    0      0   TR
+  or_30_420rn.docx                                 8    0    4      0   T
+  or_3_0_405_rn.docx                              54    1   23      0   TR
+  or_3_0_405_setup_r.docx                         30    3    8      0   T
+  or_3_0_406_rn.docx                              32    2    1      0   TR
+  or_3_0_498_setup_r.docx                         25    5   56      0   TR
+  or_3_0_588_rn.docx                              18    1    0      0   TR
+  or_3_0_608_rn.docx                              13    0   42      0   T
+  or_3_0_617_rn.docx                              10    0   15      0   T
+  or_3_0_629_rn.docx                              10    0   32      0   T
+  or_3_309rn.docx                                  0    1    1      0   TR
+  or_3_332rn.docx                                  0    1    4      0   TR
+  or_3_340rn.docx                                  0    0    0      0   T
+  or_3_p427_qr.docx                               11    1    0      0   
+  or_3_p529_qr.docx                                1    2   21      0   
+  prt_tm_r.docx                                   40    3    1      0   TR
+  prt_ug_r.docx                                   41    3   11      0   TR
+  gmpl_2_0_49_rn.docx                              0    0    3      0   T
+  gmpl_2_0_49_tm.docx                             40    4  139      1   TR
+  gmplum.docx                                     85   26  144      1   TR
+  gmra_4_0_tm.docx                               112    9   34      1   TR
+  gmra_4_0_um.docx                               162    4   77      1   TR
+  gmra_4_20_rn.docx                               14    0   93      0   T
+  gmra_4_23_rn.docx                               31    2    4      0   
+  gmra_4_26_rn.docx                               16    2   28      0   T
+  gmra_4_50_rn.docx                               12    0    3      0   T
+  vitl5_p22_rn.docx                                1    0    2      0   
+  vitl5_p23_rn.docx                                1    0    2      0   
+  vitl5_p3_rn.docx                                 2    0    2      0   
+  vitl5_rn.docx                                    0    1    0      0   R
+  vitl5_tm.docx                                   32    2   17      0   TR
+  vitl5_um.docx                                   46    3   21      1   TR
+  vitl_5_p22_tm.docx                               0    1   17      0   R
+  vitl_5_p22_um.docx                              12    1   11      0   R
+  vitl_5_p23_tm_change_pages.docx                 31    9    5      0   R
+  vitl_5_p23_um_change_pages.docx                 64    6   41      0   RI
+  gmts_2_7_p133_tm.docx                           57   14   37      2   TR
+  gmts_2_7_p133_um.docx                          132    2  121      3   TR
+  hsum_2_7_tm.docx                                57   13   43      2   TR
+  hsum_2_7_um.docx                               129    2  123      3   TR
+  icd-10_rn_px_1_199.docx                         14    6    0      0   T
+  px_1_0_211_rn.docx                              34    4    1      0   TR
+  px_1_0_234_rn.docx                              10    1    2      0   T
+  px_1_p124_rn.docx                                8    0    5      0   T
+  px_1_p164_rn.docx                               22    1    1      0   TR
+  px_tm.docx                                      97   20    5      0   R
+  px_um.docx                                     109    3   10      0   T
+  pxqr.docx                                        0    2    0      0   R
+  pxrnp16.docx                                     1    0   17      0   
+  pxumappx.docx                                   14    7  163      1   T
+  ahobpr_registrantportal_usermanual_v3.docx      40    0    4      0   
+  pxrm_1_5_12_tm.docx                             41    6    8      0   TR
+  pxrm_1_5_21_setup.docx                          36   19   18      0   
+  pxrm_1_5_8_ihd_reminders_brochure.docx           0    2    0      0   
+  pxrm_2_0_26_rn.docx                             20    3   29      0   T
+  pxrm_2_0_26_um.docx                             70   11   75      0   TR
+  pxrm_2_0_27_rn.docx                              7    3    8      0   T
+  pxrm_2_0_29_um.docx                             21   11   10      0   R
+  pxrm_2_0_32_ug.docx                             18   14    7      1   R
+  pxrm_2_0_38_um_lung.docx                        28    0    4      1   
+  pxrm_2_0_38_um_prostate.docx                    35    0    5      0   
+  pxrm_2_0_38_um_vsas.docx                        20    0    1      0   
+  pxrm_2_0_39_cac_cklist.docx                      0    5    1      0   
+  pxrm_2_0_53_rn.docx                              6    0    5      0   T
+  pxrm_2_0_54_cds.docx                             3    0    4      0   
+  pxrm_2_0_61_rn.docx                              4    1   10      0   
+  pxrm_2_11_ig.docx                               45    7   56      0   T
+  pxrm_2_12_rn.docx                               28    4    4      0   
+  pxrm_2_15_ig.docx                               37    7    6      0   
+  pxrm_2_17_ig.docx                               34    7   21      0   TR
+  pxrm_2_18_ig.docx                               33    8   43      0   T
+  pxrm_2_18_rn.docx                               38    3   24      0   T
+  pxrm_2_19_ig.docx                               58   86   56      1   
+  pxrm_2_19_um.docx                               57   15    6      0   R
+  pxrm_2_1_ig.docx                                58   67   45      0   R
+  pxrm_2_21_mm.docx                              289   38  262      6   TR
+  pxrm_2_22_mm.docx                              280   42  283      6   TR
+  pxrm_2_22_rn.docx                               13    5   33      0   T
+  pxrm_2_24_rn.docx                               25    8   34      0   T
+  pxrm_2_24_rn2.docx                              25    8   34      0   T
+  pxrm_2_2_um_appd.docx                           21    1    3      0   
+  pxrm_2_4_rn.docx                                34    5   26      0   T
+  pxrm_2_4_tm.docx                                44   20   19      0   R
+  pxrm_2_4_um.docx                                53   83   33      0   R
+  pxrm_2_5_sg.docx                                10   21   34      0   R
+  pxrm_2_6_ig.docx                                74    4   27      0   T
+  pxrm_2_6_rn.docx                                46    1   11      0   T
+  pxrm_2_6_um.docx                                15   15  124      0   R
+  pxrm_2_8_ig.docx                                33   14    5      0   
+  pxrm_2_mm.docx                                 258   46  223      2   TR
+  pxrm_2_sg.docx                                  34   81   32      0   R
+  pxrm_2_um.docx                                  72   17   68      0   R
+  pxrm_cr-rept-qrc.docx                            0    2    0      0   
+  pxrm_index_tm.docx                              37    9    6      0   R
+  pxrm_qrc-cr2-user.docx                           0    2    0      0   
+  Flags: T=has TOC field  R=has revision table  I=has back-matter index
+
+========================================================================
+END OF REPORT
+========================================================================

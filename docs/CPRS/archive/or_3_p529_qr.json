@@ -1,0 +1,3751 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "or_3_p529_qr",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 15768568827169711027,
+    "filename": "or_3_p529_qr.docx",
+    "uri": null
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "parent": null,
+    "children": [],
+    "content_layer": "furniture",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "parent": null,
+    "children": [
+      {
+        "cref": "#/pictures/0"
+      },
+      {
+        "cref": "#/texts/0"
+      },
+      {
+        "cref": "#/groups/0"
+      },
+      {
+        "cref": "#/groups/1"
+      },
+      {
+        "cref": "#/groups/26"
+      },
+      {
+        "cref": "#/texts/135"
+      },
+      {
+        "cref": "#/texts/136"
+      },
+      {
+        "cref": "#/groups/27"
+      }
+    ],
+    "content_layer": "body",
+    "meta": null,
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/1"
+        },
+        {
+          "cref": "#/texts/2"
+        },
+        {
+          "cref": "#/texts/3"
+        },
+        {
+          "cref": "#/texts/4"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/groups/2"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-0",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "cref": "#/groups/1"
+      },
+      "children": [
+        {
+          "cref": "#/texts/5"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "header-1",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/6"
+        },
+        {
+          "cref": "#/texts/7"
+        },
+        {
+          "cref": "#/texts/8"
+        },
+        {
+          "cref": "#/texts/9"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/10"
+        },
+        {
+          "cref": "#/texts/11"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/12"
+        },
+        {
+          "cref": "#/texts/13"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/14"
+        },
+        {
+          "cref": "#/texts/15"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/19"
+        },
+        {
+          "cref": "#/texts/20"
+        },
+        {
+          "cref": "#/texts/21"
+        },
+        {
+          "cref": "#/texts/22"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/30"
+        },
+        {
+          "cref": "#/texts/31"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/44"
+        },
+        {
+          "cref": "#/texts/45"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/47"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/66"
+        },
+        {
+          "cref": "#/texts/67"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/12",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/71"
+        },
+        {
+          "cref": "#/texts/74"
+        },
+        {
+          "cref": "#/texts/77"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/13",
+      "parent": {
+        "cref": "#/texts/71"
+      },
+      "children": [
+        {
+          "cref": "#/texts/72"
+        },
+        {
+          "cref": "#/texts/73"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/14",
+      "parent": {
+        "cref": "#/texts/74"
+      },
+      "children": [
+        {
+          "cref": "#/texts/75"
+        },
+        {
+          "cref": "#/texts/76"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/15",
+      "parent": {
+        "cref": "#/texts/77"
+      },
+      "children": [
+        {
+          "cref": "#/texts/78"
+        },
+        {
+          "cref": "#/texts/79"
+        },
+        {
+          "cref": "#/texts/80"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/16",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/86"
+        },
+        {
+          "cref": "#/texts/87"
+        },
+        {
+          "cref": "#/texts/88"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/17",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/90"
+        },
+        {
+          "cref": "#/texts/91"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/18",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/93"
+        },
+        {
+          "cref": "#/texts/94"
+        },
+        {
+          "cref": "#/texts/95"
+        },
+        {
+          "cref": "#/texts/96"
+        },
+        {
+          "cref": "#/texts/97"
+        },
+        {
+          "cref": "#/texts/98"
+        },
+        {
+          "cref": "#/texts/99"
+        },
+        {
+          "cref": "#/texts/100"
+        },
+        {
+          "cref": "#/groups/19"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "textbox",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/19",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [
+        {
+          "cref": "#/texts/101"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/20",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/103"
+        },
+        {
+          "cref": "#/texts/104"
+        },
+        {
+          "cref": "#/texts/105"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/21",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/107"
+        },
+        {
+          "cref": "#/texts/108"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/22",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/111"
+        },
+        {
+          "cref": "#/texts/112"
+        },
+        {
+          "cref": "#/texts/113"
+        },
+        {
+          "cref": "#/texts/114"
+        },
+        {
+          "cref": "#/texts/115"
+        },
+        {
+          "cref": "#/texts/116"
+        },
+        {
+          "cref": "#/texts/117"
+        },
+        {
+          "cref": "#/texts/118"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/23",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [
+        {
+          "cref": "#/texts/119"
+        },
+        {
+          "cref": "#/texts/125"
+        },
+        {
+          "cref": "#/texts/131"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/24",
+      "parent": {
+        "cref": "#/texts/119"
+      },
+      "children": [
+        {
+          "cref": "#/texts/120"
+        },
+        {
+          "cref": "#/texts/121"
+        },
+        {
+          "cref": "#/texts/122"
+        },
+        {
+          "cref": "#/texts/123"
+        },
+        {
+          "cref": "#/texts/124"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/25",
+      "parent": {
+        "cref": "#/texts/125"
+      },
+      "children": [
+        {
+          "cref": "#/texts/126"
+        },
+        {
+          "cref": "#/texts/127"
+        },
+        {
+          "cref": "#/texts/128"
+        },
+        {
+          "cref": "#/texts/129"
+        },
+        {
+          "cref": "#/texts/130"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/26",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "name": "page header",
+      "label": "section"
+    },
+    {
+      "self_ref": "#/groups/27",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/texts/138"
+        }
+      ],
+      "content_layer": "furniture",
+      "meta": null,
+      "name": "page footer",
+      "label": "section"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "This patch provides functionality to maintain continuity of care during a site's Cerner cutover by creating a report of recent clinical activity for every patient seen in the last three years that providers can cross-reference during the initial cutover period. This is done by automatically creating documents for a single, user-selected patient, or to initiate a task to create a document for every patient that has had an inpatient, outpatient, or clinic visit in the past three years.",
+      "text": "This patch provides functionality to maintain continuity of care during a site's Cerner cutover by creating a report of recent clinical activity for every patient seen in the last three years that providers can cross-reference during the initial cutover period. This is done by automatically creating documents for a single, user-selected patient, or to initiate a task to create a document for every patient that has had an inpatient, outpatient, or clinic visit in the past three years.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note",
+      "text": "Note",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":\tThe",
+      "text": ":\tThe",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "VistA Cutover Utilities Menu",
+      "text": "VistA Cutover Utilities Menu",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "cref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "is locked by the ORVCO Security Key.",
+      "text": "is locked by the ORVCO Security Key.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "cref": "#/groups/2"
+      },
+      "children": [
+        {
+          "cref": "#/groups/3"
+        },
+        {
+          "cref": "#/groups/4"
+        },
+        {
+          "cref": "#/groups/5"
+        },
+        {
+          "cref": "#/groups/6"
+        },
+        {
+          "cref": "#/texts/16"
+        },
+        {
+          "cref": "#/texts/17"
+        },
+        {
+          "cref": "#/texts/18"
+        },
+        {
+          "cref": "#/groups/7"
+        },
+        {
+          "cref": "#/texts/23"
+        },
+        {
+          "cref": "#/texts/24"
+        },
+        {
+          "cref": "#/texts/25"
+        },
+        {
+          "cref": "#/texts/26"
+        },
+        {
+          "cref": "#/texts/27"
+        },
+        {
+          "cref": "#/texts/28"
+        },
+        {
+          "cref": "#/texts/29"
+        },
+        {
+          "cref": "#/groups/8"
+        },
+        {
+          "cref": "#/texts/32"
+        },
+        {
+          "cref": "#/texts/33"
+        },
+        {
+          "cref": "#/texts/34"
+        },
+        {
+          "cref": "#/texts/35"
+        },
+        {
+          "cref": "#/texts/36"
+        },
+        {
+          "cref": "#/texts/37"
+        },
+        {
+          "cref": "#/texts/38"
+        },
+        {
+          "cref": "#/texts/39"
+        },
+        {
+          "cref": "#/texts/40"
+        },
+        {
+          "cref": "#/texts/41"
+        },
+        {
+          "cref": "#/texts/42"
+        },
+        {
+          "cref": "#/texts/43"
+        },
+        {
+          "cref": "#/groups/9"
+        },
+        {
+          "cref": "#/texts/46"
+        },
+        {
+          "cref": "#/groups/10"
+        },
+        {
+          "cref": "#/texts/48"
+        },
+        {
+          "cref": "#/texts/49"
+        },
+        {
+          "cref": "#/texts/50"
+        },
+        {
+          "cref": "#/texts/51"
+        },
+        {
+          "cref": "#/texts/52"
+        },
+        {
+          "cref": "#/texts/53"
+        },
+        {
+          "cref": "#/texts/54"
+        },
+        {
+          "cref": "#/texts/55"
+        },
+        {
+          "cref": "#/texts/56"
+        },
+        {
+          "cref": "#/texts/57"
+        },
+        {
+          "cref": "#/texts/58"
+        },
+        {
+          "cref": "#/texts/59"
+        },
+        {
+          "cref": "#/texts/60"
+        },
+        {
+          "cref": "#/texts/61"
+        },
+        {
+          "cref": "#/texts/62"
+        },
+        {
+          "cref": "#/texts/63"
+        },
+        {
+          "cref": "#/texts/64"
+        },
+        {
+          "cref": "#/texts/65"
+        },
+        {
+          "cref": "#/groups/11"
+        },
+        {
+          "cref": "#/texts/68"
+        },
+        {
+          "cref": "#/texts/69"
+        },
+        {
+          "cref": "#/texts/70"
+        },
+        {
+          "cref": "#/pictures/1"
+        },
+        {
+          "cref": "#/groups/12"
+        },
+        {
+          "cref": "#/texts/81"
+        },
+        {
+          "cref": "#/texts/82"
+        },
+        {
+          "cref": "#/texts/83"
+        },
+        {
+          "cref": "#/texts/84"
+        },
+        {
+          "cref": "#/texts/85"
+        },
+        {
+          "cref": "#/groups/16"
+        },
+        {
+          "cref": "#/texts/89"
+        },
+        {
+          "cref": "#/groups/17"
+        },
+        {
+          "cref": "#/texts/92"
+        },
+        {
+          "cref": "#/groups/18"
+        },
+        {
+          "cref": "#/pictures/2"
+        },
+        {
+          "cref": "#/texts/102"
+        },
+        {
+          "cref": "#/groups/20"
+        },
+        {
+          "cref": "#/texts/106"
+        },
+        {
+          "cref": "#/groups/21"
+        },
+        {
+          "cref": "#/texts/109"
+        },
+        {
+          "cref": "#/texts/110"
+        },
+        {
+          "cref": "#/groups/22"
+        },
+        {
+          "cref": "#/groups/23"
+        },
+        {
+          "cref": "#/texts/132"
+        },
+        {
+          "cref": "#/texts/133"
+        },
+        {
+          "cref": "#/texts/134"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "section_header",
+      "prov": [],
+      "orig": "VistA Cutover Utilities Menu",
+      "text": "VistA Cutover Utilities Menu",
+      "formatting": null,
+      "hyperlink": null,
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Run System Benchmark",
+      "text": "Run System Benchmark",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Test Data Retrieval",
+      "text": "Test Data Retrieval",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Create VistA Cutover Document(s)",
+      "text": "Create VistA Cutover Document(s)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "cref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Monitor/Stop Cutover Jobs (optional)",
+      "text": "Monitor/Stop Cutover Jobs (optional)",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Select VistA Cutover <TEST ACCOUNT> Option",
+      "text": "Select VistA Cutover <TEST ACCOUNT> Option",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "cref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":",
+      "text": ":",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note",
+      "text": "Note",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "cref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":\tBefore you begin testing or creating cutover documents, it is highly recommended to run the CPRS Coversheet Time Test released with CPRS 31b.",
+      "text": ":\tBefore you begin testing or creating cutover documents, it is highly recommended to run the CPRS Coversheet Time Test released with CPRS 31b.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Optional Step",
+      "text": "Optional Step",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "cref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "- Run the CPRS Coversheet Time Test [PXRM CPRS TESTER]",
+      "text": "- Run the CPRS Coversheet Time Test [PXRM CPRS TESTER]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The CPRS Coversheet Time Test is optional but will provide essential timing information when testing or creating the clinical reminders cutover document. The clinical reminders cutover document uses the reminders included on the CPRS Coversheet and places that information into the document text.",
+      "text": "The CPRS Coversheet Time Test is optional but will provide essential timing information when testing or creating the clinical reminders cutover document. The clinical reminders cutover document uses the reminders included on the CPRS Coversheet and places that information into the document text.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The main pieces of information to evaluate from the results are:",
+      "text": "The main pieces of information to evaluate from the results are:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Elapsed wall clock time",
+      "text": "Elapsed wall clock time",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Total CPU coversheet evaluation time",
+      "text": "Total CPU coversheet evaluation time",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Longest CPU evaluation time",
+      "text": "Longest CPU evaluation time",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "cref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Longest wall clock evaluation time.”",
+      "text": "Longest wall clock evaluation time.”",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If the CPRS Coversheet Time Test reports an “Elapsed wall clock time” of less than 1 second, move to Step 1 below.",
+      "text": "If the CPRS Coversheet Time Test reports an “Elapsed wall clock time” of less than 1 second, move to Step 1 below.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "If the “Elapsed wall clock time” is 1 second or higher, it is highly suggested to remove reminders from the CPRS coversheet settings that require the longest time to evaluate and/or the most CPU time.  After making changes, perform the time test again to verify the improvement. The goal is to reduce the “Elapsed wall clock time” as low as possible while keeping as many of the desired reminders for the cutover document.",
+      "text": "If the “Elapsed wall clock time” is 1 second or higher, it is highly suggested to remove reminders from the CPRS coversheet settings that require the longest time to evaluate and/or the most CPU time.  After making changes, perform the time test again to verify the improvement. The goal is to reduce the “Elapsed wall clock time” as low as possible while keeping as many of the desired reminders for the cutover document.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "(Continued from bottom of Column 1)",
+      "text": "(Continued from bottom of Column 1)",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Take note of your final “Elapsed wall clock time.” This time will be used to help estimate the total amount of time for the Clinical Reminders Cutover document.",
+      "text": "Take note of your final “Elapsed wall clock time.” This time will be used to help estimate the total amount of time for the Clinical Reminders Cutover document.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Example output below from the last sections of the CPRS Coversheet Time Test",
+      "text": "Example output below from the last sections of the CPRS Coversheet Time Test",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "cref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":",
+      "text": ":",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Total number of reminders evaluated: 59",
+      "text": "Total number of reminders evaluated: 59",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Elapsed wall clock time: 173 seconds",
+      "text": "Elapsed wall clock time: 173 seconds",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Total CPU coversheet evaluation time: 9995 milliseconds",
+      "text": "Total CPU coversheet evaluation time: 9995 milliseconds",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Longest CPU evaluation time",
+      "text": "Longest CPU evaluation time",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminder: VA-CRC AVERAGE RISK (IEN=306)",
+      "text": "Reminder: VA-CRC AVERAGE RISK (IEN=306)",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminder CPU evaluation time: 2064 milliseconds",
+      "text": "Reminder CPU evaluation time: 2064 milliseconds",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Longest wall clock evaluation time",
+      "text": "Longest wall clock evaluation time",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminder: VA-CRC AVERAGE RISK (IEN=306)",
+      "text": "Reminder: VA-CRC AVERAGE RISK (IEN=306)",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Reminder wall clock evaluation time: 37 seconds",
+      "text": "Reminder wall clock evaluation time: 37 seconds",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "cref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note",
+      "text": "Note",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "cref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":\tThere are some national and local reminders that will take an extremely long time to evaluate. Any reminder with a “Reminder wall clock time” greater than 1 second should be removed from the default reminders for the CPRS coversheet.",
+      "text": ":\tThere are some national and local reminders that will take an extremely long time to evaluate. Any reminder with a “Reminder wall clock time” greater than 1 second should be removed from the default reminders for the CPRS coversheet.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Step 1 - Run System Benchmark",
+      "text": "Step 1 - Run System Benchmark",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "cref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Select Option 1 from the VistA Cutover Utilities menu. The benchmark will find patients to use for the benchmark testing. The test will take approximately five minutes to complete. Results of each test will display when finished and the benchmark will automatically set the optimum number of threads for the Test and Create options.",
+      "text": "Select Option 1 from the VistA Cutover Utilities menu. The benchmark will find patients to use for the benchmark testing. The test will take approximately five minutes to complete. Results of each test will display when finished and the benchmark will automatically set the optimum number of threads for the Test and Create options.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Benchmark Tool                :37:39",
+      "text": "Benchmark Tool                :37:39",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "# of   Patients    Total     Avg      Max      Est.     Time to",
+      "text": "# of   Patients    Total     Avg      Max      Est.     Time to",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Test   Threads   Processed   Time    Thread   Pt/Sec   Completion",
+      "text": "Test   Threads   Processed   Time    Thread   Pt/Sec   Completion",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1        1         2286       31     30.00     76.20  15 min 34 sec",
+      "text": "1        1         2286       31     30.00     76.20  15 min 34 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "2        5         6931       33     30.00    231.03   5 min 08 sec",
+      "text": "2        5         6931       33     30.00    231.03   5 min 08 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "3        10        9848       33     28.00    351.71   3 min 22 sec",
+      "text": "3        10        9848       33     28.00    351.71   3 min 22 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "4        15        10000      30     24.20    413.22   2 min 52 sec",
+      "text": "4        15        10000      30     24.20    413.22   2 min 52 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "5        20        10000      26     22.15    451.47   2 min 38 sec",
+      "text": "5        20        10000      26     22.15    451.47   2 min 38 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "6        25        10000      23     20.08    498.01   2 min 23 sec",
+      "text": "6        25        10000      23     20.08    498.01   2 min 23 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "7        30        10000      22     18.90    529.10   2 min 15 sec",
+      "text": "7        30        10000      22     18.90    529.10   2 min 15 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "8        35        10000      23     19.43    514.67   2 min 18 sec",
+      "text": "8        35        10000      23     19.43    514.67   2 min 18 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "9        40        10000      24     20.40    490.20   2 min 25 sec",
+      "text": "9        40        10000      24     20.40    490.20   2 min 25 sec",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "< Benchmark Testing Complete >",
+      "text": "< Benchmark Testing Complete >",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Press <ENTER> to continue",
+      "text": "Press <ENTER> to continue",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "cref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note:",
+      "text": "Note:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "cref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The estimated time to completion may vary significantly based on the difference in clinical data from the initial patients used for the benchmark versus the remaining patients and the amount of data needed to process. The number of threads to use is chosen based on your system’s current performance.",
+      "text": "The estimated time to completion may vary significantly based on the difference in clinical data from the initial patients used for the benchmark versus the remaining patients and the amount of data needed to process. The number of threads to use is chosen based on your system’s current performance.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "cref": "#/groups/12"
+      },
+      "children": [
+        {
+          "cref": "#/groups/13"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Select Option 2 from the VistA Cutover Utilities menu.\nWhen asked, “Do you wish to select a single patient?”",
+      "text": "Select Option 2 from the VistA Cutover Utilities menu.\nWhen asked, “Do you wish to select a single patient?”",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "cref": "#/groups/13"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "enter NO and press <Enter>",
+      "text": "enter NO and press <Enter>",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "cref": "#/groups/12"
+      },
+      "children": [
+        {
+          "cref": "#/groups/14"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "cref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "When asked, “Do you wish to test the Clinical Reminders cutover documents?”",
+      "text": "When asked, “Do you wish to test the Clinical Reminders cutover documents?”",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "cref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "accept the default entry of NO and press <Enter>",
+      "text": "accept the default entry of NO and press <Enter>",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "cref": "#/groups/12"
+      },
+      "children": [
+        {
+          "cref": "#/groups/15"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "When asked, “Continue for all patients?”",
+      "text": "When asked, “Continue for all patients?”",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "enter YES and press <Enter>.",
+      "text": "enter YES and press <Enter>.",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "cref": "#/groups/15"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "A screen showing the progress of patient evaluation will display. Once all patients have been evaluated, the test process will begin. It is possible for the number of patients evaluated to be higher or lower than the number of total patients. The total patients are reported by FileMan and the evaluated patients are an actual count of the patient file.",
+      "text": "A screen showing the progress of patient evaluation will display. Once all patients have been evaluated, the test process will begin. It is possible for the number of patients evaluated to be higher or lower than the number of total patients. The total patients are reported by FileMan and the evaluated patients are an actual count of the patient file.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Example output from the patient evaluation phase:",
+      "text": "Example output from the patient evaluation phase:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Evaluating patients...110927 of 110927",
+      "text": "Evaluating patients...110927 of 110927",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "65804 patients will be tested for the EHRM Cutover.",
+      "text": "65804 patients will be tested for the EHRM Cutover.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Press <ENTER> to continue",
+      "text": "Press <ENTER> to continue",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note:",
+      "text": "Note:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "The number of patients that meet the criteria that will be tested should match exactly in the summary email received by the user at the completion of the test",
+      "text": "The number of patients that meet the criteria that will be tested should match exactly in the summary email received by the user at the completion of the test",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "cref": "#/groups/16"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".",
+      "text": ".",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Tip",
+      "text": "Tip",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "cref": "#/groups/17"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ":\tMultiply the “Elapsed wall clock time” by the number of patients that will be tested to find the minimum amount of time in seconds to complete the clinical reminders test or document creation.",
+      "text": ":\tMultiply the “Elapsed wall clock time” by the number of patients that will be tested to find the minimum amount of time in seconds to complete the clinical reminders test or document creation.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Daemon* Monitoring Tool                      11:10:09",
+      "text": "Daemon* Monitoring Tool                      11:10:09",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Active",
+      "text": "Active",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Job #   User       Progress  Mode    Type    Threads      Start Date/Time",
+      "text": "Job #   User       Progress  Mode    Type    Threads      Start Date/Time",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "7523 PATIENT,ONE   33%       Test  Summary   24 of 25     Nov 05, 2020@11:09",
+      "text": "7523 PATIENT,ONE   33%       Test  Summary   24 of 25     Nov 05, 2020@11:09",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Enter monitor action: UPDATE//",
+      "text": "Enter monitor action: UPDATE//",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "cref": "#/groups/18"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "cref": "#/groups/19"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "In multitasking computer operating systems, a Daemon is a computer program that runs as a background process rather than being under the direct control of an interactive user",
+      "text": "In multitasking computer operating systems, a Daemon is a computer program that runs as a background process rather than being under the direct control of an interactive user",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Step 3 – Run the Create VistA Cutover Document(s)",
+      "text": "Step 3 – Run the Create VistA Cutover Document(s)",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Select option 3 from the VistA Cutover Utilities menu.",
+      "text": "Select option 3 from the VistA Cutover Utilities menu.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Please see your site’s schedule for cutover tasks before initiating either the summary or reminders document in Production.",
+      "text": "Please see your site’s schedule for cutover tasks before initiating either the summary or reminders document in Production.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "cref": "#/groups/20"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Once the job has finished, the user will receive a summary email message.",
+      "text": "Once the job has finished, the user will receive a summary email message.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Note:",
+      "text": "Note:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "cref": "#/groups/21"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Wait for the summary document creation to complete before beginning the reminders document creation.",
+      "text": "Wait for the summary document creation to complete before beginning the reminders document creation.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Run the Monitor/Stop Cutover Jobs (Optional)",
+      "text": "Run the Monitor/Stop Cutover Jobs (Optional)",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/111",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Option 4",
+      "text": "Option 4",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/112",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "from the Vista Cutover Utilities menu allows the user to take actions while the cutover process is running, if necessary. There are 3 available actions:",
+      "text": "from the Vista Cutover Utilities menu allows the user to take actions while the cutover process is running, if necessary. There are 3 available actions:",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/113",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "UPDATE (default)",
+      "text": "UPDATE (default)",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/114",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ",",
+      "text": ",",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/115",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "STOP",
+      "text": "STOP",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/116",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ", or",
+      "text": ", or",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/117",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "QUIT",
+      "text": "QUIT",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/118",
+      "parent": {
+        "cref": "#/groups/22"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": ".",
+      "text": ".",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/119",
+      "parent": {
+        "cref": "#/groups/23"
+      },
+      "children": [
+        {
+          "cref": "#/groups/24"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/120",
+      "parent": {
+        "cref": "#/groups/24"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Pressing",
+      "text": "Pressing",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/121",
+      "parent": {
+        "cref": "#/groups/24"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "<Enter>",
+      "text": "<Enter>",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/122",
+      "parent": {
+        "cref": "#/groups/24"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "will",
+      "text": "will",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/123",
+      "parent": {
+        "cref": "#/groups/24"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "UPDATE",
+      "text": "UPDATE",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/124",
+      "parent": {
+        "cref": "#/groups/24"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "the progress of the job(s), allowing the user to track progress real time. It is normal for the active threads to decrease as they finish but before the overall progress is 100%.",
+      "text": "the progress of the job(s), allowing the user to track progress real time. It is normal for the active threads to decrease as they finish but before the overall progress is 100%.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/125",
+      "parent": {
+        "cref": "#/groups/23"
+      },
+      "children": [
+        {
+          "cref": "#/groups/25"
+        }
+      ],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/126",
+      "parent": {
+        "cref": "#/groups/25"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Entering",
+      "text": "Entering",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/127",
+      "parent": {
+        "cref": "#/groups/25"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "STOP",
+      "text": "STOP",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/128",
+      "parent": {
+        "cref": "#/groups/25"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "will prompt the user for the job # they wish to ask TaskMan to stop running. It can take several minutes for all of the running threads to cease activity. Once they have all stopped, the summary email will still be sent to the initiating user with partial results",
+      "text": "will prompt the user for the job # they wish to ask TaskMan to stop running. It can take several minutes for all of the running threads to cease activity. Once they have all stopped, the summary email will still be sent to the initiating user with partial results",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/129",
+      "parent": {
+        "cref": "#/groups/25"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "[Stopped by Task Manager]",
+      "text": "[Stopped by Task Manager]",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/130",
+      "parent": {
+        "cref": "#/groups/25"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "and will be included in the body of the message.",
+      "text": "and will be included in the body of the message.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/131",
+      "parent": {
+        "cref": "#/groups/23"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "list_item",
+      "prov": [],
+      "orig": "Once both the summary and clinical reminders processes have finished in TEST mode, the total amount of time for each will be approximately 5-10% longer during the document creation process.",
+      "text": "Once both the summary and clinical reminders processes have finished in TEST mode, the total amount of time for each will be approximately 5-10% longer during the document creation process.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null,
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/132",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "Example output from the monitoring tool:",
+      "text": "Example output from the monitoring tool:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/133",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/134",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/135",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "title",
+      "prov": [],
+      "orig": "VistA Cutover Quick Reference Guide",
+      "text": "VistA Cutover Quick Reference Guide",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/136",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [
+        {
+          "cref": "#/pictures/3"
+        },
+        {
+          "cref": "#/texts/137"
+        }
+      ],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "title",
+      "prov": [],
+      "orig": "April 2021",
+      "text": "April 2021",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/137",
+      "parent": {
+        "cref": "#/texts/136"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": "",
+      "formatting": null,
+      "hyperlink": null
+    },
+    {
+      "self_ref": "#/texts/138",
+      "parent": {
+        "cref": "#/groups/27"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "text",
+      "prov": [],
+      "orig": "1.",
+      "text": "1.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "hyperlink": null
+    }
+  ],
+  "pictures": [
+    {
+      "self_ref": "#/pictures/0",
+      "parent": {
+        "cref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 4.0,
+          "height": 1273.0
+        },
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAT5CAIAAAB70Cf9AAAA8ElEQVR4nO2cQa1CARDE9jWQgAX0oBEPyMAHWsgPmdkECf/QXjq9roA9Ho/H8/mcmfv9fnq/36/Xa2Zut9tpZoDjOL5jfsAYbzDeYLyBNwjURmGHEaiNwg4jUBuFHUagNgo7jEBtFHYYgdoo7DACtVHYYQRqo7DDCNRGYYcRqI3CDiNQG4UdRqA2CjuMQG0UdhiB2ijsMAK1UdhhBGqjsMMI1EZhhxGojcIOI1AbhR1GoDYKO4xAbRR2GIHaKOwwArVR2GEEaqOwwwjURmGHEaiNwg4jUBuFHUagNsp/Psj34cDn82lcLpfz+Twz1+v1D8SKFu2yGDXiAAAAAElFTkSuQmCC"
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/1",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 4.0,
+          "height": 753.0
+        },
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAALxCAIAAAD0U5CqAAAAqklEQVR4nO2asY2EABADfSYjpAUqpiY6IkRIvPT26vQtvGaS8aQb7+e+7+M4JG3bpuu69Mu+786S9L7vNyQR4gbiBtwguCaKZxDBNVE8gwiuieIZRHBNFM8ggmuieAYRXBPFM4jgmiieQQTXRPEMIrgmimcQwTVRPIMIroniGURwTRTPIIJrongGEVwTxTOI4JoonkEE10T5Vwf58/u1LMvneZ7zPCWt6/oDu7AZU9c1KYMAAAAASUVORK5CYII="
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/2",
+      "parent": {
+        "cref": "#/texts/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 723.0,
+          "height": 223.0
+        },
+        "uri": "data:image/png;base64,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"
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/3",
+      "parent": {
+        "cref": "#/texts/136"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "meta": null,
+      "label": "picture",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "image": {
+        "mimetype": "image/png",
+        "dpi": 72,
+        "size": {
+          "width": 1080.0,
+          "height": 3.0
+        },
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAADCAIAAAD5gCilAAAANElEQVR4nO3OsREAIAgAMfDcAfaf1F4HwCIpv/ro7gAAAPjJmh4AAAC47arKzKcDAADElAPJDACXEIfjCAAAAABJRU5ErkJggg=="
+      },
+      "annotations": []
+    }
+  ],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

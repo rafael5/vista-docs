@@ -1,0 +1,186 @@
+========================================================================
+VDL CORPUS SURVEY REPORT — package=cprs
+Generated: 2026-03-11 06:42
+========================================================================
+
+Documents analysed : 12
+Errors             : 0
+
+────────────────────────────────────────────────────────────────────────
+STRUCTURAL FEATURES (count of documents)
+────────────────────────────────────────────────────────────────────────
+  Has TOC field                :   9 / 12
+  Has revision history table   :   8 / 12
+  Has back-matter index        :   0 / 12
+  Has pseudo-headings          :  12 / 12
+
+────────────────────────────────────────────────────────────────────────
+TABLE TYPES DETECTED
+────────────────────────────────────────────────────────────────────────
+  reference-table            115
+  menu-option                 20
+  revision                     9
+  api-function                 4
+  comparison                   3
+  rpc                          3
+  keyboard-shortcuts           3
+  checklist                    3
+  acronym-glossary             2
+  parameter-list               2
+
+────────────────────────────────────────────────────────────────────────
+CALLOUT TYPES (NOTE / WARNING / CAUTION etc.)
+────────────────────────────────────────────────────────────────────────
+  NOTE                 1119
+  WARNING                41
+  IMPORTANT               3
+
+────────────────────────────────────────────────────────────────────────
+CROSS-REFERENCES
+────────────────────────────────────────────────────────────────────────
+  Internal page refs           : 15
+  Terminal/VistA session lines : 2122
+  External doc refs (top 10):
+      4×  see the CPRS Technical Manual
+      3×  refer to the Clinical Reminders Manager Manual
+      3×  See the CPRS Setup Guide
+      3×  Refer to the CPRS Technical Manual
+      2×  refer to the Text Integration Utility User Manual
+      1×  refer to the Laboratory Planning and Implementation Guide
+      1×  See the Notifications section in this manual
+      1×  See the TIU section in this manual
+      1×  See the Pharmacy Technical Manual
+      1×  See the VAX DSM Systems Guide
+
+────────────────────────────────────────────────────────────────────────
+PSEUDO-HEADINGS — total 873 across 12 docs
+Top 20 recurring pseudo-heading texts:
+────────────────────────────────────────────────────────────────────────
+   13×  Order Checking, cont’d
+   10×  -or-
+    8×  Notifications, cont’d
+    7×  Lab Interface, cont’d
+    7×  1000MG
+    7×  500MG
+    6×  Example
+    6×  Enter/edit generic orders, cont’d
+    6×  Example – Text Editor
+    5×  Glossary, cont’d
+    5×  Example (continued): Adding a site parameter entry in the Women’s Health package
+    5×  Example – Closing the Edit Session
+    4×  Table of Contents
+    4×  + Next Screen  - Prev Screen  ?? More Actions                       >>>
+    4×  Consults Install, Planning, and Implementation Checklist, cont’d
+    4×  Inpatient Medications, cont’d
+    4×  TIU, cont’d
+    4×  Samples of West Palm Beach order sets, cont’d
+    4×  TAB (100/BT ONLY)
+    3×  Revision History
+
+────────────────────────────────────────────────────────────────────────
+PARAGRAPH STYLES — corpus frequency
+────────────────────────────────────────────────────────────────────────
+   14134  Normal
+    4306  List Paragraph
+    3607  CPRS H4 Body
+    3428  capture
+    3351  CPRS capture
+    2634  CPRS H5 Body
+    1788  DISPLAY-Normalize
+    1351  Body Text
+    1314  CPRS - Numbered List
+    1289  CPRS Num list Capture
+     998  Heading 3
+     996  Heading 6
+     990  CPRS H3 Body
+     790  LIST-Normalize
+     781  CPRS Bullets
+     687  toc 2
+     598  screen
+     550  index 1
+     487  Heading 5
+     482  Heading 4
+     464  Heading 2
+     455  Normal Indent
+     419  Caption
+     351  Computer Screen
+     295  CPRS Bullets Sub Bullets
+     291  toc 3
+     253  Screen
+     246  CPRS num list other text
+     243  screen capture
+     202  CPRS H2 Body
+     190  index 2
+     158  Table Heading
+     146  Body Text 2
+     143  List paragraph note 1.25
+     134  CPRS order check definition
+     130  Footer
+     121  Heading 1
+     120  CPRS Bullets sub 3
+     115  List - User Manual
+     113  Body Text Numbered 1
+
+────────────────────────────────────────────────────────────────────────
+STANDARD STYLES (appear in ALL 12 documents) — these form the base schema
+────────────────────────────────────────────────────────────────────────
+  Heading 2
+  Normal
+
+────────────────────────────────────────────────────────────────────────
+ONE-OFF STYLES (appear in exactly 1 document) — candidates for schema 'other'
+────────────────────────────────────────────────────────────────────────
+  Appendix 1
+  Appendix 2
+  Balloon Text
+  Body Bullet 3
+  Body Text 2
+  Body Text Bullet 2
+  Body Text Indent
+  Body Text Indent 2
+  Body Text Indent 3
+  Body Text Note 1
+  Body Text Numbered 2
+  Body Text1
+  Box1
+  Bullet
+  C Screen Reversed
+  CPRS Bullets Sub Bullets body
+  CPRS Bullets in Num List
+  CPRS Bullets in Num Lst
+  CPRS Capture Reverse
+  CPRS H2
+  CPRS H2 Body Char
+  CPRS H3 Warning
+  CPRS Notification
+  CPRS Num List
+  CPRS Numbered List
+  CPRS a subnum alpha list
+  CPRS caption Char
+  CPRS order check definition
+  CPRS sub2 num note
+  CPRS_caption
+  ... and 60 more
+
+────────────────────────────────────────────────────────────────────────
+PER-DOCUMENT SUMMARY
+────────────────────────────────────────────────────────────────────────
+  Document                                         §  Tbl   Ph  PgRef Flags
+  --------------------------------------------- ──── ──── ──── ────── ────────────
+  cprssetup.docx                                 106   35  337      0   TR
+  cprsguium_ro.docx                               35    1   16      0   T
+  or_30_153um.docx                                50    6    4      1   
+  OR_3_0_377_setup.docx                           69   13   51      1   TR
+  or_3_0_405_setup_r.docx                         30    3    8      0   T
+  prt_tm_r.docx                                   40    3    1      0   TR
+  prt_ug_r.docx                                   41    3   11      0   TR
+  or_3_0_498_setup_r.docx                         25    5   56      0   TR
+  or_3_0_569_setup.docx                           14    1    1      1   TR
+  cprslmtm.docx                                  427   46  133      0   R
+  cprsguium.docx                                 570    9  118     11   R
+  cprsguitm.docx                                2145   39  137      1   T
+  Flags: T=has TOC field  R=has revision table  I=has back-matter index
+
+========================================================================
+END OF REPORT
+========================================================================

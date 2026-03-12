@@ -1,0 +1,2659 @@
+{
+  "documents_ok": 12,
+  "documents_error": 0,
+  "errors": [],
+  "corpus_style_counts": {
+    "Normal": 14134,
+    "List Paragraph": 4306,
+    "CPRS H4 Body": 3607,
+    "capture": 3428,
+    "CPRS capture": 3351,
+    "CPRS H5 Body": 2634,
+    "DISPLAY-Normalize": 1788,
+    "Body Text": 1351,
+    "CPRS - Numbered List": 1314,
+    "CPRS Num list Capture": 1289,
+    "Heading 3": 998,
+    "Heading 6": 996,
+    "CPRS H3 Body": 990,
+    "LIST-Normalize": 790,
+    "CPRS Bullets": 781,
+    "toc 2": 687,
+    "screen": 598,
+    "index 1": 550,
+    "Heading 5": 487,
+    "Heading 4": 482,
+    "Heading 2": 464,
+    "Normal Indent": 455,
+    "Caption": 419,
+    "Computer Screen": 351,
+    "CPRS Bullets Sub Bullets": 295,
+    "toc 3": 291,
+    "Screen": 253,
+    "CPRS num list other text": 246,
+    "screen capture": 243,
+    "CPRS H2 Body": 202,
+    "index 2": 190,
+    "Table Heading": 158,
+    "Body Text 2": 146,
+    "List paragraph note 1.25": 143,
+    "CPRS order check definition": 134,
+    "Footer": 130,
+    "Heading 1": 121,
+    "CPRS Bullets sub 3": 120,
+    "List - User Manual": 115,
+    "Body Text Numbered 1": 113,
+    "NOTE-normalize": 110,
+    "CPRS caption": 109,
+    "normalize": 95,
+    "CPRS Num List": 88,
+    "toc 1": 87,
+    "Body Text Bullet 1": 82,
+    "Default": 78,
+    "Title 2": 77,
+    "HEADING-L5": 77,
+    "CPRS Note": 68,
+    "No Spacing": 60,
+    "CPRS H3 Note": 58,
+    "Bullet": 56,
+    "Box1": 48,
+    "table-notifications": 47,
+    "index heading": 45,
+    "CPRS Bullets note": 40,
+    "toc 4": 37,
+    "CPRS H3": 37,
+    "Check List": 36,
+    "CPRS H2 Body Char": 36,
+    "CPRS Bullets Body": 35,
+    "Title": 32,
+    "Table-normalize": 32,
+    "List Number 3": 30,
+    "CPRS Bullets in Num Lst": 30,
+    "CPRS - Note": 29,
+    "CPRS Num list note": 28,
+    "Header": 25,
+    "Instructional Bullet 1": 25,
+    "cprs numbered list 2": 25,
+    "table of figures": 24,
+    "CPRS Notification": 23,
+    "CPRS H4": 22,
+    "List Bullet 3": 21,
+    "CPRS sub num list": 21,
+    "NI Numbered List": 19,
+    "CPRS Bullets Sub Bullets body": 19,
+    "cprs a subnum alpha list note": 18,
+    "List Number 2": 17,
+    "body Text note 1": 14,
+    "index 3": 14,
+    "Note": 13,
+    "CPRS Numbered List": 13,
+    "Body Text1": 12,
+    "List Number": 12,
+    "Body Bullet Numbered 2": 12,
+    "Normal (Web)": 11,
+    "List1": 10,
+    "Note Heading": 10,
+    "cprs bullets sub bullets body": 10,
+    "note2": 9,
+    "cprs 1 numbered list note": 9,
+    "CPRS sub2 num note": 9,
+    "Head 1": 8,
+    "Step explain": 7,
+    "CPRS_caption": 7,
+    "bull1num1": 7,
+    "Instructional Text 1": 6,
+    "List2#1": 6,
+    "list sub item alpha bullets": 6,
+    "CPRS Stepintro": 6,
+    "cprs numbered step caption": 6,
+    "cprs-numberedlist": 6,
+    "Body Text Note 1": 5,
+    "Body Text Numbered 2": 5,
+    "Cover Title Instructions": 5,
+    "normal hanging": 4,
+    "graphic": 4,
+    "Body Bullet Numbered 1": 4,
+    "help normal": 4,
+    "cprs a alpha num list": 4,
+    "CPRS a subnum alpha list": 4,
+    "List Member": 3,
+    "VLlist": 3,
+    "List Bullet 5": 3,
+    "Body Text Bullet 2": 3,
+    "CPRS Bullets in Num List": 3,
+    "Normal Indent1": 2,
+    "Body Text Indent 3": 2,
+    "CPRS H2": 2,
+    "Body Text Indent 2": 2,
+    "CPRS H5": 2,
+    "text": 2,
+    "Stepintro#1": 2,
+    "Heading 3 - text under heading": 2,
+    "Balloon Text": 2,
+    "Project Name": 2,
+    "annotation text": 2,
+    "CPRS H3 Warning": 2,
+    "Glossary-normalize": 2,
+    "Stepintro": 2,
+    "Heading 4 Indented": 2,
+    "C Screen Reversed": 2,
+    "CPRS Capture Reverse": 2,
+    "cprs bullets warning": 2,
+    "Plain Text": 1,
+    "bull2": 1,
+    "New Century School Book": 1,
+    "ind text": 1,
+    "Glossary": 1,
+    "HEADING": 1,
+    "List Continue 5": 1,
+    "Note3": 1,
+    "List Bullet 2": 1,
+    "List 2": 1,
+    "List Continue 2": 1,
+    "Normal#1": 1,
+    "Appendix 1": 1,
+    "Appendix 2": 1,
+    "a. list 2": 1,
+    "CPRS caption Char": 1,
+    "Body Bullet 3": 1,
+    "Body Text Indent": 1,
+    "List Continue 3": 1
+  },
+  "standard_styles": [
+    "Heading 2",
+    "Normal"
+  ],
+  "common_styles": [
+    "Body Bullet Numbered 1",
+    "Body Bullet Numbered 2",
+    "Body Text",
+    "Body Text Bullet 1",
+    "Body Text Numbered 1",
+    "CPRS - Note",
+    "CPRS - Numbered List",
+    "CPRS Bullets",
+    "CPRS Bullets Body",
+    "CPRS Bullets Sub Bullets",
+    "CPRS Bullets note",
+    "CPRS Bullets sub 3",
+    "CPRS H2 Body",
+    "CPRS H3",
+    "CPRS H3 Body",
+    "CPRS H3 Note",
+    "CPRS H4",
+    "CPRS H4 Body",
+    "CPRS H5",
+    "CPRS H5 Body",
+    "CPRS Note",
+    "CPRS Num list Capture",
+    "CPRS Num list note",
+    "CPRS Stepintro",
+    "CPRS caption",
+    "CPRS capture",
+    "CPRS num list other text",
+    "CPRS sub num list",
+    "Caption",
+    "Cover Title Instructions",
+    "Default",
+    "Footer",
+    "Glossary-normalize",
+    "Header",
+    "Heading 1",
+    "Heading 3",
+    "Heading 4",
+    "Heading 5",
+    "Instructional Text 1",
+    "List - User Manual",
+    "List Bullet 3",
+    "List Number",
+    "List Number 3",
+    "List Paragraph",
+    "No Spacing",
+    "Normal Indent",
+    "Note",
+    "Note Heading",
+    "Project Name",
+    "Table Heading",
+    "Title",
+    "Title 2",
+    "capture",
+    "cprs 1 numbered list note",
+    "cprs numbered list 2",
+    "index 1",
+    "index 2",
+    "index heading",
+    "note2",
+    "toc 1",
+    "toc 2",
+    "toc 3",
+    "toc 4"
+  ],
+  "one_off_styles": [
+    "Appendix 1",
+    "Appendix 2",
+    "Balloon Text",
+    "Body Bullet 3",
+    "Body Text 2",
+    "Body Text Bullet 2",
+    "Body Text Indent",
+    "Body Text Indent 2",
+    "Body Text Indent 3",
+    "Body Text Note 1",
+    "Body Text Numbered 2",
+    "Body Text1",
+    "Box1",
+    "Bullet",
+    "C Screen Reversed",
+    "CPRS Bullets Sub Bullets body",
+    "CPRS Bullets in Num List",
+    "CPRS Bullets in Num Lst",
+    "CPRS Capture Reverse",
+    "CPRS H2",
+    "CPRS H2 Body Char",
+    "CPRS H3 Warning",
+    "CPRS Notification",
+    "CPRS Num List",
+    "CPRS Numbered List",
+    "CPRS a subnum alpha list",
+    "CPRS caption Char",
+    "CPRS order check definition",
+    "CPRS sub2 num note",
+    "CPRS_caption",
+    "Check List",
+    "Computer Screen",
+    "DISPLAY-Normalize",
+    "Glossary",
+    "HEADING",
+    "HEADING-L5",
+    "Head 1",
+    "Heading 3 - text under heading",
+    "Heading 4 Indented",
+    "Heading 6",
+    "Instructional Bullet 1",
+    "LIST-Normalize",
+    "List 2",
+    "List Bullet 2",
+    "List Bullet 5",
+    "List Continue 2",
+    "List Continue 3",
+    "List Continue 5",
+    "List Member",
+    "List Number 2",
+    "List paragraph note 1.25",
+    "List1",
+    "List2#1",
+    "NI Numbered List",
+    "NOTE-normalize",
+    "New Century School Book",
+    "Normal (Web)",
+    "Normal Indent1",
+    "Normal#1",
+    "Note3",
+    "Plain Text",
+    "Screen",
+    "Step explain",
+    "Stepintro",
+    "Stepintro#1",
+    "Table-normalize",
+    "VLlist",
+    "a. list 2",
+    "annotation text",
+    "body Text note 1",
+    "bull1num1",
+    "bull2",
+    "cprs a alpha num list",
+    "cprs a subnum alpha list note",
+    "cprs bullets sub bullets body",
+    "cprs bullets warning",
+    "cprs numbered step caption",
+    "cprs-numberedlist",
+    "graphic",
+    "help normal",
+    "ind text",
+    "index 3",
+    "list sub item alpha bullets",
+    "normal hanging",
+    "normalize",
+    "screen",
+    "screen capture",
+    "table of figures",
+    "table-notifications",
+    "text"
+  ],
+  "table_type_counts": {
+    "reference-table": 115,
+    "menu-option": 20,
+    "revision": 9,
+    "api-function": 4,
+    "comparison": 3,
+    "rpc": 3,
+    "keyboard-shortcuts": 3,
+    "checklist": 3,
+    "acronym-glossary": 2,
+    "parameter-list": 2
+  },
+  "callout_counts": {
+    "NOTE": 1119,
+    "IMPORTANT": 3,
+    "WARNING": 41
+  },
+  "pseudo_heading_count": 873,
+  "pseudo_heading_top": {
+    "Order Checking, cont\u2019d": 13,
+    "-or-": 10,
+    "Notifications, cont\u2019d": 8,
+    "Lab Interface, cont\u2019d": 7,
+    "1000MG": 7,
+    "500MG": 7,
+    "Example": 6,
+    "Enter/edit generic orders, cont\u2019d": 6,
+    "Example \u2013 Text Editor": 6,
+    "Glossary, cont\u2019d": 5,
+    "Example (continued): Adding a site parameter entry in the Women\u2019s Health package": 5,
+    "Example \u2013 Closing the Edit Session": 5,
+    "Table of Contents": 4,
+    "+ Next Screen  - Prev Screen  ?? More Actions                       >>>": 4,
+    "Consults Install, Planning, and Implementation Checklist, cont\u2019d": 4,
+    "Inpatient Medications, cont\u2019d": 4,
+    "TIU, cont\u2019d": 4,
+    "Samples of West Palm Beach order sets, cont\u2019d": 4,
+    "TAB (100/BT ONLY)": 4,
+    "Revision History": 3,
+    "Edit Site Local Terms Example": 3,
+    "Edit Site Local Terms": 3,
+    "Defining a new Print Format (cont\u2019d)": 3,
+    "Example \u2013 Adding a Reminder Taxonomy": 3,
+    "Example \u2013Dialog Components screen": 3,
+    "To toggle the audit and activation histories on or off, follow these steps:": 3,
+    "Allocate CPRS Security Keys": 2,
+    "Using General Parameter Tools on the CPRS Configuration menu (IRM)": 2,
+    "Using Order Menu Management - Enter/edit order menus on the CPRS configuration menu (Clin Coord).": 2,
+    "To activate the boilerplates folder, Clinical Coordinators should follow these steps:": 2
+  },
+  "total_internal_page_refs": 15,
+  "total_terminal_lines": 2122,
+  "external_doc_refs": {
+    "see the CPRS Technical Manual": 4,
+    "refer to the Clinical Reminders Manager Manual": 3,
+    "See the CPRS Setup Guide": 3,
+    "Refer to the CPRS Technical Manual": 3,
+    "refer to the Text Integration Utility User Manual": 2,
+    "refer to the Laboratory Planning and Implementation Guide": 1,
+    "See the Notifications section in this manual": 1,
+    "See the TIU section in this manual": 1,
+    "See the Pharmacy Technical Manual": 1,
+    "See the VAX DSM Systems Guide": 1,
+    "See the Unit Dose Technical Manual": 1,
+    "see the Group Notes/Encounter Implementation Guide": 1,
+    "refer to the Notifications document": 1,
+    "refer to the Parameters document": 1,
+    "Refer to the Parameters document": 1,
+    "refer to the Notes section of this manual": 1,
+    "see the Vitals/Measurements document": 1,
+    "See the Problem List User Manual": 1,
+    "See the  sections of this manual": 1,
+    "see the  of this manual": 1
+  },
+  "docs_with_toc": 9,
+  "docs_with_revision_table": 8,
+  "docs_with_index": 0,
+  "docs_with_pseudo_headings": 12,
+  "per_doc": [
+    {
+      "filename": "cprssetup.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/cprssetup.docx",
+      "para_count": 8475,
+      "heading_count": 106,
+      "toc_entry_count": 118,
+      "table_count": 35,
+      "table_types": {
+        "revision": 1,
+        "comparison": 1,
+        "reference-table": 24,
+        "api-function": 1,
+        "menu-option": 6,
+        "rpc": 1,
+        "acronym-glossary": 1
+      },
+      "pseudo_headings": 337,
+      "callouts": {
+        "NOTE": 63,
+        "IMPORTANT": 1
+      },
+      "terminal_lines": 343,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 55,
+      "tables_detail": [
+        {
+          "rows": 35,
+          "cols": 6,
+          "header_tokens": [
+            "change",
+            "date",
+            "manager",
+            "page",
+            "patch",
+            "project",
+            "technical",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 16,
+          "cols": 2,
+          "header_tokens": [
+            "1.0",
+            "2.5",
+            "cprs",
+            "oe",
+            "rr"
+          ],
+          "type": "comparison"
+        },
+        {
+          "rows": 30,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "activity",
+            "help",
+            "needs",
+            "ok"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "(location",
+            "and",
+            "file",
+            "name)",
+            "of",
+            "os",
+            "version",
+            "windows"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 25,
+          "cols": 3,
+          "header_tokens": [
+            "check",
+            "expert",
+            "file",
+            "linked",
+            "nat\u2019l",
+            "order",
+            "system",
+            "term"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 19,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "explanation",
+            "reason"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 21,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 25,
+          "cols": 2,
+          "header_tokens": [
+            "clinical",
+            "danger",
+            "entity:",
+            "entry",
+            "level",
+            "order",
+            "ork",
+            "parameter:",
+            "reporting",
+            "results"
+          ],
+          "type": "api-function"
+        },
+        {
+          "rows": 25,
+          "cols": 3,
+          "header_tokens": [
+            "check",
+            "expert",
+            "file",
+            "linked",
+            "nat\u2019l",
+            "order",
+            "system",
+            "term"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "assignment",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 6,
+          "cols": 4,
+          "header_tokens": [
+            "abbr",
+            "description",
+            "menu",
+            "name",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 12,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 1,
+          "cols": 1,
+          "header_tokens": [
+            ".",
+            "1991",
+            ">>",
+            "about",
+            "assign",
+            "event",
+            "family",
+            "following",
+            "friday",
+            "group",
+            "meets",
+            "no"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 1,
+          "header_tokens": [
+            ".",
+            "1991",
+            ">>",
+            "about",
+            "assign",
+            "event",
+            "following",
+            "friday",
+            "group",
+            "meets",
+            "on",
+            "patient"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 17,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "definition",
+            "print",
+            "type"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 25,
+          "cols": 3,
+          "header_tokens": [
+            "check",
+            "expert",
+            "file",
+            "linked",
+            "nat\u2019l",
+            "order",
+            "system",
+            "term"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "routine"
+          ],
+          "type": "rpc"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "definition",
+            "name",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 12,
+          "cols": 2,
+          "header_tokens": [
+            "a",
+            "attribute",
+            "for",
+            "series",
+            "terminal",
+            "value",
+            "vt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "assignment",
+            "key"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "assignment",
+            "key"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "menu",
+            "option:",
+            "primary",
+            "user"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "assignment",
+            "key"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 179,
+          "cols": 2,
+          "header_tokens": [
+            "acronym",
+            "meaning"
+          ],
+          "type": "acronym-glossary"
+        }
+      ]
+    },
+    {
+      "filename": "cprsguium_ro.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/cprsguium_ro.docx",
+      "para_count": 477,
+      "heading_count": 35,
+      "toc_entry_count": 33,
+      "table_count": 1,
+      "table_types": {
+        "reference-table": 1
+      },
+      "pseudo_headings": 16,
+      "callouts": {
+        "NOTE": 3
+      },
+      "terminal_lines": 7,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 32,
+      "tables_detail": [
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            ""
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "or_30_153um.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/or_30_153um.docx",
+      "para_count": 752,
+      "heading_count": 50,
+      "toc_entry_count": 0,
+      "table_count": 6,
+      "table_types": {
+        "reference-table": 3,
+        "keyboard-shortcuts": 3
+      },
+      "pseudo_headings": 4,
+      "callouts": {
+        "NOTE": 6
+      },
+      "terminal_lines": 17,
+      "page_refs": 1,
+      "has_toc": false,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 7,
+      "tables_detail": [
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "criteria",
+            "report"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 3,
+          "header_tokens": [
+            "criteria",
+            "definition",
+            "query",
+            "type"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "keystroke",
+            "navigation"
+          ],
+          "type": "keyboard-shortcuts"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "keystroke",
+            "navigation"
+          ],
+          "type": "keyboard-shortcuts"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "action",
+            "keyboard",
+            "shortcut"
+          ],
+          "type": "keyboard-shortcuts"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "address",
+            "cio",
+            "directory",
+            "field",
+            "ftp",
+            "office"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "OR_3_0_377_setup.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/OR_3_0_377_setup.docx",
+      "para_count": 3059,
+      "heading_count": 69,
+      "toc_entry_count": 64,
+      "table_count": 13,
+      "table_types": {
+        "revision": 1,
+        "checklist": 1,
+        "reference-table": 11
+      },
+      "pseudo_headings": 51,
+      "callouts": {
+        "NOTE": 18,
+        "WARNING": 1
+      },
+      "terminal_lines": 115,
+      "page_refs": 1,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 23,
+      "tables_detail": [
+        {
+          "rows": 23,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "version"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 18,
+          "cols": 4,
+          "header_tokens": [
+            "checklist",
+            "cprs",
+            "readiness",
+            "site",
+            "test",
+            "v31b"
+          ],
+          "type": "checklist"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "a",
+            "be",
+            "breast",
+            "cacs",
+            "can",
+            "determine",
+            "dialog",
+            "dialogs.",
+            "dummy",
+            "each",
+            "find",
+            "for"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "procedure",
+            "reminder",
+            "term",
+            "type",
+            "wv"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "dialog",
+            "document",
+            "name",
+            "reminder",
+            "template",
+            "title"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "field",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "field",
+            "finding",
+            "general",
+            "new",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 4,
+          "header_tokens": [
+            "is",
+            "name",
+            "not",
+            "patient",
+            "pregnant",
+            "site",
+            "specimen",
+            "test"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "case",
+            "condition",
+            "name",
+            "sensitive",
+            "statement",
+            "test"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "case",
+            "condition",
+            "name",
+            "sensitive",
+            "statement",
+            "test"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "codes",
+            "cpt",
+            "descendent",
+            "name",
+            "parent",
+            "procedure",
+            "taxonomy"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 1,
+          "header_tokens": [
+            "name",
+            "procedure"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "division",
+            "sequence",
+            "system",
+            "user"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "or_3_0_405_setup_r.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/or_3_0_405_setup_r.docx",
+      "para_count": 628,
+      "heading_count": 30,
+      "toc_entry_count": 31,
+      "table_count": 3,
+      "table_types": {
+        "checklist": 1,
+        "reference-table": 2
+      },
+      "pseudo_headings": 8,
+      "callouts": {
+        "NOTE": 5,
+        "WARNING": 2
+      },
+      "terminal_lines": 27,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 16,
+      "tables_detail": [
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "done",
+            "no.",
+            "task"
+          ],
+          "type": "checklist"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "(poc)",
+            "contact",
+            "of",
+            "point",
+            "responsible",
+            "step"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 12,
+          "cols": 2,
+          "header_tokens": [
+            "poc",
+            "responsible",
+            "step"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "prt_tm_r.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/prt_tm_r.docx",
+      "para_count": 190,
+      "heading_count": 40,
+      "toc_entry_count": 34,
+      "table_count": 3,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 2
+      },
+      "pseudo_headings": 1,
+      "callouts": {
+        "NOTE": 2,
+        "WARNING": 1
+      },
+      "terminal_lines": 1,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 19,
+      "tables_detail": [
+        {
+          "rows": 8,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "revision"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 20,
+          "cols": 2,
+          "header_tokens": [
+            "2fa",
+            "authentication",
+            "two-factor"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "definition",
+            "name",
+            "parameter"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "prt_ug_r.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/prt_ug_r.docx",
+      "para_count": 341,
+      "heading_count": 41,
+      "toc_entry_count": 41,
+      "table_count": 3,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 2
+      },
+      "pseudo_headings": 11,
+      "callouts": {
+        "NOTE": 4,
+        "WARNING": 2
+      },
+      "terminal_lines": 6,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 22,
+      "tables_detail": [
+        {
+          "rows": 5,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "revision"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 6,
+          "cols": 4,
+          "header_tokens": [
+            "contact",
+            "info",
+            "name",
+            "org",
+            "role"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 17,
+          "cols": 2,
+          "header_tokens": [
+            "2fa",
+            "authentication",
+            "two-factor"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "or_3_0_498_setup_r.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/or_3_0_498_setup_r.docx",
+      "para_count": 1791,
+      "heading_count": 25,
+      "toc_entry_count": 26,
+      "table_count": 5,
+      "table_types": {
+        "revision": 1,
+        "checklist": 1,
+        "reference-table": 3
+      },
+      "pseudo_headings": 56,
+      "callouts": {
+        "NOTE": 6,
+        "WARNING": 5
+      },
+      "terminal_lines": 78,
+      "page_refs": 0,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 18,
+      "tables_detail": [
+        {
+          "rows": 18,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "version"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "done",
+            "no.",
+            "task"
+          ],
+          "type": "checklist"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "add",
+            "findings",
+            "term",
+            "to",
+            "tomosynthesis",
+            "with"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 1,
+          "header_tokens": [
+            "findings",
+            "term",
+            "tomosynthesis",
+            "with"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "procedure",
+            "reminder",
+            "term",
+            "type",
+            "wv"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "or_3_0_569_setup.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/or_3_0_569_setup.docx",
+      "para_count": 385,
+      "heading_count": 14,
+      "toc_entry_count": 15,
+      "table_count": 1,
+      "table_types": {
+        "revision": 1
+      },
+      "pseudo_headings": 1,
+      "callouts": {
+        "IMPORTANT": 1,
+        "NOTE": 4
+      },
+      "terminal_lines": 34,
+      "page_refs": 1,
+      "has_toc": true,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 16,
+      "tables_detail": [
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "author",
+            "date",
+            "description",
+            "version"
+          ],
+          "type": "revision"
+        }
+      ]
+    },
+    {
+      "filename": "cprslmtm.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/cprslmtm.docx",
+      "para_count": 10285,
+      "heading_count": 427,
+      "toc_entry_count": 0,
+      "table_count": 46,
+      "table_types": {
+        "revision": 1,
+        "comparison": 2,
+        "reference-table": 25,
+        "menu-option": 13,
+        "api-function": 3,
+        "rpc": 1,
+        "acronym-glossary": 1
+      },
+      "pseudo_headings": 133,
+      "callouts": {
+        "NOTE": 184,
+        "WARNING": 8
+      },
+      "terminal_lines": 305,
+      "page_refs": 0,
+      "has_toc": false,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 60,
+      "tables_detail": [
+        {
+          "rows": 112,
+          "cols": 5,
+          "header_tokens": [
+            "author",
+            "change",
+            "date",
+            "pages",
+            "patch"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 16,
+          "cols": 2,
+          "header_tokens": [
+            "1.0",
+            "2.5",
+            "cprs",
+            "oe",
+            "rr"
+          ],
+          "type": "comparison"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 11,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 27,
+          "cols": 3,
+          "header_tokens": [
+            "#19)",
+            "(in",
+            "abbreviation",
+            "file",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 9,
+          "cols": 3,
+          "header_tokens": [
+            "#19)",
+            "(in",
+            "abbreviation",
+            "file",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 9,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "name",
+            "option"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "definition",
+            "name",
+            "text"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 12,
+          "cols": 2,
+          "header_tokens": [
+            "a",
+            "attribute",
+            "for",
+            "series",
+            "terminal",
+            "value",
+            "vt"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "#",
+            "description",
+            "field",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "assignment",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "(locked",
+            "clinical",
+            "coordinators",
+            "cutover",
+            "key",
+            "menu",
+            "orvco",
+            "vista",
+            "with"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 27,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 6,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 16,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 12,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "name",
+            "option",
+            "test"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "menu",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "format",
+            "invalid",
+            "valid"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 53,
+          "cols": 3,
+          "header_tokens": [
+            "#",
+            "description",
+            "file",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 30,
+          "cols": 2,
+          "header_tokens": [
+            "application",
+            "minimum",
+            "name",
+            "version"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "entry",
+            "field",
+            "name"
+          ],
+          "type": "api-function"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "entry",
+            "field",
+            "name"
+          ],
+          "type": "api-function"
+        },
+        {
+          "rows": 1,
+          "cols": 5,
+          "header_tokens": [
+            "description",
+            "return",
+            "routine",
+            "rpc",
+            "tag",
+            "value"
+          ],
+          "type": "rpc"
+        },
+        {
+          "rows": 59,
+          "cols": 2,
+          "header_tokens": [
+            "definition",
+            "term"
+          ],
+          "type": "acronym-glossary"
+        },
+        {
+          "rows": 59,
+          "cols": 4,
+          "header_tokens": [
+            "(mlm)",
+            "code",
+            "data",
+            "expert",
+            "m",
+            "notification",
+            "rule",
+            "source"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 18,
+          "cols": 3,
+          "header_tokens": [
+            "check",
+            "expert",
+            "file",
+            "linked",
+            "nat\u2019l",
+            "order",
+            "system",
+            "term"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 4,
+          "header_tokens": [
+            "assigned",
+            "list",
+            "list?",
+            "oe",
+            "patient",
+            "restrict",
+            "result",
+            "rr",
+            "tabs",
+            "team"
+          ],
+          "type": "comparison"
+        },
+        {
+          "rows": 1,
+          "cols": 1,
+          "header_tokens": [
+            "\"do",
+            "&",
+            "'0'",
+            "'1'",
+            "'3'",
+            "'4'",
+            "'backdoor'",
+            "'signed",
+            "(100.99)",
+            "(added",
+            "(all",
+            "(allow"
+          ],
+          "type": "api-function"
+        },
+        {
+          "rows": 3,
+          "cols": 4,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "synonym"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 7,
+          "cols": 3,
+          "header_tokens": [
+            "assignment",
+            "menu",
+            "name",
+            "option",
+            "text"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 70,
+          "cols": 3,
+          "header_tokens": [
+            "^ord(100.9",
+            "cprs",
+            "ien",
+            "in",
+            "new",
+            "notification"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 70,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 70,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 70,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 70,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 70,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 70,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 69,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 70,
+          "cols": 2,
+          "header_tokens": [
+            "notification",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 32,
+          "cols": 4,
+          "header_tokens": [
+            "allergy-contrast",
+            "interaction",
+            "media",
+            "x"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "number"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 34,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "number"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 37,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "number"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 203,
+          "cols": 5,
+          "header_tokens": [
+            "edit",
+            "location",
+            "name",
+            "new",
+            "old",
+            "option",
+            "thru"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "cprsguium.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/cprsguium.docx",
+      "para_count": 8294,
+      "heading_count": 570,
+      "toc_entry_count": 0,
+      "table_count": 9,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 8
+      },
+      "pseudo_headings": 118,
+      "callouts": {
+        "NOTE": 700,
+        "WARNING": 13,
+        "IMPORTANT": 1
+      },
+      "terminal_lines": 815,
+      "page_refs": 11,
+      "has_toc": false,
+      "has_revision": true,
+      "has_index": false,
+      "unique_style_count": 37,
+      "tables_detail": [
+        {
+          "rows": 253,
+          "cols": 6,
+          "header_tokens": [
+            "change",
+            "date",
+            "manager",
+            "page",
+            "patch",
+            "project",
+            "technical",
+            "version",
+            "writer"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "column",
+            "combination",
+            "key",
+            "sorted"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 31,
+          "cols": 3,
+          "header_tokens": [
+            "(mhtc)",
+            "addiction",
+            "case",
+            "clinical",
+            "manager",
+            "pharmacist",
+            "polytrauma",
+            "therapist"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "field",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "anc",
+            "frequency",
+            "lab",
+            "level",
+            "monitoring",
+            "of",
+            "tests"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 2,
+          "header_tokens": [
+            "(anc)",
+            "7",
+            "a",
+            "absolute",
+            "an",
+            "anc",
+            "anc;",
+            "and",
+            "based",
+            "calculate",
+            "choice",
+            "count"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 2,
+          "header_tokens": [
+            "order",
+            "type"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 1,
+          "cols": 2,
+          "header_tokens": [
+            "",
+            "a",
+            "always",
+            "attempt",
+            "be",
+            "consult",
+            "consults",
+            "discontinuing",
+            "do",
+            "done",
+            "never",
+            "on"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 30,
+          "cols": 3,
+          "header_tokens": [
+            "",
+            "cause",
+            "error",
+            "message"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    },
+    {
+      "filename": "cprsguitm.docx",
+      "path": "/Users/rafael/vista-docs/raw/cprs/cprsguitm.docx",
+      "para_count": 16651,
+      "heading_count": 2145,
+      "toc_entry_count": 740,
+      "table_count": 39,
+      "table_types": {
+        "revision": 1,
+        "reference-table": 34,
+        "parameter-list": 2,
+        "menu-option": 1,
+        "rpc": 1
+      },
+      "pseudo_headings": 137,
+      "callouts": {
+        "NOTE": 124,
+        "WARNING": 9
+      },
+      "terminal_lines": 374,
+      "page_refs": 1,
+      "has_toc": true,
+      "has_revision": false,
+      "has_index": false,
+      "unique_style_count": 62,
+      "tables_detail": [
+        {
+          "rows": 195,
+          "cols": 4,
+          "header_tokens": [
+            "authors",
+            "change(s)",
+            "date",
+            "patch"
+          ],
+          "type": "revision"
+        },
+        {
+          "rows": 18,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "name"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 13,
+          "cols": 5,
+          "header_tokens": [
+            "dialog",
+            "element",
+            "field",
+            "note",
+            "parameter(s)",
+            "tab"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 5,
+          "header_tokens": [
+            "dialog",
+            "element",
+            "field",
+            "note",
+            "parameter",
+            "tab"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 5,
+          "header_tokens": [
+            "dialog",
+            "element",
+            "field",
+            "note",
+            "parameter",
+            "tab"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 23,
+          "cols": 5,
+          "header_tokens": [
+            "dialog",
+            "element",
+            "field",
+            "note",
+            "parameter",
+            "tab"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 5,
+          "header_tokens": [
+            "dialog",
+            "element",
+            "field",
+            "note",
+            "parameter",
+            "tab"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 5,
+          "header_tokens": [
+            "dialog",
+            "element",
+            "field",
+            "note",
+            "parameter",
+            "tab"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 5,
+          "header_tokens": [
+            "dialog",
+            "element",
+            "field",
+            "note",
+            "parameter",
+            "tab"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 32,
+          "cols": 2,
+          "header_tokens": [
+            "source",
+            "type",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 3,
+          "header_tokens": [
+            "default",
+            "description",
+            "section",
+            "value"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "behavior",
+            "disable",
+            "enable",
+            "ordering",
+            "verify"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 22,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "number"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 34,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "number"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 37,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "field",
+            "name",
+            "number"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 5,
+          "cols": 3,
+          "header_tokens": [
+            "auto-accept",
+            "behavior",
+            "verify"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 6,
+          "header_tokens": [
+            "data",
+            "description",
+            "field",
+            "identifier",
+            "name",
+            "new",
+            "type",
+            "uneditable"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "above.",
+            "and",
+            "collection",
+            "collect\u201d",
+            "correspond",
+            "default",
+            "defines",
+            "discussion",
+            "for",
+            "include",
+            "lab\u201d",
+            "lr"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 2,
+          "header_tokens": [
+            "also",
+            "be",
+            "by",
+            "can",
+            "day",
+            "default",
+            "location",
+            "of",
+            "set",
+            "week."
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 2,
+          "header_tokens": [
+            "associated",
+            "data",
+            "name",
+            "of",
+            "tab",
+            "type"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "parameter",
+            "precedence"
+          ],
+          "type": "parameter-list"
+        },
+        {
+          "rows": 8,
+          "cols": 4,
+          "header_tokens": [
+            "description",
+            "name",
+            "option",
+            "synonym"
+          ],
+          "type": "menu-option"
+        },
+        {
+          "rows": 7,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "icon"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 8,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "report"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "description",
+            "report"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 6,
+          "cols": 2,
+          "header_tokens": [
+            "format",
+            "invalid",
+            "valid"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 784,
+          "cols": 4,
+          "header_tokens": [
+            "#",
+            "patch",
+            "routine",
+            "rpc",
+            "tag"
+          ],
+          "type": "rpc"
+        },
+        {
+          "rows": 8,
+          "cols": 3,
+          "header_tokens": [
+            "(number)",
+            "deleted",
+            "field",
+            "file",
+            "modified",
+            "name",
+            "new"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 3,
+          "cols": 3,
+          "header_tokens": [
+            "(number)",
+            "deleted",
+            "field",
+            "file",
+            "modified",
+            "name",
+            "new"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 9,
+          "cols": 3,
+          "header_tokens": [
+            "(number)",
+            "deleted",
+            "field",
+            "file",
+            "modified",
+            "name",
+            "new"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 2,
+          "cols": 3,
+          "header_tokens": [
+            "(number)",
+            "deleted",
+            "field",
+            "file",
+            "modified",
+            "name",
+            "new"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 3,
+          "header_tokens": [
+            "(number)",
+            "deleted",
+            "field",
+            "file",
+            "modified",
+            "name",
+            "new"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 4,
+          "cols": 2,
+          "header_tokens": [
+            "menu",
+            "orpo",
+            "personal",
+            "preference"
+          ],
+          "type": "reference-table"
+        },
+        {
+          "rows": 10,
+          "cols": 3,
+          "header_tokens": [
+            "description",
+            "parameter",
+            "value"
+          ],
+          "type": "parameter-list"
+        },
+        {
+          "rows": 45,
+          "cols": 2,
+          "header_tokens": [
+            "(in",
+            "access",
+            "and",
+            "both",
+            "character-based",
+            "chart.",
+            "components",
+            "computerized",
+            "cprs",
+            "formats)",
+            "gui",
+            "most"
+          ],
+          "type": "reference-table"
+        }
+      ]
+    }
+  ]
+}
