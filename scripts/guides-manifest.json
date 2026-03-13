@@ -20,7 +20,12 @@
       "RA",
       "SD",
       "SR",
-      "TIU"
+      "TIU",
+      "PSB",
+      "MAG",
+      "YS",
+      "PCMM",
+      "WEBP"
     ],
     "categories_included": [
       "release-notes",
@@ -2069,6 +2074,105 @@
       "fetched_url": "https://www.va.gov/vdl/documents/Clinical/Lab-Blood_Bank/lr_52_p267_ug.docx",
       "fetch_size": 648110,
       "fetch_time": "2026-03-12T18:07:10.433853+00:00"
+    },
+    {
+      "filename": "PSB_3_0_P131_tm.docx",
+      "app_code": "PSB",
+      "app_name": "Bar Code Medication Administration (BCMA)",
+      "doc_type": "BCMA Version 3 Technical Manual / Security Guide (PSB*3*131)",
+      "doc_url": "https://www.va.gov/documents/Clinical/Pharm-Bar_Code_Med_Admin_(BCMA)/PSB_3_0_P131_tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Pharm-Bar_Code_Med_Admin_(BCMA)/PSB_3_0_P131_tm.pdf"
+    },
+    {
+      "filename": "IMGTECHMAN_F.docx",
+      "app_code": "MAG",
+      "app_name": "VistA Imaging System",
+      "doc_type": "VistA Imaging System Technical Manual",
+      "doc_url": "https://www.va.gov/documents/Clinical/Vista_Imaging_Sys/IMGTECHMAN_F.docx",
+      "category": "technical-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Vista_Imaging_Sys/IMGTECHMAN_F.pdf"
+    },
+    {
+      "filename": "MAG_Display_User_Manual.docx",
+      "app_code": "MAG",
+      "app_name": "VistA Imaging System",
+      "doc_type": "VistA Imaging Clinical Display Workstation User Manual",
+      "doc_url": "https://www.va.gov/documents/Clinical/Vista_Imaging_Sys/MAG_Display_User_Manual.docx",
+      "category": "user-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Vista_Imaging_Sys/MAG_Display_User_Manual.pdf"
+    },
+    {
+      "filename": "YS_MHA_UM.docx",
+      "app_code": "YS",
+      "app_name": "Mental Health (YS)",
+      "doc_type": "Mental Health Assistant Phase 3 User Manual",
+      "doc_url": "https://www.va.gov/documents/Clinical/Mental_Health/YS_MHA_UM.docx",
+      "category": "user-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Mental_Health/YS_MHA_UM.pdf"
+    },
+    {
+      "filename": "ys_mha_tm.docx",
+      "app_code": "YS",
+      "app_name": "Mental Health (YS)",
+      "doc_type": "Mental Health Assistant Phase 3 Security Technical Manual",
+      "doc_url": "https://www.va.gov/documents/Clinical/Mental_Health/ys_mha_tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Mental_Health/ys_mha_tm.pdf"
+    },
+    {
+      "filename": "mha_web_um.docx",
+      "app_code": "YS",
+      "app_name": "Mental Health (YS)",
+      "doc_type": "Mental Health Assistant User Manual (YS*5.01*265)",
+      "doc_url": "https://www.va.gov/documents/Clinical/Mental_Health/mha_web_um.docx",
+      "category": "user-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Mental_Health/mha_web_um.pdf"
+    },
+    {
+      "filename": "pcmmug.docx",
+      "app_code": "PCMM",
+      "app_name": "Primary Care Management Module (PCMM)",
+      "doc_type": "Primary Care Management Module (PCMM) User Manual",
+      "doc_url": "https://www.va.gov/documents/Clinical/Pri_Care_Mgmnt_Module_(PCMM)/pcmmug.docx",
+      "category": "user-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Pri_Care_Mgmnt_Module_(PCMM)/pcmmug.pdf"
+    },
+    {
+      "filename": "pcmm_web_ug.docx",
+      "app_code": "WEBP",
+      "app_name": "Patient Centered Management Module (PCMM Web)",
+      "doc_type": "PCMM Web User Guide",
+      "doc_url": "https://www.va.gov/documents/Clinical/Patient_Centered_Management_Module/pcmm_web_ug.docx",
+      "category": "user-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Patient_Centered_Management_Module/pcmm_web_ug.pdf"
+    },
+    {
+      "filename": "sd_53_603_tm.docx",
+      "app_code": "WEBP",
+      "app_name": "Patient Centered Management Module (PCMM Web)",
+      "doc_type": "SD*5.3*603 PCMM Web Technical Manual",
+      "doc_url": "https://www.va.gov/documents/Clinical/Patient_Centered_Management_Module/sd_53_603_tm.docx",
+      "category": "technical-manual",
+      "fetch_status": "error",
+      "ingest_status": "pending",
+      "fetch_error": "docx 404; pdf also failed: 404 Client Error: Not Found for url: https://www.va.gov/documents/Clinical/Patient_Centered_Management_Module/sd_53_603_tm.pdf"
     }
   ]
 }

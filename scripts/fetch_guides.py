@@ -76,7 +76,7 @@ def pdf_url(docx_url):
 def fetch_doc(entry, docs_dir, force=False, dry_run=False):
     pkg      = entry["app_code"]
     filename = entry["filename"]
-    url_docx = entry["doc_url"]
+    url_docx = entry.get("doc_url") or entry.get("url", "")
     dest_dir = docs_dir / pkg
 
     prior_ext  = entry.get("fetched_ext", "docx")
@@ -181,7 +181,7 @@ def main():
     for i, entry in enumerate(pending, 1):
         pkg    = entry["app_code"]
         fname  = entry["filename"]
-        cat    = entry["category"]
+        cat = entry.get("category", "user-manual")
         prefix = f"[{i:>3}/{total}] [{pkg:<6}] [{cat:<14}]"
 
         result = fetch_doc(entry, DOCS_DIR, force=args.force, dry_run=args.dry_run)
