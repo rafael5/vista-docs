@@ -398,7 +398,8 @@ def convert_document(doc: dict, pkg: dict, force: bool, repo_root: Path) -> dict
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest",  default="scripts/manifest.json")
-    parser.add_argument("--pkg",       default=None)
+    parser.add_argument("--pkg",       default=None,
+                        help="Comma-separated package keys to process (case-insensitive), e.g. PSB,MAG,YS")
     parser.add_argument("--base-only", action="store_true")
     parser.add_argument("--force",     action="store_true")
     args = parser.parse_args()
@@ -444,9 +445,10 @@ def main():
         manifest = {"packages": pkgs}
 
     counts = {"done": 0, "scaffold": 0, "skip": 0, "error": 0}
+    pkg_filter = {p.strip().lower() for p in args.pkg.split(",")} if args.pkg else None
 
     for pkg_key, pkg in manifest["packages"].items():
-        if args.pkg and pkg_key != args.pkg:
+        if pkg_filter and pkg_key.lower() not in pkg_filter:
             continue
 
         print(f"\n{'='*60}")
