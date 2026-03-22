@@ -12,6 +12,7 @@ dependencies = [
     "python-docx",
     "pyyaml",
     "click",
+    "docling>=2.81.0",
 ]
 
 [project.optional-dependencies]
