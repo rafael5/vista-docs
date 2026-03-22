@@ -72,7 +72,7 @@ def parse_index(html: str, base_url: str = _VDL_BASE) -> list[Section]:
     sections: list[Section] = []
 
     for a in soup.find_all("a", href=True):
-        href: str = a["href"]
+        href: str = str(a["href"])
         if "section.asp" not in href:
             continue
         full_url = urljoin(base_url, href)
@@ -110,7 +110,7 @@ def parse_section_page(
     apps: list[Application] = []
 
     for a in soup.find_all("a", href=True):
-        href: str = a["href"]
+        href: str = str(a["href"])
         if "application.asp" not in href:
             continue
         full_url = urljoin(base_url, href)
@@ -171,11 +171,11 @@ def parse_application_page(html: str, base_url: str = "https://www.va.gov/") -> 
             file_links = [
                 a
                 for a in row.find_all("a", href=True)
-                if any(a["href"].lower().endswith(ext) for ext in _FILE_EXTS)
+                if any(str(a["href"]).lower().endswith(ext) for ext in _FILE_EXTS)
             ]
 
             for a in file_links:
-                href: str = a["href"]
+                href: str = str(a["href"])
                 full_url = urljoin(base_url, href)
                 filename = urlparse(href).path.rsplit("/", 1)[-1]
                 ext = "." + filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
@@ -219,7 +219,7 @@ def parse_application_page(html: str, base_url: str = "https://www.va.gov/") -> 
     # Fallback: broad link scan if no table docs found
     if not docs:
         for a in soup.find_all("a", href=True):
-            href = a["href"]
+            href = str(a["href"])
             if any(href.lower().endswith(ext) for ext in _FILE_EXTS):
                 full_url = urljoin(base_url, href)
                 filename = urlparse(href).path.rsplit("/", 1)[-1]

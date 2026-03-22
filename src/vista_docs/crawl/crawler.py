@@ -57,7 +57,7 @@ def crawl(
             logger.info("  App: %s (%s)", app.name, app.status)
             resp2 = get_with_delay(session, app.url)
             if resp2.status_code == 200:
-                app.documents = parse_application_page(resp2.text)
+                app.documents = parse_application_page(resp2.text, base_url=resp2.url)
                 logger.info("    → %d documents", len(app.documents))
             else:
                 logger.warning("    Skipping app %s — HTTP %d", app.name, resp2.status_code)
