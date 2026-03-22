@@ -22,6 +22,9 @@ class TestClassifyByFilename:
     def test_installation_guide_install_keyword(self):
         assert classify("cprs_install.docx", "") == DocType.INSTALLATION_GUIDE
 
+    def test_installation_guide_dibr_filename(self):
+        assert classify("dg_5_3_1057_dibr.docx", "") == DocType.INSTALLATION_GUIDE
+
     def test_release_note_rn_suffix(self):
         assert classify("cprspatch_rn.docx", "") == DocType.RELEASE_NOTE
 

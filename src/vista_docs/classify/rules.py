@@ -22,8 +22,8 @@ _FILENAME_RULES: list[tuple[re.Pattern[str], DocType]] = [
     (re.compile(r"(tm\.|technical.?manual)", re.I), DocType.TECHNICAL_MANUAL),
     # User manual: ends with "um" before extension
     (re.compile(r"(um\.|user.?manual)", re.I), DocType.USER_MANUAL),
-    # Installation guide: ends with "ig" or contains "install"
-    (re.compile(r"(ig\.|install)", re.I), DocType.INSTALLATION_GUIDE),
+    # Installation / DIBR (Deployment Installation Back-out Rollback) guide
+    (re.compile(r"(ig\.|install|dibr)", re.I), DocType.INSTALLATION_GUIDE),
     # Release notes: contains "rn" suffix or "release"
     (re.compile(r"(rn\.|release.?note|patch.*rn)", re.I), DocType.RELEASE_NOTE),
     # Quick reference: "qr" suffix or "quick"
@@ -41,7 +41,10 @@ _FILENAME_RULES: list[tuple[re.Pattern[str], DocType]] = [
 _TITLE_RULES: list[tuple[re.Pattern[str], DocType]] = [
     (re.compile(r"technical.?manual", re.I), DocType.TECHNICAL_MANUAL),
     (re.compile(r"user.?manual", re.I), DocType.USER_MANUAL),
-    (re.compile(r"installation.?guide", re.I), DocType.INSTALLATION_GUIDE),
+    (
+        re.compile(r"installation.?guide|deployment.*installation|dibr", re.I),
+        DocType.INSTALLATION_GUIDE,
+    ),
     (re.compile(r"release.?note", re.I), DocType.RELEASE_NOTE),
     (re.compile(r"quick.?ref", re.I), DocType.QUICK_REF),
     (re.compile(r"change.?page", re.I), DocType.CHANGE_PAGE),
