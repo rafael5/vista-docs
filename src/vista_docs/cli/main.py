@@ -165,8 +165,48 @@ def fetch(pkg: str, dry_run: bool, force: bool, delay: float) -> None:
 @click.option("--force", is_flag=True, help="Re-ingest even if output exists.")
 def ingest(pkg: str, scaffold: bool, force: bool) -> None:
     """Convert fetched DOCX/PDF to markdown in ~/data/vista-docs/markdown/."""
-    click.echo("Ingesting documents" + (" [SCAFFOLD]" if scaffold else ""))
-    click.echo("(not yet implemented)")
+    from vista_docs.config import DB_PATH, MARKDOWN_DIR
+    from vista_docs.ingest.runner import ingest_entry
+    from vista_docs.manifest.operations import filter_by_package
+    from vista_docs.manifest.store import load_all, open_db, upsert
+    from vista_docs.models.manifest import FetchStatus
+
+    db = open_db(DB_PATH)
+    entries = load_all(db)
+
+    to_ingest = [e for e in entries if e.fetch_status == FetchStatus.OK]
+    if pkg:
+        to_ingest = filter_by_package(to_ingest, pkg.upper())
+        if not to_ingest:
+            raise click.ClickException(f"No fetched entries for package: {pkg}")
+
+    if not force:
+        to_ingest = [e for e in to_ingest if e.ingest_status != FetchStatus.OK]
+
+    mode = "[SCAFFOLD]" if scaffold else ""
+    click.echo(
+        f"Ingesting {len(to_ingest)} documents"
+        + (f" [pkg={pkg.upper()}]" if pkg else "")
+        + (f" {mode}" if mode else "")
+    )
+
+    ok = err = skip = 0
+    for i, entry in enumerate(to_ingest, 1):
+        click.echo(f"[{i}/{len(to_ingest)}] {entry.app_code} — {entry.doc_title[:55]}", nl=False)
+        result = ingest_entry(entry, MARKDOWN_DIR, scaffold=scaffold, force=force)
+        upsert(db, result)
+        if result.ingest_status == FetchStatus.OK:
+            ok += 1
+            click.echo("  ok")
+        elif result.ingest_status == FetchStatus.SKIPPED:
+            skip += 1
+            click.echo("  skipped")
+        else:
+            err += 1
+            click.echo(f"  FAIL {result.ingest_error[:60]}")
+
+    db.close()
+    click.echo(f"\nDone: {ok} ok, {skip} skipped, {err} errors.")
 
 
 # ---------------------------------------------------------------------------

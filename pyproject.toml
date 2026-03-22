@@ -50,6 +50,7 @@ omit = [
     "src/vista_docs/crawl/crawler.py",
     "src/vista_docs/fetch/downloader.py",
     "src/vista_docs/ingest/converter.py",
+    "src/vista_docs/ingest/runner.py",
     "src/vista_docs/survey/analyzer.py",
     "src/vista_docs/manifest/store.py",
     "src/vista_docs/cli/main.py",
