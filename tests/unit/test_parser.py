@@ -41,13 +41,13 @@ APP_HTML = """
 <html><body>
 <table>
   <tr>
-    <td>DOCX</td>
-    <td><a href="/vdl/documents/Clinical/ADT/dg_5_3_1057_dibr.docx">DG*5.3*1057 DIBR Guide</a></td>
+    <td>DG*5.3*1057 DIBR Guide</td>
+    <td><a href="/vdl/documents/Clinical/ADT/dg_5_3_1057_dibr.docx">DOCX</a></td>
     <td>03/15/2024</td>
   </tr>
   <tr>
-    <td>PDF</td>
-    <td><a href="/vdl/documents/Clinical/ADT/dg_5_3_1057_dibr.pdf">DG*5.3*1057 DIBR Guide</a></td>
+    <td>DG*5.3*1057 DIBR Guide</td>
+    <td><a href="/vdl/documents/Clinical/ADT/dg_5_3_1057_dibr.pdf">PDF</a></td>
     <td>03/15/2024</td>
   </tr>
   <tr>

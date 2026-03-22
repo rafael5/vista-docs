@@ -180,10 +180,23 @@ def parse_application_page(html: str, base_url: str = "https://www.va.gov/") -> 
                 filename = urlparse(href).path.rsplit("/", 1)[-1]
                 ext = "." + filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
 
-                doc_title = a.get_text(strip=True) or (
-                    cell_texts[1] if len(cell_texts) > 1 else filename
-                )
-                doc_type = cell_texts[0] if cell_texts else ""
+                link_text = a.get_text(strip=True)
+                # Real VDL: link text is the format label ("DOCX"/"PDF"),
+                # actual title is in the first non-link cell.
+                # Fallback: if link text looks like a title, use it directly.
+                if link_text.upper() in ("DOCX", "PDF", "DOC", "ZIP", "TXT", "WORD"):
+                    doc_type = link_text.upper()
+                    doc_title = next(
+                        (
+                            t
+                            for t in cell_texts
+                            if t and t.upper() not in ("DOCX", "PDF", "DOC", "ZIP", "TXT", "WORD")
+                        ),
+                        filename,
+                    )
+                else:
+                    doc_title = link_text or (cell_texts[1] if len(cell_texts) > 1 else filename)
+                    doc_type = cell_texts[0] if cell_texts else ""
 
                 date_str = ""
                 for ct in cell_texts:
