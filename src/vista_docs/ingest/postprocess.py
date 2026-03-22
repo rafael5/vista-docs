@@ -4,10 +4,10 @@ Pure markdown post-processing for VA DOCX → markdown output.
 All functions take a markdown string and return a cleaned markdown string.
 No I/O, no Docling dependency.
 """
+
 from __future__ import annotations
 
 import re
-
 
 # ---------------------------------------------------------------------------
 # TOC stripping

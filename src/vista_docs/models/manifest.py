@@ -5,9 +5,10 @@ ManifestEntry is the central record that tracks every document
 through every pipeline stage. FetchStatus and DocType are enums
 used throughout the pipeline.
 """
+
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
 
 
@@ -40,23 +41,23 @@ class ManifestEntry:
     """Tracks a single document through the full pipeline."""
 
     # Identity
-    package_id: str        # e.g. "OR*3.0"
-    app_code: str          # namespace prefix, e.g. "OR"
+    package_id: str  # e.g. "OR*3.0"
+    app_code: str  # namespace prefix, e.g. "OR"
     doc_title: str
     doc_type: DocType = DocType.UNKNOWN
-    patch: str = ""        # e.g. "OR*3.0*350" (most recent patch)
+    patch: str = ""  # e.g. "OR*3.0*350" (most recent patch)
 
     # Source URLs (either or both may be present)
     docx_url: str = ""
     pdf_url: str = ""
 
     # Output
-    output_filename: str = ""   # canonical .md filename
+    output_filename: str = ""  # canonical .md filename
 
     # Fetch stage
     fetch_status: FetchStatus = FetchStatus.PENDING
     local_path: str = ""
-    fetched_ext: str = ""       # "docx" or "pdf"
+    fetched_ext: str = ""  # "docx" or "pdf"
     fetch_size: int = 0
     fetch_error: str = ""
 

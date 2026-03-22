@@ -8,6 +8,7 @@ version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
     "requests",
+    "beautifulsoup4",
     "python-docx",
     "pyyaml",
     "click",
@@ -46,6 +47,7 @@ source = ["src"]
 # I/O thin layers are tested in integration/ only — exclude from unit test gate
 omit = [
     "src/vista_docs/crawl/session.py",
+    "src/vista_docs/crawl/crawler.py",
     "src/vista_docs/fetch/downloader.py",
     "src/vista_docs/ingest/converter.py",
     "src/vista_docs/survey/analyzer.py",
@@ -60,10 +62,16 @@ fail_under = 95
 show_missing = true
 
 [tool.ruff]
-line-length = 88
+line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# Long strings in docstring examples and test string literals are unavoidable
+"src/vista_docs/crawl/parser.py" = ["E501"]
+"src/vista_docs/survey/analyzer.py" = ["E501"]
+"tests/unit/test_postprocess.py" = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"

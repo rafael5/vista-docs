@@ -1,17 +1,22 @@
 """
 Unit tests for fetch/strategy.py — pure URL derivation logic.
 """
-import pytest
 
 from vista_docs.fetch.strategy import candidate_urls, swap_extension
 
 
 class TestSwapExtension:
     def test_docx_to_pdf(self):
-        assert swap_extension("https://va.gov/vdl/docs/file.docx") == "https://va.gov/vdl/docs/file.pdf"
+        assert (
+            swap_extension("https://va.gov/vdl/docs/file.docx")
+            == "https://va.gov/vdl/docs/file.pdf"
+        )
 
     def test_pdf_to_docx(self):
-        assert swap_extension("https://va.gov/vdl/docs/file.pdf") == "https://va.gov/vdl/docs/file.docx"
+        assert (
+            swap_extension("https://va.gov/vdl/docs/file.pdf")
+            == "https://va.gov/vdl/docs/file.docx"
+        )
 
     def test_uppercase_extension(self):
         result = swap_extension("https://va.gov/vdl/docs/file.DOCX")

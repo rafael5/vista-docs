@@ -1,11 +1,11 @@
 """I/O thin layer: walk corpus DOCX files and run detectors over them."""
+
 from __future__ import annotations
 
-import json
 import logging
 from pathlib import Path
 
-from vista_docs.survey.detectors import classify_style, classify_table, detect_callout
+from vista_docs.survey.detectors import classify_table, detect_callout
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +17,13 @@ def survey_package(pkg_dir: Path) -> dict:
     except ImportError as exc:
         raise ImportError("python-docx is required for survey: pip install python-docx") from exc
 
-    results: dict = {"package": pkg_dir.name, "files": [], "styles": {}, "tables": {}, "callouts": {}}
+    results: dict = {
+        "package": pkg_dir.name,
+        "files": [],
+        "styles": {},
+        "tables": {},
+        "callouts": {},
+    }
 
     for docx_path in sorted(pkg_dir.glob("*.docx")):
         logger.info("Surveying %s", docx_path.name)

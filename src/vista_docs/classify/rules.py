@@ -6,12 +6,12 @@ classify(filename, title) → DocType
 Filename patterns take priority over title patterns.
 All matching is case-insensitive.
 """
+
 from __future__ import annotations
 
 import re
 
 from vista_docs.models.manifest import DocType
-
 
 # ---------------------------------------------------------------------------
 # Filename pattern rules (checked first, in priority order)

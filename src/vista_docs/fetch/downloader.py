@@ -1,12 +1,12 @@
 """I/O thin layer: download a document, write to raw/, update state."""
+
 from __future__ import annotations
 
 import logging
-from pathlib import Path
 
 import requests
 
-from vista_docs.config import RAW_DIR, REQUEST_TIMEOUT, USER_AGENT
+from vista_docs.config import RAW_DIR, REQUEST_TIMEOUT
 from vista_docs.fetch.strategy import candidate_urls
 from vista_docs.models.manifest import FetchStatus, ManifestEntry
 

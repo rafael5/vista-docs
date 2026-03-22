@@ -8,10 +8,10 @@ vista-docs CLI — single entry point with subcommands.
   vista-docs verify  — sanity-check all artifacts
   vista-docs pipeline — run crawl → fetch → ingest → survey
 """
+
 from __future__ import annotations
 
 import logging
-import sys
 
 import click
 
@@ -37,20 +37,47 @@ def cli(verbose: bool) -> None:
 # crawl
 # ---------------------------------------------------------------------------
 
+
 @cli.command()
-@click.option("--delay", type=float, default=1.5, show_default=True, help="Seconds between requests.")
+@click.option(
+    "--delay",
+    type=float,
+    default=1.5,
+    show_default=True,
+    help="Seconds between requests.",
+)
 @click.option("--snapshot", is_flag=True, help="Save a dated snapshot of the inventory.")
-def crawl(delay: float, snapshot: bool) -> None:
+@click.option("--max-apps", type=int, default=None, help="Limit apps crawled (for testing).")
+def crawl(delay: float, snapshot: bool, max_apps: int | None) -> None:
     """Crawl VDL catalog and write inventory CSV/JSON to ~/data/vista-docs/inventory/."""
     from vista_docs.config import INVENTORY_DIR
+    from vista_docs.crawl.crawler import crawl as do_crawl
+    from vista_docs.crawl.crawler import to_flat_rows, write_csv, write_json
+
     INVENTORY_DIR.mkdir(parents=True, exist_ok=True)
     click.echo(f"Crawling VDL → {INVENTORY_DIR}")
-    click.echo("(not yet implemented)")
+
+    sections = do_crawl(max_apps=max_apps, delay=delay)
+    rows = to_flat_rows(sections)
+    click.echo(f"  Found {len(sections)} sections, {len(rows)} document entries")
+
+    write_csv(rows, INVENTORY_DIR / "vdl_inventory.csv")
+    write_json(sections, INVENTORY_DIR / "vdl_inventory.json")
+
+    if snapshot:
+        from datetime import date
+
+        snap_name = f"{date.today()}_vdl_inventory.csv"
+        write_csv(rows, INVENTORY_DIR / "snapshots" / snap_name)
+        click.echo(f"  Snapshot saved: snapshots/{snap_name}")
+
+    click.echo("Done.")
 
 
 # ---------------------------------------------------------------------------
 # fetch
 # ---------------------------------------------------------------------------
+
 
 @cli.command()
 @click.option("--pkg", default="", help="Limit to one package namespace (e.g. OR).")
@@ -60,6 +87,7 @@ def crawl(delay: float, snapshot: bool) -> None:
 def fetch(pkg: str, dry_run: bool, force: bool, delay: float) -> None:
     """Download DOCX/PDF files from VDL into ~/data/vista-docs/raw/."""
     from vista_docs.config import DB_PATH
+
     click.echo(f"Fetching documents (db: {DB_PATH})" + (" [DRY RUN]" if dry_run else ""))
     click.echo("(not yet implemented)")
 
@@ -67,6 +95,7 @@ def fetch(pkg: str, dry_run: bool, force: bool, delay: float) -> None:
 # ---------------------------------------------------------------------------
 # ingest
 # ---------------------------------------------------------------------------
+
 
 @cli.command()
 @click.option("--pkg", default="", help="Limit to one package namespace.")
@@ -82,12 +111,14 @@ def ingest(pkg: str, scaffold: bool, force: bool) -> None:
 # survey
 # ---------------------------------------------------------------------------
 
+
 @cli.command()
 @click.option("--pkg", default="", help="Limit to one package namespace.")
 @click.option("--output", type=click.Path(), default="", help="Output directory path.")
 def survey(pkg: str, output: str) -> None:
     """Analyse corpus structure and write survey reports."""
     from vista_docs.config import SURVEY_DIR
+
     out = output or str(SURVEY_DIR)
     click.echo(f"Surveying corpus → {out}")
     click.echo("(not yet implemented)")
@@ -96,6 +127,7 @@ def survey(pkg: str, output: str) -> None:
 # ---------------------------------------------------------------------------
 # verify
 # ---------------------------------------------------------------------------
+
 
 @cli.command()
 @click.option("--fix", is_flag=True, help="Attempt to fix minor issues automatically.")
@@ -108,6 +140,7 @@ def verify(fix: bool) -> None:
 # ---------------------------------------------------------------------------
 # pipeline
 # ---------------------------------------------------------------------------
+
 
 @cli.command()
 @click.option("--pkg", default="", help="Limit to one package namespace.")

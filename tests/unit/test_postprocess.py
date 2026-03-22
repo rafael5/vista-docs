@@ -1,14 +1,13 @@
 """
 Unit tests for ingest/postprocess.py — pure markdown transforms.
 """
-import pytest
 
 from vista_docs.ingest.postprocess import (
-    strip_toc,
-    strip_outline_numbering,
     cap_heading_depth,
     format_callouts,
     strip_boilerplate,
+    strip_outline_numbering,
+    strip_toc,
 )
 
 

@@ -1,188 +1,225 @@
 """
-Pure HTML → catalog record parsing.
+Pure HTML → catalog record parsing for the VA VDL.
 
 No I/O. Takes raw HTML strings, returns dataclasses.
-The real HTML structure is approximated here — tests use fixture files
-in tests/fixtures/html/ that capture actual VDL pages.
+
+VDL HTML is 3-level:
+  1. Index page (va.gov/vdl/) — links with "section.asp" → Section names + URLs
+  2. Section page            — links with "application.asp" → Application names + URLs
+  3. Application page        — tables with file links → Document records
+
+All functions are pure: string in, dataclass list out.
 """
+
 from __future__ import annotations
 
 import re
-from html.parser import HTMLParser
+from urllib.parse import parse_qs, urljoin, urlparse
+
+from bs4 import BeautifulSoup
 
 from vista_docs.models.catalog import Application, Document, Section
 
+_VDL_BASE = "https://www.va.gov/vdl/"
 
 # ---------------------------------------------------------------------------
-# Package ID extraction
+# Application status extraction
 # ---------------------------------------------------------------------------
 
-_PKG_RE = re.compile(r"\(([A-Z]+\*[\d.]+)\)")
-_CODE_RE = re.compile(r"^([A-Z]+)")
+_ARCHIVE_RE = re.compile(r"\s*-\s*ARCHIVE\s*$", re.I)
+_DECOMM_RE = re.compile(r"\s*-\s*DECOMMISSIONED\s*(.*?)\s*$", re.I)
+_APP_CODE_RE = re.compile(r"\(([A-Z0-9+/ ]{1,20})\)\s*$")
 
 
-def _extract_package_id(text: str) -> str:
-    """Extract package_id like 'OR*3.0' from 'CPRS (OR*3.0)'."""
-    m = _PKG_RE.search(text)
-    return m.group(1) if m else ""
-
-
-def _extract_app_code(package_id: str) -> str:
-    """Extract namespace prefix 'OR' from 'OR*3.0'."""
-    m = _CODE_RE.match(package_id)
-    return m.group(1) if m else ""
-
-
-# ---------------------------------------------------------------------------
-# Section listing parser
-# ---------------------------------------------------------------------------
-
-class _SectionParser(HTMLParser):
+def _parse_app_name(raw: str) -> tuple[str, str, str]:
     """
-    Parses the VDL index page that lists sections and their applications.
+    Extract (clean_name, status, decommission_date) from a raw app name string.
 
-    Expected structure (simplified):
-      <h2>Section Name</h2>
-      <ul>
-        <li><a href="/vdl/application.asp?appid=N">App Name (PKG*1.0)</a></li>
-        ...
-      </ul>
+    Examples:
+      'CPRS: Problem List (GMPL) - ARCHIVE'      → ('CPRS...', 'archive', '')
+      'Social Work (SOW) - DECOMMISSIONED JUL 2020' → ('Social Work (SOW)', 'decommissioned', 'JUL 2020')
+      'Nursing (NUR)'                             → ('Nursing (NUR)', 'active', '')
     """
+    m = _ARCHIVE_RE.search(raw)
+    if m:
+        return raw[: m.start()].strip(), "archive", ""
+    m = _DECOMM_RE.search(raw)
+    if m:
+        return raw[: m.start()].strip(), "decommissioned", m.group(1).strip()
+    return raw.strip(), "active", ""
 
-    def __init__(self) -> None:
-        super().__init__()
-        self.sections: list[Section] = []
-        self._current_section: Section | None = None
-        self._in_h2 = False
-        self._in_li_a = False
-        self._current_link: str = ""
-        self._current_text: str = ""
 
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag == "h2":
-            self._in_h2 = True
-            self._current_text = ""
-        elif tag == "a" and self._current_section is not None:
-            href = dict(attrs).get("href", "") or ""
-            if "application" in href or "appid" in href:
-                self._in_li_a = True
-                self._current_link = href
-                self._current_text = ""
+def _extract_app_code(name: str) -> str:
+    """Extract 'NUR' from 'Nursing (NUR)'."""
+    m = _APP_CODE_RE.search(name)
+    return m.group(1).strip() if m else ""
 
-    def handle_endtag(self, tag: str) -> None:
-        if tag == "h2":
-            self._in_h2 = False
-            name = self._current_text.strip()
-            if name:
-                section = Section(name=name, url="")
-                self.sections.append(section)
-                self._current_section = section
 
-        elif tag == "a" and self._in_li_a:
-            self._in_li_a = False
-            text = self._current_text.strip()
-            pkg_id = _extract_package_id(text)
-            app = Application(
-                name=text,
-                package_id=pkg_id,
-                app_code=_extract_app_code(pkg_id),
-                url=self._current_link,
+# ---------------------------------------------------------------------------
+# Level 1: parse VDL index page → Section list
+# ---------------------------------------------------------------------------
+
+
+def parse_index(html: str, base_url: str = _VDL_BASE) -> list[Section]:
+    """
+    Parse the VDL home page and return a list of Sections.
+
+    Sections are found as <a href="...section.asp?secid=N">Name</a> links.
+    Applications list is not populated here — call parse_section_page() next.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    seen: set[str] = set()
+    sections: list[Section] = []
+
+    for a in soup.find_all("a", href=True):
+        href: str = a["href"]
+        if "section.asp" not in href:
+            continue
+        full_url = urljoin(base_url, href)
+        params = parse_qs(urlparse(full_url).query)
+        sec_id = params.get("secid", [""])[0]
+        if sec_id in seen:
+            continue
+        seen.add(sec_id)
+        name = a.get_text(strip=True)
+        if name:
+            sections.append(Section(name=name, url=full_url))
+
+    return sections
+
+
+# ---------------------------------------------------------------------------
+# Level 2: parse section page → Application list
+# ---------------------------------------------------------------------------
+
+
+def parse_section_page(
+    html: str,
+    section_id: str = "",
+    section_name: str = "",
+    base_url: str = _VDL_BASE,
+) -> list[Application]:
+    """
+    Parse a VDL section page and return a list of Applications.
+
+    Applications are found as <a href="...application.asp?appid=N">Name</a> links.
+    App name is parsed for status suffix (ARCHIVE / DECOMMISSIONED).
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    seen: set[str] = set()
+    apps: list[Application] = []
+
+    for a in soup.find_all("a", href=True):
+        href: str = a["href"]
+        if "application.asp" not in href:
+            continue
+        full_url = urljoin(base_url, href)
+        params = parse_qs(urlparse(full_url).query)
+        app_id = params.get("appid", [""])[0]
+        if app_id in seen:
+            continue
+        seen.add(app_id)
+
+        raw_name = a.get_text(strip=True)
+        clean_name, status, decomm_date = _parse_app_name(raw_name)
+        app_code = _extract_app_code(clean_name)
+
+        apps.append(
+            Application(
+                name=clean_name,
+                package_id="",  # derived later during manifest build
+                app_code=app_code,
+                url=full_url,
+                status=status,
+                decommission_date=decomm_date,
+                documents=[],
             )
-            if self._current_section is not None:
-                self._current_section.applications.append(app)
+        )
 
-    def handle_data(self, data: str) -> None:
-        if self._in_h2 or self._in_li_a:
-            self._current_text += data
-
-
-def parse_sections(html: str) -> list[Section]:
-    """Parse VDL index HTML into a list of Sections with Applications."""
-    parser = _SectionParser()
-    parser.feed(html)
-    return [s for s in parser.sections if s.applications]
+    return apps
 
 
 # ---------------------------------------------------------------------------
-# Application page parser
+# Level 3: parse application page → Document list
 # ---------------------------------------------------------------------------
 
-class _AppPageParser(HTMLParser):
+_FILE_EXTS = {".pdf", ".doc", ".docx", ".zip", ".txt"}
+_DATE_RE = re.compile(
+    r"(\d{1,2}/\d{1,2}/\d{4}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{4})",
+    re.I,
+)
+
+
+def parse_application_page(html: str, base_url: str = "https://www.va.gov/") -> list[Document]:
     """
-    Parses a VDL application page that lists documents in a table.
+    Parse a VDL application page and return a list of Documents.
 
-    Expected structure (simplified):
-      <table class="vdl-table">
-        <tr>
-          <td><a href="/vdl/docs/file.docx">Document Title</a></td>
-          <td>MM/YYYY</td>
-        </tr>
-        ...
-      </table>
+    Documents are found in tables — each row may have a PDF/DOCX file link.
+    Falls back to a broader link scan if no table-based docs are found.
     """
+    soup = BeautifulSoup(html, "html.parser")
+    docs: list[Document] = []
 
-    def __init__(self) -> None:
-        super().__init__()
-        self.documents: list[Document] = []
-        self._in_vdl_table = False
-        self._in_td = False
-        self._td_index = 0          # 0-based column index within current <tr>
-        self._current_url = ""
-        self._current_title = ""
-        self._current_date = ""
-        self._in_doc_link = False
-        self._current_text = ""
+    # Primary: table-based scan
+    for table in soup.find_all("table"):
+        for row in table.find_all("tr"):
+            cells = row.find_all(["td", "th"])
+            if len(cells) < 2:
+                continue
+            cell_texts = [c.get_text(strip=True) for c in cells]
 
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        attr_dict = dict(attrs)
-        if tag == "table":
-            cls = attr_dict.get("class", "") or ""
-            if "vdl-table" in cls:
-                self._in_vdl_table = True
-        elif tag == "tr" and self._in_vdl_table:
-            self._td_index = 0
-            self._current_url = ""
-            self._current_title = ""
-            self._current_date = ""
-        elif tag == "td" and self._in_vdl_table:
-            self._in_td = True
-            self._current_text = ""
-        elif tag == "a" and self._in_td and self._td_index == 0:
-            href = attr_dict.get("href", "") or ""
-            ext = href.rsplit(".", 1)[-1].lower() if "." in href else ""
-            if ext in ("docx", "pdf", "doc"):
-                self._in_doc_link = True
-                self._current_url = href
-                self._current_text = ""
+            file_links = [
+                a
+                for a in row.find_all("a", href=True)
+                if any(a["href"].lower().endswith(ext) for ext in _FILE_EXTS)
+            ]
 
-    def handle_endtag(self, tag: str) -> None:
-        if tag == "table":
-            self._in_vdl_table = False
-        elif tag == "a" and self._in_doc_link:
-            self._in_doc_link = False
-            self._current_title = self._current_text.strip()
-        elif tag == "td" and self._in_vdl_table:
-            if self._td_index == 1:
-                self._current_date = self._current_text.strip()
-            self._td_index += 1
-            self._in_td = False
-        elif tag == "tr" and self._in_vdl_table:
-            if self._current_url and self._current_title:
-                self.documents.append(
+            for a in file_links:
+                href: str = a["href"]
+                full_url = urljoin(base_url, href)
+                filename = urlparse(href).path.rsplit("/", 1)[-1]
+                ext = "." + filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
+
+                doc_title = a.get_text(strip=True) or (
+                    cell_texts[1] if len(cell_texts) > 1 else filename
+                )
+                doc_type = cell_texts[0] if cell_texts else ""
+
+                date_str = ""
+                for ct in cell_texts:
+                    m = _DATE_RE.search(ct)
+                    if m:
+                        date_str = m.group(1)
+                        break
+
+                docs.append(
                     Document(
-                        title=self._current_title,
-                        url=self._current_url,
-                        file_date=self._current_date,
+                        title=doc_title,
+                        url=full_url,
+                        file_date=date_str,
+                        filename=filename,
+                        file_ext=ext,
+                        doc_type_label=doc_type,
                     )
                 )
 
-    def handle_data(self, data: str) -> None:
-        if self._in_doc_link or (self._in_td and self._td_index == 1):
-            self._current_text += data
+    # Fallback: broad link scan if no table docs found
+    if not docs:
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if any(href.lower().endswith(ext) for ext in _FILE_EXTS):
+                full_url = urljoin(base_url, href)
+                filename = urlparse(href).path.rsplit("/", 1)[-1]
+                ext = "." + filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
+                docs.append(
+                    Document(
+                        title=a.get_text(strip=True),
+                        url=full_url,
+                        file_date="",
+                        filename=filename,
+                        file_ext=ext,
+                        doc_type_label="",
+                    )
+                )
 
-
-def parse_application_page(html: str) -> list[Document]:
-    """Parse a VDL application page into a list of Documents."""
-    parser = _AppPageParser()
-    parser.feed(html)
-    return parser.documents
+    return docs

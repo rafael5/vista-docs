@@ -1,14 +1,13 @@
 """
 Unit tests for manifest/operations.py — pure list[ManifestEntry] operations.
 """
-import pytest
 
 from vista_docs.manifest.operations import (
-    filter_by_status,
-    filter_by_package,
-    update_fetch_status,
     deduplicate,
+    filter_by_package,
+    filter_by_status,
     merge_entries,
+    update_fetch_status,
 )
 from vista_docs.models.manifest import DocType, FetchStatus, ManifestEntry
 
@@ -72,9 +71,7 @@ class TestUpdateFetchStatus:
 
     def test_nonmatching_entry_unchanged(self):
         entry = make_entry(doc_title="Other Doc")
-        updated = update_fetch_status(
-            [entry], "CPRS Technical Manual", FetchStatus.OK
-        )
+        updated = update_fetch_status([entry], "CPRS Technical Manual", FetchStatus.OK)
         assert updated[0].fetch_status == FetchStatus.PENDING
 
     def test_returns_new_list(self):

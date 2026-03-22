@@ -1,7 +1,6 @@
 """
 Unit tests for classify/rules.py — pure filename + title → DocType classification.
 """
-import pytest
 
 from vista_docs.classify.rules import classify
 from vista_docs.models.manifest import DocType
