@@ -86,10 +86,72 @@ def crawl(delay: float, snapshot: bool, max_apps: int | None) -> None:
 @click.option("--delay", type=float, default=1.5, show_default=True)
 def fetch(pkg: str, dry_run: bool, force: bool, delay: float) -> None:
     """Download DOCX/PDF files from VDL into ~/data/vista-docs/raw/."""
-    from vista_docs.config import DB_PATH
+    import csv
+    import time
 
-    click.echo(f"Fetching documents (db: {DB_PATH})" + (" [DRY RUN]" if dry_run else ""))
-    click.echo("(not yet implemented)")
+    from vista_docs.config import DB_PATH, INVENTORY_DIR
+    from vista_docs.crawl.session import make_session
+    from vista_docs.fetch.downloader import download_entry
+    from vista_docs.manifest.builder import build_entries_from_rows
+    from vista_docs.manifest.operations import filter_by_package
+    from vista_docs.manifest.store import load_all, open_db, upsert
+    from vista_docs.models.manifest import FetchStatus
+
+    inventory_csv = INVENTORY_DIR / "vdl_inventory.csv"
+    if not inventory_csv.exists():
+        raise click.ClickException(f"Inventory not found: {inventory_csv}\nRun: vista-docs crawl")
+
+    with open(inventory_csv, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    all_entries = build_entries_from_rows(rows)
+
+    if pkg:
+        all_entries = filter_by_package(all_entries, pkg.upper())
+        if not all_entries:
+            raise click.ClickException(f"No entries found for package: {pkg}")
+
+    db = open_db(DB_PATH)
+    existing = load_all(db)
+    existing_map = {(e.app_code, e.doc_title): e for e in existing}
+
+    to_fetch = []
+    for entry in all_entries:
+        key = (entry.app_code, entry.doc_title)
+        ex = existing_map.get(key)
+        if ex and ex.fetch_status == FetchStatus.OK and not force:
+            continue
+        to_fetch.append(entry)
+
+    skipped = len(all_entries) - len(to_fetch)
+    click.echo(
+        f"Fetching {len(to_fetch)} documents"
+        + (f" [pkg={pkg.upper()}]" if pkg else "")
+        + (" [DRY RUN]" if dry_run else "")
+        + (f" ({skipped} already ok, skipped)" if skipped else "")
+    )
+
+    if dry_run:
+        for e in to_fetch:
+            click.echo(f"  {e.app_code:8} {e.doc_title[:60]}")
+        return
+
+    session = make_session()
+    ok = err = 0
+    for i, entry in enumerate(to_fetch, 1):
+        click.echo(f"[{i}/{len(to_fetch)}] {entry.app_code} — {entry.doc_title[:55]}", nl=False)
+        result = download_entry(entry, session)
+        upsert(db, result)
+        if result.fetch_status == FetchStatus.OK:
+            ok += 1
+            click.echo(f"  ok {result.fetched_ext} {result.fetch_size // 1024}KB")
+        else:
+            err += 1
+            click.echo(f"  FAIL {result.fetch_error[:60]}")
+        if i < len(to_fetch):
+            time.sleep(delay)
+
+    db.close()
+    click.echo(f"\nDone: {ok} ok, {err} errors.")
 
 
 # ---------------------------------------------------------------------------
