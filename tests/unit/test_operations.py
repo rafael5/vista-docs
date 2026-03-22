@@ -63,7 +63,7 @@ class TestFilterByPackage:
 
 class TestUpdateFetchStatus:
     def test_updates_matching_entry(self):
-        entry = make_entry(doc_title="TM")
+        entry = make_entry()
         updated = update_fetch_status(
             [entry], "CPRS Technical Manual", FetchStatus.OK, local_path="/raw/OR/file.docx"
         )

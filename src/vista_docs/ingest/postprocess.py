@@ -37,7 +37,7 @@ def strip_toc(md: str) -> str:
 # Heading normalisation
 # ---------------------------------------------------------------------------
 
-_HEADING_RE = re.compile(r"^(#{1,6})\s+(\d+(?:\.\d+)*)\s+(.+)$", re.MULTILINE)
+_HEADING_RE = re.compile(r"^(#{1,6})\s+(\d+(?:\.\d+)*\.?)\s+(.+)$", re.MULTILINE)
 _HEADING_LINE_RE = re.compile(r"^(#{1,6})\s+", re.MULTILINE)
 
 

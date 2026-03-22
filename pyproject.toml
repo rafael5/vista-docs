@@ -43,9 +43,20 @@ markers = [
 
 [tool.coverage.run]
 source = ["src"]
+# I/O thin layers are tested in integration/ only — exclude from unit test gate
+omit = [
+    "src/vista_docs/crawl/session.py",
+    "src/vista_docs/fetch/downloader.py",
+    "src/vista_docs/ingest/converter.py",
+    "src/vista_docs/survey/analyzer.py",
+    "src/vista_docs/manifest/store.py",
+    "src/vista_docs/cli/main.py",
+    "src/vista_docs/config.py",
+    "src/vista_docs/survey/detectors.py",   # covered via integration survey tests
+]
 
 [tool.coverage.report]
-fail_under = 80
+fail_under = 95
 show_missing = true
 
 [tool.ruff]
