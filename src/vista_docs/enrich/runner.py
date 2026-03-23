@@ -12,7 +12,12 @@ from pathlib import Path
 
 from vista_docs.enrich.extractors import (
     extract_appendices,
+    extract_audience,
+    extract_figure_count,
     extract_keywords,
+    extract_package_name,
+    extract_package_namespace,
+    extract_package_version,
     extract_page_count,
     extract_pub_date,
     extract_revision_history,
@@ -44,7 +49,12 @@ def enrich_file(path: Path) -> bool:
             "appendix_count": extract_appendices(md),
             "table_count": extract_table_count(md),
             "section_count": extract_section_count(md),
+            "figure_count": extract_figure_count(md),
             "keywords": extract_keywords(md),
+            "package_name": extract_package_name(md),
+            "package_namespace": extract_package_namespace(md),
+            "package_version": extract_package_version(md),
+            "audience": extract_audience(md),
         }
 
         updated = rewrite_frontmatter(md, new_fields)

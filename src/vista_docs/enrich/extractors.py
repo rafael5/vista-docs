@@ -138,20 +138,14 @@ def extract_pub_date(md: str) -> str:
     """
     Extract the publication date from the top of the document.
 
-    Checks only the first ~60 lines (title page area).
+    Scans the first ~80 lines (title page area) without stopping at headings,
+    because release notes have an H2 title heading followed by the date.
     Priority: ISO date > Month YYYY > (nothing).
     Bold markers (**text**) are stripped before matching.
     Returns empty string if not found.
     """
     body = _FRONTMATTER_RE.sub("", md, count=1)
-    # Stop at first H2+ heading — that's where the body begins
-    all_lines = body.splitlines()
-    title_lines = []
-    for line in all_lines[:_TITLE_PAGE_LINES]:
-        if re.match(r"^#{1,2}\s", line):
-            break
-        title_lines.append(line)
-    top = "\n".join(title_lines)
+    top = "\n".join(body.splitlines()[:_TITLE_PAGE_LINES])
     # Strip bold markers
     top_clean = re.sub(r"\*\*([^*]+)\*\*", r"\1", top)
 
@@ -342,3 +336,129 @@ def extract_keywords(md: str, max_keywords: int = 10) -> list[str]:
 
     freq = Counter(words)
     return [word for word, _ in freq.most_common(max_keywords)]
+
+
+# ---------------------------------------------------------------------------
+# Cycle 8: package name
+# ---------------------------------------------------------------------------
+
+# "Full Package Name (CODE)" — CODE is 2-8 uppercase letters/digits
+_PKG_NAME_RE = re.compile(
+    r"^([A-Z][A-Za-z ,:/&-]{10,}?)\s+\(([A-Z0-9]{2,8})\)\s*$",
+    re.MULTILINE,
+)
+
+
+def extract_package_name(md: str) -> str:
+    """
+    Extract the full package name from the title page.
+
+    Looks for lines matching "Full Name (ABBREV)" pattern in the first 80 lines.
+    Returns the full name (without the abbreviation in parens), or empty string.
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    top = "\n".join(body.splitlines()[:_TITLE_PAGE_LINES])
+    m = _PKG_NAME_RE.search(top)
+    return m.group(1).strip() if m else ""
+
+
+# ---------------------------------------------------------------------------
+# Cycle 9: package namespace (from frontmatter patch field)
+# ---------------------------------------------------------------------------
+
+_PATCH_FIELD_RE = re.compile(r"^patch:\s*([A-Z0-9]+)\*", re.MULTILINE)
+
+
+def extract_package_namespace(md: str) -> str:
+    """
+    Extract the VistA M package namespace from the patch field in frontmatter.
+
+    e.g. patch: OR*3.0*636  →  "OR"
+         patch: DG*5.3*1057 →  "DG"
+    Returns empty string if no patch field or no namespace found.
+    """
+    m = _PATCH_FIELD_RE.search(md)
+    return m.group(1) if m else ""
+
+
+# ---------------------------------------------------------------------------
+# Cycle 10: package version (from frontmatter patch field)
+# ---------------------------------------------------------------------------
+
+_PATCH_VERSION_RE = re.compile(r"^patch:\s*[A-Z0-9]+\*([0-9]+(?:\.[0-9]+)?)\*", re.MULTILINE)
+
+
+def extract_package_version(md: str) -> str:
+    """
+    Extract the package version from the patch field in frontmatter.
+
+    e.g. patch: OR*3.0*636  →  "3.0"
+         patch: DG*5.3*1057 →  "5.3"
+         patch: PSJ*5*423   →  "5"
+    Returns empty string if no patch field found.
+    """
+    m = _PATCH_VERSION_RE.search(md)
+    return m.group(1) if m else ""
+
+
+# ---------------------------------------------------------------------------
+# Cycle 11: audience
+# ---------------------------------------------------------------------------
+
+_AUDIENCE_HEADING_RE = re.compile(
+    r"^#{1,4}\s+(?:Intended\s+)?Audience\s*$",
+    re.MULTILINE | re.IGNORECASE,
+)
+_NEXT_HEADING_RE = re.compile(r"^#{1,6}\s+", re.MULTILINE)
+
+
+def extract_audience(md: str) -> str:
+    """
+    Extract the audience description from an Audience or Intended Audience section.
+
+    Returns the first paragraph after the heading, truncated to 300 characters.
+    Returns empty string if no audience section found.
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    m = _AUDIENCE_HEADING_RE.search(body)
+    if not m:
+        return ""
+
+    after = body[m.end() :].lstrip("\n")
+    # Find the next heading to bound the section
+    next_h = _NEXT_HEADING_RE.search(after)
+    section = after[: next_h.start()] if next_h else after
+
+    # Take first non-blank paragraph
+    paragraphs = [p.strip() for p in section.split("\n\n") if p.strip()]
+    if not paragraphs:
+        return ""
+
+    text = paragraphs[0]
+    # Strip HTML entities and extra whitespace
+    text = re.sub(r"&amp;", "&", text)
+    text = re.sub(r"&[a-z]+;", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text[:300]
+
+
+# ---------------------------------------------------------------------------
+# Cycle 12: figure count
+# ---------------------------------------------------------------------------
+
+_FIGURE_RE = re.compile(r"^Figure\s+(\d+)\s*[:\.]", re.MULTILINE | re.IGNORECASE)
+
+
+def extract_figure_count(md: str) -> int:
+    """
+    Count the number of unique figures referenced in the document.
+
+    Matches "Figure N:" or "Figure N." lines in both TOC and body.
+    Deduplicates by figure number so TOC + body entries are not double-counted.
+    Returns 0 if no figures found.
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    numbers: set[int] = set()
+    for m in _FIGURE_RE.finditer(body):
+        numbers.add(int(m.group(1)))
+    return len(numbers)

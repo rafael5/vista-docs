@@ -164,8 +164,8 @@ class TestExtractPubDate:
         assert extract_pub_date("## Just a heading\n\nSome body text.") == ""
 
     def test_scans_top_of_doc_only(self):
-        # Date buried deep in body should not be returned
-        deep = "## Introduction\n\n" + ("word " * 200) + "\n\nJanuary 2010\n"
+        # Date buried deep in body (beyond line 60) should not be returned
+        deep = "## Introduction\n\n" + ("word\n" * 65) + "\nJanuary 2010\n"
         assert extract_pub_date(deep) == ""
 
 
