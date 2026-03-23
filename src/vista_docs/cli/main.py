@@ -210,6 +210,41 @@ def ingest(pkg: str, scaffold: bool, force: bool) -> None:
 
 
 # ---------------------------------------------------------------------------
+# enrich
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option("--pkg", default="", help="Limit to one package namespace.")
+@click.option("--force", is_flag=True, help="Re-enrich even if already enriched.")
+def enrich(pkg: str, force: bool) -> None:
+    """Extract metadata from markdown files and enrich their YAML frontmatter."""
+    from vista_docs.config import DB_PATH
+    from vista_docs.enrich.runner import enrich_corpus
+    from vista_docs.manifest.operations import filter_by_package
+    from vista_docs.manifest.store import load_all, open_db
+    from vista_docs.models.manifest import FetchStatus
+
+    db = open_db(DB_PATH)
+    entries = load_all(db)
+    db.close()
+
+    to_enrich = [e for e in entries if e.ingest_status == FetchStatus.OK]
+    if pkg:
+        to_enrich = filter_by_package(to_enrich, pkg.upper())
+        if not to_enrich:
+            raise click.ClickException(f"No ingested entries for package: {pkg}")
+
+    label = f" [pkg={pkg.upper()}]" if pkg else ""
+    click.echo(f"Enriching {len(to_enrich)} documents{label}")
+
+    from vista_docs.config import MARKDOWN_DIR
+
+    result = enrich_corpus(MARKDOWN_DIR, to_enrich, force=force)
+    click.echo(f"Done: {result['ok']} ok, {result['skipped']} skipped, {result['errors']} errors.")
+
+
+# ---------------------------------------------------------------------------
 # survey
 # ---------------------------------------------------------------------------
 
