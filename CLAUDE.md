@@ -10,10 +10,10 @@ Output data lives in `~/data/vista-docs/` — never in this repo.
 
 ```
 vdl              — VDL catalog structure, URL patterns, crawling gotchas
+vdl-pipeline     — Complete operating manual: CLI, stages, enrich fields, gotchas
 vista-system     — VistA package architecture, namespaces, relationships
 vista-fileman    — FileMan APIs, global conventions, data dictionary
-va-docx-structure — Corpus survey findings, ingest checklist, frontmatter schema
-vdl-pipeline     — Archive pipeline reference (comparison only, NOT master)
+va-docx-structure — DOCX structure survey, ingest post-processing, callout patterns
 knowledge-capture — Capture new findings back to skills after each session
 ```
 
@@ -25,8 +25,9 @@ src/vista_docs/
   crawl/         — VDL HTML → catalog records
   classify/      — filename/title → DocType
   fetch/         — URL derivation + HTTP download
-  ingest/        — DOCX/PDF → markdown via Docling
-  survey/        — corpus structure analysis
+  ingest/        — DOCX/PDF → markdown via Docling + post-processing
+  enrich/        — extract metadata from markdown, rewrite YAML frontmatter
+  survey/        — corpus structure analysis (stats.py pure; analyzer.py I/O)
   manifest/      — SQLite pipeline state management
   cli/           — `vista-docs` Click command with subcommands
 
@@ -56,7 +57,7 @@ make install    # create .venv, install deps, install pre-commit hooks
 make test       # run unit tests only (fast)
 make test-lf    # rerun only last-failed
 make watch      # TDD mode: auto-rerun on file save
-make cov        # pytest + coverage report (80% min)
+make cov        # pytest + coverage report (95% min)
 make check      # lint + mypy + cov (full gate = CI)
 make format     # auto-format with ruff
 make push       # check + git push
@@ -74,13 +75,17 @@ make pipeline   # crawl → fetch → ingest → survey in order
 ## CLI
 
 ```
-vista-docs crawl   [--delay N] [--snapshot]
-vista-docs fetch   [--pkg OR] [--dry-run] [--force]
-vista-docs ingest  [--pkg OR] [--scaffold] [--force]
-vista-docs survey  [--pkg OR] [--output PATH]
-vista-docs verify  [--fix]
-vista-docs pipeline [--pkg OR] [--from crawl|fetch|ingest|survey]
+vista-docs crawl   [--delay N] [--snapshot] [--max-apps N]
+vista-docs fetch   [--pkg CPRS] [--dry-run] [--force] [--delay N]
+vista-docs ingest  [--pkg CPRS] [--scaffold] [--force]
+vista-docs enrich  [--pkg CPRS] [--force]
+vista-docs survey  [--pkg CPRS] [--output PATH]     # stub
+vista-docs verify  [--fix]                           # stub
+vista-docs pipeline [--pkg CPRS] [--from crawl|fetch|ingest|survey]  # stub
 ```
+
+**Note:** `--pkg` takes the VDL `app_code` (CPRS, ADT, PSO), NOT the VistA M
+namespace (OR, DG, PSO). These are not the same.
 
 ## Architecture rules
 
@@ -95,7 +100,7 @@ vista-docs pipeline [--pkg OR] [--from crawl|fetch|ingest|survey]
 - `tests/integration/` — may use SQLite, local fixtures, optionally live VA
 - Mark network tests: `@pytest.mark.network` (skipped unless `--run-network`)
 - One test file per source module: `src/foo/bar.py` → `tests/unit/test_bar.py`
-- Coverage minimum: 80% overall; pure modules target 95%+
+- Coverage minimum: 95% overall (enforced by pre-push hook)
 
 ## Environment
 
@@ -117,7 +122,7 @@ uv lock && uv sync --extra dev
 ## Code style
 
 - Formatter + linter: `ruff` only (no black)
-- Line length: 88
+- Line length: 100
 - Rules: E, F, I (errors, pyflakes, isort)
 - Pre-commit hooks enforce style on every commit
 
@@ -128,5 +133,7 @@ uv lock && uv sync --extra dev
 - Pure functions take plain Python values, return plain Python values — no side effects
 - Use `logging` not `print()` in library code
 - No mocks unless unavoidable — prefer real objects and fakes
-- Reference ~/vista-docs/scripts/ for existing pipeline logic (comparison only)
-- After any session with new domain findings, run knowledge-capture skill
+- After any session with new findings, update vdl-pipeline/SKILL.md and memory files
+- `--pkg` flag always takes VDL app_code (CPRS/ADT), never VistA namespace (OR/DG)
+- Every new I/O layer goes into `[tool.coverage.run] omit` in pyproject.toml immediately
+- New extractor TDD cycle: test → fail-confirm → implement → make check → enrich --force
