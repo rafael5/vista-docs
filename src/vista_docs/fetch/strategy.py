@@ -4,6 +4,7 @@ Pure URL derivation for document fetching.
 Given a document's known URLs (DOCX and/or PDF), returns an ordered
 list of candidate URLs to try. DOCX is always tried first.
 """
+
 from __future__ import annotations
 
 import re

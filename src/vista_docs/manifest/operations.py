@@ -4,21 +4,18 @@ Pure manifest operations — filter, merge, update, deduplicate.
 All functions take list[ManifestEntry] and return list[ManifestEntry].
 No I/O, no SQLite. Database access lives in manifest/store.py.
 """
+
 from __future__ import annotations
 
 from vista_docs.models.manifest import FetchStatus, ManifestEntry
 
 
-def filter_by_status(
-    entries: list[ManifestEntry], status: FetchStatus
-) -> list[ManifestEntry]:
+def filter_by_status(entries: list[ManifestEntry], status: FetchStatus) -> list[ManifestEntry]:
     """Return entries matching the given fetch_status."""
     return [e for e in entries if e.fetch_status == status]
 
 
-def filter_by_package(
-    entries: list[ManifestEntry], app_code: str
-) -> list[ManifestEntry]:
+def filter_by_package(entries: list[ManifestEntry], app_code: str) -> list[ManifestEntry]:
     """Return entries for a given package namespace code (e.g. 'OR')."""
     return [e for e in entries if e.app_code == app_code]
 
@@ -41,6 +38,7 @@ def update_fetch_status(
     for e in entries:
         if e.doc_title == doc_title:
             from dataclasses import replace
+
             e = replace(
                 e,
                 fetch_status=status,

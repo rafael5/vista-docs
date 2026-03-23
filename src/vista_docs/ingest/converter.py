@@ -1,4 +1,5 @@
 """I/O thin layer: DOCX/PDF → raw markdown string via Docling."""
+
 from __future__ import annotations
 
 import logging

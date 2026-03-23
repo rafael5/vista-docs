@@ -4,13 +4,18 @@ Pure corpus element classifiers.
 All functions take plain Python values and return classification enums/strings.
 No docx imports at module level — docx objects are duck-typed via protocols.
 """
+
 from __future__ import annotations
 
 from enum import Enum
 
 SCREEN_STYLES = {
-    "Screen Capture", "screen display", "capture",
-    "screen", "Screen", "Screen capture Char",
+    "Screen Capture",
+    "screen display",
+    "capture",
+    "screen",
+    "Screen",
+    "Screen capture Char",
 }
 CODE_STYLES = {"Code"}
 LIST_STYLES = {"List Paragraph"}
@@ -27,14 +32,14 @@ class StyleClass(str, Enum):
 
 
 TABLE_PATTERNS: dict[str, list[str]] = {
-    "revision":              ["patch", "date", "description", "project manager"],
-    "rpc":                   ["rpc name", "remote procedure", "return type"],
-    "api-function":          ["routine", "callable", "api", "dbia"],
-    "hl7-segment":           ["segment", "seq", "len", "dt", "opt", "rp/"],
-    "menu-option":           ["option name", "menu text", "lock", "type"],
+    "revision": ["patch", "date", "description", "project manager"],
+    "rpc": ["rpc name", "remote procedure", "return type"],
+    "api-function": ["routine", "callable", "api", "dbia"],
+    "hl7-segment": ["segment", "seq", "len", "dt", "opt", "rp/"],
+    "menu-option": ["option name", "menu text", "lock", "type"],
     "fileman-file-registry": ["file name", "file number", "global"],
-    "security-key":          ["security key", "key name", "description"],
-    "acronym-glossary":      ["acronym", "abbreviation", "term", "definition"],
+    "security-key": ["security key", "key name", "description"],
+    "acronym-glossary": ["acronym", "abbreviation", "term", "definition"],
 }
 
 CALLOUT_PREFIXES = ["NOTE", "WARNING", "REMINDER", "IMPORTANT", "CAUTION"]

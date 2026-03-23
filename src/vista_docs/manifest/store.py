@@ -1,4 +1,5 @@
 """I/O thin layer: SQLite pipeline state management."""
+
 from __future__ import annotations
 
 import logging
@@ -125,4 +126,5 @@ def upsert(conn: sqlite3.Connection, entry: ManifestEntry) -> ManifestEntry:
         (entry.package_id, entry.doc_title),
     ).fetchone()
     from dataclasses import replace
+
     return replace(entry, db_id=row["id"])

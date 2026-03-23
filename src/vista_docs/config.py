@@ -4,6 +4,7 @@ Central configuration: data paths, rate limits, constants, user-agent.
 All paths are resolved relative to DATA_DIR, which defaults to ~/data/vista-docs/
 and can be overridden via the DATA_DIR environment variable.
 """
+
 from __future__ import annotations
 
 import logging
@@ -32,12 +33,9 @@ DB_PATH = STATE_DIR / "pipeline.db"
 # HTTP
 # ---------------------------------------------------------------------------
 
-USER_AGENT = (
-    "vista-docs/0.1 (hobbyist research; "
-    "contact: see github.com/rferrisx/vista-docs)"
-)
-REQUEST_DELAY = 1.5      # seconds between requests
-REQUEST_TIMEOUT = 30     # seconds per request
+USER_AGENT = "vista-docs/0.1 (hobbyist research; contact: see github.com/rferrisx/vista-docs)"
+REQUEST_DELAY = 1.5  # seconds between requests
+REQUEST_TIMEOUT = 30  # seconds per request
 MAX_RETRIES = 3
 BACKOFF_FACTOR = 2.0
 

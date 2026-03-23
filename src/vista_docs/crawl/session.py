@@ -1,4 +1,5 @@
 """I/O thin layer: requests.Session with rate limiting and retry."""
+
 from __future__ import annotations
 
 import logging
