@@ -462,3 +462,207 @@ def extract_figure_count(md: str) -> int:
     for m in _FIGURE_RE.finditer(body):
         numbers.add(int(m.group(1)))
     return len(numbers)
+
+
+# ---------------------------------------------------------------------------
+# Cycle 13: word count
+# ---------------------------------------------------------------------------
+
+
+def extract_word_count(md: str) -> int:
+    """
+    Count meaningful words in the document body (excluding frontmatter).
+
+    Strips markdown syntax before counting.
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    if not body.strip():
+        return 0
+    body = re.sub(r"^#{1,6}\s+", "", body, flags=re.MULTILINE)
+    body = re.sub(r"\*\*?([^*]+)\*\*?", r"\1", body)
+    body = re.sub(r"^[\|>].*$", "", body, flags=re.MULTILINE)
+    body = re.sub(r"https?://\S+", "", body)
+    body = re.sub(r"[^a-zA-Z\s]", " ", body)
+    return len(body.split())
+
+
+# ---------------------------------------------------------------------------
+# Cycle 14: is_stub
+# ---------------------------------------------------------------------------
+
+_STUB_THRESHOLD = 50
+
+
+def extract_is_stub(md: str) -> bool:
+    """Return True if the document body has fewer than 150 meaningful words."""
+    return extract_word_count(md) < _STUB_THRESHOLD
+
+
+# ---------------------------------------------------------------------------
+# Cycle 15: has_toc
+# ---------------------------------------------------------------------------
+
+
+def extract_has_toc(md: str) -> bool:
+    """Return True if the document contains a table of contents (tab+page lines)."""
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    return bool(_TOC_PAGE_RE.search(body))
+
+
+# ---------------------------------------------------------------------------
+# Cycle 16: patch_number
+# ---------------------------------------------------------------------------
+
+_PATCH_NUMBER_RE = re.compile(
+    r"^patch:\s*[A-Z0-9]+\*[0-9]+(?:\.[0-9]+)?\*(\d+)",
+    re.MULTILINE,
+)
+
+
+def extract_patch_number(md: str) -> str:
+    """
+    Extract the patch sequence number from the frontmatter patch field.
+
+    e.g. patch: OR*3.0*636  →  "636"
+         patch: PSJ*5*423   →  "423"
+    Returns empty string if no patch field found.
+    """
+    m = _PATCH_NUMBER_RE.search(md)
+    return m.group(1) if m else ""
+
+
+# ---------------------------------------------------------------------------
+# Cycle 17: description
+# ---------------------------------------------------------------------------
+
+_INTRO_HEADING_RE = re.compile(
+    r"^#{1,4}\s+(?:Introduction|Overview|Purpose|Background|Description|Summary)\s*$",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+
+def extract_description(md: str) -> str:
+    """
+    Extract a short description from the first Introduction/Overview section.
+
+    Finds a heading matching Introduction|Overview|Purpose|Background|Description|Summary,
+    takes the first non-blank paragraph of ≥80 characters, truncated to 300 chars.
+    Falls back to the first substantial paragraph after the title page area.
+    Returns empty string if nothing suitable found.
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    if not body.strip():
+        return ""
+
+    m = _INTRO_HEADING_RE.search(body)
+    if m:
+        after = body[m.end() :].lstrip("\n")
+        next_h = _NEXT_HEADING_RE.search(after)
+        section = after[: next_h.start()] if next_h else after
+    else:
+        section = body
+
+    for para in section.split("\n\n"):
+        para = para.strip()
+        if not para or para.startswith("|") or para.startswith("#") or para.startswith("<!--"):
+            continue
+        text = re.sub(r"\*\*?([^*]+)\*\*?", r"\1", para)
+        text = re.sub(r"\s+", " ", text).strip()
+        if len(text) >= 80:
+            return text[:300]
+
+    return ""
+
+
+# ---------------------------------------------------------------------------
+# Cycle 18: file_numbers (FileMan)
+# ---------------------------------------------------------------------------
+
+_FILE_NUM_RE = re.compile(r"\bFile\s+#\s*(\d+)\b", re.IGNORECASE)
+
+
+def extract_file_numbers(md: str) -> list[str]:
+    """
+    Extract unique FileMan file numbers referenced in the document.
+
+    Matches "File #N" patterns. Returns sorted list of unique numbers as strings.
+    e.g. ["2", "44", "200", "405"]
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    numbers: set[int] = set()
+    for m in _FILE_NUM_RE.finditer(body):
+        numbers.add(int(m.group(1)))
+    return [str(n) for n in sorted(numbers)]
+
+
+# ---------------------------------------------------------------------------
+# Cycle 19: security_keys
+# ---------------------------------------------------------------------------
+
+_SECURITY_KEY_SECTION_RE = re.compile(
+    r"^#{1,4}\s+Security\s+Keys?\s*$",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+# VistA security key: 2-6 uppercase letters + 1-5 uppercase word groups
+# e.g. PSGW VERIFY, OR CPRS GUI CHART, DGPF ASSIGN, ORES, PSJI MGR
+_VISTA_KEY_RE = re.compile(r"^([A-Z]{2,6}(?:\s+[A-Z][A-Z0-9]{0,9}){0,5})$")
+
+
+def extract_security_keys(md: str) -> list[str]:
+    """
+    Extract VistA security key names from a Security Keys section.
+
+    Looks for a Security Keys heading, then extracts key names from
+    table cells or list items within that section.
+    Returns sorted unique list of key names.
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+
+    m = _SECURITY_KEY_SECTION_RE.search(body)
+    if not m:
+        return []
+
+    after = body[m.end() :].lstrip("\n")
+    next_h = _NEXT_HEADING_RE.search(after)
+    section = after[: next_h.start()] if next_h else after
+
+    keys: set[str] = set()
+    for line in section.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("|") and not _TABLE_SEP_RE.match(stripped):
+            cells = [c.strip() for c in stripped.split("|") if c.strip()]
+            if cells:
+                km = _VISTA_KEY_RE.match(cells[0])
+                if km:
+                    keys.add(km.group(1))
+        elif stripped.startswith(("-", "*")):
+            text = stripped.lstrip("-* ").strip()
+            text = re.split(r"\s[-:]\s", text)[0].strip()
+            km = _VISTA_KEY_RE.match(text)
+            if km:
+                keys.add(km.group(1))
+
+    return sorted(keys)
+
+
+# ---------------------------------------------------------------------------
+# Cycle 20: menu_options (count of unique bracketed option names)
+# ---------------------------------------------------------------------------
+
+_BRACKETED_OPTION_RE = re.compile(r"\[([A-Z][A-Z0-9 ]{2,40})\]")
+
+
+def extract_menu_options(md: str) -> int:
+    """
+    Count unique VistA menu options documented.
+
+    Matches bracketed option names [OPTION NAME] throughout the document.
+    Deduplicates repeated references.
+    Returns count of unique option names found.
+    """
+    body = _FRONTMATTER_RE.sub("", md, count=1)
+    options: set[str] = set()
+    for m in _BRACKETED_OPTION_RE.finditer(body):
+        options.add(m.group(1).strip())
+    return len(options)
