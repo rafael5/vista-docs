@@ -245,6 +245,33 @@ def enrich(pkg: str, force: bool) -> None:
 
 
 # ---------------------------------------------------------------------------
+# sync
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option("--pkg", default="", help="Limit to one app_code folder (e.g. PSO).")
+@click.option("--force", is_flag=True, help="Re-sync even if already synced.")
+def sync(pkg: str, force: bool) -> None:
+    """Sync enriched inventory metadata into markdown frontmatter."""
+    from vista_docs.config import INVENTORY_DIR, MARKDOWN_DIR
+    from vista_docs.enrich.sync import sync_inventory_corpus
+
+    enriched_csv = INVENTORY_DIR / "vdl_inventory_enriched.csv"
+    if not enriched_csv.exists():
+        raise click.ClickException(f"Enriched inventory not found: {enriched_csv}")
+
+    label = f" [pkg={pkg.upper()}]" if pkg else ""
+    click.echo(f"Syncing inventory fields into markdown frontmatter{label}")
+
+    result = sync_inventory_corpus(MARKDOWN_DIR, enriched_csv, pkg=pkg, force=force)
+    click.echo(
+        f"Done: {result['ok']} synced, {result['skipped']} skipped, "
+        f"{result['no_match']} no-match, {result['errors']} errors."
+    )
+
+
+# ---------------------------------------------------------------------------
 # survey
 # ---------------------------------------------------------------------------
 
