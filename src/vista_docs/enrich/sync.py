@@ -10,7 +10,7 @@ import csv
 import logging
 from pathlib import Path
 
-from vista_docs.enrich.frontmatter import parse_frontmatter, rewrite_frontmatter
+from vista_docs.enrich.frontmatter import parse_frontmatter, rebuild_frontmatter
 from vista_docs.enrich.inventory_fields import build_inventory_index, fields_for_doc
 
 logger = logging.getLogger(__name__)
@@ -69,7 +69,7 @@ def sync_inventory_corpus(
                 no_match += 1
                 continue
 
-            updated = rewrite_frontmatter(text, new_fields)
+            updated = rebuild_frontmatter(text, new_fields)
             path.write_text(updated, encoding="utf-8")
             logger.info("Synced %s", path.name)
             ok += 1

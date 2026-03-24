@@ -1,7 +1,8 @@
 """
 Pure YAML frontmatter rewriter.
 
-rewrite_frontmatter(md, new_fields) → updated markdown string.
+rewrite_frontmatter(md, new_fields) → updated markdown string  (merge/append)
+rebuild_frontmatter(md, extra_fields) → updated markdown string (canonical reorder)
 No I/O. Takes a markdown string, returns a markdown string.
 """
 
@@ -10,6 +11,71 @@ from __future__ import annotations
 import re
 
 _FRONTMATTER_RE = re.compile(r"^(---\n)(.*?)(---\n)", re.DOTALL)
+
+# ---------------------------------------------------------------------------
+# Canonical field ordering — 7 groups
+# ---------------------------------------------------------------------------
+
+CANONICAL_FIELD_ORDER: list[str] = [
+    # Identity
+    "title",
+    "doc_type",
+    "doc_label",
+    "doc_layer",
+    "doc_subject",
+    # Application
+    "app_code",
+    "app_name",
+    "section",
+    "app_status",
+    # VistA patch identity
+    "pkg_ns",
+    "patch_ver",
+    "patch_id",
+    "group_key",
+    # VistA technical signatures
+    "file_numbers",
+    "security_keys",
+    "menu_options",
+    # Content
+    "description",
+    "audience",
+    "keywords",
+    # Structure & counts
+    "page_count",
+    "word_count",
+    "section_count",
+    "table_count",
+    "figure_count",
+    "appendix_count",
+    "has_toc",
+    "is_stub",
+    # Revision history
+    "pub_date",
+    "revision_count",
+    "revision_newest",
+    "revision_oldest",
+    # Source URLs
+    "docx_url",
+    "pdf_url",
+    "app_url",
+]
+
+# Fields superseded by authoritative inventory equivalents — removed on rebuild
+RETIRED_FIELDS: set[str] = {
+    "patch",             # → patch_id
+    "patch_number",      # → already encoded in patch_id
+    "package_name",      # → app_name
+    "package_namespace", # → pkg_ns
+    "package_version",   # → patch_ver
+}
+
+_CANONICAL_INDEX: dict[str, int] = {k: i for i, k in enumerate(CANONICAL_FIELD_ORDER)}
+
+
+# ---------------------------------------------------------------------------
+# Internal helpers
+# ---------------------------------------------------------------------------
 
 
 def _quote(value: str) -> str:
@@ -31,6 +97,11 @@ def _serialize_value(value: object) -> str:
     if isinstance(value, str):
         return _quote(value) if ":" in value else value
     return str(value)
+
+
+# ---------------------------------------------------------------------------
+# Public functions
+# ---------------------------------------------------------------------------
 
 
 def parse_frontmatter(md: str) -> dict:
@@ -55,7 +126,8 @@ def parse_frontmatter(md: str) -> dict:
                 current_list.append(line[4:].strip())
         elif ": " in line or line.endswith(":"):
             if current_key and current_list is not None:
-                result[current_key] = current_list
+                # Empty list with no items → was an empty scalar, not a list
+                result[current_key] = current_list if current_list else ""
             parts = line.split(": ", 1)
             current_key = parts[0].strip().rstrip(":")
             if len(parts) == 1 or parts[1].strip() == "":
@@ -69,7 +141,8 @@ def parse_frontmatter(md: str) -> dict:
             continue
 
     if current_key and current_list is not None:
-        result[current_key] = current_list
+        # Empty list with no items → was an empty scalar, not a list
+        result[current_key] = current_list if current_list else ""
 
     return result
 
@@ -129,3 +202,41 @@ def rewrite_frontmatter(md: str, new_fields: dict) -> str:
         new_yaml += "\n"
 
     return f"---\n{new_yaml}---\n{body_after}"
+
+
+def rebuild_frontmatter(md: str, extra_fields: dict | None = None) -> str:
+    """
+    Rebuild YAML frontmatter with canonical field ordering.
+
+    Parses all existing fields, merges extra_fields (overwriting on collision),
+    removes RETIRED_FIELDS, then serializes in CANONICAL_FIELD_ORDER.
+    Any fields not in the canonical order are appended at the end.
+    Body content is preserved unchanged.
+    """
+    m = _FRONTMATTER_RE.match(md)
+    body_after = md[m.end() :] if m else md
+
+    # Merge: existing fields + any new ones
+    fields = parse_frontmatter(md)
+    if extra_fields:
+        fields.update(extra_fields)
+
+    # Drop retired fields (including any that arrived via extra_fields)
+    for key in RETIRED_FIELDS:
+        fields.pop(key, None)
+
+    # Serialize in canonical order; unknown fields fall to the end
+    ordered_keys = sorted(
+        fields.keys(),
+        key=lambda k: (_CANONICAL_INDEX.get(k, len(CANONICAL_FIELD_ORDER)), k),
+    )
+
+    yaml_lines = []
+    for key in ordered_keys:
+        yaml_lines.append(f"{key}: {_serialize_value(fields[key])}")
+
+    yaml = "\n".join(yaml_lines)
+    if yaml and not yaml.endswith("\n"):
+        yaml += "\n"
+
+    return f"---\n{yaml}---\n{body_after}"
