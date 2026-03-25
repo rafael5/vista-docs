@@ -13,6 +13,7 @@ dependencies = [
     "pyyaml",
     "click",
     "docling>=2.81.0",
+    "weasyprint>=68.1",
 ]
 
 [project.optional-dependencies]
