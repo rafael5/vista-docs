@@ -3,21 +3,22 @@
 One-off script: fetch, ingest, enrich, and sync packages whose app_code is blank
 in vdl_inventory.csv.  Assigns synthetic app_codes so the pipeline functions work.
 
-Usage (from ~/vista-docs/):
+Usage (from ~/projects/vista-docs/):
     python ingest_blank_appcode.py
 
 Currently handles:
-    LR  — Laboratory (LA and LR)
-    HL7 — HL7 (VistA Messaging)
+    LR     — Laboratory (LA and LR)
+    HL7    — HL7 (VistA Messaging)
+    LA     — Laboratory: Universal Interface
+    KAAJEE — KAAJEE / KAAJEE (XU and XWB)
+    PRF    — Patient Record Flags
 """
 
 from __future__ import annotations
 
 import csv
 import logging
-import sys
 import time
-from dataclasses import replace
 from pathlib import Path
 
 logging.basicConfig(
@@ -28,15 +29,19 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 INVENTORY_CSV = Path.home() / "data/vista-docs/inventory/vdl_inventory.csv"
-ENRICHED_CSV  = Path.home() / "data/vista-docs/inventory/vdl_inventory_enriched.csv"
-RAW_DIR       = Path.home() / "data/vista-docs/raw"
-MARKDOWN_DIR  = Path.home() / "data/vista-docs/markdown"
-DB_PATH       = Path.home() / "data/vista-docs/state/pipeline.db"
+ENRICHED_CSV = Path.home() / "data/vista-docs/inventory/vdl_inventory_enriched.csv"
+RAW_DIR = Path.home() / "data/vista-docs/raw"
+MARKDOWN_DIR = Path.home() / "data/vista-docs/markdown"
+DB_PATH = Path.home() / "data/vista-docs/state/pipeline.db"
 
 # Map: app_name (as it appears in the CSV) → synthetic app_code to assign
 APP_NAME_TO_CODE: dict[str, str] = {
     "Laboratory (LA and LR)": "LR",
-    "HL7 (VistA Messaging)":  "HL7",
+    "HL7 (VistA Messaging)": "HL7",
+    "Laboratory: Universal Interface": "LA",
+    "KAAJEE": "KAAJEE",
+    "KAAJEE (XU and XWB)": "KAAJEE",
+    "Patient Record Flags": "PRF",
 }
 
 
@@ -123,7 +128,12 @@ def run_enrich(entries: list) -> None:
     to_enrich = [e for e in entries if e.ingest_status == FetchStatus.OK]
     log.info("Enriching %d entries", len(to_enrich))
     result = enrich_corpus(MARKDOWN_DIR, to_enrich, force=True)
-    log.info("Enrich done: %d ok, %d skipped, %d errors", result["ok"], result["skipped"], result["errors"])
+    log.info(
+        "Enrich done: %d ok, %d skipped, %d errors",
+        result["ok"],
+        result["skipped"],
+        result["errors"],
+    )
 
 
 def run_sync(pkg: str) -> None:
@@ -134,7 +144,10 @@ def run_sync(pkg: str) -> None:
     result = sync_inventory_corpus(MARKDOWN_DIR, ENRICHED_CSV, pkg=pkg, force=True)
     log.info(
         "Sync done: %d synced, %d skipped, %d no_match, %d errors",
-        result["ok"], result["skipped"], result["no_match"], result["errors"],
+        result["ok"],
+        result["skipped"],
+        result["no_match"],
+        result["errors"],
     )
 
 
@@ -153,7 +166,8 @@ def main() -> None:
     db.close()
 
     to_fetch = [
-        e for e in all_entries
+        e
+        for e in all_entries
         if existing.get((e.app_code, e.doc_title), None) is None
         or existing[(e.app_code, e.doc_title)].fetch_status != FetchStatus.OK
     ]
@@ -169,7 +183,7 @@ def main() -> None:
     fetched = run_fetch(to_fetch) if to_fetch else []
     all_fetched = already_ok + fetched
 
-    ingested = run_ingest(all_fetched)
+    run_ingest(all_fetched)
 
     # Reload from DB to get accurate ingest_status for entries that were already ingested
     db = open_db(DB_PATH)
@@ -183,10 +197,10 @@ def main() -> None:
 
     run_enrich(all_entries_db)
 
-    for pkg in ("LR", "HL7"):
+    for pkg in sorted(set(APP_NAME_TO_CODE.values())):
         run_sync(pkg)
 
-    log.info("=== Done: LR + HL7 fully processed ===")
+    log.info("=== Done: %s fully processed ===", ", ".join(sorted(set(APP_NAME_TO_CODE.values()))))
 
 
 if __name__ == "__main__":
