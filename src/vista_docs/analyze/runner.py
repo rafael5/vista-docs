@@ -70,6 +70,7 @@ from vista_docs.analyze.headings import (
     DocTypeProfile,
     build_profile,
 )
+from vista_docs.analyze.lexicon import LexiconStats, build_lexicon
 
 log = logging.getLogger(__name__)
 
@@ -170,17 +171,26 @@ def run_heading_analysis(
         )
         profiles[doc_type] = profile
         _write_json(out_dir / f"{_safe_filename(doc_type)}.json", profile)
+
+        lexicon = build_lexicon(profile)
+        _write_lexicon_json(out_dir / f"{_safe_filename(doc_type)}_lexicon.json", lexicon)
+
         log.info(
-            "%-25s  docs=%4d  headings=%4d  boilerplate=%3d  unique=%4d",
+            "%-25s  docs=%4d  headings=%4d  boilerplate=%3d  common=%3d  unique=%4d",
             doc_type,
             profile.doc_count,
             profile.unique_normalized_count,
             sum(1 for r in profile.headings if r.category == BOILERPLATE),
+            sum(1 for r in profile.headings if r.category == COMMON),
             sum(1 for r in profile.headings if r.category == UNIQUE),
         )
 
     _write_summary(out_dir / "summary.md", profiles, min_docs=min_docs)
     log.info("Summary written to %s", out_dir / "summary.md")
+
+    lexicons = {dt: build_lexicon(p) for dt, p in profiles.items()}
+    _write_lexicon_report(out_dir / "lexicon_stats.md", lexicons)
+    log.info("Lexicon stats written to %s", out_dir / "lexicon_stats.md")
 
     return profiles
 
@@ -323,6 +333,154 @@ def _write_summary(
                     f"| `{r.normalized}` | {r.doc_count} | {r.doc_frequency:.1%} | {variant} |"
                 )
             lines.append("")
+
+        lines.append("---")
+        lines.append("")
+
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def _write_lexicon_json(path: Path, lexicon: LexiconStats) -> None:
+    """Serialize a LexiconStats to JSON (alphabetical lexicon + statistics)."""
+    data = {
+        "doc_type": lexicon.doc_type,
+        "doc_count": lexicon.doc_count,
+        "lexicon_size": lexicon.lexicon_size,
+        "category_counts": lexicon.category_counts,
+        "category_pcts": lexicon.category_pcts,
+        "stats": {
+            "mean_freq": lexicon.mean_freq,
+            "median_freq": lexicon.median_freq,
+            "std_dev": lexicon.std_dev,
+            "min_freq": lexicon.min_freq,
+            "max_freq": lexicon.max_freq,
+            "p25": lexicon.p25,
+            "p75": lexicon.p75,
+            "p90": lexicon.p90,
+        },
+        "histogram": [
+            {"label": b.label, "low": b.low, "high": b.high, "count": b.count}
+            for b in lexicon.histogram
+        ],
+        "lexicon": [
+            {
+                "normalized": e.normalized,
+                "raw_variants": e.raw_variants,
+                "level_counts": {str(k): v for k, v in e.level_counts.items()},
+                "doc_count": e.doc_count,
+                "doc_frequency": e.doc_frequency,
+                "category": e.category,
+            }
+            for e in lexicon.entries
+        ],
+    }
+    path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+
+def _write_lexicon_report(path: Path, lexicons: dict[str, LexiconStats]) -> None:
+    """Write a Markdown statistics report comparing lexicons across all doc types."""
+    lines: list[str] = []
+    lines.append("# VistA Corpus — Heading Lexicon Statistics")
+    lines.append("")
+    lines.append(
+        "Each row summarises the heading vocabulary (lexicon) for one document type.\n"
+        "**Lexicon size** = distinct normalized headings found across all docs of that type.\n"
+        "Statistics describe the distribution of `doc_frequency` values across the lexicon."
+    )
+    lines.append("")
+
+    # ---------------------------------------------------------------------------
+    # Summary table
+    # ---------------------------------------------------------------------------
+    lines.append("## Summary Table")
+    lines.append("")
+    lines.append(
+        "| Doc Type | Docs | Lexicon | BP | CM | UQ | "
+        "BP% | CM% | UQ% | Mean | Median | StdDev | P90 |"
+    )
+    lines.append(
+        "|----------|------|---------|----|----|-----|"
+        "-----|-----|-----|------|--------|--------|-----|"
+    )
+    for dt in sorted(lexicons):
+        lx = lexicons[dt]
+        bp = lx.category_counts[BOILERPLATE]
+        cm = lx.category_counts[COMMON]
+        uq = lx.category_counts[UNIQUE]
+        bp_pct = lx.category_pcts[BOILERPLATE]
+        cm_pct = lx.category_pcts[COMMON]
+        uq_pct = lx.category_pcts[UNIQUE]
+        lines.append(
+            f"| {dt} | {lx.doc_count} | {lx.lexicon_size} "
+            f"| {bp} | {cm} | {uq} "
+            f"| {bp_pct:.1f}% | {cm_pct:.1f}% | {uq_pct:.1f}% "
+            f"| {lx.mean_freq:.1%} | {lx.median_freq:.1%} "
+            f"| {lx.std_dev:.1%} | {lx.p90:.1%} |"
+        )
+    lines.append("")
+    lines.append("_BP = BOILERPLATE, CM = COMMON, UQ = UNIQUE_")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+
+    # ---------------------------------------------------------------------------
+    # Per doc-type detail
+    # ---------------------------------------------------------------------------
+    lines.append("## Per-Type Detail")
+    lines.append("")
+    lines.append("## Table of Contents")
+    lines.append("")
+    for dt in sorted(lexicons):
+        anchor = _safe_filename(dt)
+        lines.append(f"- [{dt}](#{anchor}-lexicon)")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+
+    for dt in sorted(lexicons):
+        lx = lexicons[dt]
+        anchor = _safe_filename(dt)
+        lines.append(f'<a id="{anchor}-lexicon"></a>')
+        lines.append("")
+        lines.append(f"### {dt}")
+        lines.append("")
+        lines.append("[Back to Table of Contents](#table-of-contents)")
+        lines.append("")
+
+        lines.append(f"**{lx.doc_count} documents · {lx.lexicon_size} distinct headings**")
+        lines.append("")
+
+        # Category breakdown
+        lines.append("| Category | Count | % of Lexicon |")
+        lines.append("|----------|-------|-------------|")
+        for cat in (BOILERPLATE, COMMON, UNIQUE):
+            lines.append(f"| {cat} | {lx.category_counts[cat]} | {lx.category_pcts[cat]:.1f}% |")
+        lines.append("")
+
+        # Frequency stats
+        lines.append("| Statistic | Value |")
+        lines.append("|-----------|-------|")
+        lines.append(f"| Mean frequency | {lx.mean_freq:.2%} |")
+        lines.append(f"| Median frequency | {lx.median_freq:.2%} |")
+        lines.append(f"| Std deviation | {lx.std_dev:.2%} |")
+        lines.append(f"| Min | {lx.min_freq:.2%} |")
+        lines.append(f"| Max | {lx.max_freq:.2%} |")
+        lines.append(f"| P25 | {lx.p25:.2%} |")
+        lines.append(f"| P75 | {lx.p75:.2%} |")
+        lines.append(f"| P90 | {lx.p90:.2%} |")
+        lines.append("")
+
+        # Histogram
+        lines.append("**Frequency distribution histogram:**")
+        lines.append("")
+        lines.append("| Frequency Band | Count | Bar |")
+        lines.append("|----------------|-------|-----|")
+        max_count = max((b.count for b in lx.histogram), default=1) or 1
+        for b in lx.histogram:
+            bar_len = round(b.count / max_count * 30)
+            bar = "█" * bar_len
+            lines.append(f"| {b.label} | {b.count} | {bar} |")
+        lines.append("")
 
         lines.append("---")
         lines.append("")
