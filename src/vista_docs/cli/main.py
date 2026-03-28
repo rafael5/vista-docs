@@ -5,9 +5,10 @@ vista-docs CLI — single entry point with subcommands.
   vista-docs fetch    — download DOCX/PDF → raw/
   vista-docs ingest   — convert to markdown → markdown/
   vista-docs survey   — analyse corpus structure → survey/
-  vista-docs headings — heading frequency analysis → survey/heading_analysis/
-  vista-docs verify   — sanity-check all artifacts
-  vista-docs pipeline — run crawl → fetch → ingest → survey
+  vista-docs headings     — heading frequency analysis → survey/heading_analysis/
+  vista-docs consolidate  — master + addenda consolidation → consolidated/
+  vista-docs verify       — sanity-check all artifacts
+  vista-docs pipeline     — run crawl → fetch → ingest → survey
 """
 
 from __future__ import annotations
@@ -355,6 +356,48 @@ def headings(
         unique_threshold=unique_threshold,
     )
     click.echo(f"Done: {len(profiles)} doc types analysed, results in {out_dir}")
+
+
+# ---------------------------------------------------------------------------
+# consolidate
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option("--output", type=click.Path(), default="", help="Output directory path.")
+@click.option(
+    "--min-versions",
+    type=int,
+    default=2,
+    show_default=True,
+    help="Minimum versions in a group to trigger consolidation.",
+)
+@click.option(
+    "--doc-type",
+    "doc_types",
+    multiple=True,
+    help="Limit to specific doc type(s). Repeat for multiple. Default: all.",
+)
+def consolidate(output: str, min_versions: int, doc_types: tuple[str, ...]) -> None:
+    """Consolidate multi-version documents into master + addenda files."""
+    import pathlib
+
+    from vista_docs.analyze.consolidation_runner import run_consolidation
+    from vista_docs.config import DATA_DIR, MARKDOWN_DIR
+
+    out_dir = pathlib.Path(output) if output else DATA_DIR / "consolidated"
+    types_filter = list(doc_types) if doc_types else None
+    click.echo(f"Consolidating {MARKDOWN_DIR} → {out_dir}")
+    if types_filter:
+        click.echo(f"  Filtering to doc types: {', '.join(types_filter)}")
+
+    results = run_consolidation(
+        MARKDOWN_DIR,
+        out_dir,
+        min_versions=min_versions,
+        doc_types=types_filter,
+    )
+    click.echo(f"Done: {len(results)} groups consolidated, results in {out_dir}")
 
 
 # ---------------------------------------------------------------------------

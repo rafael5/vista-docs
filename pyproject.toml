@@ -60,7 +60,8 @@ omit = [
     "src/vista_docs/cli/main.py",
     "src/vista_docs/config.py",
     "src/vista_docs/survey/detectors.py",   # covered via integration survey tests
-    "src/vista_docs/analyze/runner.py",     # I/O layer — integration-tested only
+    "src/vista_docs/analyze/runner.py",                # I/O layer — integration-tested only
+    "src/vista_docs/analyze/consolidation_runner.py",  # I/O layer — integration-tested only
 ]
 
 [tool.coverage.report]
