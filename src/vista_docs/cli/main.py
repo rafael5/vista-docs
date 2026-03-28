@@ -1,11 +1,12 @@
 """
 vista-docs CLI — single entry point with subcommands.
 
-  vista-docs crawl   — crawl VDL catalog → inventory/
-  vista-docs fetch   — download DOCX/PDF → raw/
-  vista-docs ingest  — convert to markdown → markdown/
-  vista-docs survey  — analyse corpus structure → survey/
-  vista-docs verify  — sanity-check all artifacts
+  vista-docs crawl    — crawl VDL catalog → inventory/
+  vista-docs fetch    — download DOCX/PDF → raw/
+  vista-docs ingest   — convert to markdown → markdown/
+  vista-docs survey   — analyse corpus structure → survey/
+  vista-docs headings — heading frequency analysis → survey/heading_analysis/
+  vista-docs verify   — sanity-check all artifacts
   vista-docs pipeline — run crawl → fetch → ingest → survey
 """
 
@@ -303,6 +304,57 @@ def survey(pkg: str, output: str) -> None:
 
     result = run_survey(MARKDOWN_DIR, to_survey, out_dir, pkg=pkg)
     click.echo(f"Done: {result['ok']} ok, {result['errors']} errors, {result['stubs']} stubs.")
+
+
+# ---------------------------------------------------------------------------
+# headings
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option("--output", type=click.Path(), default="", help="Output directory path.")
+@click.option(
+    "--min-docs",
+    type=int,
+    default=5,
+    show_default=True,
+    help="Minimum non-stub docs to include a type in the summary.",
+)
+@click.option(
+    "--boilerplate-threshold",
+    type=float,
+    default=0.70,
+    show_default=True,
+    help="Frequency ≥ this → BOILERPLATE.",
+)
+@click.option(
+    "--unique-threshold",
+    type=float,
+    default=0.15,
+    show_default=True,
+    help="Frequency ≤ this → UNIQUE.",
+)
+def headings(
+    output: str,
+    min_docs: int,
+    boilerplate_threshold: float,
+    unique_threshold: float,
+) -> None:
+    """Analyse heading frequencies across all doc types and write JSON + summary.md."""
+    from vista_docs.analyze.runner import run_heading_analysis
+    from vista_docs.config import MARKDOWN_DIR, SURVEY_DIR
+
+    out_dir = __import__("pathlib").Path(output) if output else SURVEY_DIR / "heading_analysis"
+    click.echo(f"Analysing headings in {MARKDOWN_DIR} → {out_dir}")
+
+    profiles = run_heading_analysis(
+        MARKDOWN_DIR,
+        out_dir,
+        min_docs=min_docs,
+        boilerplate_threshold=boilerplate_threshold,
+        unique_threshold=unique_threshold,
+    )
+    click.echo(f"Done: {len(profiles)} doc types analysed, results in {out_dir}")
 
 
 # ---------------------------------------------------------------------------
