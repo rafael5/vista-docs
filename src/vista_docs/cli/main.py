@@ -401,6 +401,39 @@ def consolidate(output: str, min_versions: int, doc_types: tuple[str, ...]) -> N
 
 
 # ---------------------------------------------------------------------------
+# manifest
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option("--output", type=click.Path(), default="", help="Output directory path.")
+@click.option(
+    "--doc-type",
+    "doc_types",
+    multiple=True,
+    help="Limit to specific doc type(s). Repeat for multiple. Default: all.",
+)
+def manifest(output: str, doc_types: tuple[str, ...]) -> None:
+    """Generate corpus-manifest.json — complete provenance index for migration."""
+    import pathlib
+
+    from vista_docs.analyze.corpus_manifest_runner import run_manifest
+    from vista_docs.config import DATA_DIR, MARKDOWN_DIR
+
+    out_dir = pathlib.Path(output) if output else DATA_DIR / "migration"
+    types_filter = list(doc_types) if doc_types else None
+    click.echo(f"Building corpus manifest from {MARKDOWN_DIR} → {out_dir}")
+    if types_filter:
+        click.echo(f"  Filtering to doc types: {', '.join(types_filter)}")
+
+    result = run_manifest(MARKDOWN_DIR, out_dir, doc_types=types_filter)
+    click.echo(
+        f"Done: {result.total_documents} documents, "
+        f"{result.total_packages} packages → {out_dir / 'corpus-manifest.json'}"
+    )
+
+
+# ---------------------------------------------------------------------------
 # verify
 # ---------------------------------------------------------------------------
 

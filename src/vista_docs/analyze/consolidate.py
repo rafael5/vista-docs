@@ -105,6 +105,12 @@ class DocumentRecord:
     doc_layer: str
     """'anchor' | 'patch' | 'plain' | '' (Axiom A)."""
 
+    patch_id: str = ""
+    """Frontmatter patch_id value, e.g. 'PSO*7.0*507'. Empty if absent."""
+
+    is_stub: bool = False
+    """True if the document was flagged as a stub during enrichment."""
+
     text: str = ""
     """Full markdown text. Populated lazily by the runner before use."""
 
