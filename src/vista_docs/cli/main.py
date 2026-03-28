@@ -281,11 +281,28 @@ def sync(pkg: str, force: bool) -> None:
 @click.option("--output", type=click.Path(), default="", help="Output directory path.")
 def survey(pkg: str, output: str) -> None:
     """Analyse corpus structure and write survey reports."""
-    from vista_docs.config import SURVEY_DIR
+    from vista_docs.config import DB_PATH, MARKDOWN_DIR, SURVEY_DIR
+    from vista_docs.manifest.operations import filter_by_package
+    from vista_docs.manifest.store import load_all, open_db
+    from vista_docs.models.manifest import FetchStatus
+    from vista_docs.survey.analyzer import run_survey
 
-    out = output or str(SURVEY_DIR)
-    click.echo(f"Surveying corpus → {out}")
-    click.echo("(not yet implemented)")
+    db = open_db(DB_PATH)
+    entries = load_all(db)
+    db.close()
+
+    to_survey = [e for e in entries if e.ingest_status == FetchStatus.OK]
+    if pkg:
+        to_survey = filter_by_package(to_survey, pkg.upper())
+        if not to_survey:
+            raise click.ClickException(f"No ingested entries for package: {pkg}")
+
+    out_dir = __import__("pathlib").Path(output) if output else SURVEY_DIR
+    label = f" [pkg={pkg.upper()}]" if pkg else ""
+    click.echo(f"Surveying {len(to_survey)} documents{label} → {out_dir}")
+
+    result = run_survey(MARKDOWN_DIR, to_survey, out_dir, pkg=pkg)
+    click.echo(f"Done: {result['ok']} ok, {result['errors']} errors, {result['stubs']} stubs.")
 
 
 # ---------------------------------------------------------------------------

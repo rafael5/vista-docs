@@ -31,8 +31,12 @@ _MONTH_YEAR_RE = re.compile(
 _ISO_DATE_RE = re.compile(r"\b(\d{4}-\d{2}-\d{2})\b")
 _US_DATE_RE = re.compile(r"\b(\d{1,2}/\d{1,2}/\d{2,4})\b")
 
-# TOC: line ending with tab + integer page number
-_TOC_PAGE_RE = re.compile(r"\t(\d+)\s*$", re.MULTILINE)
+# TOC: line ending with tab + integer page number (1-4 digits only — caps at 9999)
+_TOC_PAGE_RE = re.compile(r"\t(\d{1,4})\s*$", re.MULTILINE)
+
+# TOC section boundary: heading before and after
+_TOC_HEADING_RE = re.compile(r"(?i)table\s+of\s+contents")
+_HEADING_RE = re.compile(r"^#{1,6}\s+\S", re.MULTILINE)
 
 # Table separator row
 _TABLE_SEP_RE = re.compile(r"^\|[-| :]+\|$", re.MULTILINE)
@@ -168,11 +172,26 @@ def extract_page_count(md: str) -> int:
     Estimate page count from the highest integer page number in the TOC.
 
     TOC lines look like: "Section Title<tab>124"
+    Only scans within the TOC section (between "Table of Contents" and the
+    next heading) to avoid matching tab-separated data in document body
+    (financial records, catalog numbers, clinical data samples, etc.).
     Ignores Roman numeral page numbers (front matter).
+    Caps at 4-digit numbers (max 9999) — no VA manual has 10,000+ pages.
     Returns 0 if no TOC found.
     """
     body = _FRONTMATTER_RE.sub("", md, count=1)
-    pages = [int(m.group(1)) for m in _TOC_PAGE_RE.finditer(body)]
+
+    toc_match = _TOC_HEADING_RE.search(body)
+    if not toc_match:
+        return 0
+
+    toc_start = toc_match.end()
+    # Find the next heading after the TOC heading to bound the section
+    next_heading = _HEADING_RE.search(body, toc_start)
+    toc_end = next_heading.start() if next_heading else len(body)
+    toc_section = body[toc_start:toc_end]
+
+    pages = [int(m.group(1)) for m in _TOC_PAGE_RE.finditer(toc_section)]
     return max(pages) if pages else 0
 
 

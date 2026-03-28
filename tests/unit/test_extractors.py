@@ -186,6 +186,26 @@ class TestExtractPageCount:
     def test_returns_zero_when_no_toc(self):
         assert extract_page_count("## Just content\n\nNo table of contents.") == 0
 
+    def test_ignores_financial_data_in_body(self):
+        # AR transaction record with huge tab-separated number in body
+        body_data = "\n## Chapter 1\n\n1717535\t03/10/99\t2\tPATIENT,ONE\t12.00\t4098000010237183\n"
+        assert extract_page_count(TOC_BLOCK + body_data) == 124
+
+    def test_ignores_catalog_numbers_in_body(self):
+        # Equipment catalog with NSN-style number at end of tab-separated line
+        body_data = "\n## Chapter 1\n\n195\tAIR CONDITIONER (THRU WALL)\t1234455533133334\n"
+        assert extract_page_count(TOC_BLOCK + body_data) == 124
+
+    def test_ignores_clinical_data_in_body(self):
+        # Clinical note with large tab-separated ID in body
+        body_data = "\n## Chapter 1\n\nExpected First Dose: DEC 11,2012@17:00\t3232323\n"
+        assert extract_page_count(TOC_BLOCK + body_data) == 124
+
+    def test_large_number_in_toc_position_ignored(self):
+        # Even if a large number appears where a page number would be, cap it
+        doc = "Table of Contents\n\nIntroduction\t6\n\nAppendix\t99999\n"
+        assert extract_page_count(doc) == 6
+
 
 # ---------------------------------------------------------------------------
 # Cycle 3: revision_history

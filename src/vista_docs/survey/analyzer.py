@@ -1,60 +1,146 @@
-"""I/O thin layer: walk corpus DOCX files and run detectors over them."""
+"""I/O thin layer: survey enriched markdown corpus → reports."""
 
 from __future__ import annotations
 
+import csv
+import json
 import logging
 from pathlib import Path
 
-from vista_docs.survey.detectors import classify_table, detect_callout
+from vista_docs.models.manifest import FetchStatus, ManifestEntry
+from vista_docs.survey.stats import DocStats, analyze_doc, summarize_corpus
 
 logger = logging.getLogger(__name__)
 
+ENRICHMENT_FIELDNAMES = [
+    "app_code",
+    "doc_title",
+    "doc_type",
+    "patch",
+    "md_path",
+    "line_count",
+    "word_count",
+    "heading_count",
+    "table_count",
+    "callout_count",
+    "is_stub",
+]
 
-def survey_package(pkg_dir: Path) -> dict:
-    """Survey all DOCX files in a package directory. Returns analysis dict."""
-    try:
-        import docx
-    except ImportError as exc:
-        raise ImportError("python-docx is required for survey: pip install python-docx") from exc
+STUB_FIELDNAMES = [
+    "app_code",
+    "doc_title",
+    "doc_type",
+    "patch",
+    "word_count",
+    "md_path",
+]
 
-    results: dict = {
-        "package": pkg_dir.name,
-        "files": [],
-        "styles": {},
-        "tables": {},
-        "callouts": {},
+
+def build_enrichment_row(stats: DocStats, md_path: str) -> dict:
+    """Build a per-document row for survey-enrichment.csv."""
+    return {
+        "app_code": stats.app_code,
+        "doc_title": stats.doc_title,
+        "doc_type": stats.doc_type,
+        "patch": stats.patch,
+        "md_path": md_path,
+        "line_count": stats.line_count,
+        "word_count": stats.word_count,
+        "heading_count": stats.heading_count,
+        "table_count": stats.table_count,
+        "callout_count": stats.callout_count,
+        "is_stub": stats.is_stub,
     }
 
-    for docx_path in sorted(pkg_dir.glob("*.docx")):
-        logger.info("Surveying %s", docx_path.name)
+
+def build_stub_row(stats: DocStats, md_path: str) -> dict:
+    """Build a row for survey-stubs.csv (stub documents only)."""
+    return {
+        "app_code": stats.app_code,
+        "doc_title": stats.doc_title,
+        "doc_type": stats.doc_type,
+        "patch": stats.patch,
+        "word_count": stats.word_count,
+        "md_path": md_path,
+    }
+
+
+def run_survey(
+    markdown_dir: Path,
+    entries: list[ManifestEntry],
+    out_dir: Path,
+    pkg: str = "",
+) -> dict:
+    """
+    Walk enriched markdown files, analyze each, write 3 reports.
+
+    Reports written to out_dir:
+      survey-summary.json     — corpus-wide aggregate stats
+      survey-stubs.csv        — stub documents for quality review
+      survey-enrichment.csv   — per-document row of all stats
+
+    Returns {ok, errors, stubs}.
+    """
+    to_survey = [e for e in entries if e.ingest_status == FetchStatus.OK]
+    if pkg:
+        to_survey = [e for e in to_survey if e.app_code.upper() == pkg.upper()]
+
+    all_stats: list[DocStats] = []
+    enrichment_rows: list[dict] = []
+    ok = errors = 0
+
+    for entry in to_survey:
+        md_path = _resolve_md_path(markdown_dir, entry)
+        if not md_path.exists():
+            logger.warning("Markdown file not found: %s", md_path)
+            errors += 1
+            continue
+
         try:
-            doc = docx.Document(str(docx_path))
-            _survey_document(doc, docx_path.name, results)
+            md = md_path.read_text(encoding="utf-8")
+            stats = analyze_doc(md, entry)
         except Exception as exc:
-            logger.warning("Failed to survey %s: %s", docx_path.name, exc)
+            logger.warning("Failed to analyze %s: %s", md_path, exc)
+            errors += 1
+            continue
 
-    return results
+        all_stats.append(stats)
+        enrichment_rows.append(build_enrichment_row(stats, str(md_path)))
+        ok += 1
+
+    summary = summarize_corpus(all_stats)
+    stub_rows = [
+        build_stub_row(s, r["md_path"]) for s, r in zip(all_stats, enrichment_rows) if s.is_stub
+    ]
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    _write_json(out_dir / "survey-summary.json", summary)
+    _write_csv(out_dir / "survey-stubs.csv", STUB_FIELDNAMES, stub_rows)
+    _write_csv(out_dir / "survey-enrichment.csv", ENRICHMENT_FIELDNAMES, enrichment_rows)
+
+    logger.info(
+        "Survey complete: %d ok, %d errors, %d stubs → %s",
+        ok,
+        errors,
+        len(stub_rows),
+        out_dir,
+    )
+    return {"ok": ok, "errors": errors, "stubs": len(stub_rows)}
 
 
-def _survey_document(doc, filename: str, results: dict) -> None:
-    """Accumulate survey data from a single python-docx Document."""
-    file_entry: dict = {"name": filename, "paragraphs": 0, "tables": 0, "callouts": 0}
+def _resolve_md_path(markdown_dir: Path, entry: ManifestEntry) -> Path:
+    """Resolve the markdown file path for an entry."""
+    if entry.markdown_path:
+        return Path(entry.markdown_path)
+    return markdown_dir / entry.app_code / entry.output_filename
 
-    for para in doc.paragraphs:
-        style = para.style.name if para.style else "Normal"
-        results["styles"][style] = results["styles"].get(style, 0) + 1
-        file_entry["paragraphs"] += 1
-        if detect_callout(para.text):
-            file_entry["callouts"] += 1
-            prefix = detect_callout(para.text)
-            results["callouts"][prefix] = results["callouts"].get(prefix, 0) + 1
 
-    for table in doc.tables:
-        file_entry["tables"] += 1
-        headers = []
-        if table.rows:
-            headers = [cell.text.strip() for cell in table.rows[0].cells]
-        table_type = classify_table(headers)
-        results["tables"][table_type] = results["tables"].get(table_type, 0) + 1
+def _write_json(path: Path, data: dict) -> None:
+    path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
-    results["files"].append(file_entry)
+
+def _write_csv(path: Path, fieldnames: list[str], rows: list[dict]) -> None:
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
