@@ -14,14 +14,15 @@ A.  ONE RECORD PER DOCUMENT.
     complete enumeration of the corpus.
 
 B.  FILENAME CONVENTION FOR ORIGINALS:
-      {app_code}_{safe_patch_id}_{doc_type_abbrev}_{title_slug}.md
-    - safe_patch_id: patch_id with non-alphanumeric characters replaced by '_',
-      leading/trailing '_' stripped. Omitted (along with its separator) if empty.
+      {app_code}_{doc_type_abbrev}_{source_stem}.md
     - doc_type_abbrev: fixed abbreviation per doc_type (Axiom C).
-    - title_slug: lowercase, non-alphanumeric replaced by '_', stripped,
-      truncated to 40 characters.
+    - source_stem: the stem of the source markdown filename (Path(doc.path).stem),
+      with any non-alphanumeric/hyphen characters replaced by '_' and
+      leading/trailing '_' stripped. The source stem is already unique per
+      document because the ingest stage names files after the VDL page title
+      (including version numbers). Using the source stem avoids filename
+      collisions that arise from truncating long similar titles.
     The resulting filename contains only [a-zA-Z0-9_-] plus the '.md' suffix.
-    No double underscores.
 
 C.  DOC TYPE ABBREVIATIONS:
       installation-guide → IG,  release-note → RN,  user-manual → UM,
@@ -182,24 +183,24 @@ def original_filename(doc: DocumentRecord) -> str:
     """
     Generate the originals/ filename for a document (Axiom B).
 
-    Format: {app_code}_{safe_patch_id}_{doc_type_abbrev}_{title_slug}.md
-    The patch_id segment is omitted if doc.patch_id is empty.
+    Format: {app_code}_{doc_type_abbrev}_{source_stem}.md
+    The source_stem is derived from the source markdown filename, which is
+    unique per document version (it encodes the VDL page title + version).
 
     Args:
-        doc: DocumentRecord with app_code, patch_id, doc_type, and title populated.
+        doc: DocumentRecord with app_code, doc_type, and path populated.
 
     Returns:
         Filesystem-safe filename string ending in '.md'.
     """
-    parts = [doc.app_code]
-    pid = _safe_patch_id(doc.patch_id)
-    if pid:
-        parts.append(pid)
+    from pathlib import Path
+
     abbrev = _DOC_TYPE_ABBREV.get(doc.doc_type, "UNK")
-    parts.append(abbrev)
-    slug = _title_slug(doc.title)
-    if slug:
-        parts.append(slug)
+    stem = Path(doc.path).stem
+    safe_stem = re.sub(r"[^a-zA-Z0-9\-]+", "_", stem).strip("_")
+    parts = [doc.app_code, abbrev]
+    if safe_stem:
+        parts.append(safe_stem)
     return "_".join(parts) + ".md"
 
 

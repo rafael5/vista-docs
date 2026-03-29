@@ -496,6 +496,34 @@ def changelog(pkg: tuple[str, ...]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# populate-docs
+# ---------------------------------------------------------------------------
+
+
+@cli.command("populate-docs")
+@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
+def populate_docs(pkg: tuple[str, ...]) -> None:
+    """Populate docs/ in each package repo from consolidated masters and originals."""
+    from vista_docs.config import DATA_DIR
+    from vista_docs.migrate.docs_runner import run_docs
+
+    manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
+    if not manifest_path.exists():
+        raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
+
+    repos_dir = DATA_DIR / "github-repos"
+    consolidated_dir = DATA_DIR / "consolidated"
+    packages = list(pkg) if pkg else None
+
+    label = f" [pkg={', '.join(packages)}]" if packages else ""
+    click.echo(f"Populating docs/{label} → {repos_dir}")
+
+    results = run_docs(manifest_path, repos_dir, consolidated_dir, packages=packages)
+    total_files = sum(results.values())
+    click.echo(f"Done: {len(results)} repos updated, {total_files} total files → docs/")
+
+
+# ---------------------------------------------------------------------------
 # verify
 # ---------------------------------------------------------------------------
 
@@ -506,6 +534,87 @@ def verify(fix: bool) -> None:
     """Sanity-check all pipeline artifacts for consistency."""
     click.echo("Verifying corpus artifacts")
     click.echo("(not yet implemented)")
+
+
+# ---------------------------------------------------------------------------
+# build-all
+# ---------------------------------------------------------------------------
+
+
+@cli.command("build-all")
+@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
+@click.option("--serve", is_flag=True, help="Start HTTP server after building.")
+@click.option("--port", type=int, default=8000, show_default=True, help="HTTP server port.")
+def build_all(pkg: tuple[str, ...], serve: bool, port: int) -> None:
+    """Run zensical build in every package repo, then optionally serve locally."""
+    import http.server
+    import os
+
+    from vista_docs.config import DATA_DIR
+    from vista_docs.migrate.site_runner import run_build_all
+
+    repos_dir = DATA_DIR / "github-repos"
+    packages = list(pkg) if pkg else None
+
+    label = f" [pkg={', '.join(packages)}]" if packages else ""
+    click.echo(f"Building sites{label} in {repos_dir}")
+
+    results = run_build_all(repos_dir, packages=packages)
+    ok = sum(1 for v in results.values() if v)
+    fail = len(results) - ok
+    click.echo(f"Done: {ok} built, {fail} failed.")
+
+    if serve:
+        click.echo(f"\nServing at http://localhost:{port}/")
+        click.echo("  Browse: http://localhost:{port}/vista-pso/site/")
+        click.echo("  Ctrl+C to stop.\n")
+        os.chdir(repos_dir)
+        handler = http.server.SimpleHTTPRequestHandler
+        with http.server.HTTPServer(("", port), handler) as httpd:
+            httpd.serve_forever()
+
+
+# ---------------------------------------------------------------------------
+# verify-originals
+# ---------------------------------------------------------------------------
+
+
+@cli.command("verify-originals")
+@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
+def verify_originals(pkg: tuple[str, ...]) -> None:
+    """Verify SHA-256 of committed originals against corpus-manifest.json."""
+    import sys
+
+    from vista_docs.config import DATA_DIR
+    from vista_docs.migrate.verify_builder import summarize_results
+    from vista_docs.migrate.verify_runner import run_verify
+
+    manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
+    if not manifest_path.exists():
+        raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
+
+    repos_dir = DATA_DIR / "github-repos"
+    packages = list(pkg) if pkg else None
+
+    label = f" [pkg={', '.join(packages)}]" if packages else ""
+    click.echo(f"Verifying originals{label} → {repos_dir}")
+
+    results = run_verify(manifest_path, repos_dir, packages=packages)
+    summary = summarize_results(results)
+
+    click.echo(
+        f"  total={summary['total']}  ok={summary['ok']}  "
+        f"mismatch={summary['mismatch']}  missing={summary['missing']}"
+    )
+
+    if summary["packages_with_issues"]:
+        click.echo(f"  Issues in: {', '.join(summary['packages_with_issues'])}")
+
+    if summary["passed"]:
+        click.echo("PASS — all originals intact.")
+    else:
+        click.echo("FAIL — see warnings above.", err=True)
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------------------

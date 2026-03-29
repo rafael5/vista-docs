@@ -115,7 +115,8 @@ class TestOriginalFilename:
             patch_id="PSO*7.0*507",
         )
         name = original_filename(doc)
-        assert name.startswith("PSO_PSO_7_0_507_IG_")
+        # patch_id is no longer in the filename; source stem drives uniqueness
+        assert name.startswith("PSO_IG_")
         assert name.endswith(".md")
 
     def test_without_patch_id(self):
