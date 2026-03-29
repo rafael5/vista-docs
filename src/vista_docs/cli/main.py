@@ -434,6 +434,40 @@ def manifest(output: str, doc_types: tuple[str, ...]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# populate-repos
+# ---------------------------------------------------------------------------
+
+
+@cli.command("populate-repos")
+@click.option("--output", type=click.Path(), default="", help="Root directory for repos.")
+@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
+@click.option("--force", is_flag=True, help="Re-populate repos that already exist.")
+def populate_repos(output: str, pkg: tuple[str, ...], force: bool) -> None:
+    """Populate local git repos from corpus-manifest.json."""
+    import pathlib
+
+    from vista_docs.config import DATA_DIR
+    from vista_docs.migrate.repo_populator import populate_repos as do_populate
+
+    manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
+    if not manifest_path.exists():
+        raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
+
+    repos_dir = pathlib.Path(output) if output else DATA_DIR / "github-repos"
+    packages = list(pkg) if pkg else None
+
+    click.echo(f"Populating repos → {repos_dir}")
+    if packages:
+        click.echo(f"  Packages: {', '.join(packages)}")
+
+    results = do_populate(manifest_path, repos_dir, packages=packages, force=force)
+    total_files = sum(results.values())
+    click.echo(
+        f"Done: {len(results)} repos created, {total_files} total files committed → {repos_dir}"
+    )
+
+
+# ---------------------------------------------------------------------------
 # verify
 # ---------------------------------------------------------------------------
 
