@@ -468,6 +468,34 @@ def populate_repos(output: str, pkg: tuple[str, ...], force: bool) -> None:
 
 
 # ---------------------------------------------------------------------------
+# changelog
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
+def changelog(pkg: tuple[str, ...]) -> None:
+    """Generate CHANGELOG.md for each package repo from release notes."""
+
+    from vista_docs.config import DATA_DIR
+    from vista_docs.migrate.changelog_runner import run_changelog
+
+    manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
+    if not manifest_path.exists():
+        raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
+
+    repos_dir = DATA_DIR / "github-repos"
+    packages = list(pkg) if pkg else None
+
+    label = f" [pkg={', '.join(packages)}]" if packages else ""
+    click.echo(f"Generating CHANGELOGs{label} → {repos_dir}")
+
+    results = run_changelog(manifest_path, repos_dir, packages=packages)
+    total_rn = sum(results.values())
+    click.echo(f"Done: {len(results)} repos updated, {total_rn} total release notes")
+
+
+# ---------------------------------------------------------------------------
 # verify
 # ---------------------------------------------------------------------------
 
