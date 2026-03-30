@@ -45,7 +45,8 @@ D.  DOC TYPE LABELS (human-readable nav labels):
 
 E.  ZENSICAL CONFIG uses TOML format with a [project] section.
     The nav array lists each doc type's docs/ directory.
-    docs_dir = "." so Zensical can see both docs/ and README.md.
+    docs_dir = "docs" so Zensical only scans the working documents,
+    not the entire repo root (which would pick up originals/ on every build).
 
 F.  PROVENANCE.md lists every original file, its doc_type, pub_date,
     transformation, and destination. Coverage is verified: total originals
@@ -141,7 +142,7 @@ def build_repo_layout(app_code: str, records: list[ManifestRecord]) -> RepoLayou
     Returns:
         RepoLayout describing the directory structure and nav for the package.
     """
-    repo_name = f"vista-{app_code.lower()}"
+    repo_name = f"vista-{app_code.lower().replace('/', '_')}"
 
     # Count non-stub records per doc_type
     counts: dict[str, int] = {}
@@ -207,7 +208,7 @@ def generate_zensical_toml(layout: RepoLayout) -> str:
     lines.append("[project]")
     lines.append(f'site_name = "{layout.app_code} VistA Package Documentation"')
     lines.append(f'repo_name = "{layout.repo_name}"')
-    lines.append('docs_dir = "."')
+    lines.append('docs_dir = "docs"')
     lines.append("")
 
     # Nav array

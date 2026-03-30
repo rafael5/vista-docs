@@ -123,6 +123,11 @@ class TestBuildRepoLayout:
         layout = build_repo_layout("PSO", _pso_records())
         assert layout.repo_name == "vista-pso"
 
+    def test_repo_name_slash_sanitized(self):
+        layout = build_repo_layout("AR/WS", _pso_records())
+        assert layout.repo_name == "vista-ar_ws"
+        assert "/" not in layout.repo_name
+
     def test_total_originals_count(self):
         records = _pso_records()
         layout = build_repo_layout("PSO", records)
@@ -207,7 +212,11 @@ class TestGenerateZensicalToml:
 
     def test_contains_docs_dir(self):
         toml = generate_zensical_toml(self._layout())
-        assert "docs_dir" in toml
+        assert 'docs_dir = "docs"' in toml
+
+    def test_docs_dir_is_not_dot(self):
+        toml = generate_zensical_toml(self._layout())
+        assert 'docs_dir = "."' not in toml
 
     def test_contains_known_doc_types(self):
         toml = generate_zensical_toml(self._layout())
