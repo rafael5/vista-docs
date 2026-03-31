@@ -23,6 +23,7 @@ INVENTORY_DIR = DATA_DIR / "inventory"
 STATE_DIR = DATA_DIR / "state"
 RAW_DIR = DATA_DIR / "raw"
 MARKDOWN_DIR = DATA_DIR / "markdown"
+MD_IMG_DIR = DATA_DIR / "md-img"
 SURVEY_DIR = DATA_DIR / "survey"
 GUIDES_DIR = DATA_DIR / "guides"
 SKILL_UPDATES_DIR = DATA_DIR / "skill-updates"
@@ -45,3 +46,9 @@ BACKOFF_FACTOR = 2.0
 
 VDL_BASE = "https://www.va.gov/vdl"
 VDL_INDEX = f"{VDL_BASE}/"
+
+# ---------------------------------------------------------------------------
+# GitHub publish remote
+# ---------------------------------------------------------------------------
+
+VDL_REMOTE = "git@github.com:vistadocs/vdl.git"

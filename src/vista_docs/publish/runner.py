@@ -1,5 +1,5 @@
 """
-I/O layer for building the human-browsable publish/ tree.
+I/O layer for building the human-browsable publish/ tree and pushing it to GitHub.
 
 Reads consolidated/ and md-img/, computes PublishEntry objects via builder.py,
 copies .md files and their sibling image directories to publish/ under
@@ -24,17 +24,44 @@ B.  COLLISION RESOLUTION.
 C.  INDEX.md.
     A top-level INDEX.md is written listing all output files grouped by section
     and package, with relative links. This serves as a human entry point.
+
+D.  GIT STATE PRESERVATION.
+    When force=True and publish/ already contains a .git/ repo, only the
+    generated content is cleared (not .git/ or .gitignore). This lets
+    run_publish --force + run_push work without re-initializing the repo.
+
+E.  PUSH: MARKDOWN ONLY.
+    run_push() commits and pushes only .md files. Images are excluded via
+    .gitignore so the GitHub repo stays small (<200 MB vs 1.9 GB with images).
 """
 
 from __future__ import annotations
 
 import logging
 import shutil
+import subprocess
+from datetime import date
 from pathlib import Path
 
 from vista_docs.publish.builder import PublishEntry, _compact, build_publish_entries, load_app_info
 
 log = logging.getLogger(__name__)
+
+# Written to publish/.gitignore on first push — excludes binary image files.
+_GITIGNORE = """\
+# Image directories — binary content excluded to keep the GitHub repo small.
+# All markdown documents are tracked; images are available in the local
+# ~/data/vista-docs/publish/ tree but not pushed to the remote.
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tif
+*.tiff
+*.bmp
+*.svg
+*.webp
+"""
 
 
 def run_publish(
@@ -53,7 +80,14 @@ def run_publish(
         Dict with keys: packages, anchor_files, patch_files, image_dirs.
     """
     if out_dir.exists() and force:
-        shutil.rmtree(out_dir)
+        if (out_dir / ".git").exists():
+            # Preserve git state: clear generated content but not .git/ or .gitignore
+            for item in out_dir.iterdir():
+                if item.name not in (".git", ".gitignore"):
+                    shutil.rmtree(item) if item.is_dir() else item.unlink()
+            log.debug("Cleared publish/ content (preserved .git/)")
+        else:
+            shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     app_info = load_app_info(inventory_csv)
@@ -194,3 +228,84 @@ def _write_index(out_dir: Path, entries: list[PublishEntry]) -> None:
 
     (out_dir / "INDEX.md").write_text("\n".join(lines), encoding="utf-8")
     log.info("INDEX.md written (%d entries)", total)
+
+
+# ---------------------------------------------------------------------------
+# GitHub push (Axiom E)
+# ---------------------------------------------------------------------------
+
+
+def run_push(
+    out_dir: Path,
+    remote_url: str,
+    commit_message: str | None = None,
+) -> bool:
+    """
+    Commit and push the publish/ tree (markdown only) to a remote git repo.
+
+    Initialises the repo if needed, writes .gitignore to exclude images,
+    stages all tracked files, commits, and pushes to origin/main.
+
+    Args:
+        out_dir:        Path to publish/ directory (must already exist).
+        remote_url:     SSH or HTTPS URL of the remote, e.g.
+                        "git@github.com:vistadocs/vdl.git".
+        commit_message: Override the auto-generated commit message.
+
+    Returns:
+        True if a new commit was pushed; False if nothing changed.
+
+    Raises:
+        RuntimeError: if any git command fails.
+    """
+
+    def _git(*args: str, check: bool = False) -> subprocess.CompletedProcess[str]:
+        result = subprocess.run(
+            ["git", *args],
+            cwd=out_dir,
+            capture_output=True,
+            text=True,
+        )
+        if check and result.returncode != 0:
+            raise RuntimeError(
+                f"git {' '.join(args)} failed (exit {result.returncode}):\n{result.stderr.strip()}"
+            )
+        return result
+
+    # Write .gitignore if missing
+    gitignore = out_dir / ".gitignore"
+    if not gitignore.exists():
+        gitignore.write_text(_GITIGNORE, encoding="utf-8")
+        log.info(".gitignore written (images excluded)")
+
+    # Initialise repo if needed
+    if not (out_dir / ".git").exists():
+        _git("init", "-b", "main", check=True)
+        log.info("Initialised git repo in %s", out_dir)
+
+    # Set remote
+    existing = _git("remote", "get-url", "origin")
+    if existing.returncode != 0:
+        _git("remote", "add", "origin", remote_url, check=True)
+        log.info("Remote added: %s", remote_url)
+    elif existing.stdout.strip() != remote_url:
+        _git("remote", "set-url", "origin", remote_url, check=True)
+        log.info("Remote updated → %s", remote_url)
+
+    # Stage everything (.gitignore keeps images out)
+    _git("add", "-A", check=True)
+
+    # Nothing to commit?
+    if _git("diff", "--cached", "--quiet").returncode == 0:
+        log.info("Nothing to commit — publish/ is already up to date with remote")
+        return False
+
+    # Commit
+    msg = commit_message or f"Publish VDL corpus ({date.today()})"
+    _git("commit", "-m", msg, check=True)
+    log.info("Committed: %s", msg)
+
+    # Push
+    _git("push", "-u", "origin", "main", check=True)
+    log.info("Pushed to %s", remote_url)
+    return True

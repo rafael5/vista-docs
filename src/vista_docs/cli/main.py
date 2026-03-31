@@ -10,6 +10,7 @@ vista-docs CLI — single entry point with subcommands.
   vista-docs consolidate  — master + addenda consolidation → consolidated/
   vista-docs manifest     — build corpus-manifest.json index
   vista-docs publish      — write human-browsable publish/ tree from consolidated/
+  vista-docs push         — publish then commit + push markdown to GitHub
   vista-docs pipeline     — run crawl → fetch → ingest → survey
 """
 
@@ -489,6 +490,70 @@ def publish(output: str, pkg: tuple[str, ...], force: bool) -> None:
         f"{results['patch_files']} patch docs, "
         f"{results['image_dirs']} image dirs → {out_dir}"
     )
+
+
+# ---------------------------------------------------------------------------
+# push
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option(
+    "--remote",
+    default="",
+    help="Git remote URL (default: git@github.com:vistadocs/vdl.git).",
+)
+@click.option("--message", default="", help="Override the auto-generated commit message.")
+@click.option(
+    "--no-publish",
+    "skip_publish",
+    is_flag=True,
+    help="Skip regenerating publish/ — push the current contents as-is.",
+)
+def push(remote: str, message: str, skip_publish: bool) -> None:
+    """Publish then commit and push markdown docs to GitHub (images excluded)."""
+
+    from vista_docs.config import DATA_DIR, VDL_REMOTE
+    from vista_docs.publish.runner import run_publish, run_push
+
+    out_dir = DATA_DIR / "publish"
+    remote_url = remote or VDL_REMOTE
+
+    if not skip_publish:
+        manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
+        if not manifest_path.exists():
+            raise click.ClickException(
+                f"Manifest not found: {manifest_path}\nRun: vista-docs manifest"
+            )
+        click.echo(f"Publishing → {out_dir}")
+        results = run_publish(
+            consolidated_dir=DATA_DIR / "consolidated",
+            md_img_dir=DATA_DIR / "md-img",
+            manifest_path=manifest_path,
+            inventory_csv=DATA_DIR / "inventory" / "vdl_inventory_enriched.csv",
+            out_dir=out_dir,
+            force=True,
+        )
+        click.echo(
+            f"  {results['packages']} packages, "
+            f"{results['anchor_files']} anchor docs, "
+            f"{results['patch_files']} patch docs"
+        )
+    elif not out_dir.exists():
+        raise click.ClickException(
+            f"publish/ not found: {out_dir}\nRun without --no-publish to generate it first."
+        )
+
+    click.echo(f"Pushing markdown to {remote_url} ...")
+    pushed = run_push(
+        out_dir=out_dir,
+        remote_url=remote_url,
+        commit_message=message or None,
+    )
+    if pushed:
+        click.echo("Done — pushed to GitHub.")
+    else:
+        click.echo("Nothing new to push.")
 
 
 # ---------------------------------------------------------------------------
