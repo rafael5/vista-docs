@@ -131,6 +131,15 @@ def run_docs(
         if not entries:
             continue
 
+        # Build lookup: original_path → source image dir (in md-img/).
+        # Image refs use the source stem, not the repo-prefixed dest stem,
+        # so we must copy by source name regardless of how the .md was renamed.
+        orig_to_src_img: dict[str, Path] = {}
+        for rec in records:
+            src_img = Path(rec.source_markdown_path).with_suffix("")
+            if src_img.is_dir():
+                orig_to_src_img[rec.original_path] = src_img
+
         files_written = 0
         for entry in entries:
             dest = repo_dir / entry.docs_path
@@ -148,6 +157,13 @@ def run_docs(
                     )
                     continue
                 shutil.copy2(src, dest)
+                # Copy any sibling image directories from the consolidated source
+                for img_dir in src.parent.iterdir():
+                    if img_dir.is_dir():
+                        dest_img = dest.parent / img_dir.name
+                        if dest_img.exists():
+                            shutil.rmtree(dest_img)
+                        shutil.copytree(img_dir, dest_img)
             else:
                 # source == "original"
                 src = repo_dir / entry.original_path
@@ -155,6 +171,14 @@ def run_docs(
                     log.warning("%-8s original missing: %s", app_code, src)
                     continue
                 shutil.copy2(src, dest)
+                # Copy image dir using SOURCE name (image refs use the source stem,
+                # not the repo-prefixed dest stem)
+                src_img_dir = orig_to_src_img.get(entry.original_path)
+                if src_img_dir is not None:
+                    dest_img_dir = dest.parent / src_img_dir.name
+                    if dest_img_dir.exists():
+                        shutil.rmtree(dest_img_dir)
+                    shutil.copytree(src_img_dir, dest_img_dir)
 
             files_written += 1
 

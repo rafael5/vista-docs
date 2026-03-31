@@ -162,6 +162,16 @@ def _populate_one_repo(
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dest)
 
+        # Copy sibling image directory alongside dest, keeping the SOURCE name.
+        # Image refs in the markdown use the source stem (e.g. "doc-stem/001.png"),
+        # not the dest stem (which may have a package prefix like "CPRS_TM_doc-stem").
+        src_img_dir = src.with_suffix("")
+        if src_img_dir.is_dir():
+            dest_img_dir = dest.parent / src_img_dir.name
+            if dest_img_dir.exists():
+                shutil.rmtree(dest_img_dir)
+            shutil.copytree(src_img_dir, dest_img_dir)
+
         # Verify SHA-256 (Axiom A)
         actual_sha = _sha256_file(dest)
         if actual_sha != rec.original_sha256:

@@ -12,8 +12,6 @@ dependencies = [
     "python-docx",
     "pyyaml",
     "click",
-    "docling>=2.81.0",
-    "weasyprint>=68.1",
 ]
 
 [project.optional-dependencies]
@@ -63,11 +61,7 @@ omit = [
     "src/vista_docs/analyze/runner.py",                # I/O layer — integration-tested only
     "src/vista_docs/analyze/consolidation_runner.py",  # I/O layer — integration-tested only
     "src/vista_docs/analyze/corpus_manifest_runner.py",  # I/O layer — integration-tested only
-    "src/vista_docs/migrate/repo_populator.py",           # I/O layer — integration-tested only
-    "src/vista_docs/migrate/changelog_runner.py",         # I/O layer — integration-tested only
-    "src/vista_docs/migrate/docs_runner.py",              # I/O layer — integration-tested only
-    "src/vista_docs/migrate/verify_runner.py",            # I/O layer — integration-tested only
-    "src/vista_docs/migrate/site_runner.py",              # I/O layer — integration-tested only
+    "src/vista_docs/publish/runner.py",                 # I/O layer — integration-tested only
 ]
 
 [tool.coverage.report]
@@ -90,8 +84,3 @@ select = ["E", "F", "I"]
 python_version = "3.12"
 strict = false
 ignore_missing_imports = true
-
-[dependency-groups]
-dev = [
-    "zensical>=0.0.30",
-]

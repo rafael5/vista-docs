@@ -1,13 +1,15 @@
 """
 vista-docs CLI — single entry point with subcommands.
 
-  vista-docs crawl    — crawl VDL catalog → inventory/
-  vista-docs fetch    — download DOCX/PDF → raw/
-  vista-docs ingest   — convert to markdown → markdown/
-  vista-docs survey   — analyse corpus structure → survey/
-  vista-docs headings     — heading frequency analysis → survey/heading_analysis/
+  vista-docs crawl        — crawl VDL catalog → inventory/
+  vista-docs fetch        — download DOCX/PDF → raw/
+  vista-docs ingest       — convert to markdown → md-img/
+  vista-docs enrich       — populate YAML frontmatter in-place
+  vista-docs survey       — analyse corpus structure → state.db
+  vista-docs headings     — heading frequency analysis → state.db
   vista-docs consolidate  — master + addenda consolidation → consolidated/
-  vista-docs verify       — sanity-check all artifacts
+  vista-docs manifest     — build corpus-manifest.json index
+  vista-docs publish      — write human-browsable publish/ tree from consolidated/
   vista-docs pipeline     — run crawl → fetch → ingest → survey
 """
 
@@ -163,11 +165,11 @@ def fetch(pkg: str, dry_run: bool, force: bool, delay: float) -> None:
 
 @cli.command()
 @click.option("--pkg", default="", help="Limit to one package namespace.")
-@click.option("--scaffold", is_flag=True, help="Generate frontmatter stubs only (no Docling).")
+@click.option("--scaffold", is_flag=True, help="Generate frontmatter stubs only (no conversion).")
 @click.option("--force", is_flag=True, help="Re-ingest even if output exists.")
 def ingest(pkg: str, scaffold: bool, force: bool) -> None:
-    """Convert fetched DOCX/PDF to markdown in ~/data/vista-docs/markdown/."""
-    from vista_docs.config import DB_PATH, MARKDOWN_DIR
+    """Convert fetched DOCX to markdown + images in ~/data/vista-docs/md-img/."""
+    from vista_docs.config import DB_PATH, MD_IMG_DIR
     from vista_docs.ingest.runner import ingest_entry
     from vista_docs.manifest.operations import filter_by_package
     from vista_docs.manifest.store import load_all, open_db, upsert
@@ -195,7 +197,7 @@ def ingest(pkg: str, scaffold: bool, force: bool) -> None:
     ok = err = skip = 0
     for i, entry in enumerate(to_ingest, 1):
         click.echo(f"[{i}/{len(to_ingest)}] {entry.app_code} — {entry.doc_title[:55]}", nl=False)
-        result = ingest_entry(entry, MARKDOWN_DIR, scaffold=scaffold, force=force)
+        result = ingest_entry(entry, MD_IMG_DIR, scaffold=scaffold, force=force)
         upsert(db, result)
         if result.ingest_status == FetchStatus.OK:
             ok += 1
@@ -240,9 +242,9 @@ def enrich(pkg: str, force: bool) -> None:
     label = f" [pkg={pkg.upper()}]" if pkg else ""
     click.echo(f"Enriching {len(to_enrich)} documents{label}")
 
-    from vista_docs.config import MARKDOWN_DIR
+    from vista_docs.config import MD_IMG_DIR
 
-    result = enrich_corpus(MARKDOWN_DIR, to_enrich, force=force)
+    result = enrich_corpus(MD_IMG_DIR, to_enrich, force=force)
     click.echo(f"Done: {result['ok']} ok, {result['skipped']} skipped, {result['errors']} errors.")
 
 
@@ -255,8 +257,8 @@ def enrich(pkg: str, force: bool) -> None:
 @click.option("--pkg", default="", help="Limit to one app_code folder (e.g. PSO).")
 @click.option("--force", is_flag=True, help="Re-sync even if already synced.")
 def sync(pkg: str, force: bool) -> None:
-    """Sync enriched inventory metadata into markdown frontmatter."""
-    from vista_docs.config import INVENTORY_DIR, MARKDOWN_DIR
+    """Sync enriched inventory metadata into markdown frontmatter in ~/data/vista-docs/md-img/."""
+    from vista_docs.config import INVENTORY_DIR, MD_IMG_DIR
     from vista_docs.enrich.sync import sync_inventory_corpus
 
     enriched_csv = INVENTORY_DIR / "vdl_inventory_enriched.csv"
@@ -266,7 +268,7 @@ def sync(pkg: str, force: bool) -> None:
     label = f" [pkg={pkg.upper()}]" if pkg else ""
     click.echo(f"Syncing inventory fields into markdown frontmatter{label}")
 
-    result = sync_inventory_corpus(MARKDOWN_DIR, enriched_csv, pkg=pkg, force=force)
+    result = sync_inventory_corpus(MD_IMG_DIR, enriched_csv, pkg=pkg, force=force)
     click.echo(
         f"Done: {result['ok']} synced, {result['skipped']} skipped, "
         f"{result['no_match']} no-match, {result['errors']} errors."
@@ -283,7 +285,7 @@ def sync(pkg: str, force: bool) -> None:
 @click.option("--output", type=click.Path(), default="", help="Output directory path.")
 def survey(pkg: str, output: str) -> None:
     """Analyse corpus structure and write survey reports."""
-    from vista_docs.config import DB_PATH, MARKDOWN_DIR, SURVEY_DIR
+    from vista_docs.config import DB_PATH, MD_IMG_DIR, SURVEY_DIR
     from vista_docs.manifest.operations import filter_by_package
     from vista_docs.manifest.store import load_all, open_db
     from vista_docs.models.manifest import FetchStatus
@@ -303,7 +305,7 @@ def survey(pkg: str, output: str) -> None:
     label = f" [pkg={pkg.upper()}]" if pkg else ""
     click.echo(f"Surveying {len(to_survey)} documents{label} → {out_dir}")
 
-    result = run_survey(MARKDOWN_DIR, to_survey, out_dir, pkg=pkg)
+    result = run_survey(MD_IMG_DIR, to_survey, out_dir, pkg=pkg)
     click.echo(f"Done: {result['ok']} ok, {result['errors']} errors, {result['stubs']} stubs.")
 
 
@@ -343,13 +345,13 @@ def headings(
 ) -> None:
     """Analyse heading frequencies across all doc types and write JSON + summary.md."""
     from vista_docs.analyze.runner import run_heading_analysis
-    from vista_docs.config import MARKDOWN_DIR, SURVEY_DIR
+    from vista_docs.config import MD_IMG_DIR, SURVEY_DIR
 
     out_dir = __import__("pathlib").Path(output) if output else SURVEY_DIR / "heading_analysis"
-    click.echo(f"Analysing headings in {MARKDOWN_DIR} → {out_dir}")
+    click.echo(f"Analysing headings in {MD_IMG_DIR} → {out_dir}")
 
     profiles = run_heading_analysis(
-        MARKDOWN_DIR,
+        MD_IMG_DIR,
         out_dir,
         min_docs=min_docs,
         boilerplate_threshold=boilerplate_threshold,
@@ -383,16 +385,16 @@ def consolidate(output: str, min_versions: int, doc_types: tuple[str, ...]) -> N
     import pathlib
 
     from vista_docs.analyze.consolidation_runner import run_consolidation
-    from vista_docs.config import DATA_DIR, MARKDOWN_DIR
+    from vista_docs.config import DATA_DIR, MD_IMG_DIR
 
     out_dir = pathlib.Path(output) if output else DATA_DIR / "consolidated"
     types_filter = list(doc_types) if doc_types else None
-    click.echo(f"Consolidating {MARKDOWN_DIR} → {out_dir}")
+    click.echo(f"Consolidating {MD_IMG_DIR} → {out_dir}")
     if types_filter:
         click.echo(f"  Filtering to doc types: {', '.join(types_filter)}")
 
     results = run_consolidation(
-        MARKDOWN_DIR,
+        MD_IMG_DIR,
         out_dir,
         min_versions=min_versions,
         doc_types=types_filter,
@@ -418,15 +420,15 @@ def manifest(output: str, doc_types: tuple[str, ...]) -> None:
     import pathlib
 
     from vista_docs.analyze.corpus_manifest_runner import run_manifest
-    from vista_docs.config import DATA_DIR, MARKDOWN_DIR
+    from vista_docs.config import DATA_DIR, MD_IMG_DIR
 
     out_dir = pathlib.Path(output) if output else DATA_DIR / "migration"
     types_filter = list(doc_types) if doc_types else None
-    click.echo(f"Building corpus manifest from {MARKDOWN_DIR} → {out_dir}")
+    click.echo(f"Building corpus manifest from {MD_IMG_DIR} → {out_dir}")
     if types_filter:
         click.echo(f"  Filtering to doc types: {', '.join(types_filter)}")
 
-    result = run_manifest(MARKDOWN_DIR, out_dir, doc_types=types_filter)
+    result = run_manifest(MD_IMG_DIR, out_dir, doc_types=types_filter)
     click.echo(
         f"Done: {result.total_documents} documents, "
         f"{result.total_packages} packages → {out_dir / 'corpus-manifest.json'}"
@@ -434,187 +436,59 @@ def manifest(output: str, doc_types: tuple[str, ...]) -> None:
 
 
 # ---------------------------------------------------------------------------
-# populate-repos
+# publish
 # ---------------------------------------------------------------------------
 
 
-@cli.command("populate-repos")
-@click.option("--output", type=click.Path(), default="", help="Root directory for repos.")
+@cli.command()
+@click.option(
+    "--output",
+    type=click.Path(),
+    default="",
+    help="Output directory (default: ~/data/vista-docs/publish/).",
+)
 @click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
-@click.option("--force", is_flag=True, help="Re-populate repos that already exist.")
-def populate_repos(output: str, pkg: tuple[str, ...], force: bool) -> None:
-    """Populate local git repos from corpus-manifest.json."""
+@click.option("--force", is_flag=True, help="Overwrite existing publish/ output.")
+def publish(output: str, pkg: tuple[str, ...], force: bool) -> None:
+    """Write human-browsable publish/ tree from consolidated/ and md-img/."""
     import pathlib
 
     from vista_docs.config import DATA_DIR
-    from vista_docs.migrate.repo_populator import populate_repos as do_populate
+    from vista_docs.publish.runner import run_publish
 
     manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
     if not manifest_path.exists():
         raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
 
-    repos_dir = pathlib.Path(output) if output else DATA_DIR / "github-repos"
-    packages = list(pkg) if pkg else None
-
-    click.echo(f"Populating repos → {repos_dir}")
-    if packages:
-        click.echo(f"  Packages: {', '.join(packages)}")
-
-    results = do_populate(manifest_path, repos_dir, packages=packages, force=force)
-    total_files = sum(results.values())
-    click.echo(
-        f"Done: {len(results)} repos created, {total_files} total files committed → {repos_dir}"
-    )
-
-
-# ---------------------------------------------------------------------------
-# changelog
-# ---------------------------------------------------------------------------
-
-
-@cli.command()
-@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
-def changelog(pkg: tuple[str, ...]) -> None:
-    """Generate CHANGELOG.md for each package repo from release notes."""
-
-    from vista_docs.config import DATA_DIR
-    from vista_docs.migrate.changelog_runner import run_changelog
-
-    manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
-    if not manifest_path.exists():
-        raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
-
-    repos_dir = DATA_DIR / "github-repos"
-    packages = list(pkg) if pkg else None
-
-    label = f" [pkg={', '.join(packages)}]" if packages else ""
-    click.echo(f"Generating CHANGELOGs{label} → {repos_dir}")
-
-    results = run_changelog(manifest_path, repos_dir, packages=packages)
-    total_rn = sum(results.values())
-    click.echo(f"Done: {len(results)} repos updated, {total_rn} total release notes")
-
-
-# ---------------------------------------------------------------------------
-# populate-docs
-# ---------------------------------------------------------------------------
-
-
-@cli.command("populate-docs")
-@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
-def populate_docs(pkg: tuple[str, ...]) -> None:
-    """Populate docs/ in each package repo from consolidated masters and originals."""
-    from vista_docs.config import DATA_DIR
-    from vista_docs.migrate.docs_runner import run_docs
-
-    manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
-    if not manifest_path.exists():
-        raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
-
-    repos_dir = DATA_DIR / "github-repos"
+    out_dir = pathlib.Path(output) if output else DATA_DIR / "publish"
     consolidated_dir = DATA_DIR / "consolidated"
+    md_img_dir = DATA_DIR / "md-img"
+    inventory_csv = DATA_DIR / "inventory" / "vdl_inventory_enriched.csv"
     packages = list(pkg) if pkg else None
 
-    label = f" [pkg={', '.join(packages)}]" if packages else ""
-    click.echo(f"Populating docs/{label} → {repos_dir}")
-
-    results = run_docs(manifest_path, repos_dir, consolidated_dir, packages=packages)
-    total_files = sum(results.values())
-    click.echo(f"Done: {len(results)} repos updated, {total_files} total files → docs/")
-
-
-# ---------------------------------------------------------------------------
-# verify
-# ---------------------------------------------------------------------------
-
-
-@cli.command()
-@click.option("--fix", is_flag=True, help="Attempt to fix minor issues automatically.")
-def verify(fix: bool) -> None:
-    """Sanity-check all pipeline artifacts for consistency."""
-    click.echo("Verifying corpus artifacts")
-    click.echo("(not yet implemented)")
-
-
-# ---------------------------------------------------------------------------
-# build-all
-# ---------------------------------------------------------------------------
-
-
-@cli.command("build-all")
-@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
-@click.option("--serve", is_flag=True, help="Start HTTP server after building.")
-@click.option("--port", type=int, default=8000, show_default=True, help="HTTP server port.")
-def build_all(pkg: tuple[str, ...], serve: bool, port: int) -> None:
-    """Run zensical build in every package repo, then optionally serve locally."""
-    import http.server
-    import os
-
-    from vista_docs.config import DATA_DIR
-    from vista_docs.migrate.site_runner import run_build_all
-
-    repos_dir = DATA_DIR / "github-repos"
-    packages = list(pkg) if pkg else None
+    if out_dir.exists() and not force:
+        raise click.ClickException(
+            f"Output directory already exists: {out_dir}\nUse --force to overwrite."
+        )
 
     label = f" [pkg={', '.join(packages)}]" if packages else ""
-    click.echo(f"Building sites{label} in {repos_dir}")
+    click.echo(f"Publishing{label} → {out_dir}")
 
-    results = run_build_all(repos_dir, packages=packages)
-    ok = sum(1 for v in results.values() if v)
-    fail = len(results) - ok
-    click.echo(f"Done: {ok} built, {fail} failed.")
-
-    if serve:
-        click.echo(f"\nServing at http://localhost:{port}/")
-        click.echo("  Browse: http://localhost:{port}/vista-pso/site/")
-        click.echo("  Ctrl+C to stop.\n")
-        os.chdir(repos_dir)
-        handler = http.server.SimpleHTTPRequestHandler
-        with http.server.HTTPServer(("", port), handler) as httpd:
-            httpd.serve_forever()
-
-
-# ---------------------------------------------------------------------------
-# verify-originals
-# ---------------------------------------------------------------------------
-
-
-@cli.command("verify-originals")
-@click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
-def verify_originals(pkg: tuple[str, ...]) -> None:
-    """Verify SHA-256 of committed originals against corpus-manifest.json."""
-    import sys
-
-    from vista_docs.config import DATA_DIR
-    from vista_docs.migrate.verify_builder import summarize_results
-    from vista_docs.migrate.verify_runner import run_verify
-
-    manifest_path = DATA_DIR / "migration" / "corpus-manifest.json"
-    if not manifest_path.exists():
-        raise click.ClickException(f"Manifest not found: {manifest_path}\nRun: vista-docs manifest")
-
-    repos_dir = DATA_DIR / "github-repos"
-    packages = list(pkg) if pkg else None
-
-    label = f" [pkg={', '.join(packages)}]" if packages else ""
-    click.echo(f"Verifying originals{label} → {repos_dir}")
-
-    results = run_verify(manifest_path, repos_dir, packages=packages)
-    summary = summarize_results(results)
-
-    click.echo(
-        f"  total={summary['total']}  ok={summary['ok']}  "
-        f"mismatch={summary['mismatch']}  missing={summary['missing']}"
+    results = run_publish(
+        consolidated_dir=consolidated_dir,
+        md_img_dir=md_img_dir,
+        manifest_path=manifest_path,
+        inventory_csv=inventory_csv,
+        out_dir=out_dir,
+        packages=packages,
+        force=force,
     )
-
-    if summary["packages_with_issues"]:
-        click.echo(f"  Issues in: {', '.join(summary['packages_with_issues'])}")
-
-    if summary["passed"]:
-        click.echo("PASS — all originals intact.")
-    else:
-        click.echo("FAIL — see warnings above.", err=True)
-        sys.exit(1)
+    click.echo(
+        f"Done: {results['packages']} packages, "
+        f"{results['anchor_files']} anchor docs, "
+        f"{results['patch_files']} patch docs, "
+        f"{results['image_dirs']} image dirs → {out_dir}"
+    )
 
 
 # ---------------------------------------------------------------------------

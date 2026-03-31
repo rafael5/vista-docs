@@ -41,6 +41,7 @@ from __future__ import annotations
 
 import logging
 import re
+import shutil
 from pathlib import Path
 
 from vista_docs.analyze.consolidate import (
@@ -166,6 +167,15 @@ def run_consolidation(
         type_dir.mkdir(parents=True, exist_ok=True)
         out_path = type_dir / f"{_safe_name(group.group_title)}.md"
         _write_consolidated(out_path, result)
+
+        # Copy sibling image directories from every member alongside the output file
+        for member in result.group.members:
+            src_img_dir = Path(member.path).with_suffix("")
+            if src_img_dir.is_dir():
+                dest_img_dir = type_dir / src_img_dir.name
+                if dest_img_dir.exists():
+                    shutil.rmtree(dest_img_dir)
+                shutil.copytree(src_img_dir, dest_img_dir)
 
         log.info(
             "%-20s %-25s  members=%3d  addenda=%3d  → %s",
