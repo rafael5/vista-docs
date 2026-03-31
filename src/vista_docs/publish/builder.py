@@ -172,6 +172,25 @@ class AppInfo:
     section: str
 
 
+def _sanitize_path_component(s: str) -> str:
+    """
+    Replace filesystem-unsafe characters in a directory/file name component.
+
+    "/" is the primary offender — it creates nested directories.
+    Replace " / " (space-slash-space) with " - " first to preserve readability,
+    then replace any remaining "/" with "-".
+
+    Special case: the VDL section "VistA/GUI Hybrids (formerly HealtheVet)" is
+    renamed to "VistA-GUI Hybrids" — the parenthetical is dropped because most
+    packages in this section are not HealtheVet systems.
+    """
+    if s == "VistA/GUI Hybrids (formerly HealtheVet)":
+        return "VistA-GUI Hybrids"
+    s = s.replace(" / ", " - ")
+    s = s.replace("/", "-")
+    return s
+
+
 def load_app_info(csv_path: Path) -> dict[str, AppInfo]:
     """Load {abbrev.upper(): AppInfo} from vdl_inventory_enriched.csv."""
     apps: dict[str, AppInfo] = {}
@@ -182,9 +201,9 @@ def load_app_info(csv_path: Path) -> dict[str, AppInfo]:
             section = row["section_name"].strip()
             if abbrev and full and abbrev not in apps:
                 apps[abbrev.upper()] = AppInfo(
-                    abbrev=abbrev,
-                    full_name=full,
-                    section=section,
+                    abbrev=_sanitize_path_component(abbrev),
+                    full_name=_sanitize_path_component(full),
+                    section=_sanitize_path_component(section),
                 )
     return apps
 
@@ -382,7 +401,7 @@ def build_publish_entries(
     for (app, label), group in by_app_label.items():
         info = app_info.get(app)
         section = info.section if info else "_Other"
-        pkg_folder = f"{app} — {info.full_name}" if info else app
+        pkg_folder = f"{info.abbrev} — {info.full_name}" if info else _sanitize_path_component(app)
 
         needs_variant = len(group) > 1
 
@@ -454,7 +473,7 @@ def build_publish_entries(
     for (app, label), group in single_anchor.items():
         info = app_info.get(app)
         section = info.section if info else "_Other"
-        pkg_folder = f"{app} — {info.full_name}" if info else app
+        pkg_folder = f"{info.abbrev} — {info.full_name}" if info else _sanitize_path_component(app)
 
         needs_variant = len(group) > 1
 
@@ -491,7 +510,7 @@ def build_publish_entries(
         app = rec.get("package", "").upper()
         info = app_info.get(app)
         section = info.section if info else "_Other"
-        pkg_folder = f"{app} — {info.full_name}" if info else app
+        pkg_folder = f"{info.abbrev} — {info.full_name}" if info else _sanitize_path_component(app)
 
         dt = rec.get("doc_type", "unknown")
         patch_id = (rec.get("patch_id") or "").strip()
