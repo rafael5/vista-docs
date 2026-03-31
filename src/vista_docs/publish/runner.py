@@ -175,7 +175,9 @@ def _write_index(out_dir: Path, entries: list[PublishEntry]) -> None:
             anchor_entries = [e for e in pkg_entries if not e.is_patch]
             patch_entries = [e for e in pkg_entries if e.is_patch]
 
-            lines.append(f"### {pkg}")
+            doc_count = len(anchor_entries) + (1 if patch_entries else 0)
+            lines.append("<details>")
+            lines.append(f"<summary><strong>{pkg}</strong> ({doc_count} docs)</summary>")
             lines.append("")
 
             for entry in sorted(anchor_entries, key=lambda e: e.dest_path.name):
@@ -186,6 +188,8 @@ def _write_index(out_dir: Path, entries: list[PublishEntry]) -> None:
             if patch_entries:
                 lines.append(f"- **patches/** ({len(patch_entries)} patch documents)")
 
+            lines.append("")
+            lines.append("</details>")
             lines.append("")
 
     (out_dir / "INDEX.md").write_text("\n".join(lines), encoding="utf-8")
