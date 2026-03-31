@@ -226,8 +226,10 @@ def _write_index(out_dir: Path, entries: list[PublishEntry]) -> None:
             lines.append("</details>")
             lines.append("")
 
-    (out_dir / "INDEX.md").write_text("\n".join(lines), encoding="utf-8")
-    log.info("INDEX.md written (%d entries)", total)
+    content = "\n".join(lines)
+    (out_dir / "INDEX.md").write_text(content, encoding="utf-8")
+    (out_dir / "README.md").write_text(content, encoding="utf-8")
+    log.info("INDEX.md / README.md written (%d entries)", total)
 
 
 # ---------------------------------------------------------------------------
