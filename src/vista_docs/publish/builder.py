@@ -172,23 +172,38 @@ class AppInfo:
     section: str
 
 
-def _sanitize_path_component(s: str) -> str:
-    """
-    Replace filesystem-unsafe characters in a directory/file name component.
+# ---------------------------------------------------------------------------
+# Section name overrides — applied before to_kebab()
+# ---------------------------------------------------------------------------
+_SECTION_RENAMES: dict[str, str] = {
+    # Drop the parenthetical: most packages here are not HealtheVet systems
+    "VistA/GUI Hybrids (formerly HealtheVet)": "vista-gui-hybrids",
+}
 
-    "/" is the primary offender — it creates nested directories.
-    Replace " / " (space-slash-space) with " - " first to preserve readability,
-    then replace any remaining "/" with "-".
 
-    Special case: the VDL section "VistA/GUI Hybrids (formerly HealtheVet)" is
-    renamed to "VistA-GUI Hybrids" — the parenthetical is dropped because most
-    packages in this section are not HealtheVet systems.
+def to_kebab(s: str) -> str:
     """
-    if s == "VistA/GUI Hybrids (formerly HealtheVet)":
-        return "VistA-GUI Hybrids"
-    s = s.replace(" / ", " - ")
-    s = s.replace("/", "-")
-    return s
+    Convert any string to pure kebab-case: [a-z0-9-] only.
+
+    This is the single canonical normalizer for ALL path components
+    (sections, package dirs, document filenames, variant suffixes).
+    It produces output that is bash-safe without quoting, URL-safe,
+    Python Path-safe, and consistent with the existing md-img layer.
+
+    Rules applied in order:
+      1. Lowercase everything
+      2. & → and
+      3. Apostrophes / smart quotes → removed (e.g. "manager's" → "managers")
+      4. Any run of non-[a-z0-9] characters → single hyphen
+      5. Collapse multiple hyphens → single hyphen
+      6. Strip leading/trailing hyphens
+    """
+    s = s.lower()
+    s = s.replace("&", "and")
+    s = re.sub(r"[''`\u2018\u2019]", "", s)  # apostrophes / smart quotes
+    s = re.sub(r"[^a-z0-9]+", "-", s)  # everything else → hyphen
+    s = re.sub(r"-+", "-", s)  # collapse consecutive hyphens
+    return s.strip("-")
 
 
 def load_app_info(csv_path: Path) -> dict[str, AppInfo]:
@@ -198,12 +213,13 @@ def load_app_info(csv_path: Path) -> dict[str, AppInfo]:
         for row in csv.DictReader(f):
             abbrev = row["app_name_abbrev"].strip()
             full = row["app_name_full"].strip()
-            section = row["section_name"].strip()
+            raw_section = row["section_name"].strip()
             if abbrev and full and abbrev not in apps:
+                section = _SECTION_RENAMES.get(raw_section, to_kebab(raw_section))
                 apps[abbrev.upper()] = AppInfo(
-                    abbrev=_sanitize_path_component(abbrev),
-                    full_name=_sanitize_path_component(full),
-                    section=_sanitize_path_component(section),
+                    abbrev=to_kebab(abbrev),
+                    full_name=to_kebab(full),
+                    section=section,
                 )
     return apps
 
@@ -227,24 +243,18 @@ class PublishEntry:
 # ---------------------------------------------------------------------------
 
 
-def _safe_filename(s: str) -> str:
-    """Strip filesystem-unsafe characters, collapse spaces."""
-    s = re.sub(r'[<>:"/\\|?*\n\r\t]', "", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
-
-
 def _extract_variant(consolidated_title: str, app_abbrev: str, label: str) -> str:
     """
     Extract the distinctive portion of a consolidated_title, stripping the
-    app abbreviation and doc label (from either end).
+    app abbreviation and doc label (from either end).  Returns a raw string
+    (not yet kebab-encoded) for the caller to pass through to_kebab().
 
     Examples:
-        ("cprs technical manual: gui version", "CPRS", "Technical Manual") → "GUI Version"
+        ("cprs technical manual: gui version", "CPRS", "Technical Manual") → "gui version"
         ("outpatient pharmacy version 7 release notes", "PSO", "Release Notes")
-            → "Outpatient Pharmacy Version 7"
+            → "outpatient pharmacy version 7"
         ("pharmacy operational updates deployment...", "PSO", "Deployment...")
-            → "Pharmacy Operational Updates"
+            → "pharmacy operational updates"
     """
     t = consolidated_title.lower().strip("\"'")
 
@@ -265,18 +275,7 @@ def _extract_variant(consolidated_title: str, app_abbrev: str, label: str) -> st
     elif dl in t:
         t = t.replace(dl, " ").strip(" _-:,")
 
-    t = t.strip(" _-:,")
-
-    if not t:
-        return ""
-
-    # Title-case each word, preserving parentheses content
-    return " ".join(w.capitalize() for w in t.replace("_", " ").split())
-
-
-def _patch_safe(patch_id: str) -> str:
-    """Convert patch_id to a filesystem-safe prefix (e.g. 'OR*3.0*499' → 'OR_3.0_499')."""
-    return re.sub(r"[*/<>:\"|?\\]", "_", patch_id).strip("_")
+    return t.strip(" _-:,")
 
 
 # ---------------------------------------------------------------------------
@@ -400,21 +399,21 @@ def build_publish_entries(
 
     for (app, label), group in by_app_label.items():
         info = app_info.get(app)
-        section = info.section if info else "_Other"
-        pkg_folder = f"{info.abbrev} — {info.full_name}" if info else _sanitize_path_component(app)
+        section = info.section if info else "other"
+        pkg_folder = f"{info.abbrev}--{info.full_name}" if info else to_kebab(app)
 
         needs_variant = len(group) > 1
+        label_k = to_kebab(label)
 
         for title, md, dt in sorted(group, key=lambda x: x[0]):
             if needs_variant:
                 variant = _extract_variant(title, app, label)
                 if variant:
-                    filename = _safe_filename(f"{label} — {variant}.md")
+                    filename = f"{label_k}--{to_kebab(variant)}.md"
                 else:
-                    # Fallback: use last part of title
-                    filename = _safe_filename(f"{label} — {title.title()}.md")
+                    filename = f"{label_k}--{to_kebab(title)}.md"
             else:
-                filename = _safe_filename(f"{label}.md")
+                filename = f"{label_k}.md"
 
             dest = Path(section) / pkg_folder / filename
             img_dirs = _find_image_dirs(md)
@@ -472,23 +471,23 @@ def build_publish_entries(
     # Anchor/plain single-version docs
     for (app, label), group in single_anchor.items():
         info = app_info.get(app)
-        section = info.section if info else "_Other"
-        pkg_folder = f"{info.abbrev} — {info.full_name}" if info else _sanitize_path_component(app)
+        section = info.section if info else "other"
+        pkg_folder = f"{info.abbrev}--{info.full_name}" if info else to_kebab(app)
 
         needs_variant = len(group) > 1
+        label_k = to_kebab(label)
 
         for rec, src in sorted(group, key=lambda x: x[1].stem):
             if needs_variant:
-                # Use title from frontmatter or stem
                 fm = _read_frontmatter(src)
                 title_raw = fm.get("title", src.stem)
                 variant = _extract_variant(title_raw, app, label)
                 if variant:
-                    filename = _safe_filename(f"{label} — {variant}.md")
+                    filename = f"{label_k}--{to_kebab(variant)}.md"
                 else:
-                    filename = _safe_filename(f"{label} — {src.stem}.md")
+                    filename = f"{label_k}--{src.stem}.md"
             else:
-                filename = _safe_filename(f"{label}.md")
+                filename = f"{label_k}.md"
 
             dest = Path(section) / pkg_folder / filename
             img_dirs = _find_image_dirs(src)
@@ -509,19 +508,20 @@ def build_publish_entries(
     for rec, src in sorted(single_patch, key=lambda x: (x[0]["package"], x[0].get("patch_id", ""))):
         app = rec.get("package", "").upper()
         info = app_info.get(app)
-        section = info.section if info else "_Other"
-        pkg_folder = f"{info.abbrev} — {info.full_name}" if info else _sanitize_path_component(app)
+        section = info.section if info else "other"
+        pkg_folder = f"{info.abbrev}--{info.full_name}" if info else to_kebab(app)
 
         dt = rec.get("doc_type", "unknown")
         patch_id = (rec.get("patch_id") or "").strip()
         label = get_doc_label(dt)
-        safe_patch = _patch_safe(patch_id)
-        filename = _safe_filename(f"{safe_patch} — {label}.md")
+        label_k = to_kebab(label)
+        patch_k = to_kebab(patch_id)
+        filename = f"{patch_k}--{label_k}.md"
         dest = Path(section) / pkg_folder / "patches" / filename
 
         # Resolve collisions by appending source stem
         if dest in patch_dest_seen:
-            filename = _safe_filename(f"{safe_patch} — {label} — {src.stem}.md")
+            filename = f"{patch_k}--{label_k}--{src.stem}.md"
             dest = Path(section) / pkg_folder / "patches" / filename
         patch_dest_seen.add(dest)
 

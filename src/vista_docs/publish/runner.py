@@ -79,7 +79,7 @@ def run_publish(
         dest_abs = out_dir / entry.dest_path
         if dest_abs in dest_seen:
             # Resolve collision by appending source stem to filename
-            stem = dest_abs.stem + " — " + entry.src_md.stem
+            stem = dest_abs.stem + "--" + entry.src_md.stem
             dest_abs = dest_abs.parent / (stem + dest_abs.suffix)
             entry = PublishEntry(
                 src_md=entry.src_md,
