@@ -62,6 +62,12 @@ omit = [
     "src/vista_docs/analyze/consolidation_runner.py",  # I/O layer — integration-tested only
     "src/vista_docs/analyze/corpus_manifest_runner.py",  # I/O layer — integration-tested only
     "src/vista_docs/publish/runner.py",                 # I/O layer — integration-tested only
+    # Retired site-builder I/O runners — no longer invoked from CLI
+    "src/vista_docs/migrate/changelog_runner.py",
+    "src/vista_docs/migrate/docs_runner.py",
+    "src/vista_docs/migrate/repo_populator.py",
+    "src/vista_docs/migrate/site_runner.py",
+    "src/vista_docs/migrate/verify_runner.py",
 ]
 
 [tool.coverage.report]

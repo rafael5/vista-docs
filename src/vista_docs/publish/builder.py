@@ -206,6 +206,28 @@ def to_kebab(s: str) -> str:
     return s.strip("-")
 
 
+# Compiled once for performance
+_VERSION_RE = re.compile(r"\bversion-(\d+(?:-\d+)*)")
+_UPDATED_RE = re.compile(r"-updated-[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+
+def _compact(s: str) -> str:
+    """
+    Compact administrative noise from a kebab-case string.
+
+    Applied to variant/title components in filenames (not to package dirs or
+    doc labels themselves, where the full name adds browsability value).
+
+    Rules:
+      1. version-N[-M] → vN[-M]   (e.g. version-5-3 → v5-3, version-7 → v7)
+      2. -updated-PATCHREF$ → remove   (e.g. -updated-pso-7-0-628 → "")
+      3. Strip residual leading/trailing hyphens
+    """
+    s = _VERSION_RE.sub(r"v\1", s)
+    s = _UPDATED_RE.sub("", s)
+    return s.strip("-")
+
+
 def load_app_info(csv_path: Path) -> dict[str, AppInfo]:
     """Load {abbrev.upper(): AppInfo} from vdl_inventory_enriched.csv."""
     apps: dict[str, AppInfo] = {}
@@ -408,10 +430,13 @@ def build_publish_entries(
         for title, md, dt in sorted(group, key=lambda x: x[0]):
             if needs_variant:
                 variant = _extract_variant(title, app, label)
-                if variant:
-                    filename = f"{label_k}--{to_kebab(variant)}.md"
+                variant_k = _compact(to_kebab(variant)) if variant else ""
+                # Skip variant if it duplicates the label (e.g. release-notes--release-notes)
+                if variant_k and variant_k != label_k:
+                    filename = f"{label_k}--{variant_k}.md"
                 else:
-                    filename = f"{label_k}--{to_kebab(title)}.md"
+                    title_k = _compact(to_kebab(title))
+                    filename = f"{label_k}--{title_k}.md"
             else:
                 filename = f"{label_k}.md"
 
@@ -482,10 +507,12 @@ def build_publish_entries(
                 fm = _read_frontmatter(src)
                 title_raw = fm.get("title", src.stem)
                 variant = _extract_variant(title_raw, app, label)
-                if variant:
-                    filename = f"{label_k}--{to_kebab(variant)}.md"
+                variant_k = _compact(to_kebab(variant)) if variant else ""
+                # Skip variant if it duplicates the label
+                if variant_k and variant_k != label_k:
+                    filename = f"{label_k}--{variant_k}.md"
                 else:
-                    filename = f"{label_k}--{src.stem}.md"
+                    filename = f"{label_k}--{_compact(src.stem)}.md"
             else:
                 filename = f"{label_k}.md"
 
@@ -515,13 +542,13 @@ def build_publish_entries(
         patch_id = (rec.get("patch_id") or "").strip()
         label = get_doc_label(dt)
         label_k = to_kebab(label)
-        patch_k = to_kebab(patch_id)
+        patch_k = _compact(to_kebab(patch_id))
         filename = f"{patch_k}--{label_k}.md"
         dest = Path(section) / pkg_folder / "patches" / filename
 
         # Resolve collisions by appending source stem
         if dest in patch_dest_seen:
-            filename = f"{patch_k}--{label_k}--{src.stem}.md"
+            filename = f"{patch_k}--{label_k}--{_compact(src.stem)}.md"
             dest = Path(section) / pkg_folder / "patches" / filename
         patch_dest_seen.add(dest)
 
