@@ -259,6 +259,9 @@ def run_push(
         RuntimeError: if any git command fails.
     """
 
+    # GitHub's recommended per-file size limit (hard limit is 100 MB)
+    _GITHUB_SIZE_LIMIT = 50 * 1024 * 1024  # 50 MB
+
     def _git(*args: str, check: bool = False) -> subprocess.CompletedProcess[str]:
         result = subprocess.run(
             ["git", *args],
@@ -278,6 +281,25 @@ def run_push(
         gitignore.write_text(_GITIGNORE, encoding="utf-8")
         log.info(".gitignore written (images excluded)")
 
+    # Scan for oversize markdown files and append them to .gitignore
+    oversize: list[str] = sorted(
+        str(md.relative_to(out_dir))
+        for md in out_dir.rglob("*.md")
+        if md.stat().st_size > _GITHUB_SIZE_LIMIT
+    )
+    if oversize:
+        existing_gi = gitignore.read_text(encoding="utf-8")
+        new_entries = [p for p in oversize if p not in existing_gi]
+        if new_entries:
+            with gitignore.open("a", encoding="utf-8") as f:
+                f.write("\n# Markdown files exceeding GitHub's 50 MB limit\n")
+                for path in new_entries:
+                    f.write(f"{path}\n")
+        for path in oversize:
+            size_mb = (out_dir / path).stat().st_size / 1_048_576
+            log.warning("Excluding oversized file (%.0f MB): %s", size_mb, path)
+        log.warning("%d oversized file(s) excluded from push", len(oversize))
+
     # Initialise repo if needed
     if not (out_dir / ".git").exists():
         _git("init", "-b", "main", check=True)
@@ -292,7 +314,7 @@ def run_push(
         _git("remote", "set-url", "origin", remote_url, check=True)
         log.info("Remote updated → %s", remote_url)
 
-    # Stage everything (.gitignore keeps images out)
+    # Stage everything (.gitignore keeps images and oversize files out)
     _git("add", "-A", check=True)
 
     # Nothing to commit?
