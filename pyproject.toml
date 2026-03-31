@@ -66,7 +66,6 @@ omit = [
     "src/vista_docs/migrate/changelog_runner.py",
     "src/vista_docs/migrate/docs_runner.py",
     "src/vista_docs/migrate/repo_populator.py",
-    "src/vista_docs/migrate/site_runner.py",
     "src/vista_docs/migrate/verify_runner.py",
 ]
 

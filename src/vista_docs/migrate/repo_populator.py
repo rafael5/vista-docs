@@ -3,7 +3,7 @@ I/O layer for local repo population.
 
 Reads corpus-manifest.json, groups records by package, creates the local
 directory structure for each package repo, copies originals, generates
-PROVENANCE.md / README.md / zensical.toml, and makes the initial git commit.
+PROVENANCE.md / README.md, and makes the initial git commit.
 
 This module is intentionally thin: all layout and generation logic lives in
 repo_builder.py (pure, unit-tested). This file is excluded from unit-test coverage.
@@ -18,7 +18,7 @@ A.  SOURCE FILES ARE COPIED VERBATIM.
 
 B.  GIT INIT + INITIAL COMMIT.
     Each repo directory is git-initialized if not already. The initial commit
-    includes all originals/ files, PROVENANCE.md, README.md, zensical.toml,
+    includes all originals/ files, PROVENANCE.md, README.md,
     and a CHANGELOG.md placeholder.
 
 C.  IDEMPOTENT.

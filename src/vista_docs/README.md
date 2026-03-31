@@ -30,7 +30,7 @@ These modules are used by pipeline stages but are not pipeline stages themselves
 | `models` | Shared data classes used throughout the pipeline | `ManifestEntry`, `FetchStatus`, `IngestStatus` (manifest.py); `Section`, `Application`, `Document` (catalog.py) |
 | `manifest` | SQLite manifest store and query operations | `store.py` — open/read/write `state/pipeline.db`; `builder.py` — inventory rows → ManifestEntry; `operations.py` — filter/query helpers |
 | `classify` | Document type classifier (reserved — not yet active) | Placeholder for future ML/rule-based doc type classification |
-| `migrate` | Retired site-builder I/O runners (kept for reference) | `changelog_builder.py`, `docs_builder.py`, `repo_builder.py`, `verify_builder.py` — logic modules still tested; `*_runner.py` files retired, no CLI exposure |
+| `migrate` | Retired site-builder I/O runners (kept for reference) | `changelog_builder.py`, `docs_builder.py`, `repo_builder.py`, `verify_builder.py` — logic modules still tested; `changelog_runner.py`, `docs_runner.py`, `repo_populator.py`, `verify_runner.py` retired, no CLI exposure |
 | `config` | Centralized path and HTTP constants | `DATA_DIR`, `RAW_DIR`, `MD_IMG_DIR`, `SURVEY_DIR`, `DB_PATH`; HTTP constants (rate limit, user-agent, timeout); `VDL_BASE` URL |
 | `cli` | Click-based entry point wiring all subcommands | `main.py` — `vista-docs` CLI group; subcommand registration; `--verbose` / `--pkg` global options |
 

@@ -1,6 +1,6 @@
 """
-Unit tests for migrate/repo_builder.py — repo layout, zensical.toml generation,
-PROVENANCE.md generation, and README generation.
+Unit tests for migrate/repo_builder.py — repo layout, PROVENANCE.md generation,
+and README generation.
 
 All tests use in-memory ManifestRecord objects; no filesystem I/O.
 """
@@ -12,7 +12,6 @@ from vista_docs.migrate.repo_builder import (
     build_repo_layout,
     generate_provenance_md,
     generate_readme,
-    generate_zensical_toml,
 )
 
 # ---------------------------------------------------------------------------
@@ -182,54 +181,6 @@ class TestDocTypeNav:
         assert nav.doc_type == "technical-manual"
         assert nav.label == "Technical Manual"
         assert nav.count == 3
-
-
-# ---------------------------------------------------------------------------
-# TestGenerateZensicalToml
-# ---------------------------------------------------------------------------
-
-
-class TestGenerateZensicalToml:
-    def _layout(self) -> RepoLayout:
-        return build_repo_layout("PSO", _pso_records())
-
-    def test_returns_string(self):
-        toml = generate_zensical_toml(self._layout())
-        assert isinstance(toml, str)
-
-    def test_contains_site_name(self):
-        toml = generate_zensical_toml(self._layout())
-        assert "PSO" in toml
-        assert "site_name" in toml
-
-    def test_contains_project_section(self):
-        toml = generate_zensical_toml(self._layout())
-        assert "[project]" in toml
-
-    def test_contains_nav(self):
-        toml = generate_zensical_toml(self._layout())
-        assert "nav" in toml
-
-    def test_contains_docs_dir(self):
-        toml = generate_zensical_toml(self._layout())
-        assert 'docs_dir = "docs"' in toml
-
-    def test_docs_dir_is_not_dot(self):
-        toml = generate_zensical_toml(self._layout())
-        assert 'docs_dir = "."' not in toml
-
-    def test_contains_known_doc_types(self):
-        toml = generate_zensical_toml(self._layout())
-        # Should reference at least one doc type
-        assert "technical-manual" in toml or "Technical Manual" in toml
-
-    def test_ends_with_newline(self):
-        toml = generate_zensical_toml(self._layout())
-        assert toml.endswith("\n")
-
-    def test_stubs_not_in_nav(self):
-        toml = generate_zensical_toml(self._layout())
-        assert "supplement" not in toml
 
 
 # ---------------------------------------------------------------------------

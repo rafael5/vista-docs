@@ -1,9 +1,8 @@
 """
-Local repo layout builder: generate the directory structure, zensical.toml,
-PROVENANCE.md, and README.md for one package repository.
+Local repo layout builder: generate the directory structure, PROVENANCE.md,
+and README.md for one package repository.
 
 build_repo_layout(app_code, records) → RepoLayout
-generate_zensical_toml(layout)       → str
 generate_provenance_md(app_code, records) → str
 generate_readme(layout)              → str
 
@@ -22,7 +21,6 @@ B.  DIRECTORY STRUCTURE:
         CHANGELOG.md             — placeholder, populated by CHANGELOG aggregator
         PROVENANCE.md            — auto-generated chain-of-custody map
         README.md                — auto-generated package overview
-        zensical.toml            — auto-generated Zensical site config
 
 C.  NAV ENTRIES are generated for every doc_type that has at least one
     non-stub record. Stubs are committed to originals/ but are NOT published
@@ -43,12 +41,7 @@ D.  DOC TYPE LABELS (human-readable nav labels):
       quick-ref          → "Quick Reference"
       unknown            → "Other Documents"
 
-E.  ZENSICAL CONFIG uses TOML format with a [project] section.
-    The nav array lists each doc type's docs/ directory.
-    docs_dir = "docs" so Zensical only scans the working documents,
-    not the entire repo root (which would pick up originals/ on every build).
-
-F.  PROVENANCE.md lists every original file, its doc_type, pub_date,
+E.  PROVENANCE.md lists every original file, its doc_type, pub_date,
     transformation, and destination. Coverage is verified: total originals
     must equal total records.
 """
@@ -190,47 +183,7 @@ def build_repo_layout(app_code: str, records: list[ManifestRecord]) -> RepoLayou
 
 
 # ---------------------------------------------------------------------------
-# zensical.toml generator (Axiom E)
-# ---------------------------------------------------------------------------
-
-
-def generate_zensical_toml(layout: RepoLayout) -> str:
-    """
-    Generate a zensical.toml configuration for a package repo.
-
-    Args:
-        layout: RepoLayout for the package.
-
-    Returns:
-        TOML string ready to write as zensical.toml.
-    """
-    lines: list[str] = []
-    lines.append("[project]")
-    lines.append(f'site_name = "{layout.app_code} VistA Package Documentation"')
-    lines.append(f'repo_name = "{layout.repo_name}"')
-    lines.append('docs_dir = "docs"')
-    lines.append("")
-
-    # Nav array
-    lines.append("nav = [")
-    lines.append('  { "Overview" = "README.md" },')
-    lines.append('  { "Changelog" = "CHANGELOG.md" },')
-    for entry in layout.nav_entries:
-        lines.append(f'  {{ "{entry.label}" = "{entry.docs_dir}" }},')
-    lines.append("]")
-    lines.append("")
-
-    # Theme
-    lines.append("[project.theme]")
-    lines.append('primary = "blue"')
-    lines.append('accent = "indigo"')
-    lines.append("")
-
-    return "\n".join(lines) + "\n"
-
-
-# ---------------------------------------------------------------------------
-# PROVENANCE.md generator (Axiom F)
+# PROVENANCE.md generator (Axiom E)
 # ---------------------------------------------------------------------------
 
 
@@ -321,7 +274,6 @@ def generate_readme(layout: RepoLayout) -> str:
     lines.append("  docs/               ← canonical working documents (published)")
     lines.append("  CHANGELOG.md        ← generated from release notes")
     lines.append("  PROVENANCE.md       ← chain-of-custody map")
-    lines.append("  zensical.toml       ← site configuration")
     lines.append("```")
     lines.append("")
     lines.append(
