@@ -317,17 +317,24 @@ def run_push(
     # Stage everything (.gitignore keeps images and oversize files out)
     _git("add", "-A", check=True)
 
-    # Nothing to commit?
-    if _git("diff", "--cached", "--quiet").returncode == 0:
-        log.info("Nothing to commit — publish/ is already up to date with remote")
+    # Commit if there are staged changes
+    if _git("diff", "--cached", "--quiet").returncode != 0:
+        msg = commit_message or f"Publish VDL corpus ({date.today()})"
+        _git("commit", "-m", msg, check=True)
+        log.info("Committed: %s", msg)
+
+    # Push if there are any local commits not yet on the remote.
+    # (Covers both a fresh commit above and a commit that failed to push last run.)
+    unpushed = _git("log", "origin/main..HEAD", "--oneline")
+    has_unpushed = unpushed.returncode == 0 and unpushed.stdout.strip()
+    # Also covers brand-new repos where origin/main doesn't exist yet
+    no_remote_ref = unpushed.returncode != 0
+
+    if not has_unpushed and not no_remote_ref:
+        log.info("Nothing to push — remote is already up to date")
         return False
 
-    # Commit
-    msg = commit_message or f"Publish VDL corpus ({date.today()})"
-    _git("commit", "-m", msg, check=True)
-    log.info("Committed: %s", msg)
-
-    # Push
-    _git("push", "-u", "origin", "main", check=True)
+    # Force is safe: publish/ is always regenerated from canonical sources.
+    _git("push", "-u", "origin", "main", "--force", check=True)
     log.info("Pushed to %s", remote_url)
     return True
