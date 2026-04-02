@@ -494,15 +494,15 @@ def build_publish_entries(
             single_anchor[(app, label)].append((rec, src))
 
     # Anchor/plain single-version docs
-    for (app, label), group in single_anchor.items():
+    for (app, label), anchor_group in single_anchor.items():
         info = app_info.get(app)
         section = info.section if info else "other"
         pkg_folder = f"{info.abbrev}--{info.full_name}" if info else to_kebab(app)
 
-        needs_variant = len(group) > 1
+        needs_variant = len(anchor_group) > 1
         label_k = to_kebab(label)
 
-        for rec, src in sorted(group, key=lambda x: x[1].stem):
+        for rec, src in sorted(anchor_group, key=lambda x: x[1].stem):
             if needs_variant:
                 fm = _read_frontmatter(src)
                 title_raw = fm.get("title", src.stem)

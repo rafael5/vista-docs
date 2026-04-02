@@ -149,16 +149,30 @@ class TestFrontmatterConstants:
         assert len(CANONICAL_FIELD_ORDER) > 0
 
     def test_canonical_order_contains_key_fields(self):
-        required = {"title", "doc_type", "app_code", "section", "pkg_ns", "patch_id",
-                    "word_count", "pub_date", "docx_url"}
+        required = {
+            "title",
+            "doc_type",
+            "app_code",
+            "section",
+            "pkg_ns",
+            "patch_id",
+            "word_count",
+            "pub_date",
+            "docx_url",
+        }
         assert required.issubset(set(CANONICAL_FIELD_ORDER))
 
     def test_canonical_order_has_no_retired_fields(self):
         assert not RETIRED_FIELDS.intersection(CANONICAL_FIELD_ORDER)
 
     def test_retired_fields_set(self):
-        assert RETIRED_FIELDS == {"patch", "patch_number", "package_name",
-                                  "package_namespace", "package_version"}
+        assert RETIRED_FIELDS == {
+            "patch",
+            "patch_number",
+            "package_name",
+            "package_namespace",
+            "package_version",
+        }
 
     def test_identity_group_precedes_application_group(self):
         assert CANONICAL_FIELD_ORDER.index("title") < CANONICAL_FIELD_ORDER.index("app_code")

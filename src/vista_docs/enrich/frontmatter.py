@@ -63,11 +63,11 @@ CANONICAL_FIELD_ORDER: list[str] = [
 
 # Fields superseded by authoritative inventory equivalents — removed on rebuild
 RETIRED_FIELDS: set[str] = {
-    "patch",             # → patch_id
-    "patch_number",      # → already encoded in patch_id
-    "package_name",      # → app_name
-    "package_namespace", # → pkg_ns
-    "package_version",   # → patch_ver
+    "patch",  # → patch_id
+    "patch_number",  # → already encoded in patch_id
+    "package_name",  # → app_name
+    "package_namespace",  # → pkg_ns
+    "package_version",  # → patch_ver
 }
 
 _CANONICAL_INDEX: dict[str, int] = {k: i for i, k in enumerate(CANONICAL_FIELD_ORDER)}

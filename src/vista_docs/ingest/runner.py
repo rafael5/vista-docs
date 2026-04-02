@@ -1,7 +1,7 @@
 """
 I/O thin layer: orchestrate one document through the ingest stage.
 
-ingest_entry(entry, markdown_dir, scaffold, force) → ManifestEntry
+ingest_entry(entry, md_img_dir, scaffold, force) → ManifestEntry
 """
 
 from __future__ import annotations
@@ -18,12 +18,16 @@ logger = logging.getLogger(__name__)
 
 def ingest_entry(
     entry: ManifestEntry,
-    markdown_dir: Path,
+    md_img_dir: Path,
     scaffold: bool = False,
     force: bool = False,
 ) -> ManifestEntry:
     """
     Ingest one document: convert (or scaffold) → postprocess → write markdown.
+
+    Output layout:
+      md_img_dir / app_code / output_filename        ← markdown file
+      md_img_dir / app_code / output_stem /          ← images (001.png, 002.png, …)
 
     Returns an updated ManifestEntry with ingest_status, markdown_path, or
     ingest_error populated.
@@ -36,9 +40,11 @@ def ingest_entry(
         logger.debug("Skipping %s — fetch_status=%s", entry.doc_title, entry.fetch_status)
         return replace(entry, ingest_status=FetchStatus.SKIPPED)
 
-    # Output path
-    out_dir = markdown_dir / entry.app_code
+    # Output paths
+    out_dir = md_img_dir / entry.app_code
     out_path = out_dir / entry.output_filename
+    out_stem = Path(entry.output_filename).stem
+    out_img_dir = out_dir / out_stem
 
     # Skip if already ingested and not forcing
     if not force and entry.ingest_status == FetchStatus.OK and out_path.exists():
@@ -56,9 +62,10 @@ def ingest_entry(
         if scaffold:
             raw_md = ""
         else:
-            from vista_docs.ingest.converter import convert_to_markdown
+            from vista_docs.ingest.converter import convert_docx
 
-            raw_md = convert_to_markdown(src)
+            raw_md, n_images = convert_docx(src, out_img_dir)
+            logger.debug("%s: %d image(s) extracted", entry.output_filename, n_images)
 
         md_content = build_markdown(entry, raw_md)
 

@@ -52,17 +52,17 @@ def fields_for_doc(index: dict, app_code: str, title: str) -> dict | None:
         return None
 
     result: dict = {
-        "section":     row.get("section_code", ""),
-        "app_name":    row.get("app_name_full", ""),
-        "app_status":  row.get("app_status", ""),
-        "pkg_ns":      row.get("pkg_ns", ""),
-        "patch_id":    row.get("patch_id", ""),
-        "patch_ver":   row.get("patch_ver", ""),
-        "doc_layer":   row.get("doc_layer", ""),
-        "doc_label":   row.get("doc_label", ""),
+        "section": row.get("section_code", ""),
+        "app_name": row.get("app_name_full", ""),
+        "app_status": row.get("app_status", ""),
+        "pkg_ns": row.get("pkg_ns", ""),
+        "patch_id": row.get("patch_id", ""),
+        "patch_ver": row.get("patch_ver", ""),
+        "doc_layer": row.get("doc_layer", ""),
+        "doc_label": row.get("doc_label", ""),
         "doc_subject": row.get("doc_subject", ""),
-        "group_key":   row.get("group_key", ""),
-        "app_url":     row.get("app_url", ""),
+        "group_key": row.get("group_key", ""),
+        "app_url": row.get("app_url", ""),
     }
 
     doc_code = row.get("doc_code", "")

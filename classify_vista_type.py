@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Add (or update) the vista_type and cots_dependent columns in vdl_inventory_enriched.csv.
+Add (or update) the system_type and cots_dependent columns in vdl_inventory_enriched.csv.
 
 11-value classification scheme
 ───────────────────────────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ ENRICHED_CSV = Path.home() / "data/vista-docs/inventory/vdl_inventory_enriched.c
 #   (ext)     = external system; VistA has only a stub/config, not the app
 # ---------------------------------------------------------------------------
 
-VISTA_TYPE: dict[str, str] = {
+SYSTEM_TYPE: dict[str, str] = {
     # ════════════════════════════════════════════════════════════════════════
     # VistA — pure MUMPS, KIDS deployed, server-side
     # ════════════════════════════════════════════════════════════════════════
@@ -404,9 +404,9 @@ NEW_CATEGORY_RATIONALE = {
 
 def classify_row(row: dict) -> tuple[str, str]:
     abbrev = row.get("app_name_abbrev", "")
-    vista_type = VISTA_TYPE.get(abbrev, "unclassified")
+    system_type = SYSTEM_TYPE.get(abbrev, "unclassified")
     cots_dep = COTS_DEPENDENCY.get(abbrev, "")
-    return vista_type, cots_dep
+    return system_type, cots_dep
 
 
 def main() -> None:
@@ -415,18 +415,18 @@ def main() -> None:
         fieldnames = list(reader.fieldnames or [])
         rows = list(reader)
 
-    # Insert vista_type after app_status if not present
-    if "vista_type" not in fieldnames:
+    # Insert system_type after app_status if not present
+    if "system_type" not in fieldnames:
         idx = fieldnames.index("app_status") + 1
-        fieldnames.insert(idx, "vista_type")
+        fieldnames.insert(idx, "system_type")
 
-    # Insert cots_dependent immediately after vista_type
+    # Insert cots_dependent immediately after system_type
     if "cots_dependent" not in fieldnames:
-        idx = fieldnames.index("vista_type") + 1
+        idx = fieldnames.index("system_type") + 1
         fieldnames.insert(idx, "cots_dependent")
 
     for row in rows:
-        row["vista_type"], row["cots_dependent"] = classify_row(row)
+        row["system_type"], row["cots_dependent"] = classify_row(row)
 
     backup = ENRICHED_CSV.with_suffix(".csv.bak")
     shutil.copy2(ENRICHED_CSV, backup)
@@ -445,10 +445,10 @@ def main() -> None:
     for row in rows:
         a = row["app_name_abbrev"]
         if a not in seen:
-            seen[a] = row["vista_type"]
+            seen[a] = row["system_type"]
 
     app_counts = Counter(seen.values())
-    row_counts = Counter(r["vista_type"] for r in rows)
+    row_counts = Counter(r["system_type"] for r in rows)
     total_apps = len(seen)
     total_rows = len(rows)
 

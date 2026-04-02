@@ -47,7 +47,6 @@ from vista_docs.migrate.repo_builder import (
     build_repo_layout,
     generate_provenance_md,
     generate_readme,
-    generate_zensical_toml,
 )
 
 log = logging.getLogger(__name__)
@@ -184,7 +183,6 @@ def _populate_one_repo(
         files_copied += 1
 
     # Generate repo files
-    (repo_dir / "zensical.toml").write_text(generate_zensical_toml(layout), encoding="utf-8")
     (repo_dir / "PROVENANCE.md").write_text(
         generate_provenance_md(app_code, records), encoding="utf-8"
     )
