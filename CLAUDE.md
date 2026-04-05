@@ -6,16 +6,13 @@
 downloads DOCX/PDF manuals, converts them to structured markdown, and analyses the corpus.
 Output data lives in `~/data/vista-docs/` — never in this repo.
 
-## Skills to load for this project
-
-```
-vdl              — VDL catalog structure, URL patterns, crawling gotchas
-vdl-pipeline     — Complete operating manual: CLI, stages, enrich fields, gotchas
-vista-system     — VistA package architecture, namespaces, relationships
-vista-fileman    — FileMan APIs, global conventions, data dictionary
-va-docx-structure — DOCX structure survey, ingest post-processing, callout patterns
-knowledge-capture — Capture new findings back to skills after each session
-```
+## Skills
+- `~/claude/skills/vdl/` — VDL catalog structure, URL patterns, crawling gotchas
+- `~/claude/skills/vdl-pipeline/` — complete operating manual: CLI, stages, enrich fields, gotchas
+- `~/claude/skills/vista-system/` — VistA package architecture, namespaces, relationships
+- `~/claude/skills/vista-fileman/` — FileMan APIs, global conventions, data dictionary
+- `~/claude/skills/va-docx-structure/` — DOCX structure survey, ingest post-processing, callout patterns
+- `~/claude/skills/knowledge-capture/` — capture new findings back to skills after each session
 
 ## Project structure
 
@@ -134,6 +131,7 @@ uv lock && uv sync --extra dev
 - Use `logging` not `print()` in library code
 - No mocks unless unavoidable — prefer real objects and fakes
 - After any session with new findings, update vdl-pipeline/SKILL.md and memory files
+- Update `src/vista_docs/README.md` in the same commit whenever any package's inputs, outputs, CLI, or prerequisites change
 - `--pkg` flag always takes VDL app_code (CPRS/ADT), never VistA namespace (OR/DG)
 - Every new I/O layer goes into `[tool.coverage.run] omit` in pyproject.toml immediately
 - New extractor TDD cycle: test → fail-confirm → implement → make check → enrich --force
