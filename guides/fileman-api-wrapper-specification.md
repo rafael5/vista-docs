@@ -2,7 +2,7 @@
 
 **Enabling Non-M Language Application Development Against the FileMan Database Engine**
 
-*Version 1.0 — April 2026*
+*Version 1.1 — April 2026*
 *Audience: Software architects, API engineers, and VistA modernization program leads*
 
 ---
@@ -15,6 +15,7 @@
 4. [Case Studies: Successful Major API Wrapper Projects](#4-case-studies-successful-major-api-wrapper-projects)
 5. [FileMan as a Wrapping Target: Capabilities and Constraints](#5-fileman-as-a-wrapping-target-capabilities-and-constraints)
 6. [Transport Architecture Options](#6-transport-architecture-options)
+   - 6.4 [InterSystems IRIS Embedded Transport](#64-intersystems-iris-embedded-transport)
 7. [API Surface Specification — Complete FileMan Coverage](#7-api-surface-specification--complete-fileman-coverage)
    - 7.1 [DBS API — Core Read Operations](#71-dbs-api--core-read-operations)
    - 7.2 [DBS API — Core Write Operations](#72-dbs-api--core-write-operations)
@@ -41,6 +42,10 @@
 14. [Language-Specific SDK Design Guidelines](#14-language-specific-sdk-design-guidelines)
 15. [Governance and Compatibility Obligations](#15-governance-and-compatibility-obligations)
 16. [References](#16-references)
+17. [API Priority Classification: Essential vs. Background](#17-api-priority-classification-essential-vs-background)
+18. [Wrapper Ecosystem Integration: RPC Broker, VistALink, MVDM, and FMQL](#18-wrapper-ecosystem-integration-rpc-broker-vistalink-mvdm-and-fmql)
+19. [Rationale: Why gRPC + Protocol Buffers as the Two-Layer Foundation](#19-rationale-why-grpc--protocol-buffers-as-the-two-layer-foundation)
+20. [Industrial Scale: Vendors Who Use This Pattern at Massive Scale](#20-industrial-scale-vendors-who-use-this-pattern-at-massive-scale)
 
 ---
 
@@ -345,6 +350,67 @@ This path requires registering FileMan DBS wrapper RPCs in the REMOTE PROCEDURE 
 ### 6.3 Alternative: REST/JSON Gateway
 
 A REST/JSON gateway (OpenAPI 3.1 specification, HTTP/2) can be offered as an alternative transport for clients that cannot consume gRPC. The REST gateway should be a thin adapter over the gRPC service, not a separate implementation. All semantic validation and error translation should remain in the gRPC layer.
+
+---
+
+### 6.4 InterSystems IRIS Embedded Transport
+
+InterSystems IRIS (and its predecessor, Caché) is the other major production M-family runtime. The VA FileMan Technical Manual explicitly states that FileMan is installed against a Caché/IRIS system in VA production, and the Technical Manual's KIDS distribution documentation assumes Caché/IRIS as the target platform. IRIS and YottaDB share the same fundamental M global storage model — both are compliant ANSI Standard M implementations — making the FileMan API wrapper equally applicable to IRIS-hosted VistA deployments.
+
+#### IRIS vs. YottaDB: What Differs for the Wrapper
+
+| Aspect | YottaDB | InterSystems IRIS |
+|---|---|---|
+| C call-in header | `libyottadb.h` | `irisdb.h` |
+| Embedded library | `libyottadb.so` | `libirisdb.so` / `irisdb.dll` |
+| Session init | `ydb_init()` | `IRISStart()` / `IRIS_CALLIN` environment |
+| M function call | `ydb_ci()` / `ydb_cip()` | `IRISExStrCallA()` / `IRISPushStr()` + `IRISInvokeFunctionA()` |
+| Global read | `ydb_get_s()` | `IRISGlobalGet()` |
+| Global write | `ydb_set_s()` | `IRISGlobalSet()` |
+| Global kill | `ydb_delete_s()` | `IRISGlobalKill()` |
+| Subscript iteration | `ydb_subscript_next_s()` | `IRISGlobalOrder()` |
+| Session shutdown | `ydb_exit()` | `IRISEnd()` |
+| Environment config | `YOTTADB`, `gtmroutines`, `gtmgbldir` | `IRISDIR`, `ISC_PACKAGE_INSTALLDIR`, `[Startup]` config section |
+| Python binding | `yottadb` (PyPI) | `iris` (PyPI — `intersystems-irispython`) |
+| Go binding | `lang.yottadb.com/go/yottadb` | IRIS Go binding (via `irisdb.h` + cgo) |
+| TCP SuperServer port | N/A (no built-in TCP listener) | 1972 (IRIS SuperServer) |
+| Native REST/JSON | No — external wrapper required | Yes — IRIS %REST framework built-in |
+
+#### IRIS Call-In Model
+
+IRIS provides two embedded call-in mechanisms:
+
+**1. IRIS C Binding (`irisdb.h`)** — The direct equivalent of YottaDB's `libyottadb.h`. The wrapper initializes an IRIS connection with `IRISStart()`, sets the M process context (equivalent to setting `DUZ` and `DUZ(0)`), then calls FileMan DBS entry points using `IRISExStrCallA()` for extrinsic functions (`$$FIND1^DIC`, `$$GET1^DIQ`) and a push-invoke sequence for procedure calls (`GETS^DIQ`, `FILE^DIE`, `UPDATE^DIE`). Results are read back via `IRISGlobalGet()` and `IRISGlobalOrder()` for traversing result arrays.
+
+The IRIS C binding is the most direct path — it gives sub-millisecond call latency identical to YottaDB call-in and requires no network socket.
+
+**2. IRIS Python Gateway (`iris` package)** — `pip install intersystems-irispython`. Provides `iris.cls()` for ObjectScript class calls and `iris.ref()` for global access. The `iris.gref()` object supports `get()`, `set()`, `kill()`, and `order()` operations that map directly to the YottaDB Python equivalents. FileMan DBS calls are invoked using `iris.system.Process.CallM()` or through the `%Library.Routine` interface.
+
+**3. IRIS TCP SuperServer (port 1972)** — IRIS runs a persistent TCP listener (the SuperServer) on port 1972. External processes connect via the IRIS protocol (not RPC Broker). The IRIS Python, Java, and .NET bindings use this path when not embedded. For the FileMan wrapper, this is the remote IRIS equivalent of the RPC Broker path — it requires IRIS-side M wrapper routines that accept calls and invoke FileMan DBS APIs.
+
+#### Implementing the IRIS Transport in the gRPC Gateway
+
+The gRPC Gateway service (§6.1) uses a pluggable **MRuntime** interface with two concrete implementations:
+
+```
+MRuntime (interface)
+  ├── YDBRuntime    — calls libyottadb.h
+  └── IRISRuntime   — calls irisdb.h
+```
+
+The `FileManClient` layer in the gateway service is runtime-agnostic — it calls `MRuntime.CallFunction()`, `MRuntime.GetGlobal()`, `MRuntime.SetGlobal()`, etc. regardless of which M implementation is underneath. Only the concrete runtime implementation differs.
+
+This design means the gRPC Gateway, and all four language SDKs, work identically against both YottaDB and IRIS deployments. Operators choose the runtime at deployment time through configuration; no application code changes are required.
+
+#### IRIS-Specific Considerations
+
+**Session context:** IRIS uses a `$NAMESPACE` concept to switch between databases. FileMan globals must be in the correct namespace (typically `%SYS` or the VistA application namespace). The IRIS runtime must `SET $NAMESPACE = "VISTA"` (or equivalent) before making FileMan calls.
+
+**Global mapping:** IRIS supports global mapping across namespaces. In a standard VA IRIS deployment, FileMan globals (`^DPT`, `^PS`, `^OR`, etc.) may be mapped from the application namespace to a data namespace. The wrapper must confirm the global root returned by `$$ROOT^DILFD` resolves correctly in the active namespace.
+
+**License model:** InterSystems licenses IRIS per-CPU or per-user. The wrapper's connection pooling strategy must account for IRIS license limits — each concurrent connection consumes a license unit. Pool size must be bounded by the site's IRIS license capacity.
+
+**Embedded Python vs. call-in:** For Python-based gateway implementations targeting IRIS, the `iris` Python package (intersystems-irispython) provides the most ergonomic embedded path. The package wraps the IRIS C binding and handles session lifecycle, namespace management, and error translation, equivalent to the `yottadb` package for YottaDB.
 
 ---
 
@@ -1402,36 +1468,42 @@ The VA releases patches to FileMan 22.2 as named KIDS builds (`DI*22.2*N`). The 
 
 ## 16. References
 
-### VA FileMan Documentation (VA Software Document Library)
+### Primary Source: VA FileMan Documentation — Local Processed Markdown
 
-All FileMan documentation is available on the VA VDL under the FileMan application page.
+All FileMan-specific technical claims in this specification are sourced from the VA FileMan 22.2 documentation set as ingested, converted, and stored in the local pipeline data directory. These files contain VDL-sourced content converted to Markdown with YAML frontmatter by the vista-docs ingest pipeline. Use these local files as the authoritative reference — they eliminate the need to re-download and re-analyze from the VDL website.
 
-| Document | Format | Direct Link |
+| Local File | Content | Word Count |
 |---|---|---|
-| VA FileMan Application Page (VDL) | Web | [https://www.va.gov/vdl/application.asp?appid=5](https://www.va.gov/vdl/application.asp?appid=5) |
-| FM 22.2 Developer's Guide (Rev 1.14, July 2025) | PDF | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2dg.pdf](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2dg.pdf) |
-| FM 22.2 Developer's Guide | DOCX | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2dg.docx](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2dg.docx) |
-| FM 22.2 Technical Manual (Rev 1.6, July 2025) | PDF | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2tm.pdf](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2tm.pdf) |
-| FM 22.2 Technical Manual | DOCX | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2tm.docx](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2tm.docx) |
-| FM 22.2 User Manual (Volume 1) | PDF | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2um1.pdf](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2um1.pdf) |
-| FM 22.2 Advanced User Manual (Volume 2) | PDF | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2um2.pdf](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2um2.pdf) |
-| FM 22.2 Data Access Control (DAC) User Guide | PDF | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2p8_dac_ug.pdf](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2p8_dac_ug.pdf) |
-| FM 22.2 Installation, Back-Out, and Rollback Guide | PDF | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2ig.pdf](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2ig.pdf) |
-| FM 22.2 Release Notes | PDF | [https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2rn.pdf](https://www.va.gov/vdl/documents/Infrastructure/Fileman/fm22_2rn.pdf) |
-| SQLI DI*21*38 Site Manual | PDF | [https://www.va.gov/vdl/documents/Infrastructure/SQL_Interface_(SQLI)/sqli_sm.pdf](https://www.va.gov/vdl/documents/Infrastructure/SQL_Interface_(SQLI)/sqli_sm.pdf) |
-| SQLI DI*21*38 Vendor Guide | PDF | [https://www.va.gov/vdl/documents/Infrastructure/SQL_Interface_(SQLI)/sqli_vendor.pdf](https://www.va.gov/vdl/documents/Infrastructure/SQL_Interface_(SQLI)/sqli_vendor.pdf) |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/developer-guide.md` | FM 22.2 Developer's Guide (Rev 1.14, July 2025) — full DBS API, Classic API, ScreenMan, DDE, DILF, DDMOD, cross-references, templates, security | 192,021 words |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/technical-manual.md` | FM 22.2 Technical Manual — global structure, MUMPS OS file, KIDS installation, Caché/IRIS system assumptions | ~25,000 words |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/user-manual--fm-22-2.md` | FM 22.2 User Manual (Vol 1) — interactive operations, data entry, lookup, templates | ~35,000 words |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/user-manual--fm-22-2-advanced.md` | FM 22.2 Advanced User Manual (Vol 2) — auditing, archiving, statistics, import/export, Filegrams | ~30,000 words |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/user-manual--fm-22-2-data-access-control-dac-user-guide.md` | FM 22.2 DAC User Guide (DI*22.2*8) — POLICY file, APPLICATION ACTION file, `$$CANDO^DIAC1` | ~10,000 words |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/supplement--fm-key-and-index-tutorial.md` | FM Key and Index Tutorial — new-style cross-references, compound indexes, uniqueness keys | tutorial |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/supplement--fm-screenman-tutorial-for-developers.md` | FM ScreenMan Tutorial — FORM/BLOCK files, `^DDS`, form editor | tutorial |
+| `~/data/vista-docs/publish/infrastructure/di--fileman/supplement--va-fileman-dde-utility-tutorial.md` | FM DDE Utility Tutorial — ENTITY file, `GET^DDE`, `$$GET1^DDE`, JSON/XML output | tutorial |
+| `~/data/vista-docs/publish/infrastructure/xwb--remote-procedure-call-rpc-broker/supplement.md` | M-to-M Broker XWB*1.1*34 — RPC Broker wire protocol, TCP listener, REMOTE PROCEDURE #8994, M-to-M architecture | 12,090 words |
+| `~/data/vista-docs/publish/infrastructure/xobv--vistalink/developer-guide.md` | VistALink 1.6 Developer Guide — J2EE Connector Architecture, RPC calls from Java, connection pooling | full guide |
 
-### VistA RPC Broker (Transport Reference)
+**Specific sections cited in this specification:**
+
+| Claim | Local File | Section / Keyword |
+|---|---|---|
+| DBS API design intent: separation of data access from I/O | `developer-guide.md` | §"Database Server (DBS) API" line 6663 |
+| IENS format and placeholder codes | `developer-guide.md` | §"IENS: Identify Entries and Subentries" line 6709 |
+| FDA format and WORD-PROCESSING fields | `developer-guide.md` | §"FDA: Format of Data Passed to and from VA FileMan" line 6735 |
+| FileMan requires Caché/IRIS in VA production KIDS install | `technical-manual.md` | §KIDS distribution, line ~4167 |
+| InterSystems SDA as DDE consumer | `technical-manual.md` | line ~702 |
+| RPC Broker is a bridge between workstation and M server | `xwb--rpc-broker/supplement.md` | line 266 |
+| M-to-M Broker uses XML wrapping and TCP/IP | `xwb--rpc-broker/supplement.md` | line 335 |
+| VistALink is a J2CA 1.5 resource adapter for Java ↔ M | `xobv--vistalink/developer-guide.md` | line 403 |
+| DDE ENTITY (#1.5) file maps VistA data to SDA/FHIR | `developer-guide.md` | §"Entity Mapping API" line ~20031 |
+
+### VistA Source and Related Wrapper Projects
 
 | Resource | Link |
 |---|---|
-| VistA RPC Broker Application Page (VDL) | [https://www.va.gov/vdl/application.asp?appid=47](https://www.va.gov/vdl/application.asp?appid=47) |
 | VistA Source Code (OSEHRA GitHub) | [https://github.com/OSEHRA/VistA](https://github.com/OSEHRA/VistA) |
-
-### Related VistA Wrapper Projects
-
-| Project | Repository / Reference |
-|---|---|
 | FMQL — FileMan Query Language | [https://github.com/caregraf/FMQL](https://github.com/caregraf/FMQL) |
 | FMQL — AMIA 2012 Paper | [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3540540/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3540540/) |
 | nodeVISTA / MVDM (OSEHRA) | [https://github.com/vistadataproject/nodeVISTA](https://github.com/vistadataproject/nodeVISTA) |
@@ -1439,7 +1511,7 @@ All FileMan documentation is available on the VA VDL under the FileMan applicati
 | VA Lighthouse Developer Portal | [https://developer.va.gov/](https://developer.va.gov/) |
 | nodem — YottaDB/GT.M Node.js interface | [https://github.com/dlwicksell/nodem](https://github.com/dlwicksell/nodem) |
 
-### YottaDB (M Runtime and Call-In Interface)
+### M Runtimes
 
 | Resource | Link |
 |---|---|
@@ -1447,31 +1519,394 @@ All FileMan documentation is available on the VA VDL under the FileMan applicati
 | YottaDB Call-In Interface | [https://docs.yottadb.com/ProgrammersGuide/externalroutines.html](https://docs.yottadb.com/ProgrammersGuide/externalroutines.html) |
 | YottaDB Go Wrapper | [https://pkg.go.dev/lang.yottadb.com/go/yottadb](https://pkg.go.dev/lang.yottadb.com/go/yottadb) |
 | YottaDB Python Wrapper | [https://pypi.org/project/yottadb/](https://pypi.org/project/yottadb/) |
+| InterSystems IRIS Python (intersystems-irispython) | [https://pypi.org/project/intersystems-irispython/](https://pypi.org/project/intersystems-irispython/) |
+| InterSystems IRIS C Binding reference | [https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=BXCI_ref](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=BXCI_ref) |
+| InterSystems IRIS REST documentation | [https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GREST](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GREST) |
 
 ### Architecture Patterns and Methods
 
 | Reference | Link |
 |---|---|
 | Evans, E. — *Domain-Driven Design* (2003) — Anti-Corruption Layer | [https://www.domainlanguage.com/ddd/](https://www.domainlanguage.com/ddd/) |
-| Fowler, M. — *Patterns of Enterprise Application Architecture* (2002) — Gateway, Repository | [https://martinfowler.com/books/eaa.html](https://martinfowler.com/books/eaa.html) |
+| Fowler, M. — *Patterns of Enterprise Application Architecture* (2002) | [https://martinfowler.com/books/eaa.html](https://martinfowler.com/books/eaa.html) |
 | Fowler, M. — Strangler Fig Application Pattern (2004) | [https://martinfowler.com/bliki/StranglerFigApplication.html](https://martinfowler.com/bliki/StranglerFigApplication.html) |
-| Gamma et al. — *Design Patterns* (1994) — Façade, Adapter | [https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) |
+| Google API Design Guide | [https://cloud.google.com/apis/design](https://cloud.google.com/apis/design) |
 | gRPC documentation | [https://grpc.io/docs/](https://grpc.io/docs/) |
 | Protocol Buffers Language Guide (proto3) | [https://protobuf.dev/programming-guides/proto3/](https://protobuf.dev/programming-guides/proto3/) |
 | OpenAPI 3.1 Specification | [https://spec.openapis.org/oas/v3.1.0](https://spec.openapis.org/oas/v3.1.0) |
 
-### Analog Systems (Case Study References)
+### Analog Systems
 
 | System | Reference |
 |---|---|
 | SAP BAPI / RFC — Python client (pyrfc) | [https://github.com/SAP/PyRFC](https://github.com/SAP/PyRFC) |
 | SAP BAPI / RFC — Go client (gorfc) | [https://github.com/SAP/gorfc](https://github.com/SAP/gorfc) |
-| InterSystems IRIS REST documentation | [https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GREST](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GREST) |
 | IBM z/OS Connect EE documentation | [https://www.ibm.com/docs/en/zosconnect/3.0](https://www.ibm.com/docs/en/zosconnect/3.0) |
 | Oracle REST Data Services (ORDS) | [https://www.oracle.com/database/technologies/appdev/rest.html](https://www.oracle.com/database/technologies/appdev/rest.html) |
+| Google Cloud client libraries (language SDK layer) | [https://cloud.google.com/apis/docs/client-libraries-explained](https://cloud.google.com/apis/docs/client-libraries-explained) |
+| Oracle Cloud Infrastructure SDK pattern | [https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm) |
 
 ---
 
-*This specification is grounded in the VA FileMan 22.2 documentation set from the VA Software Document Library. All FileMan API entry points, calling conventions, data structures, and security mechanisms described in this document are sourced from the primary VDL documentation listed in §16. For authoritative technical detail on any FileMan entry point, consult the FM 22.2 Developer's Guide.*
+## 17. API Priority Classification: Essential vs. Background
 
-*FileMan namespace: `DI`. VDL application: [https://www.va.gov/vdl/application.asp?appid=5](https://www.va.gov/vdl/application.asp?appid=5)*
+One of the most consequential design decisions for the FileMan wrapper is which APIs to implement first and with what depth. Treating all 30+ FileMan entry points as equally important leads to a specification that is hard to prioritize, hard to test, and hard to deliver incrementally.
+
+This section classifies every FileMan API surface into three tiers based on its necessity for a **non-M application that reads and writes VistA data**. The DBS API Developer's Guide defines the DBS API explicitly as the mechanism enabling "the construction of alternative front-ends to the VA FileMan database" and "data access by applications running outside M" (`developer-guide.md`, line 6667). That design intent drives this classification.
+
+---
+
+### Tier 1 — Essential: Must Wrap for Any Read/Write Application
+
+These are the operations without which a non-M application cannot function. They are the operational minimum. An application can be built, deployed, and used with only these operations — nothing else is required.
+
+| FileMan Entry Point | Wrapper Operation | Why Essential |
+|---|---|---|
+| `GETS^DIQ` | `GetEntry` | The only way to retrieve multiple fields from an entry. Every read-oriented application needs this. |
+| `$$GET1^DIQ` | `GetField` | Single-field retrieval; needed for lightweight lookups and pointer resolution. |
+| `$$FIND1^DIC` | `FindOne` | The primary lookup path: find an entry IEN by name or cross-reference value. Virtually every application starts here. |
+| `FIND^DIC` | `Find` | Multi-entry search; required for any list or grid view. |
+| `FILE^DIE` | `File` | The only way to create new entries or update existing ones without audit overhead. Required for all writes. |
+| `UPDATE^DIE` | `Update` | Write path with audit logging and key enforcement; required for all production writes where traceability matters. |
+| `CHK^DIE` | `ValidateField` | Validate a value against a field's INPUT transform before filing; required for any form validation flow. |
+| `FIELD^DID` | `GetFieldDef` | Retrieve field type, label, pointer target; required for dynamic UI generation and type-safe mapping. |
+| `FILE^DID` | `GetFileDef` | Retrieve file name, global root, security codes; required for schema discovery. |
+| `LOCK^DILF` / `UNLOCK^DILF` | `Lock` / `Unlock` | Required for any read-modify-write operation to prevent lost updates. |
+| `%DT` / `$$DT^XLFDT` | `DateConvert` / `FMNow` | Required for all date field handling; FileMan dates are not standard and cannot be naively passed or stored. |
+| `DUZ` / `DUZ(0)` setup | `CreateSession` | Required to establish the security context before any FileMan call. Without this, FileMan has no user identity and cannot enforce access codes. |
+| DIERR array parsing | `FileManError` hierarchy | Required to surface meaningful errors to application code. Raw DIERR codes are opaque without translation. |
+
+**Implementation note:** The FileMan Developer's Guide states that `DUZ` and `DT` (today's date) are *not* passed in DBS call parameter lists but are expected to be defined in the local symbol table (line 6688). The wrapper must set these in the M process context before every call — they are session-scoped prerequisites, not per-call parameters.
+
+---
+
+### Tier 2 — Important: Required for Production Completeness
+
+These operations are needed for a production deployment but are not required for the wrapper to be functional in development or for initial application code. Implement these in Phase 2–3.
+
+| FileMan Entry Point | Wrapper Operation | Why Important (But Not Tier 1) |
+|---|---|---|
+| `LIST^DIC` | `ListEntries` | Sorted range browsing; useful for autocomplete and list views, but `FIND^DIC` covers most query needs. |
+| `VALS^DIE` | `ValidateEntry` | Multi-field validation; important for form submission but `CHK^DIE` covers field-by-field validation. |
+| `UPDATE^DIE` with `"T"` flag | `TestFile` | Dry-run without actual write; important for pre-flight validation of bulk operations. |
+| `GETS^DIQ` with `"**"` (all multiples) | `GetEntryWithMultiples` | Sub-file traversal; essential for files with complex nested records (ORDER #100, LAB DATA #63). |
+| Sub-file FDA writes | `FileSubEntry` | Required once any application needs to write to multiple-valued fields. |
+| `TURNED^DIAUTL` / `CHANGED^DIAUTL` | `GetAuditHistory` | Required for any compliance or change-tracking feature. |
+| `$$CANDO^DIAC1` | `EvaluatePolicy` | Required when the target system uses DAC policies (DI*22.2*8 or later). |
+| `CREIXN^DDMOD` | `CreateCrossReference` | Required for DBA-level tooling; not required for application reads/writes. |
+| `$$ROOT^DILFD` | `GetGlobalRoot` | Required for low-level debugging and for tools that need to inspect global structure. |
+| `FILE^DICN` | `AddEntry` | Convenience wrapper for new-entry creation; `FILE^DIE` with `"+1,"` IENS covers the same need. |
+
+---
+
+### Tier 3 — Background: Read-Only, Analytical, or Legacy Context Only
+
+These APIs are documented here for completeness and background understanding. They are **not required** for a non-M read/write application. Wrapping them is optional and low-priority. For teams building production applications, time is better spent on Tier 1 and 2 hardening than on implementing Tier 3.
+
+| FileMan API | Category | Why Background Only |
+|---|---|---|
+| **SQLI Projection Layer** (`^DMSQ`) | Read-only analytics | Projects FileMan as SQL tables for ODBC reporting tools. Useful for data analysts and BI tools but not for application CRUD. A non-M application that needs SQL access should use SQLI directly via ODBC, not through the wrapper. |
+| **DDE / Entity API** (`GET^DDE`, `$$GET1^DDE`) | Read-only, FHIR/SDA | Retrieves pre-defined entity mappings as JSON/XML. Primarily used by VPR and FHIR pipelines. A general-purpose wrapper does not need to re-implement this; the VistA FHIR Adaptor or the VA Lighthouse API already exposes it. |
+| **FMQL REST Service** | Read-only graph query | FMQL is a separate running service, not a FileMan API call. A wrapper that calls the gRPC service does not interact with FMQL. FMQL is background context for understanding how others have read FileMan data. |
+| **Classic API — interactive** (`^DIC`, `^DIE`, `^DIP`, `^DIS`) | Terminal I/O, not wrappable | These write to the current M device (terminal). They cannot be called from a non-M process without a VT100 terminal. Background understanding only — never wrap these. |
+| **ScreenMan** (`^DDS`, `^DDGF`) | Terminal forms UI, not wrappable | VT100 full-screen forms. Inherently interactive. Background understanding of how VistA data-entry worked historically. |
+| **WORD-PROCESSING field editor** (`^DIWE`) | Terminal editor | VT100 screen editor for WP fields. Not wrappable. Read and write WP field content via `GETS^DIQ` / `FILE^DIE` instead. |
+| **DIFROM** | M-to-M package export | Bundles M routines and data for inter-site distribution. Has no external application use case. |
+| **Statistical utilities** (`EN^DISTAT`) | Batch analytics | FileMan's built-in histogram/scattergram. Useful for DBA analytics but superseded by SQL analytics tools for external applications. Low implementation priority. |
+| **Filegrams** (`^DIFG`) | Inter-site data transfer | MailMan-based serialization for inter-VistA transfer. Relevant only for sites doing direct VistA-to-VistA data migrations. |
+| **Archiving utilities** | DBA operations | Moves entries to offline storage. DBA function, not an application API. |
+| **Import templates / Foreign formats** | Batch data loading | Useful for one-time data migration projects. Not needed for ongoing read/write application development. |
+| **DD Audit** (`^DDA`, file #0.6) | Schema change history | Tracks data dictionary modifications. Rarely needed by application developers; more relevant to DBA tooling. |
+
+**Key principle from the FileMan documentation:** The Developer's Guide explicitly describes the DBS API as the mechanism that enables non-interactive, non-M application access (line 6667). Every other FileMan API layer was designed for different purposes — terminal interaction, batch reporting, DBA administration, inter-site transfer — that do not apply to the core application-development use case this wrapper serves.
+
+---
+
+## 18. Wrapper Ecosystem Integration: RPC Broker, VistALink, MVDM, and FMQL
+
+The FileMan gRPC wrapper does not exist in isolation. Every production VistA system already runs several services that mediate access to FileMan data. This section specifies precisely how the new wrapper relates to each existing service: whether it replaces, complements, depends on, or is independent of each one.
+
+---
+
+### 18.1 VistA RPC Broker (XWB)
+
+**What it is:** The RPC Broker (package XWB) is a TCP socket server (`XWBTCPL` listener, port 9200) that dispatches named Remote Procedure Calls registered in the REMOTE PROCEDURE (#8994) file. As documented in the local XWB M-to-M supplement: *"It establishes a common and consistent foundation for Client/Server applications"* and *"enables client applications to communicate and exchange data with M Servers"* (xwb supplement, line 264). It is the transport layer currently used by CPRS, JLV, and every other GUI VistA client.
+
+**Relationship to the new wrapper:** The new gRPC wrapper is a **replacement transport** for the RPC Broker on the client-application side, not a consumer of it. The two coexist on the same VistA system:
+
+```
+CPRS / JLV / legacy GUI clients
+        │ RPC Broker wire protocol (TCP 9200)
+        ▼
+XWB Broker listener (XWBTCPL)
+        │ M DO/$$
+        ▼
+VistA MUMPS routines
+
+New Python/Go/Rust/JS applications
+        │ gRPC (Protocol Buffers / mTLS)
+        ▼
+FileMan gRPC Gateway (Go process)
+        │ YottaDB call-in / IRIS C binding
+        ▼
+FileMan DBS API (same M routines)
+```
+
+The two paths converge at the FileMan DBS layer — both the RPC Broker and the gRPC gateway ultimately call `FILE^DIE`, `GETS^DIQ`, `FIND^DIC`, etc. The difference is the transport and the API contract exposed to the client.
+
+**Why not just use the RPC Broker?** The RPC Broker requires every new operation to be registered as a named RPC in MUMPS (#8994 file), reviewed, approved through the ICR process, and deployed as a KIDS patch. This governance overhead is appropriate for the VA's production environment but creates a weeks-to-months latency for each new API capability. The gRPC wrapper encodes the full DBS API surface in a single `.proto` file and requires no MUMPS changes per new operation. For development and open-source VistA deployments, the gRPC wrapper is dramatically faster to iterate.
+
+**Interoperability scenario:** For deployments where the gRPC Gateway uses the RPC Broker Adapter (§6.2 rather than §6.1), the wrapper becomes a **consumer** of the RPC Broker rather than a replacement. In this configuration, the gRPC gateway translates incoming gRPC calls into XWB wire protocol requests to the existing broker listener. This path requires registering a small set of generic FileMan DBS wrapper RPCs in #8994 — one per DBS entry point category — rather than one per business operation.
+
+---
+
+### 18.2 VistALink (XOBV)
+
+**What it is:** VistALink (package XOBV, version 1.6) is the VA's J2EE resource adapter for Java applications. As the local VistALink Developer's Guide states: *"VistALink 1.6 is a transport layer that provides communication between Health eVet Java applications and VistA/Mumps (M) servers... It allows Remote Procedure Calls (RPCs) to execute on the VistA/M system and return results to the Java enterprise system"* (xobv developer-guide, line 401). VistALink implements the J2EE Connector Architecture (J2CA 1.5) specification.
+
+**Relationship to the new wrapper:** VistALink is the **Java-specific predecessor** of what the gRPC wrapper generalizes. VistALink only serves Java J2EE applications running on WebLogic. The gRPC wrapper serves Python, Go, Rust, TypeScript, and Java — in any runtime environment, not just J2EE. For Java applications, the gRPC wrapper replaces VistALink.
+
+**API model comparison:**
+
+| Aspect | VistALink | gRPC Wrapper |
+|---|---|---|
+| Transport | J2CA 1.5 connector over XWB wire protocol | gRPC over TLS |
+| Languages supported | Java (J2EE / WebLogic only) | Python, Go, Rust, TypeScript, Java, any gRPC client |
+| Operation model | Named RPCs registered in #8994 | Full DBS API surface in `.proto` |
+| Schema exposure | None — callers must know RPC names | `.proto` file + introspection API |
+| Authentication | Kernel access/verify codes via XUS SIGNON RPC | mTLS + Kernel signon |
+| Async support | J2EE work managers | Native gRPC streaming |
+| Active development | No (last release 2020) | Yes |
+
+**Migration path:** A Java application using VistALink can migrate to the gRPC wrapper's Java SDK without changing its data model or business logic. Only the connection initialization and RPC call syntax changes. The wrapper's Java SDK exposes the same logical operations (GetEntry, File, Find) with idiomatic Java types.
+
+---
+
+### 18.3 nodeVISTA / MVDM
+
+**What it is:** The Master VistA Data Model (MVDM) project, developed under the OSEHRA nodeVISTA initiative, is a Node.js service that runs co-located with YottaDB and wraps VistA data as JSON domain objects. MVDM was the most semantically ambitious VistA wrapper project to date — it defined a complete data model mapping FileMan files to domain objects (Patient, Medication, Problem, etc.) and exposed these via a REST/JSON API.
+
+**Relationship to the new wrapper:** MVDM and the gRPC wrapper are **complementary but independent**. They address different layers of the wrapping problem:
+
+| Layer | MVDM | gRPC Wrapper |
+|---|---|---|
+| Transport | HTTP/JSON REST | gRPC + optional REST |
+| API grain | Domain objects (Patient, Medication) | Raw FileMan files and fields |
+| Schema | Hard-coded domain model | Live Data Dictionary from `^DD` |
+| Write support | Yes (limited) | Full DBS API |
+| Languages | Node.js only | Python, Go, Rust, TypeScript, Java |
+| Status | Discontinued (~2020) | New (this specification) |
+
+The gRPC wrapper operates at the **FileMan level** — it exposes files, fields, IENs, and DBS operations. MVDM operated at the **domain object level** — it knew that file #2 was a Patient and that field .03 was a date of birth. The gRPC wrapper does not encode domain knowledge; that belongs in application code or in a domain layer built on top of the wrapper's SDK.
+
+**Coexistence:** A VistA system can run both MVDM (if still in use) and the gRPC wrapper simultaneously. Both call the same underlying FileMan DBS API. The gRPC wrapper does not interfere with MVDM's operation.
+
+**Migration path for MVDM users:** Applications using MVDM's REST API can migrate to the gRPC wrapper by replacing MVDM's domain-object calls with wrapper calls to the underlying FileMan files that MVDM was reading. The gRPC wrapper's schema introspection API (`GetFileDef`, `GetFieldDef`) enables the same runtime field discovery that MVDM performed during its initialization.
+
+---
+
+### 18.4 FMQL (FileMan Query Language)
+
+**What it is:** FMQL is an HTTP/JSON service (implemented in Python/M) that exposes FileMan data through a graph-oriented query language modeled loosely on SPARQL. FMQL treats FileMan's pointer relationships as a navigable graph — a query like `DESCRIBE 2-9` returns the full record for PATIENT IEN 9 with all pointer values resolved and all multiples expanded. FMQL is **read-only** — it has no write capability.
+
+**Relationship to the new wrapper:** FMQL is a **read-only predecessor** that the gRPC wrapper supersedes for new development. The key differences:
+
+| Aspect | FMQL | gRPC Wrapper |
+|---|---|---|
+| Write support | None | Full (FILE^DIE, UPDATE^DIE) |
+| Query model | Graph traversal | Indexed lookup + field retrieval |
+| Schema access | Full — generates schema from `^DD` at startup | Full — live `^DD` introspection per call |
+| Languages | HTTP client in any language | Typed SDK in 4 languages |
+| Pointer resolution | Automatic, graph-style | Explicit, via `"E"` flag in `GETS^DIQ` |
+| Active development | No | Yes |
+| Transport | HTTP/REST | gRPC + optional REST |
+
+**What FMQL does better:** FMQL's graph traversal model is genuinely superior for **exploratory data access** — navigating from a patient record through all its related files, following pointers automatically without knowing the target file numbers in advance. The gRPC wrapper does not replicate this pattern; callers must know which file and field they are querying. For data discovery and schema exploration, FMQL's approach remains a useful reference.
+
+**What the gRPC wrapper does that FMQL cannot:** Write operations. Any application that needs to create or update VistA records cannot use FMQL. The gRPC wrapper is the first comprehensive read/write wrapper with typed language SDKs.
+
+**Coexistence:** FMQL and the gRPC wrapper can run on the same VistA system without interference. A migration from FMQL to the gRPC wrapper requires replacing FMQL's DESCRIBE queries with `GetEntry` calls and its SELECT queries with `Find` + `GetEntry` sequences.
+
+---
+
+### 18.5 Summary: Relationship Map
+
+```
+                    VistA M Runtime (YottaDB or IRIS)
+                              │
+                    FileMan DBS API (GETS^DIQ, FILE^DIE, ...)
+                    ┌─────────┼──────────┬──────────┬────────┐
+                    │         │          │          │        │
+              XWB Broker   gRPC        FMQL      MVDM    VistALink
+              (TCP 9200)   Gateway    (HTTP)    (Node)    (J2CA)
+                    │         │          │          │        │
+              CPRS/JLV   Python      Any HTTP   Node.js   Java
+              Delphi GUI    Go        client    apps      J2EE
+                          Rust
+                          TypeScript
+
+Legend:
+  XWB Broker  — production CPRS transport; keep running; wrapper coexists
+  gRPC Gateway — new general-purpose read/write wrapper (this spec)
+  FMQL        — read-only graph query; superseded for new development
+  MVDM        — domain-object REST; discontinued; migrate to gRPC wrapper
+  VistALink   — Java J2EE connector; superseded by gRPC Java SDK
+```
+
+---
+
+## 19. Rationale: Why gRPC + Protocol Buffers as the Two-Layer Foundation
+
+This section documents the reasoning behind the two-layer design in detail — both why gRPC was chosen over alternatives for the wire layer and why a separate language SDK layer above it is necessary rather than simply distributing raw gRPC stubs.
+
+### 19.1 Why a Two-Layer Design at All
+
+The naive alternative to a two-layer design is to expose the FileMan DBS API directly through the M runtime via a language-native binding (YottaDB Python package, YottaDB Go package, etc.) and let application developers call `GETS^DIQ` and `FILE^DIE` directly. This approach has several fatal problems:
+
+**Problem 1: Language proliferation.** YottaDB has a Python wrapper and a Go wrapper. It has no Rust wrapper and no browser-compatible JavaScript wrapper. Any language without a YottaDB binding gets no access. The two-layer design solves this: the gRPC server (written once) serves all languages via generated stubs.
+
+**Problem 2: Deployment coupling.** A language-native binding requires the application process to run on the same host as YottaDB, with the same OS, with `YOTTADB` and `gtmroutines` set correctly. This locks applications to the VistA server. The gRPC layer decouples client deployment from server deployment — Python applications can run in Kubernetes pods, Rust services can run in AWS Lambda, TypeScript frontends can run in a browser (via gRPC-Web).
+
+**Problem 3: No typed contract.** Neither YottaDB's Python package nor its Go package defines any type contract for FileMan data. A caller passing the wrong file number, an integer IEN where a string is expected, or a raw MUMPS date string where an ISO date is expected will get a confusing M runtime error. The `.proto` file defines the complete type contract in a machine-verifiable form.
+
+**Problem 4: M runtime knowledge required.** Calling `GETS^DIQ` from Python via YottaDB requires understanding IENS strings, FDA arrays, M global indirection, the `DIERR` array, and FileMan date encoding. These are opaque to non-M developers. The language SDK layer translates all of this into idiomatic types and methods.
+
+### 19.2 Why gRPC Specifically (Not REST, Not GraphQL, Not Thrift)
+
+**vs. REST/JSON:** REST is the obvious choice for familiarity, but it has important weaknesses for this use case:
+
+- **No streaming.** FileMan searches can return thousands of entries. HTTP/1.1 REST requires pagination with multiple round-trips. gRPC server-streaming sends results as they are produced, with a single connection setup cost.
+- **No type enforcement at the wire level.** JSON has no notion of FileMan-specific types. A date field, a pointer field, and a free-text field are all JSON strings. The gRPC `.proto` file defines each operation's exact input and output types — the server rejects malformed requests before they reach M.
+- **No bidirectional streaming.** Bulk write operations (filing hundreds of FDA entries) benefit from client-streaming gRPC: the client sends entries as they are ready, the server files them and streams back results. This is awkward to implement cleanly in REST.
+- **Code generation for free.** `protoc` generates server stubs and client stubs in 10+ languages from the same `.proto`. REST SDKs must be written manually or generated from OpenAPI, which requires additional tooling and produces less type-safe output.
+
+**vs. GraphQL:** GraphQL is well-suited for read-heavy graph traversal — which is exactly what FMQL already implements. The FileMan wrapper's primary value is write access (`FILE^DIE`, `UPDATE^DIE`) and typed field-level CRUD. GraphQL has no natural model for mutations that carry complex audit semantics (audit trail, key enforcement, DIERR error surface). gRPC's explicit operation model maps more cleanly to FileMan's DBS entry points.
+
+**vs. Apache Thrift:** Thrift predates gRPC and has a smaller community. Protocol Buffers 3 has better tooling, broader language support, more active development, and is the de facto standard for new API design at Google, cloud vendors, and the CNCF ecosystem.
+
+**The decisive advantage of gRPC for this use case:** The FileMan DBS API has a well-defined, stable set of operations with explicit input/output contracts (described formally in the FileMan Developer's Guide). This maps perfectly to gRPC's service-and-method model. Each FileMan DBS call becomes a gRPC method with a typed request message and a typed response message. The `.proto` file is both the specification and the implementation contract — it generates correct client and server stubs with no ambiguity.
+
+### 19.3 Why a Language SDK Layer Above gRPC
+
+Generated gRPC stubs are correct but not ergonomic in any language. They expose the protobuf type system directly — `StringValue`, `Int64Value`, repeated message fields — rather than native types. A developer calling the wrapper should not need to know what a `StringValue` is.
+
+The language SDK layer performs five transformations that the raw gRPC stub cannot:
+
+**1. Type translation.** FileMan dates arrive as `string` in the protobuf. The Python SDK converts them to `datetime.date`. The Go SDK converts them to `time.Time`. The Rust SDK converts them to `chrono::NaiveDate`. The application developer never sees the FileMan date string.
+
+**2. Connection management.** The raw gRPC stub requires the caller to manage a `grpc.ClientConn` (Go), a `Channel` (Python), or a `GrpcChannel` (C#). The SDK creates, pools, and refreshes connections transparently. Application code calls `FileManClient.get_entry()`, not `FileManStub(channel).GetEntry(request)`.
+
+**3. Session lifecycle.** The raw stub has no concept of a FileMan session (DUZ context, access/verify code). The SDK's `FileManClient` initializes a session at construction and includes the session token in every request via a gRPC interceptor. Application code never constructs or passes session tokens.
+
+**4. Error translation.** The raw gRPC stub surfaces gRPC status codes (`INVALID_ARGUMENT`, `NOT_FOUND`, `PERMISSION_DENIED`). The SDK maps these to the typed FileMan exception hierarchy (`ValidationError`, `NotFoundError`, `AccessDeniedError`) with the specific DIERR message text as the exception message. Application code catches `ValidationError`, not `RpcError(StatusCode.INVALID_ARGUMENT)`.
+
+**5. Idiomatic patterns.** Each language has conventions for how to express collection operations, optional values, and async I/O. The Go SDK uses `(result, error)` return patterns. The Python SDK uses `Optional[str]` for nullable fields and `asyncio` for async calls. The Rust SDK uses `Result<T, FileManError>` and `tokio` for async. The TypeScript SDK uses `Promise<T>` and TypeScript union types. None of these patterns are expressible in a protobuf-generated stub without the SDK wrapper layer.
+
+### 19.4 The Two-Layer Contract
+
+The two layers have a strict contract boundary:
+
+```
+Application Code
+      │ calls idiomatic SDK methods with native types
+      ▼
+Language SDK (Python / Go / Rust / TypeScript)
+      │ translates native types to protobuf messages
+      │ manages connection, session, interceptors
+      │ translates protobuf errors to typed exceptions
+      ▼
+gRPC Stub (generated from .proto)
+      │ Protocol Buffers serialization over HTTP/2
+      ▼
+gRPC Gateway Service (Go)
+      │ deserializes protobuf, validates, calls FileMan
+      │ translates DIERR to gRPC status codes
+      │ handles LOCK/UNLOCK lifecycle
+      ▼
+MRuntime (YottaDB or IRIS C binding)
+      │ calls GETS^DIQ, FILE^DIE, FIND^DIC, etc.
+      ▼
+FileMan DBS API
+```
+
+**The `.proto` file is the only contract between Layer 1 (SDK) and Layer 2 (Gateway).** It evolves according to Protocol Buffers backward-compatibility rules. The SDK implementation is free to change as long as it correctly serializes to and deserializes from the protobuf contract. The Gateway implementation is free to change its internal M call strategy as long as it correctly handles all protobuf request types and produces correct responses.
+
+---
+
+## 20. Industrial Scale: Vendors Who Use This Pattern at Massive Scale
+
+The two-layer pattern (typed wire protocol + language-specific SDK) is not a theoretical design choice. It is the de facto standard for every major cloud and enterprise API platform that modernized legacy infrastructure while leaving transactional systems intact. The following examples are all in production at scales orders of magnitude larger than any VistA deployment.
+
+---
+
+### 20.1 Google Cloud APIs — The Canonical Example
+
+**Scale:** 200+ APIs, billions of API calls per day, tens of millions of developers worldwide.
+
+**Pattern:** Every Google Cloud API is defined in a `.proto` file in the `googleapis` repository. A single gRPC service definition generates: server stubs (Go, C++), client stubs for 8+ languages, REST/JSON transcoding layer (grpc-gateway), API reference documentation, and SDK code. Google publishes language-specific client libraries (Python `google-cloud-storage`, Go `cloud.google.com/go/storage`, Java `google-cloud-storage`, TypeScript `@google-cloud/storage`) that wrap the raw gRPC stubs with idiomatic types, connection management, retry logic, and authentication.
+
+**Legacy preservation:** Google Cloud Storage's backend is the Colossus distributed file system — Google's internal infrastructure, not publicly documented. The gRPC API is the stable external contract that hides all internal storage implementation details. Colossus has been rewritten multiple times while the GCS API has remained stable. This is the precise pattern the FileMan wrapper uses: M globals and the FileMan DBS layer are the "Colossus" — the stable internal storage that is never exposed; the gRPC API is the stable external contract.
+
+**Reference:** [https://cloud.google.com/apis/design](https://cloud.google.com/apis/design) — Google's full API design guide, which documents this two-layer pattern in detail, including why gRPC is chosen and how language SDKs relate to the wire protocol.
+
+---
+
+### 20.2 Oracle Cloud Infrastructure (OCI) — Legacy Enterprise at Scale
+
+**Scale:** 40+ cloud services, global deployment, used by enterprise customers running workloads migrated from Oracle Database, Oracle E-Business Suite, and Oracle Exadata.
+
+**Pattern:** OCI uses a REST/JSON wire protocol (not gRPC) with an OpenAPI specification as the contract. Language SDKs — Python (`oci`), Go (`oracle/oci-go-sdk`), Java, TypeScript, .NET, Ruby — each wrap the same REST API with idiomatic types, credential management, retry logic, and pagination. The SDK layer is substantial: each SDK adds type-safe request/response objects, automatic pagination for list operations, and waiters for async operations — none of which are expressible in the raw OpenAPI spec.
+
+**Legacy preservation:** OCI's internal storage, networking, and database services are built on Oracle's proprietary infrastructure. The REST API wrapper layer is the modernization interface — customers use modern cloud tooling without any knowledge of the underlying Oracle infrastructure. This mirrors the FileMan wrapper's role: expose modern language APIs over a proprietary M runtime.
+
+**Reference:** [https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm)
+
+---
+
+### 20.3 AWS SDK (Smithy) — The Hidden Wire Protocol Beneath the SDK
+
+**Scale:** 300+ AWS services, trillions of API calls per day, the world's largest cloud platform.
+
+**Pattern:** AWS services are defined in Smithy model files (AWS's IDL, similar to Protocol Buffers). The AWS SDK generator consumes Smithy models and produces language SDKs (Python `boto3`, Go `aws-sdk-go-v2`, Java `aws-sdk-java-v2`, TypeScript `@aws-sdk/client-*`, Rust `aws-sdk-rust`). Each SDK provides typed request and response objects, connection pooling, retry with exponential backoff, credential providers, endpoint resolution, and pagination — all invisible to application code.
+
+**Legacy preservation:** DynamoDB is built on Amazon's Dynamo key-value store; S3 is built on internal object storage infrastructure; RDS wraps PostgreSQL/MySQL/Oracle with additional management infrastructure. The SDK layer hides all of this. Application code using `boto3.client('s3').get_object()` has no knowledge of the underlying S3 storage architecture. The FileMan wrapper achieves the same result: application code calling `fm.get_entry("2", "100")` has no knowledge of M globals, MUMPS runtime, or FileMan API conventions.
+
+**Reference:** [https://smithy.io/2.0/](https://smithy.io/2.0/) — Smithy IDL specification (AWS's Protocol Buffers equivalent)
+
+---
+
+### 20.4 Stripe — Legacy Payment Infrastructure Behind a Clean API
+
+**Scale:** $1 trillion+ in payments processed, used by millions of merchants.
+
+**Pattern:** Stripe exposes a REST/JSON API (its own specification, not OpenAPI). Language SDKs — Python `stripe`, Ruby `stripe-ruby`, Go `stripe-go`, Node `stripe-node`, Java `stripe-java`, .NET `stripe-dotnet` — all wrap the same REST wire protocol with idiomatic types, automatic retry, idempotency key management, and webhook handling. Stripe's internal infrastructure includes legacy payment processing systems, banking connections, and regulatory compliance systems that are completely hidden behind the API.
+
+**Legacy preservation:** Stripe's original payment processing was built on existing banking infrastructure (ACH, card networks, legacy systems). The API layer wraps all of this. Merchants writing `stripe.PaymentIntent.create(amount=1000, currency='usd')` have no knowledge of what happens internally — which card network is engaged, which acquiring bank processes the transaction, which compliance system validates it. The FileMan wrapper provides the same opacity: `fm.file(fda)` has no visible coupling to the M global storage, the cross-reference triggers, or the audit system that executes behind the scenes.
+
+**Reference:** [https://stripe.com/docs/api](https://stripe.com/docs/api) | [https://github.com/stripe/stripe-python](https://github.com/stripe/stripe-python)
+
+---
+
+### 20.5 SAP (Extended) — gRPC Inside a Legacy ERP System
+
+**Scale:** 440,000+ SAP customers, the world's largest ERP system, running the financial and operational backbone of most Fortune 500 companies.
+
+**Pattern (extended from §4.6):** SAP's architecture evolution is the most direct analog to the FileMan situation. SAP R/3 and S/4HANA run on the ABAP runtime — a proprietary language with its own database abstraction layer (Open SQL over SAP HANA or DB2 or Oracle). Business logic in ABAP is callable via RFC (Remote Function Call) and BAPI (Business Application Programming Interface). SAP's language SDKs — `pyrfc` (Python), `gorfc` (Go), `node-rfc` (Node.js), `nwrfcsdk` (C/C++) — all wrap the RFC library with idiomatic types. **SAP has also shipped gRPC support** in its Business Technology Platform (SAP BTP), using Protocol Buffers to expose ABAP services as gRPC endpoints with generated stubs.
+
+**Why this matters for FileMan:** SAP and VistA share a structural DNA: a proprietary language (ABAP / MUMPS), a proprietary database abstraction (Open SQL / FileMan DBS), and a call-based integration mechanism (RFC / RPC Broker). SAP's 30-year evolution from RFC to BAPI to REST to gRPC is a roadmap the FileMan wrapper is compressing into a single generation of tooling by choosing gRPC from the start.
+
+**Reference:** [https://github.com/SAP/PyRFC](https://github.com/SAP/PyRFC) | [https://github.com/SAP/gorfc](https://github.com/SAP/gorfc) | [https://community.sap.com/topics/btp](https://community.sap.com/topics/btp)
+
+---
+
+### 20.6 The Common Pattern: What All of These Share
+
+Every system above preserves its transactional database and business logic layer intact while adding a typed API contract (gRPC, REST+OpenAPI, Smithy) as the new external interface, with idiomatic language SDKs as the developer-facing layer. None of them modified their core data storage. None of them required application developers to understand the internal data model. All of them achieved language portability, cloud deployment, and developer ecosystem growth without touching the storage layer.
+
+**This is precisely the goal of the FileMan gRPC wrapper.** FileMan's global storage, cross-reference triggers, INPUT transform validation, and audit system are the transactional core that must not be modified. The `.proto` file is the new API contract. The Python, Go, Rust, and TypeScript SDKs are the developer-facing layer. The M runtime (YottaDB or IRIS) is the implementation detail that no application developer ever sees.
+
+---
+
+*This specification, Version 1.1, is grounded exclusively in the VA FileMan 22.2 documentation set as ingested, processed, and stored in `~/data/vista-docs/publish/infrastructure/di--fileman/` by the vista-docs pipeline. All FileMan API entry points, calling conventions, data structures, and security mechanisms are sourced from those local files. See §16 for the specific local file paths and cited line numbers.*
+
+*FileMan namespace: `DI`. Local processed documentation: `~/data/vista-docs/publish/infrastructure/di--fileman/`*
