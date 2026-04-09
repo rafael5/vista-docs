@@ -2,7 +2,7 @@
 
 **Enabling Non-M Language Application Development Against the FileMan Database Engine**
 
-*Version 1.3 — April 2026*
+*Version 1.4 — April 2026*
 *Audience: Software architects, API engineers, and VistA modernization program leads*
 
 ---
@@ -136,13 +136,15 @@ The following principles are drawn from production experience at major instituti
 
 ### 3.3 Transport Strategy Options
 
-| Strategy | Mechanism | Latency | Co-location Required | Maturity |
-|---|---|---|---|---|
-| **YottaDB embedded call-in** | C shared library via FFI | Sub-millisecond | Yes — same host | Production (YottaDB 1.x) |
-| **VistA RPC Broker (TCP)** | XWB wire protocol, TCP port 9200 | Network round-trip | No | Production since 1993 |
-| **Purpose-built gRPC service** | gRPC over TLS, Protocol Buffers | Network round-trip | No | Greenfield |
-| **REST/JSON over HTTP** | HTTP/1.1 or HTTP/2 | Network round-trip | No | Greenfield (see MVDM) |
-| **FMQL REST service** | HTTP/JSON, GraphQL-like syntax | Network round-trip | No | Research/prototype |
+| Strategy | M Runtime | Mechanism | Latency | Co-location Required | Maturity |
+|---|---|---|---|---|---|
+| **YottaDB embedded call-in** | YottaDB | C shared library (`libyottadb.h`) via FFI; call-in table for routine dispatch | Sub-millisecond | Yes — same host | Production (YottaDB r1.34+) |
+| **IRIS embedded call-in** | InterSystems IRIS | C shared library (`irisdb.h`) via FFI; push-invoke model for routine dispatch | Sub-millisecond | Yes — same host | Production (IRIS 2022.1+) |
+| **IRIS TCP SuperServer** | InterSystems IRIS | IRIS wire protocol over TCP port 1972; `intersystems-irispython` or Java binding | LAN: 2–5 ms per call | No — remote host supported | Production (VA standard) |
+| **VistA RPC Broker (TCP)** | Either | XWB wire protocol, TCP port 9200; dispatches named RPCs | Network round-trip | No | Production since 1993 |
+| **Purpose-built gRPC service** | Either | gRPC over TLS, Protocol Buffers; gateway runs co-located with M runtime | Network round-trip | Gateway only | Greenfield |
+| **REST/JSON over HTTP** | Either | HTTP/1.1 or HTTP/2; OpenAPI 3.1 specification | Network round-trip | No | Greenfield (see MVDM) |
+| **FMQL REST service** | Either | HTTP/JSON, GraphQL-like syntax; read-only | Network round-trip | No | Research/prototype |
 
 The recommended architecture uses **two complementary transports**:
 
@@ -1913,9 +1915,29 @@ Every system above preserves its transactional database and business logic layer
 
 ## 21. IRIS Implementation Guide: Building the Wrapper on InterSystems IRIS
 
-This section is a comprehensive implementation guide for building the FileMan API wrapper gRPC Gateway on a VistA system running InterSystems IRIS. It assumes IRIS is already installed with a working VistA instance and that the FileMan 22.2 routines (`DI*` namespace) are installed and operational. It does not cover YottaDB — that path is addressed in §6.1 and §6.4.
+The full IRIS implementation guide has been extracted to a dedicated document:
 
-The VA FileMan Technical Manual documents that the KIDS build distribution for FileMan 22.2 assumes installation on a Caché system (`technical-manual.md`, line 4167), and Caché is IRIS's predecessor — every production VA VistA deployment runs on IRIS or Caché. This guide therefore reflects the primary production target.
+**[fileman-iris-implementation-guide.md](fileman-iris-implementation-guide.md)**
+
+That guide covers all nine subsections in depth:
+
+| Section | Content |
+|---|---|
+| §1 — Architecture Fundamentals | Namespaces, global mapping, IPC model |
+| §2 — Prerequisites | IRIS version, required components, environment variables, verification |
+| §3 — C Binding (`irisdb.h`) | `IRISStart`, `IRISEvalA`, push-invoke model, `GETS^DIQ`, `$$FIND1^DIC`, result array traversal, `FILE^DIE`, security context, global cleanup |
+| §4 — Python Binding | `intersystems-irispython`, embedded mode, namespace/DUZ setup, `RunM`, `CallM`, `gref`, `FILE^DIE`, WP fields |
+| §5 — TCP SuperServer | Port 1972, Python TCP connection, authentication |
+| §6 — IRISRuntime Interface | MRuntime method table, connection pool sizing, `DT` refresh |
+| §7 — Error Handling | `IRIS_OK`/`IRIS_ERROR` codes, `IRISGetError`, DIERR structure, M vs. FileMan error distinction |
+| §8 — Testing | Connection, FileMan availability, end-to-end read, end-to-end write |
+| §9 — Deployment Checklist | 10-step verification checklist |
+
+**Key IRIS-specific facts:**
+- Every production VA VistA deployment runs on IRIS or Caché (FileMan Technical Manual, `technical-manual.md`, line 4167)
+- Arguments are pushed in **reverse order** for `IRISDoFun` (unlike YottaDB's forward-order `ydb_ci`)
+- Namespace switch (`SET $NAMESPACE="VISTA"`) is mandatory after `IRISStart`
+- Pool size is bounded by available IRIS license units; each session consumes one unit
 
 ---
 
@@ -2438,9 +2460,30 @@ err.kill()
 
 ## 22. YottaDB Implementation Guide: Building the Wrapper on YottaDB
 
-This section is a comprehensive implementation guide for building the FileMan API wrapper gRPC Gateway on a VistA system running YottaDB. It assumes YottaDB is already installed with a working VistA instance and that the FileMan 22.2 routines (`DI*` namespace) are installed and operational in the YottaDB global directory. For InterSystems IRIS, see §21.
+The full YottaDB implementation guide has been extracted to a dedicated document:
 
-YottaDB is an open-source, high-performance M/MUMPS runtime and database engine that has become the primary platform for open-source VistA deployments. It is fully compatible with ANSI Standard M and with the GT.M runtime from which it was forked. All FileMan DBS API entry points run without modification on YottaDB.
+**[fileman-yottadb-implementation-guide.md](fileman-yottadb-implementation-guide.md)**
+
+That guide covers all nine subsections in depth:
+
+| Section | Content |
+|---|---|
+| §1 — Architecture Fundamentals | Global directory (no namespaces), routine search path, process model, multi-threaded call-in |
+| §2 — Prerequisites | YottaDB r1.34+, required components, environment variables, verification |
+| §3 — C Binding (`libyottadb.h`) | `ydb_init`, `ydb_ci`, call-in table, `ydb_buffer_t`, `GETS^DIQ`, `$$FIND1^DIC`, result array traversal, `FILE^DIE`, security context |
+| §4 — Python Binding | `yottadb` PyPI package, `ydb.ci`, `ydb.get/set/delete_tree`, subscript iteration, `FILE^DIE`, WP fields |
+| §5 — Go Binding | `lang.yottadb.com/go/yottadb`, `KeyT`, `ValST`, `CallMT` |
+| §6 — YDBRuntime Interface | MRuntime method table, concurrency (no license limit), `ydb_tp_s` transaction support |
+| §7 — Error Handling | `YDB_OK`/`YDB_ERR_NODEEND`/`YDB_ERR_GVUNDEF`, `ydb_message`, DIERR structure |
+| §8 — Testing | Environment check, FileMan availability, end-to-end read, end-to-end write |
+| §9 — Deployment Checklist | 10-step verification checklist |
+
+**Key YottaDB-specific facts:**
+- No namespace concept — global routing is via the `.gld` global directory file
+- Arguments to `ydb_ci` are in **forward (declaration) order** (unlike IRIS's push-invoke model)
+- No per-connection license cost — pool size is bounded by CPU/IO capacity, not licenses
+- `ydb_tp_s()` provides ACID transactions wrapping multiple `FILE^DIE` calls
+- No built-in TCP SuperServer — co-location with YottaDB is required for the C/Python/Go bindings
 
 ---
 
@@ -3188,6 +3231,6 @@ ydb.delete_tree("^||FMTEST_ERR")
 
 ---
 
-*This specification, Version 1.3, is grounded exclusively in the VA FileMan 22.2 documentation set as ingested, processed, and stored in `~/data/vista-docs/publish/infrastructure/di--fileman/` by the vista-docs pipeline. All FileMan API entry points, calling conventions, data structures, and security mechanisms are sourced from those local files. See §16 for the specific local file paths and cited line numbers.*
+*This specification, Version 1.4, is grounded exclusively in the VA FileMan 22.2 documentation set as ingested, processed, and stored in `~/data/vista-docs/publish/infrastructure/di--fileman/` by the vista-docs pipeline. All FileMan API entry points, calling conventions, data structures, and security mechanisms are sourced from those local files. See §16 for the specific local file paths and cited line numbers.*
 
 *FileMan namespace: `DI`. Local processed documentation: `~/data/vista-docs/publish/infrastructure/di--fileman/`*
