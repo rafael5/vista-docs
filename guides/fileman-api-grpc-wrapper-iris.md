@@ -17,7 +17,7 @@ This guide covers the complete, practical implementation of the FileMan API wrap
 - FileMan 22.2 routines (`DI*` namespace) are installed and operational
 - The reader is familiar with the two-layer gRPC architecture described in the [Comprehensive Specification](fileman-api-wrapper-specification.md) §6 and §19
 
-For the YottaDB implementation, see [fileman-yottadb-implementation-guide.md](fileman-yottadb-implementation-guide.md).
+For the YottaDB implementation, see [fileman-api-grpc-wrapper-yottadb.md](fileman-api-grpc-wrapper-yottadb.md).
 
 The VA FileMan Technical Manual documents that the KIDS build distribution for FileMan 22.2 assumes installation on a Caché system (`technical-manual.md`, line 4167), and Caché is IRIS's predecessor — every production VA VistA deployment runs on IRIS or Caché. This guide therefore reflects the primary production target.
 

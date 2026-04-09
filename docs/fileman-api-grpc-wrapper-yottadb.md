@@ -17,7 +17,7 @@ This guide covers the complete, practical implementation of the FileMan API wrap
 - FileMan 22.2 routines (`DI*` namespace) are installed and operational in the YottaDB global directory
 - The reader is familiar with the two-layer gRPC architecture described in the [Comprehensive Specification](fileman-api-wrapper-specification.md) §6 and §19
 
-For the InterSystems IRIS implementation, see [fileman-iris-implementation-guide.md](fileman-iris-implementation-guide.md).
+For the InterSystems IRIS implementation, see [fileman-api-grpc-wrapper-iris.md](fileman-api-grpc-wrapper-iris.md).
 
 YottaDB is an open-source, high-performance M/MUMPS runtime and database engine that has become the primary platform for open-source VistA deployments. It is fully compatible with ANSI Standard M and with the GT.M runtime from which it was forked. All FileMan DBS API entry points run without modification on YottaDB.
 

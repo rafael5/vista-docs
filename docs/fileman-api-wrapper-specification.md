@@ -1917,7 +1917,7 @@ Every system above preserves its transactional database and business logic layer
 
 For implementation details, code examples, and a step-by-step deployment guide for building the FileMan gRPC Gateway on InterSystems IRIS, see the dedicated guide:
 
-**[fileman-iris-implementation-guide.md](fileman-iris-implementation-guide.md)**
+**[fileman-api-grpc-wrapper-iris.md](fileman-api-grpc-wrapper-iris.md)**
 
 That guide covers IRIS architecture fundamentals (namespaces, global mapping), prerequisites and environment setup, the `irisdb.h` C binding, the `intersystems-irispython` Python binding, the TCP SuperServer remote path, the `IRISRuntime` interface implementation, error handling, a four-test test suite, and a ten-step deployment checklist.
 
@@ -1925,7 +1925,7 @@ That guide covers IRIS architecture fundamentals (namespaces, global mapping), p
 
 For implementation details, code examples, and a step-by-step deployment guide for building the FileMan gRPC Gateway on YottaDB, see the dedicated guide:
 
-**[fileman-yottadb-implementation-guide.md](fileman-yottadb-implementation-guide.md)**
+**[fileman-api-grpc-wrapper-yottadb.md](fileman-api-grpc-wrapper-yottadb.md)**
 
 That guide covers YottaDB architecture fundamentals (global directory, process model, multi-threaded call-in), prerequisites and environment setup, the `libyottadb.h` C binding and call-in table, the `yottadb` Python binding, the Go binding, the `YDBRuntime` interface implementation, error handling, a four-test test suite, and a ten-step deployment checklist.
 
