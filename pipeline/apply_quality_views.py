@@ -13,7 +13,7 @@ Adds / refreshes:
   v_app_latest              VIEW     — count of latest-version docs per app
 
 Run:
-    python3 apply_quality_views.py          # recompute all 3 columns + views
+    python3 pipeline/apply_quality_views.py          # recompute all 3 columns + views
 """
 
 from __future__ import annotations

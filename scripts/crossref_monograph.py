@@ -36,7 +36,8 @@ def load_inventory() -> tuple[list[dict], dict, dict, dict]:
         rows = list(csv.DictReader(f))
 
     active_docx = [
-        r for r in rows
+        r
+        for r in rows
         if r["noise_type"] == "" and r["app_status"] == "active" and r["doc_format"] == "docx"
     ]
 
@@ -73,25 +74,34 @@ def check_vdl_links(mono: list[dict], active_by_url: dict, all_by_url: dict) -> 
     for r in mono:
         url = r["vdl_link"].rstrip("/")
         if not url:
-            no_link.append({"mono_name": r["app_name"], "namespace": r["namespace"],
-                            "vasi_status": r["vasi_status"]})
+            no_link.append(
+                {
+                    "mono_name": r["app_name"],
+                    "namespace": r["namespace"],
+                    "vasi_status": r["vasi_status"],
+                }
+            )
             continue
         if url in active_by_url:
             matched.append(r["app_name"])
         elif url in all_by_url:
             inv_row = all_by_url[url]
-            decommissioned.append({
-                "mono_name": r["app_name"],
-                "inv_name": inv_row["app_name_full"],
-                "inv_status": inv_row["app_status"],
-                "vdl_url": url,
-            })
+            decommissioned.append(
+                {
+                    "mono_name": r["app_name"],
+                    "inv_name": inv_row["app_name_full"],
+                    "inv_status": inv_row["app_status"],
+                    "vdl_url": url,
+                }
+            )
         else:
-            not_in_inv.append({
-                "mono_name": r["app_name"],
-                "vdl_url": url,
-                "appid": url.split("appid=")[-1],
-            })
+            not_in_inv.append(
+                {
+                    "mono_name": r["app_name"],
+                    "vdl_url": url,
+                    "appid": url.split("appid=")[-1],
+                }
+            )
 
     return {
         "matched_count": len(matched),
@@ -110,22 +120,20 @@ def check_names(mono: list[dict], active_by_url: dict) -> list[dict]:
         inv_name = active_by_url[url]["app_name_full"]
         mono_name = r["app_name"]
         if inv_name.lower().strip() != mono_name.lower().strip():
-            mismatches.append({
-                "mono_name": mono_name,
-                "inv_name": inv_name,
-                "vdl_url": url,
-                "appid": url.split("appid=")[-1],
-            })
+            mismatches.append(
+                {
+                    "mono_name": mono_name,
+                    "inv_name": inv_name,
+                    "vdl_url": url,
+                    "appid": url.split("appid=")[-1],
+                }
+            )
     return mismatches
 
 
 def check_namespaces(mono: list[dict], active_by_url: dict) -> dict:
     matches, mismatches, one_missing = 0, [], 0
-    inv_ns_by_url = {
-        url: r["pkg_ns"]
-        for url, r in active_by_url.items()
-        if r["pkg_ns"]
-    }
+    inv_ns_by_url = {url: r["pkg_ns"] for url, r in active_by_url.items() if r["pkg_ns"]}
     for r in mono:
         url = r["vdl_link"].rstrip("/")
         mono_ns = r["namespace"].strip()
@@ -140,13 +148,15 @@ def check_namespaces(mono: list[dict], active_by_url: dict) -> dict:
         if mono_ns == inv_ns:
             matches += 1
         else:
-            mismatches.append({
-                "mono_name": r["app_name"],
-                "mono_ns": mono_ns,
-                "inv_ns": inv_ns,
-                "vdl_url": url,
-                "note": _ns_note(mono_ns, inv_ns),
-            })
+            mismatches.append(
+                {
+                    "mono_name": r["app_name"],
+                    "mono_ns": mono_ns,
+                    "inv_ns": inv_ns,
+                    "vdl_url": url,
+                    "note": _ns_note(mono_ns, inv_ns),
+                }
+            )
     return {"matches": matches, "mismatches": mismatches, "one_side_missing": one_missing}
 
 
@@ -168,11 +178,15 @@ def check_coverage(mono: list[dict], active_by_url: dict) -> dict:
     return {
         "in_inv_not_mono_count": len(inv_gap),
         "in_inv_not_mono": sorted(
-            [{"name": active_by_url[u]["app_name_full"],
-              "section": active_by_url[u]["section_code"],
-              "appid": u.split("appid=")[-1],
-              "url": u}
-             for u in inv_gap],
+            [
+                {
+                    "name": active_by_url[u]["app_name_full"],
+                    "section": active_by_url[u]["section_code"],
+                    "appid": u.split("appid=")[-1],
+                    "url": u,
+                }
+                for u in inv_gap
+            ],
             key=lambda x: x["name"],
         ),
     }
@@ -187,13 +201,15 @@ def check_vasi_status(mono: list[dict], active_by_url: dict) -> dict:
             continue
         vasi = r["vasi_status"].strip()
         if vasi.lower() in ("inactive", "not a system"):
-            issues.append({
-                "mono_name": r["app_name"],
-                "vasi_status": vasi,
-                "inv_status": "active",
-                "namespace": r["namespace"],
-                "vdl_url": url,
-            })
+            issues.append(
+                {
+                    "mono_name": r["app_name"],
+                    "vasi_status": vasi,
+                    "inv_status": "active",
+                    "namespace": r["namespace"],
+                    "vdl_url": url,
+                }
+            )
     vasi_dist = dict(Counter(r["vasi_status"] for r in mono).most_common())
     return {"distribution": vasi_dist, "active_in_inv_but_inactive_in_mono": issues}
 
@@ -248,8 +264,8 @@ def build_report(results: dict) -> str:
     w("")
     for x in names:
         mono_n = x["mono_name"][:48]
-        inv_n  = x["inv_name"][:48]
-        if mono_n.lower().replace(" ","") != inv_n.lower().replace(" ",""):
+        inv_n = x["inv_name"][:48]
+        if mono_n.lower().replace(" ", "") != inv_n.lower().replace(" ", ""):
             w(f"     MONO: {mono_n}")
             w(f"     INV:  {inv_n}")
             w("")
@@ -304,11 +320,11 @@ if __name__ == "__main__":
     mono = load_monograph()
 
     results = {
-        "vdl_links":        check_vdl_links(mono, active_by_url, all_by_url),
-        "name_mismatches":  check_names(mono, active_by_url),
-        "namespaces":       check_namespaces(mono, active_by_url),
-        "coverage":         check_coverage(mono, active_by_url),
-        "vasi_status":      check_vasi_status(mono, active_by_url),
+        "vdl_links": check_vdl_links(mono, active_by_url, all_by_url),
+        "name_mismatches": check_names(mono, active_by_url),
+        "namespaces": check_namespaces(mono, active_by_url),
+        "coverage": check_coverage(mono, active_by_url),
+        "vasi_status": check_vasi_status(mono, active_by_url),
     }
 
     report = build_report(results)

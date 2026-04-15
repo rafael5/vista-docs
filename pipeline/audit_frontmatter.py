@@ -17,10 +17,10 @@ Pipeline actions per file:
   8. Upsert into ~/data/vista-docs/state/frontmatter.db
 
 Run:
-    python3 audit_frontmatter.py                # incremental (default)
-    python3 audit_frontmatter.py --force        # reprocess every file
-    python3 audit_frontmatter.py --pkg XU       # one package dir only
-    python3 audit_frontmatter.py --limit 30     # smoke test
+    python3 pipeline/audit_frontmatter.py                # incremental (default)
+    python3 pipeline/audit_frontmatter.py --force        # reprocess every file
+    python3 pipeline/audit_frontmatter.py --pkg XU       # one package dir only
+    python3 pipeline/audit_frontmatter.py --limit 30     # smoke test
 """
 
 from __future__ import annotations

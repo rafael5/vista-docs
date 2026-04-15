@@ -18,9 +18,9 @@ Hybrid search is then one query away:
     ORDER BY rank LIMIT 20;
 
 Run:
-    python3 chunk_sections.py                 # incremental
-    python3 chunk_sections.py --force         # reindex every doc
-    python3 chunk_sections.py --pkg XU        # one package only
+    python3 pipeline/chunk_sections.py                 # incremental
+    python3 pipeline/chunk_sections.py --force         # reindex every doc
+    python3 pipeline/chunk_sections.py --pkg XU        # one package only
 """
 
 from __future__ import annotations

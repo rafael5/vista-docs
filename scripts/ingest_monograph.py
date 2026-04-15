@@ -14,24 +14,26 @@ from __future__ import annotations
 
 import logging
 import sys
-from dataclasses import replace
 from pathlib import Path
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-8s %(message)s", datefmt="%H:%M:%S")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s %(levelname)-8s %(message)s", datefmt="%H:%M:%S"
+)
 log = logging.getLogger(__name__)
 
 DOCX_URL = "https://www.va.gov/vdl/documents/Monograph/Monograph/vista_monograph_0723_r.docx"
-PDF_URL  = "https://www.va.gov/vdl/documents/Monograph/Monograph/vista_monograph_0723_r.pdf"
+PDF_URL = "https://www.va.gov/vdl/documents/Monograph/Monograph/vista_monograph_0723_r.pdf"
 APP_CODE = "MON"
 DOC_TITLE = "Vista Monograph July 2023"
 
-RAW_DIR      = Path.home() / "data/vista-docs/raw/MON"
+RAW_DIR = Path.home() / "data/vista-docs/raw/MON"
 MARKDOWN_DIR = Path.home() / "data/vista-docs/markdown"
 
 
 # ---------------------------------------------------------------------------
 # Step 1 — Fetch
 # ---------------------------------------------------------------------------
+
 
 def fetch() -> Path:
     from vista_docs.crawl.session import make_session
@@ -58,6 +60,7 @@ def fetch() -> Path:
 # Step 2 — Ingest
 # ---------------------------------------------------------------------------
 
+
 def ingest(docx_path: Path) -> Path:
     from vista_docs.classify.rules import classify
     from vista_docs.ingest.converter import convert_to_markdown
@@ -69,6 +72,7 @@ def ingest(docx_path: Path) -> Path:
 
     # Slugify title the same way the pipeline does
     import re
+
     slug = re.sub(r"[^a-z0-9]+", "-", DOC_TITLE.lower()).strip("-")[:80]
     out_path = out_dir / f"{slug}.md"
 
@@ -104,6 +108,7 @@ def ingest(docx_path: Path) -> Path:
 # Step 3 — Enrich
 # ---------------------------------------------------------------------------
 
+
 def enrich(md_path: Path) -> None:
     from vista_docs.enrich.runner import enrich_file
 
@@ -119,8 +124,10 @@ def enrich(md_path: Path) -> None:
 # Step 4 — Sync inventory fields
 # ---------------------------------------------------------------------------
 
+
 def sync(md_path: Path) -> None:
     import csv
+
     from vista_docs.enrich.frontmatter import parse_frontmatter, rebuild_frontmatter
     from vista_docs.enrich.inventory_fields import build_inventory_index, fields_for_doc
 
@@ -148,7 +155,7 @@ def sync(md_path: Path) -> None:
 
 if __name__ == "__main__":
     docx_path = fetch()
-    md_path   = ingest(docx_path)
+    md_path = ingest(docx_path)
     enrich(md_path)
     sync(md_path)
     log.info("=== Done: %s ===", md_path)

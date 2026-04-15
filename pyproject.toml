@@ -75,6 +75,9 @@ show_missing = true
 
 [tool.ruff]
 line-length = 100
+# scripts/ holds historical one-off tools; not worth styling.
+# See scripts/README.md for the rationale.
+extend-exclude = ["scripts"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]

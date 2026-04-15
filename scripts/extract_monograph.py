@@ -31,26 +31,29 @@ OUTPUT_DIR = Path.home() / "data/vista-docs/survey"
 # ---------------------------------------------------------------------------
 
 _FIELDS: list[tuple[str, re.Pattern]] = [
-    ("vista_package_name",  re.compile(r"^\*\*VistA Package Name:\*\*\s*(.*)")),
-    ("vasi_name",           re.compile(r"^\*\*VASI Name:\*\*\s*(.*)")),
-    ("vasi_id",             re.compile(r"^\*\*VASI ID:\*\*\s*(.*)")),
-    ("vasi_status",         re.compile(r"^\*\*VASI System Status:\*\*\s*(.*)")),
-    ("version",             re.compile(r"^\*\*Version:\*\*\s*(.*)")),
-    ("namespace",           re.compile(r"^\*\*Namespace:\*\*\s*(.*)")),
-    ("spm_product_line",    re.compile(r"^\*\*SPM Product Line:\*\*\s*(.*)")),
-    ("brief_description",   re.compile(r"^\*\*Brief Description:\*\*\s*(.*)")),
-    ("vasi_link",           re.compile(r"^\*\*VASI ID link:\*\*\s*(.*)")),
-    ("vdl_link",            re.compile(r"^\*\*VDL link:\*\*\s*(.*)")),
-    ("business_functions",  re.compile(
-        r"^\*\*VHA Business Function Framework Line\(s\) of Business and Function\(s\):\*\*\s*(.*)"
-    )),
-    ("business_owner",      re.compile(r"^\*\*VHA Business Owner:\*\*\s*(.*)")),
-    ("full_description",    re.compile(r"^\*\*Full Description and Features:\*\*\s*(.*)")),
+    ("vista_package_name", re.compile(r"^\*\*VistA Package Name:\*\*\s*(.*)")),
+    ("vasi_name", re.compile(r"^\*\*VASI Name:\*\*\s*(.*)")),
+    ("vasi_id", re.compile(r"^\*\*VASI ID:\*\*\s*(.*)")),
+    ("vasi_status", re.compile(r"^\*\*VASI System Status:\*\*\s*(.*)")),
+    ("version", re.compile(r"^\*\*Version:\*\*\s*(.*)")),
+    ("namespace", re.compile(r"^\*\*Namespace:\*\*\s*(.*)")),
+    ("spm_product_line", re.compile(r"^\*\*SPM Product Line:\*\*\s*(.*)")),
+    ("brief_description", re.compile(r"^\*\*Brief Description:\*\*\s*(.*)")),
+    ("vasi_link", re.compile(r"^\*\*VASI ID link:\*\*\s*(.*)")),
+    ("vdl_link", re.compile(r"^\*\*VDL link:\*\*\s*(.*)")),
+    (
+        "business_functions",
+        re.compile(
+            r"^\*\*VHA Business Function Framework Line\(s\) of Business and Function\(s\):\*\*\s*(.*)"
+        ),
+    ),
+    ("business_owner", re.compile(r"^\*\*VHA Business Owner:\*\*\s*(.*)")),
+    ("full_description", re.compile(r"^\*\*Full Description and Features:\*\*\s*(.*)")),
 ]
 
 _FIELD_KEYS = [k for k, _ in _FIELDS]
-_LABEL_RE = re.compile(r"^\*\*[A-Z]")           # quick pre-filter: starts with **[A-Z]
-_MD_LINK_RE = re.compile(r"\[.*?\]\((https?://[^)]+)\)")   # extract URL from [text](url)
+_LABEL_RE = re.compile(r"^\*\*[A-Z]")  # quick pre-filter: starts with **[A-Z]
+_MD_LINK_RE = re.compile(r"\[.*?\]\((https?://[^)]+)\)")  # extract URL from [text](url)
 _BOLD_WRAP_RE = re.compile(r"^\*\*(.*?)\*\*$")  # **value** → value
 _UNICODE_ZERO_WIDTH = re.compile(r"[\u200b\u200c\u200d\ufeff\u00a0]")
 
@@ -58,6 +61,7 @@ _UNICODE_ZERO_WIDTH = re.compile(r"[\u200b\u200c\u200d\ufeff\u00a0]")
 # ---------------------------------------------------------------------------
 # Cleaning helpers
 # ---------------------------------------------------------------------------
+
 
 def _clean(text: str) -> str:
     """Decode HTML entities, strip zero-width chars, collapse whitespace."""
@@ -93,6 +97,7 @@ def _clean_field(key: str, raw: str) -> str:
 # Section extraction
 # ---------------------------------------------------------------------------
 
+
 def _modules_lines(text: str) -> list[str]:
     """Return only the lines in the '### The VistA Modules' section."""
     lines = text.splitlines()
@@ -109,6 +114,7 @@ def _modules_lines(text: str) -> list[str]:
 # ---------------------------------------------------------------------------
 # Block splitting
 # ---------------------------------------------------------------------------
+
 
 def _split_blocks(lines: list[str]) -> list[tuple[str, list[str]]]:
     """
@@ -139,6 +145,7 @@ def _split_blocks(lines: list[str]) -> list[tuple[str, list[str]]]:
 # ---------------------------------------------------------------------------
 # Per-block field extraction
 # ---------------------------------------------------------------------------
+
 
 def _parse_block(app_name: str, lines: list[str]) -> dict:
     """Extract all fields from a single application block."""
@@ -231,7 +238,7 @@ if __name__ == "__main__":
     records = extract(MARKDOWN)
     report(records)
 
-    csv_path  = OUTPUT_DIR / "monograph_apps.csv"
+    csv_path = OUTPUT_DIR / "monograph_apps.csv"
     json_path = OUTPUT_DIR / "monograph_apps.json"
 
     write_csv(records, csv_path)

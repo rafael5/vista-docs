@@ -17,9 +17,9 @@ avoidance beats recall here — the cross-ref store is a normalization
 substrate, not a first-draft search index.
 
 Run:
-    python3 extract_entities.py           # incremental (default)
-    python3 extract_entities.py --force   # re-extract every doc
-    python3 extract_entities.py --pkg XU  # one package only
+    python3 pipeline/extract_entities.py           # incremental (default)
+    python3 pipeline/extract_entities.py --force   # re-extract every doc
+    python3 pipeline/extract_entities.py --pkg XU  # one package only
 """
 
 from __future__ import annotations

@@ -17,22 +17,39 @@ Output data lives in `~/data/vista-docs/` — never in this repo.
 ## Project structure
 
 ```
-src/vista_docs/
-  models/        — pure dataclasses (no logic, no I/O)
-  crawl/         — VDL HTML → catalog records
-  classify/      — filename/title → DocType
-  fetch/         — URL derivation + HTTP download
-  ingest/        — DOCX/PDF → markdown via Docling + post-processing
-  enrich/        — extract metadata from markdown, rewrite YAML frontmatter
-  survey/        — corpus structure analysis (stats.py pure; analyzer.py I/O)
-  manifest/      — SQLite pipeline state management
-  cli/           — `vista-docs` Click command with subcommands
+src/vista_docs/         ← canonical ETL pipeline (stages 1-5)
+  models/               — pure dataclasses (no logic, no I/O)
+  crawl/                — VDL HTML → catalog records
+  classify/             — filename/title → DocType
+  fetch/                — URL derivation + HTTP download
+  ingest/               — DOCX/PDF → markdown via Docling + post-processing
+  enrich/               — extract metadata from markdown, rewrite YAML frontmatter
+  survey/               — corpus structure analysis (stats.py pure; analyzer.py I/O)
+  manifest/             — SQLite pipeline state management
+  cli/                  — `vista-docs` Click command with subcommands
+
+pipeline/               ← post-ingest stages 6-6.7 (operate on md-img + frontmatter.db)
+  audit_frontmatter.py    — stage 6    normalize frontmatter + audit DB
+  chunk_sections.py       — stage 6.5  heading tree + FTS5 index
+  extract_entities.py     — stage 6.6  routines/globals/options/rpcs/codes
+  apply_quality_views.py  — stage 6.7  is_latest + quality_score + views
+  README.md               — stage reference
+
+scripts/                ← ad-hoc / one-off tools (NOT part of automated pipeline)
+  enrich_inventory.py     — produces vdl_inventory_enriched.csv (active, run on demand)
+  README.md               — historical inventory
 
 tests/
-  unit/          — fast, no I/O, no network (run in CI)
-  integration/   — SQLite, file I/O, optional network (@pytest.mark.network)
-  fixtures/      — static HTML/DOCX/manifest test data (committed, small)
+  unit/                 — fast, no I/O, no network (run in CI)
+  integration/          — SQLite, file I/O, optional network (@pytest.mark.network)
+  fixtures/             — static HTML/DOCX/manifest test data (committed, small)
+
+guides/                 ← synthesised reference docs (hand-edited)
 ```
+
+**Rule:** all active library code lives under `src/vista_docs/`. Top-level
+`.py` files are not permitted — put stable stages in `pipeline/`, one-off
+scripts in `scripts/`, or promote into `src/vista_docs/` with tests.
 
 ## Data directory (NOT in this repo)
 

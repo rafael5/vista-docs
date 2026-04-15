@@ -17,8 +17,12 @@ Department of Veterans Affairs' legacy MUMPS-based electronic health record syst
 ## Directory Structure
 
 ```
-~/vista-docs/
-  enrich_inventory.py      ← this pipeline script
+~/projects/vista-docs/
+  src/vista_docs/          ← canonical ETL pipeline (stages 1-5: crawl → sync)
+  pipeline/                ← post-ingest stages 6-6.7 over md-img/frontmatter.db
+  scripts/                 ← ad-hoc / one-off tools (enrich_inventory.py lives here)
+  tests/
+  guides/                  ← synthesised reference docs
   README.md                ← this file
 
 ~/data/vista-docs/inventory/
@@ -36,8 +40,8 @@ Department of Veterans Affairs' legacy MUMPS-based electronic health record syst
 Requirements: Python 3.10+, no external dependencies (stdlib only).
 
 ```bash
-cd ~/vista-docs
-python3 enrich_inventory.py
+cd ~/projects/vista-docs
+python3 scripts/enrich_inventory.py
 ```
 
 Output:
