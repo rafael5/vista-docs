@@ -36,6 +36,19 @@ from pathlib import Path
 
 import yaml
 
+# Make the in-repo package importable when run as a bare script
+# (python3 pipeline/audit_frontmatter.py), not only as `.venv/bin/python -m`.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from vista_docs.validate.frontmatter import (  # noqa: E402
+    LEGACY_ONLY_KEYS as _LEGACY_ONLY_KEYS,
+)
+from vista_docs.validate.frontmatter import (  # noqa: E402
+    safe_dump_frontmatter,
+    sanitize_scalar,
+    validate_frontmatter,
+)
+
 MDI = Path("/home/rafael/data/vista-docs/md-img")
 STATE = Path("/home/rafael/data/vista-docs/state")
 SURVEY = Path("/home/rafael/data/vista-docs/survey")
@@ -203,17 +216,13 @@ def strip_duplicate_title_block(body: str) -> tuple[str, bool]:
 
 
 def dump_frontmatter(fm: dict) -> str:
-    """Emit YAML with canonical key order, stable, no mojibake-breeding keys."""
-    ordered = {}
-    for k in CANONICAL_KEYS:
-        if k in fm:
-            ordered[k] = fm[k]
-    for k in fm:
-        if k not in ordered:
-            ordered[k] = fm[k]
-    return yaml.safe_dump(
-        ordered, allow_unicode=True, sort_keys=False, default_flow_style=False, width=1000
-    )
+    """Emit YAML with canonical key order.
+
+    Delegates to the shared guarded serializer, which round-trips its own output
+    through a strict ``yaml.safe_load`` and raises ``ValueError`` if it does not
+    re-parse — so no document is ever written with unparseable frontmatter.
+    """
+    return safe_dump_frontmatter(fm, CANONICAL_KEYS)
 
 
 # ---------- Extractors ----------
@@ -372,6 +381,32 @@ def make_description(body: str, title: str) -> str:
     return ""
 
 
+DOC_TYPE_LABELS = {
+    "TM": "Technical Manual",
+    "UM": "User Manual",
+    "UG": "User Guide",
+    "IG": "Installation Guide",
+    "DIBR": "Deployment, Installation, Back-Out, and Rollback Guide",
+    "RN": "Release Notes",
+    "SG": "Security Guide",
+    "API": "API Manual",
+    "POM": "Production Operations Manual",
+    "TG": "Technical Guide",
+    "VDD": "Version Description Document",
+    "CFG": "Setup and Configuration Guide",
+    "QRG": "Quick Reference Guide",
+    "TRG": "Training Guide",
+    "PDD": "Patch Description Document",
+    "REF": "Reference",
+    "INT": "Interface Specification",
+    "CRU": "Clinical Reminder Update",
+    "APX": "Appendix",
+    "SUP": "Supplement",
+    "SUPPLEMENT": "Supplement",
+    "UNKNOWN": "Document",
+    "": "Document",
+}
+
 AUDIENCE_BY_DOCTYPE = {
     "TM": "Technical staff, IRM, system administrators",
     "UM": "End users (clinical / administrative, per package)",
@@ -480,19 +515,45 @@ def process_file(path: Path, backup_fh) -> dict:
     if not fm.get("menu_options"):
         fm["menu_options"] = menu_ct
 
-    # Fill description if empty or malformed (e.g. markdown list inlined)
+    # Description: reduce to clean plain text. If the stored value is empty,
+    # an inlined TOC list, or carries HTML/markdown markup, regenerate it from
+    # the body prose; otherwise just sanitize what's there.
     desc = fm.get("description")
-    if (not desc) or (isinstance(desc, str) and desc.strip().startswith("- [")):
-        fm["description"] = make_description(body_new, fm.get("title", ""))
-    elif isinstance(desc, str):
-        fx, n = fix_mojibake(desc)
-        fm["description"] = fx
+    orig_desc = desc if isinstance(desc, str) else ""
+    desc_has_markup = bool(STRIP_TAGS_RE.search(orig_desc)) or "<!--" in orig_desc
+    if (not orig_desc) or orig_desc.strip().startswith(("- [", "[")) or desc_has_markup:
+        fm["description"] = sanitize_scalar(make_description(body_new, fm.get("title", "")))
+    else:
+        fm["description"] = sanitize_scalar(orig_desc)
 
-    # Fill audience if empty or garbage (html/markdown leaked from body)
+    # Audience: sanitize; if empty or garbage (html/markdown leaked from body),
+    # fall back to the doctype-specific default.
     aud = fm.get("audience") or ""
-    if (not aud) or any(tok in str(aud) for tok in ("<!--", "](#", "|--", "<span", "[↑")):
+    aud_clean = sanitize_scalar(aud) if isinstance(aud, str) else ""
+    aud_is_junk = any(tok in str(aud) for tok in ("<!--", "](#", "|--", "<span", "[↑"))
+    if (not aud_clean) or aud_is_junk:
         dt = fm.get("doc_type", "")
         fm["audience"] = AUDIENCE_BY_DOCTYPE.get(dt, "")
+    else:
+        fm["audience"] = aud_clean
+
+    # Title / doc_subject are scalar fields too — keep them clean plain text.
+    for scalar_key in ("title", "doc_subject"):
+        v = fm.get(scalar_key)
+        if isinstance(v, str) and v:
+            fm[scalar_key] = sanitize_scalar(v)
+
+    # Fill pkg_ns from the VDL app_code when absent — pkg_ns is a required
+    # published key; app_code is the canonical namespace proxy for plain docs.
+    if not (isinstance(fm.get("pkg_ns"), str) and fm.get("pkg_ns", "").strip()):
+        app_code = fm.get("app_code")
+        if isinstance(app_code, str) and app_code.strip():
+            fm["pkg_ns"] = app_code.strip()
+
+    # doc_label is a required published key. Derive it from doc_type when
+    # absent (defaulting to a generic "Document" for unknown/blank types).
+    if not (isinstance(fm.get("doc_label"), str) and fm.get("doc_label", "").strip()):
+        fm["doc_label"] = DOC_TYPE_LABELS.get(str(fm.get("doc_type") or "").upper(), "Document")
 
     # Ensure lists are lists not None
     for list_key in ("file_numbers", "security_keys", "keywords"):
@@ -506,12 +567,29 @@ def process_file(path: Path, backup_fh) -> dict:
     rec["security_keys"] = fm["security_keys"]
     rec["menu_options"] = fm["menu_options"]
 
-    # Write back
-    new_fm_yaml = dump_frontmatter(fm)
+    # Write back. The guarded serializer raises if its output would not
+    # re-parse; in that (should-be-impossible) case we flag and skip the write
+    # rather than emit a broken document.
+    try:
+        new_fm_yaml = dump_frontmatter(fm)
+    except ValueError as e:
+        rec["issues"].append("invalid_yaml_after_dump")
+        rec["dump_error"] = str(e)[:120]
+        return rec
     new_text = "---\n" + new_fm_yaml + "---\n" + body_new
     if new_text != raw:
         path.write_text(new_text, encoding="utf-8")
         rec["changed"] = True
+
+    # Surface remaining schema/data-quality defects in the audit report so they
+    # never silently reach publish.
+    for v in validate_frontmatter(fm):
+        rec["issues"].append(v.code.split(":")[0] if ":" in v.code else v.code)
+    if (set(fm) & _LEGACY_ONLY_KEYS) and not all(
+        isinstance(fm.get(k), str) and fm.get(k, "").strip()
+        for k in ("title", "section", "app_code", "app_name", "pkg_ns")
+    ):
+        rec["issues"].append("legacy_schema")
 
     # Flag for manual review
     if not fm.get("title"):

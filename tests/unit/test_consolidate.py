@@ -359,3 +359,57 @@ class TestConsolidateGroup:
         group = self._make_group()
         result = consolidate_group(group)
         assert all(isinstance(s, UniqueSection) for s in result.addenda)
+
+
+# ---------------------------------------------------------------------------
+# Unified consolidated frontmatter (inherits master canonical keys + provenance)
+# ---------------------------------------------------------------------------
+
+
+class TestMergeConsolidationFrontmatter:
+    def test_inherits_master_canonical_keys(self):
+        from vista_docs.analyze.consolidate import merge_consolidation_frontmatter
+
+        master_fm = {
+            "title": "PSO v7 Technical Manual",
+            "doc_type": "TM",
+            "doc_label": "Technical Manual",
+            "section": "CLI",
+            "app_code": "PSO",
+            "app_name": "Outpatient Pharmacy",
+            "pkg_ns": "PSO",
+        }
+        fm = merge_consolidation_frontmatter(
+            master_fm,
+            group_title="outpatient pharmacy technical manual",
+            master_title="PSO v7 Technical Manual",
+            master_pub_date="June 2025",
+            member_count=3,
+            prior_titles=["PSO v6 TM", "PSO v5 TM"],
+        )
+        # All required keys carried through from the master:
+        for k in ("title", "doc_type", "doc_label", "section", "app_code", "app_name", "pkg_ns"):
+            assert fm[k] == master_fm[k]
+
+    def test_adds_provenance_extras(self):
+        from vista_docs.analyze.consolidate import merge_consolidation_frontmatter
+
+        fm = merge_consolidation_frontmatter(
+            {"title": "T", "section": "CLI"},
+            group_title="group t",
+            master_title="Master T",
+            master_pub_date="2025",
+            member_count=4,
+            prior_titles=["a", "b", "c"],
+        )
+        assert fm["master_source"] == "Master T"
+        assert fm["consolidated_from"] == "4 versions"
+        assert fm["prior_versions"] == ["a", "b", "c"]
+        assert fm["consolidated_title"] == "group t"
+
+    def test_does_not_mutate_master_fm(self):
+        from vista_docs.analyze.consolidate import merge_consolidation_frontmatter
+
+        master_fm = {"title": "T"}
+        merge_consolidation_frontmatter(master_fm, "g", "M", "", 2, ["x"])
+        assert "master_source" not in master_fm

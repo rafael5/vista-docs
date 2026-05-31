@@ -454,7 +454,9 @@ def extract_audience(md: str) -> str:
         return ""
 
     text = paragraphs[0]
-    # Strip HTML entities and extra whitespace
+    # Strip HTML comments, tags, and entities so the scalar stays plain text
+    text = re.sub(r"<!--.*?-->", " ", text, flags=re.DOTALL)
+    text = re.sub(r"<[a-zA-Z/!][^>]*>", " ", text)
     text = re.sub(r"&amp;", "&", text)
     text = re.sub(r"&[a-z]+;", "", text)
     text = re.sub(r"\s+", " ", text).strip()
@@ -583,9 +585,17 @@ def extract_description(md: str) -> str:
 
     for para in section.split("\n\n"):
         para = para.strip()
-        if not para or para.startswith("|") or para.startswith("#") or para.startswith("<!--"):
+        if (
+            not para
+            or para.startswith("|")
+            or para.startswith("#")
+            or para.startswith("<")  # HTML block (table/colgroup/etc.) — not prose
+        ):
             continue
         text = re.sub(r"\*\*?([^*]+)\*\*?", r"\1", para)
+        # Strip any residual inline HTML so the scalar stays plain text
+        text = re.sub(r"<!--.*?-->", " ", text, flags=re.DOTALL)
+        text = re.sub(r"<[a-zA-Z/!][^>]*>", " ", text)
         text = re.sub(r"\s+", " ", text).strip()
         if len(text) >= 80:
             return text[:300]

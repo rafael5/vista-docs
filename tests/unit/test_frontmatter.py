@@ -110,6 +110,16 @@ class TestRewriteFrontmatter:
         result = rewrite_frontmatter(_BASE_MD, {"subtitle": "Part 1: Overview"})
         assert '"Part 1: Overview"' in result
 
+    def test_backslash_and_colon_value_reparses(self):
+        # The (ACKQ\3.0\3) class — a colon-containing value carrying backslashes
+        # must serialize to valid YAML (backslashes escaped inside the quotes).
+        import yaml
+
+        result = rewrite_frontmatter(_BASE_MD, {"description": "module (ACKQ\\3.0\\3): the audi"})
+        m = result.split("---\n")[1]
+        parsed = yaml.safe_load(m)
+        assert parsed["description"] == "module (ACKQ\\3.0\\3): the audi"
+
     def test_overwrites_existing_field(self):
         result = rewrite_frontmatter(_BASE_MD, {"app_code": "ADT"})
         assert "app_code: ADT" in result

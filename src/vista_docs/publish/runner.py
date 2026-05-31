@@ -81,11 +81,14 @@ def run_publish(
     """
     if out_dir.exists() and force:
         if (out_dir / ".git").exists():
-            # Preserve git state: clear generated content but not .git/ or .gitignore
+            # Preserve git state AND repo infrastructure (CI workflow, the
+            # self-contained validator, and the pre-push hook installer) so the
+            # guardrails survive every regenerate-then-push cycle.
+            preserve = {".git", ".gitignore", ".github", ".ci"}
             for item in out_dir.iterdir():
-                if item.name not in (".git", ".gitignore"):
+                if item.name not in preserve:
                     shutil.rmtree(item) if item.is_dir() else item.unlink()
-            log.debug("Cleared publish/ content (preserved .git/)")
+            log.debug("Cleared publish/ content (preserved %s)", sorted(preserve))
         else:
             shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)

@@ -11,7 +11,11 @@ import logging
 from pathlib import Path
 
 from vista_docs.enrich.frontmatter import parse_frontmatter, rebuild_frontmatter
-from vista_docs.enrich.inventory_fields import build_inventory_index, fields_for_doc
+from vista_docs.enrich.inventory_fields import (
+    app_fields_for_code,
+    build_inventory_index,
+    fields_for_doc,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -65,8 +69,19 @@ def sync_inventory_corpus(
 
             new_fields = fields_for_doc(index, app_code, title)
             if new_fields is None:
-                logger.debug("No inventory match for %s / %s", app_code, title)
+                # No exact (app_code, title) match — still backfill app-level
+                # identity (section/app_name/app_status/…) from the app_code so
+                # the doc carries a real section instead of landing blank.
+                app_fields = app_fields_for_code(index, app_code)
+                if app_fields is None:
+                    logger.debug("No inventory match for %s / %s", app_code, title)
+                    no_match += 1
+                    continue
+                updated = rebuild_frontmatter(text, app_fields)
+                path.write_text(updated, encoding="utf-8")
+                logger.info("Backfilled app fields for %s", path.name)
                 no_match += 1
+                ok += 1
                 continue
 
             updated = rebuild_frontmatter(text, new_fields)

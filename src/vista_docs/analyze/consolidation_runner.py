@@ -44,12 +44,22 @@ import re
 import shutil
 from pathlib import Path
 
+import yaml
+
 from vista_docs.analyze.consolidate import (
     ConsolidationResult,
     DocumentRecord,
     UniqueSection,
     consolidate_group,
     group_documents,
+    merge_consolidation_frontmatter,
+)
+from vista_docs.enrich.text_fixers import fix_mojibake
+from vista_docs.validate.frontmatter import (
+    SCALAR_FIELDS,
+    safe_dump_frontmatter,
+    sanitize_scalar,
+    split_frontmatter,
 )
 
 log = logging.getLogger(__name__)
@@ -57,6 +67,18 @@ log = logging.getLogger(__name__)
 # Frontmatter field extractors (reuse simple regex pattern)
 _FM_RE = re.compile(r"^---\n(.*?)\n---", re.DOTALL)
 _FIELD_RE = re.compile(r"^(\w+):\s*(.+?)\s*$", re.MULTILINE)
+
+
+def _parse_master_frontmatter(master_text: str) -> dict:
+    """Parse the master document's (audited, canonical) frontmatter mapping."""
+    fm_raw, _ = split_frontmatter(master_text)
+    if fm_raw is None:
+        return {}
+    try:
+        fm = yaml.safe_load(fm_raw)
+    except yaml.YAMLError:
+        return {}
+    return fm if isinstance(fm, dict) else {}
 
 
 def _fm_field(text: str, field: str) -> str:
@@ -193,29 +215,39 @@ def run_consolidation(
 
 
 def _write_consolidated(path: Path, result: ConsolidationResult) -> None:
-    """Write a consolidated markdown file: provenance frontmatter + master + appendices."""
-    lines: list[str] = []
+    """Write a consolidated markdown file: unified frontmatter + master + appendices.
 
-    # Provenance frontmatter
-    version_list = "\n".join(
-        f'  - "{d.title}"' for d in result.group.members if d is not result.master
+    The consolidated doc inherits the master's audited, canonical frontmatter
+    (so it carries the same required keys as a single-version doc) and adds
+    consolidation provenance extras. Scalar fields are sanitized, every string
+    value and the body is mojibake-fixed, and the frontmatter is serialized with
+    the guarded serializer (which round-trips its own output or raises).
+    """
+    prior_titles = [d.title for d in result.group.members if d is not result.master]
+
+    master_fm = _parse_master_frontmatter(result.master_text)
+    fm = merge_consolidation_frontmatter(
+        master_fm,
+        group_title=result.group.group_title,
+        master_title=result.master.title,
+        master_pub_date=result.master.pub_date,
+        member_count=len(result.group.members),
+        prior_titles=prior_titles,
     )
-    lines.append("---")
-    lines.append(f'consolidated_title: "{result.group.group_title}"')
-    lines.append(f"app_code: {result.group.app_code}")
-    lines.append(f"doc_type: {result.group.doc_type}")
-    lines.append(f'master_source: "{result.master.title}"')
-    lines.append(f"master_pub_date: {result.master.pub_date}")
-    lines.append(f"consolidated_from: {len(result.group.members)} versions")
-    if version_list:
-        lines.append("prior_versions:")
-        lines.append(version_list)
-    lines.append("---")
-    lines.append("")
 
-    # Master document (strip its own frontmatter — we replaced it above)
+    # Mojibake-fix every string value; sanitize the plain-text scalar fields.
+    for k, v in list(fm.items()):
+        if isinstance(v, str):
+            fm[k] = sanitize_scalar(v) if k in SCALAR_FIELDS else fix_mojibake(v)
+        elif isinstance(v, list):
+            fm[k] = [fix_mojibake(x) if isinstance(x, str) else x for x in v]
+
+    lines: list[str] = ["---", safe_dump_frontmatter(fm).rstrip("\n"), "---", ""]
+
+    # Master document (strip its own frontmatter — we replaced it above),
+    # mojibake-fixed so the consolidated body is UTF-8 clean.
     master_body = _FM_RE.sub("", result.master_text, count=1).lstrip("\n")
-    lines.append(master_body)
+    lines.append(fix_mojibake(master_body))
 
     # Appendices
     if result.addenda:
@@ -238,10 +270,10 @@ def _write_consolidated(path: Path, result: ConsolidationResult) -> None:
             by_source.setdefault(s.source_title, []).append(s)
 
         for source_title, sections in by_source.items():
-            lines.append(f"### From: {source_title}")
+            lines.append(f"### From: {fix_mojibake(source_title)}")
             lines.append("")
             for s in sections:
-                lines.append(s.content)
+                lines.append(fix_mojibake(s.content))
                 lines.append("")
 
     path.write_text("\n".join(lines), encoding="utf-8")

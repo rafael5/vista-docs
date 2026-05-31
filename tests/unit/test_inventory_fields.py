@@ -181,3 +181,49 @@ def test_fields_for_doc_empty_optional_fields_are_empty_string():
     assert result["patch_ver"] == ""
     assert result["doc_subject"] == ""
     assert result["group_key"] == ""
+
+
+# ---------------------------------------------------------------------------
+# app_fields_for_code — app-level backfill for docs with no title match
+# ---------------------------------------------------------------------------
+
+
+class TestAppFieldsForCode:
+    def test_returns_app_level_fields_for_known_code(self):
+        from vista_docs.enrich.inventory_fields import app_fields_for_code
+
+        index = build_inventory_index(
+            [
+                _row(
+                    app_name_abbrev="PRCA",
+                    app_name_full="Accounts Receivable (AR)",
+                    section_code="FIN",
+                    app_status="active",
+                    doc_title="PRCA TM",
+                    pkg_ns="PRCA",
+                    app_url="https://va.gov/vdl/application.asp?appid=9",
+                ),
+            ]
+        )
+        fields = app_fields_for_code(index, "PRCA")
+        assert fields is not None
+        assert fields["section"] == "FIN"
+        assert fields["app_name"] == "Accounts Receivable (AR)"
+        assert fields["app_status"] == "active"
+        assert fields["pkg_ns"] == "PRCA"
+        assert fields["app_url"].endswith("appid=9")
+
+    def test_returns_none_for_unknown_code(self):
+        from vista_docs.enrich.inventory_fields import app_fields_for_code
+
+        index = build_inventory_index([_row(app_name_abbrev="PSO")])
+        assert app_fields_for_code(index, "NOPE") is None
+
+    def test_does_not_include_doc_level_fields(self):
+        from vista_docs.enrich.inventory_fields import app_fields_for_code
+
+        index = build_inventory_index([_row(app_name_abbrev="PSO")])
+        fields = app_fields_for_code(index, "PSO")
+        # App-level only — never guesses a doc_label/patch_id from an unrelated row.
+        assert "doc_label" not in fields
+        assert "patch_id" not in fields

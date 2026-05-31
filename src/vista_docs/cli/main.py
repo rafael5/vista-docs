@@ -9,6 +9,7 @@ vista-docs CLI — single entry point with subcommands.
   vista-docs headings     — heading frequency analysis → state.db
   vista-docs consolidate  — master + addenda consolidation → consolidated/
   vista-docs manifest     — build corpus-manifest.json index
+  vista-docs validate     — validate frontmatter; hard gate before publish/push
   vista-docs publish      — write human-browsable publish/ tree from consolidated/
   vista-docs push         — publish then commit + push markdown to GitHub
   vista-docs pipeline     — run crawl → fetch → ingest → survey
@@ -437,6 +438,84 @@ def manifest(output: str, doc_types: tuple[str, ...]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# validate — frontmatter guardrail (hard gate before publish/push)
+# ---------------------------------------------------------------------------
+
+
+def _run_validation_gate(out_dir, *, also_md_img: bool = False) -> None:
+    """Validate the publish tree; raise ClickException on any hard failure.
+
+    This is the durable gate: a broken corpus can never be published or pushed.
+    """
+    from vista_docs.config import DATA_DIR, SURVEY_DIR
+    from vista_docs.validate.runner import format_summary, validate_tree, write_flags_csv
+
+    report = validate_tree(out_dir)
+    click.echo(format_summary(report))
+    flags_csv = SURVEY_DIR / "publish_validation_flags.csv"
+    write_flags_csv(report, flags_csv)
+
+    extra_failures = 0
+    if also_md_img:
+        md_report = validate_tree(DATA_DIR / "md-img")
+        click.echo("md-img/ check:")
+        click.echo(format_summary(md_report))
+        extra_failures = md_report.hard_failures
+
+    if report.hard_failures or extra_failures:
+        raise click.ClickException(
+            f"Validation FAILED: {report.hard_failures} hard failure(s) in "
+            f"{out_dir} (+{extra_failures} in md-img). See {flags_csv}. "
+            "Refusing to publish/push a broken corpus."
+        )
+    click.echo("Validation passed — corpus is clean.")
+
+
+@cli.command()
+@click.option(
+    "--target",
+    type=click.Path(),
+    default="",
+    help="Tree to validate (default: ~/data/vista-docs/publish/).",
+)
+@click.option(
+    "--md-img", "also_md_img", is_flag=True, help="Also validate the md-img/ source tree."
+)
+def validate(target: str, also_md_img: bool) -> None:
+    """Validate frontmatter across the corpus; exit non-zero on any hard failure."""
+    import pathlib
+    import sys
+
+    from vista_docs.config import DATA_DIR, SURVEY_DIR
+    from vista_docs.validate.runner import format_summary, validate_tree, write_flags_csv
+
+    root = pathlib.Path(target) if target else DATA_DIR / "publish"
+    if not root.exists():
+        raise click.ClickException(f"Target not found: {root}")
+
+    click.echo(f"Validating {root} ...")
+    report = validate_tree(root)
+    click.echo(format_summary(report))
+    flags_csv = SURVEY_DIR / "publish_validation_flags.csv"
+    write_flags_csv(report, flags_csv)
+    click.echo(f"Flags CSV → {flags_csv}")
+
+    failures = report.hard_failures
+    if also_md_img:
+        md_root = DATA_DIR / "md-img"
+        if md_root.exists():
+            click.echo(f"Validating {md_root} ...")
+            md_report = validate_tree(md_root)
+            click.echo(format_summary(md_report))
+            failures += md_report.hard_failures
+
+    if failures:
+        click.echo(f"FAILED: {failures} hard failure(s).", err=True)
+        sys.exit(1)
+    click.echo("OK: zero hard failures.")
+
+
+# ---------------------------------------------------------------------------
 # publish
 # ---------------------------------------------------------------------------
 
@@ -450,7 +529,13 @@ def manifest(output: str, doc_types: tuple[str, ...]) -> None:
 )
 @click.option("--pkg", multiple=True, help="Limit to specific package(s). Repeat for multiple.")
 @click.option("--force", is_flag=True, help="Overwrite existing publish/ output.")
-def publish(output: str, pkg: tuple[str, ...], force: bool) -> None:
+@click.option(
+    "--no-validate",
+    "skip_validate",
+    is_flag=True,
+    help="Skip the post-publish validation gate (NOT recommended).",
+)
+def publish(output: str, pkg: tuple[str, ...], force: bool, skip_validate: bool) -> None:
     """Write human-browsable publish/ tree from consolidated/ and md-img/."""
     import pathlib
 
@@ -490,6 +575,9 @@ def publish(output: str, pkg: tuple[str, ...], force: bool) -> None:
         f"{results['patch_files']} patch docs, "
         f"{results['image_dirs']} image dirs → {out_dir}"
     )
+
+    if not skip_validate:
+        _run_validation_gate(out_dir)
 
 
 # ---------------------------------------------------------------------------
@@ -543,6 +631,9 @@ def push(remote: str, message: str, skip_publish: bool) -> None:
         raise click.ClickException(
             f"publish/ not found: {out_dir}\nRun without --no-publish to generate it first."
         )
+
+    # Hard gate: never push a corpus with broken frontmatter.
+    _run_validation_gate(out_dir)
 
     click.echo(f"Pushing markdown to {remote_url} ...")
     pushed = run_push(

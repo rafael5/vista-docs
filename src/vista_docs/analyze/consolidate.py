@@ -429,3 +429,41 @@ def _key_for_sort(doc: DocumentRecord) -> tuple[int, int, tuple[int, int]]:
     wc = doc.word_count if doc.word_count > 0 else 0
     date = _parse_pub_date(doc.pub_date)
     return (layer, -wc, (-date[0], -date[1]))
+
+
+# Provenance keys a consolidated document carries in addition to the master's
+# canonical frontmatter (so consolidated docs share the single-version schema).
+CONSOLIDATION_EXTRA_KEYS: tuple[str, ...] = (
+    "consolidated_title",
+    "master_source",
+    "master_pub_date",
+    "consolidated_from",
+    "prior_versions",
+)
+
+
+def merge_consolidation_frontmatter(
+    master_fm: dict,
+    group_title: str,
+    master_title: str,
+    master_pub_date: str,
+    member_count: int,
+    prior_titles: list[str],
+) -> dict:
+    """Build a consolidated doc's frontmatter from the master's canonical fields.
+
+    The consolidated document inherits *every* field of its master document's
+    (already audited, canonical) frontmatter — so it carries the same required
+    keys as a single-version doc (section, app_code, app_name, pkg_ns, doc_type,
+    doc_label, title, …) — and then adds the consolidation provenance extras
+    (master_source, prior_versions, …) as additional keys.
+
+    Does not mutate ``master_fm``.
+    """
+    fm = dict(master_fm)
+    fm["consolidated_title"] = group_title
+    fm["master_source"] = master_title
+    fm["master_pub_date"] = master_pub_date or ""
+    fm["consolidated_from"] = f"{member_count} versions"
+    fm["prior_versions"] = list(prior_titles)
+    return fm

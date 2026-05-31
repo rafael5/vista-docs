@@ -79,9 +79,15 @@ _CANONICAL_INDEX: dict[str, int] = {k: i for i, k in enumerate(CANONICAL_FIELD_O
 
 
 def _quote(value: str) -> str:
-    """Double-quote a YAML string value if it contains a colon."""
+    """Double-quote a YAML string value if it contains a colon.
+
+    Backslashes are escaped *before* quotes so values carrying literal
+    backslashes (e.g. ``(ACKQ\\3.0\\3)``) do not produce invalid double-quoted
+    YAML escape sequences such as ``\\3`` ("unknown escape character").
+    """
     if ":" in value:
-        return '"' + value.replace('"', '\\"') + '"'
+        escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+        return '"' + escaped + '"'
     return value
 
 

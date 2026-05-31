@@ -70,3 +70,26 @@ def fields_for_doc(index: dict, app_code: str, title: str) -> dict | None:
         result["doc_type"] = doc_code
 
     return result
+
+
+def app_fields_for_code(index: dict, app_code: str) -> dict | None:
+    """Return *app-level* frontmatter fields for an app_code, ignoring title.
+
+    Used to backfill documents that have no exact (app_code, title) inventory
+    match (e.g. placeholder/demo docs) so they still carry a real section and
+    app identity instead of landing in an "Uncategorized"/blank-app bucket.
+
+    Only app-level fields are returned — never doc-level fields like doc_label
+    or patch_id, which cannot be guessed from an unrelated row of the same app.
+    Returns None if no inventory row exists for the app_code.
+    """
+    for row in index.values():
+        if row.get("app_name_abbrev") == app_code:
+            return {
+                "section": row.get("section_code", ""),
+                "app_name": row.get("app_name_full", ""),
+                "app_status": row.get("app_status", ""),
+                "pkg_ns": row.get("pkg_ns", "") or app_code,
+                "app_url": row.get("app_url", ""),
+            }
+    return None
