@@ -25,6 +25,7 @@ _WS_RE = re.compile(r"\s+")
 _BLOCK_END_RE = re.compile(r"</(?:li|p|ul|ol)>", re.IGNORECASE)
 _INT_RE = re.compile(r"\d+")
 _MMYYYY_RE = re.compile(r"^(\d{1,2})/(\d{4})$")
+_MDY_RE = re.compile(r"^(\d{1,2})/(\d{1,2})/(\d{2,4})$")
 _CAPTION_RE = re.compile(r"(?i)^\s*(revision history|this table lists the history)")
 
 
@@ -51,10 +52,17 @@ def _flatten_change(cell_html: str) -> str:
 
 
 def _norm_date(text: str) -> str:
-    m = _MMYYYY_RE.match(text.strip())
+    t = text.strip()
+    m = _MMYYYY_RE.match(t)
     if m:
         return f"{m.group(2)}-{int(m.group(1)):02d}"
-    return text.strip()
+    m = _MDY_RE.match(t)
+    if m:
+        month, year = int(m.group(1)), m.group(3)
+        if len(year) == 2:
+            year = ("20" if int(year) < 50 else "19") + year
+        return f"{year}-{month:02d}"
+    return t
 
 
 def _refs(cell_html: str) -> list[str]:

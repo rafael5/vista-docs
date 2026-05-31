@@ -57,6 +57,18 @@ def test_convert_tables_replaces_simple_keeps_complex():
     assert "<table>" in out  # the complex one survives
 
 
+def test_headerless_table_uses_first_row_and_handles_br():
+    html = "<table><tbody><tr><td>a<br/>b</td><td>c</td></tr><tr><td>d</td><td>e</td></tr></tbody></table>"
+    gfm = html_table_to_gfm(html)
+    # first row becomes the header; <br/> flattens to a space
+    assert gfm.splitlines()[0] == "| a b | c |"
+    assert gfm.splitlines()[-1] == "| d | e |"
+
+
+def test_empty_table_returns_none():
+    assert html_table_to_gfm("<table></table>") is None
+
+
 def test_convert_tables_idempotent():
     body = f"x\n\n{SIMPLE}\n"
     once = convert_tables(body)

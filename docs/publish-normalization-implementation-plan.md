@@ -1,0 +1,314 @@
+# Publish Normalization — Implementation Plan
+
+**Tracks:** [`docs/publish-normalization-spec.md`](publish-normalization-spec.md) (Draft 1, 2026-05-31)
+**Plan status:** In progress — 2026-05-31. Pure transform layer (F1–F10),
+classifier, orchestrator, runner, CLI, and CI lint helpers built & green (97.6%
+cov). Prototype run on the real CPRS doc surfaced a corpus-shape surprise — see
+the Change Log (2026-05-31) and Lessons Learned #13. Remaining: pandoc
+`[[text](#_Toc)]` heading recovery, PDF page-bridge I/O, FM JSON-schema, publish
+wiring, batch rollout.
+**Home:** new `src/vista_docs/normalize/` package; wired before `publish`.
+**Conventions:** TDD hard rule (failing test first), pure/IO split, `.venv/bin/`
+tools, `make check` (95% cov) before every commit, frontmatter writes route
+through stage 6 `pipeline/audit_frontmatter.py` (single owner of canonical keys).
+
+> **How to use this doc.** The tracking table below is the single source of
+> truth for progress — update a row's **Status** as you work. Append a dated
+> entry to the **Change Log** (§Change Log) for every stage you start/finish,
+> in narrative form. Add to **Lessons Learned** whenever the pipeline surprises
+> you. Keep the spec (`publish-normalization-spec.md`) as the *what*; this doc
+> is the *how* and the *record*.
+
+---
+
+## Tracking Table
+
+**Status legend:** `TODO` not started · `WIP` in progress · `DONE` complete &
+verified · `BLOCKED` waiting on a decision/dependency · `REUSE` infrastructure
+already exists (from the 2026-05-31 frontmatter-guardrails work) and can be
+extended rather than built.
+
+| ID | Phase / Stage | Spec ref | Module / artifact | Status | Tests | Notes |
+|----|---------------|----------|-------------------|--------|-------|-------|
+| **P0** | **Discovery & scaffolding** | §13, §3, §12a | — | TODO | — | gate before any transform code |
+| P0.1 | Verify open questions (anchor span-vs-heading; PDF availability; pandoc version) | §13 | survey notes | TODO | — | blocks F4 (hoist) & F7 (oracle) |
+| P0.2 | Corpus classification census (Class A/B/C/D counts) | §8 | `survey/normalize_census.csv` | TODO | — | sizes F3/F7 effort |
+| P0.3 | `normalize/` package skeleton + CLI stub + `[tool.coverage.run] omit` for I/O | §3, §12a | `src/vista_docs/normalize/` | TODO | unit (stub) | one test file per module |
+| P0.4 | Register new frontmatter keys in `audit_frontmatter.py` + JSON-schema scaffold | §5, §11 | `audit_frontmatter.py`, schema | TODO | unit | else audit strips new keys |
+| **P1** | **Denoise & boilerplate (F1–F2)** | §6 F1–F2 | — | TODO | — | run first; idempotent |
+| P1.1 | F1 whitespace/layout denoise (≥6-space runs, `\f`, ≥3 blank lines, trailing ws) | F1 | `denoise_pure.py` | TODO | unit | check idempotency |
+| P1.2 | Decide F1-in-ingest vs normalize; reconcile with `ingest/postprocess.py` | F1 note | postprocess vs normalize | BLOCKED | — | decision: avoid double-denoise |
+| P1.3 | F2 running header/footer strip (per-doc fuzzy template) | F2 | `boilerplate_pure.py` | TODO | unit | reuse `survey/heading_analysis` boilerplate stats |
+| **P2** | **Structure recovery (F3, F4, F6)** | §6 | — | TODO | — | highest-value: F3 |
+| P2.1 | F3 heading inference/promotion (caps, numbering, `Chapter/Appendix`, underline/bold) | F3 | `heading_infer_pure.py` | TODO | unit | conservative: skip when ambiguous; log |
+| P2.2 | F4 anchor assignment: GitHub slug algo + `anchor_aliases` + span-id hoist | F4 | `anchors_pure.py` | TODO | unit | depends on P0.1 |
+| P2.3 | F6 TOC generation from stage-6.5 heading tree | F6 | `toc_pure.py` | TODO | unit | reuse `chunk_sections.py` tree; don't re-parse |
+| **P3** | **Revision history (F5) + sidecars** | §6 F5, §7 | — | TODO | — | also fixes `description` pollution |
+| P3.1 | F5 parse revision `<table>`, drop PM/TW cols, structured records + `refs` | F5 | `revision_pure.py` | TODO | unit | the only true deletion (PM/TW) |
+| P3.2 | Sidecar writer (`*.history.yaml`) + frontmatter summary via audit | §7, F5.4 | I/O wrapper | TODO | integration | `revision_count/newest/oldest/sidecar` |
+| P3.3 | `description` de-pollution (regenerate or clear when it begins w/ rev caption) | F5.6, §13.3 | in F5 path | TODO | unit | mirrors existing `sanitize_scalar` work |
+| **P4** | **Page-number bridge (F7)** — Class C | §6 F7 | — | TODO | — | PDF = oracle, not docx |
+| P4.1 | PDF text extraction I/O (eval `pypdf`/`pdfplumber`; `uv lock`) | F7.1 | I/O wrapper | TODO | integration | add runtime dep per CLAUDE.md |
+| P4.2 | Inject silent page anchors + `original_toc` sidecar (`page_anchors: true`) | F7.1–2 | `page_bridge_pure.py` | TODO | unit | `<a id="pN"></a><!-- page N -->` |
+| P4.3 | Resolution step: map `p<N>` → nearest following heading slug | F7.3 | `page_bridge_pure.py` | TODO | unit | rewrite original-TOC links |
+| P4.4 | Retirement step: delete `pN` anchors; `page_anchors: false` | F7.4 | `page_bridge_pure.py` | TODO | unit | reversible via sidecar |
+| **P5** | **Figures, tables, link rewrite (F9, F10, F8)** | §6 | — | TODO | — | F8 must run last |
+| P5.1 | F9 figure caption recovery into alt/title | F9 | `figures_pure.py` | TODO | unit | `![Figure N: ...](...)` |
+| P5.2 | F10 table policy (simple→GFM, complex→raw HTML) | F10 | `tables_pure.py` | TODO | unit | never force-convert complex |
+| P5.3 | F8 link rewrite (`#legacy`→`#slug`) + cross-doc resolve + dead-link sweep | F8 | `linkfix_pure.py` + anchor index | TODO | unit + integration | runs last; needs all anchors final |
+| **P6** | **Orchestration & classification** | §8, §12 | — | TODO | — | idempotent pipeline |
+| P6.1 | Document classifier A/B/C/D → `anchors_source`/`toc` | §8 | `classify_pure.py` | TODO | unit | branches transform set |
+| P6.2 | `normalize` runner: order F1→…→F8 + idempotency guard (`normalize_version`) | §10, §12 | `normalize/runner.py` | TODO | integration | re-run = no-op |
+| P6.3 | CLI `vista-docs normalize [--pkg][--force]`; wire into `publish` | §3 | `cli/main.py` | TODO | integration | run before re-org/copy |
+| **P7** | **Provenance & validation/CI** | §9, §11 | — | REUSE | — | builds on guardrails session |
+| P7.1 | Provenance fields (`source_sha256`, `converter`, `normalized_at`, `normalize_version`) | §9 | audit keys + runner | TODO | unit | hash of raw docx/pdf |
+| P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `src/vista_docs/validate/` | REUSE→extend | unit | extend existing `validate` module |
+| P7.3 | Plug normalize checks into hard publish/push gate + corpus CI | §11 | `cli/main.py`, `.ci/` | REUSE | integration | gate + `.ci/validate_frontmatter.py` already exist |
+| **P8** | **Rollout** | §14 | — | TODO | — | prototype before batch |
+| P8.1 | Prototype CPRS GUI UM end-to-end (F1–F6, F8–F10) | §14.1 | review artifact | TODO | manual review | has Word anchors + redacted table |
+| P8.2 | Class-C prototype with PDF (exercise F7) | §14.2 | review artifact | TODO | manual review | needs P4 |
+| P8.3 | Lock `normalize_version: 1.0` | §14.4 | constant | TODO | — | after review sign-off |
+| P8.4 | Batch run + `validate` gate + per-domain spot audit + publish-push | §14.5 | corpus | TODO | gate | force-push `vistadocs/vdl` |
+| **P9** | **Docs & skills** | §15 | — | TODO | — | same-commit doc rule |
+| P9.1 | Update `src/vista_docs/README.md`, `pipeline/README.md`, `CLAUDE.md` stage list | §15 | docs | TODO | — | add normalize stage |
+| P9.2 | Update `docs/vdl-arch-overview.md` flow + `vdl-pipeline`/`va-docx-structure` skills + memory | §15 | docs/skills | TODO | — | new FM keys + patterns |
+
+---
+
+## Plan detail (per phase)
+
+### P0 — Discovery & scaffolding
+**Why first:** three spec decisions (anchor location, PDF oracle viability, where
+F1 lives) change the shape of later code. Resolve them before writing transforms.
+- **P0.1** On the CPRS GUI prototype doc, confirm whether pandoc emitted `_Toc…`
+  ids *on* headings or on adjacent `<span id="…">` (spec evidence says spans).
+  F4's hoist logic forks on this. Capture pandoc version for `converter:`.
+- **P0.2** Walk `consolidated/`, tag each doc Class A/B/C/D (headings? anchors?
+  page numbers? PDF present?) → `survey/normalize_census.csv`. Drives effort
+  sizing (esp. how many Class-C docs need the F7 bridge).
+- **P0.3** Create `src/vista_docs/normalize/` with empty pure modules + a thin
+  `runner.py`; add `runner.py` (and any I/O wrappers) to `[tool.coverage.run]
+  omit` *immediately* (coverage gate is 95%).
+- **P0.4** Add the §5 keys to `audit_frontmatter.py`'s `CANONICAL_KEYS` (and the
+  shared `CANONICAL_KEY_ORDER` in `validate/frontmatter.py`) + a JSON-schema
+  file. **Unregistered keys are stripped by audit** — the spec calls this out.
+
+### P1 — Denoise & boilerplate (F1, F2)
+Pure, idempotent, run first. **P1.2 is a real decision:** F1 cleanup may belong
+in `ingest/postprocess.py` (so md-img is clean for *all* consumers, not just
+publish). Prototype both; prefer fixing upstream once, then normalize only does
+publish-specific work. F2 reuses the boilerplate frequencies already computed by
+`vista-docs headings` (`survey/heading_analysis/`).
+
+### P2 — Structure recovery (F3, F4, F6)
+The payoff phase. F3 (heading inference) is the highest-value transform and the
+riskiest — keep it conservative (skip+log on ambiguity; never invent structure).
+F6 must consume the stage-6.5 heading tree (`chunk_sections.py`), not re-derive
+headings, so the TOC matches the chunk index and anchors stay consistent.
+
+### P3 — Revision history (F5) + sidecars
+Harvest the revision `<table>`, drop only the uniformly-redacted PM/TW columns,
+write `*.history.yaml`, summarize into frontmatter, remove the table from the
+body, and fix the `description:` pollution. Reuse the `sanitize_scalar` +
+guarded-serializer machinery already shipped.
+
+### P4 — Page-number bridge (F7)
+Only for Class-C (flat + paginated). **The PDF is the pagination oracle** — .docx
+does not store rendered page numbers. Preserve→bridge→retire, each step
+reversible via the `*.toc.yaml` sidecar. Gated on P0.1/P0.2 finding enough
+usable PDFs; otherwise fall back to non-linked original-TOC text.
+
+### P5 — Figures, tables, link rewrite (F9, F10, F8)
+F9/F10 are local. **F8 runs last** in the whole pipeline because it needs every
+anchor finalized; it rewrites legacy ids → slugs, resolves cross-doc references
+against the emitted anchor index, and fails CI on any dangling `#…`.
+
+### P6 — Orchestration & classification
+The classifier (§8) picks the transform set per doc. The runner enforces the
+canonical order (§12) and the idempotency guard (`normalize_version` + content
+markers) so re-runs are no-ops. Expose as `vista-docs normalize` and call it
+inside `publish` before the domain re-org/copy.
+
+### P7 — Provenance & validation/CI  *(largest reuse of prior work)*
+The 2026-05-31 guardrails session already shipped the validator module
+(`src/vista_docs/validate/`), the `vista-docs validate` stage, the hard
+publish/push gate, and the corpus-repo CI + pre-push hook + self-contained
+`.ci/validate_frontmatter.py`. P7 **extends** these with normalize-specific
+rules (dead-anchor, noise linter, sidecar integrity, frontmatter JSON-schema,
+anchor-index emission) rather than building new infrastructure.
+
+### P8 — Rollout
+Prototype two docs end-to-end (one Class-A with anchors+redacted table, one
+Class-C with a PDF), review the diffs, lock `normalize_version: 1.0`, then batch
+with the hard gate in front of the push.
+
+### P9 — Docs & skills
+Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
+`va-docx-structure` skills + memory in the same commits, per the CLAUDE.md rule.
+
+---
+
+## Change Log
+
+> Append one entry per stage you start or finish. Narrative form — capture *what
+> changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — P0–P7 core build (WIP) + prototype discovery
+**Built (TDD, all green; 97.6% cov on `normalize/`, `make`-gate passes):**
+- `src/vista_docs/normalize/` package with pure transforms, one test file each:
+  `denoise_pure` (F1), `boilerplate_pure` (F2), `heading_infer_pure` (F3),
+  `anchors_pure` (F4: GitHub slug + `Slugger` de-dup + `build_anchor_aliases`),
+  `revision_pure` (F5: parse/summarize/remove + `depollute_description`),
+  `toc_pure` (F6), `page_bridge_pure` (F7 inject/resolve/retire — pure parts),
+  `linkfix_pure` (F8), `figures_pure` (F9), `tables_pure` (F10 simple→GFM,
+  complex→raw), `classify_pure` (§8 A/B/C/D), `lint_pure` (§11 noise + dead-anchor).
+- `normalize_pure.normalize_body` — orchestrator composing F1→F8 in canonical
+  order (§12); deterministic, idempotent (verified twice == once).
+- I/O layer (coverage-omitted): `io.py` (sha256, `*.history.yaml` sidecar writer,
+  raw-source locator), `runner.py` (`consolidated/` → `normalized/`, provenance
+  stamps, routes FM through `safe_dump_frontmatter`), CLI `vista-docs normalize`.
+- Registered the §5 keys in `audit_frontmatter.CANONICAL_KEYS` +
+  `validate.frontmatter.CANONICAL_KEY_ORDER` (P0.4); reserved `runner/io/pdf_reader`
+  in `[tool.coverage.run] omit`.
+
+**Deviation — architecture fix mid-build:** first runner wrote frontmatter *in
+place* into `consolidated/`. That violates §3 ("lossless layer, never hand-edited,
+re-runnable from it"). Refactored to read `consolidated/` and write a separate
+`normalized/` tree. This also fixed an idempotency bug: a second in-place pass
+recomputed `revision_count` from the (already-removed) table and clobbered it to 0.
+
+**Prototype run (CPRS GUI UM, real consolidated doc) — resolves P0.1 with a
+surprise:** revision extraction works end-to-end (243 rows → sidecar;
+`revision_newest 2023-06`, `revision_oldest 2002-05` after adding M/D/YY date
+handling; `description` de-polluted; `consolidated/` untouched; deterministic
+re-run). **But** the doc has effectively **no recoverable headings**: pandoc did
+*not* leave `_Toc…` ids on headings or on `<span id>` siblings (the spec's two
+hypotheses). Instead section titles are encoded as **self-referential
+`[[Heading Text](#_TocNNN)](#_TocMMM)` links**, regular paragraphs are wrapped in
+`[[…]]`, and numbered lists are exploded into bare `1.`/`2.` lines. So F3/F4/F6
+find nothing to promote and the doc classifies as ~D. This is upstream
+ingest/consolidation damage, not just publish noise.
+
+**Follow-ups created:**
+1. Add an F3/F4 sub-transform to recover headings from the
+   `[[text](#_Toc)](#_Toc)` self-link form and alias the `_Toc` ids to the new
+   slug. Distinguish heading self-links (double-anchor / TOC entries) from
+   paragraph `[[…]]` wrapping — non-trivial; prototype on this doc.
+2. Investigate fixing the `[[…]]` wrapping + exploded-list artifacts **upstream**
+   in `ingest/postprocess.py` (per P1.2) so all consumers get clean md, then
+   normalize only does publish-specific work.
+3. Run the P0.2 Class A/B/C/D census now that we know the real shapes — quantify
+   how many docs are this degraded vs clean.
+4. Still TODO: PDF page-bridge I/O (P4.1), FM JSON-schema (P0.4/§11), sidecar
+   integrity + anchor-index emit (P7.2), wire `normalize` into `publish` + the
+   hard gate (P6.3/P7.3), batch rollout (P8).
+
+### 2026-05-31 — Plan created
+- Authored this implementation plan from `publish-normalization-spec.md` Draft 1.
+  Decomposed the 10 transforms (F1–F10) + classification + sidecars + provenance
+  + CI into 9 phases / 31 tracked stages, mapped to the spec's §12a module
+  layout and the repo's pure/IO TDD conventions.
+- Marked P7 (`validation/CI`) as **REUSE**: the frontmatter-guardrails work
+  landed earlier today (pipeline branch `harden-frontmatter-guardrails`
+  `a2783b0`; corpus `vistadocs/vdl` `5f9ba78`) already provides the validator
+  module, `validate` CLI stage, hard publish/push gate, and corpus CI + pre-push
+  hook — normalize plugs into these instead of rebuilding them.
+- Flagged P1.2 (F1 location: ingest vs normalize) as **BLOCKED on a decision**
+  to avoid a double-denoiser, and P0.1/P4.1 as gated on the spec's open
+  questions (anchor location, PDF availability).
+- No code written yet. Next action: **P0.1** (verify anchor location + pandoc
+  version on the CPRS GUI prototype) and **P0.2** (Class A/B/C/D census).
+
+<!-- Template for new entries:
+### YYYY-MM-DD — P<n>.<m> <stage name> (<WIP|DONE>)
+- What was implemented / changed (files, functions).
+- Test evidence (failing-first → green; `make check` result).
+- Surprises / deviations from plan / decisions taken.
+- Follow-ups created.
+-->
+
+---
+
+## Lessons Learned (pipeline nuances — carry forward & reuse)
+
+> Seeded from the 2026-05-31 frontmatter-guardrails work on this same pipeline.
+> Add to this list as normalize implementation surfaces new nuances.
+
+1. **One serializer, with a round-trip guard.** The pipeline historically had
+   *two* frontmatter serializers: audit's `yaml.safe_dump` and enrich's
+   hand-rolled `_quote` — the hand-rolled one double-quoted values without
+   escaping backslashes and emitted unparseable YAML (`(ACKQ\3.0\3)` →
+   *"unknown escape character"*). **Route every frontmatter write through the
+   single guarded serializer** `validate.frontmatter.safe_dump_frontmatter`,
+   which round-trips its own output through strict `safe_load` and raises on
+   failure. Do **not** add a third serializer for normalize.
+2. **Audit owns the canonical keys and runs last.** Any key not registered in
+   `audit_frontmatter.py` (`CANONICAL_KEYS`) / `validate.frontmatter`
+   (`CANONICAL_KEY_ORDER`) is silently dropped on the next audit. Register
+   normalize's new keys (`toc`, `anchors_source`, `anchor_aliases`,
+   `revision_sidecar`, `page_anchors`, `source_sha256`, `converter`,
+   `normalized_at`, `normalize_version`) **before** writing them anywhere.
+3. **`enrich --force` re-derives `description` from the body.** A leading
+   `---…---` block left in the body gets captured as `description` (this is
+   exactly how the DVBA doc got corrupted — its real frontmatter ended up
+   double-wrapped in the body). F5's body edits and F3's restructuring must be
+   **idempotent** and must not leave fence-like or table-caption text at the top
+   of the body, or a later enrich will re-pollute `description`.
+4. **Stage order constrains where a field can be filled.** `enrich → sync →
+   audit → consolidate → manifest → publish`. Inventory-derived fields must be
+   set at **sync** (join key is `(app_code, title)`, *not* slug); content-derived
+   fields at **enrich/audit**. `normalize` sits **after consolidate, before
+   publish** — so it can rely on canonical frontmatter already being present, but
+   anything it changes in frontmatter should go back through audit's serializer.
+5. **`publish` drops docs with empty `app_code`.** A normalize bug that blanks
+   `app_code` will *silently remove* the doc from the deliverable (that's how the
+   DVBA stub stays out of publish). Treat empty required keys as a hard failure,
+   not a silent drop.
+6. **Determinism is required and easy to break.** `consolidate` is deterministic
+   via stable sort; audit stamps only a *dated* `audit_applied`, so same-day
+   reruns are byte-identical. Keep normalize deterministic: sorted iteration, no
+   wall-clock/random content (only a dated `normalized_at` stamp), stable slug
+   de-dup ordering. Verify with a second run + `md5sum` diff.
+7. **`ftfy` uncurls quotes as a side effect of mojibake repair.** `sanitize_scalar`
+   is safe for prose (`description`, `audience`) but will alter literal
+   punctuation. **Never run it on checksums, version strings, anchors, or slugs.**
+   Sanitize prose; copy structured tokens verbatim.
+8. **Keep tables and maps YAML-safe.** Tables belong in the markdown **body**,
+   not frontmatter. The one map normalize puts *in* frontmatter (`anchor_aliases`)
+   must stay safe — keys with colons/`*`/leading `-` need the guarded serializer
+   (it handles this; bespoke string-building does not).
+9. **The hard gate already exists — lean on it.** `publish`/`push` refuse to run
+   on any hard validation failure (`_run_validation_gate`), the corpus repo has
+   `.ci/validate_frontmatter.py` + a CI workflow + a pre-push hook, and
+   `run_publish` preserves `.git/.gitignore/.github/.ci` across `--force`. Add
+   normalize's CI checks (dead-anchor, noise linter, sidecar integrity) into this
+   path; don't invent a parallel gate.
+10. **The converter is pandoc, not Docling.** Page numbers are **not** in the
+    .docx — F7 must read them from the **PDF** (`pdf_url`). Set `converter:`
+    from the actual pandoc version.
+11. **Source docs are off-limits to hand-editing.** The auto-mode classifier
+    blocks overwriting non-git-controlled `md-img/`/`consolidated/` docs — and it
+    should. **Every fix must be generator-level** (a transform + a test), which
+    is exactly what this spec mandates. A one-off "just fix this file" is both
+    blocked and non-reproducible.
+12. **Coverage discipline.** New I/O wrappers go into `[tool.coverage.run] omit`
+    in `pyproject.toml` the moment they're created; pure transforms must have a
+    failing unit test before implementation (TDD hard rule) and stay at/above the
+    95% gate. Verify a scoped commit builds in isolation with a throwaway
+    `git worktree` + `PYTHONPATH=…/src pytest` when the working tree contains
+    unrelated in-progress files.
+13. **The consolidated corpus is more degraded than the spec's evidence (P0.1).**
+    The spec assumed pandoc left clean headings with `_Toc…` ids either on the
+    heading or on an adjacent `<span id>`. The CPRS GUI UM prototype shows a
+    *third* form: section titles survive only as self-referential
+    `[[Heading Text](#_TocNNN)](#_TocMMM)` links, body paragraphs are wrapped in
+    `[[…]]`, and numbered lists are exploded into bare `N.` lines. F3/F4 must
+    learn this pattern (or it must be fixed upstream in ingest) before heading
+    inference / TOC generation produce anything on docs like this — and the
+    census (P0.2) must measure how widespread it is. **Always prototype a
+    transform against a real consolidated doc, not just a synthetic fixture.**
+14. **Normalize writes a sibling tree, never `consolidated/`.** Read
+    `consolidated/` (lossless), write `normalized/`. Mutating `consolidated/` in
+    place breaks re-runnability *and* idempotency (the revision summary gets
+    recomputed from the already-removed table and zeroed). The pure orchestrator
+    is date-free; only the runner stamps `normalized_at`.

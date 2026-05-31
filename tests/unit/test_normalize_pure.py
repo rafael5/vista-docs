@@ -77,6 +77,11 @@ def test_normalize_version_stamped():
     assert r.frontmatter["normalize_version"] == "1.0"
 
 
+def test_no_description_key_when_not_provided():
+    r = normalize_body(SAMPLE)
+    assert "description" not in r.frontmatter
+
+
 def test_idempotent_body():
     once = normalize_body(SAMPLE, description="Revision HistoryThis table lists")
     twice = normalize_body(once.body, description=once.frontmatter["description"])

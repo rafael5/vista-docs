@@ -100,3 +100,25 @@ def test_depollute_description_clears_revision_caption():
 
 def test_depollute_keeps_clean_description():
     assert depollute_description("CPRS GUI user guide.") == "CPRS GUI user guide."
+
+
+def test_depollute_non_string_returns_empty():
+    assert depollute_description(None) == ""
+
+
+def test_parse_normalizes_legacy_mdy_dates():
+    # Old CPRS rows use M/D/YY and M/D/YYYY (seen in the real corpus).
+    table = (
+        "<table><thead><tr><th>Date</th><th>Version/Patch</th>"
+        "<th>Page</th><th>Change</th></tr></thead><tbody>"
+        "<tr><td>5/21/02</td><td>OR*3*1</td><td></td><td>Initial</td></tr>"
+        "<tr><td>5/8/2002</td><td>OR*3*0</td><td></td><td>Draft</td></tr>"
+        "</tbody></table>"
+    )
+    recs = parse_revision_table(table)
+    assert [r.date for r in recs] == ["2002-05", "2002-05"]
+    assert recs[0].pages == []
+
+
+def test_parse_returns_empty_for_no_rows():
+    assert parse_revision_table("<table></table>") == []

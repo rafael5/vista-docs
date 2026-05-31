@@ -405,6 +405,38 @@ def consolidate(output: str, min_versions: int, doc_types: tuple[str, ...]) -> N
 
 
 # ---------------------------------------------------------------------------
+# normalize — publish-normalization stage (consolidated/ → clean gold markdown)
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.option("--input", "input_", type=click.Path(), default="", help="consolidated/ dir (input).")
+@click.option("--output", type=click.Path(), default="", help="normalized/ dir (output).")
+@click.option("--pkg", default="", help="Limit to one consolidated subdir (app_code).")
+@click.option("--force", is_flag=True, help="Regenerate docs even if normalized output exists.")
+def normalize(input_: str, output: str, pkg: str, force: bool) -> None:
+    """Normalize consolidated/ → normalized/: denoise, recover structure, demote
+    revision history to sidecars, build link TOCs, stamp provenance (spec §12).
+
+    Reads the lossless consolidated/ tree and writes clean gold markdown to a
+    separate normalized/ tree, so consolidated/ is never mutated."""
+    import pathlib
+
+    from vista_docs.config import DATA_DIR
+    from vista_docs.normalize.runner import run_normalize
+
+    in_dir = pathlib.Path(input_) if input_ else DATA_DIR / "consolidated"
+    out_dir = pathlib.Path(output) if output else DATA_DIR / "normalized"
+    click.echo(f"Normalizing {in_dir} → {out_dir}" + (f" (pkg={pkg})" if pkg else ""))
+    stats = run_normalize(in_dir, out_dir, pkg=pkg or None, force=force)
+    click.echo(
+        f"Done: {stats.processed} processed, {stats.skipped} skipped, "
+        f"{stats.sidecars_written} history sidecars "
+        f"({stats.revisions_extracted} revisions)"
+    )
+
+
+# ---------------------------------------------------------------------------
 # manifest
 # ---------------------------------------------------------------------------
 
