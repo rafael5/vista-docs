@@ -153,6 +153,40 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
 
+### 2026-05-31 — F3a unwrap transform (`delink_pure`) + corrected P0.1 reading
+**Correction to the earlier same-day entry:** the `[[text](#_Toc)]` form is **not**
+a heading encoding at all. Deeper analysis of the CPRS doc: there are **zero**
+anchor *definitions* in the body (`<a id>`/`[]{#id}`/`{#id}` all 0; the only defs
+are 86 `<span id>` figure anchors), and **all** 925 double-link + 927 single-link
+lines point to the *same* undefined anchor `_Toc17877476` ("return to TOC"),
+wrapping **prose** (and a few empty bookmark markers). So they are dead
+navigation-link wrapping pandoc replays on every paragraph — not section headings.
+
+**Built `normalize/delink_pure.py` (F3a, TDD, 100% cov, 12 tests):**
+- `unwrap_toc_links(body, defined=None)`: a global lazy `[[…](#a)](#b)` → inner
+  text sub (the double `](#..)](#..)` close is unambiguous, so it safely handles
+  blockquote/list prefixes, inline, and multi-line wrappers + preserves an inner
+  inline `[x](#y)`), plus a whole-line single `[text](#dead)` → text pass that
+  only fires when the target is **undefined** (so legit cross-refs and generated
+  TOC links to real heading slugs survive — `defined` = explicit ids ∪ heading
+  slugs).
+- `defined_anchor_ids(body)`: the resolvable-target set.
+- Wired into `normalize_body` right after F1 denoise, before F2/F3. Added a
+  trailing-whitespace trim to `_finalize` (unwrapping an empty blockquote left
+  `> ` which pass-2 denoise trimmed to `>` — an idempotency break, now fixed).
+
+**Prototype impact (CPRS GUI UM, real doc):** **2491** nav links unwrapped,
+`[[` wrappers **0** remaining, body **26% smaller** (816k→601k chars), unique
+dead anchors down to **4**, output **idempotent** + deterministic. The doc now
+classifies **B** (was ~D). Remaining: **166 inline** links to the single dead
+`_Toc17877476` nav anchor are intentionally left (whole-line/double only) — per
+spec §11 dead anchors are a CI **flag** (`lint_pure.dead_anchors` reports them),
+not a silent strip. A follow-up F8 dead-link sweep (run *after* F4 aliasing, so
+it never strips an aliasable ref) could neutralize those if desired. Real
+headings are still not recoverable from this doc (they were lost upstream); F3
+promoted 1. The census (P0.2) should now measure how many docs carry this nav
+wrapping.
+
 ### 2026-05-31 — P0–P7 core build (WIP) + prototype discovery
 **Built (TDD, all green; 97.6% cov on `normalize/`, `make`-gate passes):**
 - `src/vista_docs/normalize/` package with pure transforms, one test file each:
@@ -297,16 +331,18 @@ ingest/consolidation damage, not just publish noise.
     95% gate. Verify a scoped commit builds in isolation with a throwaway
     `git worktree` + `PYTHONPATH=…/src pytest` when the working tree contains
     unrelated in-progress files.
-13. **The consolidated corpus is more degraded than the spec's evidence (P0.1).**
-    The spec assumed pandoc left clean headings with `_Toc…` ids either on the
-    heading or on an adjacent `<span id>`. The CPRS GUI UM prototype shows a
-    *third* form: section titles survive only as self-referential
-    `[[Heading Text](#_TocNNN)](#_TocMMM)` links, body paragraphs are wrapped in
-    `[[…]]`, and numbered lists are exploded into bare `N.` lines. F3/F4 must
-    learn this pattern (or it must be fixed upstream in ingest) before heading
-    inference / TOC generation produce anything on docs like this — and the
-    census (P0.2) must measure how widespread it is. **Always prototype a
-    transform against a real consolidated doc, not just a synthetic fixture.**
+13. **The consolidated corpus is more degraded than the spec's evidence (P0.1),
+    and the `[[…](#_Toc)]` form is nav wrapping, not headings.** The spec assumed
+    pandoc left clean headings with `_Toc…` ids on the heading or an adjacent
+    `<span id>`. Reality on the CPRS GUI UM doc: **zero** anchor *definitions*
+    exist, and ~1850 lines wrap **prose** in dead "return-to-TOC" links all
+    pointing at the *same* undefined `_Toc` anchor. The fix is to **unwrap** them
+    (`delink_pure`, F3a) — recovering text + killing dead anchors (2491 unwrapped,
+    26% smaller, idempotent) — *not* to promote them to headings. Real headings
+    were lost upstream; F3 can only infer the few that survive as text. **Always
+    prototype against a real consolidated doc, and re-verify your read of the data
+    before building — the first "self-referential heading link" hypothesis was
+    itself wrong.** Census (P0.2) should measure how widespread the wrapping is.
 14. **Normalize writes a sibling tree, never `consolidated/`.** Read
     `consolidated/` (lossless), write `normalized/`. Mutating `consolidated/` in
     place breaks re-runnability *and* idempotency (the revision summary gets

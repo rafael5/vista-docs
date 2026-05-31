@@ -18,6 +18,7 @@ from vista_docs.normalize import NORMALIZE_VERSION
 from vista_docs.normalize.anchors_pure import build_anchor_aliases, extract_headings
 from vista_docs.normalize.boilerplate_pure import strip_boilerplate
 from vista_docs.normalize.classify_pure import DocFeatures, classify
+from vista_docs.normalize.delink_pure import unwrap_toc_links
 from vista_docs.normalize.denoise_pure import denoise
 from vista_docs.normalize.figures_pure import recover_figures
 from vista_docs.normalize.heading_infer_pure import infer_headings
@@ -36,6 +37,7 @@ from vista_docs.normalize.toc_pure import build_toc
 _HEADING_LINE_RE = re.compile(r"^#{1,6}\s")
 _TOC_ITEM_RE = re.compile(r"^\s*- \[")
 _BLANK_LINES_RE = re.compile(r"\n{3,}")
+_TRAILING_WS_RE = re.compile(r"[ \t]+$", re.MULTILINE)
 
 
 @dataclass
@@ -83,6 +85,7 @@ def _place_toc(body: str, toc_md: str) -> str:
 
 
 def _finalize(body: str) -> str:
+    body = _TRAILING_WS_RE.sub("", body)
     body = _BLANK_LINES_RE.sub("\n\n", body)
     return body.strip("\n") + "\n"
 
@@ -94,8 +97,10 @@ def normalize_body(
     has_pdf: bool = False,
 ) -> NormalizeResult:
     """Normalize a document body and return body + frontmatter updates."""
-    # F1 / F2
+    # F1 denoise, then F3a unwrap dead TOC/nav-link wrapping (recovers prose +
+    # kills dead anchors so F3 inference and F8 sweep can work), then F2.
     body = denoise(body)
+    body, delinked = unwrap_toc_links(body)
     body, removed_boiler = strip_boilerplate(body)
 
     # F3 — record native headings first, then infer flattened ones.
@@ -158,6 +163,7 @@ def normalize_body(
         aliases=aliases,
         stats={
             "boilerplate_removed": removed_boiler,
+            "nav_links_unwrapped": delinked,
             "headings_promoted": promoted,
             "doc_class": cls.doc_class,
         },

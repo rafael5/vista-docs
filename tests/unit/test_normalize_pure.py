@@ -77,6 +77,19 @@ def test_normalize_version_stamped():
     assert r.frontmatter["normalize_version"] == "1.0"
 
 
+def test_nav_link_wrapping_unwrapped_end_to_end():
+    body = (
+        "[[The system is a record system for clinicians](#_Toc604)](#_Toc476)\n\n"
+        "[A second paragraph of prose text here](#_Toc476)\n\n"
+        "# Real Heading\n\ncontent\n"
+    )
+    r = normalize_body(body)
+    assert r.stats["nav_links_unwrapped"] == 2
+    assert "The system is a record system for clinicians" in r.body
+    assert "#_Toc476" not in r.body  # dead nav anchors gone
+    assert "[[" not in r.body
+
+
 def test_no_description_key_when_not_provided():
     r = normalize_body(SAMPLE)
     assert "description" not in r.frontmatter
