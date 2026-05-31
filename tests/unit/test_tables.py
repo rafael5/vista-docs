@@ -58,7 +58,10 @@ def test_convert_tables_replaces_simple_keeps_complex():
 
 
 def test_headerless_table_uses_first_row_and_handles_br():
-    html = "<table><tbody><tr><td>a<br/>b</td><td>c</td></tr><tr><td>d</td><td>e</td></tr></tbody></table>"
+    html = (
+        "<table><tbody><tr><td>a<br/>b</td><td>c</td></tr>"
+        "<tr><td>d</td><td>e</td></tr></tbody></table>"
+    )
     gfm = html_table_to_gfm(html)
     # first row becomes the header; <br/> flattens to a space
     assert gfm.splitlines()[0] == "| a b | c |"
