@@ -144,15 +144,25 @@ CANONICAL_KEYS = [
     "figure_count",
     "appendix_count",
     "has_toc",
+    "toc",
+    "anchors_source",
+    "anchor_aliases",
+    "page_anchors",
     "is_stub",
     "pub_date",
     "revision_count",
     "revision_newest",
     "revision_oldest",
+    "revision_sidecar",
     "docx_url",
     "pdf_url",
     "app_url",
     "audit_applied",
+    # Normalize-stage provenance (publish-normalization-spec §9)
+    "source_sha256",
+    "converter",
+    "normalized_at",
+    "normalize_version",
 ]
 
 

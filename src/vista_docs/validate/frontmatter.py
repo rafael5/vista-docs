@@ -90,18 +90,29 @@ CANONICAL_KEY_ORDER: list[str] = [
     "figure_count",
     "appendix_count",
     "has_toc",
+    # TOC / anchors (normalize stage)
+    "toc",
+    "anchors_source",
+    "anchor_aliases",
+    "page_anchors",
     "is_stub",
     # Revision history
     "pub_date",
     "revision_count",
     "revision_newest",
     "revision_oldest",
+    "revision_sidecar",
     # Source URLs
     "docx_url",
     "pdf_url",
     "app_url",
     # Audit / provenance
     "audit_applied",
+    # Normalize-stage provenance
+    "source_sha256",
+    "converter",
+    "normalized_at",
+    "normalize_version",
     # Consolidation provenance extras
     "master_source",
     "master_pub_date",
