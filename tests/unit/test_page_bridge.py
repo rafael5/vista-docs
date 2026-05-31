@@ -17,11 +17,7 @@ def test_inject_before_lines():
     body = "alpha\nbeta\ngamma\n"
     out = inject_page_anchors(body, [(1, 1), (2, 2)])
     assert out == (
-        "alpha\n"
-        '<a id="p1"></a><!-- page 1 -->\n'
-        "beta\n"
-        '<a id="p2"></a><!-- page 2 -->\n'
-        "gamma\n"
+        'alpha\n<a id="p1"></a><!-- page 1 -->\nbeta\n<a id="p2"></a><!-- page 2 -->\ngamma\n'
     )
 
 

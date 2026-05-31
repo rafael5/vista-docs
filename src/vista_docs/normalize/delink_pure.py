@@ -33,9 +33,7 @@ _DBL_RE = re.compile(r"\[\[(?P<text>.*?)\]\(#[^)]+\)\]\(#[^)]+\)", re.DOTALL)
 # Whole-line single link (optional ``>`` / ``-`` / ``*`` prefix) whose text holds
 # no ``]`` — i.e. the entire line is one link, not a sentence of two. Unwrapped
 # only when the target is dead (undefined), so real cross-references survive.
-_SGL_LINE_RE = re.compile(
-    r"^(?P<prefix>>\s+|[-*]\s+|)\[(?P<text>[^\]]*)\]\(#(?P<a>[^)]+)\)$"
-)
+_SGL_LINE_RE = re.compile(r"^(?P<prefix>>\s+|[-*]\s+|)\[(?P<text>[^\]]*)\]\(#(?P<a>[^)]+)\)$")
 
 _DEF_ATTR_RE = re.compile(r'<(?:span|a)\b[^>]*\b(?:id|name)="([^"]+)"')
 _DEF_PANDOC_RE = re.compile(r"\[\]\{#([^}\s]+)")
