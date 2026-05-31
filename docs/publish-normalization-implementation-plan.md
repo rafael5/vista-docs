@@ -1,12 +1,15 @@
 # Publish Normalization — Implementation Plan
 
 **Tracks:** [`docs/publish-normalization-spec.md`](publish-normalization-spec.md) (Draft 1, 2026-05-31)
-**Plan status:** In progress — 2026-05-31. Pure transform layer (F1–F10),
-classifier, orchestrator, runner, CLI, and CI lint helpers built & green (97.6%
-cov). Prototype run on the real CPRS doc surfaced a corpus-shape surprise — see
-the Change Log (2026-05-31) and Lessons Learned #13. Remaining: pandoc
-`[[text](#_Toc)]` heading recovery, PDF page-bridge I/O, FM JSON-schema, publish
-wiring, batch rollout.
+**Plan status:** In progress — 2026-05-31. Pure transform layer (F1–F10 + F3a
+unwrap + F8 dead-link sweep), classifier, orchestrator, runner, CLI, CI lint
+helpers, and the P0.2 census all built & green (98% cov). See the tracking table
+for per-stage status and the Change Log / Lessons #13–14 for the corpus-shape
+findings. **Census:** 236 docs → A=122, B=108, C=4, D=2 (corpus healthier than
+the CPRS prototype implied). **Remaining:** PDF page-bridge I/O (P4.1, 4 docs),
+FM JSON-schema (P0.4), sidecar-integrity + anchor-index emit (P7.2), gate wiring
+(P7.3), publish wiring (P6.3), F8 bracketed-link-text robustness (P5.3), batch
+rollout (P8).
 **Home:** new `src/vista_docs/normalize/` package; wired before `publish`.
 **Conventions:** TDD hard rule (failing test first), pure/IO split, `.venv/bin/`
 tools, `make check` (95% cov) before every commit, frontmatter writes route
@@ -30,48 +33,48 @@ extended rather than built.
 
 | ID | Phase / Stage | Spec ref | Module / artifact | Status | Tests | Notes |
 |----|---------------|----------|-------------------|--------|-------|-------|
-| **P0** | **Discovery & scaffolding** | §13, §3, §12a | — | TODO | — | gate before any transform code |
-| P0.1 | Verify open questions (anchor span-vs-heading; PDF availability; pandoc version) | §13 | survey notes | TODO | — | blocks F4 (hoist) & F7 (oracle) |
-| P0.2 | Corpus classification census (Class A/B/C/D counts) | §8 | `survey/normalize_census.csv` | TODO | — | sizes F3/F7 effort |
-| P0.3 | `normalize/` package skeleton + CLI stub + `[tool.coverage.run] omit` for I/O | §3, §12a | `src/vista_docs/normalize/` | TODO | unit (stub) | one test file per module |
-| P0.4 | Register new frontmatter keys in `audit_frontmatter.py` + JSON-schema scaffold | §5, §11 | `audit_frontmatter.py`, schema | TODO | unit | else audit strips new keys |
-| **P1** | **Denoise & boilerplate (F1–F2)** | §6 F1–F2 | — | TODO | — | run first; idempotent |
-| P1.1 | F1 whitespace/layout denoise (≥6-space runs, `\f`, ≥3 blank lines, trailing ws) | F1 | `denoise_pure.py` | TODO | unit | check idempotency |
-| P1.2 | Decide F1-in-ingest vs normalize; reconcile with `ingest/postprocess.py` | F1 note | postprocess vs normalize | BLOCKED | — | decision: avoid double-denoise |
-| P1.3 | F2 running header/footer strip (per-doc fuzzy template) | F2 | `boilerplate_pure.py` | TODO | unit | reuse `survey/heading_analysis` boilerplate stats |
-| **P2** | **Structure recovery (F3, F4, F6)** | §6 | — | TODO | — | highest-value: F3 |
-| P2.1 | F3 heading inference/promotion (caps, numbering, `Chapter/Appendix`, underline/bold) | F3 | `heading_infer_pure.py` | TODO | unit | conservative: skip when ambiguous; log |
-| P2.2 | F4 anchor assignment: GitHub slug algo + `anchor_aliases` + span-id hoist | F4 | `anchors_pure.py` | TODO | unit | depends on P0.1 |
-| P2.3 | F6 TOC generation from stage-6.5 heading tree | F6 | `toc_pure.py` | TODO | unit | reuse `chunk_sections.py` tree; don't re-parse |
-| **P3** | **Revision history (F5) + sidecars** | §6 F5, §7 | — | TODO | — | also fixes `description` pollution |
-| P3.1 | F5 parse revision `<table>`, drop PM/TW cols, structured records + `refs` | F5 | `revision_pure.py` | TODO | unit | the only true deletion (PM/TW) |
-| P3.2 | Sidecar writer (`*.history.yaml`) + frontmatter summary via audit | §7, F5.4 | I/O wrapper | TODO | integration | `revision_count/newest/oldest/sidecar` |
-| P3.3 | `description` de-pollution (regenerate or clear when it begins w/ rev caption) | F5.6, §13.3 | in F5 path | TODO | unit | mirrors existing `sanitize_scalar` work |
-| **P4** | **Page-number bridge (F7)** — Class C | §6 F7 | — | TODO | — | PDF = oracle, not docx |
-| P4.1 | PDF text extraction I/O (eval `pypdf`/`pdfplumber`; `uv lock`) | F7.1 | I/O wrapper | TODO | integration | add runtime dep per CLAUDE.md |
-| P4.2 | Inject silent page anchors + `original_toc` sidecar (`page_anchors: true`) | F7.1–2 | `page_bridge_pure.py` | TODO | unit | `<a id="pN"></a><!-- page N -->` |
-| P4.3 | Resolution step: map `p<N>` → nearest following heading slug | F7.3 | `page_bridge_pure.py` | TODO | unit | rewrite original-TOC links |
-| P4.4 | Retirement step: delete `pN` anchors; `page_anchors: false` | F7.4 | `page_bridge_pure.py` | TODO | unit | reversible via sidecar |
-| **P5** | **Figures, tables, link rewrite (F9, F10, F8)** | §6 | — | TODO | — | F8 must run last |
-| P5.1 | F9 figure caption recovery into alt/title | F9 | `figures_pure.py` | TODO | unit | `![Figure N: ...](...)` |
-| P5.2 | F10 table policy (simple→GFM, complex→raw HTML) | F10 | `tables_pure.py` | TODO | unit | never force-convert complex |
-| P5.3 | F8 link rewrite (`#legacy`→`#slug`) + cross-doc resolve + dead-link sweep | F8 | `linkfix_pure.py` + anchor index | TODO | unit + integration | runs last; needs all anchors final |
-| **P6** | **Orchestration & classification** | §8, §12 | — | TODO | — | idempotent pipeline |
-| P6.1 | Document classifier A/B/C/D → `anchors_source`/`toc` | §8 | `classify_pure.py` | TODO | unit | branches transform set |
-| P6.2 | `normalize` runner: order F1→…→F8 + idempotency guard (`normalize_version`) | §10, §12 | `normalize/runner.py` | TODO | integration | re-run = no-op |
-| P6.3 | CLI `vista-docs normalize [--pkg][--force]`; wire into `publish` | §3 | `cli/main.py` | TODO | integration | run before re-org/copy |
-| **P7** | **Provenance & validation/CI** | §9, §11 | — | REUSE | — | builds on guardrails session |
-| P7.1 | Provenance fields (`source_sha256`, `converter`, `normalized_at`, `normalize_version`) | §9 | audit keys + runner | TODO | unit | hash of raw docx/pdf |
-| P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `src/vista_docs/validate/` | REUSE→extend | unit | extend existing `validate` module |
-| P7.3 | Plug normalize checks into hard publish/push gate + corpus CI | §11 | `cli/main.py`, `.ci/` | REUSE | integration | gate + `.ci/validate_frontmatter.py` already exist |
-| **P8** | **Rollout** | §14 | — | TODO | — | prototype before batch |
-| P8.1 | Prototype CPRS GUI UM end-to-end (F1–F6, F8–F10) | §14.1 | review artifact | TODO | manual review | has Word anchors + redacted table |
-| P8.2 | Class-C prototype with PDF (exercise F7) | §14.2 | review artifact | TODO | manual review | needs P4 |
-| P8.3 | Lock `normalize_version: 1.0` | §14.4 | constant | TODO | — | after review sign-off |
+| **P0** | **Discovery & scaffolding** | §13, §3, §12a | — | WIP | — | only FM JSON-schema (P0.4) left |
+| P0.1 | Verify open questions (anchor span-vs-heading; PDF availability; pandoc version) | §13 | survey notes | DONE | — | resolved: `[[…](#_Toc)]` = nav wrapping, not headings (Lesson #13). `converter:` still literal "pandoc" — capture real version |
+| P0.2 | Corpus classification census (Class A/B/C/D counts) | §8 | `survey/normalize_census.csv` | DONE | — | 236 docs → **A=122, B=108, C=4, D=2**; 76 have nav-wrapping; 4 C-docs all have PDFs (F7 effort small). `scripts/normalize_census.py` |
+| P0.3 | `normalize/` package skeleton + CLI stub + `[tool.coverage.run] omit` for I/O | §3, §12a | `src/vista_docs/normalize/` | DONE | unit | runner/io/pdf_reader omitted; one test file per pure module |
+| P0.4 | Register new frontmatter keys in `audit_frontmatter.py` + JSON-schema scaffold | §5, §11 | `audit_frontmatter.py`, schema | WIP | unit | keys registered in audit + validate; **JSON-schema not built yet** |
+| **P1** | **Denoise & boilerplate (F1–F2)** | §6 F1–F2 | — | DONE | — | run first; idempotent |
+| P1.1 | F1 whitespace/layout denoise (≥6-space runs, `\f`, ≥3 blank lines, trailing ws) | F1 | `denoise_pure.py` | DONE | ✓ unit | idempotent verified |
+| P1.2 | Decide F1-in-ingest vs normalize; reconcile with `ingest/postprocess.py` | F1 note | postprocess vs normalize | BLOCKED | — | F1 lives in normalize for now; upstream-fix decision still open |
+| P1.3 | F2 running header/footer strip (per-doc fuzzy template) | F2 | `boilerplate_pure.py` | DONE | ✓ unit | repeated-line + Page-N + isolated-number rules |
+| **P2** | **Structure recovery (F3, F4, F6)** | §6 | — | DONE | — | + F3a unwrap added (Lesson #13) |
+| P2.1 | F3 heading inference/promotion + F3a unwrap dead `[[…](#_Toc)]` nav wrapping | F3 | `heading_infer_pure.py`, `delink_pure.py` | DONE | ✓ unit | F3a recovers text + kills dead anchors; real headings often lost upstream |
+| P2.2 | F4 anchor assignment: GitHub slug algo + `anchor_aliases` | F4 | `anchors_pure.py` | DONE | ✓ unit | alias map (+F8 rewrite) used instead of span-hoist; 122 docs carry Word anchors |
+| P2.3 | F6 TOC generation | F6 | `toc_pure.py` | DONE | ✓ unit | **deviation:** sources `extract_headings`, not the stage-6.5 chunk tree (reconcile later) |
+| **P3** | **Revision history (F5) + sidecars** | §6 F5, §7 | — | DONE | — | 10 docs have revision tables |
+| P3.1 | F5 parse revision `<table>`, drop PM/TW cols, structured records + `refs` | F5 | `revision_pure.py` | DONE | ✓ unit | +M/D/YY date handling; CPRS = 243 rows |
+| P3.2 | Sidecar writer (`*.history.yaml`) + frontmatter summary | §7, F5.4 | `io.py`/`runner.py` | DONE | (integ) | `revision_count/newest/oldest/sidecar` set |
+| P3.3 | `description` de-pollution | F5.6, §13.3 | in F5 path | DONE | ✓ unit | clears revision-caption pollution |
+| **P4** | **Page-number bridge (F7)** — Class C | §6 F7 | — | WIP | — | pure parts done; PDF I/O left; only 4 C-docs need it |
+| P4.1 | PDF text extraction I/O (eval `pypdf`/`pdfplumber`; `uv lock`) | F7.1 | `pdf_reader.py` | TODO | integration | not built; 4 C-docs all have a PDF |
+| P4.2 | Inject silent page anchors (+`original_toc` sidecar) | F7.1–2 | `page_bridge_pure.py` | WIP | ✓ unit | `inject_page_anchors` done; `original_toc` sidecar writer not built |
+| P4.3 | Resolution step: map `p<N>` → nearest following heading slug | F7.3 | `page_bridge_pure.py` | DONE | ✓ unit | `map_pages_to_slugs` + `rewrite_page_toc` |
+| P4.4 | Retirement step: delete `pN` anchors; `page_anchors: false` | F7.4 | `page_bridge_pure.py` | DONE | ✓ unit | `retire_page_anchors`, idempotent |
+| **P5** | **Figures, tables, link rewrite (F9, F10, F8)** | §6 | — | DONE | — | F8 runs last |
+| P5.1 | F9 figure caption recovery into alt/title | F9 | `figures_pure.py` | DONE | ✓ unit | caption before/after image |
+| P5.2 | F10 table policy (simple→GFM, complex→raw HTML) | F10 | `tables_pure.py` | DONE | ✓ unit | never force-converts complex |
+| P5.3 | F8 link rewrite + dead-link sweep | F8 | `linkfix_pure.py` | DONE | ✓ unit | rewrite + `sweep_dead_links` (after aliasing). **Open:** cross-doc resolve not built; sweep skips link text containing `]` (15 docs retain dead anchors) |
+| **P6** | **Orchestration & classification** | §8, §12 | — | DONE | — | idempotent pipeline |
+| P6.1 | Document classifier A/B/C/D → `anchors_source`/`toc` | §8 | `classify_pure.py` | DONE | ✓ unit | drives census |
+| P6.2 | `normalize` runner (F1→…→F8) + idempotency | §10, §12 | `normalize_pure.py`, `runner.py` | DONE | ✓ unit | **deviation:** idempotency via `consolidated/`→`normalized/` regen (sibling tree), not an in-place `normalize_version` guard |
+| P6.3 | CLI `vista-docs normalize`; wire into `publish` | §3 | `cli/main.py` | WIP | (integ) | CLI done (stage 9.5); **publish not yet wired to read `normalized/`** |
+| **P7** | **Provenance & validation/CI** | §9, §11 | — | WIP | — | builds on guardrails session |
+| P7.1 | Provenance fields (`source_sha256`, `converter`, `normalized_at`, `normalize_version`) | §9 | runner + audit keys | DONE | ✓ unit | sha256 best-effort from `raw/` |
+| P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `lint_pure.py` | WIP | ✓ unit | noise + dead-anchor lint DONE; **sidecar-integrity, FM JSON-schema, anchor-index emit TODO** |
+| P7.3 | Plug normalize checks into hard publish/push gate + corpus CI | §11 | `cli/main.py`, `.ci/` | TODO | integration | not yet wired into `_run_validation_gate` |
+| **P8** | **Rollout** | §14 | — | WIP | — | prototype done; batch pending |
+| P8.1 | Prototype CPRS GUI UM end-to-end | §14.1 | review artifact | DONE | manual | 2491 nav-links unwrapped, 0 dangling anchors, 27% smaller, idempotent (Change Log) |
+| P8.2 | Class-C prototype with PDF (exercise F7) | §14.2 | review artifact | TODO | manual | needs P4.1 |
+| P8.3 | Lock `normalize_version: 1.0` | §14.4 | constant | TODO | — | constant set to "1.0"; not yet review-signed-off |
 | P8.4 | Batch run + `validate` gate + per-domain spot audit + publish-push | §14.5 | corpus | TODO | gate | force-push `vistadocs/vdl` |
-| **P9** | **Docs & skills** | §15 | — | TODO | — | same-commit doc rule |
-| P9.1 | Update `src/vista_docs/README.md`, `pipeline/README.md`, `CLAUDE.md` stage list | §15 | docs | TODO | — | add normalize stage |
-| P9.2 | Update `docs/vdl-arch-overview.md` flow + `vdl-pipeline`/`va-docx-structure` skills + memory | §15 | docs/skills | TODO | — | new FM keys + patterns |
+| **P9** | **Docs & skills** | §15 | — | WIP | — | same-commit doc rule |
+| P9.1 | Update `src/vista_docs/README.md`, `pipeline/README.md`, `CLAUDE.md` stage list | §15 | docs | WIP | — | README done; `pipeline/README.md` + `CLAUDE.md` stage list TODO |
+| P9.2 | Update `docs/vdl-arch-overview.md` flow + `vdl-pipeline`/`va-docx-structure` skills + memory | §15 | docs/skills | WIP | — | memory done; arch-overview + skills TODO |
 
 ---
 
@@ -152,6 +155,30 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — P0.2 corpus census (Class A/B/C/D)
+Ran `scripts/normalize_census.py` over all **236** consolidated docs (reuses the
+pure orchestrator + classifier; writes `survey/normalize_census.csv`):
+
+| Class | Count | Meaning |
+|-------|-------|---------|
+| A | **122** | headings + Word anchors (healthy; top doc has 905 headings / 161 anchors) |
+| B | **108** | headings, no anchors |
+| C | **4**   | flat+paginated — **all 4 have a PDF**, so F7 effort is small |
+| D | **2**   | hopeless (CPRS GUI release notes, KAAJEE quick-setup) |
+
+Other signals: **76** docs carry the dead nav-link wrapping (F3a), **10** have a
+revision table, **221/236** end with **0 dead anchors** after the F8 sweep.
+**Takeaway:** the corpus is far healthier than the CPRS prototype implied — only
+6 docs are C/D, and F7 (PDF bridge) is needed for just 4. The CPRS GUI UM is an
+outlier in degradation, not the norm.
+
+**Census-surfaced follow-up (F8 robustness):** the 15 docs that still report dead
+anchors are internal TOC cross-references whose link *text* contains `]` (e.g.
+`[### Check Files … \[LRCHKFILES\]](#slug)`), so `sweep_dead_links`'s `[^\]]+`
+text guard skips them; some also have slug mismatches between the TOC entry and
+the recovered heading. Fix: let the sweep handle bracketed link text + reconcile
+cross-ref slugs. Tracked under P5.3 Notes.
 
 ### 2026-05-31 — F8 dead-link sweep (closes the dangling-anchor gate)
 Added `linkfix_pure.sweep_dead_links(body, valid_ids)` and wired it as the final
