@@ -90,6 +90,18 @@ def test_nav_link_wrapping_unwrapped_end_to_end():
     assert "[[" not in r.body
 
 
+def test_dead_inline_link_swept_but_valid_preserved():
+    body = (
+        "# Real Heading\n\n"
+        "A [dead reference](#_Toc999) and a [good one](#real-heading) here.\n"
+    )
+    r = normalize_body(body)
+    assert r.stats["dead_links_swept"] == 1
+    assert "(#_Toc999)" not in r.body
+    assert "dead reference" in r.body          # text kept
+    assert "[good one](#real-heading)" in r.body  # valid link preserved
+
+
 def test_no_description_key_when_not_provided():
     r = normalize_body(SAMPLE)
     assert "description" not in r.frontmatter

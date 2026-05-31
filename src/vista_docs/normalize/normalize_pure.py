@@ -22,7 +22,8 @@ from vista_docs.normalize.delink_pure import unwrap_toc_links
 from vista_docs.normalize.denoise_pure import denoise
 from vista_docs.normalize.figures_pure import recover_figures
 from vista_docs.normalize.heading_infer_pure import infer_headings
-from vista_docs.normalize.linkfix_pure import rewrite_legacy_links
+from vista_docs.normalize.linkfix_pure import rewrite_legacy_links, sweep_dead_links
+from vista_docs.normalize.lint_pure import valid_anchor_ids
 from vista_docs.normalize.revision_pure import (
     RevisionRecord,
     depollute_description,
@@ -129,8 +130,11 @@ def normalize_body(
     body = recover_figures(body)
     body = convert_tables(body)
 
-    # F8 — link rewrite (last; needs every anchor finalized).
+    # F8 — link rewrite, then dead-link sweep (last; needs every anchor
+    # finalized). The sweep runs *after* alias rewriting so it never strips a
+    # reference an alias could resolve — only genuinely dead targets collapse.
     body = rewrite_legacy_links(body, aliases)
+    body, dead_swept = sweep_dead_links(body, valid_anchor_ids(body))
 
     body = _finalize(body)
 
@@ -164,6 +168,7 @@ def normalize_body(
         stats={
             "boilerplate_removed": removed_boiler,
             "nav_links_unwrapped": delinked,
+            "dead_links_swept": dead_swept,
             "headings_promoted": promoted,
             "doc_class": cls.doc_class,
         },

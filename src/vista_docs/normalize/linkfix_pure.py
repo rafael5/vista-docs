@@ -13,6 +13,10 @@ from collections.abc import Iterable, Mapping
 
 _LINK_TARGET_RE = re.compile(r"\]\(#([^)]+)\)")
 _HREF_RE = re.compile(r'href="#([^"]+)"')
+# Whole inline markdown link to an internal anchor: [text](#id) (text has no ]).
+_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\(#([^)]+)\)")
+# Whole html anchor to an internal target: <a ... href="#id" ...>inner</a>.
+_HTML_A_RE = re.compile(r'<a\b[^>]*\bhref="#([^"]+)"[^>]*>(.*?)</a>', re.DOTALL)
 
 
 def rewrite_legacy_links(text: str, aliases: Mapping[str, str]) -> str:
@@ -41,3 +45,34 @@ def find_dead_anchors(body: str, valid_slugs: Iterable[str]) -> list[str]:
     """Sorted list of referenced anchors that match no known slug."""
     valid = set(valid_slugs)
     return sorted(t for t in collect_anchor_targets(body) if t not in valid)
+
+
+def sweep_dead_links(body: str, valid_ids: Iterable[str]) -> tuple[str, int]:
+    """Neutralize internal links whose target resolves to nothing.
+
+    Runs LAST (after alias rewriting), so any reference an alias could resolve is
+    already a valid slug and is preserved. A markdown ``[text](#dead)`` collapses
+    to ``text``; an html ``<a href="#dead">inner</a>`` collapses to ``inner``
+    (keeping any inline markup). Links to a ``valid_ids`` target and external
+    links are untouched. Returns ``(body, swept_count)``; idempotent.
+    """
+    valid = set(valid_ids)
+    count = 0
+
+    def md(m: re.Match[str]) -> str:
+        nonlocal count
+        if m.group(2) in valid:
+            return m.group(0)
+        count += 1
+        return m.group(1)
+
+    def html(m: re.Match[str]) -> str:
+        nonlocal count
+        if m.group(1) in valid:
+            return m.group(0)
+        count += 1
+        return m.group(2)
+
+    body = _MD_LINK_RE.sub(md, body)
+    body = _HTML_A_RE.sub(html, body)
+    return body, count

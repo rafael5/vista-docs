@@ -153,6 +153,21 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
 
+### 2026-05-31 — F8 dead-link sweep (closes the dangling-anchor gate)
+Added `linkfix_pure.sweep_dead_links(body, valid_ids)` and wired it as the final
+F8 step, **after** `rewrite_legacy_links` (so an alias-resolvable ref is already a
+valid slug and is never stripped). A markdown `[text](#dead)` collapses to `text`;
+an html `<a href="#dead">inner</a>` collapses to `inner` (keeps inline markup);
+links to a valid target and external links are untouched. `valid_ids` =
+`lint_pure.valid_anchor_ids` (heading slugs ∪ explicit `id=` anchors), recomputed
+on the post-rewrite body. TDD, `linkfix_pure` 100% cov, 8 new tests; idempotent.
+
+**Prototype impact (CPRS GUI UM):** the 169 inline dead nav links (incl. the
+remaining `#_Toc17877476` refs) are now neutralized → **0 dangling anchors**
+(`lint_pure.dead_anchors` returns `[]`), so the doc passes the spec §11
+dead-anchor CI gate. Body now **27% smaller**; still idempotent + deterministic.
+This resolves the inline-residue follow-up from the F3a entry below.
+
 ### 2026-05-31 — F3a unwrap transform (`delink_pure`) + corrected P0.1 reading
 **Correction to the earlier same-day entry:** the `[[text](#_Toc)]` form is **not**
 a heading encoding at all. Deeper analysis of the CPRS doc: there are **zero**
