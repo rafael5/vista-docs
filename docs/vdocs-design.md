@@ -360,7 +360,7 @@ Beyond images and revision history (already split in v1), v2 adopts these splits
 | **Revision history** | split — machine-structured, query-consumer, prose-polluting | `history.yaml` sidecar (ordered lineage + refs to retained prior bodies); `revision_sidecar` pointer in body FM; **captured for later, opt-in git commit-replay** (§6.6) |
 | **Large data tables** (data-dictionary / file-field listings) | **split** — structured data masquerading as prose; wreck diffs; API wants them as data | `tables/*.csv` sidecars; a reference/embed stub left in body. Small inline tables stay. |
 | **Corpus-wide boilerplate** (legal notices, "how to use this manual", standard headers/footers) | **single-source** — duplicated across hundreds of docs | *discovered* by `discover`, *curated* into `registries/boilerplate`, canonical copy single-sourced to `gold/_shared/boilerplate/`; bodies carry a reference, not the text (§9.6) |
-| **Document template / scaffold** (the empty skeleton each doc was poured into — standard front/title pages, fixed scaffold sections, placeholder prose, layout furniture) | **subtract as noise** — zero document-specific meaning; pure template residue that differs by **document type *and* authoring era** | `discover` infers the template per `(doc_type, era)` by structural clustering (a user guide ≠ a technical guide ≠ an install guide); the scaffold is *stripped* and the `template_id` recorded as provenance; one audit copy of each skeleton kept in `registries/templates` — **never repeated in any body** (§9.6) |
+| **Document template / scaffold** (the empty skeleton each doc was poured into — standard front/title pages, fixed scaffold sections, placeholder prose, layout furniture) | **subtract the furniture, *retain the schema*** — the literal scaffold is noise, but the *structure it encodes* (expected sections / TOC / markers) is a valuable computable asset | `discover` infers the template per `(doc_type, era)` by structural clustering (user guide ≠ technical guide ≠ install guide); the scaffold is *stripped* + `template_id` stamped, while the **structural schema is retained computably** in `registries/templates` for reuse and the template-compliance QC check (§9.8) |
 | **Dead phrases** (paper-era residue — "this page intentionally left blank", "continued on next page", "end of document", page furniture — and descriptive filler *around* revision history) | **delete outright** — meaningless legacy of paper documents; no purpose in a GitHub corpus | `discover` mines recurring meaningless strings → curated `registries/phrases`; `normalize` deletes matches — **no reference, no canonical copy kept** (distinct from boilerplate) (§9.6) |
 | **Glossary / acronym lists** | **promote to one shared corpus-level glossary** | `discover` mines terms → `gold/glossary.md` (+ index.db terms); de-duplicate per-doc copies |
 | **TOC, anchor/alias map, link maps** | derived — never store in body | regenerated TOC; `refs.yaml` sidecar / index.db |
@@ -769,7 +769,7 @@ disposition. The disposition is the crux of the boilerplate-vs-template-vs-phras
 | Registry | What it catches | Keyed by | Disposition |
 |---|---|---|---|
 | **`registries/boilerplate`** | meaningful-but-duplicated *blocks* — legal notices, "how to use this manual", standard headers/footers | block identity | **REFERENCE** — one canonical copy in `gold/_shared/`; bodies link to it (kept, not lost) |
-| **`registries/templates`** | the document *skeleton* each manual was poured into — discovered **per `doc_type` × era** (user-guide vs technical-guide vs install-guide vs security-guide; 1990s vs 2000s vs 2010s layouts) | `(doc_type, era)` | **STRIP + STAMP** — scaffold removed from the body; `template_id` recorded as provenance; one audit copy of each skeleton kept in the registry, never re-inlined |
+| **`registries/templates`** | the document *skeleton* each manual was poured into — discovered **per `doc_type` × era** (user-guide vs technical-guide vs install-guide vs security-guide; 1990s vs 2000s vs 2010s layouts) — **and its computable structural schema** (§9.8) | `(doc_type, era)` | **STRIP + STAMP + RETAIN** — scaffold removed from the body; `template_id` recorded; the **structural schema kept computably** for reuse + the template-compliance QC check, never re-inlined |
 | **`registries/phrases`** | short recurring **meaningless** strings — paper-era residue ("This page intentionally left blank", "Continued on next page", "End of document", page furniture) **and** descriptive filler *associated with* revision history (e.g. "Refer to the revision history below for changes") | phrase / regex + context | **DELETE** — removed outright; *no* reference, *no* canonical copy (it has zero meaning in a GitHub corpus) |
 | **`registries/glossary`** | acronyms & defined terms | term | **PROMOTE + DEDUPE** to `gold/glossary.md` |
 | **`registries/converter-routing`** | which docs need Docling vs Pandoc (ADR-010) | doc identity / signature | **ROUTE** (consumed by `convert`, not `normalize`) |
@@ -782,6 +782,10 @@ referencing). Templates are keyed by **document type as well as era** because a 
 technical guide were built from different skeletons — each `(doc_type, era)` combination is its own
 discovered, registered template. Revision-history *structure* is handled as lineage (→ `history.yaml`,
 §6.6); the surrounding descriptive *phrases* are dead text and go to `registries/phrases`.
+
+The table above teaches the *distinction*; the **canonical catalog of every registry** — including
+the structural-conventions registry and what discovers/consumes each — is the **registry index
+(§9.7)**.
 
 **Two homes, deliberately distinct** (this answers "where do the templates/patterns live"):
 
@@ -816,6 +820,94 @@ to an approved entry (no free-form deletion). The fidelity framework scores agai
 (`fidelity-framework.md` §4 + §5 C7), and bronze immutability keeps the untouched original as proof
 that nothing *meaningful* was removed.
 
+### 9.7 Registry index (canonical catalog)
+
+The authoritative list of every registry. All live in the repo under `registries/`, are
+version-controlled config (changed by PR), carry a per-entry **curation status** (`candidate` →
+`approved`), and are consumed read-only by the stages. The **disposition** column is the contract
+for what `normalize` (or `convert`) does with a match; the disposition vocabulary is fixed:
+
+- **REFERENCE** — replace the match with a link to one canonical copy (content retained, de-duplicated).
+- **STRIP + stamp** — remove structural scaffold from the body; record an id as provenance; keep one audit copy.
+- **DELETE** — remove outright; no copy, no reference (pure noise).
+- **PROMOTE** — lift to a single shared corpus artifact and de-duplicate per-doc copies.
+- **CANONICALIZE** — rewrite a recognized convention into the one standard GFM form.
+- **ROUTE** — select a processing path (does not alter body content).
+
+| Registry | What it catches | Key | Disposition | Discovered by | Consumed by | Canonical-content home |
+|---|---|---|---|---|---|---|
+| `registries/boilerplate` | meaningful-but-duplicated blocks (legal notices, "how to use this manual", standard headers/footers) | block identity (shingle hash) | **REFERENCE** | `discover` | `normalize` | `gold/_shared/boilerplate/<id>.md` |
+| `registries/templates` | the document skeleton each manual was poured into **+ its computable structural schema** (expected sections / markers / semantic roles — §9.8) | `(doc_type, era)` | **STRIP** instance from body + stamp `template_id` + **RETAIN schema** | `discover` | `normalize`, template-compliance check | computable schema in `registries/templates` (reused, queryable); scaffold **never** re-inlined |
+| `registries/phrases` | dead paper-era strings ("this page intentionally left blank", "continued on next page", page furniture) + descriptive filler around revision history | phrase / regex (+ context) | **DELETE** | `discover` | `normalize` | — (nothing kept) |
+| `registries/glossary` | acronyms & defined terms | term | **PROMOTE** + dedupe | `discover` | `normalize` | `gold/glossary.md` (+ `index.db` terms) |
+| `registries/structures` | recurring structural conventions — callout/admonition/notice styling, revision-table shape, TOC shape | convention id | **CANONICALIZE** to standard GFM | `discover` | `normalize` | — (rules only; output is the canonicalized body) |
+| `registries/converter-routing` | which documents need Docling vs Pandoc (the bare-marker-explosion allowlist, ADR-010) | doc identity / signature | **ROUTE** | `convert` (bare-marker eval) | `convert` | — (rules only) |
+
+Reading the family by **disposition** is the quickest way to keep the kinds straight: *content worth
+keeping but not copying* → REFERENCE (boilerplate) / PROMOTE (glossary); *structure that is noise* →
+STRIP (templates) / CANONICALIZE (conventions); *text with no value at all* → DELETE (phrases); *a
+processing decision, not an edit* → ROUTE (converter). A registry is added to this index — never a
+hard-coded rule added to a stage (tenet #13).
+
+One subtlety the disposition table understates: **templates are STRIP-from-body but their
+*structural schema* is RETAINED and reused** — they are an asset, not just noise. That dual role and
+the template-compliance QC it enables are §9.8.
+
+### 9.8 Templates as computable structural schemas (validation oracle + compliance QC)
+
+A template is not only scaffold to strip — it encodes *what a well-formed document of its type should
+look like*. v2 keeps that value: `discover` extracts each template into a **computable structural
+schema**, and the schema is **retained** in `registries/templates` (not merely an audit copy of
+prose). The strippable furniture leaves the body; the schema stays, for secondary use.
+
+**What the schema captures (computable, queryable):**
+- the **ordered expected sections** — `{section_id, title-pattern, heading-level, required|optional,
+  repeatable, semantic_role}` (e.g. a user guide's *Orientation → Getting Started → Options →
+  Troubleshooting → Glossary*);
+- **expected markers** — a TOC whose entries resolve to real headings, a revision-history block, a
+  glossary/index, figure/table numbering, the anchor/numbering scheme;
+- the **doc-type semantics** — what each section *means*, so downstream consumers can rely on it.
+
+**Two tiers.** `discover` learns the **empirical** template per `(doc_type, era)` (what those docs
+actually were). Curation also defines a **canonical** `doc_type` schema — the normative "ideal"
+structure a modern user/technical/install guide *should* have. Compliance is measured against both,
+and the gap between them is itself information (corpus structural drift).
+
+**Template compliance — the QC opportunity (two distinct verdicts).** Because the schema is an
+expectation *independent of both the source and the converter*, it is a powerful oracle — it
+satisfies the fidelity framework's "independent reference" principle (`fidelity-framework.md` §2.2),
+giving structure a *second* independent signal beyond the imperfect reference extractor:
+
+1. **Extraction self-validation.** Does the extracted/refined body conform to the document's own
+   matched `(doc_type, era)` template? A section the template *guarantees* but the body lacks, a TOC
+   entry resolving to nothing, broken numbering — high-confidence signals that *extraction or
+   refinement dropped or mangled something*, caught without even consulting the source. This is the
+   "validation that extraction is working correctly" the templates make possible.
+2. **Corpus / modernization compliance.** Does the document's `(doc_type, era)` template conform to the
+   **canonical** `doc_type` schema? Many older guides will not — a *source*-quality signal (structural
+   drift across decades), not a migration defect.
+
+Distinguishing them is the leverage: *fails its own era-template* → likely a pipeline bug to fix;
+*conforms to its era-template but not the canonical one* → faithful migration of a structurally
+divergent original (a modernization-backlog item, not a bug).
+
+**Where it runs.** `discover` emits the schemas → curate (incl. the canonical per-`doc_type` schema)
+→ the **template-compliance check** runs in the fidelity/validate layer (`fidelity-framework.md`
+§5 C2 + §10), scoring conformance, classifying each deviation, and feeding both the per-document
+structural verdict and a corpus compliance rollup.
+
+**Secondary uses of the retained schema** (why storing it computably pays off beyond QC):
+- `normalize` can use the canonical schema to **enforce consistent section order, regenerate a clean
+  TOC, and verify required markers** — turning the template from a descriptive fact into an active
+  normalizer.
+- `index` gains **semantic section roles** from the schema, so the MCP server can answer structural
+  queries ("the *Options* section of any CPRS user guide") and chunking respects section meaning.
+- the published corpus gains **consistent, predictable structure per doc-type** — a usability win for
+  humans and agents alike.
+
+The template thus becomes a first-class, computable asset — registered, queryable, and reused — not
+discarded noise.
+
 ---
 
 ## 10. Tooling decisions (ADRs)
@@ -842,6 +934,7 @@ Decided up front. Each: choice, why, and the credible alternative we rejected.
 | 016 | Document version control | **Collapse each patch series to one anchor file and *capture* the full lineage (ordered `history.yaml` + retained prior bodies) in travel-with sidecars; defer mechanical git commit-replay to an opt-in later pass** (§6.6) | declutters bodies to current content *now* at low cost; preserves a *complete, self-contained* lineage so the truly GitHub-native `git log`/`blame`/`diff` history can be built later with zero re-acquisition; avoids spending a commit-per-patch of mechanical churn up front | replaying every patch *in this pass* (high overhead, little immediate payoff) · keeping per-version files (N near-duplicates, lost diffs) · leaving revision tables inline (VDL/v1 status quo — clutter, not computable) · discarding prior bodies (would make later replay impossible) |
 | 017 | Corpus currency / drift detection | **Scheduled crawl-diff with the content-hash (sha256) as the authoritative drift signal; incremental re-processing of only changed scopes; WITHDRAWN flagged, not deleted** (§7.6) | keeps the corpus always-current at cost proportional to upstream change, not corpus size; content-hash is reliable where VDL's filenames/validators are not; reuses the fingerprint model (no new engine); feeds the fidelity framework's currency axis | full rebuild every run (wasteful at ~3k docs) · trusting VDL Last-Modified/ETag alone (unreliable — silent re-posts under the same filename) · deleting withdrawn docs (breaks bronze immutability + anchor history) |
 | 018 | Pattern discovery & curation | **Mine recurring patterns inductively (`discover`) → curate into version-controlled declared `registries/` via a graded gate (auto-approve high-confidence, else human PR) → subtract deterministically in `normalize` by disposition** (§9.6); a *family* of registries with distinct dispositions — boilerplate=REFERENCE, template `(doc_type, era)`=STRIP+stamp, phrases=DELETE, glossary=PROMOTE; primitives shared in `kernel/discovery/` | "discovery is data, not code" (tenet #13): the pipeline adapts to a new doc-type template, boilerplate block, or dead phrase by a registry entry, not a code edit; the per-kind disposition keeps "reference vs strip vs delete" explicit and auditable; curation stays a reviewable git decision; keeps the DAG pure; self-healing on drift | hard-coded pattern/boilerplate lists in transforms (v1; brittle, un-adaptive) · one undifferentiated "noise" bucket (conflates content worth referencing with text worth deleting) · fully-automated subtraction with no curation (silent, unsafe) · fully-manual cataloguing (doesn't scale to ~3k docs × doc-types × eras) |
+| 019 | Templates as computable schemas + compliance oracle | **Retain each `(doc_type, era)` template as a computable structural schema (sections/markers/roles), curate a canonical per-`doc_type` schema, and run a template-compliance check** (§9.8) — the schema is an extraction-independent expectation used both to validate the pipeline and to grade source structural drift | turns templates from discarded noise into an *asset*: an independent structural oracle (a missing guaranteed section flags an extraction bug *without* the source); a corpus-modernization metric (era-template vs canonical); and a reuse source (consistent TOC/section-order/section-roles for `normalize`, `index`, MCP) | strip templates and discard them (loses a free, independent validation signal) · keep only a prose audit copy (not computable, not checkable) · treat all doc-types as one structure (false — guides genuinely differ) |
 
 ---
 
@@ -875,12 +968,13 @@ src/vdocs/
     validate/
     push/
     analyze/
-registries/        # CURATED, version-controlled pattern catalog (§9.6) — consumed by stages, changed by PR.
-                   #   NOT code, NOT disposable lake data — declared, reviewable config. One file per kind:
+registries/        # CURATED, version-controlled pattern catalog (full index: §9.7) — consumed by stages,
+                   #   changed by PR. NOT code, NOT disposable lake data — declared, reviewable config:
   boilerplate/     #   meaningful-but-duplicated blocks → REFERENCE (canonical copy in gold/_shared/)
   templates/       #   document skeletons keyed by (doc_type, era) → STRIP + stamp template_id
   phrases/         #   dead paper-era phrases + revision-history filler → DELETE (no copy, no reference)
   glossary/        #   acronyms/terms → PROMOTE + dedupe to gold/glossary.md
+  structures/      #   callout/TOC/revision-table conventions → CANONICALIZE to standard GFM
   converter-routing/  # Docling-vs-Pandoc allowlist (ADR-010) → ROUTE (consumed by convert)
   server/          # MCP server (read-only over gold) + hybrid-search engine — §14
     mcp.py         #   MCP Resources / Tools / Prompts
@@ -1126,7 +1220,8 @@ idempotency, gating, and lineage.
   candidates, mutates nothing (§9.6). Distinct from the §14 machine-discovery descriptor.
 - **Pattern registry** — the curated, version-controlled catalog (`registries/`) of approved
   patterns + dispositions; the **seam** between inductive discovery and deterministic application,
-  and the home for the per-era document templates. Consumed by `normalize`; changed by PR.
+  and the home for the `(doc_type, era)` document templates. Consumed by `normalize`/`convert`;
+  changed by PR. **Full index of every registry: §9.7.**
 - **Curation gate** — the graded promotion of discovery candidates into the registry (auto-approve
   high-confidence; else human PR); where judgment lives, kept outside the deterministic stages.
 - **Boilerplate** — meaningful-but-duplicated *content* (legal notices, "how to use this manual",
@@ -1134,9 +1229,19 @@ idempotency, gating, and lineage.
   link to it. In `registries/boilerplate` (§9.6).
 - **Template** — the document *skeleton* a manual was poured into, discovered and registered **per
   `(doc_type, era)`** (a user guide, technical guide, and install guide have different skeletons, and
-  these differ by authoring decade); disposition **STRIP + stamp**: scaffold removed from the body,
-  `template_id` kept as provenance, one audit copy in `registries/templates`. Distinct from
-  boilerplate: a template is structural noise, not referenced content.
+  these differ by authoring decade); disposition **STRIP + stamp + RETAIN schema**: the scaffold is
+  removed from the body and `template_id` stamped, but the **computable structural schema is kept** —
+  a template is structural *noise in the body* yet a structural *asset as a schema* (§9.8).
+- **Template schema** — the computable form of a template: ordered expected sections (id, title
+  pattern, level, required/optional, semantic role) + expected markers (TOC, revision-history,
+  numbering). Stored in `registries/templates`; reused by `normalize`/`index` and as a validation
+  oracle (§9.8).
+- **Template compliance** — a QC check (§9.8, fidelity-framework §5 C2 + §10) scoring whether a
+  document matches its expected structure. Two verdicts: *vs. its own `(doc_type, era)` template* →
+  catches extraction/refinement bugs (extraction-independent oracle); *its era-template vs. the
+  canonical `doc_type` schema* → grades source structural drift (a modernization signal, not a bug).
+- **Canonical `doc_type` template** — the curated normative "ideal" schema for a document type, the
+  target every user/technical/install guide is measured against for compliance (§9.8).
 - **Dead phrase / phrase-removal registry** — short recurring *meaningless* strings: paper-era
   residue ("this page intentionally left blank", "continued on next page", page furniture) and
   descriptive filler around revision history; disposition **DELETE** (no reference, no copy kept).

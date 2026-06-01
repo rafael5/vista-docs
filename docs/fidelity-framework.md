@@ -137,6 +137,20 @@ targets** (§9), not arbitrary — they are confirmed/adjusted against the golde
 - **C2 Structure.** Compare the ordered heading list (text + level). Recall on normalized
   heading text; level accuracy on matched headings; order via sequence similarity. Drives the
   `doc_sections` tree, anchors, chunking — structural loss is high-impact.
+  - **Template conformance (an independent structural oracle — principle #2).** Beyond `S`→`T`,
+    structure is also checked against the document's **template schema** (the computable
+    `(doc_type, era)` structure mined and retained by `discover`; vdocs-design §9.8). The schema is
+    an expectation *independent of both the source and the converter*, so it gives structure a
+    *second* independent reference. Two signals come out of it:
+    - **`template_self_conformance`** — does `T` satisfy the sections/markers the document's own
+      matched template *guarantees*? A required section absent in `T`, a TOC entry resolving to no
+      heading, or broken numbering is a high-confidence **extraction/refinement defect** — caught
+      without trusting the imperfect reference extractor, and a strong precision/recall corroborator.
+    - **`canonical_compliance`** — does the document's era-template conform to the curated **canonical
+      `doc_type` schema**? Divergence here is a *source* structural-drift signal (a modernization
+      backlog item), **not** a migration defect. Keeping the two apart is the point: *fails its own
+      template* ⇒ pipeline bug; *conforms to era but not canonical* ⇒ faithful migration of a
+      divergent original.
 - **C3 Tables.** Greedy best-match each source table to a target table or its CSV sidecar;
   per-pair cell-text recall + dimension match; aggregate weighted by source cell count.
   Specifically detects the v1 failure modes: tables exploded into bare list markers (precision
@@ -282,6 +296,13 @@ not void it. Whether the corpus is *current* is the separate currency gate — t
 as a state and rolled up at corpus level (§10). The two claims, "faithful" and "current," are
 reported independently.
 
+**Template self-conformance feeds the gate; canonical compliance does not (§5 C2).** A document
+missing a section its *own* template guarantees is treated as a structural defect — it escalates to
+**REVIEW**, or **QUARANTINE** if the missing element implies dropped content — because it signals the
+*pipeline* failed. **Canonical** non-compliance never blocks: a faithfully-migrated but structurally
+old guide is still faithful; it is recorded as a modernization item in the §10 rollup, not a gate
+failure. (Keeping these apart prevents penalizing the migration for the source's own structural drift.)
+
 ---
 
 ## 9. Calibration & validation — the credibility engine
@@ -325,6 +346,13 @@ Beyond per-document verdicts, the institution needs a *corpus* statement with co
   currency-state distribution (CURRENT / STALE / UNCHECKED / WITHDRAWN), the last full-corpus
   check timestamp, the count of superseded documents currently re-processing, and the standing
   claim *"X% CURRENT; whole corpus checked within N days; 0 STALE-unqueued."*
+- **Template-compliance rollup (§5 C2 template conformance).** Per `doc_type`: the share of
+  documents conforming to the **canonical** schema, the distribution of deviations, and the divergent
+  list — e.g. *"73% of user guides conform to the canonical user-guide template; 27% are pre-canonical
+  structural drift (modernization backlog)."* Separately, the count of **template-self-conformance
+  failures** — documents missing a section their own template guarantees — which is the pipeline-bug
+  signal, not a source-drift signal. The first is a corpus-quality statement; the second is a build
+  health metric.
 
 ---
 
@@ -350,7 +378,10 @@ is itself a versioned, signed artifact.
   "scored_at": "2026-06-01T...Z",
   "content": {
     "C1_text": {"recall": 0.992, "precision": 0.998, "paragraph_coverage": 0.99},
-    "C2_structure": {"score": 0.97}, "C3_tables": {"count_recall": 1.0, "cell_recall": 0.991},
+    "C2_structure": {"score": 0.97, "template_id": "user-guide/2008",
+                     "template_self_conformance": 1.0, "canonical_compliance": 0.82,
+                     "missing_required_sections": []},
+    "C3_tables": {"count_recall": 1.0, "cell_recall": 0.991},
     "C4_images": {"recall": 1.0, "caption_recall": 0.95},
     "C5_xref": {"recall": 0.98, "dead_anchor_rate": 0.0},
     "C6_lists": {"recall": 0.99},
