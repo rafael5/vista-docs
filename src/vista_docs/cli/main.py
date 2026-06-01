@@ -516,11 +516,30 @@ def _run_validation_gate(out_dir, *, also_md_img: bool = False) -> None:
         click.echo(format_summary(md_report))
         extra_failures = md_report.hard_failures
 
-    if report.hard_failures or extra_failures:
+    # Normalize gate (spec §11/P7.3): validate the normalized/ gold source — the
+    # bodies publish copies — for dangling anchors, residual noise, broken
+    # sidecars, and hard schema violations. Sidecars live in normalized/, not the
+    # publish tree, so this is the correct scope. Skipped if normalize hasn't run.
+    norm_hard = 0
+    normalized_dir = DATA_DIR / "normalized"
+    if normalized_dir.exists():
+        from vista_docs.normalize.index_runner import validate_normalized
+
+        nrep = validate_normalized(normalized_dir, SURVEY_DIR / "normalize_validation_flags.csv")
+        click.echo(
+            f"normalize check: {nrep.hard} hard / {nrep.total} flags across "
+            f"{nrep.docs} docs (noise={nrep.noise}, dead-anchor={nrep.dead}, "
+            f"sidecar={nrep.sidecar}, schema={nrep.schema_hard})"
+        )
+        for rel, code, detail in nrep.hard_flags()[:10]:
+            click.echo(f"  HARD {code:22} {rel} {detail}".rstrip())
+        norm_hard = nrep.hard
+
+    if report.hard_failures or extra_failures or norm_hard:
         raise click.ClickException(
-            f"Validation FAILED: {report.hard_failures} hard failure(s) in "
-            f"{out_dir} (+{extra_failures} in md-img). See {flags_csv}. "
-            "Refusing to publish/push a broken corpus."
+            f"Validation FAILED: {report.hard_failures} frontmatter hard failure(s) in "
+            f"{out_dir} (+{extra_failures} in md-img, +{norm_hard} normalize). "
+            f"See {flags_csv}. Refusing to publish/push a broken corpus."
         )
     click.echo("Validation passed — corpus is clean.")
 

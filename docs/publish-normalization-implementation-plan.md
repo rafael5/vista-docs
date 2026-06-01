@@ -66,7 +66,7 @@ extended rather than built.
 | **P7** | **Provenance & validation/CI** | §9, §11 | — | WIP | — | builds on guardrails session |
 | P7.1 | Provenance fields (`source_sha256`, `converter`, `normalized_at`, `normalize_version`) | §9 | runner + audit keys | DONE | ✓ unit | sha256 best-effort from `raw/` |
 | P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `lint_pure.py`, `index_pure.py`, `index_runner.py`, `validate/schema.py` | DONE | ✓ unit | noise + dead-anchor + sidecar-integrity + anchor-index emit + **FM JSON-schema** all DONE; `validate_normalized` aggregates all five into `survey/normalize_validation_flags.csv`, wired into the `normalize` CLI |
-| P7.3 | Plug normalize checks into hard publish/push gate + corpus CI | §11 | `index_runner.py`, `cli/main.py` | WIP | ✓ unit | `NormalizedValidation.hard` + gate wired into `vista-docs normalize` (fails non-zero on dead-anchor/noise/sidecar/hard-schema; `--no-validate` bypass). **TODO:** fold into publish/push `_run_validation_gate` + corpus `.ci/` |
+| P7.3 | Plug normalize checks into hard publish/push gate + corpus CI | §11 | `index_runner.py`, `cli/main.py` | DONE | ✓ unit | gate wired into `vista-docs normalize` AND the shared `_run_validation_gate` (publish + push), which now also validates `normalized/` (correct scope — sidecars live there) and refuses on any normalize hard failure. (Corpus `.ci/` mirror = optional follow-up) |
 | **P8** | **Rollout** | §14 | — | WIP | — | prototype done; batch pending |
 | P8.1 | Prototype CPRS GUI UM end-to-end | §14.1 | review artifact | DONE | manual | 2491 nav-links unwrapped, 0 dangling anchors, 27% smaller, idempotent (Change Log) |
 | P8.2 | Class-C prototype with PDF (exercise F7) | §14.2 | review artifact | TODO | manual | needs P4.1 |
@@ -155,6 +155,17 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — P7.3 fold normalize gate into publish/push
+`_run_validation_gate` (shared by `publish`, `push`, and `validate`) now also
+runs `validate_normalized` over `normalized/` and refuses to publish/push on any
+normalize hard failure (dangling anchors, residual noise, broken sidecars, hard
+schema), alongside the existing frontmatter gate. **Scope decision:** validate
+`normalized/`, not the publish tree — sidecars (`*.history.yaml`) live in
+`normalized/` and aren't copied to publish, so checking the publish tree would
+false-flag every revision doc as a missing sidecar. The check is skipped when
+`normalized/` doesn't exist (backward compatible). With the current corpus the
+gate correctly blocks on the 1 malformed `psn` doc until it's fixed.
 
 ### 2026-05-31 — P6.3 publish consumes normalized/ bodies
 Wired the normalize output into `publish` with a surgical, backward-compatible
