@@ -30,6 +30,7 @@ from vista_docs.normalize.revision_pure import (
     find_revision_table,
     parse_revision_table,
     remove_revision_table,
+    strip_revision_caption,
     summarize_revisions,
 )
 from vista_docs.normalize.tables_pure import convert_tables
@@ -118,6 +119,8 @@ def normalize_body(
     if found:
         revisions = parse_revision_table(found[2])
         body, _ = remove_revision_table(body)
+    # Drop the residual caption paragraph pandoc duplicates from the table.
+    body, _ = strip_revision_caption(body)
 
     # F6 — TOC from the (post-removal) heading tree. Drop any prior generated
     # TOC first so its ``## Contents`` heading is not re-listed on re-runs, then

@@ -6,6 +6,7 @@ from vista_docs.normalize.revision_pure import (
     find_revision_table,
     parse_revision_table,
     remove_revision_table,
+    strip_revision_caption,
     summarize_revisions,
 )
 
@@ -100,6 +101,25 @@ def test_depollute_description_clears_revision_caption():
 
 def test_depollute_keeps_clean_description():
     assert depollute_description("CPRS GUI user guide.") == "CPRS GUI user guide."
+
+
+def test_strip_revision_caption_removes_polluted_paragraph():
+    body = (
+        "Title\n\n"
+        "Revision HistoryThis table lists the history for each revision of this "
+        "document by row in descending order\n\n"
+        "Real content.\n"
+    )
+    out, n = strip_revision_caption(body)
+    assert n == 1
+    assert "this table lists the history" not in out.lower()
+    assert "Title" in out and "Real content." in out
+
+
+def test_strip_revision_caption_keeps_clean_heading():
+    body = "# Revision History\n\nSome notes.\n"
+    out, n = strip_revision_caption(body)
+    assert out == body and n == 0
 
 
 def test_depollute_non_string_returns_empty():

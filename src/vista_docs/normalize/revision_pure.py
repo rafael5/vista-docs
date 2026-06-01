@@ -144,6 +144,24 @@ def remove_revision_table(body: str) -> tuple[str, bool]:
     return new, True
 
 
+_REV_CAPTION_BODY_RE = re.compile(
+    r"(?i)^\s*(?:revision history\s*)?this table lists the history for each revision"
+)
+
+
+def strip_revision_caption(body: str) -> tuple[str, int]:
+    """Remove the residual revision-table caption paragraph from the body.
+
+    Pandoc duplicates the table's ``<caption>`` ("Revision HistoryThis table
+    lists the history for each revision …") as a body paragraph that survives
+    table removal. Drop it. Matches only the polluted concatenated form, never a
+    clean ``Revision History`` heading. Returns ``(body, removed_count)``.
+    """
+    lines = body.split("\n")
+    kept = [line for line in lines if not _REV_CAPTION_BODY_RE.match(line)]
+    return "\n".join(kept), len(lines) - len(kept)
+
+
 def depollute_description(desc: object) -> str:
     """Clear a ``description:`` that begins with the revision-table caption."""
     if not isinstance(desc, str):
