@@ -48,7 +48,7 @@ def test_toc_generated_and_flagged():
     r = normalize_body(SAMPLE)
     assert r.frontmatter["has_toc"] is True
     assert r.frontmatter["toc"] == "generated"
-    assert "## Contents" in r.body
+    assert "## Table of Contents" in r.body
     assert "(#ordering-medications)" in r.body
     assert "(#simple-dose)" in r.body
 

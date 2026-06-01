@@ -106,8 +106,15 @@ def remove_caption_toc(body: str, min_items: int = 6) -> tuple[str, int]:
     return out, removed
 
 
-def build_toc(headings: Sequence[Heading], max_level: int = 3, heading: str = "Contents") -> str:
-    """Render a nested markdown TOC. Returns ``""`` when nothing is in range."""
+def build_toc(
+    headings: Sequence[Heading], max_level: int = 3, heading: str = "Table of Contents"
+) -> str:
+    """Render a nested markdown TOC. Returns ``""`` when nothing is in range.
+
+    The heading is ``Table of Contents`` (slug ``table-of-contents``) to match the
+    ``[↑ Table of Contents](#table-of-contents)`` back-links injected at ingest —
+    a ``Contents`` heading slugs to ``contents`` and leaves every back-link dead.
+    """
     items = [h for h in headings if h.level <= max_level]
     if not items:
         return ""

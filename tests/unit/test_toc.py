@@ -15,11 +15,18 @@ def test_build_toc_nested():
     ]
     toc = build_toc(hs)
     assert toc == (
-        "## Contents\n\n"
+        "## Table of Contents\n\n"
         "- [Ordering Inpatient Medications (Simple Dose)]"
         "(#ordering-inpatient-medications-simple-dose)\n"
         "  - [Complex Dose](#complex-dose)\n"
     )
+
+
+def test_build_toc_heading_matches_back_link_anchor():
+    # The injected back-to-toc links target '#table-of-contents'; the generated
+    # heading must slug to exactly that, or the back-links go dead.
+    toc = build_toc([Heading(1, "Intro", "intro")])
+    assert toc.startswith("## Table of Contents\n")
 
 
 def test_build_toc_excludes_below_max_level():

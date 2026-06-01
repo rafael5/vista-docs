@@ -51,13 +51,18 @@ class NormalizeResult:
     stats: dict = field(default_factory=dict)
 
 
+# Matches a previously generated TOC heading — the current ``## Table of Contents``
+# and the legacy ``## Contents`` (so re-runs over older output still strip it).
+_GENERATED_TOC_HEADING = ("## Table of Contents", "## Contents")
+
+
 def _strip_existing_toc(body: str) -> str:
-    """Remove a previously generated ``## Contents`` block (idempotency)."""
+    """Remove a previously generated TOC block (idempotency)."""
     lines = body.split("\n")
     out: list[str] = []
     i, n = 0, len(lines)
     while i < n:
-        if lines[i].strip() == "## Contents":
+        if lines[i].strip() in _GENERATED_TOC_HEADING:
             i += 1
             while i < n and not lines[i].strip():
                 i += 1
