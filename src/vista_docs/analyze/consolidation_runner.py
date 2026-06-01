@@ -66,7 +66,11 @@ log = logging.getLogger(__name__)
 
 # Frontmatter field extractors (reuse simple regex pattern)
 _FM_RE = re.compile(r"^---\n(.*?)\n---", re.DOTALL)
-_FIELD_RE = re.compile(r"^(\w+):\s*(.+?)\s*$", re.MULTILINE)
+# NB: use [ \t] (not \s) for the value padding and allow an empty value (.*?).
+# With \s — which matches newlines under re.MULTILINE — an empty-valued field
+# (e.g. `doc_subject:`) would consume the following line, silently swallowing
+# the next field (such as `app_code`) and dropping the doc from consolidation.
+_FIELD_RE = re.compile(r"^(\w+):[ \t]*(.*?)[ \t]*$", re.MULTILINE)
 
 
 def _parse_master_frontmatter(master_text: str) -> dict:
