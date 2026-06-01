@@ -656,7 +656,8 @@ def publish(output: str, pkg: tuple[str, ...], force: bool, skip_validate: bool)
         f"{results['anchor_files']} anchor docs, "
         f"{results['patch_files']} patch docs, "
         f"{results['image_dirs']} image dirs, "
-        f"{results['normalized_bodies']} normalized bodies → {out_dir}"
+        f"{results['normalized_bodies']} normalized bodies, "
+        f"{results['url_map_entries']} url-map entries → {out_dir}"
     )
 
     if not skip_validate:

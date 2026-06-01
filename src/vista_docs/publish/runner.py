@@ -51,6 +51,7 @@ from vista_docs.publish.builder import (
     load_app_info,
     normalized_candidate,
 )
+from vista_docs.publish.url_map import write_url_map_json
 
 log = logging.getLogger(__name__)
 
@@ -91,7 +92,10 @@ def run_publish(
 
     Returns:
         Dict with keys: packages, anchor_files, patch_files, image_dirs,
-        normalized_bodies.
+        normalized_bodies, history_sidecars, url_map_entries.
+
+    Side effect: writes ``{out_dir}/url_map.json`` (the patch_id → publish
+    rel-path join key consumed by scripts/enrich_inventory.py).
     """
     if out_dir.exists() and force:
         if (out_dir / ".git").exists():
@@ -193,13 +197,20 @@ def run_publish(
 
     _write_index(out_dir, final_entries)
 
+    # Emit publish/url_map.json: the {patch_id|source_url → publish rel-path}
+    # join key that `scripts/enrich_inventory.py` reads to add github_md_url to
+    # the inventory CSV. Regenerated on every publish so it tracks the tree.
+    url_map_payload = write_url_map_json(out_dir)
+
     log.info(
-        "publish/: %d packages, %d anchor docs, %d patch docs, %d image dirs, %d history sidecars",
+        "publish/: %d packages, %d anchor docs, %d patch docs, %d image dirs, "
+        "%d history sidecars, %d url-map entries",
         len(pkg_seen),
         anchor_count,
         patch_count,
         img_dir_count,
         sidecar_count,
+        url_map_payload["entry_count"],
     )
 
     return {
@@ -209,6 +220,7 @@ def run_publish(
         "image_dirs": img_dir_count,
         "normalized_bodies": normalized_count,
         "history_sidecars": sidecar_count,
+        "url_map_entries": url_map_payload["entry_count"],
     }
 
 
