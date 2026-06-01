@@ -89,3 +89,28 @@ def test_sweep_idempotent():
     twice, n2 = sweep_dead_links(once, {"keep"})
     assert twice == once
     assert n2 == 0
+
+
+def test_sweep_handles_dead_link_with_escaped_bracketed_text():
+    # Real corpus shape: TOC entry whose link text contains escaped brackets.
+    body = r"  - [### Check Files \[LRCHKFILES\]](#check-files-lrchkfiles)"
+    out, n = sweep_dead_links(body, set())
+    assert out == r"  - ### Check Files \[LRCHKFILES\]"
+    assert n == 1
+
+
+def test_sweep_preserves_valid_link_with_bracketed_text():
+    body = r"[Item \[CODE\]](#item-code)"
+    assert sweep_dead_links(body, {"item-code"}) == (body, 0)
+
+
+def test_sweep_two_bracketed_links_not_merged():
+    out, n = sweep_dead_links(r"[a \[1\]](#x) and [b \[2\]](#y)", set())
+    assert out == r"a \[1\] and b \[2\]"
+    assert n == 2
+
+
+def test_sweep_handles_nested_dead_links_to_fixpoint():
+    out, n = sweep_dead_links("[outer [inner](#dead1) text](#dead2)", set())
+    assert out == "outer inner text"
+    assert n == 2

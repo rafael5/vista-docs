@@ -13,8 +13,10 @@ from collections.abc import Iterable, Mapping
 
 _LINK_TARGET_RE = re.compile(r"\]\(#([^)]+)\)")
 _HREF_RE = re.compile(r'href="#([^"]+)"')
-# Whole inline markdown link to an internal anchor: [text](#id) (text has no ]).
-_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\(#([^)]+)\)")
+# Inline markdown link to an internal anchor: [text](#id). The text may contain
+# escaped brackets (``\[CODE\]``, common in VistA TOC entries) but stops at the
+# first *unescaped* ``]`` so adjacent links are never merged.
+_MD_LINK_RE = re.compile(r"\[((?:\\.|[^\]\\])+)\]\(#([^)]+)\)")
 # Whole html anchor to an internal target: <a ... href="#id" ...>inner</a>.
 _HTML_A_RE = re.compile(r'<a\b[^>]*\bhref="#([^"]+)"[^>]*>(.*?)</a>', re.DOTALL)
 
@@ -57,6 +59,17 @@ def sweep_dead_links(body: str, valid_ids: Iterable[str]) -> tuple[str, int]:
     links are untouched. Returns ``(body, swept_count)``; idempotent.
     """
     valid = set(valid_ids)
+    total = 0
+    # Iterate to a fixpoint: stripping a dead *outer* link can reveal a dead
+    # *inner* link (`[… [x](#dead1) …](#dead2)`) that one re.sub pass skips.
+    while True:
+        body, n = _sweep_pass(body, valid)
+        total += n
+        if not n:
+            return body, total
+
+
+def _sweep_pass(body: str, valid: set[str]) -> tuple[str, int]:
     count = 0
 
     def md(m: re.Match[str]) -> str:

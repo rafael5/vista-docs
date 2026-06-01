@@ -35,6 +35,23 @@ def test_valid_anchor_ids_includes_heading_slugs_and_explicit_ids():
     assert "p7" in ids
 
 
+def test_valid_anchor_ids_recognizes_any_element_id_and_pandoc():
+    # Pandoc footnotes define ids on <li> and <a>; headings via {#id}.
+    body = (
+        '<li id="fn1"><p>note</p></li>\n'
+        '<a href="#fn1" id="fnref1">1</a>\n'
+        "## Section {#sec-x}\n"
+        "[]{#legacy}\n"
+    )
+    ids = valid_anchor_ids(body)
+    assert {"fn1", "fnref1", "sec-x", "legacy"} <= ids
+
+
+def test_footnote_links_not_flagged_dead():
+    body = '<a href="#fn1" id="fnref1">1</a>\n<li id="fn1">note <a href="#fnref1">back</a></li>\n'
+    assert dead_anchors(body) == []
+
+
 def test_dead_anchors_flags_unresolved_targets():
     body = "# Real Heading\n\n[ok](#real-heading) and [bad](#missing-target)\n"
     assert dead_anchors(body) == ["missing-target"]

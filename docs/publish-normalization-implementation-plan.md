@@ -58,7 +58,7 @@ extended rather than built.
 | **P5** | **Figures, tables, link rewrite (F9, F10, F8)** | §6 | — | DONE | — | F8 runs last |
 | P5.1 | F9 figure caption recovery into alt/title | F9 | `figures_pure.py` | DONE | ✓ unit | caption before/after image |
 | P5.2 | F10 table policy (simple→GFM, complex→raw HTML) | F10 | `tables_pure.py` | DONE | ✓ unit | never force-converts complex |
-| P5.3 | F8 link rewrite + dead-link sweep | F8 | `linkfix_pure.py` | DONE | ✓ unit | rewrite + `sweep_dead_links` (after aliasing). **Open:** cross-doc resolve not built; sweep skips link text containing `]` (15 docs retain dead anchors) |
+| P5.3 | F8 link rewrite + dead-link sweep | F8 | `linkfix_pure.py` | DONE | ✓ unit | rewrite + `sweep_dead_links` (after aliasing; handles bracketed text, footnotes, nested links to a fixpoint → **235/236 docs end with 0 dead anchors**). **Open:** cross-doc resolve not built; 1 doc has a malformed unescaped-`]` link left for the CI flag |
 | **P6** | **Orchestration & classification** | §8, §12 | — | DONE | — | idempotent pipeline |
 | P6.1 | Document classifier A/B/C/D → `anchors_source`/`toc` | §8 | `classify_pure.py` | DONE | ✓ unit | drives census |
 | P6.2 | `normalize` runner (F1→…→F8) + idempotency | §10, §12 | `normalize_pure.py`, `runner.py` | DONE | ✓ unit | **deviation:** idempotency via `consolidated/`→`normalized/` regen (sibling tree), not an in-place `normalize_version` guard |
@@ -155,6 +155,28 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — F8 sweep robustness (bracketed text, footnotes, nested links)
+Hardened `sweep_dead_links` against three real-corpus forms the census surfaced
+(docs with residual dead anchors: **15 → 1**):
+1. **Bracketed link text** — `_MD_LINK_RE` text now allows escaped chars
+   (`\[CODE\]`), so VistA TOC entries like `[### Check Files \[LRCHKFILES\]](#…)`
+   are swept; still stops at the first *unescaped* `]` so adjacent links never merge.
+2. **Footnotes** — `valid_anchor_ids` now recognizes an `id=` on *any* element
+   (not just `<span>`/`<a>`) plus pandoc `{#id}`. Pandoc footnotes define
+   `<li id="fn1">` / `<a id="fnref1">`; the old span/a-only rule made `#fn1` look
+   dead, so the sweep stripped the citation `<a>` (which also *defined* `fnref1`),
+   leaving the back-link dangling. Now all footnote links resolve.
+3. **Nested dead links** — the sweep iterates to a fixpoint; stripping a dead
+   *outer* link reveals a dead *inner* one (`[… [11-10](#_Ref) …](#outer)`) that a
+   single `re.sub` pass skips.
+
+**Census after fixes: 235/236 docs end with 0 dead anchors.** The lone remaining
+doc (`psn/.../national_drug_file_-_user_manual.md`) has a genuinely
+malformed-markdown artifact — a heading + image + paragraph fused into one link
+whose text contains an *unescaped* `]`, so it is not a well-formed link the sweep
+should touch; it is correctly left for the §11 dead-anchor CI flag to surface for
+human review.
 
 ### 2026-05-31 — P0.2 corpus census (Class A/B/C/D)
 Ran `scripts/normalize_census.py` over all **236** consolidated docs (reuses the

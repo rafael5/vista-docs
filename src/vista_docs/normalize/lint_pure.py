@@ -17,7 +17,10 @@ _SPACE_RUN_RE = re.compile(r" {6,}")
 _PAGE_LINE_RE = re.compile(r"^\s*Page\s+\d+(?:\s+of\s+\d+)?\s*$", re.IGNORECASE | re.MULTILINE)
 _NUM_ONLY_RE = re.compile(r"^\s*\d{1,4}\s*$", re.MULTILINE)
 _REDACTED_CELL_RE = re.compile(r"<t[dh]\b[^>]*>\s*(?:Redacted|N/A)\s*</t[dh]>", re.IGNORECASE)
-_ID_ATTR_RE = re.compile(r'<(?:span|a)\b[^>]*\bid="([^"]+)"')
+# Any element carrying an id is a definition — incl. pandoc footnotes (<li id="fn1">,
+# <a id="fnref1">) — plus pandoc empty-span ``[]{#id}`` and heading ``{#id}`` attrs.
+_ID_ATTR_RE = re.compile(r'<[a-zA-Z][^>]*\bid="([^"]+)"')
+_PANDOC_ID_RE = re.compile(r"\{#([^}\s]+)")
 
 
 def noise_violations(body: str) -> list[str]:
@@ -40,6 +43,7 @@ def valid_anchor_ids(body: str) -> set[str]:
     """
     ids = {h.slug for h in extract_headings(body)}
     ids.update(_ID_ATTR_RE.findall(body))
+    ids.update(_PANDOC_ID_RE.findall(body))
     return ids
 
 
