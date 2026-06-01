@@ -16,12 +16,21 @@ def test_noise_detects_form_feed_and_space_run():
 
 def test_noise_detects_page_number_lines():
     assert "page_number_line" in noise_violations("text\n\nPage 5 of 12\n\nmore\n")
+    # An *isolated* numeric line (blank both sides) is an orphan page number.
     assert "page_number_line" in noise_violations("text\n\n233\n\nmore\n")
 
 
-def test_noise_detects_redacted_cells():
-    assert "redacted_cell" in noise_violations("<tr><td>x</td><td>Redacted</td></tr>")
-    assert "redacted_cell" in noise_violations("<tr><td>x</td><td>N/A</td></tr>")
+def test_noise_ignores_numeric_line_with_text_neighbor():
+    # Consistent with F2: a number that is content (e.g. table data), not an
+    # orphan page number, is left alone — so the linter must not flag it.
+    assert noise_violations("cytopath\n8\n86-04\n") == []
+    assert noise_violations("blah\n\n230\nFiles 20\n") == []
+
+
+def test_noise_does_not_flag_redacted_cells():
+    # F5 deterministically removes the revision table's PM/TW columns; any
+    # remaining "Redacted"/"N/A" cells are legitimate source redactions.
+    assert noise_violations("<tr><td>x</td><td>Redacted</td></tr>") == []
 
 
 def test_clean_body_has_no_noise():

@@ -414,7 +414,8 @@ def consolidate(output: str, min_versions: int, doc_types: tuple[str, ...]) -> N
 @click.option("--output", type=click.Path(), default="", help="normalized/ dir (output).")
 @click.option("--pkg", default="", help="Limit to one consolidated subdir (app_code).")
 @click.option("--force", is_flag=True, help="Regenerate docs even if normalized output exists.")
-def normalize(input_: str, output: str, pkg: str, force: bool) -> None:
+@click.option("--no-validate", is_flag=True, help="Skip the hard validation gate (inspect only).")
+def normalize(input_: str, output: str, pkg: str, force: bool, no_validate: bool) -> None:
     """Normalize consolidated/ → normalized/: denoise, recover structure, demote
     revision history to sidecars, build link TOCs, stamp provenance (spec §12).
 
@@ -442,8 +443,19 @@ def normalize(input_: str, output: str, pkg: str, force: bool) -> None:
     click.echo(f"Anchor index: {n_idx} docs → {SURVEY_DIR / 'anchor_index.json'}")
     click.echo(
         f"Validation: {rep.total} flags across {rep.docs} docs "
-        f"(noise={rep.noise}, dead-anchor={rep.dead}, sidecar={rep.sidecar}, schema={rep.schema})"
+        f"(noise={rep.noise}, dead-anchor={rep.dead}, sidecar={rep.sidecar}, "
+        f"schema={rep.schema_hard}+{rep.schema_soft})"
     )
+
+    # Hard gate (spec §11/§P7.3): refuse to bless output with dangling anchors,
+    # residual noise, broken sidecars, or hard schema violations.
+    if rep.hard and not no_validate:
+        for rel, code, detail in rep.hard_flags()[:20]:
+            click.echo(f"  HARD {code:22} {rel} {detail}".rstrip())
+        raise click.ClickException(
+            f"normalize validation gate failed: {rep.hard} hard issue(s) "
+            f"({SURVEY_DIR / 'normalize_validation_flags.csv'}). Use --no-validate to bypass."
+        )
 
 
 # ---------------------------------------------------------------------------

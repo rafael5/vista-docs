@@ -51,12 +51,22 @@ class NormalizedValidation:
     noise: int = 0
     dead: int = 0
     sidecar: int = 0
-    schema: int = 0
+    schema_hard: int = 0
+    schema_soft: int = 0
     flags: list[tuple[str, str, str]] = field(default_factory=list)
 
     @property
     def total(self) -> int:
-        return self.noise + self.dead + self.sidecar + self.schema
+        return self.noise + self.dead + self.sidecar + self.schema_hard + self.schema_soft
+
+    @property
+    def hard(self) -> int:
+        """Gate-blocking issues (spec §11): noise, dangling anchors, broken
+        sidecars, and hard schema violations — but not advisory schema flags."""
+        return self.noise + self.dead + self.sidecar + self.schema_hard
+
+    def hard_flags(self) -> list[tuple[str, str, str]]:
+        return [f for f in self.flags if f[1] != "schema:soft"]
 
 
 def validate_normalized(
@@ -76,7 +86,10 @@ def validate_normalized(
             rep.dead += 1
             rep.flags.append((rel, "dead_anchor", tgt))
         for viol in validate_against_schema(fm):
-            rep.schema += 1
+            if viol.severity == "hard":
+                rep.schema_hard += 1
+            else:
+                rep.schema_soft += 1
             rep.flags.append((rel, f"schema:{viol.severity}", viol.code))
         side = fm.get("revision_sidecar")
         backref = None

@@ -14,26 +14,42 @@ from vista_docs.normalize.linkfix_pure import find_dead_anchors
 
 _FORM_FEED_RE = re.compile(r"[\x0c]")
 _SPACE_RUN_RE = re.compile(r" {6,}")
-_PAGE_LINE_RE = re.compile(r"^\s*Page\s+\d+(?:\s+of\s+\d+)?\s*$", re.IGNORECASE | re.MULTILINE)
-_NUM_ONLY_RE = re.compile(r"^\s*\d{1,4}\s*$", re.MULTILINE)
-_REDACTED_CELL_RE = re.compile(r"<t[dh]\b[^>]*>\s*(?:Redacted|N/A)\s*</t[dh]>", re.IGNORECASE)
+_PAGE_LINE_RE = re.compile(r"^\s*Page\s+\d+(?:\s+of\s+\d+)?\s*$", re.IGNORECASE)
+_NUM_ONLY_RE = re.compile(r"^\s*\d{1,4}\s*$")
 # Any element carrying an id is a definition — incl. pandoc footnotes (<li id="fn1">,
 # <a id="fnref1">) — plus pandoc empty-span ``[]{#id}`` and heading ``{#id}`` attrs.
 _ID_ATTR_RE = re.compile(r'<[a-zA-Z][^>]*\bid="([^"]+)"')
 _PANDOC_ID_RE = re.compile(r"\{#([^}\s]+)")
 
 
+def _blank_or_edge(lines: list[str], i: int) -> bool:
+    return i < 0 or i >= len(lines) or not lines[i].strip()
+
+
 def noise_violations(body: str) -> list[str]:
-    """Return sorted noise codes still present in ``body`` (empty == clean)."""
+    """Return sorted noise codes still present in ``body`` (empty == clean).
+
+    Page-number detection mirrors F2 exactly: a ``Page N`` footer line, or a
+    numeric-only line *isolated* by blanks on both sides (an orphan page number).
+    A bare number with a text neighbor is content (table data), not noise — so it
+    is not flagged, keeping the linter consistent with what F2 removes. Redacted
+    PM/TW cells are owned by F5 (it drops the whole revision table); remaining
+    ``Redacted`` cells are legitimate source content and are not flagged.
+    """
     codes: set[str] = set()
     if _FORM_FEED_RE.search(body):
         codes.add("form_feed")
     if _SPACE_RUN_RE.search(body):
         codes.add("space_run")
-    if _PAGE_LINE_RE.search(body) or _NUM_ONLY_RE.search(body):
-        codes.add("page_number_line")
-    if _REDACTED_CELL_RE.search(body):
-        codes.add("redacted_cell")
+    lines = body.split("\n")
+    for i, line in enumerate(lines):
+        if _PAGE_LINE_RE.match(line) or (
+            _NUM_ONLY_RE.match(line)
+            and _blank_or_edge(lines, i - 1)
+            and _blank_or_edge(lines, i + 1)
+        ):
+            codes.add("page_number_line")
+            break
     return sorted(codes)
 
 
