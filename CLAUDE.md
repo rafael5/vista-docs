@@ -1,3 +1,71 @@
+---
+# Machine-readable project descriptor — schema v1 (2026-05-05).
+name: vista-docs
+kind: [pipeline, cli, data]
+status: active
+languages: [python]
+
+runtime:
+  needs:
+    - python>=3.10
+    - uv
+    - "internet (only at crawl/fetch stages; downstream stages read disk)"
+  optional:
+    - "Docling (DOCX/PDF → markdown)"
+  excludes: []
+
+distribution:
+  pypi: null
+  github: rafael5/vista-docs
+
+location: ~/projects/vista-docs
+data_location: ~/data/vista-docs                # output never in this repo
+
+exposes:
+  cli:
+    - "vista-docs (Click; subcommands per pipeline stage)"
+  python_api: src/vista_docs/
+  pipeline_stages:
+    - "1. crawl — VDL HTML → catalog records"
+    - "2. classify — filename/title → DocType"
+    - "3. fetch — URL derivation + HTTP download"
+    - "4. ingest — DOCX/PDF → markdown via Docling + post-processing"
+    - "5. enrich — extract metadata from markdown, rewrite YAML frontmatter"
+    - "6. audit — normalize frontmatter + audit DB"
+    - "6.5 chunk — heading tree + FTS5 index"
+    - "6.6 entities — routines/globals/options/rpcs/codes"
+    - "6.7 quality — is_latest + quality_score + views"
+  formats_produced:
+    - "~/data/vista-docs/md-img/ (markdown + extracted images)"
+    - "~/data/vista-docs/state/frontmatter.db (SQLite — consumed by vista-cli + vista-docs-api)"
+
+consumes:
+  formats: ["VDL HTML catalog", "DOCX", "PDF"]
+  services: ["VA Document Library (vdl.va.gov)"]
+
+companions:
+  - project: vista-docs-api
+    relation: "downstream — FastAPI server reads frontmatter.db (stage 7)"
+  - project: vista-cli
+    relation: "downstream — joins frontmatter.db with vista-meta TSVs into a queryable surface"
+  - project: vista-meta
+    relation: "complementary — vista-meta supplies code+data models from a live VistA; vista-docs supplies the documentation corpus"
+
+incompatibilities:
+  - "Output data lives in ~/data/vista-docs/, never in the repo. Don't commit pipeline output."
+  - "Crawl/fetch stages need network; downstream stages must run offline (no live network calls past stage 3)."
+  - "Skills under ~/claude/skills/ (vdl, vdl-pipeline, vista-system, vista-fileman, va-docx-structure) are required reading for changes to crawler / ingest / enrich stages."
+
+docs:
+  primary: README.md
+  skills:
+    - "~/claude/skills/vdl"
+    - "~/claude/skills/vdl-pipeline"
+    - "~/claude/skills/vista-system"
+    - "~/claude/skills/vista-fileman"
+    - "~/claude/skills/va-docx-structure"
+---
+
 # Claude Project Context — vista-docs
 
 ## What this project is
@@ -77,26 +145,60 @@ make format     # auto-format with ruff
 make push       # check + git push
 make pull       # git pull origin main
 
-# Pipeline targets
-make crawl      # vista-docs crawl  → ~/data/vista-docs/inventory/
-make fetch      # vista-docs fetch  → ~/data/vista-docs/raw/
-make ingest     # vista-docs ingest → ~/data/vista-docs/markdown/
-make survey     # vista-docs survey → ~/data/vista-docs/survey/
-make verify     # vista-docs verify → sanity-check artifacts
-make pipeline   # crawl → fetch → ingest → survey in order
+# Pipeline targets (each wraps the matching vista-docs subcommand)
+make crawl        # → ~/data/vista-docs/inventory/
+make fetch        # → ~/data/vista-docs/raw/
+make ingest       # → ~/data/vista-docs/md-img/
+make enrich       # populate frontmatter in-place
+make sync         # join inventory_enriched.csv fields into frontmatter
+make survey       # → ~/data/vista-docs/survey/
+make headings     # → ~/data/vista-docs/survey/heading_analysis/
+make consolidate  # → ~/data/vista-docs/consolidated/
+make manifest     # → ~/data/vista-docs/migration/corpus-manifest.json
+make publish      # → ~/data/vista-docs/publish/
+make validate     # frontmatter hard gate
+make publish-push # regenerate publish/ then git push corpus (NOT `make push`)
+make pipeline     # crawl → fetch → ingest → survey in order
 ```
+
+**Note:** `make push` runs `check` + `git push` for *this repo*. The corpus
+push to the docs GitHub is `make publish-push` (`vista-docs push`).
 
 ## CLI
 
 ```
-vista-docs crawl   [--delay N] [--snapshot] [--max-apps N]
-vista-docs fetch   [--pkg CPRS] [--dry-run] [--force] [--delay N]
-vista-docs ingest  [--pkg CPRS] [--scaffold] [--force]
-vista-docs enrich  [--pkg CPRS] [--force]
-vista-docs survey  [--pkg CPRS] [--output PATH]     # stub
-vista-docs verify  [--fix]                           # stub
-vista-docs pipeline [--pkg CPRS] [--from crawl|fetch|ingest|survey]  # stub
+# Acquire (stages 1-3) — writes pipeline.db
+vista-docs crawl    [--delay N] [--snapshot] [--max-apps N]
+vista-docs fetch    [--pkg CPRS] [--dry-run] [--force] [--delay N]
+vista-docs ingest   [--pkg CPRS] [--scaffold] [--force]
+
+# Enrich corpus (stages 4-5) — populate frontmatter in md-img/ in-place
+vista-docs enrich   [--pkg CPRS] [--force]
+vista-docs sync     [--pkg CPRS] [--force]            # join inventory_enriched.csv fields into FM
+
+# Analysis (read-only over the enriched corpus)
+vista-docs survey   [--pkg CPRS] [--output PATH]
+vista-docs headings [--output PATH] [--min-docs N] [--boilerplate-threshold F] [--unique-threshold F]
+
+# Delivery (markdown corpus → GitHub)
+vista-docs consolidate [--output PATH] [--min-versions N] [--doc-type TYPE ...]
+vista-docs manifest    [--output PATH] [--doc-type TYPE ...]
+vista-docs publish     [--output PATH] [--pkg PKG ...] [--force] [--no-validate]
+vista-docs validate    [--target PATH] [--md-img]     # hard gate before publish/push
+vista-docs push        [--remote URL] [--message STR] [--no-publish]
+
+# Orchestration
+vista-docs pipeline [--pkg CPRS] [--from crawl|fetch|ingest|survey]   # crawl → fetch → ingest → survey
+
+# Post-ingest DB build (stages 6-6.7) — run as scripts, write frontmatter.db
+python3 pipeline/audit_frontmatter.py   [--force] [--pkg CODE] [--limit N]
+python3 pipeline/chunk_sections.py      [--force] [--pkg CODE]
+python3 pipeline/extract_entities.py    [--force] [--pkg CODE]
+python3 pipeline/apply_quality_views.py                          # pure SQL; always re-runs
 ```
+
+Full end-to-end architecture (ASCII + Mermaid + per-stage table): see
+[`docs/vdl-arch-overview.md`](docs/vdl-arch-overview.md).
 
 **Note:** `--pkg` takes the VDL `app_code` (CPRS, ADT, PSO), NOT the VistA M
 namespace (OR, DG, PSO). These are not the same.
