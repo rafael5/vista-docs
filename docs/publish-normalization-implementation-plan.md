@@ -157,6 +157,28 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
 
+### 2026-05-31 — Exploded-list investigation (verify-before-build → don't build)
+The CPRS pilot inspection of `user-manual.md` showed a flat, list-exploded body.
+Investigated before building a fix:
+- **Prevalence:** of 236 consolidated docs, only 35 have *any* bare `N.`/`-`
+  markers; median = **2**. `cprs/um/cprs_user_manual__gui_version.md` alone has
+  **3058 (26% of lines)**; next worst is 25. Only **1** doc has both `[[…]]`
+  wrapping and >50 bare markers.
+- **Origin:** re-converted the raw DOCX with the ingest pandoc args
+  (`-t gfm --wrap=none --standalone`) → **raw pandoc output already has the 3058
+  markers** (empty `1. 2. 3. 4.` items with content detached/blockquoted). So it
+  is **pandoc's reading of this one DOCX**, not a postprocess/normalize bug —
+  unfixable at those stages.
+- **Alternate converter:** Docling (the only real upstream lever) is **not
+  installed**.
+**Decision: do not build a general exploded-list transform.** It would risk the
+34 docs with a couple of legit markers to imperfectly patch one doc whose list
+structure is unrecoverable by heuristics. Fixed only the genuine generator bug
+the pilot surfaced (residual revision caption, F5). The one outlier doc is a
+single-file converter problem — options: try Docling on just that DOCX, hold it
+back from publish, or accept it (gate-clean, strictly better than current). The
+other ~234 docs are good gold.
+
 ### 2026-05-31 — P8 CPRS pilot (normalize + publish, local; gold-clean)
 Ran the rollout scoped to CPRS as a pilot. `vista-docs normalize --pkg CPRS
 --force`: 10 multi-version masters normalized, 4 history sidecars (552 revisions),
