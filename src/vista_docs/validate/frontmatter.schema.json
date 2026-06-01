@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VistA Docs published frontmatter",
+  "type": "object",
+  "required": [
+    "title",
+    "doc_type",
+    "doc_label",
+    "app_code",
+    "app_name",
+    "section",
+    "pkg_ns"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "doc_type": {
+      "type": "string"
+    },
+    "doc_label": {
+      "type": "string"
+    },
+    "doc_layer": {
+      "type": "string"
+    },
+    "doc_subject": {
+      "type": "string"
+    },
+    "app_code": {
+      "type": "string"
+    },
+    "app_name": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string",
+      "enum": [
+        "CLI",
+        "FIN",
+        "GUI",
+        "INF",
+        "MON"
+      ]
+    },
+    "app_status": {
+      "type": "string"
+    },
+    "pkg_ns": {
+      "type": "string"
+    },
+    "patch_ver": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "group_key": {
+      "type": "string"
+    },
+    "file_numbers": {
+      "type": "array"
+    },
+    "security_keys": {
+      "type": "array"
+    },
+    "menu_options": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "array"
+    },
+    "page_count": {
+      "type": "integer"
+    },
+    "word_count": {
+      "type": "integer"
+    },
+    "section_count": {
+      "type": "integer"
+    },
+    "table_count": {
+      "type": "integer"
+    },
+    "figure_count": {
+      "type": "integer"
+    },
+    "appendix_count": {
+      "type": "integer"
+    },
+    "has_toc": {
+      "type": "boolean"
+    },
+    "toc": {
+      "type": "string",
+      "enum": [
+        "generated",
+        "original",
+        "none"
+      ]
+    },
+    "anchors_source": {
+      "type": "string",
+      "enum": [
+        "word",
+        "inferred",
+        "mixed",
+        "none"
+      ]
+    },
+    "anchor_aliases": {
+      "type": "object"
+    },
+    "page_anchors": {
+      "type": "boolean"
+    },
+    "is_stub": {
+      "type": "boolean"
+    },
+    "pub_date": {
+      "type": "string"
+    },
+    "revision_count": {
+      "type": "integer"
+    },
+    "revision_newest": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "revision_oldest": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "revision_sidecar": {
+      "type": "string"
+    },
+    "docx_url": {
+      "type": "string"
+    },
+    "pdf_url": {
+      "type": "string"
+    },
+    "app_url": {
+      "type": "string"
+    },
+    "audit_applied": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string"
+    },
+    "converter": {
+      "type": "string"
+    },
+    "normalized_at": {
+      "type": "string"
+    },
+    "normalize_version": {
+      "type": "string"
+    },
+    "master_source": {
+      "type": "string"
+    },
+    "master_pub_date": {
+      "type": "string"
+    },
+    "consolidated_from": {
+      "type": "string"
+    },
+    "prior_versions": {
+      "type": "array"
+    },
+    "consolidated_title": {
+      "type": "string"
+    }
+  }
+}

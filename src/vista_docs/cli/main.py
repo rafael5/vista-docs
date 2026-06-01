@@ -442,7 +442,7 @@ def normalize(input_: str, output: str, pkg: str, force: bool) -> None:
     click.echo(f"Anchor index: {n_idx} docs → {SURVEY_DIR / 'anchor_index.json'}")
     click.echo(
         f"Validation: {rep.total} flags across {rep.docs} docs "
-        f"(noise={rep.noise}, dead-anchor={rep.dead}, sidecar={rep.sidecar})"
+        f"(noise={rep.noise}, dead-anchor={rep.dead}, sidecar={rep.sidecar}, schema={rep.schema})"
     )
 
 

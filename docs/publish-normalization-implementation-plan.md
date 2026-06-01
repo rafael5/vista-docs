@@ -37,7 +37,7 @@ extended rather than built.
 | P0.1 | Verify open questions (anchor span-vs-heading; PDF availability; pandoc version) | §13 | survey notes | DONE | — | resolved: `[[…](#_Toc)]` = nav wrapping, not headings (Lesson #13). `converter:` still literal "pandoc" — capture real version |
 | P0.2 | Corpus classification census (Class A/B/C/D counts) | §8 | `survey/normalize_census.csv` | DONE | — | 236 docs → **A=122, B=108, C=4, D=2**; 76 have nav-wrapping; 4 C-docs all have PDFs (F7 effort small). `scripts/normalize_census.py` |
 | P0.3 | `normalize/` package skeleton + CLI stub + `[tool.coverage.run] omit` for I/O | §3, §12a | `src/vista_docs/normalize/` | DONE | unit | runner/io/pdf_reader omitted; one test file per pure module |
-| P0.4 | Register new frontmatter keys in `audit_frontmatter.py` + JSON-schema scaffold | §5, §11 | `audit_frontmatter.py`, schema | WIP | unit | keys registered in audit + validate; **JSON-schema not built yet** |
+| P0.4 | Register new frontmatter keys in `audit_frontmatter.py` + JSON-schema scaffold | §5, §11 | `audit_frontmatter.py`, `validate/schema.py` | DONE | ✓ unit | keys registered in audit + validate; `FRONTMATTER_SCHEMA` + committed `frontmatter.schema.json` (drift-guarded) + pure `validate_against_schema` |
 | **P1** | **Denoise & boilerplate (F1–F2)** | §6 F1–F2 | — | DONE | — | run first; idempotent |
 | P1.1 | F1 whitespace/layout denoise (≥6-space runs, `\f`, ≥3 blank lines, trailing ws) | F1 | `denoise_pure.py` | DONE | ✓ unit | idempotent verified |
 | P1.2 | Decide F1-in-ingest vs normalize; reconcile with `ingest/postprocess.py` | F1 note | postprocess vs normalize | BLOCKED | — | F1 lives in normalize for now; upstream-fix decision still open |
@@ -65,7 +65,7 @@ extended rather than built.
 | P6.3 | CLI `vista-docs normalize`; wire into `publish` | §3 | `cli/main.py` | WIP | (integ) | CLI done (stage 9.5); **publish not yet wired to read `normalized/`** |
 | **P7** | **Provenance & validation/CI** | §9, §11 | — | WIP | — | builds on guardrails session |
 | P7.1 | Provenance fields (`source_sha256`, `converter`, `normalized_at`, `normalize_version`) | §9 | runner + audit keys | DONE | ✓ unit | sha256 best-effort from `raw/` |
-| P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `lint_pure.py`, `index_pure.py`, `index_runner.py` | WIP | ✓ unit | noise + dead-anchor + **sidecar-integrity + anchor-index emit DONE** (emitted to `survey/anchor_index.json`; `validate_normalized` flags CSV; both wired into the `normalize` CLI). **FM JSON-schema still TODO** |
+| P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `lint_pure.py`, `index_pure.py`, `index_runner.py`, `validate/schema.py` | DONE | ✓ unit | noise + dead-anchor + sidecar-integrity + anchor-index emit + **FM JSON-schema** all DONE; `validate_normalized` aggregates all five into `survey/normalize_validation_flags.csv`, wired into the `normalize` CLI |
 | P7.3 | Plug normalize checks into hard publish/push gate + corpus CI | §11 | `cli/main.py`, `.ci/` | TODO | integration | not yet wired into `_run_validation_gate` |
 | **P8** | **Rollout** | §14 | — | WIP | — | prototype done; batch pending |
 | P8.1 | Prototype CPRS GUI UM end-to-end | §14.1 | review artifact | DONE | manual | 2491 nav-links unwrapped, 0 dangling anchors, 27% smaller, idempotent (Change Log) |
@@ -155,6 +155,19 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — P0.4 frontmatter JSON-schema (completes P7.2)
+- `validate/schema.py`: `FRONTMATTER_SCHEMA` (source-of-truth dict, every key
+  typed; `section`/`toc`/`anchors_source` enums) mirrored to the committed
+  `validate/frontmatter.schema.json` (drift-guarded by a unit test). Pure,
+  dependency-free `validate_against_schema` for the JSON-Schema subset used
+  (required/type/enum/additionalProperties). Severities: missing-required +
+  bad-enum = hard; type mismatch + unknown key = soft. The enforced gate stays
+  `validate_frontmatter`; this is a layered cross-check.
+- `null` is treated as "unset" (skip type/enum) — 101/235 docs legitimately have
+  `doc_subject: null`, so flagging them would be pure noise.
+- Wired into `validate_normalized` (advisory `schema:` flags) + the CLI summary.
+  Smoke on real docs: 0 schema flags after the null-skip fix.
 
 ### 2026-05-31 — P7.2 anchor-index emit + sidecar integrity
 Built the remaining §11 validation pieces (except the FM JSON-schema):

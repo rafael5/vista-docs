@@ -19,6 +19,7 @@ import yaml
 from vista_docs.normalize.index_pure import anchor_index_entry, build_anchor_index
 from vista_docs.normalize.lint_pure import dead_anchors, noise_violations, sidecar_violations
 from vista_docs.validate.frontmatter import split_frontmatter
+from vista_docs.validate.schema import validate_against_schema
 
 log = logging.getLogger(__name__)
 
@@ -50,11 +51,12 @@ class NormalizedValidation:
     noise: int = 0
     dead: int = 0
     sidecar: int = 0
+    schema: int = 0
     flags: list[tuple[str, str, str]] = field(default_factory=list)
 
     @property
     def total(self) -> int:
-        return self.noise + self.dead + self.sidecar
+        return self.noise + self.dead + self.sidecar + self.schema
 
 
 def validate_normalized(
@@ -73,6 +75,9 @@ def validate_normalized(
         for tgt in dead_anchors(body):
             rep.dead += 1
             rep.flags.append((rel, "dead_anchor", tgt))
+        for viol in validate_against_schema(fm):
+            rep.schema += 1
+            rep.flags.append((rel, f"schema:{viol.severity}", viol.code))
         side = fm.get("revision_sidecar")
         backref = None
         side_path = p.parent / side if side else None
