@@ -67,6 +67,15 @@ means here: the patch series collapses into one anchor document **plus a complet
 structured lineage** — not N near-duplicate files each carrying its own embedded changelog.
 Mechanism in §6.6; pipeline reflection in §8.
 
+**An always-current corpus is a maintained property, not a one-shot import.** The pipeline runs
+on a schedule, re-crawls VDL, **detects which documents changed upstream**, and re-processes
+*only those* down the DAG — so the published corpus tracks VDL rather than drifting from it the
+moment after a bulk import. Freshness is the *temporal* half of fidelity: it is measured as the
+**currency axis** of the fidelity framework (`fidelity-framework.md` §7.5), and the mechanism is
+the scheduled change-detection loop (§7.6) feeding the change-detecting `crawl`/`catalog` stages
+(§8). Drift detection and the version rollup above are the same machine — a newly-published patch
+*is* a new version-group member (§6.6).
+
 ---
 
 ## 2. Design tenets
@@ -105,8 +114,12 @@ These are non-negotiable. Every later section is an application of one of these.
     change pages, or "(Patch NN)" annotations in the prose. The manual version-control apparatus
     is *evidence*, not content. Mechanical replay into git commit history is a deferred capability
     the capture *preserves*, not work this pass performs. (Mechanism: §6.6.)
-
-### Non-goals
+13. **Discovery is data, not code.** Recurring patterns — boilerplate, per-era document templates,
+    glossary terms, structural conventions — are **mined from the corpus, curated into declared
+    registries, and subtracted by generic stages**, never hard-coded as rules buried in a
+    transform. The pipeline adapts to a newly-found pattern by gaining a registry *entry*, not a
+    code edit. The inductive discovery step is kept strictly separate from the deterministic
+    application step; the registry is the seam between them. (Mechanism: §9.6.)
 
 - Not a general document-management system or CCMS. Not DITA/S1000D authoring (§5.4).
 - Not multi-tenant; single-node, single-maintainer scale (≈3–4 GB raw, ≈3k documents).
@@ -151,8 +164,9 @@ industry's standard frame for exactly this raw→curated progression. Each layer
                                                                                   │
                           ┌──────────── SILVER (conformed, per-doc, versioned text) ─────┐
                           │  convert ──►  text@converted  + assets/ (CAS images, write-once)
+                          │  discover ─►  reports/patterns ─curate─► registries/ (boilerplate · templates[doc_type×era] · phrases · glossary)
                           │  enrich  ──►  text@enriched    (identity frontmatter baked)
-                          │  normalize ─►  text@normalized  + bundle sidecars (history, tables…)
+                          │  normalize ─►  text@normalized  + bundle sidecars (history, tables…)  [subtracts registries/ patterns]
                           └───────────────────────────────────────────────────────────────┘
                                                                                   │
                           ┌──────────── GOLD (curated, derived, computable) ─────────────┐
@@ -241,16 +255,25 @@ $LAKE/                                   # DATA_DIR, default ~/data/vdocs, env-o
   gold/
     consolidated/<app>/<type>/...        # consolidate
     corpus-manifest.json                 # manifest (lineage)
-    discovery.json                       # manifest (machine discovery descriptor — §14)
+    discovery.json                       # manifest (machine-discovery descriptor for agents — §14)
+    _shared/boilerplate/<id>.md          # normalize (canonical single-sourced boilerplate blocks; bodies reference these — §9.6)
     glossary.md                          # normalize (single-sourced corpus glossary)
     publish/<section>/<pkg>/...          # publish (human tree; markdown-only, images materialized+gitignored)
   state.db                               # orchestration: stage_runs, fingerprints, lineage
   index.db                               # derived corpus index + knowledge graph (rebuildable)
   vectors.db                             # semantic index: per-chunk embeddings (rebuildable)
-  reports/                               # analyze: survey, headings, lexicon (diagnostic, off critical path)
+  reports/
+    survey|headings|lexicon/...          # analyze (diagnostic, off critical path)
+    patterns/...                         # discover (CANDIDATE patterns + evidence, pre-curation — §9.6)
 ```
 
 Numbered text trees (`01-`, `02-`, `03-`) make the silver progression self-evident on `ls`.
+
+The **curated** pattern registries themselves are *not* in the lake — they are version-controlled
+config in the repo (`registries/`, §9.6/§11), because curation is a reviewable decision (a git PR),
+not disposable derived output. The lake holds the *candidates* (`reports/patterns/`) and the
+*canonical content* (`gold/_shared/`, `gold/glossary.md`); the repo holds the *rules* that decide
+what is a pattern and how it is subtracted.
 
 ### 5.4 Why not shred the source into component files (DITA/S1000D)?
 
@@ -336,14 +359,17 @@ Beyond images and revision history (already split in v1), v2 adopts these splits
 | **Images** | split — write-once, huge, render-consumer | content-addressed `assets/`, referenced by sha256 |
 | **Revision history** | split — machine-structured, query-consumer, prose-polluting | `history.yaml` sidecar (ordered lineage + refs to retained prior bodies); `revision_sidecar` pointer in body FM; **captured for later, opt-in git commit-replay** (§6.6) |
 | **Large data tables** (data-dictionary / file-field listings) | **split** — structured data masquerading as prose; wreck diffs; API wants them as data | `tables/*.csv` sidecars; a reference/embed stub left in body. Small inline tables stay. |
-| **Corpus-wide boilerplate** (legal notices, "how to use this manual", standard headers/footers) | **single-source** — duplicated across hundreds of docs | one shared boilerplate artifact; bodies reference it |
-| **Glossary / acronym lists** | **promote to one shared corpus-level glossary** | `gold/glossary.md` (+ index.db terms); de-duplicate per-doc copies |
+| **Corpus-wide boilerplate** (legal notices, "how to use this manual", standard headers/footers) | **single-source** — duplicated across hundreds of docs | *discovered* by `discover`, *curated* into `registries/boilerplate`, canonical copy single-sourced to `gold/_shared/boilerplate/`; bodies carry a reference, not the text (§9.6) |
+| **Document template / scaffold** (the empty skeleton each doc was poured into — standard front/title pages, fixed scaffold sections, placeholder prose, layout furniture) | **subtract as noise** — zero document-specific meaning; pure template residue that differs by **document type *and* authoring era** | `discover` infers the template per `(doc_type, era)` by structural clustering (a user guide ≠ a technical guide ≠ an install guide); the scaffold is *stripped* and the `template_id` recorded as provenance; one audit copy of each skeleton kept in `registries/templates` — **never repeated in any body** (§9.6) |
+| **Dead phrases** (paper-era residue — "this page intentionally left blank", "continued on next page", "end of document", page furniture — and descriptive filler *around* revision history) | **delete outright** — meaningless legacy of paper documents; no purpose in a GitHub corpus | `discover` mines recurring meaningless strings → curated `registries/phrases`; `normalize` deletes matches — **no reference, no canonical copy kept** (distinct from boilerplate) (§9.6) |
+| **Glossary / acronym lists** | **promote to one shared corpus-level glossary** | `discover` mines terms → `gold/glossary.md` (+ index.db terms); de-duplicate per-doc copies |
 | **TOC, anchor/alias map, link maps** | derived — never store in body | regenerated TOC; `refs.yaml` sidecar / index.db |
 | **Code / routine listings, MUMPS snippets** | keep in body for reading; **derive** to entity tables for query | `body.md` + `index.db` entities |
 | **Prose, figures+captions, small tables** | keep in body — the irreducible human document | `body.md` |
 
 The split detectors already exist in v1 (`boilerplate_pure`, `tables_pure`, `lexicon`) and
-are the strongest reuse candidates (§16).
+are the strongest reuse candidates (§16) — in v2 they become the **miners inside the `discover`
+stage** (§9.6), feeding the curated registries rather than running as one-off scripts.
 
 ### 6.5 The "don't over-decompose" guardrail
 
@@ -402,9 +428,11 @@ lineage lives in the sidecars — losing nothing, deferring only the mechanical 
 
 **Declutter (now, independent of replay).** `normalize` strips the manual version-control
 apparatus from the body — revision / patch-history tables, change-page markers, inline "(Patch
-NN)" provenance annotations — routing the structured facts to `history.yaml` (§6.4). What remains
-in `body.md` is the document, not its changelog. This immediate payoff does **not** wait on git
-replay.
+NN)" provenance annotations — routing the structured facts to `history.yaml` (§6.4). The *structure*
+(the table, the dates/patches) becomes lineage; the *descriptive filler around it* ("see the
+revision history below for a list of changes", "this document supersedes…") is meaningless dead text
+and is removed via `registries/phrases` (§9.6). What remains in `body.md` is the document, not its
+changelog. This immediate payoff does **not** wait on git replay.
 
 **Acquisition is per-version-group.** `crawl`/`fetch`/`convert`/`normalize` process *every* version
 of a document, not only the latest — the historical bodies are exactly what capture (and any future
@@ -506,6 +534,43 @@ graph), then for each stage run `preflight → run → postflight`, stopping on 
 failure. `vdocs run [--from STAGE] [--to STAGE] [--only STAGE] [--force] [--verify]`.
 There is no hand-maintained ordered stage list anywhere.
 
+### 7.6 Scheduled & incremental runs (corpus currency)
+
+The pipeline is not a one-shot import; it runs on a schedule to keep the corpus current with VDL
+(goal §1; QA axis `fidelity-framework.md` §7.5). Two mechanisms, both already implied by the
+contract model, make this cheap and safe:
+
+**Change detection (the refresh trigger).** A scheduled `crawl` re-pulls the VDL catalog;
+`catalog` diffs it against the prior `catalog.enriched` + `raw/index.json` and classifies every
+logical document: **NEW / SUPERSEDED** (newer patch/version) **/ CHANGED-IN-PLACE** (same version,
+different bytes) **/ UNCHANGED / WITHDRAWN**. The drift signal is layered cheap→authoritative:
+catalog version+patch+date (pre-filter) → HTTP conditional GET (ETag/Last-Modified where VDL
+provides it) → **sha256 of the fetched bytes as ground truth** (VDL re-posts the same filename for
+new patches and rarely sends reliable validators, so the content hash — already in the CAS — is the
+dependable signal; metadata only narrows what to hash). WITHDRAWN documents are **flagged, never
+deleted** (bronze is immutable; the anchor and its captured history stay).
+
+**Incremental propagation (process only what changed).** This needs *no new machinery* — it is the
+fingerprint model (§7.3) scoped per document. A changed catalog entry changes that document's
+`fetch` input fingerprint, so `SKIP_IF_UNCHANGED` re-runs fetch→convert→enrich→normalize→…→index
+for **that document's scope only**; everything unchanged is skipped. An incremental refresh costs
+work proportional to *what VDL changed*, not to corpus size.
+
+**Version-group convergence.** A SUPERSEDED document is, by definition, a new member of its version
+group (§6.6): re-processing makes it the new latest, updates the **anchor document**, retains the
+prior body, and appends one `history.yaml` entry. Drift detection is thus the same machine that
+feeds the git-native version rollup — *always-current corpus* and *complete patch lineage* are two
+outputs of one loop.
+
+**Currency as QA.** The detection pass emits each document's currency state
+(CURRENT/STALE/UNCHECKED/WITHDRAWN) and feeds the **currency axis** of the fidelity framework
+(§7.5 there), which gates the corpus-level *"current"* claim. Re-processed documents are re-scored
+by the `fidelity` stage automatically, so fidelity and currency stay jointly maintained.
+
+**Invocation.** `vdocs refresh` (crawl-diff → enqueue changed scopes → `run` over them),
+schedulable via cron / systemd-timer; `vdocs run` remains the full build. Both drive the identical
+`preflight → run → postflight` path — `refresh` only narrows the scope set.
+
 ---
 
 ## 8. The pipeline — stages and contracts
@@ -519,8 +584,9 @@ from it.
 | 🥉 | **catalog** | `catalog.raw` | `catalog.enriched` (patch identity, doc labels, app/section, search aliases) | SKIP_IF_UNCHANGED |
 | 🥉 | **fetch** | `catalog.enriched` | `raw` (CAS docx/pdf), `raw/index.json` | SKIP_IF_UNCHANGED |
 | 🥈 | **convert** | `raw`, `raw/index.json` | `text@converted`, `assets` (CAS) | SKIP_IF_UNCHANGED |
+| 🥈 | **discover** | `text@converted` (corpus-global) | `reports/patterns` (candidate boilerplate / `(doc_type, era)` templates / dead phrases / glossary terms / structural patterns + evidence + proposed disposition) → proposes `registries/` updates (§9.6) | SKIP_IF_UNCHANGED |
 | 🥈 | **enrich** | `text@converted`, `catalog.enriched` | `text@enriched` (identity FM baked), `index.db:doc_meta_staged` | SKIP_IF_UNCHANGED |
-| 🥈 | **normalize** | `text@enriched`, `raw` (for source_sha256) | `text@normalized` (+ `history.yaml`, `tables/*.csv`, `refs.yaml` sidecars; boilerplate/glossary refs) | SKIP_IF_UNCHANGED |
+| 🥈 | **normalize** | `text@enriched`, `raw` (for source_sha256), `registries` (curated patterns) | `text@normalized` (+ `history.yaml`, `tables/*.csv`, `refs.yaml` sidecars; boilerplate referenced, template-scaffold stripped + `template_id` stamped, dead phrases deleted, glossary single-sourced) | SKIP_IF_UNCHANGED |
 | 🥇 | **consolidate** | `text@normalized`, `assets` | `consolidated` (version groups — one anchor document per group; ordered `history.yaml` lineage + retained prior bodies captured as travel-with sidecars; `is_latest` flagged — the captured replay source, §6.6) | SKIP_IF_UNCHANGED |
 | 🥇 | **index** | `text@normalized`, `consolidated` (grouping) | `index.db` (documents, doc_sections+FTS5, entities, quality, is_latest, views; **stable IDs**) | SKIP_IF_UNCHANGED |
 | 🥇 | **relate** | `index.db` (documents, entities, sections) | `index.db:relations` (doc↔entity, doc↔doc xref, entity↔entity — the knowledge graph) | SKIP_IF_UNCHANGED |
@@ -534,10 +600,27 @@ from it.
 Notes:
 - **`catalog`** is the promoted, first-class home of v1's hidden `enrich_inventory.py`
   logic. It is a normal stage with a contract — never a hand-run script.
+- **`crawl` + `catalog` are the drift detector.** On a scheduled re-run, `catalog` diffs the fresh
+  crawl against the prior catalog + `raw/index.json` and marks each document NEW / SUPERSEDED /
+  CHANGED-IN-PLACE / UNCHANGED / WITHDRAWN (content-hash authoritative). Only NEW/SUPERSEDED/CHANGED
+  scopes propagate downstream (§7.6) — this is what keeps the corpus current without a full
+  rebuild, and it feeds the fidelity framework's **currency axis** (`fidelity-framework.md` §7.5).
 - **`normalize` runs per-document before `consolidate`** (cleaner: normalization is a
   per-doc transform; consolidation is grouping). v1 had this backwards. `normalize` also
   **strips the manual version-control apparatus** (revision tables, change pages, "(Patch NN)"
   annotations) from bodies — git carries that lineage instead (§6.6).
+- **`discover` is inductive and corpus-global; `normalize` is deterministic and per-document.**
+  `discover` only *proposes* candidate patterns (boilerplate, per-era templates, glossary,
+  structural conventions) to `reports/patterns`; it mutates no corpus content. A **curation gate**
+  (auto-approve on high-confidence/high-frequency, else human PR) promotes candidates into the
+  version-controlled `registries/`. `normalize` then subtracts the *curated* patterns as a pure
+  function of `(document, registry)` — referencing canonical boilerplate, stripping template
+  scaffold, single-sourcing the glossary. This induction/application split (§9.6) is what keeps
+  the DAG pure while leaving the pattern set adaptive — patterns are data, not code (tenet #13).
+- **`registries/` is a curated input, not a stage output.** It is version-controlled repo config,
+  produced by `discover` *proposals* + a curation decision; `normalize` `requires` it. Treat a
+  registry change like a contract-version bump for `normalize`: it invalidates and re-runs the
+  affected per-document scopes (§7.3 fingerprints).
 - **Acquisition is per-version-group, not per-latest-doc.** `crawl`/`fetch`/`convert`/
   `normalize` process *every* version of a document (initial release + all patches), because
   the historical bodies are what `push` replays into commit history. Latest-only acquisition
@@ -619,6 +702,120 @@ did this byte come from, and with what tool version?" for anything.
 - No `print()` in library code; the CLI layer is the only thing that writes to stdout for
   humans.
 
+### 9.6 Discovery, the pattern registries, and the adaptive loop
+
+The corpus is full of *repetition that carries no document-specific meaning*: legal boilerplate,
+"how to use this manual" pages, standard headers/footers, and — most importantly — the **per-era
+document templates** every manual was poured into (different skeletons in the 1990s, 2000s, 2010s).
+In a modern GitHub corpus this is pure noise; it must be **identified, subtracted, and replaced by a
+reference** so the reader sees document content, not decades of template furniture. But *which*
+blocks are boilerplate and *what* the era-templates are is **not known a priori** — it must be
+**discovered from the corpus**, and it changes as the corpus grows. Hard-coding a list of patterns
+in a transform would make the pipeline brittle and un-adaptive — the exact thing to avoid before we
+freeze the stages (tenet #13).
+
+> Disambiguation: this is **pattern discovery** (mining recurring document patterns to subtract).
+> It is unrelated to the **machine-discovery descriptor** `discovery.json` (§14), which advertises
+> the corpus *to agents*. Different concerns, deliberately different homes (tenet #5, no collisions).
+
+**The governing split: induction vs. application.** Discovery is corpus-global, statistical, and
+*adaptive*; the rest of the pipeline is per-document, pure, and *deterministic*. We keep them
+strictly apart and connect them through a single declared artifact:
+
+```
+   ┌─ INDUCTIVE (corpus-global, adaptive) ─┐        ┌─ DETERMINISTIC (per-doc, pure) ─┐
+   discover ─► candidate patterns ─► CURATE ─► registries/ ─► normalize subtracts & references
+   (mine)      (reports/patterns/)   (gate)    (the seam)     (pure fn of doc × registry)
+        ▲                                                              │
+        └──────────────── re-discover on drift / new era ◄────────────┘   (self-healing loop)
+```
+
+Because the deterministic stages are **pure functions of `(document, registry)`**, the pipeline
+*itself* never changes when a new pattern appears — only the registry data does. That is the
+"self-healing adaptive mechanism in place before we hard-code the final pipeline": the seam exists
+from the spine, so no stage ever grows a baked-in pattern list.
+
+**The four steps of the loop:**
+
+1. **Discover (mine).** The `discover` stage (§8) reads `text@converted` corpus-wide and runs
+   pattern miners — near-duplicate block detection (shingling/MinHash) for boilerplate; structural
+   clustering (heading-scaffold + standard-page fingerprints, bucketed by publication date) to infer
+   per-era templates; term frequency for glossary candidates; structural-convention detection
+   (revision-table shape, TOC shape, callout styles). It emits **candidates with evidence**
+   (frequency, which docs, which era, a proposed disposition) to `reports/patterns/`. It changes
+   nothing in the corpus — it only *proposes*. The miners are the promoted v1 detectors
+   (`boilerplate_pure`, `lexicon`, `headings`), and the clustering/shingling primitives live **once**
+   in `kernel/discovery/` (tenet #4), shared by every discovery instance.
+2. **Curate (the gate).** Candidates are promoted into the curated registries under a **graded
+   policy**: high-confidence, high-frequency candidates (e.g. a block appearing verbatim in >N docs)
+   auto-approve; ambiguous ones land in a review queue and are approved by a human via a `registries/`
+   PR. Either way the decision is **recorded in version control** — the registry is reviewable,
+   diffable, and reversible, never a silent heuristic. Curation is where judgment lives; it is
+   deliberately *outside* the deterministic stages.
+3. **Apply (subtract by disposition).** `normalize` consumes the **curated** registries (inputs in
+   its contract, §8) and deterministically applies each registry's disposition (below): *reference*
+   boilerplate, *strip* template scaffold, *delete* dead phrases, *promote* glossary terms. Same
+   registries in → same output: idempotent and provable (§7.4).
+4. **Re-discover (adapt).** On drift (§7.6) or on schedule, `discover` re-runs. A newly-published
+   manual of a new doc-type or era surfaces a new template candidate; a new boilerplate block or
+   dead phrase surfaces as a candidate; curation extends the registries; affected documents
+   re-`normalize`. The corpus **heals toward less noise over time without a code change** — exactly
+   the adaptivity the freeze must not foreclose.
+
+**The registry family — what gets discovered, and its disposition.** The patterns are *not* one
+undifferentiated pile; they fall into distinct kinds, each with its own registry, key, and
+disposition. The disposition is the crux of the boilerplate-vs-template-vs-phrase distinction:
+
+| Registry | What it catches | Keyed by | Disposition |
+|---|---|---|---|
+| **`registries/boilerplate`** | meaningful-but-duplicated *blocks* — legal notices, "how to use this manual", standard headers/footers | block identity | **REFERENCE** — one canonical copy in `gold/_shared/`; bodies link to it (kept, not lost) |
+| **`registries/templates`** | the document *skeleton* each manual was poured into — discovered **per `doc_type` × era** (user-guide vs technical-guide vs install-guide vs security-guide; 1990s vs 2000s vs 2010s layouts) | `(doc_type, era)` | **STRIP + STAMP** — scaffold removed from the body; `template_id` recorded as provenance; one audit copy of each skeleton kept in the registry, never re-inlined |
+| **`registries/phrases`** | short recurring **meaningless** strings — paper-era residue ("This page intentionally left blank", "Continued on next page", "End of document", page furniture) **and** descriptive filler *associated with* revision history (e.g. "Refer to the revision history below for changes") | phrase / regex + context | **DELETE** — removed outright; *no* reference, *no* canonical copy (it has zero meaning in a GitHub corpus) |
+| **`registries/glossary`** | acronyms & defined terms | term | **PROMOTE + DEDUPE** to `gold/glossary.md` |
+| **`registries/converter-routing`** | which docs need Docling vs Pandoc (ADR-010) | doc identity / signature | **ROUTE** (consumed by `convert`, not `normalize`) |
+
+The three subtractive dispositions are deliberately different: **boilerplate is referenced** (the
+content matters, just shouldn't be copied N times), **a template is stripped with a provenance
+stamp** (the skeleton is structural noise but *which* template is an audit fact worth keeping once),
+and **a dead phrase is simply deleted** (it is pure paper-era residue with nothing worth keeping or
+referencing). Templates are keyed by **document type as well as era** because a user guide and a
+technical guide were built from different skeletons — each `(doc_type, era)` combination is its own
+discovered, registered template. Revision-history *structure* is handled as lineage (→ `history.yaml`,
+§6.6); the surrounding descriptive *phrases* are dead text and go to `registries/phrases`.
+
+**Two homes, deliberately distinct** (this answers "where do the templates/patterns live"):
+
+| What | Home | Nature |
+|---|---|---|
+| **Pattern registries** — the *rules*: the boilerplate blocks, the `(doc_type, era)` template signatures, the dead-phrase list, glossary terms; each with its disposition (reference / strip+stamp / delete / promote) and curation status | **repo** `registries/` (version-controlled config) | curated source of truth; changed by PR; consumed by `convert`/`normalize` |
+| **Candidate patterns** — discovery's *proposals* with evidence, pre-curation | lake `reports/patterns/` | derived, disposable, rebuildable by `discover` |
+| **Canonical shared content** — the *one* copy of each boilerplate block + the glossary that bodies reference | lake `gold/_shared/`, `gold/glossary.md` (published) | single-sourced content (tenet #1); part of the human corpus |
+| **Template skeletons** — one audit copy of each era-template (the subtracted scaffold) | `registries/templates` | provenance/audit only; never re-inlined into any body |
+
+**Discovery is cross-cutting, not a single stage.** The induction→curate→apply→re-discover loop
+recurs wherever the pipeline must *learn* something corpus-shaped rather than be told it:
+
+- **catalog** — discovers app/section structure and version-group keys from the crawled catalog.
+- **convert** — the Pandoc-vs-Docling routing (ADR-010) is a *discovered, evidence-driven* allowlist
+  (bare-marker-explosion detection), curated into a `registries/converter-routing`, **not** a
+  hand-edited constant as in v1.
+- **normalize** — the main instance: boilerplate / `(doc_type, era)` templates / dead phrases /
+  glossary / structural patterns (above).
+- **index / relate** — entity and cross-reference conventions (routine/global/RPC/file-number
+  shapes) are discovered detectors feeding the entity tables.
+
+All instances share `kernel/discovery/` and the same registry-as-seam discipline. None bakes its
+patterns into code.
+
+**Fidelity guard (so "subtract" never means "lose meaning").** Each disposition is auditable, not
+silent: *referenced* boilerplate is re-inlined before recall scoring (single-sourcing is not
+mis-scored as loss); *stripped* template scaffold is recorded by `template_id`; *deleted* dead
+phrases are matched against the curated `registries/phrases` so every removed string is attributable
+to an approved entry (no free-form deletion). The fidelity framework scores against the
+**dereferenced** document and excludes registered noise from the source-token baseline
+(`fidelity-framework.md` §4 + §5 C7), and bronze immutability keeps the untouched original as proof
+that nothing *meaningful* was removed.
+
 ---
 
 ## 10. Tooling decisions (ADRs)
@@ -636,13 +833,15 @@ Decided up front. Each: choice, why, and the credible alternative we rejected.
 | 007 | Logging | **structlog** | structured, context-rich, CI/TTY aware | stdlib logging only |
 | 008 | Testing | **pytest + Hypothesis**, TDD | property tests fit pure transforms; team TDD rule | example-only tests |
 | 009 | CLI | **Typer** | type-hint-driven, modern DX, auto-help; one command per stage + `run` | Click (v1; fine, but Typer is the greenfield upgrade) |
-| 010 | DOCX/PDF → markdown | **Pandoc default + Docling for an evidence-based allowlist** | v1's hardest-won lesson: Docling avoids the cross-ref bare-marker explosion for specific docs; keep it per-doc and evidence-driven | Docling-for-all (slower, heavier) · Pandoc-for-all (breaks on the allowlisted docs) |
+| 010 | DOCX/PDF → markdown | **Pandoc default + Docling for an evidence-based allowlist** (the allowlist is a *discovered, curated* `registries/converter-routing`, not a hand-edited constant — §9.6) | v1's hardest-won lesson: Docling avoids the cross-ref bare-marker explosion for specific docs; keep it per-doc and evidence-driven | Docling-for-all (slower, heavier) · Pandoc-for-all (breaks on the allowlisted docs) · hand-maintained `DOCLING_DOCS` constant (v1; drifts, un-adaptive) |
 | 011 | Markdown flavor / publish | **GFM**, docs-as-code, markdown-only in git, images materialized+gitignored | standard, GitHub-native, diff-friendly | committing images to git (bloat) |
 | 012 | Vector store | **sqlite-vec** (`vectors.db`) | keeps the zero-ops single-file ethos; embeds ANN in SQLite at our scale (~tens of thousands of chunks); same backup/versioning story as `index.db` | dedicated vector DB (Qdrant/LanceDB — ops overhead, unneeded) · pgvector (needs Postgres) |
 | 013 | Embedding model | **Pluggable provider, default a high-quality local model**; model id+version recorded in lineage and gates `vectors.db` | reproducible, offline, free; lineage makes re-embeds tracked; pluggable allows upgrades | hardcoded API embeddings (cost, network, non-reproducible) — kept as an opt-in provider |
 | 014 | Machine protocol | **MCP via the official MCP Python SDK** | the standard for agent ↔ data; native Resources/Tools/Prompts map onto the corpus; host-agnostic | bespoke REST only (a thin REST facade may still wrap the same engine, but MCP is the headline interface) |
 | 015 | Hybrid ranking | **Reciprocal Rank Fusion (RRF)** over semantic + lexical, with a structured pre-filter | parameter-light, robust, no score normalization; each mode independently callable | learned re-rankers (overkill now; revisit if quality demands) · single-mode retrieval (misses recall) |
 | 016 | Document version control | **Collapse each patch series to one anchor file and *capture* the full lineage (ordered `history.yaml` + retained prior bodies) in travel-with sidecars; defer mechanical git commit-replay to an opt-in later pass** (§6.6) | declutters bodies to current content *now* at low cost; preserves a *complete, self-contained* lineage so the truly GitHub-native `git log`/`blame`/`diff` history can be built later with zero re-acquisition; avoids spending a commit-per-patch of mechanical churn up front | replaying every patch *in this pass* (high overhead, little immediate payoff) · keeping per-version files (N near-duplicates, lost diffs) · leaving revision tables inline (VDL/v1 status quo — clutter, not computable) · discarding prior bodies (would make later replay impossible) |
+| 017 | Corpus currency / drift detection | **Scheduled crawl-diff with the content-hash (sha256) as the authoritative drift signal; incremental re-processing of only changed scopes; WITHDRAWN flagged, not deleted** (§7.6) | keeps the corpus always-current at cost proportional to upstream change, not corpus size; content-hash is reliable where VDL's filenames/validators are not; reuses the fingerprint model (no new engine); feeds the fidelity framework's currency axis | full rebuild every run (wasteful at ~3k docs) · trusting VDL Last-Modified/ETag alone (unreliable — silent re-posts under the same filename) · deleting withdrawn docs (breaks bronze immutability + anchor history) |
+| 018 | Pattern discovery & curation | **Mine recurring patterns inductively (`discover`) → curate into version-controlled declared `registries/` via a graded gate (auto-approve high-confidence, else human PR) → subtract deterministically in `normalize` by disposition** (§9.6); a *family* of registries with distinct dispositions — boilerplate=REFERENCE, template `(doc_type, era)`=STRIP+stamp, phrases=DELETE, glossary=PROMOTE; primitives shared in `kernel/discovery/` | "discovery is data, not code" (tenet #13): the pipeline adapts to a new doc-type template, boilerplate block, or dead phrase by a registry entry, not a code edit; the per-kind disposition keeps "reference vs strip vs delete" explicit and auditable; curation stays a reviewable git decision; keeps the DAG pure; self-healing on drift | hard-coded pattern/boilerplate lists in transforms (v1; brittle, un-adaptive) · one undifferentiated "noise" bucket (conflates content worth referencing with text worth deleting) · fully-automated subtraction with no curation (silent, unsafe) · fully-manual cataloguing (doesn't scale to ~3k docs × doc-types × eras) |
 
 ---
 
@@ -654,8 +853,9 @@ by the DAG or is a test fixture.** No dead packages.
 
 ```
 src/vdocs/
-  kernel/          # the single shared kernel (§9.2) — text, frontmatter, fingerprint, cas, lineage, db
-  models/          # Pydantic boundary types: Catalog, Document, Frontmatter, ArtifactContract, ...
+  kernel/          # the single shared kernel (§9.2) — text, frontmatter, fingerprint, cas, lineage, db, discovery
+                   #   discovery/ = shingling/MinHash + structural-fingerprint/clustering miners (§9.6), shared by all discover instances
+  models/          # Pydantic boundary types: Catalog, Document, Frontmatter, ArtifactContract, PatternRegistry, ...
   contracts/       # ArtifactContract definitions + the artifact registry (one place)
   orchestrator/    # generic DAG runner, stage_runs I/O, preflight/postflight engine
   stages/
@@ -663,8 +863,9 @@ src/vdocs/
     catalog/
     fetch/
     convert/
+    discover/      # inductive pattern mining → reports/patterns + registries/ proposals (§9.6)
     enrich/
-    normalize/     # F1–F10 filters as pure modules, sequenced by one orchestrator function
+    normalize/     # F1–F10 filters as pure modules; subtracts curated registries/ patterns
     consolidate/
     index/
     relate/        # knowledge-graph edge materialization → index.db:relations
@@ -674,6 +875,13 @@ src/vdocs/
     validate/
     push/
     analyze/
+registries/        # CURATED, version-controlled pattern catalog (§9.6) — consumed by stages, changed by PR.
+                   #   NOT code, NOT disposable lake data — declared, reviewable config. One file per kind:
+  boilerplate/     #   meaningful-but-duplicated blocks → REFERENCE (canonical copy in gold/_shared/)
+  templates/       #   document skeletons keyed by (doc_type, era) → STRIP + stamp template_id
+  phrases/         #   dead paper-era phrases + revision-history filler → DELETE (no copy, no reference)
+  glossary/        #   acronyms/terms → PROMOTE + dedupe to gold/glossary.md
+  converter-routing/  # Docling-vs-Pandoc allowlist (ADR-010) → ROUTE (consumed by convert)
   server/          # MCP server (read-only over gold) + hybrid-search engine — §14
     mcp.py         #   MCP Resources / Tools / Prompts
     search.py      #   hybrid retrieval (semantic + lexical + structured + graph) + RRF fusion
@@ -828,7 +1036,7 @@ nearly so, and already tested):
 | v1 source | Reuse as | Notes |
 |---|---|---|
 | `normalize/*_pure.py` (F1–F10 filters) | `stages/normalize/` pure modules | the genuinely good part of v1; clean pure/IO split already |
-| `survey/stats.py`, `analyze/headings.py`, `analyze/lexicon.py`, `analyze/diff.py` | `stages/analyze/` | pure analysis; boilerplate/glossary detection feeds §6.4 splits |
+| `survey/stats.py`, `analyze/headings.py`, `analyze/lexicon.py`, `analyze/diff.py` | `stages/analyze/` (pure diagnostics) **and** `stages/discover/` + `kernel/discovery/` (the boilerplate/glossary/structure miners) | the boilerplate/glossary/heading detectors become the `discover` miners feeding the curated registries (§9.6); the rest stays diagnostic, off the critical path |
 | `classify/rules.py` | `stages/catalog/` or `convert/` | doc-type classification (was wrongly marked "inactive" in v1) |
 | `validate/frontmatter.py` + JSON schema | `stages/validate/` + `kernel/frontmatter/` | the hard gate; the best safety pattern in v1 |
 | `crawl/parser.py`, `fetch/strategy.py` | `stages/crawl,fetch/` pure parts | VDL HTML parsing + URL derivation logic |
@@ -850,8 +1058,12 @@ Each phase ends with a runnable, tested increment. Build the spine before the st
    frontmatter/fingerprint/CAS each), Pydantic config. A no-op two-stage DAG proves
    preflight→run→postflight + completion records + skip/force end-to-end.
 2. **Bronze:** crawl → catalog → fetch, with the CAS raw store and lineage.
-3. **Silver:** convert (Pandoc+Docling) → enrich (identity FM + staged meta) → normalize
-   (F1–F10 + bundle sidecars: history, tables, refs; boilerplate/glossary single-sourcing).
+3. **Silver:** convert (Pandoc+Docling) → **discover** (mine boilerplate / per-era template /
+   glossary / structure candidates → curate into `registries/`) → enrich (identity FM + staged
+   meta) → normalize (F1–F10 + bundle sidecars: history, tables, refs; *subtracts the curated
+   patterns*, single-sources boilerplate/glossary). **Build the discover→registry seam before
+   `normalize` so no pattern is ever hard-coded** — the adaptive mechanism must exist before the
+   stages freeze (§9.6, tenet #13).
 4. **Gold derive:** consolidate → index (sections+FTS5+entities+quality, **stable IDs**) →
    **relate** (knowledge graph) → manifest (+ `discovery.json`).
 5. **Gold deliver (humans):** publish (markdown-only + materialized assets) → validate (hard
@@ -864,6 +1076,8 @@ Each phase ends with a runnable, tested increment. Build the spine before the st
    trees, the per-stage `docs/stages/` reference generated from contracts, and the opt-in
    `push --replay-history` that builds git commit history from the captured `history.yaml`
    sidecars + retained prior bodies (§6.6) — the deferred git-native version-control payoff.
+   Also `vdocs refresh` — the scheduled crawl-diff + incremental re-processing loop that keeps the
+   corpus current (§7.6) and refreshes the fidelity/currency verdicts (fidelity-framework §7.5).
 
 Steps 1–2 already deliver the thing v1 never had: a real orchestrated pipeline with
 contracts. Everything after is filling in stages against a spine that already enforces
@@ -901,6 +1115,34 @@ idempotency, gating, and lineage.
   an ordered sequence of git commits against its anchor file, built **from the captured
   `history.yaml` + retained prior bodies** (§6.6). Not run in the default pipeline; `push
   --replay-history` performs it.
+- **Drift detection / refresh** — the scheduled crawl-diff that classifies each upstream document
+  NEW / SUPERSEDED / CHANGED-IN-PLACE / UNCHANGED / WITHDRAWN (content-hash authoritative) and
+  enqueues only the changed scopes for incremental re-processing (§7.6). `vdocs refresh`.
+- **Currency** — whether the corpus is still current with the live VDL upstream (vs. merely
+  *faithful* to a now-possibly-stale source); a corpus-level QA axis (fidelity-framework §7.5),
+  distinct from per-document migration fidelity.
+- **Pattern discovery** — the inductive, corpus-global mining of recurring patterns (boilerplate,
+  per-era templates, glossary terms, structural conventions) by the `discover` stage; *proposes*
+  candidates, mutates nothing (§9.6). Distinct from the §14 machine-discovery descriptor.
+- **Pattern registry** — the curated, version-controlled catalog (`registries/`) of approved
+  patterns + dispositions; the **seam** between inductive discovery and deterministic application,
+  and the home for the per-era document templates. Consumed by `normalize`; changed by PR.
+- **Curation gate** — the graded promotion of discovery candidates into the registry (auto-approve
+  high-confidence; else human PR); where judgment lives, kept outside the deterministic stages.
+- **Boilerplate** — meaningful-but-duplicated *content* (legal notices, "how to use this manual",
+  standard headers/footers); disposition **REFERENCE**: single-sourced once in `gold/_shared/`, bodies
+  link to it. In `registries/boilerplate` (§9.6).
+- **Template** — the document *skeleton* a manual was poured into, discovered and registered **per
+  `(doc_type, era)`** (a user guide, technical guide, and install guide have different skeletons, and
+  these differ by authoring decade); disposition **STRIP + stamp**: scaffold removed from the body,
+  `template_id` kept as provenance, one audit copy in `registries/templates`. Distinct from
+  boilerplate: a template is structural noise, not referenced content.
+- **Dead phrase / phrase-removal registry** — short recurring *meaningless* strings: paper-era
+  residue ("this page intentionally left blank", "continued on next page", page furniture) and
+  descriptive filler around revision history; disposition **DELETE** (no reference, no copy kept).
+  In `registries/phrases` (§9.6).
+- **Canonical shared content** — the single copy (tenet #1) of each boilerplate block + the corpus
+  glossary in `gold/_shared/` / `gold/glossary.md` that bodies reference instead of repeating.
 - **Stable ID** — deterministic, re-run-invariant identifier for a document/section/entity;
   the cross-reference contract shared by markdown anchors, the vector index, the graph, and
   MCP resource URIs.
