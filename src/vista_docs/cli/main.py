@@ -606,6 +606,10 @@ def publish(output: str, pkg: tuple[str, ...], force: bool, skip_validate: bool)
     inventory_csv = DATA_DIR / "inventory" / "vdl_inventory_enriched.csv"
     packages = list(pkg) if pkg else None
 
+    # Prefer normalized/ gold bodies when present (falls back to consolidated/).
+    normalized_dir = DATA_DIR / "normalized"
+    use_normalized = normalized_dir.exists()
+
     if out_dir.exists() and not force:
         raise click.ClickException(
             f"Output directory already exists: {out_dir}\nUse --force to overwrite."
@@ -613,6 +617,10 @@ def publish(output: str, pkg: tuple[str, ...], force: bool, skip_validate: bool)
 
     label = f" [pkg={', '.join(packages)}]" if packages else ""
     click.echo(f"Publishing{label} → {out_dir}")
+    if use_normalized:
+        click.echo(f"  Using normalized bodies from {normalized_dir}")
+    else:
+        click.echo("  No normalized/ tree — using consolidated bodies (run: vista-docs normalize)")
 
     results = run_publish(
         consolidated_dir=consolidated_dir,
@@ -622,12 +630,14 @@ def publish(output: str, pkg: tuple[str, ...], force: bool, skip_validate: bool)
         out_dir=out_dir,
         packages=packages,
         force=force,
+        normalized_dir=normalized_dir if use_normalized else None,
     )
     click.echo(
         f"Done: {results['packages']} packages, "
         f"{results['anchor_files']} anchor docs, "
         f"{results['patch_files']} patch docs, "
-        f"{results['image_dirs']} image dirs → {out_dir}"
+        f"{results['image_dirs']} image dirs, "
+        f"{results['normalized_bodies']} normalized bodies → {out_dir}"
     )
 
     if not skip_validate:

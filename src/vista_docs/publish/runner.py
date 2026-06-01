@@ -43,7 +43,13 @@ import subprocess
 from datetime import date
 from pathlib import Path
 
-from vista_docs.publish.builder import PublishEntry, _compact, build_publish_entries, load_app_info
+from vista_docs.publish.builder import (
+    PublishEntry,
+    _compact,
+    build_publish_entries,
+    load_app_info,
+    normalized_candidate,
+)
 
 log = logging.getLogger(__name__)
 
@@ -72,12 +78,19 @@ def run_publish(
     out_dir: Path,
     packages: list[str] | None = None,
     force: bool = False,
+    normalized_dir: Path | None = None,
 ) -> dict[str, int]:
     """
     Write the human-browsable publish/ tree.
 
+    When ``normalized_dir`` is given, each anchor doc's body is taken from its
+    normalized/ counterpart (clean gold markdown) when present, falling back to
+    the consolidated original otherwise. Image directories are always copied from
+    the consolidated tree (normalize does not duplicate images).
+
     Returns:
-        Dict with keys: packages, anchor_files, patch_files, image_dirs.
+        Dict with keys: packages, anchor_files, patch_files, image_dirs,
+        normalized_bodies.
     """
     if out_dir.exists() and force:
         if (out_dir / ".git").exists():
@@ -109,6 +122,7 @@ def run_publish(
     anchor_count = 0
     patch_count = 0
     img_dir_count = 0
+    normalized_count = 0
     pkg_seen: set[str] = set()
     final_entries: list[PublishEntry] = []  # entries with collision-resolved paths
 
@@ -130,7 +144,12 @@ def run_publish(
         final_entries.append(entry)
 
         dest_abs.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(entry.src_md, dest_abs)
+        body_src = entry.src_md
+        cand = normalized_candidate(entry.src_md, consolidated_dir, normalized_dir)
+        if cand is not None and cand.exists():
+            body_src = cand
+            normalized_count += 1
+        shutil.copy2(body_src, dest_abs)
 
         # Track package (second component of dest_path)
         parts = entry.dest_path.parts
@@ -168,6 +187,7 @@ def run_publish(
         "anchor_files": anchor_count,
         "patch_files": patch_count,
         "image_dirs": img_dir_count,
+        "normalized_bodies": normalized_count,
     }
 
 

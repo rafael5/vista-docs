@@ -14,8 +14,28 @@ from vista_docs.publish.builder import (
     build_publish_entries,
     get_doc_label,
     load_app_info,
+    normalized_candidate,
     to_kebab,
 )
+
+
+class TestNormalizedCandidate:
+    def test_anchor_doc_maps_into_normalized_tree(self):
+        cons = Path("/data/consolidated")
+        norm = Path("/data/normalized")
+        src = cons / "cprs/um/x.md"
+        assert normalized_candidate(src, cons, norm) == norm / "cprs/um/x.md"
+
+    def test_none_when_no_normalized_dir(self):
+        cons = Path("/data/consolidated")
+        assert normalized_candidate(cons / "a/b.md", cons, None) is None
+
+    def test_none_for_patch_doc_outside_consolidated(self):
+        cons = Path("/data/consolidated")
+        norm = Path("/data/normalized")
+        src = Path("/data/md-img/cprs/patch.md")  # under md-img, not consolidated
+        assert normalized_candidate(src, cons, norm) is None
+
 
 # ---------------------------------------------------------------------------
 # to_kebab
@@ -180,6 +200,24 @@ class TestGetDocLabel:
 
     def test_case_insensitive_lookup(self):
         assert get_doc_label("tm") == get_doc_label("TM")
+
+    def test_uppercase_codes_match_canonical_yaml(self):
+        """Lock-step regression: every UPPERCASE inventory code in
+        publish/builder.DOC_LABELS must match data/doc_labels.yaml exactly.
+
+        Drift here would produce publish/ filenames that disagree with the
+        enriched-inventory CSV's doc_label values, which in turn produces
+        broken github_md_url mappings (assessment §3.5 / P3).
+        """
+        from vista_docs.config import CURATED_DATA_DIR
+        from vista_docs.enrich.doc_labels import load_doc_labels
+        from vista_docs.publish.builder import DOC_LABELS
+
+        canonical = load_doc_labels(CURATED_DATA_DIR / "doc_labels.yaml")
+        for code, expected in canonical.items():
+            assert DOC_LABELS.get(code) == expected, (
+                f"DOC_LABELS[{code!r}] = {DOC_LABELS.get(code)!r}, but canonical = {expected!r}"
+            )
 
 
 # ---------------------------------------------------------------------------

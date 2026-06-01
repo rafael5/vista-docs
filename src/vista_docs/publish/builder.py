@@ -47,44 +47,22 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from vista_docs.config import CURATED_DATA_DIR
+from vista_docs.enrich.doc_labels import load_doc_labels
+
 # ---------------------------------------------------------------------------
 # Canonical doc_code → human label
 # ---------------------------------------------------------------------------
+#
+# Upper-case inventory codes (e.g. RN, DIBR, UG) are loaded from the single
+# canonical source data/doc_labels.yaml — drift between this table and the
+# enriched inventory CSV would produce broken github_md_url mappings.
+#
+# Lower-case normalized names (installation-guide, technical-manual, ...) are
+# a separate vocabulary used by the consolidated/ corpus and the retired
+# migrate/ subsystem; they remain inline because they have no canonical YAML.
 
-DOC_LABELS: dict[str, str] = {
-    # Inventory codes (uppercase)
-    "AG": "Administrator's Guide",
-    "API": "API Manual",
-    "APX": "Appendix",
-    "CFG": "Configuration Guide",
-    "CRU": "Clinical Reminder Update",
-    "CVG": "Conversion Guide",
-    "DESC": "Description Document",
-    "DG": "Developer Guide",
-    "DIBR": "Deployment, Installation, Back-Out, and Rollback Guide",
-    "FAQ": "Frequently Asked Questions",
-    "FORM": "VBA Form",
-    "IG": "Installation Guide",
-    "IG-IMP": "Implementation Guide",
-    "INT": "Interface Specification",
-    "PDD": "Patch Description Document",
-    "POM": "Production Operations Manual",
-    "QRG": "Quick Reference Guide",
-    "REF": "Reference Guide",
-    "RN": "Release Notes",
-    "RS": "Requirements Specification",
-    "SG": "Security Guide",
-    "SG-SET": "Setup Guide",
-    "SM": "Site Manual",
-    "SUP": "Supplement",
-    "TG": "Technical Guide",
-    "TM": "Technical Manual",
-    "TRG": "Training Guide",
-    "UG": "User Guide",
-    "UM": "User Manual",
-    "VDD": "Version Description Document",
-    "WF": "Workflow Guide",
-    # Normalized pipeline names (lowercase with hyphens)
+_NORMALIZED_LABELS: dict[str, str] = {
     "installation-guide": "Installation Guide",
     "technical-manual": "Technical Manual",
     "user-manual": "User Manual",
@@ -96,6 +74,11 @@ DOC_LABELS: dict[str, str] = {
     "base-dev": "Developer Guide",
     "base-hl7": "HL7 Interface Guide",
     "unknown": "Document",
+}
+
+DOC_LABELS: dict[str, str] = {
+    **load_doc_labels(CURATED_DATA_DIR / "doc_labels.yaml"),
+    **_NORMALIZED_LABELS,
 }
 
 # Higher priority = preferred when two entries share the same (app, title)
@@ -258,6 +241,20 @@ class PublishEntry:
     src_image_dirs: list[Path] = field(default_factory=list)
     doc_label: str = ""
     is_patch: bool = False
+
+
+def normalized_candidate(
+    src_md: Path, consolidated_dir: Path, normalized_dir: Path | None
+) -> Path | None:
+    """Where a doc's normalized body *would* live, or ``None`` if it can't have one.
+
+    Pure path math (no filesystem access): only anchor docs whose ``src_md`` is
+    under ``consolidated_dir`` have a normalized mirror; patch docs (under md-img/)
+    return ``None``. The runner checks the returned path for existence.
+    """
+    if normalized_dir is None or not src_md.is_relative_to(consolidated_dir):
+        return None
+    return normalized_dir / src_md.relative_to(consolidated_dir)
 
 
 # ---------------------------------------------------------------------------

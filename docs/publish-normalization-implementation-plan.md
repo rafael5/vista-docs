@@ -62,7 +62,7 @@ extended rather than built.
 | **P6** | **Orchestration & classification** | §8, §12 | — | DONE | — | idempotent pipeline |
 | P6.1 | Document classifier A/B/C/D → `anchors_source`/`toc` | §8 | `classify_pure.py` | DONE | ✓ unit | drives census |
 | P6.2 | `normalize` runner (F1→…→F8) + idempotency | §10, §12 | `normalize_pure.py`, `runner.py` | DONE | ✓ unit | **deviation:** idempotency via `consolidated/`→`normalized/` regen (sibling tree), not an in-place `normalize_version` guard |
-| P6.3 | CLI `vista-docs normalize`; wire into `publish` | §3 | `cli/main.py` | WIP | (integ) | CLI done (stage 9.5); **publish not yet wired to read `normalized/`** |
+| P6.3 | CLI `vista-docs normalize`; wire into `publish` | §3 | `cli/main.py`, `publish/{runner,builder}.py` | DONE | ✓ unit | CLI done (stage 9.5); **publish consumes `normalized/` bodies** when present (per-doc fallback to consolidated; images still from consolidated; `normalized_candidate` pure+tested). Smoke: 10 CPRS bodies swapped, images intact |
 | **P7** | **Provenance & validation/CI** | §9, §11 | — | WIP | — | builds on guardrails session |
 | P7.1 | Provenance fields (`source_sha256`, `converter`, `normalized_at`, `normalize_version`) | §9 | runner + audit keys | DONE | ✓ unit | sha256 best-effort from `raw/` |
 | P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `lint_pure.py`, `index_pure.py`, `index_runner.py`, `validate/schema.py` | DONE | ✓ unit | noise + dead-anchor + sidecar-integrity + anchor-index emit + **FM JSON-schema** all DONE; `validate_normalized` aggregates all five into `survey/normalize_validation_flags.csv`, wired into the `normalize` CLI |
@@ -155,6 +155,24 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — P6.3 publish consumes normalized/ bodies
+Wired the normalize output into `publish` with a surgical, backward-compatible
+change:
+- `publish/builder.normalized_candidate(src_md, consolidated_dir, normalized_dir)`
+  — pure path math (unit-tested) for where a doc's normalized body would live;
+  returns `None` for patch docs (under md-img/, no normalized mirror).
+- `run_publish(..., normalized_dir=None)`: per anchor doc, copies the normalized
+  body when it exists, else the consolidated original. **Images are still copied
+  from the consolidated tree** (normalize doesn't duplicate images), so refs
+  resolve unchanged. Returns a new `normalized_bodies` count.
+- CLI `publish` auto-detects `DATA_DIR/normalized` and reports usage; with no
+  normalized tree it transparently falls back to consolidated bodies.
+
+Smoke (CPRS, `--pkg CPRS`): 10 normalized anchor bodies swapped in (all carry
+`normalize_version`), 59 patch docs fell back, 69 image dirs copied intact.
+TODO (P7.3 remainder): run the normalize hard gate over the publish output inside
+`_run_validation_gate`.
 
 ### 2026-05-31 — P7.3 hard validation gate (+ noise-linter consistency fix)
 Wired a hard gate into `vista-docs normalize`: after emitting the anchor index +
