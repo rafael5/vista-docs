@@ -483,6 +483,14 @@ body; every heading the TOC targets gets a **"↑ Back to Contents"** link (to t
 by `normalize` — navigation is bidirectional, TOC→section and section→TOC. Deterministic given the
 heading tree and the TOC anchor.
 
+**Depth (decided): template-governed, `H2–H3` default.** TOC depth is **data, not a constant**
+(tenet #13): each expected section in the template schema (§9.8) carries a `toc_level` flag, so the
+canonical `doc_type` schema declares exactly which heading levels are TOC-worthy (a dense technical
+guide may include `H4`; a short user guide may stop at `H2`). When no template matches, the fallback
+is **`H2–H3`** — `H1` is the document title (not a TOC entry), and `H2–H3` gives navigable structure
+without drowning in deep subsections. The chosen depth is recorded per document in `refs.yaml` so the
+TOC is reproducible and the validation knows what "complete" means.
+
 **Clean GFM.** The rendered TOC is a canonical nested bullet list of `[Title](#slug)` links, indented
 by heading level — generated, not hand-spaced — so the top-of-document TOC area is uniform across the
 entire corpus.
@@ -914,8 +922,9 @@ prose). The strippable furniture leaves the body; the schema stays, for secondar
 
 **What the schema captures (computable, queryable):**
 - the **ordered expected sections** — `{section_id, title-pattern, heading-level, required|optional,
-  repeatable, semantic_role}` (e.g. a user guide's *Orientation → Getting Started → Options →
-  Troubleshooting → Glossary*);
+  repeatable, semantic_role, toc_level}` (e.g. a user guide's *Orientation → Getting Started →
+  Options → Troubleshooting → Glossary*); `toc_level` declares whether the section appears in the
+  generated TOC (§6.7);
 - **expected markers** — a TOC whose entries resolve to real headings (and which drives old-gen
   heading recovery, §6.7), a revision-history block, a glossary/index, figure/table numbering, the
   anchor/numbering scheme;
@@ -925,6 +934,14 @@ prose). The strippable furniture leaves the body; the schema stays, for secondar
 actually were). Curation also defines a **canonical** `doc_type` schema — the normative "ideal"
 structure a modern user/technical/install guide *should* have. Compliance is measured against both,
 and the gap between them is itself information (corpus structural drift).
+
+**How the canonical schema is defined (decided): auto-derive from the modern era, human-approve.**
+`discover` *proposes* the canonical `doc_type` schema as the consensus of the **most recent era's**
+empirical templates (required sections = those present across that era's docs; ordering = the modern
+norm) — the latest era is the modernization target, so it is the right baseline. That proposal is
+**approved or edited by a human via a `registries/` PR** (the same graded curation gate as every other
+registry, §9.6 step 2) — so the normative schema is intentional, not merely "whatever the newest docs
+happened to do." Re-derivation on drift re-proposes; the approved canonical schema only changes by PR.
 
 **Template compliance — the QC opportunity (two distinct verdicts).** Because the schema is an
 expectation *independent of both the source and the converter*, it is a powerful oracle — it
@@ -987,8 +1004,8 @@ Decided up front. Each: choice, why, and the credible alternative we rejected.
 | 016 | Document version control | **Collapse each patch series to one anchor file and *capture* the full lineage (ordered `history.yaml` + retained prior bodies) in travel-with sidecars; defer mechanical git commit-replay to an opt-in later pass** (§6.6) | declutters bodies to current content *now* at low cost; preserves a *complete, self-contained* lineage so the truly GitHub-native `git log`/`blame`/`diff` history can be built later with zero re-acquisition; avoids spending a commit-per-patch of mechanical churn up front | replaying every patch *in this pass* (high overhead, little immediate payoff) · keeping per-version files (N near-duplicates, lost diffs) · leaving revision tables inline (VDL/v1 status quo — clutter, not computable) · discarding prior bodies (would make later replay impossible) |
 | 017 | Corpus currency / drift detection | **Scheduled crawl-diff with the content-hash (sha256) as the authoritative drift signal; incremental re-processing of only changed scopes; WITHDRAWN flagged, not deleted** (§7.6) | keeps the corpus always-current at cost proportional to upstream change, not corpus size; content-hash is reliable where VDL's filenames/validators are not; reuses the fingerprint model (no new engine); feeds the fidelity framework's currency axis | full rebuild every run (wasteful at ~3k docs) · trusting VDL Last-Modified/ETag alone (unreliable — silent re-posts under the same filename) · deleting withdrawn docs (breaks bronze immutability + anchor history) |
 | 018 | Pattern discovery & curation | **Mine recurring patterns inductively (`discover`) → curate into version-controlled declared `registries/` via a graded gate (auto-approve high-confidence, else human PR) → subtract deterministically in `normalize` by disposition** (§9.6); a *family* of registries with distinct dispositions — boilerplate=REFERENCE, template `(doc_type, era)`=STRIP+stamp, phrases=DELETE, glossary=PROMOTE; primitives shared in `kernel/discovery/` | "discovery is data, not code" (tenet #13): the pipeline adapts to a new doc-type template, boilerplate block, or dead phrase by a registry entry, not a code edit; the per-kind disposition keeps "reference vs strip vs delete" explicit and auditable; curation stays a reviewable git decision; keeps the DAG pure; self-healing on drift | hard-coded pattern/boilerplate lists in transforms (v1; brittle, un-adaptive) · one undifferentiated "noise" bucket (conflates content worth referencing with text worth deleting) · fully-automated subtraction with no curation (silent, unsafe) · fully-manual cataloguing (doesn't scale to ~3k docs × doc-types × eras) |
-| 019 | Templates as computable schemas + compliance oracle | **Retain each `(doc_type, era)` template as a computable structural schema (sections/markers/roles), curate a canonical per-`doc_type` schema, and run a template-compliance check** (§9.8) — the schema is an extraction-independent expectation used both to validate the pipeline and to grade source structural drift | turns templates from discarded noise into an *asset*: an independent structural oracle (a missing guaranteed section flags an extraction bug *without* the source); a corpus-modernization metric (era-template vs canonical); and a reuse source (consistent TOC/section-order/section-roles for `normalize`, `index`, MCP) | strip templates and discard them (loses a free, independent validation signal) · keep only a prose audit copy (not computable, not checkable) · treat all doc-types as one structure (false — guides genuinely differ) |
-| 020 | Table of contents | **Derive the TOC from the heading tree (never trust the extracted one); rewrite Word-bookmark anchors → GitHub-slug anchors; insert round-trip "back to Contents" links; recover old-gen headings from TOC text + template schema; hard-gate accuracy/resolvability/completeness/round-trip** (§6.7) | links correct-by-construction; uniform clean GFM; one approach serves late-gen (hyperlinked) and old-gen (reconstructed) alike; bidirectional navigation for humans + agents; the TOC is the highest-value structural signal | trusting the Word TOC (inherits broken links, page numbers, stale entries) · keeping `_Toc` bookmark anchors (don't resolve on GitHub) · TOC as static prose in the body (un-validated, drifts from headings) |
+| 019 | Templates as computable schemas + compliance oracle | **Retain each `(doc_type, era)` template as a computable structural schema (sections/markers/roles); the canonical per-`doc_type` schema is auto-derived from the most-recent-era consensus then human-approved by `registries/` PR; run a template-compliance check** (§9.8) — the schema is an extraction-independent expectation used both to validate the pipeline and to grade source structural drift | turns templates from discarded noise into an *asset*: an independent structural oracle (a missing guaranteed section flags an extraction bug *without* the source); a corpus-modernization metric (era-template vs canonical); and a reuse source (consistent TOC/section-order/section-roles for `normalize`, `index`, MCP) | strip templates and discard them (loses a free, independent validation signal) · keep only a prose audit copy (not computable, not checkable) · treat all doc-types as one structure (false — guides genuinely differ) |
+| 020 | Table of contents | **Derive the TOC from the heading tree (never trust the extracted one); rewrite Word-bookmark anchors → GitHub-slug anchors; insert round-trip "back to Contents" links; recover old-gen headings from TOC text + template schema; depth is template-governed (`toc_level` per section, `H2–H3` default); hard-gate accuracy/resolvability/completeness/round-trip** (§6.7) | links correct-by-construction; uniform clean GFM; one approach serves late-gen (hyperlinked) and old-gen (reconstructed) alike; bidirectional navigation for humans + agents; the TOC is the highest-value structural signal | trusting the Word TOC (inherits broken links, page numbers, stale entries) · keeping `_Toc` bookmark anchors (don't resolve on GitHub) · TOC as static prose in the body (un-validated, drifts from headings) |
 
 ---
 
