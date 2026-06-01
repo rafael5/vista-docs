@@ -5,11 +5,10 @@
 unwrap + F8 dead-link sweep), classifier, orchestrator, runner, CLI, CI lint
 helpers, and the P0.2 census all built & green (98% cov). See the tracking table
 for per-stage status and the Change Log / Lessons #13–14 for the corpus-shape
-findings. **Census:** 236 docs → A=122, B=108, C=4, D=2 (corpus healthier than
-the CPRS prototype implied). **Remaining:** PDF page-bridge I/O (P4.1, 4 docs),
-FM JSON-schema (P0.4), sidecar-integrity + anchor-index emit (P7.2), gate wiring
-(P7.3), publish wiring (P6.3), F8 bracketed-link-text robustness (P5.3), batch
-rollout (P8).
+findings. **Census:** 236 docs → A=122, B=108, C=4, D=2. **The full corpus now validates
+`hard=0`** through the publish/push gate (P0–P7 done; P6.3/P7.3 wired). **Remaining:**
+PDF page-bridge I/O (P4.1, 4 docs), the P8 rollout (prototype review → lock
+`normalize_version 1.0` → batch publish-push), and docs/skills (P9).
 **Home:** new `src/vista_docs/normalize/` package; wired before `publish`.
 **Conventions:** TDD hard rule (failing test first), pure/IO split, `.venv/bin/`
 tools, `make check` (95% cov) before every commit, frontmatter writes route
@@ -45,7 +44,7 @@ extended rather than built.
 | **P2** | **Structure recovery (F3, F4, F6)** | §6 | — | DONE | — | + F3a unwrap added (Lesson #13) |
 | P2.1 | F3 heading inference/promotion + F3a unwrap dead `[[…](#_Toc)]` nav wrapping | F3 | `heading_infer_pure.py`, `delink_pure.py` | DONE | ✓ unit | F3a recovers text + kills dead anchors; real headings often lost upstream |
 | P2.2 | F4 anchor assignment: GitHub slug algo + `anchor_aliases` | F4 | `anchors_pure.py` | DONE | ✓ unit | alias map (+F8 rewrite) used instead of span-hoist; 122 docs carry Word anchors |
-| P2.3 | F6 TOC generation | F6 | `toc_pure.py` | DONE | ✓ unit | **deviation:** sources `extract_headings`, not the stage-6.5 chunk tree (reconcile later) |
+| P2.3 | F6 TOC generation (+ remove original pandoc TOC) | F6 | `toc_pure.py` | DONE | ✓ unit | generates a fresh TOC AND `remove_original_toc` drops the original (slug-resolution signal: a >=6-item link run with >=50% targets = real headings), sweeping its malformed/polluted entries. **Deviation:** sources `extract_headings`, not the stage-6.5 chunk tree |
 | **P3** | **Revision history (F5) + sidecars** | §6 F5, §7 | — | DONE | — | 10 docs have revision tables |
 | P3.1 | F5 parse revision `<table>`, drop PM/TW cols, structured records + `refs` | F5 | `revision_pure.py` | DONE | ✓ unit | +M/D/YY date handling; CPRS = 243 rows |
 | P3.2 | Sidecar writer (`*.history.yaml`) + frontmatter summary | §7, F5.4 | `io.py`/`runner.py` | DONE | (integ) | `revision_count/newest/oldest/sidecar` set |
@@ -155,6 +154,22 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — Original-TOC removal → whole corpus validates clean (unblocks P8)
+The one doc the gate blocked on (`psn`) had a malformed TOC entry — a heading
+slug fused with an image + paragraph, inside the *original* pandoc TOC that
+normalize was keeping. Per spec F6 ("prefer regenerating from headings; don't
+keep the original TOC"), added `toc_pure.remove_original_toc`: a contiguous run
+of >=6 list-item links where >=50% of targets resolve to real heading slugs is
+the document's TOC and is removed (slug-resolution signal, not position — the psn
+TOC sits *after* `# Revision History`). This sweeps up the block's malformed
+entries in one shot. Wired into F6 (after `_strip_existing_toc`, before
+re-extracting headings); idempotent (verified: psn drops 61 TOC items, regenerates
+a clean one, second pass == first).
+
+**Result: the full 235-doc corpus now validates `hard=0, total=0`** (noise=0,
+dead-anchor=0, sidecar=0, schema=0). The publish/push gate passes corpus-wide —
+P8 batch rollout is no longer blocked on a data defect.
 
 ### 2026-05-31 — P7.3 fold normalize gate into publish/push
 `_run_validation_gate` (shared by `publish`, `push`, and `validate`) now also

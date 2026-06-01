@@ -33,7 +33,7 @@ from vista_docs.normalize.revision_pure import (
     summarize_revisions,
 )
 from vista_docs.normalize.tables_pure import convert_tables
-from vista_docs.normalize.toc_pure import build_toc
+from vista_docs.normalize.toc_pure import build_toc, remove_original_toc
 
 _HEADING_LINE_RE = re.compile(r"^#{1,6}\s")
 _TOC_ITEM_RE = re.compile(r"^\s*- \[")
@@ -120,8 +120,11 @@ def normalize_body(
         body, _ = remove_revision_table(body)
 
     # F6 — TOC from the (post-removal) heading tree. Drop any prior generated
-    # TOC first so its ``## Contents`` heading is not re-listed on re-runs.
+    # TOC first so its ``## Contents`` heading is not re-listed on re-runs, then
+    # remove the original pandoc TOC (spec F6: regenerate uniform output) — this
+    # also sweeps up its malformed/polluted entries.
     body = _strip_existing_toc(body)
+    body, original_toc_removed = remove_original_toc(body)
     headings = extract_headings(body)
     toc_md = build_toc(headings)
     body = _place_toc(body, toc_md)
@@ -167,6 +170,7 @@ def normalize_body(
         aliases=aliases,
         stats={
             "boilerplate_removed": removed_boiler,
+            "original_toc_removed": original_toc_removed,
             "nav_links_unwrapped": delinked,
             "dead_links_swept": dead_swept,
             "headings_promoted": promoted,
