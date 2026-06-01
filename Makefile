@@ -1,5 +1,6 @@
 .PHONY: install test test-lf watch lint format mypy cov check push pull hooks \
-        crawl fetch ingest survey verify pipeline
+        crawl fetch ingest enrich sync survey headings \
+        consolidate manifest publish validate publish-push pipeline
 
 PYTHON := .venv/bin/python
 PYTEST  := .venv/bin/pytest
@@ -57,11 +58,33 @@ fetch:
 ingest:
 	$(VISTA) ingest
 
+enrich:
+	$(VISTA) enrich
+
+sync:
+	$(VISTA) sync
+
 survey:
 	$(VISTA) survey
 
-verify:
-	$(VISTA) verify
+headings:
+	$(VISTA) headings
+
+consolidate:
+	$(VISTA) consolidate
+
+manifest:
+	$(VISTA) manifest
+
+publish:
+	$(VISTA) publish
+
+validate:
+	$(VISTA) validate
+
+# corpus push to GitHub (distinct from `make push`, which is `check` + git push)
+publish-push:
+	$(VISTA) push
 
 pipeline:
 	$(VISTA) pipeline
