@@ -17,7 +17,10 @@ The pipeline runs in four broad phases:
    frontmatter, chunk documents into a section tree with full-text search, extract
    VistA entities (routines, globals, RPCs, codes), and compute quality/latest flags.
 4. **Deliver** — consolidate multi-version documents, build a provenance manifest,
-   write a human-browsable publish tree, validate it, and push the markdown to GitHub.
+   **normalize** the consolidated markdown into clean gold bodies (denoise, recover
+   structure, demote revision history to sidecars, generate link TOCs, stamp
+   provenance), write a human-browsable publish tree, validate it, and push the
+   markdown to GitHub.
 
 All output data lives in `~/data/vista-docs/` — never in the repo. Two SQLite stores
 hold state: `pipeline.db` (fetch/ingest tracking, stages 1–3) and `frontmatter.db`
@@ -63,8 +66,9 @@ flowchart TD
     subgraph DELIVER["Delivery (markdown only)"]
         CON["CONSOLIDATE<br/>group versions"]
         MAN["MANIFEST<br/>provenance index"]
+        NORM["NORMALIZE<br/>F1-F10 → gold + sidecars"]
         PUB["PUBLISH<br/>human tree + INDEX"]
-        VAL["VALIDATE<br/>hard gate"]
+        VAL["VALIDATE<br/>hard gate (FM + normalize)"]
         PUSH["PUSH<br/>git push"]
     end
 
@@ -82,6 +86,7 @@ flowchart TD
     S6 --> S65 --> S66 --> S67
 
     S5 --> CON --> MAN --> PUB --> VAL --> PUSH --> GH
+    CON -->|"consolidated/ (lossless)"| NORM -->|"normalized/ (gold) + sidecars"| PUB
 
     PL[("pipeline.db<br/>manifest")]:::db
     FM[("frontmatter.db<br/>documents + refs + FTS5")]:::db
@@ -115,8 +120,9 @@ flowchart TD
 | 6.7 | **APPLY QUALITY VIEWS** (`pipeline/apply_quality_views.py`) | Pure SQL: parse `patch_num_int`; mark `is_latest` per group_key; compute composite `quality_score` (0–100); create convenience views. | `frontmatter.db` (all prior tables) | `documents.{patch_num_int, is_latest, quality_score}`; views `v_doc_enriched`, `v_group_latest`, `v_app_latest` |
 | 8 | **CONSOLIDATE** (`vista-docs consolidate`) | Group multi-version docs by (app_code, doc_type, normalized title); merge into a master with prior versions appended as appendices + provenance frontmatter. | `md-img/**/*.md` | `consolidated/{app_code}/{doc_type}/{title}.md` (+ images); `consolidated/consolidation_summary.md` |
 | 9 | **MANIFEST** (`vista-docs manifest`) | Build the provenance index: map each source doc to its role (anchor/patch/plain) and its consolidated master, with SHA-256. | `md-img/**/*.md` (consolidation logic inline) | `migration/corpus-manifest.json` |
-| 10 | **PUBLISH** (`vista-docs publish`) | Write the human-browsable tree: anchor docs at `{section}/{pkg}/`, patches under `patches/`, images copied alongside; build top-level `INDEX.md`. | `consolidated/`, `md-img/`, `migration/corpus-manifest.json`, `inventory_enriched.csv` | `publish/{section}/{pkg}/*.md` + images; `publish/INDEX.md`; `.gitignore` (binary images) |
-| 10+ | **VALIDATE** (`vista-docs validate`) | Validate frontmatter across the publish tree; hard gate that blocks publish/push on failures. | `publish/` (optionally `md-img/`) | `survey/publish_validation_flags.csv`; non-zero exit on hard failure |
+| 9.5 | **NORMALIZE** (`vista-docs normalize`) | Convert the lossless `consolidated/` tree into clean gold markdown (F1 denoise, F2 header/footer strip, F3 heading inference + F3a unwrap dead nav-link wrapping, F4 GitHub-slug anchors + alias map, F5 demote revision table to a `*.history.yaml` sidecar + de-pollute `description`, F6 generate link TOC + drop the original pandoc TOC, F9 figure captions, F10 table policy, F8 link rewrite + dead-link sweep). Stamps provenance (`source_sha256`, `converter`, `normalized_at`, `normalize_version`); emits `survey/anchor_index.json`; idempotent + reversible. | `consolidated/**/*.md` (never mutated), `raw/` (for sha256) | `normalized/{app}/{doc_type}/{title}.md` + `*.history.yaml` sidecars; `survey/anchor_index.json`, `survey/normalize_validation_flags.csv` |
+| 10 | **PUBLISH** (`vista-docs publish`) | Write the human-browsable tree: anchor docs at `{section}/{pkg}/`, patches under `patches/`, images copied alongside; build top-level `INDEX.md`. **Prefers `normalized/` gold bodies** when present (per-doc fallback to `consolidated/`; images always from `consolidated/`). | `normalized/` (if present), `consolidated/`, `md-img/`, `migration/corpus-manifest.json`, `inventory_enriched.csv` | `publish/{section}/{pkg}/*.md` + images; `publish/INDEX.md`; `.gitignore` (binary images) |
+| 10+ | **VALIDATE** (`vista-docs validate`) | Validate frontmatter across the publish tree **and the normalize checks** (dead-anchor, noise, sidecar integrity, frontmatter JSON-schema) over `normalized/`; hard gate that blocks publish/push on failures. | `publish/` (optionally `md-img/`), `normalized/` | `survey/publish_validation_flags.csv`, `survey/normalize_validation_flags.csv`; non-zero exit on hard failure |
 | 11 | **PUSH** (`vista-docs push`) | Regenerate publish tree, then commit & push markdown-only to GitHub (images excluded via `.gitignore`). | `publish/` | Commit on `origin/main` → `git@github.com:vistadocs/vdl.git` |
 
 ---
