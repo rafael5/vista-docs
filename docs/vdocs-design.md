@@ -363,7 +363,7 @@ Beyond images and revision history (already split in v1), v2 adopts these splits
 | **Document template / scaffold** (the empty skeleton each doc was poured into — standard front/title pages, fixed scaffold sections, placeholder prose, layout furniture) | **subtract the furniture, *retain the schema*** — the literal scaffold is noise, but the *structure it encodes* (expected sections / TOC / markers) is a valuable computable asset | `discover` infers the template per `(doc_type, era)` by structural clustering (user guide ≠ technical guide ≠ install guide); the scaffold is *stripped* + `template_id` stamped, while the **structural schema is retained computably** in `registries/templates` for reuse and the template-compliance QC check (§9.8) |
 | **Dead phrases** (paper-era residue — "this page intentionally left blank", "continued on next page", "end of document", page furniture — and descriptive filler *around* revision history) | **delete outright** — meaningless legacy of paper documents; no purpose in a GitHub corpus | `discover` mines recurring meaningless strings → curated `registries/phrases`; `normalize` deletes matches — **no reference, no canonical copy kept** (distinct from boilerplate) (§9.6) |
 | **Glossary / acronym lists** | **promote to one shared corpus-level glossary** | `discover` mines terms → `gold/glossary.md` (+ index.db terms); de-duplicate per-doc copies |
-| **TOC, anchor/alias map, link maps** | derived — never store in body | regenerated TOC; `refs.yaml` sidecar / index.db |
+| **TOC, anchor/alias map, link maps** | derived — **regenerate from the heading tree; never trust the extracted TOC** | clean GFM TOC under `## Contents` + round-trip "back to Contents" links; GitHub-slug anchors; `(stable_id ↔ slug ↔ bookmark)` map in `refs.yaml`; hard-gate validated (§6.7) |
 | **Code / routine listings, MUMPS snippets** | keep in body for reading; **derive** to entity tables for query | `body.md` + `index.db` entities |
 | **Prose, figures+captions, small tables** | keep in body — the irreducible human document | `body.md` |
 
@@ -441,6 +441,58 @@ replay) preserve. Latest-only acquisition would discard the lineage this goal ex
 **Prerequisite.** Stable IDs (§5.5): the document ID is keyed on identity + version, but the anchor
 *file path* is keyed on the version-group key — so the living file's identity is invariant across
 patches while its captured lineage grows.
+
+### 6.7 Table of contents — derived navigation with validated round-trip
+
+The TOC is the **single most important navigational and semantic structure** in a manual — the map
+both a human and an agent use to reach a section. v2 treats it as a **first-class, derived, validated**
+artifact, never as trusted prose. Tenet #6 ("derive structure, don't shred the source") applied to
+navigation: **the authoritative TOC is generated from the actual heading tree, so every entry points
+to a real section by construction.**
+
+**Why derive, not extract.** The original Word TOC is unreliable across the corpus. *Late-generation*
+documents carry working hyperlinks (Word bookmarks `_Toc…`/`_Ref…`); *old-generation* documents have
+plain-text TOCs with page numbers (meaningless in markdown) and sometimes no real heading styles at
+all. Trusting the extracted TOC inherits broken links, stale entries, and page numbers. Regenerating
+from the heading tree sidesteps all of it — and reduces the whole problem to one question: *how
+reliably can we recover the heading tree?*
+
+**The heading tree is the source of truth; the original TOC is a signal.** Two roles for the
+extracted TOC:
+1. **Cross-check (fidelity oracle).** Compare original TOC entries to the derived heading tree. A
+   mismatch is either an extraction defect (a heading was dropped) or a source defect (the author's
+   TOC was already stale). Tied to the template schema (§9.8) and fidelity C2/C5.
+2. **Heading recovery (the old-generation heuristic).** When conversion yields flat text with no
+   heading levels, the TOC text is *evidence of the intended structure*. Recover headings by matching
+   TOC entry text against body paragraphs and promoting the matches to headings, assigning levels from
+   (a) TOC indentation, (b) section numbering depth (`1.2.3`), and (c) the **template schema's**
+   expected sections for the doc's `(doc_type, era)` (§9.8). Then regenerate the TOC from the
+   recovered tree. The template is what makes recovery robust where the document itself gives no
+   styling cues — leveraging exactly the structural prior the templates encode.
+
+**Anchors: GitHub-slug, not Word-bookmark.** Conversion emits Word-bookmark anchors
+(`[Intro](#_Toc1234)` targeting a hidden `_Toc1234` — v1's measured reality). `normalize` rewrites
+these to **GitHub-compatible heading slugs** (lowercase, spaces→hyphens, punctuation stripped, with
+GitHub's `-1`/`-2` duplicate-disambiguation in document order), so links resolve on GitHub with no
+explicit anchor tags. The `(stable_section_id ↔ github_slug ↔ original_bookmark)` map is recorded in
+the `refs.yaml` sidecar — the one place anchors live, shared by the TOC, cross-references, the
+published markdown, and the MCP resource URIs (§5.5).
+
+**Round-trip navigation.** The TOC is emitted under a stable `## Contents` heading at the top of the
+body; every heading the TOC targets gets a **"↑ Back to Contents"** link (to the TOC anchor) inserted
+by `normalize` — navigation is bidirectional, TOC→section and section→TOC. Deterministic given the
+heading tree and the TOC anchor.
+
+**Clean GFM.** The rendered TOC is a canonical nested bullet list of `[Title](#slug)` links, indented
+by heading level — generated, not hand-spaced — so the top-of-document TOC area is uniform across the
+entire corpus.
+
+**Validation (hard gate, `validate` + fidelity C5).** A document does not pass unless: every TOC entry
+resolves to a real heading (**zero** dead anchors); every in-scope heading appears in the TOC
+(**completeness**); every targeted heading carries a back-to-Contents link (**round-trip integrity**);
+and the TOC matches the heading tree (**accuracy**). Cheap, deterministic, and exactly the structural
+integrity that makes the corpus trustworthy for humans and computable for agents. A broken map is
+worse than an ugly one — so TOC failures block, they are not advisory.
 
 ---
 
@@ -586,7 +638,7 @@ from it.
 | 🥈 | **convert** | `raw`, `raw/index.json` | `text@converted`, `assets` (CAS) | SKIP_IF_UNCHANGED |
 | 🥈 | **discover** | `text@converted` (corpus-global) | `reports/patterns` (candidate boilerplate / `(doc_type, era)` templates / dead phrases / glossary terms / structural patterns + evidence + proposed disposition) → proposes `registries/` updates (§9.6) | SKIP_IF_UNCHANGED |
 | 🥈 | **enrich** | `text@converted`, `catalog.enriched` | `text@enriched` (identity FM baked), `index.db:doc_meta_staged` | SKIP_IF_UNCHANGED |
-| 🥈 | **normalize** | `text@enriched`, `raw` (for source_sha256), `registries` (curated patterns) | `text@normalized` (+ `history.yaml`, `tables/*.csv`, `refs.yaml` sidecars; boilerplate referenced, template-scaffold stripped + `template_id` stamped, dead phrases deleted, glossary single-sourced) | SKIP_IF_UNCHANGED |
+| 🥈 | **normalize** | `text@enriched`, `raw` (for source_sha256), `registries` (curated patterns) | `text@normalized` (+ `history.yaml`, `tables/*.csv`, `refs.yaml` sidecars; boilerplate referenced, template-scaffold stripped + `template_id` stamped, dead phrases deleted, glossary single-sourced; **TOC regenerated from headings + GitHub-slug anchors + round-trip back-links** §6.7) | SKIP_IF_UNCHANGED |
 | 🥇 | **consolidate** | `text@normalized`, `assets` | `consolidated` (version groups — one anchor document per group; ordered `history.yaml` lineage + retained prior bodies captured as travel-with sidecars; `is_latest` flagged — the captured replay source, §6.6) | SKIP_IF_UNCHANGED |
 | 🥇 | **index** | `text@normalized`, `consolidated` (grouping) | `index.db` (documents, doc_sections+FTS5, entities, quality, is_latest, views; **stable IDs**) | SKIP_IF_UNCHANGED |
 | 🥇 | **relate** | `index.db` (documents, entities, sections) | `index.db:relations` (doc↔entity, doc↔doc xref, entity↔entity — the knowledge graph) | SKIP_IF_UNCHANGED |
@@ -864,8 +916,9 @@ prose). The strippable furniture leaves the body; the schema stays, for secondar
 - the **ordered expected sections** — `{section_id, title-pattern, heading-level, required|optional,
   repeatable, semantic_role}` (e.g. a user guide's *Orientation → Getting Started → Options →
   Troubleshooting → Glossary*);
-- **expected markers** — a TOC whose entries resolve to real headings, a revision-history block, a
-  glossary/index, figure/table numbering, the anchor/numbering scheme;
+- **expected markers** — a TOC whose entries resolve to real headings (and which drives old-gen
+  heading recovery, §6.7), a revision-history block, a glossary/index, figure/table numbering, the
+  anchor/numbering scheme;
 - the **doc-type semantics** — what each section *means*, so downstream consumers can rely on it.
 
 **Two tiers.** `discover` learns the **empirical** template per `(doc_type, era)` (what those docs
@@ -935,6 +988,7 @@ Decided up front. Each: choice, why, and the credible alternative we rejected.
 | 017 | Corpus currency / drift detection | **Scheduled crawl-diff with the content-hash (sha256) as the authoritative drift signal; incremental re-processing of only changed scopes; WITHDRAWN flagged, not deleted** (§7.6) | keeps the corpus always-current at cost proportional to upstream change, not corpus size; content-hash is reliable where VDL's filenames/validators are not; reuses the fingerprint model (no new engine); feeds the fidelity framework's currency axis | full rebuild every run (wasteful at ~3k docs) · trusting VDL Last-Modified/ETag alone (unreliable — silent re-posts under the same filename) · deleting withdrawn docs (breaks bronze immutability + anchor history) |
 | 018 | Pattern discovery & curation | **Mine recurring patterns inductively (`discover`) → curate into version-controlled declared `registries/` via a graded gate (auto-approve high-confidence, else human PR) → subtract deterministically in `normalize` by disposition** (§9.6); a *family* of registries with distinct dispositions — boilerplate=REFERENCE, template `(doc_type, era)`=STRIP+stamp, phrases=DELETE, glossary=PROMOTE; primitives shared in `kernel/discovery/` | "discovery is data, not code" (tenet #13): the pipeline adapts to a new doc-type template, boilerplate block, or dead phrase by a registry entry, not a code edit; the per-kind disposition keeps "reference vs strip vs delete" explicit and auditable; curation stays a reviewable git decision; keeps the DAG pure; self-healing on drift | hard-coded pattern/boilerplate lists in transforms (v1; brittle, un-adaptive) · one undifferentiated "noise" bucket (conflates content worth referencing with text worth deleting) · fully-automated subtraction with no curation (silent, unsafe) · fully-manual cataloguing (doesn't scale to ~3k docs × doc-types × eras) |
 | 019 | Templates as computable schemas + compliance oracle | **Retain each `(doc_type, era)` template as a computable structural schema (sections/markers/roles), curate a canonical per-`doc_type` schema, and run a template-compliance check** (§9.8) — the schema is an extraction-independent expectation used both to validate the pipeline and to grade source structural drift | turns templates from discarded noise into an *asset*: an independent structural oracle (a missing guaranteed section flags an extraction bug *without* the source); a corpus-modernization metric (era-template vs canonical); and a reuse source (consistent TOC/section-order/section-roles for `normalize`, `index`, MCP) | strip templates and discard them (loses a free, independent validation signal) · keep only a prose audit copy (not computable, not checkable) · treat all doc-types as one structure (false — guides genuinely differ) |
+| 020 | Table of contents | **Derive the TOC from the heading tree (never trust the extracted one); rewrite Word-bookmark anchors → GitHub-slug anchors; insert round-trip "back to Contents" links; recover old-gen headings from TOC text + template schema; hard-gate accuracy/resolvability/completeness/round-trip** (§6.7) | links correct-by-construction; uniform clean GFM; one approach serves late-gen (hyperlinked) and old-gen (reconstructed) alike; bidirectional navigation for humans + agents; the TOC is the highest-value structural signal | trusting the Word TOC (inherits broken links, page numbers, stale entries) · keeping `_Toc` bookmark anchors (don't resolve on GitHub) · TOC as static prose in the body (un-validated, drifts from headings) |
 
 ---
 
@@ -1242,6 +1296,14 @@ idempotency, gating, and lineage.
   canonical `doc_type` schema* → grades source structural drift (a modernization signal, not a bug).
 - **Canonical `doc_type` template** — the curated normative "ideal" schema for a document type, the
   target every user/technical/install guide is measured against for compliance (§9.8).
+- **Table of contents (TOC)** — derived navigation **generated from the heading tree** (never the
+  trusted-extracted one), emitted as clean GFM under `## Contents` with GitHub-slug links + round-trip
+  back-links; hard-gate validated for accuracy/resolvability/completeness/round-trip (§6.7).
+- **Round-trip navigation** — bidirectional TOC↔section linking: TOC entries link to sections, and
+  every targeted section carries a "↑ Back to Contents" link (§6.7).
+- **Anchor map** — the `(stable_section_id ↔ github_slug ↔ original Word bookmark)` mapping in
+  `refs.yaml`; the single home for anchors, shared by the TOC, cross-refs, published markdown, and MCP
+  URIs (§6.7, §5.5).
 - **Dead phrase / phrase-removal registry** — short recurring *meaningless* strings: paper-era
   residue ("this page intentionally left blank", "continued on next page", page furniture) and
   descriptive filler around revision history; disposition **DELETE** (no reference, no copy kept).

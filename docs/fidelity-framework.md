@@ -123,7 +123,7 @@ targets** (§9), not arbitrary — they are confirmed/adjusted against the golde
 | C2 | **Structure** | heading tree preserved | heading-set recall + level accuracy + order (sequence similarity) | ≥ 0.90 | ≥ 0.97 |
 | C3 | **Tables** | the highest-risk content (data dictionaries) | table-count recall + per-table cell-text recall + row/col dimension match (incl. CSV sidecars) | ≥ 0.95 | ≥ 0.99 |
 | C4 | **Images/figures** | images and captions survive | image-count recall + caption recall + EMF/WMF→PNG success | ≥ 0.98 | 1.00 |
-| C5 | **Cross-refs & links** | references resolve | internal-ref count recall + **resolvability** (dead-anchor rate) + hyperlink recall | recall ≥ 0.90, dead-anchor ≤ 0.02 | ≥ 0.98, 0.00 |
+| C5 | **Cross-refs & links** | references resolve | internal-ref count recall + **resolvability** (dead-anchor rate) + hyperlink recall + **TOC integrity** (accuracy / completeness / round-trip) | recall ≥ 0.90, dead-anchor ≤ 0.02, **TOC dead-anchor = 0** | ≥ 0.98, 0.00 |
 | C6 | **Lists** | procedures/steps intact | list-item recall + nesting-depth preservation | ≥ 0.95 | ≥ 0.99 |
 | C7 | **Lossy-construct inventory** | constructs markdown can't natively hold | *inventory + disposition*, not a score (§13) | no `flagged-lost` | — |
 
@@ -162,6 +162,15 @@ targets** (§9), not arbitrary — they are confirmed/adjusted against the golde
   markdown links/anchors; **resolvability** = internal links pointing at a real anchor ÷ all
   internal links (the dead-anchor rate, tied to the stable-ID system). Zero dead anchors is the
   publish target.
+  - **TOC integrity (the highest-value navigation check).** Because the TOC is the primary
+    navigational *and* semantic structure (vdocs-design §6.7) and is *derived from the heading tree*,
+    it is scored explicitly: **accuracy** (TOC entries match the heading tree), **completeness**
+    (every in-scope heading is listed), **resolvability** (every entry links to a real heading —
+    **zero** dead anchors, a hard floor), and **round-trip** (every targeted heading carries a
+    back-to-Contents link). The *original* Word TOC is the cross-check, not the target: entries it
+    lists that are absent from `T` localize a dropped heading (an extraction defect), while entries
+    present in `T` but missing from the original TOC flag a stale source TOC. TOC failures are
+    **gate-blocking**, not advisory — a broken map is worse than an ugly one.
 - **C6 Lists.** Ordered/unordered/nested item counts and nesting depth.
 - **C7 Lossy constructs.** Not scored — *inventoried* (§13): each text box, embedded object,
   equation, SmartArt, form field, multi-column region is detected in S and assigned a
@@ -383,7 +392,8 @@ is itself a versioned, signed artifact.
                      "missing_required_sections": []},
     "C3_tables": {"count_recall": 1.0, "cell_recall": 0.991},
     "C4_images": {"recall": 1.0, "caption_recall": 0.95},
-    "C5_xref": {"recall": 0.98, "dead_anchor_rate": 0.0},
+    "C5_xref": {"recall": 0.98, "dead_anchor_rate": 0.0,
+                "toc": {"accuracy": 1.0, "completeness": 1.0, "dead_anchors": 0, "round_trip": 1.0}},
     "C6_lists": {"recall": 0.99},
     "C7_constructs": [{"type": "text_box", "count": 2, "disposition": "sidecar"}],
     "composite": 0.985
