@@ -22,11 +22,8 @@ DATA_DIR = Path(os.environ.get("DATA_DIR", Path.home() / "data" / "vista-docs"))
 INVENTORY_DIR = DATA_DIR / "inventory"
 STATE_DIR = DATA_DIR / "state"
 RAW_DIR = DATA_DIR / "raw"
-MARKDOWN_DIR = DATA_DIR / "markdown"
 MD_IMG_DIR = DATA_DIR / "md-img"
 SURVEY_DIR = DATA_DIR / "survey"
-GUIDES_DIR = DATA_DIR / "guides"
-SKILL_UPDATES_DIR = DATA_DIR / "skill-updates"
 
 # Curated lookup tables checked into the repo (not the runtime data store).
 # This is project-rooted data: package_master.yaml, doc_labels.yaml, etc.

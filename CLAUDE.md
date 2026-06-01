@@ -124,12 +124,14 @@ scripts in `scripts/`, or promote into `src/vista_docs/` with tests.
 ```
 ~/data/vista-docs/
   inventory/     — VDL catalog CSV/JSON (from `vista-docs crawl`)
-  state/         — pipeline.db SQLite (pipeline state)
-  raw/           — downloaded DOCX/PDF by namespace
-  markdown/      — converted docs by namespace
-  survey/        — corpus analysis outputs
-  guides/        — synthesised reference guides (hand-edited)
-  skill-updates/ — staged TSV exports for ~/claude/skills updates
+  state/         — pipeline.db + frontmatter.db SQLite (pipeline state)
+  raw/           — downloaded DOCX/PDF by namespace (from `vista-docs fetch`)
+  md-img/        — converted markdown + extracted images (from `vista-docs ingest`)
+  survey/        — corpus analysis outputs (from `vista-docs survey` / `headings`)
+  consolidated/  — master + addenda consolidation (from `vista-docs consolidate`)
+  normalized/    — normalized markdown bodies (from `vista-docs normalize`)
+  migration/     — corpus-manifest.json (from `vista-docs manifest`)
+  publish/       — human-browsable GitHub tree (from `vista-docs publish`)
 ```
 
 ## Dev workflow
