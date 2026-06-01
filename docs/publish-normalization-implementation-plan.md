@@ -75,7 +75,7 @@ extended rather than built.
 | P8.4 | Batch run + `validate` gate + per-domain spot audit + publish-push | §14.5 | corpus | TODO | gate | force-push `vistadocs/vdl` |
 | **P9** | **Docs & skills** | §15 | — | WIP | — | same-commit doc rule |
 | P9.1 | Update `src/vista_docs/README.md`, `pipeline/README.md`, `CLAUDE.md` stage list | §15 | docs | WIP | — | `src/…/README.md` DONE; `pipeline/README.md` correctly scoped to 6–6.7 (no change). **`CLAUDE.md` stage list deferred** — it has another session's uncommitted edits; don't entangle |
-| P9.2 | Update `docs/vdl-arch-overview.md` flow + `vdl-pipeline`/`va-docx-structure` skills + memory | §15 | docs/skills | WIP | — | arch-overview + memory + **`vdl-pipeline` skill (new Normalize Stage section + CLI list + flow)** DONE; **`va-docx-structure` skill TODO** (revision-table + page-anchor patterns) |
+| P9.2 | Update `docs/vdl-arch-overview.md` flow + `vdl-pipeline`/`va-docx-structure` skills + memory | §15 | docs/skills | DONE | — | arch-overview + memory + `vdl-pipeline` (Normalize Stage section) DONE. `va-docx-structure` skill **doesn't exist** — DOCX-structure notes live in the `vdl` skill, where the pandoc-output patterns (revision table, nav wrapping, original-TOC, anchor-def forms, A/B/C/D census) were added instead |
 
 ---
 
