@@ -157,6 +157,22 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
 
+### 2026-05-31 — P8 CPRS pilot (normalize + publish, local; gold-clean)
+Ran the rollout scoped to CPRS as a pilot. `vista-docs normalize --pkg CPRS
+--force`: 10 multi-version masters normalized, 4 history sidecars (552 revisions),
+gate `0 flags`. `vista-docs publish --pkg CPRS --output publish-pilot-cprs
+--force` (a review dir, NOT the push tree): 14 anchor + 59 patch docs + 69 image
+dirs; **10 anchor masters carry the gold body** (`normalize_version 1.0`,
+generated TOC, revision sidecar — e.g. `user-manual.md` rev=243, `technical-manual
+--gui-version.md` rev=194); the 4 single-version anchors + patches correctly fall
+back to consolidated/md-img. **Full gate passed: 73 docs clean, 0 hard failures**
+(frontmatter + normalize). Pilot output is at `~/data/vista-docs/publish-pilot-cprs/`.
+
+**Did NOT push.** A CPRS-scoped `publish-push` would force-replace the entire
+`vistadocs/vdl` remote with only CPRS, deleting the other ~136 packages. The push
+must be a **full-corpus** publish (CPRS gold + the rest) to keep the remote
+complete — pending go-ahead.
+
 ### 2026-05-31 — P4.1 (F7 PDF bridge) — verified NOT needed; won't build
 Before building PDF text-extraction I/O (and adding a `pypdf` dependency) for the
 4 Class-C docs, checked whether they actually need the page bridge. They don't:
