@@ -18,6 +18,60 @@ this document disagree, the document is the bug report.
 
 ---
 
+## Contents
+
+- [1. Purpose and scope](#1-purpose-and-scope)
+- [2. Design tenets](#2-design-tenets)
+- [3. What we are deliberately not repeating from v1](#3-what-we-are-deliberately-not-repeating-from-v1)
+- [4. Architecture at a glance — the medallion model](#4-architecture-at-a-glance--the-medallion-model)
+- [5. Storage model](#5-storage-model)
+  - [5.1 Two storage classes (the foundational split)](#51-two-storage-classes-the-foundational-split)
+  - [5.2 The content bundle (per-document unit)](#52-the-content-bundle-per-document-unit)
+  - [5.3 Layer → directory map](#53-layer--directory-map)
+  - [5.4 Why not shred the source into component files (DITA/S1000D)?](#54-why-not-shred-the-source-into-component-files-ditas1000d)
+  - [5.5 The derived stores (no naming collisions)](#55-the-derived-stores-no-naming-collisions)
+- [6. Content model and document decomposition](#6-content-model-and-document-decomposition)
+  - [6.1 The governing rule](#61-the-governing-rule)
+  - [6.2 Whole file as source; every machine view derived from it](#62-whole-file-as-source-every-machine-view-derived-from-it)
+  - [6.3 Frontmatter is split by lifecycle (not "sidecar vs baked-in")](#63-frontmatter-is-split-by-lifecycle-not-sidecar-vs-baked-in)
+  - [6.4 The decomposition decisions (the candidate table — all adopted)](#64-the-decomposition-decisions-the-candidate-table--all-adopted)
+  - [6.5 The "don't over-decompose" guardrail](#65-the-dont-over-decompose-guardrail)
+  - [6.6 Version lineage: one anchor document, patch history captured for later git replay](#66-version-lineage-one-anchor-document-patch-history-captured-for-later-git-replay)
+  - [6.7 Table of contents — derived navigation with validated round-trip](#67-table-of-contents--derived-navigation-with-validated-round-trip)
+- [7. The stage contract (orchestration core)](#7-the-stage-contract-orchestration-core)
+  - [7.1 The two core types](#71-the-two-core-types)
+  - [7.2 The completion record (the "done" signal)](#72-the-completion-record-the-done-signal)
+  - [7.3 Preflight / postflight algorithms](#73-preflight--postflight-algorithms)
+  - [7.4 Atomicity and idempotency](#74-atomicity-and-idempotency)
+  - [7.5 The orchestrator](#75-the-orchestrator)
+  - [7.6 Scheduled & incremental runs (corpus currency)](#76-scheduled--incremental-runs-corpus-currency)
+- [8. The pipeline — stages and contracts](#8-the-pipeline--stages-and-contracts)
+- [9. Cross-cutting concerns](#9-cross-cutting-concerns)
+  - [9.1 Typed configuration](#91-typed-configuration)
+  - [9.2 The shared kernel (anti-duplication — tenet #4)](#92-the-shared-kernel-anti-duplication--tenet-4)
+  - [9.3 Validation and schema gates](#93-validation-and-schema-gates)
+  - [9.4 Lineage and provenance](#94-lineage-and-provenance)
+  - [9.5 Observability and failure](#95-observability-and-failure)
+  - [9.6 Discovery, the pattern registries, and the adaptive loop](#96-discovery-the-pattern-registries-and-the-adaptive-loop)
+  - [9.7 Registry index (canonical catalog)](#97-registry-index-canonical-catalog)
+  - [9.8 Templates as computable structural schemas (validation oracle + compliance QC)](#98-templates-as-computable-structural-schemas-validation-oracle--compliance-qc)
+- [10. Tooling decisions (ADRs)](#10-tooling-decisions-adrs)
+- [11. Repository and package layout](#11-repository-and-package-layout)
+- [12. Testing strategy](#12-testing-strategy)
+- [13. Delivery — docs-as-code to GitHub](#13-delivery--docs-as-code-to-github)
+- [14. Delivery — the machine interface (MCP & semantic search)](#14-delivery--the-machine-interface-mcp--semantic-search)
+  - [14.1 What "structured, computable, semantic" means here](#141-what-structured-computable-semantic-means-here)
+  - [14.2 Hybrid ranking](#142-hybrid-ranking)
+  - [14.3 MCP surface](#143-mcp-surface)
+  - [14.4 Discovery descriptor (maximal discoverability)](#144-discovery-descriptor-maximal-discoverability)
+  - [14.5 Boundaries](#145-boundaries)
+- [15. The downstream API (separate repo, for context)](#15-the-downstream-api-separate-repo-for-context)
+- [16. Reuse from the v1 repo (reference-only)](#16-reuse-from-the-v1-repo-reference-only)
+- [17. Phased build plan](#17-phased-build-plan)
+- [18. Glossary](#18-glossary)
+
+---
+
 ## 1. Purpose and scope
 
 `vdocs` turns the **VA VistA Document Library (VDL)** — a sprawling website of
