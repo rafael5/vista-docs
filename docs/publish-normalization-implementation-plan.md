@@ -65,7 +65,7 @@ extended rather than built.
 | P6.3 | CLI `vista-docs normalize`; wire into `publish` | §3 | `cli/main.py` | WIP | (integ) | CLI done (stage 9.5); **publish not yet wired to read `normalized/`** |
 | **P7** | **Provenance & validation/CI** | §9, §11 | — | WIP | — | builds on guardrails session |
 | P7.1 | Provenance fields (`source_sha256`, `converter`, `normalized_at`, `normalize_version`) | §9 | runner + audit keys | DONE | ✓ unit | sha256 best-effort from `raw/` |
-| P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `lint_pure.py` | WIP | ✓ unit | noise + dead-anchor lint DONE; **sidecar-integrity, FM JSON-schema, anchor-index emit TODO** |
+| P7.2 | Extend validator: dead-anchor, noise linter, sidecar integrity, FM JSON-schema, anchor-index emit | §11 | `lint_pure.py`, `index_pure.py`, `index_runner.py` | WIP | ✓ unit | noise + dead-anchor + **sidecar-integrity + anchor-index emit DONE** (emitted to `survey/anchor_index.json`; `validate_normalized` flags CSV; both wired into the `normalize` CLI). **FM JSON-schema still TODO** |
 | P7.3 | Plug normalize checks into hard publish/push gate + corpus CI | §11 | `cli/main.py`, `.ci/` | TODO | integration | not yet wired into `_run_validation_gate` |
 | **P8** | **Rollout** | §14 | — | WIP | — | prototype done; batch pending |
 | P8.1 | Prototype CPRS GUI UM end-to-end | §14.1 | review artifact | DONE | manual | 2491 nav-links unwrapped, 0 dangling anchors, 27% smaller, idempotent (Change Log) |
@@ -155,6 +155,23 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — P7.2 anchor-index emit + sidecar integrity
+Built the remaining §11 validation pieces (except the FM JSON-schema):
+- `index_pure.py` (pure, TDD): `anchor_index_entry(doc, body, aliases)` →
+  `{doc, headings[{level,text,slug}], slugs, aliases}` and `build_anchor_index`
+  (the `doc → {headings,slugs,aliases}` map of §11.5, used by F8 cross-doc
+  resolution + the dead-anchor check).
+- `lint_pure.sidecar_violations` (pure, TDD): every `revision_sidecar` resolves
+  to an existing file and that sidecar's `document` back-reference matches (§11.4).
+- `index_runner.py` (I/O, omitted): `emit_anchor_index` → `survey/anchor_index.json`;
+  `validate_normalized` runs noise + dead-anchor + sidecar checks over
+  `normalized/`, writing `survey/normalize_validation_flags.csv`. Both wired into
+  the `vista-docs normalize` CLI, which now prints index size + a flags summary.
+
+End-to-end smoke (3 docs incl. CPRS): index emitted, sidecar back-refs resolve,
+**0 validation flags**. Still open in P7.2: FM JSON-schema (P0.4); P7.3 (plug
+these checks into the hard publish/push gate) remains TODO.
 
 ### 2026-05-31 — F8 sweep robustness (bracketed text, footnotes, nested links)
 Hardened `sweep_dead_links` against three real-corpus forms the census surfaced

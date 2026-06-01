@@ -66,6 +66,7 @@ omit = [
     "src/vista_docs/validate/runner.py",                # I/O layer — integration-tested only
     "src/vista_docs/normalize/runner.py",               # I/O layer — integration-tested only
     "src/vista_docs/normalize/io.py",                   # sidecar/file I/O — integration-tested only
+    "src/vista_docs/normalize/index_runner.py",         # anchor-index emit + validation I/O
     "src/vista_docs/normalize/pdf_reader.py",           # PDF text extraction I/O — integration only
     # Retired site-builder I/O runners — no longer invoked from CLI
     "src/vista_docs/migrate/changelog_runner.py",

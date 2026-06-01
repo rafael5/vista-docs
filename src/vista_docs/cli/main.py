@@ -422,7 +422,8 @@ def normalize(input_: str, output: str, pkg: str, force: bool) -> None:
     separate normalized/ tree, so consolidated/ is never mutated."""
     import pathlib
 
-    from vista_docs.config import DATA_DIR
+    from vista_docs.config import DATA_DIR, SURVEY_DIR
+    from vista_docs.normalize.index_runner import emit_anchor_index, validate_normalized
     from vista_docs.normalize.runner import run_normalize
 
     in_dir = pathlib.Path(input_) if input_ else DATA_DIR / "consolidated"
@@ -433,6 +434,15 @@ def normalize(input_: str, output: str, pkg: str, force: bool) -> None:
         f"Done: {stats.processed} processed, {stats.skipped} skipped, "
         f"{stats.sidecars_written} history sidecars "
         f"({stats.revisions_extracted} revisions)"
+    )
+
+    # Emit the corpus anchor index (§11.5) and run the §11 validation checks.
+    n_idx = emit_anchor_index(out_dir, SURVEY_DIR / "anchor_index.json")
+    rep = validate_normalized(out_dir, SURVEY_DIR / "normalize_validation_flags.csv")
+    click.echo(f"Anchor index: {n_idx} docs → {SURVEY_DIR / 'anchor_index.json'}")
+    click.echo(
+        f"Validation: {rep.total} flags across {rep.docs} docs "
+        f"(noise={rep.noise}, dead-anchor={rep.dead}, sidecar={rep.sidecar})"
     )
 
 

@@ -3,6 +3,7 @@
 from vista_docs.normalize.lint_pure import (
     dead_anchors,
     noise_violations,
+    sidecar_violations,
     valid_anchor_ids,
 )
 
@@ -50,6 +51,24 @@ def test_valid_anchor_ids_recognizes_any_element_id_and_pandoc():
 def test_footnote_links_not_flagged_dead():
     body = '<a href="#fn1" id="fnref1">1</a>\n<li id="fn1">note <a href="#fnref1">back</a></li>\n'
     assert dead_anchors(body) == []
+
+
+def test_sidecar_ok_when_present_and_backref_matches():
+    assert sidecar_violations("x.md", "x.history.yaml", {"x.history.yaml"}, "x.md") == []
+
+
+def test_sidecar_none_is_clean():
+    assert sidecar_violations("x.md", None, set()) == []
+
+
+def test_sidecar_missing_file():
+    v = sidecar_violations("x.md", "x.history.yaml", set(), "x.md")
+    assert v == ["missing_sidecar:x.history.yaml"]
+
+
+def test_sidecar_backref_mismatch():
+    v = sidecar_violations("x.md", "x.history.yaml", {"x.history.yaml"}, "other.md")
+    assert v == ["sidecar_backref_mismatch:other.md"]
 
 
 def test_dead_anchors_flags_unresolved_targets():

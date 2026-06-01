@@ -50,3 +50,23 @@ def valid_anchor_ids(body: str) -> set[str]:
 def dead_anchors(body: str) -> list[str]:
     """Referenced in-document anchors that resolve to no heading slug or id."""
     return find_dead_anchors(body, valid_anchor_ids(body))
+
+
+def sidecar_violations(
+    doc_name: str,
+    revision_sidecar: str | None,
+    existing_sidecars: set[str],
+    sidecar_document: str | None = None,
+) -> list[str]:
+    """Sidecar-integrity check (spec §11.4).
+
+    A doc's ``revision_sidecar`` must name an existing sidecar file, and that
+    sidecar's ``document`` back-reference must point back at the doc.
+    """
+    if not revision_sidecar:
+        return []
+    if revision_sidecar not in existing_sidecars:
+        return [f"missing_sidecar:{revision_sidecar}"]
+    if sidecar_document is not None and sidecar_document != doc_name:
+        return [f"sidecar_backref_mismatch:{sidecar_document}"]
+    return []
