@@ -74,7 +74,9 @@ The first three axes are **source-anchored** (`S` vs `T`) and yield the per-docu
 verdict (§8): all three must clear their gates. **Currency (§7.5) is a distinct, upstream-anchored
 axis** — it asks whether the faithfully-migrated document is also still the *latest*, and is
 enforced as a **corpus-temporal** gate, not by flipping a per-document verdict. "Faithful" and
-"current" are reported as two non-conflated claims.
+"current" are reported as two non-conflated claims. Retrieval quality over the *search* corpus
+(`index.db` + `vectors.db`) is a further, machine-facing measurement — distinct from any per-document
+migration axis — covered in §10.5.
 
 ---
 
@@ -362,6 +364,53 @@ Beyond per-document verdicts, the institution needs a *corpus* statement with co
   failures** — documents missing a section their own template guarantees — which is the pipeline-bug
   signal, not a source-drift signal. The first is a corpus-quality statement; the second is a build
   health metric.
+
+---
+
+## 10.5 Retrieval-quality measurement (search fidelity)
+
+The axes above measure *migration* fidelity (faithful `S`→`T`) and *currency*. They do **not** measure
+whether the machine interface actually returns the right thing — and condensing the corpus (anchor
+docs, dedup, boilerplate/phrase registries) is done largely *to improve retrieval*. That benefit must
+be **measured, not asserted** — the same discipline §9 applies to migration. Retrieval quality is a
+distinct, machine-facing axis over the **search corpus** (`index.db` + `vectors.db`), separate from
+the per-document migration verdict.
+
+**The layering it validates.** Search corpus ≠ evidence corpus (vdocs-design §14.6): the
+index/embeddings are curated and **anchor-only**; bronze + history is complete and immutable. This
+section measures the *former* (does search work) without touching the *latter* (provenance).
+Condensation should *raise* retrieval quality at *zero* fidelity cost — and we prove **both**, so the
+design's central bet (whole-source fidelity *and* condensed machine-discoverability) is verified on
+its machine half, not just its human half.
+
+**Golden query set.** A labeled set of representative queries — factual lookups, entity/RPC/file-number
+queries, cross-document questions, and **version-sensitive** questions — each with human-judged
+relevant sections (by stable ID), stratified across app, doc_type, and query kind and sized for a
+target confidence (as in §9). Inter-annotator agreement is recorded so the relevance labels are
+themselves trustworthy.
+
+**Metrics — per mode (semantic · lexical · hybrid-RRF), each measured independently:**
+- **precision@k / recall@k / nDCG / MRR** against the judged-relevant set.
+- **redundancy@k** — share of top-k that are near-duplicates of a higher-ranked hit; the direct
+  payoff of single-sourcing + anchor-only indexing (target ≈ 0).
+- **version-correctness** — share of hits that are `is_latest`; with anchor-only indexing this should
+  be ~100%, and any stale hit is a defect.
+- **answer-correctness** — for RAG-style use, whether the retrieved context supports the correct
+  answer (LLM-judged against a key, human-audited).
+
+**Ablation (the causal claim).** Run the golden set **with vs. without** condensation
+(boilerplate/phrase removal, anchor-only indexing). The delta quantifies the lift — turning
+"redundancy hurts retrieval" from a belief into a measured number with a confidence interval. Re-run
+on any change to chunking, the embedding model (its id+version gates `vectors.db`), or the registries.
+
+**Gate / rollup.** A standing retrieval-quality claim — e.g. *"hybrid nDCG@10 = 0.x (95% CI …);
+redundancy@10 ≤ y%; 100% of hits current"* — published alongside the migration and currency rollups
+(§10). A regression below threshold blocks release of the **search index** (the human corpus is gated
+separately, §8) — so the machine interface cannot silently degrade.
+
+**Why it belongs in this framework.** It shares the spine: deterministic, reproducible,
+human-calibrated, versioned with the toolchain — the same credibility engine (§9) applied to search
+instead of conversion.
 
 ---
 

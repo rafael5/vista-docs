@@ -65,6 +65,7 @@ this document disagree, the document is the bug report.
   - [14.3 MCP surface](#143-mcp-surface)
   - [14.4 Discovery descriptor (maximal discoverability)](#144-discovery-descriptor-maximal-discoverability)
   - [14.5 Boundaries](#145-boundaries)
+  - [14.6 Search-corpus design — what is indexed, and why it maximizes retrieval fidelity](#146-search-corpus-design--what-is-indexed-and-why-it-maximizes-retrieval-fidelity)
 - [15. The downstream API (separate repo, for context)](#15-the-downstream-api-separate-repo-for-context)
 - [16. Reuse from the v1 repo (reference-only)](#16-reuse-from-the-v1-repo-reference-only)
 - [17. Phased build plan](#17-phased-build-plan)
@@ -702,9 +703,9 @@ from it.
 | 🥈 | **enrich** | `text@converted`, `catalog.enriched` | `text@enriched` (identity FM baked), `index.db:doc_meta_staged` | SKIP_IF_UNCHANGED |
 | 🥈 | **normalize** | `text@enriched`, `raw` (for source_sha256), `registries` (curated patterns) | `text@normalized` (+ `history.yaml`, `tables/*.csv`, `refs.yaml` sidecars; boilerplate referenced, template-scaffold stripped + `template_id` stamped, dead phrases deleted, glossary single-sourced; **TOC regenerated from headings + GitHub-slug anchors + round-trip back-links** §6.7) | SKIP_IF_UNCHANGED |
 | 🥇 | **consolidate** | `text@normalized`, `assets` | `consolidated` (version groups — one anchor document per group; ordered `history.yaml` lineage + retained prior bodies captured as travel-with sidecars; `is_latest` flagged — the captured replay source, §6.6) | SKIP_IF_UNCHANGED |
-| 🥇 | **index** | `text@normalized`, `consolidated` (grouping) | `index.db` (documents, doc_sections+FTS5, entities, quality, is_latest, views; **stable IDs**) | SKIP_IF_UNCHANGED |
+| 🥇 | **index** | `text@normalized`, `consolidated` (grouping) | `index.db` (documents, doc_sections [all, with `is_latest`] **+ FTS5 over `is_latest` only — the search surface**, entities, quality, views; **stable IDs**) | SKIP_IF_UNCHANGED |
 | 🥇 | **relate** | `index.db` (documents, entities, sections) | `index.db:relations` (doc↔entity, doc↔doc xref, entity↔entity — the knowledge graph) | SKIP_IF_UNCHANGED |
-| 🥇 | **embed** | `index.db:doc_sections` | `vectors.db` (per-chunk embeddings + ANN index) | SKIP_IF_UNCHANGED |
+| 🥇 | **embed** | `index.db:doc_sections` (**`is_latest` only**) | `vectors.db` (per-chunk embeddings + ANN index over anchor/current sections; prior-version chunks excluded — §14.6) | SKIP_IF_UNCHANGED |
 | 🥇 | **manifest** | `consolidated`, `index.db`, `vectors.db`, `state.db` (lineage) | `corpus-manifest.json` + `discovery.json` | SKIP_IF_UNCHANGED |
 | 🥇 | **publish** | `corpus-manifest.json`, `text@normalized`, `consolidated`, `assets`, `catalog.enriched`, `glossary` | `publish` (markdown-only human tree + INDEX) | SKIP_IF_UNCHANGED |
 | 🥇 | **validate** | `publish`, `text@normalized`, `index.db`, `vectors.db` | (HARD GATE — schema + lineage + dead-anchor + ID/vector integrity; sets its own `ok`) | ALWAYS_RERUN |
@@ -748,6 +749,11 @@ Notes:
 - **`index` / `relate` / `embed` are the derived machine views** (atomic index, knowledge
   graph, semantic index). They are rebuildable and *not* on the human-publish critical path,
   so re-deriving them never blocks a docs push.
+- **The search corpus is anchor-only.** FTS5 and `vectors.db` cover `is_latest` sections only
+  (§14.6); prior-version bodies stay queryable via lineage/graph but never pollute the default vector
+  neighborhood. The dedup/condensation work (anchor docs §6.6, registries §9.6) exists largely to
+  keep this search surface clean — it is what maximizes retrieval fidelity (ADR-021), proven by
+  `fidelity-framework.md` §10.5.
 - **`embed` is idempotent on the embedding-model id+version** (carried in `contract_ver`): a
   model change invalidates `vectors.db` and forces a re-embed; unchanged model + unchanged
   chunks → skip. The model id+version is recorded in lineage.
@@ -1060,6 +1066,7 @@ Decided up front. Each: choice, why, and the credible alternative we rejected.
 | 018 | Pattern discovery & curation | **Mine recurring patterns inductively (`discover`) → curate into version-controlled declared `registries/` via a graded gate (auto-approve high-confidence, else human PR) → subtract deterministically in `normalize` by disposition** (§9.6); a *family* of registries with distinct dispositions — boilerplate=REFERENCE, template `(doc_type, era)`=STRIP+stamp, phrases=DELETE, glossary=PROMOTE; primitives shared in `kernel/discovery/` | "discovery is data, not code" (tenet #13): the pipeline adapts to a new doc-type template, boilerplate block, or dead phrase by a registry entry, not a code edit; the per-kind disposition keeps "reference vs strip vs delete" explicit and auditable; curation stays a reviewable git decision; keeps the DAG pure; self-healing on drift | hard-coded pattern/boilerplate lists in transforms (v1; brittle, un-adaptive) · one undifferentiated "noise" bucket (conflates content worth referencing with text worth deleting) · fully-automated subtraction with no curation (silent, unsafe) · fully-manual cataloguing (doesn't scale to ~3k docs × doc-types × eras) |
 | 019 | Templates as computable schemas + compliance oracle | **Retain each `(doc_type, era)` template as a computable structural schema (sections/markers/roles); the canonical per-`doc_type` schema is auto-derived from the most-recent-era consensus then human-approved by `registries/` PR; run a template-compliance check** (§9.8) — the schema is an extraction-independent expectation used both to validate the pipeline and to grade source structural drift | turns templates from discarded noise into an *asset*: an independent structural oracle (a missing guaranteed section flags an extraction bug *without* the source); a corpus-modernization metric (era-template vs canonical); and a reuse source (consistent TOC/section-order/section-roles for `normalize`, `index`, MCP) | strip templates and discard them (loses a free, independent validation signal) · keep only a prose audit copy (not computable, not checkable) · treat all doc-types as one structure (false — guides genuinely differ) |
 | 020 | Table of contents | **Derive the TOC from the heading tree (never trust the extracted one); rewrite Word-bookmark anchors → GitHub-slug anchors; insert round-trip "back to Contents" links; recover old-gen headings from TOC text + template schema; depth is template-governed (`toc_level` per section, `H2–H3` default); hard-gate accuracy/resolvability/completeness/round-trip** (§6.7) | links correct-by-construction; uniform clean GFM; one approach serves late-gen (hyperlinked) and old-gen (reconstructed) alike; bidirectional navigation for humans + agents; the TOC is the highest-value structural signal | trusting the Word TOC (inherits broken links, page numbers, stale entries) · keeping `_Toc` bookmark anchors (don't resolve on GitHub) · TOC as static prose in the body (un-validated, drifts from headings) |
+| 021 | Search corpus | **Index/embed the anchor (`is_latest`) bodies only; condensation (anchor docs, boilerplate/phrase registries) curates the search surface; prior versions are evidence — reachable via lineage/graph but excluded from the default vector + FTS index** (§14.6) | maximizes retrieval fidelity: sharper embeddings (no boilerplate dilution), de-duplicated neighbors (no near-dup crowding), latest-only correctness (no version confusion); *search corpus ≠ evidence corpus*, so quality and fidelity are maximized together | embedding all versions/boilerplate (near-dup crowding, stale hits, diluted vectors) · dropping prior versions entirely (loses provenance/fidelity) · query-time-only `is_latest` filter (stale chunks still distort the ANN neighborhood) |
 
 ---
 
@@ -1233,6 +1240,68 @@ MCP capability manifest the server advertises on connect.
 - **Not a stage.** It is a long-running service (`vdocs serve-mcp`), versioned with the
   derived-store `contract_ver` it expects; it refuses to start against an incompatible store.
 
+### 14.6 Search-corpus design — what is indexed, and why it maximizes retrieval fidelity
+
+Retrieval quality is not just a property of the embedding model — it is a property of *what you put
+in the index*. The condensation work (anchor docs §6.6; boilerplate/template/phrase registries §9.6)
+exists in large part to make the search corpus clean. This section states the resulting design
+explicitly: it is the rationale for maximal retrieval fidelity across **semantic, lexical, and
+hybrid** modes.
+
+**Search corpus ≠ evidence corpus — the layering that lets us maximize *both*.** Conflating these is
+the mistake to avoid:
+- the **evidence corpus** — bronze + retained prior-version bodies + history — is *complete and
+  immutable*; it is the source of *fidelity and provenance* (you can always prove what a document
+  said);
+- the **search corpus** — `index.db` sections + `vectors.db` embeddings — is *curated and condensed*;
+  it is the source of *retrieval quality*.
+
+We are never forced to trade one for the other: condensation maximizes search quality **precisely
+because** the evidence layer already preserves everything. Removing redundancy from what is
+*searchable* never removes it from what is *retained*.
+
+**Index the anchor (latest) content only.** `index` builds FTS5 and `embed` builds vectors over
+**`is_latest` sections only** — the anchor document's current body. Prior-version bodies are
+evidence, reachable on demand via lineage/graph (`list_versions`, `get_lineage`), but **excluded
+from the default vector neighborhood and the FTS index**. This is the single most important
+retrieval decision: without it, one query returns patch-3 and patch-12 of the same manual as
+competing near-duplicate hits and the agent gets conflicting, stale answers. A *query-time* filter is
+not enough — stale chunks left in the ANN index still distort the neighborhood; they must be out of
+the index (ADR-021).
+
+**Why removing redundant text improves retrieval — concretely.** Three distinct mechanisms, each
+countered by a specific part of the design:
+1. **Embedding dilution.** A chunk that mixes boilerplate with real content yields a vector blended
+   toward a generic centroid. Stripping boilerplate/phrases (§9.6) **sharpens** each chunk's vector
+   toward its actual topic. *(semantic mode)*
+2. **Near-duplicate crowding.** The same notice in hundreds of docs is hundreds of near-identical
+   chunks that evict diverse relevant results from top-k. Single-sourcing collapses them to **one**
+   retrievable canonical chunk — better diversity and effective recall. *(semantic + lexical)*
+3. **Version confusion.** Multiple patches of one document return as conflicting hits. Anchor-only
+   indexing returns the current truth. *(correctness, not just ranking)*
+
+**Context travels as metadata, not repeated prose.** A condensed chunk must still be
+self-interpretable (which system? which version? which doc-type?). That context rides as **structured
+metadata** — stable IDs, frontmatter, section-path, `app_code`/`doc_type`/version, and the section
+`semantic_role` from the template schema (§9.8) — *not* as boilerplate restated in every chunk. So we
+strip the repetition and keep the signal; the **structured pre-filter** (§14.2) then scopes recall
+*before* ranking, so semantic budget is never spent on out-of-scope or stale chunks.
+
+**Chunk on structure, not on bytes.** Because the heading tree, the clean TOC (§6.7), and section
+`semantic_role`s are reliable, chunks align to **meaningful units** (a whole "Options" section), not
+arbitrary windows. Good boundaries matter as much as dedup — a clean corpus chunked badly still
+retrieves badly.
+
+**Keep the canonical boilerplate indexed once.** Occasionally the boilerplate *is* the answer (a
+compliance/legal query). The single-sourced copy in `gold/_shared/` is indexed **once** — so it is
+findable, de-weighted rather than lost.
+
+**Net design (the claim, measured not asserted).** Sharper vectors + de-duplicated neighbors +
+latest-only correctness + structure-aligned chunks + a structured pre-filter, fused by RRF (§14.2):
+this is the design for maximal retrieval fidelity across all three modes. The claim is *verified*,
+not assumed, by the **retrieval-quality measurement** in `fidelity-framework.md` §10.5 (golden query
+set, per-mode nDCG/precision, a redundancy metric, and a with/without-condensation ablation).
+
 ---
 
 ## 15. The downstream API (separate repo, for context)
@@ -1375,6 +1444,13 @@ idempotency, gating, and lineage.
 - **Anchor map** — the `(stable_section_id ↔ github_slug ↔ original Word bookmark)` mapping in
   `refs.yaml`; the single home for anchors, shared by the TOC, cross-refs, published markdown, and MCP
   URIs (§6.7, §5.5).
+- **Search corpus vs. evidence corpus** — the curated, condensed, **anchor-only** index + embeddings
+  (the source of *retrieval quality*) vs. the complete immutable bronze + history (the source of
+  *fidelity/provenance*); deliberately different layers, so condensing one never costs the other
+  (§14.6).
+- **Retrieval fidelity** — the quality of search results (precision, diversity, version-correctness
+  across semantic + lexical + hybrid), maximized by condensation + anchor-only indexing +
+  structure-aligned chunking + structured pre-filter; **measured** in fidelity-framework §10.5 (§14.6).
 - **Dead phrase / phrase-removal registry** — short recurring *meaningless* strings: paper-era
   residue ("this page intentionally left blank", "continued on next page", page furniture) and
   descriptive filler around revision history; disposition **DELETE** (no reference, no copy kept).
