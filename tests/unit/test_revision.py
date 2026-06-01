@@ -66,6 +66,68 @@ def test_parse_rows_drop_pm_tw_columns():
     ]
 
 
+# --- GFM pipe-table revision history (Docling-origin docs) -----------------
+
+PIPE_TABLE = (
+    "| Date | Version/Patch | Page | Change | Project Manager | Technical Writer |\n"
+    "|------|---------------|------|--------|-----------------|------------------|\n"
+    "| 06/2023 | OR*3*499 | 233, 239, 250 | Added warning. - Ordering Inpatient | pm | tw |\n"
+    "| 05/2023 | OR*3.0*593 | [170](#Smart_Note_593) | Added note for SMART alerts | pm | tw |\n"
+)
+
+PIPE_BODY = f"Title\n\nRevision History\n\n{PIPE_TABLE}\n## First Section\n\nbody text\n"
+
+
+def test_find_pipe_revision_table():
+    found = find_revision_table(PIPE_BODY)
+    assert found is not None
+    start, end, table = found
+    assert table.startswith("| Date |")
+    assert PIPE_BODY[start:end] == table
+
+
+def test_find_ignores_non_revision_pipe_table():
+    other = "| Name | RPC |\n|------|-----|\n| foo | BAR |\n"
+    assert find_revision_table(f"text\n\n{other}\n") is None
+
+
+def test_parse_pipe_table_drops_pm_tw_and_extracts_fields():
+    recs = parse_revision_table(PIPE_TABLE)
+    assert recs == [
+        RevisionRecord(
+            date="2023-06",
+            version="OR*3*499",
+            pages=[233, 239, 250],
+            change="Added warning. - Ordering Inpatient",
+            refs=[],
+        ),
+        RevisionRecord(
+            date="2023-05",
+            version="OR*3.0*593",
+            pages=[170],  # the anchor's digits must NOT leak into pages
+            change="Added note for SMART alerts",
+            refs=["#Smart_Note_593"],
+        ),
+    ]
+
+
+def test_remove_pipe_revision_table_strips_table_and_caption():
+    new, removed = remove_revision_table(PIPE_BODY)
+    assert removed is True
+    assert "| Date |" not in new
+    assert "Revision History" not in new
+    assert "## First Section" in new
+    assert "body text" in new
+
+
+def test_summarize_pipe():
+    assert summarize_revisions(parse_revision_table(PIPE_TABLE)) == {
+        "revision_count": 2,
+        "revision_newest": "2023-06",
+        "revision_oldest": "2023-05",
+    }
+
+
 def test_summarize():
     recs = parse_revision_table(TABLE)
     assert summarize_revisions(recs) == {

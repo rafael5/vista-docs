@@ -1,10 +1,15 @@
 """F5 — revision-history extraction (spec §6 F5).
 
-Harvests the revision ``<table>`` pandoc dumps at the top of Word-origin docs,
-drops the uniformly-redacted ``Project Manager`` / ``Technical Writer`` columns
-(the only true deletion), and returns structured records plus a frontmatter
-summary. The table is removed from the body; the polluted ``description:`` (which
-captured the table caption) is cleared so audit regenerates it.
+Harvests the revision table at the top of Word-origin docs, drops the
+uniformly-redacted ``Project Manager`` / ``Technical Writer`` columns (the only
+true deletion), and returns structured records plus a frontmatter summary. The
+table is removed from the body; the polluted ``description:`` (which captured the
+table caption) is cleared so audit regenerates it.
+
+Two table dialects are recognized: the HTML ``<table>`` pandoc dumps, and the
+GFM pipe table the Docling backend emits (see ``DOCLING_DOCS`` in
+``ingest/converter``). ``find_revision_table``/``parse_revision_table`` dispatch
+on whichever form is present.
 
 All output is plain Python values — the I/O layer writes the ``*.history.yaml``
 sidecar and routes the summary through ``audit_frontmatter``.
@@ -76,16 +81,113 @@ def _header_text(table_html: str) -> str:
     return " ".join(_flatten(c).lower() for c in _CELL_RE.findall(rows[0]))
 
 
+def _is_revision_header(header: str) -> bool:
+    return "date" in header and "change" in header and ("version" in header or "patch" in header)
+
+
 def find_revision_table(body: str) -> tuple[int, int, str] | None:
-    """Return ``(start, end, html)`` of the revision table, or ``None``."""
+    """Return ``(start, end, table)`` of the revision table, or ``None``.
+
+    Prefers the HTML ``<table>`` (pandoc); falls back to a GFM pipe table
+    (Docling). ``table`` is the raw matched block, dispatched on by
+    :func:`parse_revision_table`.
+    """
     for m in _TABLE_RE.finditer(body):
-        header = _header_text(m.group(0))
-        if "date" in header and "change" in header and ("version" in header or "patch" in header):
+        if _is_revision_header(_header_text(m.group(0))):
             return m.start(), m.end(), m.group(0)
+    return _find_pipe_table(body)
+
+
+# --- GFM pipe-table dialect (Docling-origin docs) --------------------------
+
+_PIPE_LINE_RE = re.compile(r"^[ \t]*\|.*\|[ \t]*$")
+_PIPE_SEP_RE = re.compile(r"^[ \t]*\|[ \t:|-]+\|[ \t]*$")
+_PIPE_SPLIT_RE = re.compile(r"(?<!\\)\|")
+_MD_LINK_RE = re.compile(r"\[([^\]]*)\]\((#[^)]*)\)")
+
+
+def _pipe_cells(line: str) -> list[str]:
+    """Split a GFM row into cells (outer pipes dropped, ``\\|`` unescaped)."""
+    parts = _PIPE_SPLIT_RE.split(line.strip())
+    if parts and parts[0].strip() == "":
+        parts = parts[1:]
+    if parts and parts[-1].strip() == "":
+        parts = parts[:-1]
+    return [p.replace("\\|", "|").strip() for p in parts]
+
+
+def _md_link_text(s: str) -> str:
+    """``[170](#anchor)`` -> ``170`` so anchors don't pollute page/change text."""
+    return _MD_LINK_RE.sub(r"\1", s)
+
+
+def _md_link_refs(s: str) -> list[str]:
+    return [m.group(2) for m in _MD_LINK_RE.finditer(s)]
+
+
+def _find_pipe_table(body: str) -> tuple[int, int, str] | None:
+    lines = body.split("\n")
+    offsets, pos = [], 0
+    for ln in lines:
+        offsets.append(pos)
+        pos += len(ln) + 1
+    for i in range(len(lines) - 1):
+        if not (_PIPE_LINE_RE.match(lines[i]) and _PIPE_SEP_RE.match(lines[i + 1])):
+            continue
+        if not _is_revision_header(" ".join(_pipe_cells(lines[i])).lower()):
+            continue
+        j = i + 2
+        while j < len(lines) and _PIPE_LINE_RE.match(lines[j]):
+            j += 1
+        start = offsets[i]
+        end = offsets[j - 1] + len(lines[j - 1])
+        return start, end, "\n".join(lines[i:j])
     return None
 
 
-def parse_revision_table(table_html: str) -> list[RevisionRecord]:
+def parse_revision_table(table: str) -> list[RevisionRecord]:
+    """Parse a revision table (HTML or GFM pipe) into records, dropping PM/TW."""
+    if "<table" in table.lower():
+        return _parse_html_table(table)
+    return _parse_pipe_table(table)
+
+
+def _parse_pipe_table(table: str) -> list[RevisionRecord]:
+    lines = [ln for ln in table.split("\n") if _PIPE_LINE_RE.match(ln)]
+    if len(lines) < 2:
+        return []
+    header = [h.lower() for h in _pipe_cells(lines[0])]
+
+    def col(*names: str) -> int | None:
+        for i, h in enumerate(header):
+            if any(n in h for n in names):
+                return i
+        return None
+
+    di, vi, pi, ci = col("date"), col("version", "patch"), col("page"), col("change")
+    records: list[RevisionRecord] = []
+    for row in lines[2:]:  # skip header + separator
+        if _PIPE_SEP_RE.match(row):
+            continue
+        cells = _pipe_cells(row)
+
+        def cell(idx: int | None) -> str:
+            return cells[idx] if idx is not None and idx < len(cells) else ""
+
+        page_raw, change_raw = cell(pi), cell(ci)
+        records.append(
+            RevisionRecord(
+                date=_norm_date(cell(di)),
+                version=cell(vi),
+                pages=[int(n) for n in _INT_RE.findall(_md_link_text(page_raw))],
+                change=_WS_RE.sub(" ", _md_link_text(change_raw)).strip(),
+                refs=_md_link_refs(page_raw) + _md_link_refs(change_raw),
+            )
+        )
+    return records
+
+
+def _parse_html_table(table_html: str) -> list[RevisionRecord]:
     """Parse a revision table into records, dropping PM/TW columns."""
     rows = _ROW_RE.findall(table_html)
     if not rows:
