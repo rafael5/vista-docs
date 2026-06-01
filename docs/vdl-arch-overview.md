@@ -161,7 +161,8 @@ flowchart TD
 - **Ingest backend is per-document**: Pandoc by default, Docling only for the
   allowlisted stems in `DOCLING_DOCS` (`ingest/converter.py`). Docling is an optional
   install extra (`vista-docs[docling]`); the lazy import fails loudly if a routed doc
-  is ingested without it.
+  is ingested without it. The corpus evidence behind the two-doc allowlist and the
+  criteria for adding more are in [`docs/docling-backend.md`](docling-backend.md).
 - **Frontmatter is schema-guarded end to end**: generators emit schema-clean YAML
   (canonical labels/namespaces, sanitized scalars, round-trip-safe `safe_dump`), and
   the VALIDATE hard gate makes it **impossible to publish or push a corpus with
