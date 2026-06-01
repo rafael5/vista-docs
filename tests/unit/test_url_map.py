@@ -13,6 +13,7 @@ Drives remediation §5 (assessment §4 / 3.10).
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
@@ -22,6 +23,7 @@ from vista_docs.publish.url_map import (
     keys_from_frontmatter,
     parse_patch_id,
     walk_publish_tree,
+    write_url_map_json,
 )
 
 # ---------------------------------------------------------------------------
@@ -269,3 +271,63 @@ def test_walk_publish_tree_against_fixture(tmp_path: Path) -> None:
     # INDEX.md / README.md must not appear as values
     assert all(not v.endswith("INDEX.md") for v in url_map.values())
     assert all(not v.endswith("README.md") for v in url_map.values())
+
+
+# ---------------------------------------------------------------------------
+# write_url_map_json (I/O thin layer)
+# ---------------------------------------------------------------------------
+
+
+def test_write_url_map_json_writes_payload(tmp_path: Path) -> None:
+    """write_url_map_json walks publish/, writes url_map.json, and returns the
+    same payload it wrote — with the GitHub coordinates and entry map."""
+    pkg = tmp_path / "clinical" / "adt--admission-discharge-transfer"
+    pkg.mkdir(parents=True)
+    (pkg / "dibrg.md").write_text(
+        "---\n"
+        'master_source: "DG*5.3*952 DIBRG"\n'
+        "prior_versions:\n"
+        '  - "DG*5.3*916 DIBRG"\n'
+        "---\n"
+        "body\n",
+        encoding="utf-8",
+    )
+    (pkg / "installation-guide.md").write_text(
+        "---\npatch_id: ADT*5.3\n---\nbody\n",
+        encoding="utf-8",
+    )
+    # Top-level boilerplate that must be skipped
+    (tmp_path / "INDEX.md").write_text("# index\n", encoding="utf-8")
+
+    payload = write_url_map_json(
+        tmp_path, github_owner="vistadocs", github_repo="vdl", branch="main"
+    )
+
+    out_path = tmp_path / "url_map.json"
+    assert out_path.exists()
+    on_disk = json.loads(out_path.read_text(encoding="utf-8"))
+
+    # Returned payload matches what was written.
+    assert on_disk == payload
+    assert payload["github_owner"] == "vistadocs"
+    assert payload["github_repo"] == "vdl"
+    assert payload["branch"] == "main"
+    assert "generated_at" in payload
+
+    # Entry map: anchor contributes both patch_ids, singleton contributes its own.
+    rel = "clinical/adt--admission-discharge-transfer"
+    assert payload["entries"]["DG*5.3*952"] == f"{rel}/dibrg.md"
+    assert payload["entries"]["DG*5.3*916"] == f"{rel}/dibrg.md"
+    assert payload["entries"]["ADT*5.3"] == f"{rel}/installation-guide.md"
+    assert payload["entry_count"] == len(payload["entries"]) == 3
+
+
+def test_write_url_map_json_defaults_to_vistadocs_vdl(tmp_path: Path) -> None:
+    """The default GitHub coordinates match what enrich_inventory expects."""
+    (tmp_path / "doc.md").write_text("---\npatch_id: X*1*1\n---\nbody\n", encoding="utf-8")
+    payload = write_url_map_json(tmp_path)
+    assert (payload["github_owner"], payload["github_repo"], payload["branch"]) == (
+        "vistadocs",
+        "vdl",
+        "main",
+    )
