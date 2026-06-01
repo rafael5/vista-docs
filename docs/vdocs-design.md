@@ -229,9 +229,10 @@ industry's standard frame for exactly this raw→curated progression. Each layer
                           │  index       ─► index.db (documents, sections+FTS5, entities, quality; stable IDs) ← derived shred
                           │  relate      ─► index.db:relations (doc↔entity, doc↔doc xref — knowledge graph)
                           │  embed       ─► vectors.db (per-chunk embeddings — semantic index)
+                          │  fidelity    ─► reports/fidelity (per-doc S→T verdict; feeds the gate)
                           │  manifest    ─► corpus-manifest.json + discovery.json (lineage + machine catalog)
                           │  publish     ─► publish/ (human tree, markdown-only)
-                          │  validate    ─► HARD GATE (schema + lineage + anchors)
+                          │  validate    ─► HARD GATE (schema + lineage + anchors + fidelity verdict)
                           └───────────────────────────────────────────────────────────────┘
                                        │                                          │
             ┌──────── SERVE (read-only over gold) ─────────┐                      │
@@ -706,9 +707,10 @@ from it.
 | 🥇 | **index** | `text@normalized`, `consolidated` (grouping) | `index.db` (documents, doc_sections [all, with `is_latest`] **+ FTS5 over `is_latest` only — the search surface**, entities, quality, views; **stable IDs**) | SKIP_IF_UNCHANGED |
 | 🥇 | **relate** | `index.db` (documents, entities, sections) | `index.db:relations` (doc↔entity, doc↔doc xref, entity↔entity — the knowledge graph) | SKIP_IF_UNCHANGED |
 | 🥇 | **embed** | `index.db:doc_sections` (**`is_latest` only**) | `vectors.db` (per-chunk embeddings + ANN index over anchor/current sections; prior-version chunks excluded — §14.6) | SKIP_IF_UNCHANGED |
+| 🥇 | **fidelity** | `text@normalized`, `raw` (bronze `S`), `index.db` (structure/sections/template schema), `registries` (to dereference single-sourced content) | `reports/fidelity` (per-document migration-fidelity records — content/provenance/history axes, template compliance, TOC integrity — + corpus report; `fidelity-framework.md`) | SKIP_IF_UNCHANGED |
 | 🥇 | **manifest** | `consolidated`, `index.db`, `vectors.db`, `state.db` (lineage) | `corpus-manifest.json` + `discovery.json` | SKIP_IF_UNCHANGED |
 | 🥇 | **publish** | `corpus-manifest.json`, `text@normalized`, `consolidated`, `assets`, `catalog.enriched`, `glossary` | `publish` (markdown-only human tree + INDEX) | SKIP_IF_UNCHANGED |
-| 🥇 | **validate** | `publish`, `text@normalized`, `index.db`, `vectors.db` | (HARD GATE — schema + lineage + dead-anchor + ID/vector integrity; sets its own `ok`) | ALWAYS_RERUN |
+| 🥇 | **validate** | `publish`, `text@normalized`, `index.db`, `vectors.db`, `reports/fidelity` | (HARD GATE — schema + lineage + dead-anchor + ID/vector integrity + **fidelity verdict** [PASS / REVIEW-with-sign-off only; QUARANTINE blocks]; sets its own `ok`) | ALWAYS_RERUN |
 | 🚀 | **push** | `publish` (+ validate `ok`) | `git:vistadocs/vdl` (one anchor file per version group + travel-with lineage sidecars; **commit-replay deferred behind opt-in `--replay-history`**, §6.6) | FORCE_ONLY |
 | ⬩ | **analyze** (off critical path) | `text@normalized` | `reports/` (survey, headings, lexicon) | SKIP_IF_UNCHANGED |
 
@@ -763,6 +765,13 @@ Notes:
 - **Serving is not a batch stage.** `push` (humans) and the **MCP server** (machines, §14)
   are read-only consumers of gold; the MCP server is a long-running service (`vdocs
   serve-mcp`), not a DAG node.
+- **`fidelity` measures, `validate` gates.** `fidelity` scores each document against its bronze
+  source (`S`→`T`: content/provenance/history, template compliance, TOC integrity — the full
+  `fidelity-framework.md`) and writes per-document verdicts to `reports/fidelity`; it is a pure
+  measurement that mutates no corpus content. `validate` *consumes* those verdicts as part of the
+  hard gate (a doc may publish as faithful only if PASS, or REVIEW with recorded sign-off;
+  QUARANTINE blocks). Currency (§7.5) and retrieval-quality (§10.5 there) are the corpus-level
+  companions to this per-document verdict.
 - The frontmatter **schema gate** lives in `validate` and is **non-optional before
   `push`** — it is impossible to push a corpus with broken frontmatter.
 
@@ -791,6 +800,8 @@ by every stage:
 - `kernel/cas/` — content-addressed store: `put(bytes) -> sha256`, `get(sha256)`, `link`.
 - `kernel/lineage/` — provenance stamping (`source_sha256`, `converter`, `tool_ver`, `at`).
 - `kernel/db/` — SQLite open/migrate/upsert helpers; one place that knows pragmas.
+- `kernel/discovery/` — shingling/MinHash near-duplicate detection + structural-fingerprint/
+  clustering miners (§9.6), shared by every `discover` instance.
 
 **Rule:** if a second stage needs a primitive, it imports it from `kernel/` or the primitive
 is promoted *into* `kernel/`. Copy-paste across stages is a build-breaking review failure.
@@ -1100,20 +1111,21 @@ src/vdocs/
     validate/
     push/
     analyze/
-registries/        # CURATED, version-controlled pattern catalog (full index: §9.7) — consumed by stages,
-                   #   changed by PR. NOT code, NOT disposable lake data — declared, reviewable config:
-  boilerplate/     #   meaningful-but-duplicated blocks → REFERENCE (canonical copy in gold/_shared/)
-  templates/       #   document skeletons keyed by (doc_type, era) → STRIP + stamp template_id
-  phrases/         #   dead paper-era phrases + revision-history filler → DELETE (no copy, no reference)
-  glossary/        #   acronyms/terms → PROMOTE + dedupe to gold/glossary.md
-  structures/      #   callout/TOC/revision-table conventions → CANONICALIZE to standard GFM
-  converter-routing/  # Docling-vs-Pandoc allowlist (ADR-010) → ROUTE (consumed by convert)
+    fidelity/      # migration-fidelity + template-compliance + TOC-integrity scoring → reports/fidelity (fidelity-framework.md)
   server/          # MCP server (read-only over gold) + hybrid-search engine — §14
     mcp.py         #   MCP Resources / Tools / Prompts
     search.py      #   hybrid retrieval (semantic + lexical + structured + graph) + RRF fusion
     ids.py         #   stable-ID scheme + URI resolution (shared with stages)
   cli/             # Typer app: one subcommand per stage + `run` (orchestrator) + `serve-mcp`
   config.py        # Pydantic Settings
+registries/        # CURATED, version-controlled pattern catalog (full index: §9.7) — a repo-root sibling of
+                   #   src/, changed by PR. NOT code, NOT disposable lake data — declared, reviewable config:
+  boilerplate/     #   meaningful-but-duplicated blocks → REFERENCE (canonical copy in gold/_shared/)
+  templates/       #   document skeletons keyed by (doc_type, era) → STRIP + stamp template_id
+  phrases/         #   dead paper-era phrases + revision-history filler → DELETE (no copy, no reference)
+  glossary/        #   acronyms/terms → PROMOTE + dedupe to gold/glossary.md
+  structures/      #   callout/TOC/revision-table conventions → CANONICALIZE to standard GFM
+  converter-routing/  # Docling-vs-Pandoc allowlist (ADR-010) → ROUTE (consumed by convert)
 tests/
   unit/            # pure logic, no I/O (mirrors src 1:1)
   property/        # Hypothesis tests for transforms
@@ -1354,9 +1366,11 @@ Each phase ends with a runnable, tested increment. Build the spine before the st
    stages freeze (§9.6, tenet #13).
 4. **Gold derive:** consolidate → index (sections+FTS5+entities+quality, **stable IDs**) →
    **relate** (knowledge graph) → manifest (+ `discovery.json`).
-5. **Gold deliver (humans):** publish (markdown-only + materialized assets) → validate (hard
-   gate) → push (anchor files + captured lineage sidecars; **commit-replay deferred**, §6.6).
-   Plus analyze (off critical path).
+5. **Gold deliver (humans):** **fidelity** (per-doc `S`→`T` verdict: content/provenance/history +
+   template compliance + TOC integrity, `fidelity-framework.md`) → publish (markdown-only +
+   materialized assets) → validate (hard gate, **consumes the fidelity verdict** — QUARANTINE blocks)
+   → push (anchor files + captured lineage sidecars; **commit-replay deferred**, §6.6). Plus analyze
+   (off critical path).
 6. **Machine interface (§14):** **embed** (chunk → `vectors.db`) → the **MCP server**
    (`serve-mcp`) with hybrid search (semantic + lexical + structured + graph, RRF). This is
    the headline machine output.
