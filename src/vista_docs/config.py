@@ -28,6 +28,11 @@ SURVEY_DIR = DATA_DIR / "survey"
 GUIDES_DIR = DATA_DIR / "guides"
 SKILL_UPDATES_DIR = DATA_DIR / "skill-updates"
 
+# Curated lookup tables checked into the repo (not the runtime data store).
+# This is project-rooted data: package_master.yaml, doc_labels.yaml, etc.
+# src/vista_docs/config.py → src/vista_docs → src → <project root>
+CURATED_DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+
 DB_PATH = STATE_DIR / "pipeline.db"
 
 # ---------------------------------------------------------------------------

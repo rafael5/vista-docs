@@ -17,15 +17,24 @@ Patch Identity:
 
 Document Identity:
   doc_code         — normalized doc type abbreviation (e.g. RN, TM, DIBR)
-  doc_label        — canonical doc type full label (e.g. Release Notes)
+  doc_label        — canonical doc type full label from data/doc_labels.yaml
+  doc_subtitle     — original per-doc label when non-canonical (e.g. "Manager/ADPAC Guide")
   doc_layer        — anchor | patch | plain (structural role in functional group)
   doc_subject      — qualifier/subject stripped from title (e.g. ADT, Agent Cashier)
   doc_format       — file format without dot: pdf | docx | doc  (replaces doc_file_ext)
 
 App / Section:
   app_name_abbrev  — app identifier extracted from app_name parens; fallback map applied
+  app_name_full    — canonical package name from data/package_master.yaml (overrides per-doc value)
+  canonical_pkg    — post-consolidation package identity from package_master.yaml
+  doc_subject_raw  — original per-document app_name_full when it diverges from canonical
   section_code     — short section code (CLI, FIN, GUI, INF, MON)
   group_key        — functional group identifier: app_name_abbrev:pkg_ns:patch_ver
+
+Text-quality fixes (assessment §3.1, §3.2):
+  fix_mojibake          — applied to doc_title, doc_subject, app_name at row read
+  apply_typo_corrections— applied to doc_title, doc_subject, app_name_full
+  doc_search_aliases    — pipe-separated original spellings preserved for search
 
 Flags:
   noise_type       — '' = genuine VistA doc | 'vba_form' = VBA benefits form |
@@ -33,6 +42,8 @@ Flags:
 
 URLs:
   companion_url    — URL of the paired format (PDF↔DOCX); empty if no pair; listed after doc_url
+  github_md_url    — link to markdown counterpart in github.com/vistadocs/vdl
+  github_md_raw_url— raw.githubusercontent.com URL for programmatic markdown fetch
 
 Source field renames (in-place):
   filename   → doc_filename
@@ -53,9 +64,48 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
 
+from vista_docs.enrich.doc_labels import apply_canonical_label, load_doc_labels
+from vista_docs.enrich.package_master import load_master
+from vista_docs.enrich.text_fixers import (
+    apply_typo_corrections,
+    fix_mojibake,
+    load_typo_corrections,
+)
+
 INPUT_CSV = Path("/home/rafael/data/vista-docs/inventory/vdl_inventory.csv")
 OUTPUT_CSV = Path("/home/rafael/data/vista-docs/inventory/vdl_inventory_enriched.csv")
 SCHEMA_JSON = Path("/home/rafael/data/vista-docs/inventory/vdl_inventory_schema.json")
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+PACKAGE_MASTER_PATH = DATA_DIR / "package_master.yaml"
+TYPO_CORRECTIONS_PATH = DATA_DIR / "typo_corrections.yaml"
+DOC_LABELS_PATH = DATA_DIR / "doc_labels.yaml"
+URL_MAP_PATH = Path("/home/rafael/data/vista-docs/publish/url_map.json")
+PACKAGE_MASTER = load_master(PACKAGE_MASTER_PATH)
+TYPO_CORRECTIONS = load_typo_corrections(TYPO_CORRECTIONS_PATH)
+CANONICAL_DOC_LABELS = load_doc_labels(DOC_LABELS_PATH)
+
+
+def _load_url_map() -> tuple[dict[str, str], str, str]:
+    """Load publish/url_map.json. Returns (entries, blob_base, raw_base).
+
+    If the file is absent (publish hasn't been run, fresh checkout), returns
+    empties so enrich still produces a CSV — the github_md_url column will
+    just be blank for every row.
+    """
+    if not URL_MAP_PATH.exists():
+        return {}, "", ""
+    data = json.loads(URL_MAP_PATH.read_text(encoding="utf-8"))
+    owner, repo, branch = data["github_owner"], data["github_repo"], data["branch"]
+    blob = f"https://github.com/{owner}/{repo}/blob/{branch}"
+    raw = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}"
+    return data["entries"], blob, raw
+
+
+URL_MAP, GITHUB_BLOB_BASE, GITHUB_RAW_BASE = _load_url_map()
+
+# Fields that get mojibake-fixed and typo-corrected at row read time.
+# Filenames and URLs are intentionally excluded — they are literal identifiers.
+TEXT_FIELDS = ("doc_title", "doc_subject", "app_name", "app_name_full")
 
 # ---------------------------------------------------------------------------
 # Section code map
@@ -872,14 +922,29 @@ def main():
         if "file_ext" in row:
             row["doc_file_ext"] = row.pop("file_ext")
 
+        # Mojibake repair on raw input fields (assessment §3.1).
+        # Apply before abbrev extraction so the regex sees a clean string.
+        for f in ("doc_title", "doc_subject", "app_name"):
+            if f in row:
+                row[f] = fix_mojibake(row[f])
+
         m = ABBR_RE.search(row["app_name"])
         row["app_name_abbrev"] = m.group(1) if m else ""
         if m:
             row["app_name"] = ABBR_RE.sub("", row["app_name"]).strip()
         row["app_name_full"] = row.pop("app_name")
 
+        # Typo corrections (assessment §3.2). Aliases captured for search-side
+        # fallback so users can still find rows by the original spelling.
+        aliases: list[str] = []
+        for f in ("doc_title", "doc_subject", "app_name_full"):
+            if f in row:
+                row[f], a = apply_typo_corrections(row[f], f, TYPO_CORRECTIONS)
+                aliases.extend(a)
+
         parsed = parse_row(row)
         parsed["pkg_ns"] = parsed.pop("vista_pkg_ns")
+        parsed["doc_search_aliases"] = "|".join(dict.fromkeys(aliases))
         enriched.append({**row, **parsed})
 
     # --- Pass 2: global enrichment ---
@@ -906,6 +971,25 @@ def main():
             row["app_name_abbrev"] = (
                 APP_ABBREV_FALLBACK.get(row["app_name_full"], "") or row["pkg_ns"]
             )
+
+        # Package-master canonicalization (assessment §3.3 / §3.4 / §3.6).
+        # The master holds the authoritative app_name_full and pkg_ns per
+        # abbrev; anything pre-existing on the row is the per-document
+        # derivation, which we preserve in doc_subject_raw for fidelity.
+        master_entry = PACKAGE_MASTER.lookup(row["app_name_abbrev"])
+        if master_entry:
+            original_full = row["app_name_full"]
+            row["app_name_full"] = master_entry.canonical_name
+            row["doc_subject_raw"] = (
+                original_full if original_full != master_entry.canonical_name else ""
+            )
+            # Trust per-row patch-derived pkg_ns when present; only fill blanks.
+            if not row["pkg_ns"] and master_entry.pkg_ns:
+                row["pkg_ns"] = master_entry.pkg_ns
+            row["canonical_pkg"] = master_entry.canonical_pkg
+        else:
+            row["doc_subject_raw"] = ""
+            row["canonical_pkg"] = row["app_name_abbrev"]
 
         # doc_subject — strip artifact values (must run after app_name_abbrev is final)
         row["doc_subject"] = clean_doc_subject(
@@ -942,6 +1026,23 @@ def main():
             row["patch_id"] = f"{ns}*{ver}"
         else:
             row["patch_id"] = ""
+
+        # github_md_url linking (assessment §4 / P4).
+        # Must run AFTER patch_id is computed above. Try the precise va.gov
+        # source URL first (resolves plain singletons that share an anchor
+        # patch_id like ADT*5.3); fall back to patch_id for anchor-consolidated
+        # rows whose source URL isn't a key in the map.
+        rel = (
+            URL_MAP.get(row.get("doc_url", ""))
+            or URL_MAP.get(row["patch_id"])
+            or ""
+        )
+        if rel and GITHUB_BLOB_BASE:
+            row["github_md_url"] = f"{GITHUB_BLOB_BASE}/{rel}"
+            row["github_md_raw_url"] = f"{GITHUB_RAW_BASE}/{rel}"
+        else:
+            row["github_md_url"] = ""
+            row["github_md_raw_url"] = ""
 
         # doc_format — extension without dot
         ext = row["doc_file_ext"]
@@ -1028,17 +1129,31 @@ def main():
             row["doc_code"], row["doc_label"] = MANUAL_OVERRIDES[slug]
             manual_resolved += 1
 
+    # --- Pass 5: canonical doc_label (assessment §3.5) ---
+    # Run after every other doc_code/doc_label assignment so that drift is
+    # collapsed regardless of where the value came from. Original wording is
+    # preserved per-row in doc_subtitle.
+    for row in enriched:
+        row["doc_label"], row["doc_subtitle"] = apply_canonical_label(
+            row.get("doc_code", ""),
+            row.get("doc_label", ""),
+            CANONICAL_DOC_LABELS,
+        )
+
     # --- doc_labelling: 'manual' for all 154 residual-report slugs, 'code' otherwise ---
     for row in enriched:
         slug = row.get("doc_slug", "")
         row["doc_labelling"] = "manual" if slug in MANUAL_SLUGS else "code"
 
-    # --- Output column order (28 columns) ---
+    # --- Output column order (34 columns) ---
     out_fields = [
         "section_name",
         "section_code",
         "app_name_full",
         "app_name_abbrev",
+        "canonical_pkg",
+        "doc_subject_raw",
+        "doc_search_aliases",
         "app_status",
         "decommission_date",
         "pkg_ns",
@@ -1052,6 +1167,7 @@ def main():
         "group_key",
         "doc_code",
         "doc_label",
+        "doc_subtitle",
         "doc_layer",
         "doc_labelling",
         "doc_title",
@@ -1063,6 +1179,8 @@ def main():
         "app_url",
         "doc_url",
         "companion_url",
+        "github_md_url",
+        "github_md_raw_url",
     ]
 
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f_out:
@@ -1085,6 +1203,36 @@ def main():
             },
             "app_name_full": {"type": "string", "category": "app", "nullable": False},
             "app_name_abbrev": {"type": "string", "category": "app", "nullable": False},
+            "canonical_pkg": {
+                "type": "string",
+                "category": "app",
+                "nullable": False,
+                "note": (
+                    "Post-consolidation package identity from data/package_master.yaml; "
+                    "equals app_name_abbrev for non-merged packages, points to the "
+                    "surviving abbrev for consolidated ones (e.g. RUM → KMPR)"
+                ),
+            },
+            "doc_subject_raw": {
+                "type": "string",
+                "category": "app",
+                "nullable": True,
+                "note": (
+                    "Original per-document app_name_full when it differed from the "
+                    "package master canonical_name; preserved for fidelity"
+                ),
+            },
+            "doc_search_aliases": {
+                "type": "string",
+                "category": "document",
+                "nullable": True,
+                "note": (
+                    "Pipe-separated list of original-spelling tokens that were "
+                    "corrected on this row (assessment §3.2). Search UIs can "
+                    "include this column in their full-text index so the "
+                    "original spelling still matches."
+                ),
+            },
             "app_status": {
                 "type": "string",
                 "category": "app",
@@ -1132,7 +1280,26 @@ def main():
                 "format": "app_name_abbrev:pkg_ns:patch_ver",
             },
             "doc_code": {"type": "string", "category": "document", "nullable": True},
-            "doc_label": {"type": "string", "category": "document", "nullable": True},
+            "doc_label": {
+                "type": "string",
+                "category": "document",
+                "nullable": True,
+                "note": (
+                    "Canonical doc-type label from data/doc_labels.yaml. "
+                    "Resolves the 5 §3.5 drift cases (CFG, INT, REF, UG, UM) "
+                    "to a single value per doc_code."
+                ),
+            },
+            "doc_subtitle": {
+                "type": "string",
+                "category": "document",
+                "nullable": True,
+                "note": (
+                    "Original per-document doc_label when it differed from the "
+                    "canonical entry (e.g. 'Manager/ADPAC Guide' for UG); "
+                    "preserves subtitle text that would otherwise be lost"
+                ),
+            },
             "doc_layer": {
                 "type": "string",
                 "category": "document",
@@ -1194,6 +1361,26 @@ def main():
             },
             "app_url": {"type": "string", "category": "url", "nullable": False},
             "doc_url": {"type": "string", "category": "url", "nullable": False},
+            "github_md_url": {
+                "type": "string",
+                "category": "url",
+                "nullable": True,
+                "note": (
+                    "Link to the markdown counterpart in github.com/vistadocs/vdl. "
+                    "Empty when no markdown exists for this row (per-format URL "
+                    "joins precise; falls back to patch_id for anchor-consolidated "
+                    "rows whose source URL is not a key in publish/url_map.json)."
+                ),
+            },
+            "github_md_raw_url": {
+                "type": "string",
+                "category": "url",
+                "nullable": True,
+                "note": (
+                    "raw.githubusercontent.com URL for the same markdown file — "
+                    "use for programmatic fetching"
+                ),
+            },
         },
     }
 
