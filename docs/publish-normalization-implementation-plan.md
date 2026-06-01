@@ -6,9 +6,11 @@ unwrap + F8 dead-link sweep), classifier, orchestrator, runner, CLI, CI lint
 helpers, and the P0.2 census all built & green (98% cov). See the tracking table
 for per-stage status and the Change Log / Lessons #13–14 for the corpus-shape
 findings. **Census:** 236 docs → A=122, B=108, C=4, D=2. **The full corpus now validates
-`hard=0`** through the publish/push gate (P0–P7 done; P6.3/P7.3 wired). **Remaining:**
-PDF page-bridge I/O (P4.1, 4 docs), the P8 rollout (prototype review → lock
-`normalize_version 1.0` → batch publish-push), and docs/skills (P9).
+`hard=0`** through the publish/push gate (P0–P7 done; P6.3/P7.3 wired). P4 (F7 PDF
+bridge) verified **not needed** for this corpus. **Remaining:** the P8 rollout
+(lock `normalize_version 1.0` → batch `normalize` → publish-push — needs sign-off,
+pushes to public GitHub) and the P9 tail (`va-docx-structure` skill; `CLAUDE.md`
+stage-list line, deferred behind another session's uncommitted edits).
 **Home:** new `src/vista_docs/normalize/` package; wired before `publish`.
 **Conventions:** TDD hard rule (failing test first), pure/IO split, `.venv/bin/`
 tools, `make check` (95% cov) before every commit, frontmatter writes route
@@ -49,8 +51,8 @@ extended rather than built.
 | P3.1 | F5 parse revision `<table>`, drop PM/TW cols, structured records + `refs` | F5 | `revision_pure.py` | DONE | ✓ unit | +M/D/YY date handling; CPRS = 243 rows |
 | P3.2 | Sidecar writer (`*.history.yaml`) + frontmatter summary | §7, F5.4 | `io.py`/`runner.py` | DONE | (integ) | `revision_count/newest/oldest/sidecar` set |
 | P3.3 | `description` de-pollution | F5.6, §13.3 | in F5 path | DONE | ✓ unit | clears revision-caption pollution |
-| **P4** | **Page-number bridge (F7)** — Class C | §6 F7 | — | WIP | — | pure parts done; PDF I/O left; only 4 C-docs need it |
-| P4.1 | PDF text extraction I/O (eval `pypdf`/`pdfplumber`; `uv lock`) | F7.1 | `pdf_reader.py` | TODO | integration | not built; 4 C-docs all have a PDF |
+| **P4** | **Page-number bridge (F7)** — Class C | §6 F7 | — | N/A | — | **not needed for current corpus** (verified); pure logic retained |
+| P4.1 | PDF text extraction I/O (eval `pypdf`/`pdfplumber`; `uv lock`) | F7.1 | `pdf_reader.py` | **N/A** | — | **Won't build.** Verified all 4 Class-C docs have **no** page-referencing TOC and 0 `Page N` lines; F3+F6 fully handle them (5–156 headings, `has_toc=True`). Building PDF I/O + a `pypdf` dep = dead code serving 0 docs. F7 pure logic kept for a future paginated corpus |
 | P4.2 | Inject silent page anchors (+`original_toc` sidecar) | F7.1–2 | `page_bridge_pure.py` | WIP | ✓ unit | `inject_page_anchors` done; `original_toc` sidecar writer not built |
 | P4.3 | Resolution step: map `p<N>` → nearest following heading slug | F7.3 | `page_bridge_pure.py` | DONE | ✓ unit | `map_pages_to_slugs` + `rewrite_page_toc` |
 | P4.4 | Retirement step: delete `pN` anchors; `page_anchors: false` | F7.4 | `page_bridge_pure.py` | DONE | ✓ unit | `retire_page_anchors`, idempotent |
@@ -154,6 +156,20 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
+
+### 2026-05-31 — P4.1 (F7 PDF bridge) — verified NOT needed; won't build
+Before building PDF text-extraction I/O (and adding a `pypdf` dependency) for the
+4 Class-C docs, checked whether they actually need the page bridge. They don't:
+all 4 (`release_notes_cprs_gui_25/27`, `kaajee_readme_file`,
+`pcmm_install_guide_release_notes`) have **no** page-referencing/dot-leader TOC
+and **0** `Page N` lines, and F3 heading inference already recovers 5–156
+headings each, from which F6 generates a clean link TOC (`has_toc=True`). F7's
+whole purpose — bridge original-TOC *page* references to heading slugs — is moot
+when there are no page references. **This answers spec open question §13.2 /
+P0.2-F7: 0 docs in the corpus need the bridge.** Building the I/O would be dead
+code serving zero documents, so P4.1 is marked **N/A (won't build)**; the F7 pure
+logic (`page_bridge_pure.py`) is retained should a future paginated corpus need it.
+The `pdf_reader.py` entry stays in `[tool.coverage.run] omit` as a placeholder.
 
 ### 2026-05-31 — Original-TOC removal → whole corpus validates clean (unblocks P8)
 The one doc the gate blocked on (`psn`) had a malformed TOC entry — a heading
