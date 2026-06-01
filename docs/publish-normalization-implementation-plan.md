@@ -157,6 +157,20 @@ Update the stage lists, arch overview, README files, and the `vdl-pipeline` /
 > Append one entry per stage you start or finish. Narrative form — capture *what
 > changed, what you discovered, and any deviation from this plan*. Newest first.
 
+### 2026-05-31 — Follow-up spun off: Docling spike for cprsguium.docx (PENDING)
+Spun the one-doc converter problem out to a **separate, isolated experiment** (NOT
+in this repo) to keep vista-docs's deps clean — Docling pulls a heavy ML stack.
+Setup: fresh `~/projects/docling-spike/` with its own `uv` venv; reads
+`~/data/vista-docs/raw/CPRS/cprsguium.docx` **read-only**; writes only to
+`~/projects/docling-spike/out/`. **Goal:** does Docling convert this DOCX with
+correctly-formed numbered/bulleted lists where pandoc explodes them?
+**Metric to beat:** pandoc gives 3058 bare-marker lines / 17530 total (~26%);
+success = near-0% + spot-checked lists correctly formed. If it works, re-test the
+other 3 `[[…]]`-wrapped docs before considering any pipeline change. **Status:
+PENDING — run in a different session; report verdict back here.** No vista-docs
+integration until then. This gates whether `cpr/um/cprs_user_manual__gui_version`
+goes into publish as-is (B3), is held back (B2), or is re-converted via Docling (B1).
+
 ### 2026-05-31 — Exploded-list investigation (verify-before-build → don't build)
 The CPRS pilot inspection of `user-manual.md` showed a flat, list-exploded body.
 Investigated before building a fix:
