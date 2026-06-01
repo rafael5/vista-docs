@@ -68,6 +68,44 @@ def remove_original_toc(
     return out, removed_items
 
 
+# Docling emits the original TOC as a caption with *any* number of leading ``#``
+# (markdown caps headings at 6, so ``########### Table of Contents`` renders as
+# literal text) followed by tab-separated ``Entry<TAB>page`` lines — neither a
+# heading nor a link list, so ``remove_original_toc`` misses it.
+_CAPTION_TOC_RE = re.compile(r"^#*[ \t]*(?:table of[ \t]+)?contents[ \t]*$", re.IGNORECASE)
+_CAPTION_TOC_ENTRY_RE = re.compile(r"^.+\t+\d+[ \t]*$")
+
+
+def remove_caption_toc(body: str, min_items: int = 6) -> tuple[str, int]:
+    """Remove a Docling-style original TOC (spec §6 F6).
+
+    Anchored on a ``Table of Contents`` caption (with any number of leading
+    ``#``) immediately followed by a contiguous run of >= ``min_items``
+    ``Entry<TAB>page`` lines — the caption requirement keeps the tab+number
+    heuristic from eating ordinary content. Returns ``(body, items_removed)``.
+    """
+    lines = body.split("\n")
+    remove: set[int] = set()
+    i, n = 0, len(lines)
+    while i < n:
+        if _CAPTION_TOC_RE.match(lines[i]):
+            j = i + 1
+            while j < n and not lines[j].strip():  # blank(s) between caption + entries
+                j += 1
+            start = j
+            while j < n and _CAPTION_TOC_ENTRY_RE.match(lines[j]):
+                j += 1
+            if j - start >= min_items:
+                remove.add(i)  # caption
+                remove.update(range(i + 1, j))  # blanks + entries
+                i = j
+                continue
+        i += 1
+    removed = sum(1 for idx in remove if _CAPTION_TOC_ENTRY_RE.match(lines[idx]))
+    out = "\n".join(line for idx, line in enumerate(lines) if idx not in remove)
+    return out, removed
+
+
 def build_toc(headings: Sequence[Heading], max_level: int = 3, heading: str = "Contents") -> str:
     """Render a nested markdown TOC. Returns ``""`` when nothing is in range."""
     items = [h for h in headings if h.level <= max_level]

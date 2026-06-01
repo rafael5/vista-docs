@@ -1,6 +1,6 @@
 """Unit tests for original-TOC removal (spec §6 F6 — regenerate, don't keep)."""
 
-from vista_docs.normalize.toc_pure import remove_original_toc
+from vista_docs.normalize.toc_pure import remove_caption_toc, remove_original_toc
 
 
 def test_removes_toc_block_pointing_at_headings():
@@ -58,3 +58,39 @@ def test_strips_preceding_contents_caption():
     out, n = remove_original_toc(body)
     assert n == 6
     assert "Contents" not in out.split("#", 1)[0]  # caption removed above headings
+
+
+# --- Docling caption-TOC form: '#######... Table of Contents' + 'Entry<TAB>page'
+
+DOCLING_TOC = (
+    "Title page\n\n"
+    "########### Table of Contents\n\n"
+    "Introduction\t1\n"
+    "What is CPRS?\t1\n"
+    "Using CPRS Documentation\t1\n"
+    "Related Manuals\t1\n"
+    "VistA Intranet\t1\n"
+    "Online Help\t2\n\n"
+    "# Introduction\n\nreal body\n"
+)
+
+
+def test_removes_docling_caption_toc():
+    out, n = remove_caption_toc(DOCLING_TOC)
+    assert n == 6
+    assert "Table of Contents" not in out
+    assert "###########" not in out
+    assert "Introduction\t1" not in out
+    assert "# Introduction" in out and "real body" in out  # body kept
+
+
+def test_caption_toc_keeps_short_runs():
+    # Fewer than min_items tabbed lines under a caption → not a TOC, leave it.
+    body = "## Contents\n\nA\t1\nB\t2\n\n# Real\n"
+    assert remove_caption_toc(body) == (body, 0)
+
+
+def test_caption_toc_requires_caption():
+    # Tabbed 'text<TAB>num' lines with NO 'Contents' caption are left untouched.
+    body = "Data\n\n" + "".join(f"Row {i}\t{i}\n" for i in range(8)) + "\n# Real\n"
+    assert remove_caption_toc(body) == (body, 0)

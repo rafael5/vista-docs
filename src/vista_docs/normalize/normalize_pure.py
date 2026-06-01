@@ -34,7 +34,7 @@ from vista_docs.normalize.revision_pure import (
     summarize_revisions,
 )
 from vista_docs.normalize.tables_pure import convert_tables
-from vista_docs.normalize.toc_pure import build_toc, remove_original_toc
+from vista_docs.normalize.toc_pure import build_toc, remove_caption_toc, remove_original_toc
 
 _HEADING_LINE_RE = re.compile(r"^#{1,6}\s")
 _TOC_ITEM_RE = re.compile(r"^\s*- \[")
@@ -128,6 +128,10 @@ def normalize_body(
     # also sweeps up its malformed/polluted entries.
     body = _strip_existing_toc(body)
     body, original_toc_removed = remove_original_toc(body)
+    # Docling-origin docs carry the TOC as a '#######... Table of Contents'
+    # caption + tab-separated entries, which the link-based removal above misses.
+    body, caption_toc_removed = remove_caption_toc(body)
+    original_toc_removed += caption_toc_removed
     headings = extract_headings(body)
     toc_md = build_toc(headings)
     body = _place_toc(body, toc_md)
