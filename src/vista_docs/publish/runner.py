@@ -38,6 +38,7 @@ E.  PUSH: MARKDOWN ONLY.
 from __future__ import annotations
 
 import logging
+import re
 import shutil
 import subprocess
 from datetime import date
@@ -123,6 +124,7 @@ def run_publish(
     patch_count = 0
     img_dir_count = 0
     normalized_count = 0
+    sidecar_count = 0
     pkg_seen: set[str] = set()
     final_entries: list[PublishEntry] = []  # entries with collision-resolved paths
 
@@ -151,6 +153,23 @@ def run_publish(
             normalized_count += 1
         shutil.copy2(body_src, dest_abs)
 
+        # Copy the revision-history sidecar (.history.yaml) alongside the body,
+        # renamed to match the published stem, and keep the body's
+        # `revision_sidecar:` reference pointing at the published name.
+        sidecar_src = body_src.with_name(body_src.stem + ".history.yaml")
+        if sidecar_src.exists():
+            dest_sidecar = dest_abs.with_name(dest_abs.stem + ".history.yaml")
+            shutil.copy2(sidecar_src, dest_sidecar)
+            sidecar_count += 1
+            body_text = dest_abs.read_text(encoding="utf-8")
+            patched = re.sub(
+                r"(?m)^(revision_sidecar:[ \t]*).*$",
+                lambda m: m.group(1) + dest_sidecar.name,
+                body_text,
+            )
+            if patched != body_text:
+                dest_abs.write_text(patched, encoding="utf-8")
+
         # Track package (second component of dest_path)
         parts = entry.dest_path.parts
         if len(parts) >= 2:
@@ -175,11 +194,12 @@ def run_publish(
     _write_index(out_dir, final_entries)
 
     log.info(
-        "publish/: %d packages, %d anchor docs, %d patch docs, %d image dirs",
+        "publish/: %d packages, %d anchor docs, %d patch docs, %d image dirs, %d history sidecars",
         len(pkg_seen),
         anchor_count,
         patch_count,
         img_dir_count,
+        sidecar_count,
     )
 
     return {
@@ -188,6 +208,7 @@ def run_publish(
         "patch_files": patch_count,
         "image_dirs": img_dir_count,
         "normalized_bodies": normalized_count,
+        "history_sidecars": sidecar_count,
     }
 
 
