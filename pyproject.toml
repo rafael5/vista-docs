@@ -12,7 +12,7 @@ dependencies = [
     "python-docx",
     "pyyaml",
     "click",
-    "ftfy>=6.2",
+    "ftfy>=6.3.1",
 ]
 
 [project.optional-dependencies]
