@@ -22,7 +22,7 @@ docling = [
     "docling==2.96.0",
 ]
 dev = [
-    "pytest>=8.0",
+    "pytest>=9.0.3",
     "pytest-cov",
     "pytest-watch",
     "pytest-randomly",
